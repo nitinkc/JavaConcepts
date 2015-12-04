@@ -1,4 +1,4 @@
-package com.nitin.Multithreading;
+package com.nitin.multithreading.aBasics;
 
 /**
  * Created by Nitin Chaurasia on 11/30/15 at 10:22 PM.
@@ -6,7 +6,7 @@ package com.nitin.Multithreading;
  * Demonstration that Thread continues if there is an ecxception in main
  */
 public class T1ThreadRunsParentDies extends Thread {
-    static final int MAX = 5;
+    static final int MAX = 500;
 
     public void run(){
         int count = 1;
