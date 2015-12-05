@@ -1,4 +1,4 @@
-package com.nitin.multithreading.dRaceCondition;
+package com.nitin.multithreading.eVolatileVar;
 
 /**
  * Created by Nitin Chaurasia on 12/3/15 at 6:31 AM.

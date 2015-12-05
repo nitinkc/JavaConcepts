@@ -16,20 +16,28 @@ package com.nitin.cloning;
  */
 public class C2ShallowCloning {
     public static void main(String[] args) throws CloneNotSupportedException {
+
+        // Creatinmg an object and creating its two clones
         X x1 = new X(100,"Nitin");
         X x2 = (X) x1.clone();
         X x3 = (X) x1.clone();
 
+        // Printing the references of the clones and seeing if they all point to the same object
+        System.out.println("Object References");
         System.out.println(x1);
         System.out.println(x2);
+        System.out.println(x2);
+        System.out.println("-----------------------");
 
         System.out.println(x1.getY());
         System.out.println(x2.getY());
         System.out.println(x3.getY());
+        System.out.println("-----------------------");
 
+        System.out.println("getY() +");
         System.out.println(x1.getY().var);
         System.out.println(x2.getY().var);
-
+        System.out.println("-----------------------");
     }
 }
 
@@ -84,7 +92,7 @@ class X implements Cloneable {
         return x;
     }
 }
-    class Y {
+     class Y {
     int var;
 
     Y(int y) {
