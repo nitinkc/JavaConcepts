@@ -35,6 +35,8 @@ public class R1BasicRefAPITest {
         // Type 1: Class.forName() mathod
         // should be used if you know the fully qualified name
         c = Class.forName("Nitin");
+
+        System.out.println(c.getClass());
         t.printMetadata(c);
 
         //Type 2: Creating the Instance when the Class name and object name both are known!!
@@ -90,7 +92,6 @@ public class R1BasicRefAPITest {
         }
         System.out.println("---------------------------");
 
-
         //Constructor in the Class are
         Constructor cons[] = c.getDeclaredConstructors();
         System.out.println("CONSTRUCTORS IN THE CLASS ARE :- ");
@@ -99,7 +100,6 @@ public class R1BasicRefAPITest {
         }
         System.out.println("---------------------------");
 
-
         Field[] fields = c.getFields();
         System.out.println("Fields IN THE CLASS ARE :- ");
         for ( Field fld : fields) {
@@ -107,14 +107,12 @@ public class R1BasicRefAPITest {
         }
         System.out.println("---------------------------");
 
-
         Method[] methods = c.getMethods();
         System.out.println("methods IN THE CLASS ARE :- ");
         for ( Method mtd : methods) {
             System.out.println(mtd);
         }
         System.out.println("---------------------------");
-
 
         //Discovering the interfaces implemented by a class:
         Class[] interfaces = c.getInterfaces();
@@ -150,7 +148,6 @@ class Nitin{
     Sindhu s;
 
     Nitin(){
-
     }
     Nitin(int a, String b, boolean c){
         //A Constructor
@@ -167,7 +164,7 @@ class Nitin{
         return 0;
     }
 }
-
+ 
 /**
  * Data Class Containing only data.
  */
