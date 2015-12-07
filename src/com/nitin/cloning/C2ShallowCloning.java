@@ -13,6 +13,8 @@ package com.nitin.cloning;
  *
  * FOR IMMUTABLE OBJECTS like String Integer
  * Since the state cannot be changed, it doesnt need be deeply cloned
+ *
+ * Sharing the reference
  */
 public class C2ShallowCloning {
     public static void main(String[] args) throws CloneNotSupportedException {

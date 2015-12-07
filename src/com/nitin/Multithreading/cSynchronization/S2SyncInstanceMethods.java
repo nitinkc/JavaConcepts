@@ -43,7 +43,7 @@ class Worker implements Runnable{
     //Synchronize will make sure that the value of count is always accessed by only one thread at once
     // This will increase the time of execution
     // Not using suync will decrease the reliability of the results.
-    private synchronized void count() {
+    private  void count() {
         count++;
     }
 }

@@ -101,11 +101,13 @@ public class R1BasicRefAPITest {
         System.out.println("---------------------------");
 
         Field[] fields = c.getFields();
-        System.out.println("Fields IN THE CLASS ARE :- ");
+        //Methods for super class as well
+        System.out.println("Fields IN THE CLASS ARE (getFields method):- ");
         for ( Field fld : fields) {
             System.out.println(fld);
         }
         System.out.println("---------------------------");
+
 
         Method[] methods = c.getMethods();
         System.out.println("methods IN THE CLASS ARE :- ");
