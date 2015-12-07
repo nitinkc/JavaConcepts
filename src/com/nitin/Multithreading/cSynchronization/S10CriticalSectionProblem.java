@@ -3,7 +3,7 @@ package com.nitin.multithreading.cSynchronization;
 /**
  * Created by Nitin Chaurasia on 12/3/15 at 1:55 AM.
  */
-public class S1CriticalSectionProblem {
+public class S10CriticalSectionProblem {
     public static void main(String[] args) {
         Account a = new Account();
 

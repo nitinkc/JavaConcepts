@@ -10,6 +10,29 @@ import java.util.logging.Logger;
 public class C4CyclicBarrier {
     int i = 0;
 
+    public static void main(String args[]) {
+
+        //creating CyclicBarrier with 3 parties i.e. 3 Threads needs to call await()
+        final CyclicBarrier cb = new CyclicBarrier(3, new Runnable() {
+
+            public void run() {
+                //This task will be executed once all thread reaches barrier
+                System.out.println("All parties are arrived at barrier, lets play");
+            }
+        });
+
+        //starting each of thread
+        Thread t1 = new Thread(new Task(cb), "Thread 1");
+        Thread t2 = new Thread(new Task(cb), "Thread 2");
+        Thread t3 = new Thread(new Task(cb), "Thread 3");
+
+        t1.start();
+        t2.start();
+        t3.start();
+
+    }
+
+
     //Runnable task for each thread
     private static class Task implements Runnable {
 
@@ -36,25 +59,5 @@ public class C4CyclicBarrier {
         }
     }
 
-    public static void main(String args[]) {
 
-        //creating CyclicBarrier with 3 parties i.e. 3 Threads needs to call await()
-        final CyclicBarrier cb = new CyclicBarrier(3, new Runnable() {
-
-            public void run() {
-                //This task will be executed once all thread reaches barrier
-                System.out.println("All parties are arrived at barrier, lets play");
-            }
-        });
-
-        //starting each of thread
-        Thread t1 = new Thread(new Task(cb), "Thread 1");
-        Thread t2 = new Thread(new Task(cb), "Thread 2");
-        Thread t3 = new Thread(new Task(cb), "Thread 3");
-
-        t1.start();
-        t2.start();
-        t3.start();
-
-    }
 }

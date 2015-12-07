@@ -19,7 +19,7 @@ public class R2Volatile {
 }
 
 
-class VolatileTest implements Runnable{
+class VolatileTest implements Runnable {
 
     /* volatile variable will be read from the computer's main memory,  and not from the CPU cache.
     Every write to a volatile variable will be written to main memory, and not just to the CPU cache.
@@ -37,19 +37,14 @@ class VolatileTest implements Runnable{
 
                 int local = 0;
                 local++;
-                //System.out.println(local + " local" + Thread.currentThread());
+                System.out.println(local + " local" + Thread.currentThread());
                 Thread.sleep(5);
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
-            System.out.println(" read" + j + "      " + v + "   "	+ Thread.currentThread()
+            System.out.println(" read" + j + "      " + v + "   " + Thread.currentThread()
                     + "write" + ++j + "   " + ++v);
-			/*
-			 * j=j+1; v=v+1; System.out.println(j +"     "+v
-			 * +"    "+Thread.currentThread()+ ""); i++;
-			 */}
-
-
+        }
     }
 }
