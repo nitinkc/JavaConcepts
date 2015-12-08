@@ -11,3 +11,6 @@ out/
 
 # Mac
 .DS_Store
+
+# Output files of programs
+*.txt
