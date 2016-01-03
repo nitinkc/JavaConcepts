@@ -43,6 +43,8 @@ class VolatileTest implements Runnable {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+
+            //Search atomic
             System.out.println(" read" + j + "      " + v + "   " + Thread.currentThread()
                     + "write" + ++j + "   " + ++v);
         }
