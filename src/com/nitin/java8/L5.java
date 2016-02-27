@@ -1,0 +1,15 @@
+package com.nitin.java8;
+
+import java.util.function.Predicate;
+import java.util.*;
+
+
+/**
+ * Created by Nitin C on 2/27/2016.
+ */
+public class L5 {
+    public static void main(String[] args) {
+        // get the heighest stock price less than $500 from Tickers.Symbols
+        System.out.println(Tickers.symbols);
+    }
+}
