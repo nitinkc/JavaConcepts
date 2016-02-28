@@ -6,6 +6,8 @@ import java.util.function.Consumer;
 
 /**
  * Created by Nitin C on 2/27/2016.
+ *
+ * The biggest change in the Java 8 is in the minds of the programmers. A lot of fun to be learning a better way of programming
  */
 public class L1BasicWithListIteration {
     public static void main(String[] args) {
