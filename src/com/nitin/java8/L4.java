@@ -53,9 +53,6 @@ public class L4 {
             .map(L4::doubleIt);
 
         System.out.println("here");
-
-
-
     }
 
     public static boolean isEven(int number){

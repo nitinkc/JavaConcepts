@@ -20,8 +20,6 @@ public class L3 {
 
         //Print all Even numbers
         System.out.println(totalValues(values, e -> e%2 != 0));
-
-
     }
 
     public static int totalValues(List<Integer> numbers, Predicate<Integer> selector){

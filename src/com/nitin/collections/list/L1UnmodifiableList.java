@@ -15,6 +15,7 @@ public class L1UnmodifiableList {
         list.add(2);
         list.add(13);
 
+        //Makes the list Unmodifiable
         Collection collection = Collections.unmodifiableList(list);
         list.add("123"); //
 
