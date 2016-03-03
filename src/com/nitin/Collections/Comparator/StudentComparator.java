@@ -4,8 +4,12 @@ import java.util.Comparator;
 
 /**
  * Created by synergisticit on 2/26/2016.
+ *
+ * First Compare with StudentId, if found same, compare with
+ * First name. If the if and the first name is also same
+ * then compare with the fathers name.
  */
-public class StudentComparator implements Comparator {
+public class StudentComparator implements Comparator{
     @Override
     public int compare(Object o1, Object o2) {
         Student s1 = (Student) o1;

@@ -1,4 +1,4 @@
-package ArrayList.ListSearchingApplication;
+package com.nitin.Collections.list.ArrayList.ListSearchingApplication;
 
 import java.util.ArrayList;
 import java.util.List;

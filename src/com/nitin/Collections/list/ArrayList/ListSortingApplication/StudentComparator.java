@@ -1,4 +1,4 @@
-package ArrayList.ListSortingApplication;
+package com.nitin.Collections.list.ArrayList.ListSortingApplication;
 
 import java.util.Comparator;
 

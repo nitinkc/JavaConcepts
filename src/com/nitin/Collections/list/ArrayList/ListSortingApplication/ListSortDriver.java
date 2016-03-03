@@ -1,8 +1,7 @@
-package ArrayList.ListSortingApplication;
+package com.nitin.Collections.list.ArrayList.ListSortingApplication;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 
 /**

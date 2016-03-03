@@ -9,9 +9,9 @@ import java.util.Map;
  *
  * 4 ways of iterating the Map
  */
-public class MapIterators {
+public class I2MapIterators {
     public static void main(String args[]){
-       Map<String,Integer> map= new HashMap();
+       Map<String,Integer> map= new HashMap<>();
         map.put("sangram",1);
         map.put("gram",1);
         map.put("m",3);

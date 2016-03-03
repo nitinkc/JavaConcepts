@@ -1,4 +1,4 @@
-package ArrayList.ListApplication;
+package com.nitin.Collections.list.ArrayList.ListApplication;
 
 import java.util.ArrayList;
 
