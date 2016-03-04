@@ -14,17 +14,17 @@ public class L1BasicWithListIteration {
         List<Integer> values = Arrays.asList(1,2,3,4,5,6,7,8,9);
 
         // Complex, initial (boundry lesstha ot less than equal to)
-        // Seld inflicted wound pattern
+        // Self inflicted wound pattern
        /* for(int i = 0; i < values.size(); i++){
             System.out.println(values.get(i));
         }*/
 
-        // Fewer moving partes
+        // Fewer moving parts
        /* for (int element: values) {
             System.out.println(element);
         }*/
 
-        /* Those were External Iterator (Manage out side)*/
+        /* Those were External Iterator (Manage outside)*/
 
         //Internal iterator, oput on autopilio, juts tel waht to do
         // NO how the iteratoonis done, and just tell waht to do
@@ -60,15 +60,15 @@ public class L1BasicWithListIteration {
         // Dont have to write the obvious
         values.forEach((element) -> System.out.print(element));
         System.out.println();
-        // Romovinbg the brackets
+        // Removing the brackets
         values.forEach(element -> System.out.print(element));
         System.out.println();
         //
         values.forEach(System.out::print);
         System.out.println();
-        // ForEach receives a Consume rfunctional parameter
-        // Functional Interface : cvane be automatically be elevted to lasmbda epresssion
-        //In other worsds, you can Only use lambdas for functional interfaces
+        // ForEach receives a Consumer functional parameter
+        // Functional Interface : can be automatically be elevated to lambda expression
+        //In other words, you can Only use lambdas for functional interfaces
         // A functional interface is a SAM (Single abstract Method) interface. it can only have one abstract method
         // that method has signture with parameter coming in.
         //Functional interface assign a contract!!
@@ -95,7 +95,7 @@ public class L1BasicWithListIteration {
                         .reduce(0,(c,e) -> c + e));
     }
 
-    // Old interface eviolved : through default methods
-    //Default mthod is a method implementatuin, you can write withina n interafce
+    // Old interface evolved : through default methods
+    //Default method is a method implementation, you can write within an interface
 
 }
