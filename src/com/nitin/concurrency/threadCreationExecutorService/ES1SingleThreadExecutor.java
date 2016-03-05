@@ -1,4 +1,4 @@
-package com.nitin.concurrency.threadCreationExecutorService;
+package main.java.com.nitin.concurrency.threadCreationExecutorService;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
