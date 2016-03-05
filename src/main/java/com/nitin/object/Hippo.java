@@ -18,6 +18,5 @@ public class Hippo {
         return "Hippo{" +
                 "name='" + name + '\'' +
                 ", weight=" + weight +
-                '}';
-    }
+                '}';}
 }

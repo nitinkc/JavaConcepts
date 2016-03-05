@@ -1,4 +1,4 @@
-package com.nitin.innerClass;
+package com.nitin.nestedClasses.innerClass;
 
 /**
  * Created by nitin on 1/14/16.
