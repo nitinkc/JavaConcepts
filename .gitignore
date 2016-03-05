@@ -14,3 +14,6 @@ out/
 
 # Output files of programs
 *.txt
+
+# Maven Related
+target/
