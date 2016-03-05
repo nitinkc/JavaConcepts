@@ -1,4 +1,4 @@
-package com.nitin.collections;
+package com.nitin.generics;
 
 import java.util.ArrayList;
 
