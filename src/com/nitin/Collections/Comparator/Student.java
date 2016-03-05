@@ -1,4 +1,4 @@
-package com.nitin.Collections.Comparator;
+package com.nitin.collections.Comparator;
 
 /**
  * Created by synergisticit on 2/25/2016.

@@ -1,4 +1,4 @@
-package com.nitin.Collections.Comparator.withLambda;
+package com.nitin.collections.Comparator.withLambda;
 
 import java.util.Comparator;
 

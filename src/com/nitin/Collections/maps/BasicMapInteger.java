@@ -1,4 +1,4 @@
-package com.nitin.Collections.maps;
+package com.nitin.collections.maps;
 
 import java.util.*;
 

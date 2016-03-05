@@ -1,4 +1,4 @@
-package com.nitin.Collections.list.ArrayList.ListSearchingApplication;
+package com.nitin.collections.list.ArrayList.ListSearchingApplication;
 
 /**
  * Created by synergisticit on 2/25/2016.

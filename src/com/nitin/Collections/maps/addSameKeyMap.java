@@ -1,9 +1,8 @@
-package com.nitin.Collections.maps;
+package com.nitin.collections.maps;
 
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.TreeMap;
 
 /**
  * Created by synergisticit on 2/25/2016.

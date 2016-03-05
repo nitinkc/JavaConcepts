@@ -1,4 +1,4 @@
-package com.nitin.Collections.comparable;
+package com.nitin.collections.comparable;
 
 import java.util.*;
 
@@ -13,7 +13,7 @@ import java.util.*;
  *
  * This problem CANNOT be solved with COMPARATOR.
  * Conparateon can be used when wer call java Utility Calss
- * Collections.sort(List<Integer>, Comparator<...>)
+ * collections.sort(List<Integer>, Comparator<...>)
  */
 public class ComparableTest {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.nitin.Collections.list.ArrayList.ListSortingApplication;
+package com.nitin.collections.list.ArrayList.ListSortingApplication;
 
 /**
  * Created by synergisticit on 2/25/2016.

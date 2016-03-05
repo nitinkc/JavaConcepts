@@ -32,7 +32,7 @@ public class L1BasicWithListIteration {
         //method forEach is called on the object
         // Anonymous inner class
         //This gives polymorphism
-        //forEach method is now on Collections
+        //forEach method is now on collections
        /* values.forEach(new Consumer<Integer>() {//Consumer is a new interface in java 8
             @Override
             public void accept(Integer value) {// mehtod of consumer, which accets the array

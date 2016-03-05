@@ -1,4 +1,4 @@
-package com.nitin.Collections.iterators;
+package com.nitin.collections.iterators;
 
 import java.util.HashMap;
 import java.util.Iterator;

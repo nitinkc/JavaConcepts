@@ -1,4 +1,4 @@
-package com.nitin.Collections.Comparator.withLambda;
+package com.nitin.collections.Comparator.withLambda;
 
 /**
  * Created by Nitin C on 3/3/2016.

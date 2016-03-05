@@ -1,4 +1,4 @@
-package com.nitin.Collections.Comparator;
+package com.nitin.collections.Comparator;
 
 import java.util.Iterator;
 import java.util.Set;

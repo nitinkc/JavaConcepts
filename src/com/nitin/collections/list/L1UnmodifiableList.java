@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Created by nitin on 1/13/16.
  *
- * The Collections Utility Class provides the method to make a list FINAL
+ * The collections Utility Class provides the method to make a list FINAL
  * READ ONLY. Throws UnsopportedOperationException
  */
 public class L1UnmodifiableList {

@@ -1,6 +1,5 @@
-package com.nitin.Collections.set;
+package com.nitin.collections.set;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 /**

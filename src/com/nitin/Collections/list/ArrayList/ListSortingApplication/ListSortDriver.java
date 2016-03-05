@@ -1,4 +1,4 @@
-package com.nitin.Collections.list.ArrayList.ListSortingApplication;
+package com.nitin.collections.list.ArrayList.ListSortingApplication;
 
 import java.util.ArrayList;
 import java.util.Collections;
