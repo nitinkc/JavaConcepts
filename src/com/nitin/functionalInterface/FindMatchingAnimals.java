@@ -1,4 +1,4 @@
-package com.nitin.java8.OCJP;
+package com.nitin.functionalInterface;
 
 /**
  * Created by Nitin Chaurasia on 3/3/16 at 12:26 AM.

@@ -1,4 +1,4 @@
-package com.nitin.object;
+package com.nitin.object.toString;
 
 /**
  * Created by Nitin Chaurasia on 3/4/16 at 11:01 PM.
