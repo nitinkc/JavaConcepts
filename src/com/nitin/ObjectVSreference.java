@@ -1,7 +1,5 @@
 package com.nitin;
 
-import com.nitin.functionalInterface.Animal;
-
 /**
  * Created by Nitin C on 3/5/2016.
  *

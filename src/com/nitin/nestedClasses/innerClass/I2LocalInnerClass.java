@@ -1,7 +1,5 @@
 package com.nitin.nestedClasses.innerClass;
 
-import sun.java2d.pipe.OutlineTextRenderer;
-
 /**
  * Created by Nitin C on 3/5/2016.
  *

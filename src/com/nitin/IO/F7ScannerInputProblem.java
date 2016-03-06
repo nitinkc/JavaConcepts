@@ -1,4 +1,4 @@
-package com.nitin.ioFileHandling;
+package com.nitin.IO;
 
 import java.util.Scanner;
 

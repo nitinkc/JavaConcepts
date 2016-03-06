@@ -1,7 +1,5 @@
 package com.nitin.exceptionHandling;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -15,6 +13,8 @@ import java.time.format.DateTimeParseException;
  * In Java 7, they introduce the the ability to catch multiple exceptions in the same catch block.
  * catch (FileNotFoundException | IOException e) redundant exceptions gives the error.
  * Error MULTI-CATCH Must be disjoint
+ *
+ * Multi-catch is effectively final
  */
 public class E6multicatch {
     public static void main(String[] args) {
@@ -25,6 +25,7 @@ public class E6multicatch {
             System.out.println(date);
         } catch (DateTimeParseException | IOException e) { //No duplicacy of code
             e.printStackTrace();
+            // e = new RuntimeException; java forbids reassigning the exception variable. EFFECTIVELY FINAL
             throw new RuntimeException();
         }
     }

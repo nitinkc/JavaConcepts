@@ -2,7 +2,6 @@ package com.nitin.java8;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Consumer;
 
 /**
  * Created by Nitin C on 2/27/2016.

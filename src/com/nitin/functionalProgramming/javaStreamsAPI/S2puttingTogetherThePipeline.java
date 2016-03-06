@@ -1,8 +1,5 @@
 package com.nitin.functionalProgramming.javaStreamsAPI;
 
-import com.nitin.collections.list.ArrayList.ListSearchingApplication.ListSearchDriver;
-import com.sun.javafx.scene.control.skin.IntegerFieldSkin;
-
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;

@@ -1,6 +1,8 @@
 package com.nitin.collections.comparable;
 
-import java.util.*;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Created by synergisticit on 2/25/2016

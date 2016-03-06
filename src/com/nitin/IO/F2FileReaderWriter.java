@@ -1,6 +1,9 @@
-package com.nitin.ioFileHandling;
+package com.nitin.IO;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  * Created by nitin on 1/2/16.

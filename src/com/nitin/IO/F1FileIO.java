@@ -1,4 +1,4 @@
-package com.nitin.ioFileHandling;
+package com.nitin.IO;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,6 +6,8 @@ import java.io.IOException;
 /**
  * Created by nitin on 1/2/16.
  * Checking if the File Exists. If not Create
+ *
+ * File class is used to represent DIRECTORIES as well as FILES
  */
 
 public class F1FileIO {
@@ -16,11 +18,11 @@ public class F1FileIO {
         File f = new File("nitin.txt");
 
         // "/" is the root Directory, thus this name is not correct
-        File f1 = new File("/src/com/nitin/IO_FileHandling/nitin.txt");
+        File f1 = new File("/src/com/nitin/IO/nitin.txt");
 
         // This is the location the the file from the PROJECT ROOT DIRECTORY!!
         // This cunstructor accepts directoy from Project root and file name
-        File f2 = new File("src/com/nitin/IO_FileHandling", "nitin.txt");
+        File f2 = new File("src/com/nitin/IO", "nitin.txt");
 
         //Checking is exists
         System.out.println(f.exists());
