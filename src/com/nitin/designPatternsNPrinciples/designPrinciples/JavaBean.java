@@ -1,11 +1,11 @@
-package com.nitin.designPatternsNPrinciples.polymorphism.DesignPrinciples.designPrinciples;
+package com.nitin.designPatternsNPrinciples.designPrinciples;
 
 /**
  * Created by Nitin C on 3/5/2016.
  *
  * Encapsulation si so prevalent in java that there is a standard for creating classes that store data, called JavaBean
  *
- * A JavaBean is a design principle for encapsulating data in an OBJECT in Java
+ * N1PathFileTest JavaBean is a design principle for encapsulating data in an OBJECT in Java
  *
  * JavaBean naming Convention
  * 1. Properties (variables and fields) are private

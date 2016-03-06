@@ -1,4 +1,4 @@
-package com.nitin.designPatternsNPrinciples.polymorphism.DesignPrinciples.designPrinciples;
+package com.nitin.designPatternsNPrinciples.designPrinciples;
 
 /**
  * Created by Nitin C on 3/5/2016.

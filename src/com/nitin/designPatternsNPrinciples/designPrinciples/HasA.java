@@ -1,8 +1,8 @@
-package com.nitin.designPatternsNPrinciples.polymorphism.DesignPrinciples.designPrinciples;
+package com.nitin.designPatternsNPrinciples.designPrinciples;
 
 /**
  * Created by Nitin C on 3/5/2016.
- * Has-A relationship is a property of an object having a named data object or primitive as a member!!
+ * Has-N1PathFileTest relationship is a property of an object having a named data object or primitive as a member!!
  *
  * In inheritance, is a parent has-a PROTECTED/PUBLIC member, then any child of parent must also
  * have the object as member.
@@ -14,7 +14,7 @@ public class HasA {
 }
 
 class Bird{
-    Beak beak; //Bird HAS-A Beak
+    Beak beak; //Bird HAS-N1PathFileTest Beak
     String color;
     String category;
 }
