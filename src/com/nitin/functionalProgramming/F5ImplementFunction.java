@@ -4,7 +4,7 @@ import java.util.function.Function;
 
 /**
  * Created by Nitin C on 3/3/2016.
- * A function is responsible for turning one parameter into a value of a potentially different type and returning it.
+ * N1PathFileTest function is responsible for turning one parameter into a value of a potentially different type and returning it.
  * has a method apply
  */
 public class F5ImplementFunction {

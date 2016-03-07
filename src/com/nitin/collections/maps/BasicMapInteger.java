@@ -37,7 +37,7 @@ public class BasicMapInteger {
     }
 
     private static void removeOddNumber(Map<Integer, Integer> map) {
-        //KeySet is a method in map which RETURNSD A SET OF KEYS
+        //KeySet is a method in map which RETURNSD N1PathFileTest SET OF KEYS
         Set<Integer> key = map.keySet();
 
         Iterator itr = key.iterator();
@@ -62,7 +62,7 @@ public class BasicMapInteger {
 
     /**
      * Iterating thrugh a Map using Entry Set.
-     * NOTE: ENTRY SETRETURNS A SET OF ENTRY WHICH KEY ADN VALUE
+     * NOTE: ENTRY SETRETURNS N1PathFileTest SET OF ENTRY WHICH KEY ADN VALUE
      * @param map
      */
     private static void printMapUsingEntrySet(Map<Integer, Integer> map) {
@@ -88,7 +88,7 @@ public class BasicMapInteger {
      * @param map
      */
     private static void printMapUsingSet(Map<Integer, Integer> map) {
-        //KeySet is a method in map which RETURNSD A SET OF KEYS
+        //KeySet is a method in map which RETURNSD N1PathFileTest SET OF KEYS
         Set<Integer> key = map.keySet();
 
         Iterator itr = key.iterator();

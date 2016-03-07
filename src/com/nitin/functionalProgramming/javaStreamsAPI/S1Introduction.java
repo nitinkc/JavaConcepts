@@ -6,8 +6,8 @@ import java.util.stream.Stream;
 
 /**
  * Created by Nitin C on 3/3/2016.
- * A stream in Java is a sequence of data
- * A Stream Pileline is the operation (STREAM OPERATIONS) that run on a stream to produce a result
+ * N1PathFileTest stream in Java is a sequence of data
+ * N1PathFileTest Stream Pileline is the operation (STREAM OPERATIONS) that run on a stream to produce a result
  * Finite Streams have a limit
  * infinite Streams are like sunrise/sunset cycle
  *

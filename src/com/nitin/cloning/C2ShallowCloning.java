@@ -4,7 +4,7 @@ package com.nitin.cloning;
  * Created by Nitin Chaurasia on 12/4/15 at 9:16 PM.
  *
  * Shallow copy is a bit-wise copy of an object.
- * A new object is created that has an exact copy of the values in the original object.
+ * N1PathFileTest new object is created that has an exact copy of the values in the original object.
  * If any of the fields of the object are references to other objects,
  * just the reference addresses are copied i.e., only the memory address is copied.
  *

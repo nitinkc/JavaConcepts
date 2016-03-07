@@ -13,7 +13,7 @@ public class S1AddMultipleValues {
         HashSet hashSet=new HashSet();
         hashSet.add("B");
         hashSet.add(null);
-        hashSet.add("A");
+        hashSet.add("N1PathFileTest");
         System.out.println(hashSet.add("C"));// Firest Entry TRUE
         System.out.println(hashSet.add("C"));// Second Entry False
         hashSet.add(null);

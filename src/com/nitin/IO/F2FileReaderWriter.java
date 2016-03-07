@@ -10,7 +10,7 @@ import java.io.IOException;
  */
 public class F2FileReaderWriter {
     public static void main(String[] args) throws IOException {
-        File f = new File("src/com/nitin/IO_FileHandling/nitin.txt");
+        File f = new File("nitin.txt");
 
         FileReader fr = new FileReader(f);
         int i = fr.read();

@@ -64,7 +64,7 @@ public class BasicSetInteger {
     }
 
     /**
-     * 1. Demonstrating adding USING A COLLECTION
+     * 1. Demonstrating adding USING N1PathFileTest COLLECTION
      * 2. and adding individual elements
      *
      * @param set

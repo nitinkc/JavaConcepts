@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by Nitin C on 2/27/2016.
  *
- * The biggest change in the Java 8 is in the minds of the programmers. A lot of fun to be learning a better way of programming
+ * The biggest change in the Java 8 is in the minds of the programmers. N1PathFileTest lot of fun to be learning a better way of programming
  */
 public class L1BasicWithListIteration {
     public static void main(String[] args) {
@@ -48,13 +48,13 @@ public class L1BasicWithListIteration {
         values.forEach((Integer element) -> System.out.print(element) );
         System.out.println();
         /* forEach says i am accepting a FUNCTION
-        * A Function has 4 things - name, return type, parameter list and Body
+        * N1PathFileTest Function has 4 things - name, return type, parameter list and Body
         * Most Imp: is Body of the function
         * Body of the function -> System.out.println(element)
         * Parameter List --> (Integer element)
         * */
 
-        // A collection of integer is known to integer
+        // N1PathFileTest collection of integer is known to integer
         // Java figures out BASED ONTHE CONTEXCT.
         // Dont have to write the obvious
         values.forEach((element) -> System.out.print(element));
@@ -68,7 +68,7 @@ public class L1BasicWithListIteration {
         // ForEach receives a Consumer functional parameter
         // Functional Interface : can be automatically be elevated to lambda expression
         //In other words, you can Only use lambdas for functional interfaces
-        // A functional interface is a SAM (Single abstract Method) interface. it can only have one abstract method
+        // N1PathFileTest functional interface is a SAM (Single abstract Method) interface. it can only have one abstract method
         // that method has signture with parameter coming in.
         //Functional interface assign a contract!!
 

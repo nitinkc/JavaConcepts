@@ -28,7 +28,7 @@ public class ES1SingleThreadExecutor {
             System.out.println("END");
         }
         finally {
-            // A thread executor creates anon-daemon thread on the first task taht is executed, so failing to call
+            // N1PathFileTest thread executor creates anon-daemon thread on the first task taht is executed, so failing to call
             // shutdown() will result in your application never terminating
             // shutdownNow() attempts to stop all running thread
             if (service != null)
