@@ -21,8 +21,7 @@ public class F2FileReaderWriter {
             System.out.println((char)i);
             i = fr.read();
         }
-
-
+        
         // By default, its false, meaning, it will override, Put true to append
         FileWriter fw = new FileWriter(f,true);
         fw.write("  Nitin\n");
