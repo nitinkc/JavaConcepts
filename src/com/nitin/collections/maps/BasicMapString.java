@@ -15,7 +15,7 @@ public class BasicMapString {
         // With Tree set it will sort to DNSO
 
         // Sorted values while iterating
-        Map<Integer,String> map = new TreeMap<Integer, String>();
+        Map<Integer,String> map = new TreeMap<>();
 
         map.put(1,"Abcd");
         map.put(2,"sangram");

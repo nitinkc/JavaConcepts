@@ -18,14 +18,15 @@ public class H1HashMapIterationDemo {
         map.put(5,"Iran");
 
         // Method 1: take the keyset and pick value 1 by 1
-        Set set = map.keySet();//Take the keyset out
-        Iterator itr = set.iterator();
+      //  Set set = map.keySet();//Take the keyset out
+        Iterator itr = map.keySet().iterator();
 
         while (itr.hasNext()){
             System.out.println(map.get(itr.next()));
         }
 
         System.out.println("*************************************");
+
         // Method 2: Run the Entry
         Set entry = map.entrySet();
         Iterator itr2 = entry.iterator();
