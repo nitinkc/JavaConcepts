@@ -42,8 +42,6 @@ public class BasicListInteger {
 
     }
 
-
-
     private static void removeOddNumber(List<Integer> list) {
         Iterator<Integer> itr = list.iterator();
 
@@ -59,7 +57,7 @@ public class BasicListInteger {
     }
 
     /**
-     *  3 main methids of iterator
+     *  3 main methods of iterator
      1. hasNext()
      2. next()
      3. remove()
