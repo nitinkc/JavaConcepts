@@ -3,7 +3,7 @@ package com.nitin.multithreading.aBasics;
 /**
  * Created by Nitin Chaurasia on 11/30/15 at 10:22 PM.
  *
- * Demonstration that Thread continues if there is an ecxception in main
+ * Demonstration that a Child Thread continues even if there is an exception in the Main Thread
  */
 public class T1ThreadRunsParentDies extends Thread {
     static final int MAX = 500;
@@ -12,7 +12,8 @@ public class T1ThreadRunsParentDies extends Thread {
         int count = 1;
 
         for (int i = 1; i <= MAX; i++) {
-            System.out.println("Thread execution" + i);
+            System.out.print(Thread.currentThread());
+            System.out.println(" : Child Thread execution : " + i);
         }
     }
 
@@ -20,12 +21,12 @@ public class T1ThreadRunsParentDies extends Thread {
         //Starting the Thread
         new T1ThreadRunsParentDies().start();
 
-        //Deliberately putting and exception do that main stops
+        //Deliberately putting and exception so that main stops
         int test = 10/0;
         // Runtime Stack will be destroyed as there is no exception handling code
 
         for (int i = 1; i <= MAX; i++) {
-            System.out.println("Main execution" + i);
+            System.out.println("Main Thread execution" + i);
         }
 
     }
