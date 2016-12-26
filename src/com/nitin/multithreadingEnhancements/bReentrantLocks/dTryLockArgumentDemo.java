@@ -2,6 +2,8 @@ package com.nitin.multithreadingEnhancements.bReentrantLocks;
 
 /**
  * Created by nitin.chaurasia on 12/26/2016.
+ *
+ * Second thread will continue to pull if the Lock is available or not
  */
 public class dTryLockArgumentDemo {
     public static void main(String[] args) {
