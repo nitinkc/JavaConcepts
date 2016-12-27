@@ -1,4 +1,4 @@
-package com.nitin;
+package com.nitin.java8;
 
 /**
  * Created by Nitin C on 3/5/2016.

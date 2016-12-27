@@ -120,7 +120,7 @@ public class MatrixMultiplication {
         for (int i = 0; i < ROW_A; i++) {
             for (int j = 0; j < COL_A; j++) {
                 //matA[i][j] = ((double) generator.nextInt(MAXRAND));
-                matA[i][j] = 3;
+                matA[i][j] = generator.nextInt(60);
             }//End Loop for Column
         }//End Loop for Row
 
@@ -128,7 +128,7 @@ public class MatrixMultiplication {
         for (int i = 0; i < ROW_B; i++) {
             for (int j = 0; j < COL_B; j++) {
                 //matB[i][j] = ((double) generator.nextInt(MAXRAND));
-                matB[i][j] = 1;
+                matB[i][j] = generator.nextInt(90);
             }//End Loop for Column
         }//End Loop for Row
 

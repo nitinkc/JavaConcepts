@@ -15,8 +15,8 @@ public class E2TwoCatchBlocks {
         X obj = null;
         try{
             obj.m1(); //This occurs first
-            //x = 5/0;
-            //x = 10/5;
+            x = 5/0;
+            x = 10/5;
         }
 
         // In multiple catch, Child should be on top

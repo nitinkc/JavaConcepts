@@ -40,7 +40,7 @@ public class AccountDanger implements Runnable{
 }
 
 class Account{
-	int balance = 50;
+	int balance = 500;
 	
 	public int getBalance(){
 		return balance;

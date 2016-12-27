@@ -1,4 +1,4 @@
-package com.nitin.basics;
+package com.nitin.l1basics;
 
 /**
  * Created by Nitin C on 11/25/2015.

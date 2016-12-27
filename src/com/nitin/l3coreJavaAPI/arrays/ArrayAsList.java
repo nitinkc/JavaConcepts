@@ -1,4 +1,4 @@
-package com.nitin.arrays;
+package com.nitin.l3coreJavaAPI.arrays;
 
 import java.util.*;
 

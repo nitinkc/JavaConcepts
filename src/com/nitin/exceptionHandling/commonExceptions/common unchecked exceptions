@@ -1,8 +1,0 @@
-ArithmaticException : divide by zero
-ArrayIndexOutOfBounds : illegal index access
-ClassCastException : cast an object to a subclass which it is not an instance
-IllegalArgumentException : method has been passed an illegal or inappropriate argument
-NullPointerException : null reference where an object is required
-NumberFormatException : when an attempt is made to convert a STRING to numeric type
-IllegalStateException : attempting to run an invalid operation in collection adn Concurrency
-UnsupportedOperationException : --do--
