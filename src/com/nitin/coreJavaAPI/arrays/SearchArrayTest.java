@@ -1,4 +1,4 @@
-package com.nitin.l3coreJavaAPI.arrays;
+package com.nitin.coreJavaAPI.arrays;
 import java.util.*;
 public class SearchArrayTest {
 	public static void main(String[] args) {

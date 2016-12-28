@@ -1,10 +1,10 @@
-package com.nitin.Aug2515;
+package com.nitin.a1languageFundamentals;
 
 /**
  * Created by Nitin C on 11/25/2015.
  */
 
-class Car {
+class Car1 {
 
     static int numberofobjects;
     static int numberofwheels = 4;
@@ -14,7 +14,7 @@ class Car {
         System.out.println("from static block");
     }
 
-    public Car() {
+    public Car1() {
 
         numberofobjects++;
         System.out.println("this is from default constructor of class car");
@@ -30,8 +30,8 @@ public class StaticTest {
     int x = 10;
 
     public static void main(String[] args) {
-        Car c1 = new Car();
-        Car c2 = new Car();
+        Car1 c1 = new Car1();
+        Car1 c2 = new Car1();
         System.out.println(c1.numberofobjects);
         Car c3 = new Car();
         //System.out.println(x);

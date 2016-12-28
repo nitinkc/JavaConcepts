@@ -1,4 +1,4 @@
-package com.nitin.l1basics;
+package com.nitin.a1languageFundamentals;
 
 /**
  * Created by Nitin C on 11/25/2015.
