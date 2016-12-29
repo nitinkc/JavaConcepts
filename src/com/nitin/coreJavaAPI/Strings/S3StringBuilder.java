@@ -1,9 +1,9 @@
-package com.nitin.a.sandBox;
+package com.nitin.coreJavaAPI.Strings;
 
 /**
  * Created by nitin.chaurasia on 11/21/2016.
  */
-public class StringTests {
+public class S3StringBuilder {
     public static void main(String[] args) {
         StringBuilder a = new StringBuilder ("Nitin");
         StringBuffer b = new StringBuffer ("Priyanka");

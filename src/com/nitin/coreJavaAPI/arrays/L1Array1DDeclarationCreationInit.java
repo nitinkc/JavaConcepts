@@ -1,4 +1,4 @@
-package com.nitin.a1languageFundamentals.arrays;
+package com.nitin.coreJavaAPI.arrays;
 
 /**
  * Created by Nitin Chaurasia on 12/27/16 at 1:19 AM.

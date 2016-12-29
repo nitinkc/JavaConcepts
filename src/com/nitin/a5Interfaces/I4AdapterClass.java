@@ -12,7 +12,7 @@ public class I4AdapterClass extends AdapterX {
 
     public void m3(){
         System.out.println("Providing Implementation of only M3, even though we have access to all the methods, " +
-                "we can choose to imlement what we like in Adaptert pattern");
+                "we can choose to implement what we like in Adaptert pattern");
 
     }
 }
