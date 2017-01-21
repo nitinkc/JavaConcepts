@@ -14,7 +14,7 @@ package com.nitin.a1languageFundamentals.variables;
  *      # Values remains same between all objects. Single copy is created
  *      # Created at the time of Class Loading and destroved at class unloading
  *      # since created at the time of loading, can access from both instance & static areas directly
- *      # declared with STATIC keyword, within the class BUT outside any constructor, block or method
+ *      # declared with staticTest keyword, within the class BUT outside any constructor, block or method
  *      # not required to perform initialization explicitly, JVM provides default values
  *      # Scope : same as class
  * 3. Local Variable

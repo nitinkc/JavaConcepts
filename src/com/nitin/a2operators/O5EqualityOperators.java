@@ -1,8 +1,5 @@
 package com.nitin.a2operators;
 
-import com.nitin.a.sandBox.StringTests;
-import com.nitin.designPatternsNPrinciples.polymorphism.ObjectComposition;
-
 /**
  * Created by Nitin Chaurasia on 12/28/16 at 9:55 PM.
  * == equal to (if two objects are same, then its true)

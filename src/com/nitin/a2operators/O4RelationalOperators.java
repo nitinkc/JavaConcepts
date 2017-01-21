@@ -1,7 +1,5 @@
 package com.nitin.a2operators;
 
-import com.nitin.a.sandBox.StringTests;
-
 /**
  * Created by Nitin Chaurasia on 12/28/16 at 9:50 PM.
  */

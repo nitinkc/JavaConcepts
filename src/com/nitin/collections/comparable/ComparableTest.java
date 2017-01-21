@@ -7,14 +7,14 @@ import java.util.TreeSet;
 /**
  * Created by synergisticit on 2/25/2016
  *
- * If we wish to inset Student object into TreeSet (which needs compare logic), we will get the following error
+ * If we wish to insert Student object into TreeSet (which needs compare logic), we will get the following error
  * java.lang.ClassCastException if Student doen not implement java.lang.Comparable
  * MNEMONIC BC (conparaBle - ClassCast)
  *
  * Whenever we use Object other THAN WRAPPER
  *
  * This problem CANNOT be solved with COMPARATOR.
- * Conparateon can be used when wer call java Utility Calss
+ * Comparator can be used when we call java Utility Class
  * collections.sort(List<Integer>, Comparator<...>)
  */
 public class ComparableTest {
@@ -26,7 +26,6 @@ public class ComparableTest {
 
         //HashSet does not need COMPARATOR, but TREE DOES
         Set<Student> studentSet = new TreeSet<Student>();
-
 
         studentSet.add(s1);
         studentSet.add(s2);
