@@ -1,7 +1,5 @@
 package com.nitin.a1languageFundamentals.variables;
 
-import com.nitin.designPatternsNPrinciples.polymorphism.ObjectComposition;
-
 /**
  * Created by Nitin Chaurasia on 12/28/16 at 12:22 AM.
  * Primitive Variables : used to represent primitive variables

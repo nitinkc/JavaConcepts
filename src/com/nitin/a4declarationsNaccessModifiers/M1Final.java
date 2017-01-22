@@ -5,6 +5,20 @@ package com.nitin.a4declarationsNaccessModifiers;
  * Final is applicable for classes, methods and variables
  */
 public class M1Final {
+
+    static String finalString;
+    public M1Final(String s) {
+        this.finalString = s;
+    }
+
+    public void setM1Final(String s){
+        this.finalString = s;
+    }
+
+    public String getM1Final(){
+        return finalString;
+    }
+
     public static void main(String[] args) {
 
         // If method is declared as final, then in Child Class, not allowed to over ride
@@ -12,7 +26,12 @@ public class M1Final {
            // Each method declared in Final class, is by default, final
            // Deiadvantage : missing on OOPS Inheritance and Polymorphism
 
+        final M1Final str = new M1Final ("Mahatma Gandhi");
+        System.out.println("Final String is set to : "+ finalString);
 
+        // CHANGING THE FINAL variable
+        str.setM1Final("Modi");
+        System.out.println("Final String is re-set to : "+ str.getM1Final());
     }
 
 }
