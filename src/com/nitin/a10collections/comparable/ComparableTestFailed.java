@@ -9,7 +9,7 @@ import java.util.TreeSet;
  *
  * If we wish to insert Student object into TreeSet (which needs compare logic), we will get the following error
  * java.lang.ClassCastException if Student does not implement java.lang.Comparable
- * MNEMONIC BC (conparaBle - ClassCast)
+ * MNEMONIC BC (comparaBle - ClassCast)
  *
  * Whenever we use Object other THAN WRAPPER
  *
@@ -17,7 +17,7 @@ import java.util.TreeSet;
  * Comparator can be used when we call java Utility Class
  * a10collections.sort(List<Integer>, Comparator<...>)
  */
-public class ComparableTest {
+public class ComparableTestFailed {
     public static void main(String[] args) {
         Student s1 = new Student(4,"Lucy","Taylor","Jenkov Taylor");
         Student s2 = new Student(2,"Tracy","Rajaei","Bill Taylor");
@@ -37,7 +37,5 @@ public class ComparableTest {
         while(itr.hasNext()){
             System.out.println(itr.next());
         }
-
-
     }
 }
