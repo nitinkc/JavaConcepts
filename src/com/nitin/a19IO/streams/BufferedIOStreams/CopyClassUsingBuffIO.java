@@ -21,7 +21,7 @@ public class CopyClassUsingBuffIO {
     public static void main(String[] args) {
         // Binary File (Serialized file) to read binary data
         //File source = new File("s.out");
-        File source = new File("N1PathFileTest.class");
+        File source = new File("s.out");
         File destination = new File("s_copy.out");//Override mode
 
         try {

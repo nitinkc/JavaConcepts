@@ -1,4 +1,4 @@
-package com.nitin.a12multithreading.eInterThreadComm;
+package com.nitin.a12multithreading.dInterThreadComm;
 
 import java.util.Random;
 
@@ -21,7 +21,6 @@ public class I3NotifyAll {
         a.start();
         b.start();
         c.start();
-
     }
 }
 
@@ -54,14 +53,12 @@ class A1 extends Thread {
                     notifyAllExample.status = 2;
                     notifyAllExample.notifyAll();
                 }
-
             }
         } catch (Exception e) {
             System.out.println("Exception 1 :" + e.getMessage());
         }
         System.out.println(totalscore + "total score by a");
     }
-
 }
 
 class B1 extends Thread {
@@ -97,7 +94,6 @@ class B1 extends Thread {
                     notifyAllExample.status = 3;
                     notifyAllExample.notifyAll();
                 }
-
             }
         } catch (Exception e) {
             System.out.println("Exception 2 :" + e.getMessage());
