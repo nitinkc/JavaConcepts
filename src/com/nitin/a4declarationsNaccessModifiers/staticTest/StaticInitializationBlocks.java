@@ -1,6 +1,4 @@
-package com.nitin.a1languageFundamentals.staticTest;
-
-import com.nitin.a1languageFundamentals.Car;
+package com.nitin.a4declarationsNaccessModifiers.staticTest;
 
 /**
  * Created by Nitin C on 11/25/2015.
@@ -42,7 +40,7 @@ class Car1 {
     }
 }
 
-public class StaticTest {
+public class StaticInitializationBlocks {
     int x = 10;
 
     public static void main(String[] args) {
