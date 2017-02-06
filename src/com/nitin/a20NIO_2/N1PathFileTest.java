@@ -8,7 +8,7 @@ import java.nio.file.Paths;
  */
 public class N1PathFileTest {
     public static void main(String[] args) {
-        printPathInformation(Paths.get("nitin.txt"));
+        printPathInformation(Paths.get("/src/nitin.txt"));
     }
 
     private static void printPathInformation(Path path) {
@@ -17,7 +17,7 @@ public class N1PathFileTest {
 
         Path currentParent = path;
         while((currentParent = currentParent.getParent()) != null){
-            System.out.println(" Curren parent is: "+currentParent);
+            System.out.println(" Current parent is: "+currentParent);
         }
 
     }
