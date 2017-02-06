@@ -37,13 +37,12 @@ public class BasicMapInteger {
     }
 
     private static void removeOddNumber(Map<Integer, Integer> map) {
-        //KeySet is a method in map which RETURNSD N1PathFileTest SET OF KEYS
-        Set<Integer> key = map.keySet();
+        //KeySet is a method in Map which RETURNS SET OF KEYS
 
-        Iterator itr = key.iterator();
+        Iterator<Integer> itr = map.keySet().iterator();
         while(itr.hasNext()) {
-            Integer tempKey = (Integer)itr.next();
-            if(map.get(tempKey)%2 != 0){
+            int tempKey = itr.next();
+            if(map.get(tempKey)%2 == 0){
                 // Concurrent Modification Exception
                 //map.remove(tempKey);
 

@@ -77,6 +77,7 @@ public class BasicSetInteger {
         //Adding some other collection into the set
         arr1 = Arrays.asList(arr);
         set.addAll(arr1);
+        set.clear();
 
         //Adding an individual element
         set.add(1234);
