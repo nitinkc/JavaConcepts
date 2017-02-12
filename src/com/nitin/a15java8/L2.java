@@ -5,7 +5,7 @@ package com.nitin.a15java8;
  */
 
 //Till Java 7, only method signaturr
-// Now we can set to Derfault anf implement
+// Now we can b_set to Derfault anf implement
 
 interface Fly{
     default public void takeOff(){

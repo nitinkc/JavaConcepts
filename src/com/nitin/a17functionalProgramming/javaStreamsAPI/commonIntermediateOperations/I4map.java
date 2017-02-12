@@ -13,6 +13,6 @@ public class I4map {
         list.map(a -> a.length()).forEach(b -> System.out.println(b));
 
         //The same is written in the
-        //list.map(String::length).forEach(System.out::print);
+        //a_list.map(String::length).forEach(System.out::print);
     }
 }

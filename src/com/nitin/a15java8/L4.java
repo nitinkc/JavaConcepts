@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by Nitin C on 2/27/2016.
  *
- * The double of the first even number > 3 and in the list
+ * The double of the first even number > 3 and in the a_list
  */
 public class L4 {
     public static void main(String[] args) {

@@ -27,11 +27,11 @@ public class M1Final {
            // Deiadvantage : missing on OOPS Inheritance and Polymorphism
 
         final M1Final str = new M1Final ("Mahatma Gandhi");
-        System.out.println("Final String is set to : "+ finalString);
+        System.out.println("Final String is b_set to : "+ finalString);
 
         // CHANGING THE FINAL variable
         str.setM1Final("Modi");
-        System.out.println("Final String is re-set to : "+ str.getM1Final());
+        System.out.println("Final String is re-b_set to : "+ str.getM1Final());
     }
 
 }

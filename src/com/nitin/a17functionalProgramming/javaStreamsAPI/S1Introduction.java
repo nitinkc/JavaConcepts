@@ -23,7 +23,7 @@ public class S1Introduction {
         System.out.println(empty);
 
         List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,9);
-        //Creating a Stream froma  list
+        //Creating a Stream froma  a_list
         Stream<Integer> fromList = list.stream();
         //Creating a parallel Stream
         Stream<Integer> fromListParallel = list.parallelStream();

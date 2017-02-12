@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * Created by nitin on 1/13/16.
- * While iterating the list, if the STRUCTURE IS modified.
+ * While iterating the a_list, if the STRUCTURE IS modified.
  */
 public class E2ConcurrentModification {
     public static void main(String[] args) {

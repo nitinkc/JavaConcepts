@@ -13,7 +13,7 @@ public class T1count {
         System.out.println(stringList.count());
 
         List<Integer> intList = Arrays.asList(1,2,3,4,5,6,7,8,9);
-        //Creating a Stream froma  list
+        //Creating a Stream froma  a_list
         Stream<Integer> fromList = intList.stream();
         System.out.println(fromList.count());
         //Exception : java.lang.IllegalStateException: stream has already been operated upon or closed

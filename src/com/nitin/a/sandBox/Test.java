@@ -1,36 +1,62 @@
 package com.nitin.a.sandBox;
 
-import sun.applet.resources.MsgAppletViewer;
+import java.util.*;
 
-import java.nio.file.DirectoryIteratorException;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-
-/**
- * Created by Nitin Chaurasia on 12/15/16 at 10:32 PM.
- */
 public class Test {
-    public static void main(String[] args) {
+    Map<String, Integer> magazineMap;
+    Map<String, Integer> noteMap;
 
-        Map<String, Integer> map = new HashMap<>();
+    public Test(String magazine, String note) {
+        // fill the megazine map
+        String[] magMap = magazine.split(" ");
+        String[] not = note.split(" ");
 
-        map.put("Nitin", 31);
-        map.put("Sangram", 26);
-        map.put("Ramdon", 30);
+        for (String m : magMap){
+            if (magazineMap.containsKey(m))
+                magazineMap.put(m,1);
+            else
+                magazineMap.put(m,magazineMap.get(m) + 1);
+        }
 
-        // Reading a map
-         // We need a set to collcet all the String values
-        // We will iterate over the keySet
+        for (String n : not){
+            if (noteMap.containsKey(n))
+                noteMap.put(n,1);
+            else
+                noteMap.put(n,noteMap.get(n) + 1);
+        }
+    }
 
-        Iterator<String> itr = map.keySet().iterator();
+    public boolean solve() {
+        Iterator<String> itr = noteMap.keySet().iterator();
+        boolean flag = true;
 
         while(itr.hasNext()){
-            String key = itr.next();
-            int value = map.get(key);
+            String word = itr.next();
 
-            System.out.println("key = " + key + " |  Value = " + value);
+            if (magazineMap.get(word) < 1)
+                return false;
+            else
+                magazineMap.put(word, magazineMap.get(word) - 1);
         }
+
+        return flag;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int m = scanner.nextInt();
+        int n = scanner.nextInt();
+
+        // Eat whitespace to beginning of next line
+        scanner.nextLine();
+
+        Test s = new Test(scanner.nextLine(), scanner.nextLine());
+        scanner.close();
+
+        boolean answer = s.solve();
+        if(answer)
+            System.out.println("Yes");
+        else System.out.println("No");
 
     }
 }

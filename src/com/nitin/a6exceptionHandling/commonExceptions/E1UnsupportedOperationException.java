@@ -11,7 +11,7 @@ public class E1UnsupportedOperationException {
         list.add(1);
 
         Collection collection = Collections.unmodifiableList(list);
-        list.add("123"); //Gets added Normally to the list
+        list.add("123"); //Gets added Normally to the a_list
 
         collection.add(55);// Unsupported Operation Exception
 

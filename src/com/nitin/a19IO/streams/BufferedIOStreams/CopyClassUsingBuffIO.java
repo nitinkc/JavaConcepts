@@ -9,7 +9,7 @@ import java.io.*;
  * if value returned is less than the size of byte array, that was the last read from the file!!
  *
  * for BOS write(byte[],int,int), input byte array, offset and length value
- * offset is the number of values to skip before writing characters, and is often set to zero.
+ * offset is the number of values to skip before writing characters, and is often b_set to zero.
  * the length is the number of characters from the byte array to write
  *
  * WHY Buffered Classes Preferred? The buffered classes contains numerous performance improvements for

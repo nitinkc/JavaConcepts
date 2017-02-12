@@ -48,7 +48,7 @@ public class L1BasicWithListIteration {
         values.forEach((Integer element) -> System.out.print(element) );
         System.out.println();
         /* forEach says i am accepting a FUNCTION
-        * N1PathFileTest Function has 4 things - name, return type, parameter list and Body
+        * N1PathFileTest Function has 4 things - name, return type, parameter a_list and Body
         * Most Imp: is Body of the function
         * Body of the function -> System.out.println(element)
         * Parameter List --> (Integer element)

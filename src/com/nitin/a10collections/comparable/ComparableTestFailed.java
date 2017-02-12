@@ -14,8 +14,8 @@ import java.util.TreeSet;
  * Whenever we use Object other THAN WRAPPER
  *
  * This problem CANNOT be solved with COMPARATOR.
- * Comparator can be used when we call java Utility Class
- * a10collections.sort(List<Integer>, Comparator<...>)
+ * comparator can be used when we call java Utility Class
+ * a10collections.sort(List<Integer>, comparator<...>)
  */
 public class ComparableTestFailed {
     public static void main(String[] args) {
