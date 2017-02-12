@@ -3,7 +3,7 @@ package com.nitin.a7oopsConcepts.interfaces;
 /**
  * Created by nitin on 12/29/16.
  *
- * A Class can extend only one class but can implement multiple interfaces
+ * BasicConnection Class can extend only one class but can implement multiple interfaces
  */
 interface Interface {
     void m1();

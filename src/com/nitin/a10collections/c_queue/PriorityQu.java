@@ -4,7 +4,11 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-/* Heaps are represented using Priority Queue. It gives O(1) seek time*/
+/** Heaps are represented using Priority Queue. It gives O(1) seek time
+ * 	add(E e) Inserts the specified element into this priority queue.
+ *  offer(E e) Inserts the specified element into this priority queue
+ *  poll() Retrieves and removes the head of this queue, or returns null if this queue is empty.
+*/
 
 public class PriorityQu {
 	static class PQsort implements Comparator<Integer> {

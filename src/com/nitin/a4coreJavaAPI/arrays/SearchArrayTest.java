@@ -8,7 +8,7 @@ public class SearchArrayTest {
 		for (String i : friends)
 		System.out.print(i + " ");
 		
-		//BINARY SEARCH --> BINARY SEARCH WORKS ON SORTED ARRAYS,HERE IS A TEST OF THAT
+		//BINARY SEARCH --> BINARY SEARCH WORKS ON SORTED ARRAYS,HERE IS BasicConnection TEST OF THAT
 		System.out.print("\nPrashant = "); //to give a line change 
 		System.out.println(Arrays.binarySearch(friends, "Prashant"));
 		System.out.println("Abhishek = " + Arrays.binarySearch(friends, "Abhishek"));
