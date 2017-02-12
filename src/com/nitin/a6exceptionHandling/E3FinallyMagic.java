@@ -13,8 +13,8 @@ public class E3FinallyMagic {
             int i = 5/0;
         } catch (ArithmeticException e){
             System.out.println(e);
-            e.printStackTrace();
-            return;
+            e.printStackTrace();//behaves like coming from a separate thread
+            return;// Finally happens even after the return
         } finally {
             System.out.println("It executes even after return from catch");
         }
