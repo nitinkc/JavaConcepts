@@ -1,4 +1,4 @@
-package com.nitin.a8designPatternsNPrinciples.polymorphism;
+package com.nitin.a7oopsConcepts.polymorphism;
 
 /**
  * Created by Nitin C on 3/5/2016.
@@ -11,7 +11,7 @@ public class ObjectComposition {
 }
 
 /* Composing a class Penguin that contains both of these objects and delegates its methods to them
-* One of the advantage od OC over Inheritance is greater code reuse. By usong OC you gain access to other classes
+* One of the advantage of OC over Inheritance is greater code reuse. By using OC you gain access to other classes
 * and methods that would be difficult to obtain via Java's single inheritance model!!
 * */
 class Penguin{

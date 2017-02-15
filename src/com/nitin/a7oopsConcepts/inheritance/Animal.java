@@ -1,4 +1,4 @@
-package com.nitin.a8designPatternsNPrinciples.inheritance;
+package com.nitin.a7oopsConcepts.inheritance;
 
 /**
  * Created by Nitin Chaurasia on 3/6/16 at 11:37 PM.

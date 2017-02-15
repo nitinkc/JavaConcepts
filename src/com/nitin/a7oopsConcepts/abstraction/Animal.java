@@ -1,4 +1,4 @@
-package com.nitin.a8designPatternsNPrinciples.abstractClass;
+package com.nitin.a7oopsConcepts.abstraction;
 
 /**
  * Created by Nitin Chaurasia on 3/6/16 at 11:48 PM.

@@ -12,7 +12,7 @@ public class HashMapEg {
 		m.put("k2", Pets.DOGS);//ENUM as Value
 		m.put(Pets.CATS,"CAT Key");
 		m.put(new Cat(), "Key value");
-		
+
 		System.out.println(m.get("1998")); //dOG OBJECT -->THE VALUE WILL VARY
 		System.out.println(m.get(d1)); //object d1 is used as a key
 		System.out.println(m.get("k2")); //Getting enum VALUE

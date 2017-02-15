@@ -5,7 +5,6 @@
   * Intent : to specify behaviour of object
   * CANNOT BE INSTANTIATED
   
-  
   * All data fields are public final & static
   * All methods are public and abstract
    
