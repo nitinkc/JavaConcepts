@@ -5,7 +5,7 @@ package com.nitin.a7oopsConcepts.interfaces;
  */
 public class I2InterfaceVariables implements Left,Right {
     public static void main(String[] args) {
-        // System.out.println(x);// Error: reference to x is ambiguous
+        //System.out.println(x);// Error: reference to x is ambiguous
 
         // Resolve Naming Conflict
         System.out.println(Left.x);
@@ -15,6 +15,7 @@ public class I2InterfaceVariables implements Left,Right {
     }
 }
 
+// By Default is Static
 interface Left{
     int x = 222;
 }

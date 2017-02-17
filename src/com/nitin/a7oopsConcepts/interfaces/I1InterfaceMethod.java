@@ -26,13 +26,15 @@ interface AnotherInterface{
 }
 
 // Compulsorily all methods needs to be implemented
-class AnotherServiceProvider implements Interface, AnotherInterface{
+class AnotherServiceProvider extends ServiceProvider implements Interface, AnotherInterface{
 
-    // m1 exists in both interfaces. Naming conflict
-    @Override
-    public void m1() {
-        System.out.println("First implementation");
+    public static void main(String[] args) {
+        AnotherServiceProvider a = new AnotherServiceProvider();
+        a.m1();
+
     }
+    // m1 exists in both interfaces. Naming conflict
+    // Error: reference to m1() is ambiguous
 
     @Override
     public void m2() {

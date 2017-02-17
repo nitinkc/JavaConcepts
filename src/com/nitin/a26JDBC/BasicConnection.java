@@ -30,7 +30,6 @@ public class BasicConnection {
 		    //Traverse through the iterator.
             int user_id = rs.getInt("user_id");
             String password = rs.getString("password");
-
         }
 
 		// 5. Close Connection

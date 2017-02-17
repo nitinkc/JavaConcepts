@@ -3,7 +3,8 @@ package com.nitin.a8designPatternsNPrinciples.designPrinciples;
 /**
  * Created by Nitin C on 3/5/2016.
  *
- * Data Encapsulation is the idea of combining fields and methods in a class such that the methods operate on the data.
+ * Data Encapsulation is the idea of combining fields and methods in a class such that
+ * the methods operate on the data.
  * as opposed to the users of the class accessing the fields
  *
  * Implemented with private instance fields which has public methods to access the fields directly

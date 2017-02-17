@@ -7,14 +7,25 @@ public class I4AdapterClass extends AdapterX {
 
     public static void main(String[] args) {
         I4AdapterClass obj = new I4AdapterClass();
+        obj.m2();
         obj.m3();
     }
 
+    @Override
     public void m3(){
         System.out.println("Providing Implementation of only M3, even though we have access to all the methods, " +
-                "we can choose to implement what we like in Adaptert pattern");
+                "we can choose to implement what we like in Adapter pattern");
 
     }
+
+    @Override
+    public void m2(){
+        System.out.println("Implementation if m2");
+    }
+
+
+
+
 }
 
 
