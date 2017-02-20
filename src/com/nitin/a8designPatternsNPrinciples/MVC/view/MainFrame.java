@@ -1,11 +1,13 @@
-package com.balazsholczer.view;
+package com.nitin.a8designPatternsNPrinciples.MVC.view;
+
+import com.nitin.a8designPatternsNPrinciples.MVC.constants.Constants;
+import com.nitin.a8designPatternsNPrinciples.MVC.controller.Controller;
 
 import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 
-import com.balazsholczer.constants.Constants;
-import com.balazsholczer.controller.Controller;
+
 
 public class MainFrame extends JFrame implements FormListener{
 

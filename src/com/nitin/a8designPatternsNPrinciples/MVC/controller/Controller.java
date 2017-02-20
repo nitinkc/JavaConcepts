@@ -1,10 +1,11 @@
-package com.balazsholczer.controller;
+package com.nitin.a8designPatternsNPrinciples.MVC.controller;
+
+
+import com.nitin.a8designPatternsNPrinciples.MVC.model.Database;
+import com.nitin.a8designPatternsNPrinciples.MVC.model.Person;
+import com.nitin.a8designPatternsNPrinciples.MVC.view.MainFrame;
 
 import java.util.List;
-
-import com.balazsholczer.model.Database;
-import com.balazsholczer.model.Person;
-import com.balazsholczer.view.MainFrame;
 
 public class Controller {
 

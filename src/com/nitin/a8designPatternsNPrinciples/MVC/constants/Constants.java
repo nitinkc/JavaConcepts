@@ -1,4 +1,4 @@
-package com.balazsholczer.constants;
+package com.nitin.a8designPatternsNPrinciples.MVC.constants;
 
 public class Constants {
 

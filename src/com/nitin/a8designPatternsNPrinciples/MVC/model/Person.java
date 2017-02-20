@@ -1,4 +1,4 @@
-package com.balazsholczer.model;
+package com.nitin.a8designPatternsNPrinciples.MVC.model;
 
 public class Person {
 

@@ -1,4 +1,4 @@
-package com.balazsholczer.view;
+package com.nitin.a8designPatternsNPrinciples.MVC.view;
 
 import java.awt.BorderLayout;
 import java.awt.Font;

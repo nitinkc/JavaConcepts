@@ -1,4 +1,4 @@
-package com.balazsholczer.view;
+package com.nitin.a8designPatternsNPrinciples.MVC.view;
 
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
