@@ -6,7 +6,7 @@ package com.nitin.a1languageFundamentals;
  * static : JVM can call this even without existing Object
  * void : main method can't return anything to JVM
  * main : name of the method which is configured inside JVM (can be tweaked)
- * String[] args : Array of commang line String arguments
+ * String[] args : Array of command line String arguments
  *
  * Can be declared with final, synchronized and strictfp
  * Inheritance Concept is applicable

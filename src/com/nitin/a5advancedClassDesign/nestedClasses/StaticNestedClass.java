@@ -3,7 +3,7 @@ package com.nitin.a5advancedClassDesign.nestedClasses;
 /**
  * Created by Nitin Chaurasia on 3/5/16 at 12:02 AM.
  *
- * Static calss defined at the member level
+ * Static class defined at the member level
  */
 public class StaticNestedClass {
     static class Nested{

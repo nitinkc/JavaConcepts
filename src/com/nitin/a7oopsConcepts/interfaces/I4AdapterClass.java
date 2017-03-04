@@ -22,10 +22,6 @@ public class I4AdapterClass extends AdapterX {
     public void m2(){
         System.out.println("Implementation if m2");
     }
-
-
-
-
 }
 
 

@@ -24,7 +24,7 @@ public class M1Final {
         // If method is declared as final, then in Child Class, not allowed to over ride
         // If class is declared as final, we can't create child class.
            // Each method declared in Final class, is by default, final
-           // Deiadvantage : missing on OOPS Inheritance and Polymorphism
+           // Disadvantage : missing on OOPS Inheritance and Polymorphism
 
         final M1Final str = new M1Final ("Mahatma Gandhi");
         System.out.println("Final String is b_set to : "+ finalString);

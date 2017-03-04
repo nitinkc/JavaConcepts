@@ -27,5 +27,4 @@ public class E7TryWithResources {
             out.write(in.readLine());
         }
     }
-
 }

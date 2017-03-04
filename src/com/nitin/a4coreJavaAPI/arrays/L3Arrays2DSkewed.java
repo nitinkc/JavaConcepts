@@ -32,8 +32,5 @@ public class L3Arrays2DSkewed {
             }
             System.out.println();
         }
-
-
-
     }
 }

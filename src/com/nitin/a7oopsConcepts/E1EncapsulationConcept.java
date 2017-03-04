@@ -11,7 +11,7 @@ public class E1EncapsulationConcept {
         Information Hiding by ACCESS CONTROL
 
         Complete Encapsulation : By declaring all members private
-        Partial Encapsulation : By declaring public or pritected
+        Partial Encapsulation : By declaring public or protected
 
          */
     }

@@ -12,6 +12,7 @@ package com.nitin.a6exceptionHandling.customizedExceptions;
 public class CannotSwimException extends Exception {
     public CannotSwimException() {
         super();
+        System.err.print("Testing... Exception");
     }
 
     public CannotSwimException(String message) {

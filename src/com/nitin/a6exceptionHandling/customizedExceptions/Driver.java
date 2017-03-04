@@ -9,9 +9,12 @@ public class Driver {
        // throw new CannotSwimException("Nitin");
 
         try {
-            throw new CannotSwimException("Nitin executes his custom Exception");
+            //throw new CannotSwimException("Nitin executes his custom Exception");
+            throw new CannotSwimException();
         } catch (CannotSwimException e) {
             e.printStackTrace();
         }
+
+
     }
 }

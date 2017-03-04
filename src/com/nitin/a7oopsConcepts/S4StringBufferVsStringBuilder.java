@@ -10,7 +10,7 @@ public class S4StringBufferVsStringBuilder {
         /*
         StringBuilder is NON-SYNCHRONIZED thus more efficient
         StringBuffer is SYNCHRONIZED (THREAD SAFE) means two threads
-        can call the methods of te object simultaneously. Thus comparatively
+        can call the methods of the object simultaneously. Thus comparatively
         less efficient
          */
 
