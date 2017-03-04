@@ -30,9 +30,18 @@ package com.nitin.a8designPatternsNPrinciples.Structural.S1Decorator;
 public class App {
 
 	public static void main(String[] args) {
-		
+
+		//Milk with two Sugar
 		Beverage milkWith2Sugars = new Sugar(new Sugar(new Milk(new PlainBeverage())));
-		
-		System.out.println(milkWith2Sugars.getDescription());
+		System.out.println(milkWith2Sugars.getDescription() + " COST: " + milkWith2Sugars.getCost());
+
+		Beverage milkWithSugar = new Sugar(new Milk(new PlainBeverage()));
+		System.out.println(milkWithSugar.getDescription() + " COST: " + milkWithSugar.getCost());
+
+		Beverage plainBeverage = new PlainBeverage();
+		System.out.println(plainBeverage.getDescription() + " COST: " + plainBeverage.getCost());
+
+		Beverage milk = new Milk(new PlainBeverage());
+		System.out.println(milk.getDescription() + " COST: " + milk.getCost());
 	}
 }

@@ -1,4 +1,4 @@
-package com.nitin.a8designPatternsNPrinciples.Behavioral.B2Observer;
+package com.nitin.a8designPatternsNPrinciples.Behavioral.B2Observer.O1WeatherObserver;
 
 public class WeatherObserver implements Observer, DataPresenter {
 

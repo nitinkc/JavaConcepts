@@ -10,7 +10,7 @@ public class InsertionSort extends Algorithm{
 	
 	@Override
 	public void initialize() {
-		System.out.println("Insertion sort initializing...");
+		System.out.println("\nInsertion sort initializing...");
 	}
 
 	@Override

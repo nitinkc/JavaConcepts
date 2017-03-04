@@ -1,4 +1,4 @@
-package com.nitin.a8designPatternsNPrinciples.Behavioral.B2Observer;
+package com.nitin.a8designPatternsNPrinciples.Behavioral.B2Observer.O1WeatherObserver;
 
 import java.util.ArrayList;
 import java.util.List;

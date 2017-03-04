@@ -14,9 +14,11 @@ public class App {
 		
 		int[] numbers = {100,5,7,-6,0};
 		
-		Algorithm bubblesort = new BubbleSort(numbers);
-		
-		bubblesort.sort();
+		Algorithm sort = new BubbleSort(numbers);
+		sort.sort();
+
+		sort = new InsertionSort(numbers);
+		sort.sort();
 		
 	}
 }

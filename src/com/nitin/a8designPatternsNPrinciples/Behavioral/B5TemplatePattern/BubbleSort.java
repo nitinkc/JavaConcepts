@@ -10,7 +10,7 @@ public class BubbleSort extends Algorithm{
 	
 	@Override
 	public void initialize() {
-		System.out.println("Bubble sort initializing...");
+		System.out.println("\n Bubble sort initializing...");
 	}
 
 	@Override
