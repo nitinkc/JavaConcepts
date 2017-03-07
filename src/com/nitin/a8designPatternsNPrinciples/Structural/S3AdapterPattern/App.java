@@ -12,7 +12,6 @@ package com.nitin.a8designPatternsNPrinciples.Structural.S3AdapterPattern;
 public class App {
     public static void main(String[] args) {
 
-
         Vehicle bus = new Bus();
         Vehicle car = new Car();
         Vehicle bicycle = new BicycleAdapter(new Bicycle());
@@ -20,6 +19,5 @@ public class App {
         bus.accelerate();
         car.accelerate();
         bicycle.accelerate();
-
     }
 }
