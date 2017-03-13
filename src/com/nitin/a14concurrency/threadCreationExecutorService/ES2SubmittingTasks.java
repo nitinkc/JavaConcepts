@@ -1,4 +1,4 @@
-package main.java.com.nitin.concurrency.threadCreationExecutorService;
+package com.nitin.a14concurrency.threadCreationExecutorService;
 
 /**
  * Created by Nitin C on 3/3/2016.

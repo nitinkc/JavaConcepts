@@ -19,6 +19,5 @@ public class N1PathFileTest {
         while((currentParent = currentParent.getParent()) != null){
             System.out.println(" Current parent is: "+currentParent);
         }
-
     }
 }

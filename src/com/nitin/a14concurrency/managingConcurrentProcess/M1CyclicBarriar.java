@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
 /**
  * Created by Nitin C on 3/5/2016.
  *
- * N1PathFileTest CyclicBarrier takes in its constructor a limit value, indicating the number of threads to wait for
+ * A CyclicBarrier takes in its constructor a limit value, indicating the number of threads to wait for
  * As each thread finishes, it calls the await() method on the CyclicBarrier. Once the specified number of threads
  * have each called await(), the barrier is released, and all the threads can continue
  *
@@ -85,6 +85,4 @@ class DatabaseOperations{
                 "4. Obtain result in RESULTSET \n" +
                 "5. Close the connection");
     }
-
-
 }
