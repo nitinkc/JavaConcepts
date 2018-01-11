@@ -8,12 +8,12 @@ class A {
 
     /* Method overloading */
     int music(int disk) {
-        System.out.println(" this is from overloaded music");
+        System.out.println(" this is from overloaded music : disk = " + disk);
         return disk;
     }
 }
 
-public class Example1 {
+public class MethodOverloading {
     public static void main(String[] args) {
         A obj = new A();
         obj.music();

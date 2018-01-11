@@ -12,7 +12,7 @@ package com.nitin.a1languageFundamentals.variables;
  * 2. Static Variable
  *      # Stored in method area. Thus called class-level or fields
  *      # Values remains same between all objects. Single copy is created
- *      # Created at the time of Class Loading and destroved at class unloading
+ *      # Created at the time of Class Loading and destroyed at class unloading
  *      # since created at the time of loading, can access from both instance & static areas directly
  *      # declared with staticTest keyword, within the class BUT outside any constructor, block or method
  *      # not required to perform initialization explicitly, JVM provides default values

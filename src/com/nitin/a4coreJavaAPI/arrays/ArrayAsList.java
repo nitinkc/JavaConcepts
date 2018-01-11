@@ -6,12 +6,13 @@ import java.util.*;
 public class ArrayAsList {
 	public static void main(String nitin[]){
 		String[] a = {"one","two","three","four"};
+		String[] b = new String[]{"one","two","three","four"};//another way of declaration
 
-		//String Array doesnot behave like regular arrays. contains methid wont work
-		//a.contains("one");
+		//String Array does not behave like regular arrays. contains method won't work
+		//a.contains("one");// cannot resolve method 'contains (java.lang.String)'
 
 		System.out.println(Arrays.asList(a).contains("two"));//true
-		System.out.println(Arrays.asList(a).contains("nitin"));//false
+		System.out.println(Arrays.asList(a).contains("Nitin"));//false
 
 		// Arrays Class has method asList returning is
 		System.out.println(Arrays.asList(a));

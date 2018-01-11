@@ -5,7 +5,7 @@ package com.nitin.a4coreJavaAPI.Strings;
  */
 public class S2StringMethods {
     public static void main(String[] args) {
-        String x = "Malgudi Days by R.K Narayan Featurs malgudi";
+        String x = "Malgudi Days by R.K Narayan Features malgudi";
 
 
         System.out.println(x.length());// length method

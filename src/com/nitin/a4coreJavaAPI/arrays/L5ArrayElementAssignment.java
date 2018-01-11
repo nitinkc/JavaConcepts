@@ -13,7 +13,7 @@ public class L5ArrayElementAssignment {
         // Case 1
         int a[] = new int[10];
 
-        // Case 2 : Object type arrays. Elements can be either declared type or its chils class
+        // Case 2 : Object type arrays. Elements can be either declared type or its child class
         Object b[] = new Object[3];
         b[0] = new Object();
         b[1] = new Integer(10);
@@ -23,7 +23,7 @@ public class L5ArrayElementAssignment {
         c[0] = new Integer(10);
         c[1] = new Double(6.32);
 
-        // Case 3 : Abstract Class Type Arrays. Elemets can be of Child objects
+        // Case 3 : Abstract Class Type Arrays. Elements can be of Child objects
         Number d[] = new Number[2];
         //d[0] = new Number();// abstract cannot be instantiated
         d[0] = new Integer(10);
@@ -33,5 +33,4 @@ public class L5ArrayElementAssignment {
         Runnable r[] = new Runnable[2];
         r[0] = new Thread();
     }
-
 }
