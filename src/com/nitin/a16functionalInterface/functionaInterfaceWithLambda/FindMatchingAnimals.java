@@ -1,4 +1,4 @@
-package com.nitin.a15java8.lambda.functionaInterfaceWithLambda;
+package com.nitin.a16functionalInterface.functionaInterfaceWithLambda;
 
 /**
  * Created by Nitin Chaurasia on 5/9/16 at 10:49 PM.

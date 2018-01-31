@@ -1,17 +1,24 @@
-package com.nitin.a16functionalInterface;
+package com.nitin.a16functionalInterface.functionaInterfaceWithLambda;
 
 /**
- * Created by Nitin Chaurasia on 3/3/16 at 12:18 AM.
+ * Created by Nitin Chaurasia on 5/9/16 at 10:45 PM.
  */
 public class Animal {
     private String species;
     private boolean canHop;
     private boolean canSwim;
 
-    public Animal(String species, boolean canHop, boolean canSwim) {
+    public Animal(String species, boolean canHop, boolean canSwim){
         this.species = species;
         this.canHop = canHop;
         this.canSwim = canSwim;
+    }
+
+    // Getters for the encapsulated variables
+
+    @Override
+    public String toString() {
+        return species;
     }
 
     public boolean isCanHop() {
@@ -20,12 +27,5 @@ public class Animal {
 
     public boolean isCanSwim() {
         return canSwim;
-    }
-
-    @Override
-    public String toString() {
-        return "Animal{" +
-                "species='" + species + '\'' +
-                '}';
     }
 }

@@ -50,7 +50,7 @@ public class BasicListInteger {
             if (curr%2 != 0){
                 itr.remove();
                 // ConcurrentModificationException
-                //b_set.remove(curr);
+                // list.remove(curr);
             }
         }
 

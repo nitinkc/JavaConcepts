@@ -4,13 +4,13 @@ import java.util.*;
 
 /**
  * Created by synergisticit on 2/25/2016.
- * while adding into a b_set, a test of eqality happens, to determine if the object being pushed already exist
+ * while adding into a set, a test of equality happens, to determine if the object being pushed already exist
  */
 public class BasicSetInteger {
     public static void main(String[] args) {
 
         // With Integer, no need to override hashCode and equals
-        // With Tree b_set it will sort to DNSO
+        // With Tree set it will sort to DNSO
 
         // Sorted values while iterating
         Set<Integer> set = new TreeSet<Integer>();
@@ -46,19 +46,25 @@ public class BasicSetInteger {
     }
 
     /**
-     *  3 main methids of iterator
+     *  3 main methods of iterator
      1. hasNext()
      2. next()
      3. remove()
      */
     private static void printSet(Set<Integer> set) {
         //Printing with Iterator
-        Iterator itr = set.iterator();
-        //From this point on, DO NOT USE b_set.get or b_set.remove!!
+        Iterator<Integer> itr = set.iterator();
+        //From this point on, DO NOT USE set.get or set.remove!!
         // USE ONLY ITERATOR
         while (itr.hasNext()) {
-
             System.out.print(itr.next() + " - ");
+        }
+        System.out.println();
+
+        System.out.println("Print Using For Each Loop");
+
+        for(Integer i : set){
+            System.out.print(i);
         }
 
         System.out.println();
@@ -66,7 +72,7 @@ public class BasicSetInteger {
     }
 
     /**
-     * 1. Demonstrating adding USING N1PathFileTest COLLECTION
+     * 1. Demonstrating adding USING A COLLECTION
      * 2. and adding individual elements
      *
      * @param set

@@ -1,4 +1,4 @@
-package com.nitin.a15java8.lambda;
+package com.nitin.a15Lambda_java8.lambda;
 
 import java.util.Arrays;
 import java.util.List;

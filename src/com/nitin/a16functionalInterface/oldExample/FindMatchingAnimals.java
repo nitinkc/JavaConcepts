@@ -1,4 +1,4 @@
-package com.nitin.a16functionalInterface;
+package com.nitin.a16functionalInterface.oldExample;
 
 /**
  * Created by Nitin Chaurasia on 3/3/16 at 12:26 AM.

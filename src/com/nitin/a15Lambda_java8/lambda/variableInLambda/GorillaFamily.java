@@ -1,4 +1,4 @@
-package com.nitin.a15java8.lambda.variableInLambda;
+package com.nitin.a15Lambda_java8.lambda.variableInLambda;
 
 /**
  * Created by Nitin Chaurasia on 5/9/16 at 11:03 PM.

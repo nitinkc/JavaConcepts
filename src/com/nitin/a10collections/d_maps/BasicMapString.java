@@ -31,7 +31,7 @@ public class BasicMapString {
 
     private static String findLongString(Map<Integer, String> map) {
 
-        //KeySet is a method in map which RETURNSD N1PathFileTest SET OF KEYS
+        //KeySet is a method in map which RETURNS A SET OF KEYS
         Set<Integer> key = map.keySet();
 
         Iterator itr = key.iterator();
@@ -58,7 +58,7 @@ public class BasicMapString {
      * @param map
      */
     private static void printMapUsingSet(Map<Integer, String> map) {
-        //KeySet is a method in map which RETURNSD N1PathFileTest SET OF KEYS
+        //KeySet is a method in map which RETURNS A SET OF KEYS
         Set<Integer> key = map.keySet();
 
         Iterator itr = key.iterator();

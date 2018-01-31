@@ -25,8 +25,7 @@ public class QueueExample {
         System.out.println(q.element());
 
         System.out.println("After Polling");
-        for (int i :
-                q) {
+        for (int i : q) {
             System.out.print(i + "\t");
         }
 

@@ -1,4 +1,4 @@
-package com.nitin.a15java8;
+package com.nitin.a15Lambda_java8;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,7 +12,7 @@ public class L1BasicWithListIteration {
     public static void main(String[] args) {
         List<Integer> values = Arrays.asList(1,2,3,4,5,6,7,8,9);
 
-        // Complex, initial (boundry lesstha ot less than equal to)
+        // Complex, initial (boundry less than or less than equal to)
         // Self inflicted wound pattern
        /* for(int i = 0; i < values.size(); i++){
             System.out.println(values.get(i));
@@ -48,7 +48,7 @@ public class L1BasicWithListIteration {
         values.forEach((Integer element) -> System.out.print(element) );
         System.out.println();
         /* forEach says i am accepting a FUNCTION
-        * N1PathFileTest Function has 4 things - name, return type, parameter a_list and Body
+        * a Function has 4 things - name, return type, parameter a_list and Body
         * Most Imp: is Body of the function
         * Body of the function -> System.out.println(element)
         * Parameter List --> (Integer element)

@@ -8,7 +8,7 @@ import java.util.Set;
 /**
  * Created by synergisticit on 2/25/2016.
  *
- * HashMAp and HashSet doest guarantee the ordre of retieval
+ * HashMAp and HashSet doest guarantee the order of retrieval
  * TreeSet and TreeMap guarantees order (for map, the order is DNSO of keys)
  */
 public class BasicMapInteger {
@@ -60,12 +60,12 @@ public class BasicMapInteger {
     }
 
     /**
-     * Iterating thrugh a Map using Entry Set.
-     * NOTE: ENTRY SETRETURNS N1PathFileTest SET OF ENTRY WHICH KEY ADN VALUE
+     * Iterating through a Map using Entry Set.
+     * NOTE: ENTRY SET RETURNS A SET OF ENTRY WHICH KEY ADN VALUE
      * @param map
      */
     private static void printMapUsingEntrySet(Map<Integer, Integer> map) {
-        //Extracting the entry b_set and iterating over it
+        //Extracting the entry set and iterating over it
         Set myMap = map.entrySet();
         Iterator<Map.Entry<Integer,Integer>> itr = myMap.iterator();
 
@@ -87,7 +87,7 @@ public class BasicMapInteger {
      * @param map
      */
     private static void printMapUsingSet(Map<Integer, Integer> map) {
-        //KeySet is a method in map which RETURNSD N1PathFileTest SET OF KEYS
+        //KeySet is a method in map which RETURNS A SET OF KEYS
         Set<Integer> key = map.keySet();
 
         Iterator itr = key.iterator();

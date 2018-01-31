@@ -21,7 +21,8 @@ public class PriorityQu {
 		int [] q = {5,3,8,6,9,1,7};
 		Queue<Integer> pq = new PriorityQueue<Integer>();
 		for (int i : q){
-			pq.offer(i);}
+			pq.offer(i);
+		}
 		System.out.println(pq); //Print directly
 		
 		for (int j : q){
