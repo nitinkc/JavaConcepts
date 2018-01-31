@@ -2,6 +2,12 @@ package com.nitin.a4coreJavaAPI.Strings;
 
 /**
  * Created by nitin.chaurasia on 11/21/2016.
+
+ StringBuilder is NON-SYNCHRONIZED thus more efficient
+ StringBuffer is SYNCHRONIZED (THREAD SAFE) means two threads
+ can call the methods of the object simultaneously. Thus comparatively
+ less efficient
+
  */
 public class S3StringBuilder {
     public static void main(String[] args) {
@@ -11,7 +17,7 @@ public class S3StringBuilder {
 
         a.append(" Chaurasia");
         b.append(" Pathipati");
-        c.concat("Samal");
+        c.concat("Samal");//Not working
 
 
         System.out.println(a);

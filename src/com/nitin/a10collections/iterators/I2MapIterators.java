@@ -60,6 +60,4 @@ public class I2MapIterators {
             System.out.println("key is : " +key+" - Value is:"+value);
         }
     }
-
-
 }

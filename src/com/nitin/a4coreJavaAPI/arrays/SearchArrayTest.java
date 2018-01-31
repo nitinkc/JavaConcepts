@@ -4,14 +4,15 @@ public class SearchArrayTest {
 	public static void main(String[] args) {
 
 		String[] friends = {"Prashant","Ritesh","Leena","Vikram","Shiv Mohan","Dhan Singh","Abhishek","Shailesh","Neeraj"};
-		System.out.println(friends);//See the weird output
+		System.out.println("Printing the friends object " + friends);//See the weird output
+		System.out.println("Printing the contents of the array");
 		for (String i : friends)
 		System.out.print(i + " ");
 		
 		//BINARY SEARCH --> BINARY SEARCH WORKS ON SORTED ARRAYS,HERE IS BasicConnection TEST OF THAT
-		System.out.print("\nPrashant = "); //to give a line change 
+		System.out.print("\nPosition of Prashant in Array = "); //to give a line change
 		System.out.println(Arrays.binarySearch(friends, "Prashant"));
-		System.out.println("Abhishek = " + Arrays.binarySearch(friends, "Abhishek"));
+		System.out.println("Position of Abhishek in Array = " + Arrays.binarySearch(friends, "Abhishek"));
 		
 		
 		//SORTING ARRAY

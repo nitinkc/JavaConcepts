@@ -9,8 +9,9 @@ public class O5EqualityOperators {
     public static void main(String[] args) {
         String s1 = new String("Nitin");
         String s2 = "Nitin";
-        System.out.println(s1 == s2);// Reference Testing
-        System.out.println(s1.endsWith(s2));// String equality testing
+        //Reference Testing
+        System.out.println(s1 == s2);// False as the two objects are different
+        System.out.println(s1.equals(s2));// String equality testing
 
         Object o1 = new Object();
         Thread t1 = new Thread();

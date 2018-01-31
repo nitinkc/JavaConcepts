@@ -9,8 +9,8 @@ public class O6instanceof {
 
         Short s = 15;
 
-        System.out.println(s instanceof Short);//
-        System.out.println(s instanceof Number);
+        System.out.println(s instanceof Short);// true
+        System.out.println(s instanceof Number);// true
 
     }
 }
