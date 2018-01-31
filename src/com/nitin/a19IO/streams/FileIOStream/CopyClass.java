@@ -4,7 +4,7 @@ import java.io.*;
 
 /**
  * Created by Nitin C on 3/6/2016.
- * N1PathFileTest class file is a
+ * A class file is a
  *
  * While reading asingle value of a file input stream instance, the read method returns a primitive int value
  * rather than a byte value. If the class does return a byte instead of an int, then there no is no way to know EOF.

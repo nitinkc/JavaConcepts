@@ -5,8 +5,6 @@ package com.nitin.a16functionalInterface;
  */
 public class F5LambdaThreads {
     public static void main(String[] args) {
-
-        // Runnable Interface is already a Functional Interface in Java, containing exactly one abstract method
         Runnable r = () -> {
             for (int i = 0; i < 10; i++) {
                 System.out.println("Child thread");

@@ -19,7 +19,7 @@ public class BasicMapString {
 
         map.put(1,"Abcd");
         map.put(2,"sangram");
-        map.put(3,"N1PathFileTest");
+        map.put(3,"A");
         map.put(4,"sa");
         map.put(5,"Abc");
         map.put(6,"sangrampisal");

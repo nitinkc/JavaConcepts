@@ -1,4 +1,4 @@
-package com.nitin.a17functionalProgramming.javaStreamsAPI;
+package com.nitin.a17functionalProgramming.streamsAPIjava8;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -42,6 +42,5 @@ public class S2puttingTogetherThePipeline {
         list.filter(s -> s.length() > 5)
                 .sorted(Comparator.reverseOrder())
                 .forEach(System.out::println);
-
     }
 }

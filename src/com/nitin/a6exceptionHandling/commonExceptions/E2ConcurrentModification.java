@@ -11,7 +11,7 @@ import java.util.List;
 public class E2ConcurrentModification {
     public static void main(String[] args) {
         List list = new ArrayList();
-        list.add("N1PathFileTest");
+        list.add("A");
         list.add("B");
 
         Iterator itr = list.iterator();

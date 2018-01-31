@@ -5,7 +5,7 @@ import com.nitin.a12multithreading.ThreadByRunnable;
 /**
  * Created by Nitin Chaurasia on 12/2/15 at 10:30 PM.
  *
- * This Method is Preferred to DEFINE N1PathFileTest THREAD
+ * This Method is Preferred to DEFINE A THREAD
  *
  * We can extend other class while Implementing Runnable Interface
  */

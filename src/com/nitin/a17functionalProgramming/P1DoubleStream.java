@@ -1,4 +1,4 @@
-package com.nitin.a17functionalProgramming.javaStreamsAPI.primitiveStreams;
+package com.nitin.a17functionalProgramming;
 
 import java.util.stream.DoubleStream;
 
@@ -7,6 +7,8 @@ import java.util.stream.DoubleStream;
  */
 public class P1DoubleStream {
     public static void main(String[] args) {
-        DoubleStream oneValue = DoubleStream.of(3.14);
+        DoubleStream oneValue = DoubleStream.of(3.14, 4.34, 6.50);
+
+        System.out.println(oneValue.count());
     }
 }

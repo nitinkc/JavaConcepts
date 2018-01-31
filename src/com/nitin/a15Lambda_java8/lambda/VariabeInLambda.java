@@ -1,9 +1,9 @@
-package com.nitin.a15Lambda_java8.lambda.variableInLambda;
+package com.nitin.a15Lambda_java8.lambda;
 
 /**
  * Created by Nitin Chaurasia on 5/9/16 at 11:03 PM.
  */
-public class GorillaFamily {
+class VariableInLambda {
     String walk = "Walk";
 
     void everyonePlay(boolean baby){
@@ -19,10 +19,15 @@ public class GorillaFamily {
     }
 
     public static void main(String[] args) {
-        GorillaFamily gf = new GorillaFamily();
+        VariableInLambda gf = new VariableInLambda();
 
         gf.everyonePlay(true);
         System.out.println("********************");
         gf.everyonePlay(false);
     }
+}
+
+@FunctionalInterface
+interface Gorilla {
+    String move();
 }

@@ -1,4 +1,4 @@
-package com.nitin.a17functionalProgramming.javaStreamsAPI;
+package com.nitin.a17functionalProgramming.streamsAPIjava8;
 
 import java.util.Arrays;
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.stream.Stream;
 
 /**
  * Created by Nitin C on 3/3/2016.
- * N1PathFileTest stream in Java is a sequence of data
- * N1PathFileTest Stream Pileline is the operation (STREAM OPERATIONS) that run on a stream to produce a result
+ * A stream in Java is a sequence of data
+ * A Stream Pileline is the operation (STREAM OPERATIONS) that run on a stream to produce a result
  * Finite Streams have a limit
  * infinite Streams are like sunrise/sunset cycle
  *
@@ -23,14 +23,13 @@ public class S1Introduction {
         System.out.println(empty);
 
         List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,9);
-        //Creating a Stream froma  a_list
+        //Creating a Stream from a list
         Stream<Integer> fromList = list.stream();
         //Creating a parallel Stream
         Stream<Integer> fromListParallel = list.parallelStream();
 
         Stream<Double> randoms = Stream.generate(Math::random);
         randoms.forEach(System.out::println);//Infinite Stream of Random numbers
-
 
     }
 }

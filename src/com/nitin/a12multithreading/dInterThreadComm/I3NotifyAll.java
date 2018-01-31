@@ -45,7 +45,7 @@ class A1 extends Thread {
                         notifyAllExample.wait();
                     }
 
-                    System.out.print("N1PathFileTest  ");
+                    System.out.print("A  ");
                     // System.out.print("throwing dice");
                     int score = rd.nextInt(6);
                     System.out.print(score + "; ");

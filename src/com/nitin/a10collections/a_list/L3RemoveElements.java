@@ -16,7 +16,7 @@ import java.util.List;
 public class L3RemoveElements {
     public static void main(String[] args) {
         List list = new ArrayList();
-        list.add("N1PathFileTest");
+        list.add("A");
         list.add("B");
         list.add("C");
         list.add("D");

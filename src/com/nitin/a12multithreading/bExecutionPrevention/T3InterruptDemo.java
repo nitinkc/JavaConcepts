@@ -3,7 +3,7 @@ package com.nitin.a12multithreading.bExecutionPrevention;
 /**
  * Created by Nitin Chaurasia on 12/3/15 at 12:57 AM.
  *
- * N1PathFileTest Thread Can Interrupt another Sleeping or Waiting Thread
+ * A Thread Can Interrupt another Sleeping or Waiting Thread
  */
 public class T3InterruptDemo {
     public static void main(String[] args) {

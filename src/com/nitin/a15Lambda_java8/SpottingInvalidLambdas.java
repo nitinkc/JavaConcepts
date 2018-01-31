@@ -29,7 +29,7 @@ public class SpottingInvalidLambdas {
         CORRECT:
         a -> { return a.startsWith("test"); }
 
-        // DATA TYPES FOR THE INPUT PARAMETERS OF N1PathFileTest LAMBDA EXPRESSION IS OPTIONAL
+        // DATA TYPES FOR THE INPUT PARAMETERS OF A LAMBDA EXPRESSION IS OPTIONAL
         (int y, z) -> { int x = 1; return x+y; }// DOES NOT COMPILE : Either both have data types or none
         CORRECT: ( y, z) -> { int x = 1; return x+y; }
         OR CORRECT: (int y, int z) -> { int x = 1; return x+y; }

@@ -152,7 +152,7 @@ class Nitin{
     Nitin(){
     }
     Nitin(int a, String b, boolean c){
-        //N1PathFileTest Constructor
+        //A Constructor
     }
 
     public void m1(){

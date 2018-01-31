@@ -7,5 +7,4 @@ package com.nitin.a17functionalProgramming;
 //Three input parameters and the last one is the Output parameter
 public interface MyFunction<T,U,V,R> extends FunctionalInterface{
     R apply(T t, U u, V v);
-
 }

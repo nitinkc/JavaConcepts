@@ -1,4 +1,4 @@
-package com.nitin.a17functionalProgramming.javaStreamsAPI.commonTerminalOperations;
+package com.nitin.a17functionalProgramming.streamsAPIjava8.variousMethodsOfStreams;
 
 import java.util.stream.Stream;
 
@@ -8,7 +8,6 @@ import java.util.stream.Stream;
 public class T6reduce {
     public static void main(String[] args) {
         m1();
-
         m2();
     }
 

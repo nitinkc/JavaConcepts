@@ -53,7 +53,7 @@ public class MatrixMultiplication {
 
         /* Check for multiplication compatibility */
         if (COL_A != ROW_B) {
-            System.out.println("Column for Matrix N1PathFileTest should be same as that of Row for Matrix B\n");
+            System.out.println("Column for Matrix A should be same as that of Row for Matrix B\n");
             System.out.println("Multiplication is not possible\n");
             /* NEED TO LEARN: CAN USE USER DEFINED EXCEPTION AS WELL */
             return; //used to control the untimely exit
@@ -63,7 +63,7 @@ public class MatrixMultiplication {
         MatrixMultiplication mm = new MatrixMultiplication();
 
         //Fill the Matrices with Random Values
-        /*FOR DEBUGGING: ALL VALUES IN MAT N1PathFileTest are 3 and MAT B are 1*/
+        /*FOR DEBUGGING: ALL VALUES IN MAT A are 3 and MAT B are 1*/
         mm.fillMatrix();
 
         //play with only one object to understand a14concurrency challenges
@@ -116,7 +116,7 @@ public class MatrixMultiplication {
         Random generator = new Random(System.currentTimeMillis());
 
 	/* Generate Matrices*/
-        //Matrix N1PathFileTest
+        //Matrix A
         for (int i = 0; i < ROW_A; i++) {
             for (int j = 0; j < COL_A; j++) {
                 //matA[i][j] = ((double) generator.nextInt(MAXRAND));
@@ -149,8 +149,8 @@ public class MatrixMultiplication {
         PrintWriter output = new PrintWriter(new FileWriter(FILENAME, false));
 
         /* Generate Matrices*/
-        //Matrix N1PathFileTest
-        output.println("Matrix N1PathFileTest: ");
+        //Matrix A
+        output.println("Matrix A: ");
         for (int i = 0; i < ROW_A; i++) {
             for (int j = 0; j < COL_A; j++) {
                 output.print(matA[i][j] + " ");
@@ -182,7 +182,7 @@ public class MatrixMultiplication {
     }
 }
 
-/* For multithreaded threaded multiplication, Rows from matrix N1PathFileTest is to be multiplied with Columns
+/* For multithreaded threaded multiplication, Rows from matrix A is to be multiplied with Columns
      * of matrix B resulting in the Rows of Matrix C. Thus each thread can work on some Rows,
 	 * depending upon the division of jobs into threads
 	 * */

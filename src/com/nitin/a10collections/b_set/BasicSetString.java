@@ -29,7 +29,7 @@ public class BasicSetString {
     }
 
     /**
-     * 1. Demonstrating adding USING N1PathFileTest COLLECTION
+     * 1. Demonstrating adding USING A COLLECTION
      * 2. and adding individual elements
      *
      * @param set
