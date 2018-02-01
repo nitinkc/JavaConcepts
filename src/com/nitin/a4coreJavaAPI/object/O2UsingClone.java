@@ -1,7 +1,5 @@
 package com.nitin.a4coreJavaAPI.object;
 
-import jdk.nashorn.internal.objects.annotations.Constructor;
-
 /**
  * Created by nitin.chaurasia on 3/3/2017.
  */

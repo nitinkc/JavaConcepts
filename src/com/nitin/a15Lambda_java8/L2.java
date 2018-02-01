@@ -4,8 +4,8 @@ package com.nitin.a15Lambda_java8;
  * Created by Nitin C on 2/27/2016.
  */
 
-//Till Java 7, only method signaturr
-// Now we can b_set to Derfault anf implement
+// Till Java 7, only method signature
+// Now we can b_set to Default and implement
 
 interface Fly{
     default public void takeOff(){
@@ -62,11 +62,11 @@ class SeaPlane extends Vehicle implements FastFly, Sail{
 
 }
 
-/* We cant throw away Abstract class becasue Interfaces cannot have state!! Abstract classes have states
-* u can put fields in abstract classes but u cannot out fields in uionterfaces
+/* We cant throw away Abstract class because Interfaces cannot have state!! Abstract classes have states
+* u can put fields in abstract classes but u cannot out fields in interfaces
 * 2. you cannot inherit from more than one abstract class
 *
-* The GOLDEN RULE: Interfaces are better thjan classes
+* The GOLDEN RULE: Interfaces are better than classes
 * */
 
 public class L2 {

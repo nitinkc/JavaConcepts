@@ -17,17 +17,17 @@ public class L1BasicWithListIteration {
         // Self inflicted wound pattern
        /* for(int i = 0; i < values.size(); i++){
             System.out.println(values.get(i));
-        }*/
+       }*/
 
-        // Fewer moving parts
+       // Fewer moving parts
        /* for (int element: values) {
             System.out.println(element);
         }*/
 
         /* Those were External Iterator (Manage outside)*/
 
-        //Internal iterator, oput on autopilio, juts tel waht to do
-        // NO how the iteratoonis done, and just tell waht to do
+        //Internal iterator, put on autopilot, juts tel waht to do
+        // No how the iterations done, and just tell what to do
 
         //method forEach is called on the object
         // Anonymous inner class
@@ -39,13 +39,13 @@ public class L1BasicWithListIteration {
                 System.out.println(value);
 
             }
-        });*///FUNDAMENTAL DIFFERENCE  SYMENTACALLY
+        });*FUNDAMENTAL DIFFERENCE  SEMANTICALLY
         //
-        // Polymorphism says : dont worry how things are done, worry about what you wanna do
-        // and decide the imple at one time. Whether its sequential or concurrent or lazy, i dont want now, it want to po
-        //stpone the decision tio a later toime
+        // Polymorphism says : don't worry how things are done, worry about what you wanna do
+        // and decide the imple at one time. Whether its sequential or concurrent or lazy,
+        // i don't want now, it want to postpone the decision tio a later toime
 
-        // Ceremony is the things that you HAVE do before you do before you do waht you REALLY want to do
+        // Ceremony is the things that you HAVE do before you do before you do what you REALLY want to do
         values.forEach((Integer element) -> System.out.print(element) );
         System.out.println();
         /* forEach says i am accepting a FUNCTION
@@ -68,17 +68,15 @@ public class L1BasicWithListIteration {
         System.out.println();
         // ForEach receives a Consumer functional parameter
         // Functional Interface : can be automatically be elevated to lambda expression
-        //In other words, you can Only use lambdas for functional interfaces
+        // In other words, you can Only use lambdas for functional interfaces
         // A functional interface is a SAM (Single abstract Method) interface. it can only have one abstract method
         // that method has signture with parameter coming in.
-        //Functional interface assign a contract!!
+        // Functional interface assign a contract!!
 
-        //forEach received Consumer F interface
-
+        // forEach received Consumer F interface
 
         /*DOUBLE THE VALUE AND TOTAL*/
-
-        //imparative code :  you use Mutation!!
+        // Imperative code : you use Mutation!!
         // total is constantly mutating!
         // We spend efforts ion what to do and how to do
         int total = 0;
