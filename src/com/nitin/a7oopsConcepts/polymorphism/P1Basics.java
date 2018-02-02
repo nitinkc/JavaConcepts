@@ -24,7 +24,7 @@ public class P1Basics {
 
         // Binding : Relating a method call to a method
 
-        /* Static Binding : Happens in compile time
+        /* Static Binding or Overloading: Happens in compile time
          * uses type information (class in Java) for binding, binding -> relating methods to methods calls
          * private, static, final, static variables } methods, not participation in polymorphism
          */

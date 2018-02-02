@@ -1,4 +1,4 @@
-package com.nitin.a7oopsConcepts.polymorphism;
+package com.nitin.a7oopsConcepts.polymorphism.overloading;
 
 /**
  * Created by nitin.chaurasia on 3/4/2017.
@@ -20,6 +20,9 @@ public class P2StaticBinding {
         System.out.println(demo.add(2, 3.4));    //method 4 called
 
         System.out.println(demo.add(2.5, 3));    //method 3 called
+
+        // Detected during Complier time. CE: No suitable method found for add(String)
+        //System.out.print(demo.add("Nitin"));
 
     }
 }
