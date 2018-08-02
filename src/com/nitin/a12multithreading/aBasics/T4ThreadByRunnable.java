@@ -1,7 +1,5 @@
 package com.nitin.a12multithreading.aBasics;
 
-import com.nitin.a12multithreading.ThreadByRunnable;
-
 /**
  * Created by Nitin Chaurasia on 12/2/15 at 10:30 PM.
  *
@@ -11,16 +9,27 @@ import com.nitin.a12multithreading.ThreadByRunnable;
  */
 public class T4ThreadByRunnable {
     public static void main(String[] args) {
-        ThreadByRunnable tr = new ThreadByRunnable();
+
+        ThreadByRunnable tbr = new ThreadByRunnable();
 
         // Target Runnable
-        Thread t = new Thread(tr);
+        Thread thread = new Thread(tbr);
 
-        t.start();
+        thread.start();
 
         //Normal Execution of main
         for (int i = 0; i < 100; i++) {
             System.out.println("From Main: " + i);
+        }
+    }
+}
+
+
+class ThreadByRunnableDemo implements Runnable {
+    @Override
+    public void run() {
+        for (int i = 0; i < 1000; i++) {
+            System.out.println("Child Thread: " + i);
         }
     }
 }

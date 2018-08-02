@@ -26,8 +26,8 @@ class VolatileTest implements Runnable {
     * */
     public volatile int counter = 0;
 
-    int j = 0;
-    volatile int v = 0;
+    int j = 0;// Normal Variable, read from CPU Cache
+    volatile int v = 0; // Volatile variable, read from Main Memory
 
     @Override
     public void run() {
@@ -37,7 +37,7 @@ class VolatileTest implements Runnable {
 
                 int local = 0;
                 local++;
-                System.out.println(local + " local" + Thread.currentThread());
+                //System.out.println(local + " local" + Thread.currentThread());
                 Thread.sleep(5);
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
@@ -45,8 +45,8 @@ class VolatileTest implements Runnable {
             }
 
             //Search atomic
-            System.out.println(" read" + j + "      " + v + "   " + Thread.currentThread()
-                    + "write" + ++j + "   " + ++v);
+            System.out.println(" read j: " + j + "\t v:" + v + "\t" +
+                    "write ++ j : " + ++j + "\t ++v:" + ++v + "\t"+Thread.currentThread());
         }
     }
 }

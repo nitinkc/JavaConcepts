@@ -10,17 +10,17 @@ public class BasicConnection {
 
         // 1. Register the Class (Get Driver name)
         try {
-            Class.forName("com.mysql.jdbc.driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
 
         // 2. Create Connection
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/myDBName", "uName", "password");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "root");
 
         // 3. Create Query
-        PreparedStatement ps = conn.prepareStatement("Select * from Emp where id=? And password=?");
-		ps.setString(1,"id");
+        PreparedStatement ps = conn.prepareStatement("Select * from employees ");
+		//ps.setString(1,"id");
 
 		// 4. Execute statement
 		ResultSet rs = ps.executeQuery();
@@ -28,8 +28,10 @@ public class BasicConnection {
 		//Traverse through the Cursor
 		if (rs.next()){
 		    //Traverse through the iterator.
-            int user_id = rs.getInt("user_id");
-            String password = rs.getString("password");
+            int e_id = rs.getInt(1);
+            String e_name = rs.getString(2);
+
+            System.out.println(e_id + " - " + e_name);
         }
 
 		// 5. Close Connection

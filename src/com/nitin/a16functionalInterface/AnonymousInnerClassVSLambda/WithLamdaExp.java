@@ -1,7 +1,5 @@
 package com.nitin.a16functionalInterface.AnonymousInnerClassVSLambda;
 
-import com.nitin.a12multithreading.ThreadByExtending;
-
 /**
  * Created by Nitin Chaurasia on 1/30/18 at 5:08 PM.
  */

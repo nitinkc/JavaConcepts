@@ -1,4 +1,4 @@
-package com.nitin.a12multithreading;
+package com.nitin.a12multithreading.aBasics;
 
 /**
  * Created by Nitin Chaurasia on 12/2/15 at 11:53 PM.

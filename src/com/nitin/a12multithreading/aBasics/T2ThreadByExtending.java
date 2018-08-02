@@ -8,7 +8,7 @@ package com.nitin.a12multithreading.aBasics;
  * run method will execute normally.
  *
  * ALSO. Since by extending, we are limiting to extending only one class.
- * NO CHANCE OF EXTENDING ANT OTHER CLASS!!
+ * NO CHANCE OF EXTENDING ANY OTHER CLASS!!
  * We cannot extend any other class. Thus implementing Runnable Interface
  * is preferred over this approach.
  */

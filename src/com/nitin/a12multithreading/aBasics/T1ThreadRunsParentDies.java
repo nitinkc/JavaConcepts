@@ -8,6 +8,7 @@ package com.nitin.a12multithreading.aBasics;
 public class T1ThreadRunsParentDies extends Thread {// by overriding run method
     static final int MAX = 500;
 
+    @Override
     public void run(){
         int count = 1;
 

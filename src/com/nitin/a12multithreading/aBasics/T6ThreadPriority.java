@@ -1,7 +1,5 @@
 package com.nitin.a12multithreading.aBasics;
 
-import com.nitin.a12multithreading.ThreadByRunnable;
-
 /**
  * Created by Nitin Chaurasia on 12/2/15 at 11:03 PM.
  */
