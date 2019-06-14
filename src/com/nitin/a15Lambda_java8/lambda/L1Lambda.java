@@ -11,7 +11,6 @@ public class L1Lambda {
     public static void main(String[] args) {
         List<Integer> list = Arrays.asList(1,2,3,4,5);
 
-        //
         System.out.println(doubling(list));
 
         adding(5,6);

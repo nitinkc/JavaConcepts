@@ -10,11 +10,11 @@ public class E1DivideByZero {
             x = 5/0;
             //x = 10/5;
         } catch(ArithmeticException e){
-            System.out.println(e);
+            //System.out.println(e.getMessage());
             e.printStackTrace();
         } finally {
             // Will always execute irrespective on the exception or not
-            System.out.println("Alwaya happen");
+            System.out.println("Always happen");
         }
 
         // The Program continues from here
