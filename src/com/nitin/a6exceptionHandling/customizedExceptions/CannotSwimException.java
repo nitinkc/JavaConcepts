@@ -5,7 +5,7 @@ package com.nitin.a6exceptionHandling.customizedExceptions;
  *
  * User defined exceptions should ALWAYS be checked
  * But you can extend any exception class
- * 1. Exception for custon checked exception
+ * 1. Exception for custom checked exception
  * 2. RuntimeException for unchecked
  *
  */

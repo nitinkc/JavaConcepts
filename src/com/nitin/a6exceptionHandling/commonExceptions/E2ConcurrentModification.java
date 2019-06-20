@@ -17,8 +17,8 @@ public class E2ConcurrentModification {
         Iterator itr = list.iterator();
         while (itr.hasNext()) {
             System.out.println(itr.next());
-            list.remove(1);//Will Work as its currently being pointed
-            list.remove(2);//ConcurrentModificationException
+            list.remove(0);//ConcurrentModificationException
+            itr.remove();//Will Work as its currently being pointed
         }
     }
 }
