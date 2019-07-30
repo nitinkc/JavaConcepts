@@ -1,4 +1,4 @@
-package com.nitin.a13multithreadingEnhancements.bReentrantLocks;
+package com.nitin.a13multithreadingEnhancements.bReentrantLocks.reEntrantDemo;
 
 import java.util.concurrent.locks.ReentrantLock;
 

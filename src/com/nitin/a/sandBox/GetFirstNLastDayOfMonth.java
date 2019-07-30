@@ -28,7 +28,8 @@ public class GetFirstNLastDayOfMonth {
         return calendar.getTime();
     }
 
-    private static Date getLastDateOfMonth(int endMonth) {
+//    private static Date getLastDateOfMonth(int endMonth) {
+private static Date getLastDateOfMonth(int endMonth) {
         Calendar calendar = Calendar.getInstance();
         Date date = calendar.getTime();
 
@@ -37,6 +38,9 @@ public class GetFirstNLastDayOfMonth {
         //calendar.setTime(date);
         int day = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
         calendar.set(Calendar.DAY_OF_MONTH, day);
+        //calendar.set(Calendar.YEAR, year);
+
+        //return SimpleDateFormat("MM/dd/yyyy").format(calendar.getTime());
         return calendar.getTime();
 
     }
