@@ -25,7 +25,7 @@ public class ComparableTestFailed {
         Student s4 = new Student(4,"Lucy","Green","Taylor Zimmarman");
 
         //HashSet does not need COMPARATOR, but TREE DOES
-        Set<Student> studentSet = new TreeSet<Student>();
+        Set<Student> studentSet = new TreeSet<>();
 
         studentSet.add(s1);
         studentSet.add(s2);

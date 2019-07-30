@@ -24,6 +24,7 @@ public class L1Lambda {
 
         // simplified
         nums.replaceAll(x -> x*2);//Second Doubling
+
         return nums;
     }
 

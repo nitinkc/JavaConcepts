@@ -3,7 +3,7 @@ package com.nitin.a10collections.comparable;
 /**
  * Created by synergisticit on 2/25/2016.
  */
-public class Student {
+public class Student implements Comparable{
     int id;
     String fName;
     String lName;
@@ -17,15 +17,9 @@ public class Student {
     }
 
     @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", fName='" + fName + '\'' +
-                ", lName='" + lName + '\'' +
-                ", fathersFullName='" + fathersFullName + '\'' +
-                '}';
+    public int compareTo(Object o) {
+        return compareFirstNames(o);
     }
-
 
     // Lexicographical Order
     private int compareFirstNames(Object o) {
@@ -35,14 +29,22 @@ public class Student {
             return ret;
         else
             return compareFathersName(o);
-
-
     }
 
     private int compareFathersName(Object o) {
         Student curr =(Student)o;
 
         return this.fathersFullName.compareTo(curr.fathersFullName);
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", fName='" + fName + '\'' +
+                ", lName='" + lName + '\'' +
+                ", fathersFullName='" + fathersFullName + '\'' +
+                '}';
     }
 }
 

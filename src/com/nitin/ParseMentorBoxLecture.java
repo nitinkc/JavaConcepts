@@ -48,14 +48,14 @@ public class ParseMentorBoxLecture {
             s += str;
             if (str.equals(searchTitle)){
                 output.print(in.nextLine() + "\t ||");
-                //System.out.println(str);
+                System.out.println(str);
                 titleCount++;
             }
 
             if (str.equals(searchSubTitle)){
                 output.println(in.nextLine());
-                //System.out.println(str);
-                //output.println("*******************");
+                System.out.println(str);
+                output.println("*******************");
                 subTitleCount++;
             }
 

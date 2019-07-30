@@ -14,7 +14,7 @@ public class Main {
 		another(container,last);
 		System.out.print(container.getInitial());
 	}
-	
+
 	public void another(Container initialHolder, String newInitial) {
 		newInitial.toLowerCase();
 		initialHolder.setInitial("B");

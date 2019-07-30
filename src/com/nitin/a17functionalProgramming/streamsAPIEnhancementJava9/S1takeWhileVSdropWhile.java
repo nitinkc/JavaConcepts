@@ -20,7 +20,10 @@ public class S1takeWhileVSdropWhile {
         }
         System.out.println(list);
         //filtering the even elements out
-        List<Integer> l = list.stream().filter(x -> x % 2 == 0).collect(Collectors.toList());
+        List<Integer> l = list
+                .stream()
+                .filter(x -> x % 2 == 0)
+                .collect(Collectors.toList());
         System.out.println(l);
 
         //filtering the even elements out using takeWhile (Fails after fulfilling first condition)
