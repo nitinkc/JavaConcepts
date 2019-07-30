@@ -1,3 +1,4 @@
+/*
 package com.nitin.a.sandBox;
 
 import java.sql.Timestamp;
@@ -32,7 +33,8 @@ public class GetFirstDayOfMonth {
         return calendar.getTime();
     }
 
-    private static String getLastDateOfMonth(int endMonth) {
+   */
+/* private static String getLastDateOfMonth(int endMonth) {
         Calendar calendar = Calendar.getInstance();
         Date date = calendar.getTime();
 
@@ -44,9 +46,11 @@ public class GetFirstDayOfMonth {
         calendar.set(Calendar.DAY_OF_MONTH, day);
         calendar.set(Calendar.YEAR, year);
 
-        return SimpleDateFormat("MM/dd/yyyy").format(calendar.getTime())
-        return ;
+        return SimpleDateFormat("MM/dd/yyyy").format(calendar.getTime());
+        //return ;
+*//*
 
     }
 
 }
+*/

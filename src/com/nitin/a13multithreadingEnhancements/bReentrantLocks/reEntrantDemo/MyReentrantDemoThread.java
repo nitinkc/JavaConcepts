@@ -1,4 +1,4 @@
-package com.nitin.a13multithreadingEnhancements.bReentrantLocks;
+package com.nitin.a13multithreadingEnhancements.bReentrantLocks.reEntrantDemo;
 
 /**
  * Created by nitin.chaurasia on 12/26/2016.
