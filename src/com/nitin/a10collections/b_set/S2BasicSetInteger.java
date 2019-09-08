@@ -6,7 +6,7 @@ import java.util.*;
  * Created by synergisticit on 2/25/2016.
  * while adding into a set, a test of equality happens, to determine if the object being pushed already exist
  */
-public class BasicSetInteger {
+public class S2BasicSetInteger {
     public static void main(String[] args) {
 
         // With Integer, no need to override hashCode and equals
@@ -78,14 +78,7 @@ public class BasicSetInteger {
      * @param set
      */
     private static void addSet(Set<Integer> set){
-        Integer[] arr = new Integer[]{2, 4, 6, 9, 10, 11, 12};
-        List arr1 = new ArrayList<Integer>();
-        //Adding some other collection into the b_set
-        arr1 = Arrays.asList(arr);
-        set.addAll(arr1);
-        set.clear();
-
-        //Adding an individual element
+        set.addAll(Arrays.asList(new Integer[]{2, 4, 6, 9, 10, 11, 12}));
         set.add(1234);
     }
 }

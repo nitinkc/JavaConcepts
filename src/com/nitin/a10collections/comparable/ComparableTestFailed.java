@@ -39,3 +39,49 @@ public class ComparableTestFailed {
         }
     }
 }
+
+
+class Student implements Comparable{
+    int id;
+    String fName;
+    String lName;
+    String fathersFullName;
+
+    public Student(int id, String fName, String lName, String fathersFullName) {
+        this.id = id;
+        this.fName = fName;
+        this.lName = lName;
+        this.fathersFullName = fathersFullName;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return compareFirstNames(o);
+    }
+
+    // Lexicographical Order
+    private int compareFirstNames(Object o) {
+        Student curr =(Student)o;
+        int ret = this.fName.compareTo(curr.fName);
+        if (ret != 0)
+            return ret;
+        else
+            return compareFathersName(o);
+    }
+
+    private int compareFathersName(Object o) {
+        Student curr =(Student)o;
+
+        return this.fathersFullName.compareTo(curr.fathersFullName);
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", fName='" + fName + '\'' +
+                ", lName='" + lName + '\'' +
+                ", fathersFullName='" + fathersFullName + '\'' +
+                '}';
+    }
+}

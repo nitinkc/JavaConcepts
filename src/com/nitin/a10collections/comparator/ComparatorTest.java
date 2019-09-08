@@ -14,9 +14,8 @@ public class ComparatorTest {
         Student s3 = new Student(1, "Joe", "Kresman", "Andrew Taylor");
         Student s4 = new Student(4, "Lucy", "Green", "Taylor Zimmarman");
 
-        //HashSet does not need COMPARATOR, but TREE DOES
+        //HashSet does not need COMPARATOR, but TREESET DOES
         Set<Student> studentSet = new TreeSet<Student>(new StudentComparator());
-
 
         studentSet.add(s1);
         studentSet.add(s2);

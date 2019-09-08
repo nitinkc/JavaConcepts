@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Created by synergisticit on 2/25/2016.
  */
-public class BasicSetString {
+public class S3BasicSetString {
     public static void main(String[] args) {
 
         // With STRING, no need to override hashCode ansd equals
@@ -63,7 +63,6 @@ public class BasicSetString {
         System.out.println("END");
     }
 
-
     /**
      * ASSUMPTION: largest string occurs ONLY Once;
      * @param set
@@ -85,5 +84,4 @@ public class BasicSetString {
         }
         return ret;
     }
-
 }
