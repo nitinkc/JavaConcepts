@@ -6,7 +6,17 @@ package com.nitin;
 public class VirtualMethod {
     public static void main(String[] args) {
         Animal bird = new Bird();
+        Animal cow = new Cow();
+        Animal lion = new Lion();
+
         bird.feedAnimal(bird);
+        cow.feed();
+        cow.feedAnimal(bird);
+
+        lion.feed();
+        lion.feedAnimal(cow);
+        lion.feedAnimal(bird);
+
     }
 }
 

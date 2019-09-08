@@ -10,10 +10,16 @@ import java.util.List;
 public class L1Lambda {
     public static void main(String[] args) {
         List<Integer> list = Arrays.asList(1,2,3,4,5);
-
         System.out.println(doubling(list));
 
         adding(5,6);
+        
+        list.replaceAll((x) -> {if (x%2 ==0){
+         return x;
+        }else {
+                    return x * x;
+                });
+
     }
 
     // When only one parameter is available, small parenthesis is optional

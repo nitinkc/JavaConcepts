@@ -9,7 +9,5 @@ package com.nitin;
  */
 public class ObjectVSreference {
     public static void main(String[] args) {
-
-
     }
 }
