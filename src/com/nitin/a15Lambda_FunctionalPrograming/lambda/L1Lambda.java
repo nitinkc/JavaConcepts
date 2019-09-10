@@ -1,4 +1,4 @@
-package com.nitin.a15Lambda_java8.lambda;
+package com.nitin.a15Lambda_FunctionalPrograming.lambda;
 
 import java.util.Arrays;
 import java.util.List;
@@ -9,28 +9,27 @@ import java.util.List;
  */
 public class L1Lambda {
     public static void main(String[] args) {
-        List<Integer> list = Arrays.asList(1,2,3,4,5);
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
         System.out.println(doubling(list));
+        adding(5, 6);
 
-        adding(5,6);
-        
-        list.replaceAll((x) -> {if (x%2 ==0){
-         return x;
-        }else {
-                    return x * x;
-                });
+        //Testing if else in Lambda
+        list.replaceAll( (x) -> { if (x%2 == 0)
+            return x;
+        else
+            return x*x;});
 
+        System.out.println(list);
     }
 
     // When only one parameter is available, small parenthesis is optional
-    private static List<Integer> doubling(List<Integer> nums) {
+    private static List<Integer> doubling(List<Integer> nums){
 
         //small parenthesis around x is optional
         nums.replaceAll( (x) -> {return x*2;});//First Doubling
 
         // simplified
-        nums.replaceAll(x -> x*2);//Second Doubling
-
+        nums.replaceAll(x -> x%2 == 0 ? x : x*x);//Second Doubling
         return nums;
     }
 

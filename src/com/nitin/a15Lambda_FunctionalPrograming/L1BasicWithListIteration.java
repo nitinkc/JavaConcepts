@@ -1,7 +1,8 @@
-package com.nitin.a15Lambda_java8;
+package com.nitin.a15Lambda_FunctionalPrograming;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
 
 /**
  * Created by Nitin C on 2/27/2016.
@@ -15,62 +16,65 @@ public class L1BasicWithListIteration {
 
         // Complex, initial (boundry less than or less than equal to)
         // Self inflicted wound pattern
-       /* for(int i = 0; i < values.size(); i++){
-            System.out.println(values.get(i));
-       }*/
+       for(int i = 0; i < values.size(); i++){
+            //System.out.println(values.get(i));
+       }
 
        // Fewer moving parts
-       /* for (int element: values) {
-            System.out.println(element);
-        }*/
+       for (int element: values) {
+            //System.out.println(element);
+        }
 
-        /* Those were External Iterator (Manage outside)*/
+        /* Above two were External Iterator (Manage outside)*/
 
-        //Internal iterator, put on autopilot, juts tel waht to do
-        // No how the iterations done, and just tell what to do
+        // Internal iterator, put on autopilot
+        // just tell what to do, not how the iterations done
 
         //method forEach is called on the object
         // Anonymous inner class
         //This gives polymorphism
         //forEach method is now on a10collections
-       /* values.forEach(new Consumer<Integer>() {//Consumer is a new interface in java 8
+       values.forEach(new Consumer<Integer>() {//Consumer is a new interface in java 8
             @Override
-            public void accept(Integer value) {// mehtod of consumer, which accets the array
-                System.out.println(value);
-
+            public void accept(Integer value) {// method of consumer, which accepts the array
+                //System.out.println(value);
             }
-        });*FUNDAMENTAL DIFFERENCE  SEMANTICALLY
-        //
+        });
+
+       // FUNDAMENTAL DIFFERENCE  SEMANTICALLY
+
         // Polymorphism says : don't worry how things are done, worry about what you wanna do
-        // and decide the imple at one time. Whether its sequential or concurrent or lazy,
-        // i don't want now, it want to postpone the decision tio a later toime
+        // and decide the implementation at one time. Whether its sequential or concurrent or lazy,
+        // i don't want now, it want to postpone the decision to a later time
 
         // Ceremony is the things that you HAVE do before you do before you do what you REALLY want to do
         values.forEach((Integer element) -> System.out.print(element) );
         System.out.println();
         /* forEach says i am accepting a FUNCTION
-        * a Function has 4 things - name, return type, parameter a_list and Body
+        * a Function has 4 things - name, return type, parameter list and Body
         * Most Imp: is Body of the function
         * Body of the function -> System.out.println(element)
         * Parameter List --> (Integer element)
         * */
 
         // A collection of integer is known to integer
-        // Java figures out BASED ONTHE CONTEXCT.
-        // Dont have to write the obvious
+        // Java figures out BASED ON THE CONTEXT.
+        // Don't have to write the obvious
         values.forEach((element) -> System.out.print(element));
         System.out.println();
+
         // Removing the brackets
         values.forEach(element -> System.out.print(element));
         System.out.println();
-        //
+
+        //Even Shorter
         values.forEach(System.out::print);
         System.out.println();
         // ForEach receives a Consumer functional parameter
         // Functional Interface : can be automatically be elevated to lambda expression
         // In other words, you can Only use lambdas for functional interfaces
         // A functional interface is a SAM (Single abstract Method) interface. it can only have one abstract method
-        // that method has signture with parameter coming in.
+        // that method has signature with parameter coming in.
         // Functional interface assign a contract!!
 
         // forEach received Consumer F interface

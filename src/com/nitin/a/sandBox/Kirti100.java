@@ -12,11 +12,15 @@ import java.util.Map;
 public class Kirti100 {
     public static void main(String[] args) {
 
-        Map<ArrayList<Integer>,Integer> map = new HashMap<>();
 
-
-        for (int i = 0; i < 100; i++) {
+        if (true){
+            System.out.println("Nitin");
+        } else {
             System.out.println("Kirti");
         }
+
+        String x = true ?  "Nitin" : "Kirti";
+
+        System.out.println(x);
     }
 }
