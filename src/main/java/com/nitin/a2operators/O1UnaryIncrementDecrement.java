@@ -30,11 +30,9 @@ public class O1UnaryIncrementDecrement {
 
         // Can be applied to all primitive type except booleanCan be applied to all primitive type except boolean
         char ch = 'a';
-        System.out.println(++ch);// Increment ch and then print
+        System.out.println(++ch);// b, Increment ch and then print
 
         System.out.println(0/0.0); // Not a Number
-
-
         int counter = 0;
         System.out.println(counter); // Outputs 0
         System.out.println(++counter); // Outputs 1

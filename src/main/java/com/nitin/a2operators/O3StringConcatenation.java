@@ -14,7 +14,5 @@ public class O3StringConcatenation {
         System.out.println(a+str+b+c);//10Nitin2030
         System.out.println(a+b+str+c);//30Nitin30
         System.out.println(str+a+b+c);//Nitin102030
-
-
     }
 }

@@ -21,7 +21,7 @@ public class L1Array1DDeclarationCreationInit {
         // Assignment type 1
         c[0] = 9 ; c[1] = -3;
 
-        // autoassignment
+        // auto assignment
         for (int i = 0; i < b.length; i++) {
             b[i] = (int) ((i*i) / Math.random());
         }

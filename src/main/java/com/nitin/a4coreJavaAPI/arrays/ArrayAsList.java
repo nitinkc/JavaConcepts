@@ -17,7 +17,7 @@ public class ArrayAsList {
 		// Arrays Class has method asList returning is
 		System.out.println(Arrays.asList(a));
 		List<String> aList = Arrays.asList(a);
-		System.out.println(aList);
+		System.out.println(aList.size());
 	}
 
 }

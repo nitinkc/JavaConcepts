@@ -8,7 +8,6 @@ import java.text.SimpleDateFormat;
 public class TestingTimeStamp {
     public static void main(String[] args) {
         Timestamp asOfDate = new Timestamp(System.currentTimeMillis());
-
         DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
 
         try {
@@ -16,7 +15,5 @@ public class TestingTimeStamp {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
-
     }
 }

@@ -14,20 +14,17 @@ public class VarArg {
         varArgMethod(10);// non var agr gets priority
         varArgMethod(10,20);
         varArgMethod(10,20,30);
-
         varArgMultiple("Nitin", 10,20);
-
     }
 
-    // Varible number of arguments including zero
+    // non var arg method
     static void varArgMethod(int x){
         System.out.println(x);
-
     }
-    // Varible number of arguments including zero
+    // Variable number of arguments including zero
     static void varArgMethod(int... x){
+        System.out.println("From Var Arg. Stores the argument in an array");
         System.out.println(x.length);
-
     }
 
     static void varArgMultiple(String name, float... y){

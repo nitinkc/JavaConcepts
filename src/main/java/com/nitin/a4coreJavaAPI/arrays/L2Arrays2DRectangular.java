@@ -5,7 +5,7 @@ package com.nitin.a4coreJavaAPI.arrays;
  */
 public class L2Arrays2DRectangular {
     public static void main(String[] args) {
-        String arr[][] = new String[6][7];
+        String arr[][] = new String[3][3];
         int row = arr.length;// Row = 6
         int col = arr[0].length; // Columns = 7
         for (int i = 0; i < row; i = i + 1) {
