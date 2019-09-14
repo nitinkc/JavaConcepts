@@ -16,10 +16,10 @@ public class BasicConnection {
         }
 
         // 2. Create Connection
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "root");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "");
 
         // 3. Create Query
-        PreparedStatement ps = conn.prepareStatement("Select * from employees ");
+        PreparedStatement ps = conn.prepareStatement("Select * from employee ");
 		//ps.setString(1,"id");
 
 		// 4. Execute statement
