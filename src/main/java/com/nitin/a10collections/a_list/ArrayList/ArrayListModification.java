@@ -1,4 +1,4 @@
-package com.nitin.a10collections;
+package com.nitin.a10collections.a_list.ArrayList;
 
 
 import java.util.ArrayList;
