@@ -5,7 +5,22 @@ import org.apache.commons.lang3.math.NumberUtils;
 
 public class ApacheCommons {
     public static void main(String[] args) {
+        stringToCurrency();
+        compareString();
+    }
 
+    private static void compareString() {
+        //No exception handling required
+        System.out.println(StringUtils.equalsIgnoreCase("Nitin", null));
+
+        //If above Apache commons is not used
+        System.out.println("Nitin".equalsIgnoreCase("null"));
+
+        //Null needs be handled
+        //System.out.println(null.equalsIgnoreCase("Nitin"));
+    }
+
+    private static void stringToCurrency() {
         String amt[] = {"NK","22.7","23","2242523614.45436346"};
 
         for (String str : amt) {
@@ -20,15 +35,5 @@ public class ApacheCommons {
                 //System.out.println(str);
             }
         }
-
-
-        //No exception handling required
-        System.out.println(StringUtils.equalsIgnoreCase("Nitin", null));
-
-        //If above Apache commons is not used
-        System.out.println("Nitin".equalsIgnoreCase("null"));
-
-        //Null needs be handled
-        //System.out.println(null.equalsIgnoreCase("null"));
     }
 }

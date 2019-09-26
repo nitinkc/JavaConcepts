@@ -10,7 +10,7 @@ import java.util.List;
  * ArrayList Initial Size 10; Later incremented by 3/2 + 1
  * Vector Initial Size 16; Incremented by 2X
  *
- * a_list.remove() --> ConcurrentModificationException
+ * list.remove() --> ConcurrentModificationException
  * itr.remove() --> correct way to remove
  */
 public class L3RemoveElements {
@@ -33,7 +33,7 @@ public class L3RemoveElements {
         System.out.println("******************* LIST DURING REMOVAL ***************************** ");
         while (itr.hasNext()) {
             //itr.remove();// Wrong Place as the itr is accessed in SOP
-            // a_list.remove(1);//ConcurrentModificationException
+            // list.remove(1);//ConcurrentModificationException
             System.out.println(itr.next());
             itr.remove();
         }// The a_list will be empty after this

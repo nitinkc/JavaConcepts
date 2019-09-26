@@ -29,6 +29,7 @@ public class S2BasicSetInteger {
 
         printSet(set);
 
+
     }
 
     private static void removeOddNumber(Set<Integer> set) {

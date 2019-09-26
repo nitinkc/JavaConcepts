@@ -1,24 +1,27 @@
 package com.nitin.a.sandBox;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class print {
     public static void main(String[] args) {
 
-        Double d = 1234.45d;
+        List<Integer> list = new ArrayList<>();
 
-        System.out.println(String.format ("%.2f", d));
-        System.out.println(String.format ("%f", d));
-        System.out.println(Double.toString(d));
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        list.add(6);
+        list.add(7);
 
-
-        for (int i = 0; i < 3; i++) {
-            System.out.println("i = " + i);
-            for (int j = 0; j < 10; j++) {
-                if(j > 7){
-                    System.out.println("j is > 7" + "\t");
-                    continue;
-                }
-                System.out.print("j = " + j + "\t");
+        for (int i = 0; i < list.size(); i++) {
+            if (i == 2){
+                //System.out.println(list.get(i));
+                list.remove(i);
             }
+            System.out.println(list.get(i));
+
         }
     }
 }
