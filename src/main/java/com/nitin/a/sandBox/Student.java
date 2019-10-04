@@ -3,15 +3,63 @@ package com.nitin.a.sandBox;
 // Java program to demonstrate working of Comparator
 // interface more than one field
 
-import entity.Student;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Comparator;
 
-class StudentSortingComparator implements Comparator<entity.Student> {
+class Student {
+
+    // instance member variables
+    String Name;
+    int Age;
+
+    // parameterized constructor
+    public Student(String Name, Integer Age) {
+        this.Name = Name;
+        this.Age = Age;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    public Integer getAge() {
+        return Age;
+    }
+
+    public void setAge(Integer Age) {
+        this.Age = Age;
+    }
+
+    // overriding toString() method
+    @Override
+    public String toString() {
+        return "Customer{" + "Name=" + Name + ", Age=" + Age + '}';
+    }
+
+    static class CustomerSortingComparator implements Comparator<Student> {
+
+        @Override
+        public int compare(Student customer1, Student customer2) {
+
+            // for comparison
+            int NameCompare = customer1.getName().compareTo(customer2.getName());
+            int AgeCompare = customer1.getAge().compareTo(customer2.getAge());
+
+            // 2-level comparison using if-else block
+            if (NameCompare == 0) {
+                return ((AgeCompare == 0) ? NameCompare : AgeCompare);
+            } else {
+                return NameCompare;
+            }
+        }
+    }
 
     public static void main(String[] args) {
 
@@ -43,27 +91,12 @@ class StudentSortingComparator implements Comparator<entity.Student> {
         }
 
         // sorting using Collections.sort(al, comparator);
-        Collections.sort(al, new StudentSortingComparator());
+        Collections.sort(al, new CustomerSortingComparator());
 
         // after Sorting arraylist: iterate using enhanced for-loop
         System.out.println("\n\nAfter Sorting:\n");
         for (Student customer : al) {
             System.out.println(customer);
-        }
-    }
-
-    @Override
-    public int compare(entity.Student customer1, entity.Student customer2) {
-
-        // for comparison
-        int NameCompare = customer1.getName().compareTo(customer2.getName());
-        int AgeCompare = customer1.getAge().compareTo(customer2.getAge());
-
-        // 2-level comparison using if-else block
-        if (NameCompare == 0) {
-            return ((AgeCompare == 0) ? NameCompare : AgeCompare);
-        } else {
-            return NameCompare;
         }
     }
 }

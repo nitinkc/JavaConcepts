@@ -1,19 +1,10 @@
-package com.nitin.a15LambdaExpressions;
+package com.nitin.a15Lambda_FunctionalPrograming;
 
 /**
  * Created by Nitin C on 3/5/2016.
  */
-public class L0SpottingInvalidLambdas {
-    public static void main(String[] args) {
-        int a = 10, b=20;
-
-        //Without Curly braces we cant use return keyword
-        //n->return n*n; //INVALID
-       /* n->{return n*n;};
-       // n->{return n*n};//INVALID, semi colon missing
-        //n->{n*n;};//INVALID
-        n->n*n;
-        (10,20) -> System.out.println(a+b);
+public class SpottingInvalidLambdas {
+    /*
 
         // () can be omitted only if there is EXACTLY one parameter and NO DATA TYPE
         Duck d -> d.quack; //DOES NOT COMPILE
@@ -45,7 +36,6 @@ public class L0SpottingInvalidLambdas {
 
         (a,b) -> { int a = 9; return a+b }//DOES NOT COMPILE: Redeclaration of a
         (a,b) -> { int c = 9; return a+b }// CORRECT AS C is an independent local variable
-*/
-    }
 
+    */
 }

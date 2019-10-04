@@ -5,17 +5,20 @@ package com.nitin.a16functionalInterface;
  */
 public class F2InvokingLambda {
     public static void main(String[] args) {
+
         InvokingLambda i = () -> System.out.println("Invoking Lambda from functional interface");
         i.m1();
 
-        InterfaceForLambda i1 = (x,y) -> String.valueOf(x+y);
-        System.out.println(i1.doSomething(23,7));
-        System.out.println(i1.doSomething(76, 8));
+
+        Interf i1 = (x,y) -> System.out.println("sum : " + (x+y));
+        i1.add(23,7);
+        i1.add(76, 8);
 
         // takes like string
-        InterfaceForLambda i2 = (c,d) -> String.valueOf(c*d);
-        System.out.println(i2.doSomething(3,7));
-        System.out.println(i2.doSomething(5, 8));
+        Interf i2 = (c,d) -> System.out.println("sum : " +c+d);
+        i2.add(23,7);
+        i2.add(76, 8);
+
     }
 }
 
@@ -25,6 +28,6 @@ interface InvokingLambda{
 }
 
 @FunctionalInterface
-interface InterfaceForLambda{
-    public String doSomething(int a, int b);
+interface Interf{
+    public void add(int a, int b);
 }

@@ -37,28 +37,3 @@ private int compareNameCompare(Student s1, Student s2) {
         return s1.fathersFullName.compareTo(s2.fathersFullName);
     }
 }
-
-class Student {
-    int id;
-    String fName;
-    String lName;
-    String fathersFullName;
-
-    public Student(int id, String fName, String lName, String fathersFullName) {
-        this.id = id;
-        this.fName = fName;
-        this.lName = lName;
-        this.fathersFullName = fathersFullName;
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", fName='" + fName + '\'' +
-                ", lName='" + lName + '\'' +
-                ", fathersFullName='" + fathersFullName + '\'' +
-                '}';
-    }
-}
-

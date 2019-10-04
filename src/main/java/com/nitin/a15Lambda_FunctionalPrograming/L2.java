@@ -1,4 +1,4 @@
-package com.nitin.a15LambdaExpressions;
+package com.nitin.a15Lambda_FunctionalPrograming;
 
 /**
  * Created by Nitin C on 2/27/2016.
@@ -27,7 +27,7 @@ interface Fly{
  * 4 Rules od Default Methods
  * 1. methods are automatically inherited eg
  * 2. Override a default method, if it doesnt find int he child, it goes up the hierarchy top chjeck the method out
- * 3. Methods in a class Heirarch RULES!!
+ * 3. Methodfs in a class Heirarch RULES!!
  * 4. if there is a cllision in interface
  */
 interface FastFly extends Fly{

@@ -1,4 +1,4 @@
-package com.nitin.a15LambdaExpressions;
+package com.nitin.a15Lambda_FunctionalPrograming;
 
 /**
  * Created by Nitin C on 2/27/2016.
