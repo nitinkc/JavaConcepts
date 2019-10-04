@@ -30,6 +30,7 @@ public class L3RemoveElementsUsingForLoopRemove {
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
             list.remove(i);
+            i--;
         }
 
         System.out.println("******************* LIST AFTER REMOVAL ***************************** ");
