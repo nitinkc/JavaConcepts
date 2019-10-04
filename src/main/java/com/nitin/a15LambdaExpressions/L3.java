@@ -1,4 +1,4 @@
-package com.nitin.a15Lambda_FunctionalPrograming;
+package com.nitin.a15LambdaExpressions;
 
 import java.util.Arrays;
 import java.util.List;

@@ -4,6 +4,7 @@ package com.nitin.a16functionalInterface;
  * Created by Nitin Chaurasia on 1/30/18 at 10:46 AM.
  */
 
+// SAM -> Single Abstract Method
 @FunctionalInterface
 interface FuncInterfaceWRTInheritence {
     public void m1();
