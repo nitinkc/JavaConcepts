@@ -26,7 +26,7 @@ public class DCO2MethodReferenceRunnable {
     }
 }
 
-//methid m1 id like run method of Runnable class, in terms of arguments and return types
+//method m1 is like run method of Runnable class, in terms of arguments and return types
 // This is non static method or instance Method
 class RunTest{
     public void m1(){

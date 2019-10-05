@@ -7,7 +7,7 @@ import java.util.List;
  * Created by Nitin Chaurasia on 2/1/18 at 12:47 AM.
  */
 public class F4SerializationWRTunmodifiableColl {
-    private static final String FILE_NAME =  "src/com/nitin/a15java9/factoryMethodsForUnmodifiableCollection/serialization.txt";
+    private static final String FILE_NAME =  "src/main/java/com/nitin/zjava9/factoryMethodsForUnmodifiableCollection/serialization.txt";
 
     public static void main(String[] args) throws IOException,ClassNotFoundException{
 

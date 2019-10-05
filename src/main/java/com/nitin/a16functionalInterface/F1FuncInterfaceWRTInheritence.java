@@ -4,7 +4,7 @@ package com.nitin.a16functionalInterface;
  * Created by Nitin Chaurasia on 1/30/18 at 10:46 AM.
  */
 
-// SAM -> Single Abstract Method
+// SAM -> Single Abstract Method & Default and Static methods can be declared
 @FunctionalInterface
 interface FuncInterfaceWRTInheritence {
     public void m1();
@@ -35,6 +35,6 @@ interface ChildFuncInterfaceWRTInheritence extends FuncInterfaceWRTInheritence{
 
 @FunctionalInterface
 interface emptyFunctionalInterface{
-    // Exactly one abstract method is compulsory else CE.
+    // Exactly one abstract method is compulsory else Compile time Exception.
     public void test();
 }

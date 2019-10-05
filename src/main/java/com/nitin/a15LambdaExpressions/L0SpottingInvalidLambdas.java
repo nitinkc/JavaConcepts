@@ -9,13 +9,17 @@ public class L0SpottingInvalidLambdas {
 
         //Without Curly braces we cant use return keyword
         //n->return n*n; //INVALID
-       /* n->{return n*n;};
+
+        //RETURN Always need curly braces and ends with a colon
+       // n->{return n*n;};
        // n->{return n*n};//INVALID, semi colon missing
         //n->{n*n;};//INVALID
-        n->n*n;
-        (10,20) -> System.out.println(a+b);
+        //n->n*n;
+
+        //(10,20) -> System.out.println(a+b);
 
         // () can be omitted only if there is EXACTLY one parameter and NO DATA TYPE
+        /*
         Duck d -> d.quack; //DOES NOT COMPILE
         a,d -> d.quack; //DOES NOT COMPILE
         Animal a, Duck d -> d.quack; //DOES NOT COMPILE

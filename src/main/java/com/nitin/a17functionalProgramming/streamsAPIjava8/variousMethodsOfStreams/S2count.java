@@ -24,14 +24,17 @@ public class S2count {
 
         Predicate<String> strLong = str -> str.length() >= 9;
         // Count the number of strings greater than 9 characters
-        long count = list.stream().filter(strLong).count();
+        long count = list
+                .stream()
+                .filter(strLong)
+                .count();
 
         System.out.println(count);
 
-        Stream<String> stringList = Stream.of("Cat","Dog","Elephant","Frog","Goat");
+        Stream<String> stringList = Stream.of("Cat", "Dog", "Elephant", "Frog", "Goat");
         System.out.println(stringList.count());
 
-        List<Integer> intList = Arrays.asList(1,2,3,4,5,6,7,8,9);
+        List<Integer> intList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
         //Creating a Stream from list
         Stream<Integer> fromList = intList.stream();
         System.out.println(fromList.count());

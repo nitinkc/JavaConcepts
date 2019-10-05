@@ -12,20 +12,23 @@ import java.util.function.Consumer;
  */
 public class L1BasicWithListIteration {
     public static void main(String[] args) {
-        List<Integer> values = Arrays.asList(1,2,3,4,5,6,7,8,9);
+        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,9);
 
-        // Complex, initial (boundry less than or less than equal to)
+        // EXTERNAL ITERATORS
+        // Complex, initial (boundary less than or less than equal to)
         // Self inflicted wound pattern
-       for(int i = 0; i < values.size(); i++){
-            //System.out.println(values.get(i));
+       for(int i = 0; i < list.size(); i++){
+            //System.out.println(list.get(i));
        }
 
        // Fewer moving parts
-       for (int element: values) {
+       for (int element: list) {
             //System.out.println(element);
         }
-
-        /* Above two were External Iterator (Manage outside)*/
+       /************************
+        * Above two were External Iterator (Manage outside)
+        * **********************
+        * */
 
         // Internal iterator, put on autopilot
         // just tell what to do, not how the iterations done
@@ -34,7 +37,7 @@ public class L1BasicWithListIteration {
         // Anonymous inner class
         //This gives polymorphism
         //forEach method is now on a10collections
-       values.forEach(new Consumer<Integer>() {//Consumer is a new interface in java 8
+       list.forEach(new Consumer<Integer>() {//Consumer is a new interface in java 8
             @Override
             public void accept(Integer value) {// method of consumer, which accepts the array
                 //System.out.println(value);
@@ -48,7 +51,7 @@ public class L1BasicWithListIteration {
         // i don't want now, it want to postpone the decision to a later time
 
         // Ceremony is the things that you HAVE do before you do before you do what you REALLY want to do
-        values.forEach((Integer element) -> System.out.print(element) );
+        list.forEach((Integer element) -> System.out.print(element) );
         System.out.println();
         /* forEach says i am accepting a FUNCTION
         * a Function has 4 things - name, return type, parameter list and Body
@@ -60,15 +63,15 @@ public class L1BasicWithListIteration {
         // A collection of integer is known to integer
         // Java figures out BASED ON THE CONTEXT.
         // Don't have to write the obvious
-        values.forEach((element) -> System.out.print(element));
+        list.forEach((element) -> System.out.print(element));
         System.out.println();
 
         // Removing the brackets
-        values.forEach(element -> System.out.print(element));
+        list.forEach(element -> System.out.print(element));
         System.out.println();
 
         //Even Shorter
-        values.forEach(System.out::print);
+        list.forEach(System.out::print);
         System.out.println();
         // ForEach receives a Consumer functional parameter
         // Functional Interface : can be automatically be elevated to lambda expression
@@ -84,7 +87,7 @@ public class L1BasicWithListIteration {
         // total is constantly mutating!
         // We spend efforts ion what to do and how to do
         int total = 0;
-        for (int e: values) {
+        for (int e: list) {
             total += e*2;
         }
 
@@ -92,7 +95,7 @@ public class L1BasicWithListIteration {
 
         //Declarative style
         System.out.println(
-                values.stream()
+                list.stream()
                         .map( e -> e * 2)
                         .reduce(0,(c,e) -> c + e));
     }

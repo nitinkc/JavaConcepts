@@ -15,10 +15,11 @@ public class S1takeWhileVSdropWhile {
     public static void main(String[] args) {
 
         List<Integer> list = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 20; i++) {
             list.add(i);
         }
         System.out.println(list);
+
         //filtering the even elements out
         List<Integer> l = list
                 .stream()
@@ -27,11 +28,18 @@ public class S1takeWhileVSdropWhile {
         System.out.println(l);
 
         //filtering the even elements out using takeWhile (Fails after fulfilling first condition)
-        List<Integer> l2 = list.stream().takeWhile(x -> x % 2 == 0).collect(Collectors.toList());
+        List<Integer> l2 = list
+                .stream()
+                .filter(x -> x%3==0)
+                .takeWhile(x -> x % 2 == 0)
+                .collect(Collectors.toList());
         System.out.println(l2);
 
-        // drop while is opposite to drop while
-        List<Integer> l3 = list.stream().dropWhile(x -> x % 2 == 0).collect(Collectors.toList());
+        // drop while is opposite to take while
+        List<Integer> l3 = list
+                .stream()
+                .dropWhile(x -> x % 2 == 0)
+                .collect(Collectors.toList());
         System.out.println(l3);
 
     }

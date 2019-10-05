@@ -8,17 +8,10 @@ public class Animal {
     private boolean canHop;
     private boolean canSwim;
 
-    public Animal(String species, boolean canHop, boolean canSwim){
+    public Animal(String species, boolean canHop, boolean canSwim) {
         this.species = species;
         this.canHop = canHop;
         this.canSwim = canSwim;
-    }
-
-    // Getters for the encapsulated variables
-
-    @Override
-    public String toString() {
-        return species;
     }
 
     public boolean isCanHop() {
@@ -27,5 +20,12 @@ public class Animal {
 
     public boolean isCanSwim() {
         return canSwim;
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "species='" + species + '\'' +
+                '}';
     }
 }

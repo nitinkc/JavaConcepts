@@ -28,8 +28,6 @@ public class F2FileReaderWriter {
 
         //Good practise to use flush
         fw.flush();
-
-
         fr.close();
         fw.close();
 
