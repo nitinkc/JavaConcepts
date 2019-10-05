@@ -1,11 +1,28 @@
 package com.nitin.a15LambdaExpressions;
 
+import entity.Cargo;
+
+import java.util.List;
+
 /**
  * Created by Nitin C on 3/5/2016.
  */
 public class L0SpottingInvalidLambdas {
     public static void main(String[] args) {
         int a = 10, b=20;
+        List<Integer> list = Cargo.intCargoSequence(5,10);
+
+        TestInterfaceVoidMethod x = () -> System.out.println("Test");
+        x = ()->System.out.print("dekho");
+        x.method();
+
+        TestInterfaceVoidMethod y = (a) ->  a*a;
+        //TestInterface t = (a,b) -> System.out::println(a+b);
+
+        //for each expects a Consumer
+        //list.forEach((element) -> System.out.println(element));
+        //for void or one parameter, the same can be written as
+       // list.forEach(System.out :: println);
 
         //Without Curly braces we cant use return keyword
         //n->return n*n; //INVALID
@@ -50,6 +67,15 @@ public class L0SpottingInvalidLambdas {
         (a,b) -> { int a = 9; return a+b }//DOES NOT COMPILE: Redeclaration of a
         (a,b) -> { int c = 9; return a+b }// CORRECT AS C is an independent local variable
 */
+    }
+
+    @FunctionalInterface
+    interface TestInterfaceVoidMethod{
+        public void method();
+    }
+
+    interface TestInterfaceReturnMethod{
+        public void method();
     }
 
 }

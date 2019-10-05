@@ -1,5 +1,7 @@
 package com.nitin.a17functionalProgramming.streamsAPIEnhancementJava9;
 
+import entity.Cargo;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -15,12 +17,13 @@ public class S1takeWhileVSdropWhile {
     public static void main(String[] args) {
 
         List<Integer> list = new ArrayList<>();
-        for (int i = 0; i < 20; i++) {
-            list.add(i);
+        for (int i = 0; i < 20; i++) {            list.add(i);
         }
-        System.out.println(list);
 
-        //filtering the even elements out
+       //list = Cargo.intCargo(6);
+
+        System.out.println(list);
+       //filtering the even elements out
         List<Integer> l = list
                 .stream()
                 .filter(x -> x % 2 == 0)
