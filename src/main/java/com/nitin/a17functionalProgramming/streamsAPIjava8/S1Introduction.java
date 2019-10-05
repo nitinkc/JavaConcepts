@@ -28,8 +28,9 @@ public class S1Introduction {
         //Creating a parallel Stream
         Stream<Integer> fromListParallel = list.parallelStream();
 
-        Stream<Double> randoms = Stream.generate(Math::random);
-        randoms.forEach(System.out::println);//Infinite Stream of Random numbers
+        Stream<Double> randoms = Stream.generate(() -> Math.random());
 
+        randoms.forEach(System.out::println);//Infinite Stream of Random numbers
+       // randoms.forEach((element) -> System.out.println(element));
     }
 }
