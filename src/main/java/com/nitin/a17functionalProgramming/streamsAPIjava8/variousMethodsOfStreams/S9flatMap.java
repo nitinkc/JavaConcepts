@@ -24,8 +24,9 @@ public class S9flatMap {
 
         // for each values, generate uppercase and find length
         List<String> l = list.stream()
-                .flatMap(x -> Stream.of(x.toUpperCase(),String.valueOf(x.length())))
+                .flatMap(x -> Stream.of(x.toUpperCase(),String.valueOf(x.length()), x.toLowerCase()))
                 .collect(Collectors.toList());
+
         System.out.println(l);
     }
 }

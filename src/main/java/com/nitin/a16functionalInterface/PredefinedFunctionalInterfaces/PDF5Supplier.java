@@ -22,9 +22,6 @@ public class PDF5Supplier {
 
         System.out.println(s.get());
 
-
-
-
         /* Creating date using factory */
 
         //Static method Reference
@@ -44,5 +41,4 @@ public class PDF5Supplier {
         Supplier<StringBuilder> myNewString = () -> new StringBuilder();
 
     }
-
 }

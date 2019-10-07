@@ -29,7 +29,7 @@ public class S2count {
                 .filter(strLong)
                 .count();
 
-        System.out.println(count);
+        System.out.println("# strings > 9 chars "+count);
 
         Stream<String> stringList = Stream.of("Cat", "Dog", "Elephant", "Frog", "Goat");
         System.out.println(stringList.count());
@@ -38,6 +38,8 @@ public class S2count {
         //Creating a Stream from list
         Stream<Integer> fromList = intList.stream();
         System.out.println(fromList.count());
+
+
         //Exception : java.lang.IllegalStateException: stream has already been operated upon or closed
         System.out.println(fromList.findFirst());
     }

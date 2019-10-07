@@ -17,7 +17,8 @@ public class S1takeWhileVSdropWhile {
     public static void main(String[] args) {
 
         List<Integer> list = new ArrayList<>();
-        for (int i = 0; i < 20; i++) {            list.add(i);
+        for (int i = 0; i < 20; i++) {
+            list.add(i);
         }
 
        //list = Cargo.intCargo(6);

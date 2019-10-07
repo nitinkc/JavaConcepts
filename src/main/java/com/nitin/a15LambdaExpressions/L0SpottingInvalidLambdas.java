@@ -13,33 +13,30 @@ public class L0SpottingInvalidLambdas {
         List<Integer> list = Cargo.intCargoSequence(5,10);
 
         TestInterfaceVoidMethod x = () -> System.out.println("Test");
-        x = ()->System.out.print("dekho");
-        x.method();
+        x = System.out::println;
+        x.voidMethod();
 
-        TestInterfaceVoidMethod y = (a) ->  a*a;
-        //TestInterface t = (a,b) -> System.out::println(a+b);
+        TestInterfaceReturnMethod y = (arg1,arg2) ->  arg1+arg2;
+        int result = y.intMethod(1,2);
+
+        y = (n,m) -> n*m;
+        /** Without Curly braces we cant use return keyword */
+        y = (n,m) -> {return n*m;};
+        //y = (n,m) -> return n*m; //INVALID
+        /** RETURN Always need curly braces and ends with a colon */
+        // n->{return n*n};//INVALID, semi colon missing
+        //n->{n*n;};//INVALID
+
+        x = ()->System.out.print(result);
+        x.voidMethod();
 
         //for each expects a Consumer
-        //list.forEach((element) -> System.out.println(element));
+        list.forEach((element) -> System.out.println(element));
         //for void or one parameter, the same can be written as
-       // list.forEach(System.out :: println);
-
-        //Without Curly braces we cant use return keyword
-        //n->return n*n; //INVALID
-
-        //RETURN Always need curly braces and ends with a colon
-       // n->{return n*n;};
-       // n->{return n*n};//INVALID, semi colon missing
-        //n->{n*n;};//INVALID
-        //n->n*n;
-
-        //(10,20) -> System.out.println(a+b);
+        list.forEach(System.out :: println);
 
         // () can be omitted only if there is EXACTLY one parameter and NO DATA TYPE
         /*
-        Duck d -> d.quack; //DOES NOT COMPILE
-        a,d -> d.quack; //DOES NOT COMPILE
-        Animal a, Duck d -> d.quack; //DOES NOT COMPILE
 
         String a = "Nitin";
         //VALID Lambdas
@@ -71,11 +68,11 @@ public class L0SpottingInvalidLambdas {
 
     @FunctionalInterface
     interface TestInterfaceVoidMethod{
-        public void method();
+        public void voidMethod();
     }
 
+    @FunctionalInterface
     interface TestInterfaceReturnMethod{
-        public void method();
+        public int intMethod(int a, int b);
     }
-
 }
