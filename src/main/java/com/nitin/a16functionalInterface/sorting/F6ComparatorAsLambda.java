@@ -1,4 +1,4 @@
-package com.nitin.a16functionalInterface;
+package com.nitin.a16functionalInterface.sorting;
 import entity.Student;
 
 import java.util.Collections;

@@ -10,7 +10,9 @@ public class Driver8 {
     public static final String CITIES_FILE = "Cities_By_Population.txt";
     public static final String CITIES_FILE_REVERSED = "Cities_By_Population.txt";
     public static final String INTERSTATES_FILE = "Interstates_By_City.txt";
-    public static final String FILE_PATH = "src\\main\\java\\com\\nitin\\kcura\\java8Solution\\";
+    //public static final String FILE_PATH = "src\\main\\java\\com\\nitin\\kcura\\java8Solution\\";
+    public static final String FILE_PATH = "src/main/java/com/nitin/kcura/java8Solution/";
+
 
     public static void main(String[] args) {
         if (args.length == 0 || args.length > 1) {
