@@ -3,27 +3,24 @@ package com.nitin.kcura.java8Solution;
 import java.io.*;
 import java.nio.file.Files;
 import java.util.*;
-
-
 /**
  * Created by nitin on Sunday, October/06/2019 at 10:50 PM
  */
 public class Driver8 {
-
     public static final String CITIES_FILE = "Cities_By_Population.txt";
     public static final String CITIES_FILE_REVERSED = "Cities_By_Population.txt";
     public static final String INTERSTATES_FILE = "Interstates_By_City.txt";
+    public static final String FILE_PATH = "src\\main\\java\\com\\nitin\\kcura\\java8Solution\\";
 
     public static void main(String[] args) {
         if (args.length == 0 || args.length > 1) {
-
             System.err.println("Supply a commandline argument \n" +
                     "Usage: java DriverMain <fileName>");
             return;
         }
 
         deleteOutputFiles();
-        File dataFile = new File(args[0]);
+        File dataFile = new File(FILE_PATH+args[0]);
         // To keep the data of the File into list of Objects of type Data
         List<Data> list = new ArrayList<>();
 
@@ -40,7 +37,7 @@ public class Driver8 {
         FileWriter fw = null;
         try {
             //Overwrite the File
-            fw = new FileWriter(INTERSTATES_FILE, false);
+            fw = new FileWriter(FILE_PATH + INTERSTATES_FILE, false);
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(-1);
@@ -68,7 +65,29 @@ public class Driver8 {
             }
         }
 
-        Iterator<String> itr2 = interstateCountMap.keySet().iterator();
+        //There is no direct support for sorting the sets in Java.
+        // To sort a set, follow these steps:
+        // Convert set to list.
+        // Sort list using Collections.sort() API.
+        // Convert list back to set.
+        List<String> interstateCountList = new ArrayList<>(interstateCountMap.keySet());
+        interstateCountList.sort(new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                int interstateNumber1 = Integer.parseInt(o1.substring(2));
+                int interstateNumber2 = Integer.parseInt(o2.substring(2));
+
+                if (interstateNumber1 > interstateNumber2) {
+                    return 1;
+                } else if (interstateNumber1 < interstateNumber2){
+                    return -1;
+                }
+                else{
+                    throw new IllegalArgumentException("Two Interstates with same name in a Same City");
+                }
+            }
+        });
+        Iterator<String> itr2 = interstateCountList.iterator();
 
         while(itr2.hasNext()){
             String key = itr2.next();
@@ -77,7 +96,7 @@ public class Driver8 {
         }
 
         printToFile.close();
-        System.out.println("Successfully saved data to file: " + INTERSTATES_FILE);
+        System.out.println("Successfully saved data to file: " + FILE_PATH + INTERSTATES_FILE);
     }
 
     private static void writeCitiesByPopulation(List<Data> list) {
@@ -88,11 +107,11 @@ public class Driver8 {
                 .thenComparing(Data::getState)
                 .thenComparing(Data::getCity));
 
-        list.forEach(System.out::println);
+        //list.forEach(System.out::println);
         FileWriter fw = null;
         try {
             //Overwrite in the File
-            fw = new FileWriter(CITIES_FILE, false);
+            fw = new FileWriter(FILE_PATH + CITIES_FILE, false);
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(-1);
@@ -114,7 +133,7 @@ public class Driver8 {
         }
 
         printToFile.close();//Should have flushed also
-        System.out.println("Successfully saved data to file: " + CITIES_FILE);
+        System.out.println("Successfully saved data to file: " + FILE_PATH + CITIES_FILE);
     }
 
     private static void readDataFromFile(List<Data> list, File dataFile) {
@@ -142,7 +161,23 @@ public class Driver8 {
             //Sort the interstates and then put into the Object
             List<String> interstateList = Arrays.asList(temp[3].split(";"));
             //Sorting the List with interstate number
-            interstateList.sort(Comparator.naturalOrder());
+            //interstateList.sort(Comparator.naturalOrder());
+            interstateList.sort(new Comparator<String>() {
+                @Override
+                public int compare(String o1, String o2) {
+                    int interstateNumber1 = Integer.parseInt(o1.substring(2));
+                    int interstateNumber2 = Integer.parseInt(o2.substring(2));
+
+                    if (interstateNumber1 > interstateNumber2) {
+                        return 1;
+                    } else if (interstateNumber1 < interstateNumber2){
+                        return -1;
+                    }
+                    else{
+                        throw new IllegalArgumentException("Two Interstates with same name in a Same City");
+                    }
+                }
+            });
             tempData.setInterstates(interstateList);
 
             list.add(tempData);
@@ -152,8 +187,8 @@ public class Driver8 {
     /* Utility method to delete the files.
      * in case of testing it is used */
     private static void deleteOutputFiles() {
-        File citiesFile = new File(CITIES_FILE);
-        File interstatesFile = new File(INTERSTATES_FILE);
+        File citiesFile = new File(FILE_PATH + CITIES_FILE);
+        File interstatesFile = new File(FILE_PATH + INTERSTATES_FILE);
         try {
             Files.deleteIfExists(citiesFile.toPath());
             Files.deleteIfExists(interstatesFile.toPath());

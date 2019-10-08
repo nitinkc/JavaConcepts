@@ -18,7 +18,6 @@ public class ParseMentorBox {
         final String searchTitle = "          <div class='course-listing-title'>";
         final String searchSubTitle = "          <div class='course-listing-subtitle'>";
 
-
         //Open the File
         File myFile = new File(IN_FILENAME);
         Scanner in = null;
@@ -53,7 +52,6 @@ public class ParseMentorBox {
                 output.println("*******************");
                 subTitleCount++;
             }
-
         }
 
         output.println("Total Titles found : " + titleCount);
