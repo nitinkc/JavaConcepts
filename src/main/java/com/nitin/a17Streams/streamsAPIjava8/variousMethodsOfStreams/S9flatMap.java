@@ -1,10 +1,9 @@
-package com.nitin.a17functionalProgramming.streamsAPIjava8.variousMethodsOfStreams;
+package com.nitin.a17Streams.streamsAPIjava8.variousMethodsOfStreams;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import java.util.stream.StreamSupport;
 
 /**
  * Created by Nitin C on 3/3/2016.

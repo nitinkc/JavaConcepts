@@ -1,4 +1,4 @@
-package com.nitin.a17functionalProgramming;
+package com.nitin.a17Streams;
 
 /**
  * Created by Nitin C on 3/3/2016.

@@ -71,22 +71,8 @@ public class Driver8 {
         // Sort list using Collections.sort() API.
         // Convert list back to set.
         List<String> interstateCountList = new ArrayList<>(interstateCountMap.keySet());
-        interstateCountList.sort(new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                int interstateNumber1 = Integer.parseInt(o1.substring(2));
-                int interstateNumber2 = Integer.parseInt(o2.substring(2));
-
-                if (interstateNumber1 > interstateNumber2) {
-                    return 1;
-                } else if (interstateNumber1 < interstateNumber2){
-                    return -1;
-                }
-                else{
-                    throw new IllegalArgumentException("Two Interstates with same name in a Same City");
-                }
-            }
-        });
+        Collections.sort(interstateCountList, ((String a, String b)
+                                        -> Integer.parseInt(a.substring(2)) - Integer.parseInt(b.substring(2))));
         Iterator<String> itr2 = interstateCountList.iterator();
 
         while(itr2.hasNext()){
@@ -161,7 +147,7 @@ public class Driver8 {
             //Sort the interstates and then put into the Object
             List<String> interstateList = Arrays.asList(temp[3].split(";"));
             //Sorting the List with interstate number
-            //interstateList.sort(Comparator.naturalOrder());
+
             interstateList.sort(new Comparator<String>() {
                 @Override
                 public int compare(String o1, String o2) {

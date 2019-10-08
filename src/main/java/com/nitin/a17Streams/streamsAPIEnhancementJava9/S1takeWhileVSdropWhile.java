@@ -1,6 +1,4 @@
-package com.nitin.a17functionalProgramming.streamsAPIEnhancementJava9;
-
-import entity.Cargo;
+package com.nitin.a17Streams.streamsAPIEnhancementJava9;
 
 import java.util.ArrayList;
 import java.util.List;

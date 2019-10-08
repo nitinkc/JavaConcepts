@@ -1,4 +1,4 @@
-package com.nitin.a17functionalProgramming.streamsAPIjava8;
+package com.nitin.a17Streams.streamsAPIjava8;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -22,7 +22,6 @@ public class S2puttingTogetherThePipeline {
         Predicate<Integer> even = (n -> n%2 != 0);
         Predicate<Integer> gtThan = (n -> n > 30);
         Predicate<Integer> ltThan = (n -> n < 500);
-
 
         //Predicate if number is even and greater than 30 and less than 500
         Predicate<Integer> doublePredicate = even.and(gtThan).and(ltThan);

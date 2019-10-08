@@ -1,4 +1,4 @@
-package com.nitin.a17functionalProgramming.streamsAPIjava8.variousMethodsOfStreams;
+package com.nitin.a17Streams.streamsAPIjava8.variousMethodsOfStreams;
 
 import java.util.stream.Stream;
 

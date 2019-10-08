@@ -1,4 +1,4 @@
-package com.nitin.a17functionalProgramming.streamsAPIjava8;
+package com.nitin.a17Streams.streamsAPIjava8;
 
 import java.util.Arrays;
 import java.util.List;

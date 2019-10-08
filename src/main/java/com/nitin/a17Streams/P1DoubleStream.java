@@ -1,4 +1,4 @@
-package com.nitin.a17functionalProgramming;
+package com.nitin.a17Streams;
 
 import java.util.stream.DoubleStream;
 

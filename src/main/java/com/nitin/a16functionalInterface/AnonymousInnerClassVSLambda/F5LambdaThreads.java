@@ -1,4 +1,4 @@
-package com.nitin.a16functionalInterface;
+package com.nitin.a16functionalInterface.AnonymousInnerClassVSLambda;
 
 /**
  * Created by Nitin Chaurasia on 1/30/18 at 4:31 PM.
