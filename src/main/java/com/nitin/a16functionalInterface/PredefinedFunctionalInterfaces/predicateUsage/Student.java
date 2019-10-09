@@ -1,4 +1,4 @@
-package com.nitin.a16functionalInterface.predicateUsage;
+package com.nitin.a16functionalInterface.PredefinedFunctionalInterfaces.predicateUsage;
 
 import java.util.List;
 

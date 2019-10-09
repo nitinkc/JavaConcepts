@@ -1,7 +1,6 @@
-package com.nitin.a16functionalInterface.sorting;
+package com.nitin.a16functionalInterface.PredefinedFunctionalInterfaces.sorting;
 import entity.Student;
 
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.Set;
 import java.util.TreeSet;

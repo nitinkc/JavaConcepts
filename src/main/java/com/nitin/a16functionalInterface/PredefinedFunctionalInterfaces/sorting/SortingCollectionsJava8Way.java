@@ -1,4 +1,4 @@
-package com.nitin.a16functionalInterface.sorting;
+package com.nitin.a16functionalInterface.PredefinedFunctionalInterfaces.sorting;
 
 import java.util.Arrays;
 import java.util.Collections;

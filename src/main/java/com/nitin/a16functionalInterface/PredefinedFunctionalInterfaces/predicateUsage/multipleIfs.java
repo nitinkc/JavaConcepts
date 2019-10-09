@@ -1,6 +1,5 @@
-package com.nitin.a16functionalInterface.predicateUsage;
+package com.nitin.a16functionalInterface.PredefinedFunctionalInterfaces.predicateUsage;
 
-import java.sql.ClientInfoStatus;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -26,12 +25,35 @@ public class multipleIfs {
         studentList.add(s3);studentList.add(s4);
 
         Predicate<Student> firstNameLength = Student -> (Student.getfName().length() <= 3);
+        Predicate<Student> semPredicate = Student -> (Student.getSem() == 1);
         Predicate<Student> deptPredicate = Student -> (Student.getDeptCode().equalsIgnoreCase("mec"));
 
         //Find out all the students based on firstNameLength predicate
+        System.out.println("Find out all the students based on firstNameLength predicate");
         studentList
                 .stream()
-                .filter(deptPredicate)
+                .filter(firstNameLength)
+                .forEach(System.out::println);
+
+        //Find all students from 1st Sem
+        System.out.println("Find all students from 1st Sem");
+        studentList
+                .stream()
+                .filter(semPredicate)
+                .forEach(System.out::println);
+
+        //Composite Predicate : All Students from CSE of First sem
+        System.out.println("Composite Predicate : All Students from CSE of First sem");
+        studentList
+                .stream()
+                .filter(semPredicate.and(deptPredicate.negate()))
+                .forEach(System.out::println);
+
+        //Same as above
+        studentList
+                .stream()
+                .filter(semPredicate)
+                .filter(deptPredicate.negate())
                 .forEach(System.out::println);
     }
 }

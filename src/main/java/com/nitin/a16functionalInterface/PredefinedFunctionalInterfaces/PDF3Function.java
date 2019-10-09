@@ -11,7 +11,7 @@ public class PDF3Function {
     public static void main(String[] args) {
 
         //Takes String as input and and return an Integer as output
-        //Function<T,R> T = input type, R return type
+        //Function<T,R> T input type, R return type
         Function<String, Integer> f1 = String::length;
         Function<String, String> f2 = x -> x.toUpperCase();
 

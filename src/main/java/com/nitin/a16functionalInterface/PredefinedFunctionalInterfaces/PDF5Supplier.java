@@ -40,5 +40,7 @@ public class PDF5Supplier {
         Supplier<StringBuilder> myString = StringBuilder::new;
         Supplier<StringBuilder> myNewString = () -> new StringBuilder();
 
+
+
     }
 }
