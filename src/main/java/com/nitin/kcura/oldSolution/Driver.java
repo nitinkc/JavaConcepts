@@ -133,7 +133,7 @@ public class Driver {
     }
 
     /**
-     * Solving Secong\d Part of Option 1 in which the counte of Interstates is to be written in a
+     * Solving Second Part of Option 1 in which the count of Interstates is to be written in a
      * file named Interstates_By_City.txt. The Interstates name will be in the Ascending order
      */
     private void writeInterstatesByCity(List<Data> list) {
