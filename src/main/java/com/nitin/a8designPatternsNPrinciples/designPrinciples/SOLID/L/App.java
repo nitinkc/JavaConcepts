@@ -4,18 +4,15 @@ package com.nitin.a8designPatternsNPrinciples.designPrinciples.SOLID.L;
 	  L  ->  LISKOV SUBSTITUTION PRINCIPLE 
 	  
 	  ----------------------------------------------
-	  
 	  	What is the motivation of Liskov principle?
 	  		We usually create class hierarchies during the application development
 				For example: we extend some classes creating some derived classes !!!
-							
 				
 				It would be great if the new derived classed would work as well
 					without replacing the functionality of the classes
 					
 					Otherwise the new classes can produce undesired effects when they are
 					 	used in existing program modules.
-	  
 	  --------------------------------------------------
 
 	- child classes should never break the parent class type definition
@@ -35,7 +32,6 @@ package com.nitin.a8designPatternsNPrinciples.designPrinciples.SOLID.L;
 		The violation of Liskov principle is a latent violation of Open Closed Principle !!!
 		
 	 */
-	
 
 	public class App {
 

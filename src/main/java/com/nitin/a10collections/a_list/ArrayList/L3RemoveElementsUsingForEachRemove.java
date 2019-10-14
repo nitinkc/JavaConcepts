@@ -10,7 +10,7 @@ import java.util.List;
  * ArrayList Initial Size 10; Later incremented by 3/2 + 1
  * Vector Initial Size 16; Incremented by 2X
  *
- * list.remove() --> ConcurrentModificationException
+ * list.remove() --> ConcurrentModificationException id used with Iterator
  * itr.remove() --> correct way to remove
  */
 public class L3RemoveElementsUsingForEachRemove {

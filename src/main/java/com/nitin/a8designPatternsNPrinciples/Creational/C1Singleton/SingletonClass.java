@@ -6,7 +6,7 @@ public class  SingletonClass {
 	private SingletonClass(){}
 
 	// make the instance variable static so that getInstance() can call the only one available Singleton class object.
-	private static SingletonClass object;
+	private static SingletonClass object = null;
 
 	// Eager initialization
 	//private static SingletonClass object = new SingletonClass();
@@ -23,7 +23,7 @@ public class  SingletonClass {
 
 	@Override
 	public String toString() {
-		return String.valueOf(System.currentTimeMillis());
+		return String.valueOf(object.hashCode());
 	}
 
 }

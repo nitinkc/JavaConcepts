@@ -3,7 +3,6 @@ package com.nitin.a8designPatternsNPrinciples.Creational.C4DataAccessObjectPatte
 public class App {
 
 	public static void main(String[] args) {
-		
 		Database database = new Database();
 		
 		database.insert(new Person("John", 27));

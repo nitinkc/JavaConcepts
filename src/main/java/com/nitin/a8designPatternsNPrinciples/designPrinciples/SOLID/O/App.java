@@ -5,6 +5,8 @@ public class App {
 	/**
 	 
 	 O  ->  OPEN/CLOSED PRINCIPLE
+	 Open for Extension
+	 Closed for modification
 	 
 	 ------------------------------------------------------------------------------------------
 	 
@@ -40,7 +42,7 @@ public class App {
 							the dialog
 
 		- we can make sure this principle is not violated:
-			1.) B1Strategy pattern
+			1.) Strategy pattern
 			2.) template pattern
 	  
 	 */

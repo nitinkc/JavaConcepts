@@ -24,7 +24,6 @@ public class E2TwoCatchBlocks {
             System.out.println("Parent Class should be below Child");
             System.out.println(e);
         }
-
         //Second catch is executed if the AE is not caught.
         catch(Exception e){
             System.out.println(e + "\n" + "Parent Class should be below Child");

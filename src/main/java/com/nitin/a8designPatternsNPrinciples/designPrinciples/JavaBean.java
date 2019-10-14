@@ -3,7 +3,7 @@ package com.nitin.a8designPatternsNPrinciples.designPrinciples;
 /**
  * Created by Nitin C on 3/5/2016.
  *
- * Encapsulation si so prevalent in java that there is a standard for creating classes that store data, called JavaBean
+ * Encapsulation is so prevalent in java that there is a standard for creating classes that store data, called JavaBean
  *
  * A JavaBean is a design principle for encapsulating data in an OBJECT in Java
  *
@@ -11,8 +11,8 @@ package com.nitin.a8designPatternsNPrinciples.designPrinciples;
  * 1. Properties (variables and fields) are private
  * 2. Getter for non-boolean begins with get
  * 3. Getter for boolean MAY begin with get or is
- * 4. Setter methods must begin with b_set
- * 5. Method name must have a prefix of b_set/get/is followed by the First letter of property in Uppercase
+ * 4. Setter methods must begin with set
+ * 5. Method name must have a prefix of set/get/is followed by the First letter of property in Uppercase
  */
 public class JavaBean {
     private int id;

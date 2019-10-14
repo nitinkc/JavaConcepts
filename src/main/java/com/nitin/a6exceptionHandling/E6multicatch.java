@@ -23,7 +23,7 @@ public class E6multicatch {
             String text = new String(Files.readAllBytes(path));
             LocalDate date = LocalDate.parse(text);
             System.out.println(date);
-        } catch (DateTimeParseException | IOException e) { //No duplicacy of code
+        } catch (DateTimeParseException | IOException e) { //No duplicity of code
             e.printStackTrace();
             // e = new RuntimeException; java forbids reassigning the exception variable. EFFECTIVELY FINAL
             throw new RuntimeException();

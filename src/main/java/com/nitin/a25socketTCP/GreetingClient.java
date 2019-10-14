@@ -4,34 +4,49 @@ package com.nitin.a25socketTCP;
 
 import java.net.*;
 import java.io.*;
+import java.util.concurrent.TimeUnit;
 
-public class GreetingClient
-{
-public static void main(String [] args)
-{
-   String serverName = args[0];
-   int port = Integer.parseInt(args[1]);
-   try
-   {
-      System.out.println("Connecting to " + serverName
-                          + " on port " + port);
-      Socket client = new Socket(serverName, port);
-      System.out.println("Just connected to "
-                   + client.getRemoteSocketAddress());
-      OutputStream outToServer = client.getOutputStream();
-      DataOutputStream out =
-                    new DataOutputStream(outToServer);
+public class GreetingClient {
+   public static void main(String[] args) throws IOException {
+      //args[0] = 127.0.0.1, args[1] = 1234
+      //String serverName = args[0];
+      //int port = Integer.parseInt(args[1]);
+      String serverName = "localhost";
+      int port = 1234;
+      DataInputStream in = null;
+      DataOutputStream out = null;
+      Socket client = null;
+      String sendToServer = "";
+      try {
+         System.out.println("Connecting to Server" + serverName + " on port " + port);
+         client = new Socket(serverName, port);
+         System.out.println("Just connected to " + client.getRemoteSocketAddress());
+         //Writes data to the socket
+         out = new DataOutputStream(client.getOutputStream());
+         //in = new DataInputStream(new BufferedInputStream(client.getInputStream()));
+         //Take the input from Terminal
+         in = new DataInputStream(System.in);
+         //Sending data to the server
+      } catch (IOException e) {
+         e.printStackTrace();
+      }
 
-      out.writeUTF("Hello from "
-                   + client.getLocalSocketAddress());
-      InputStream inFromServer = client.getInputStream();
-      DataInputStream in =
-                     new DataInputStream(inFromServer);
-      System.out.println("Server says " + in.readUTF());
-      client.close();
-   }catch(IOException e)
-   {
-      e.printStackTrace();
+      out.writeUTF("Hello from " + client.getLocalSocketAddress());
+
+      while (!sendToServer.equalsIgnoreCase("exit")) {
+         try {
+            sendToServer = in.readLine();
+            out.writeUTF(sendToServer);
+         } catch (IOException e) {
+            e.printStackTrace();
+         }
+         System.out.println("Sending to Server " + sendToServer);
+         //System.out.println("Server says " + in.readUTF());
+      }
+
+         out.close();
+         client.close();
+         in.close();
+
    }
-}
 }

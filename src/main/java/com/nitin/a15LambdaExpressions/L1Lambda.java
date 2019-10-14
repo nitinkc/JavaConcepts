@@ -43,7 +43,6 @@ public class L1Lambda {
     }
 }
 
-interface Ball
-{
+interface Ball {
     void hit();
 }
