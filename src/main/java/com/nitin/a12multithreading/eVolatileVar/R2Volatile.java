@@ -8,7 +8,6 @@ public class R2Volatile {
         VolatileTest c = new VolatileTest();
         Thread[] t = new Thread[20];
         for (int i = 0; i < 20; i++) {
-
             t[i] = new Thread(c);
         }
         for (int i = 0; i < 20; i++) {

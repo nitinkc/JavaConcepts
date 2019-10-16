@@ -7,7 +7,6 @@ public class S2StringMethods {
     public static void main(String[] args) {
         String x = "Malgudi Days by R.K Narayan Features malgudi";
 
-
         System.out.println(x.length());// length method
         System.out.println(x.charAt(9));
 

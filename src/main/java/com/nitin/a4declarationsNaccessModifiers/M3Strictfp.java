@@ -10,5 +10,5 @@ public class M3Strictfp {
     // Method as strictfp : all floating point calculations in that method has to follow IEEE 754 Standard so that
     // we get platform independent results.
 
-    // Class as strictfp : every concrete method in that class folloe IEEE 754 standards.
+    // Class as strictfp : every concrete method in that class follow IEEE 754 standards.
 }

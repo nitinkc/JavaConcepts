@@ -14,7 +14,7 @@ public class S0NonSyncProblems {
 
         ArrayList<Integer> counterValues = new ArrayList<>();
 
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 100; i++) {
             process();
             counterValues.add(counter);
         }

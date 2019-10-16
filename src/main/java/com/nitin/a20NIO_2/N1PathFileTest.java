@@ -2,6 +2,7 @@ package com.nitin.a20NIO_2;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.CharacterIterator;
 
 /**
  * Created by Nitin C on 3/4/2016.
@@ -14,7 +15,6 @@ public class N1PathFileTest {
     private static void printPathInformation(Path path) {
         System.out.println("Filename is: " + path.getFileName());
         System.out.println("Root is " + path.getRoot());
-
         Path currentParent = path;
         while((currentParent = currentParent.getParent()) != null){
             System.out.println(" Current parent is: "+currentParent);
