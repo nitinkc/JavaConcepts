@@ -1,4 +1,4 @@
-package com.nitin.a8designPatternsNPrinciples.Structural.S1Decorator;
+package com.nitin.a8designPatternsNPrinciples.Structural.S1Decorator.beverageApp;
 
 public class Milk extends BeverageDecorator{
 
