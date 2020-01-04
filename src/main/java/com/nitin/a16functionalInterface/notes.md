@@ -8,17 +8,6 @@ public interface Consumer<T> {
 }
  ```
 
-### Predicate
-
-The Java Predicate interface, java.util.function.Predicate, represents a simple function that takes a single value as parameter, and returns true or false. 
-Java
-```java
-public interface Predicate<T> {
-    boolean test(T t);
-    ...
-}
-```
-
 ### Supplier
 ```java
 public interface Supplier<T> {
@@ -31,6 +20,18 @@ Supplier<LocalDate> s1 = LocalDate::now;
 //Lambda Expression
 Supplier<LocalDate> s2 = () -> LocalDate.now();
 
+```
+
+
+### Predicate
+
+The Java Predicate interface, java.util.function.Predicate, represents a simple function that takes a single value as parameter, and returns true or false. 
+Java
+```java
+public interface Predicate<T> {
+    boolean test(T t);
+    ...
+}
 ```
 
 ### Function

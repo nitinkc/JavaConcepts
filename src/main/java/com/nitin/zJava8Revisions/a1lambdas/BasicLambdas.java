@@ -18,7 +18,6 @@ public class BasicLambdas {
         result = y.intMethod(5,2);
         System.out.println("result product : " + result);
 
-
         /** Without Curly braces we cant use return keyword */
         y = (n,m) -> {return n/m;};
         result = y.intMethod(100,2);

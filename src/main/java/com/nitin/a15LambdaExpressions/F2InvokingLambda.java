@@ -1,4 +1,4 @@
-package com.nitin.a16functionalInterface;
+package com.nitin.a15LambdaExpressions;
 
 /**
  * Created by Nitin Chaurasia on 1/30/18 at 3:51 PM.
