@@ -10,17 +10,17 @@ public class BasicLambdas {
 
         // Lambda for addition
         y = (arg1, arg2) ->  arg1+arg2;
-        int result = y.intMethod(1,2);
+        int result = y.calculate(1,2);
         System.out.println("result sum : " + result);
 
         // Lambda for Multiplication
         y = (n,m) -> n*m;
-        result = y.intMethod(5,2);
+        result = y.calculate(5,2);
         System.out.println("result product : " + result);
 
         /** Without Curly braces we cant use return keyword */
         y = (n,m) -> {return n/m;};
-        result = y.intMethod(100,2);
+        result = y.calculate(100,2);
         System.out.println("result division : " + result);
 
         //y = (n,m) -> return n*m; //INVALID
@@ -32,6 +32,14 @@ public class BasicLambdas {
 }
 
  @FunctionalInterface
-    interface TestFunctionalInterfaceWithReturnMethod{
-        public int intMethod(int a, int b);
-    }
+    interface TestFunctionalInterfaceWithReturnMethod {
+     public int calculate(int a, int b);
+
+     default int multiply(int a, int b) {
+         return 0;
+     }
+
+     static int multiply2(int a, int b) {
+         return 0;
+     }
+ }

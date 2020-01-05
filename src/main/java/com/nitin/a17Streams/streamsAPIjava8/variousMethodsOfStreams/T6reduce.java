@@ -18,7 +18,6 @@ public class T6reduce {
         String name = arr.reduce("", String::concat);
 
         System.out.println(name);
-
     }
 
     public static void m2(){

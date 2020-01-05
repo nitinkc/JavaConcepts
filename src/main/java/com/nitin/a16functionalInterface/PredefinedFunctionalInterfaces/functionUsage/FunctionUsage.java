@@ -26,7 +26,7 @@ public class FunctionUsage {
         list
                 .stream()
                 .map(function)
-                .forEach(System.out::println);
+                .forEach(System.out::print);
 
         //all the numbers except for the default replacement number
         list.stream()

@@ -46,7 +46,7 @@ public class multipleIfs {
         System.out.println("Composite Predicate : All Students from CSE of First sem");
         studentList
                 .stream()
-                .filter(semPredicate.and(deptPredicate.negate()))
+                .filter(semPredicate.or(deptPredicate.negate()))
                 .forEach(System.out::println);
 
         //Same as above

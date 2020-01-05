@@ -15,6 +15,7 @@ public class S1collect {
         list.add("Pawan");list.add("Chiranjeevi");list.add("RaviTeja");
         list.add("Venkatesh");list.add("Nagarjuna");
         System.out.println(list);
+
         //Create a now list with actors having names longer than 9 characters
         List<String> l = list.stream().filter(str -> str.length() >= 9).collect(Collectors.toList());
         System.out.println(l);

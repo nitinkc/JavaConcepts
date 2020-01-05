@@ -21,8 +21,8 @@ public class PDF1Predicate {
 
         // Predicate to test if an int is Greater than 10
         //Predicate<Integer> p = i -> {return i>10;};
-        Predicate<Integer> p1 = i ->  i>10;;
-        System.out.println(p1.test(100));
+        Predicate<Integer> p1 = i ->  i>10;
+        System.out.println(p1.test(10));
         System.out.println(p1.test(6));//false
 
 

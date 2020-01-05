@@ -1,6 +1,7 @@
 package com.nitin.a17Streams.streamsAPIjava8.variousMethodsOfStreams;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -30,6 +31,12 @@ public class S3sorted {
 //            }
 //        }).collect(Collectors.toList());
         System.out.println(l2);
+
+
+        list.stream()
+                .sorted(Comparator.comparing(String::length)
+                        .thenComparing((str1, str2) -> str2.compareTo(str1)))
+                .forEach(System.out::println);
 
     }
 }

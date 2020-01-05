@@ -27,5 +27,10 @@ public class S9flatMap {
                 .collect(Collectors.toList());
 
         System.out.println(l);
+
+        l.stream()
+                .map(str -> str.toLowerCase())
+                .flatMap(x -> Stream.of(x.toUpperCase(),x.substring(3,5)))
+                .forEach(x -> System.out.print(x+", "));
     }
 }
