@@ -1,10 +1,7 @@
 package com.nitin.a17Streams.dataStreams;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * Created by nitin on Sunday, January/05/2020 at 12:02 AM
@@ -21,16 +18,60 @@ public class TestStreams {
         list.add(s1);list.add(s2);list.add(s3);list.add(s4);list.add(s5);
         //Stream<Student> listStream = Stream.of(s1,s2,s3,s4,s5);
 
+        //findAllSalary(list);
+        //findSelectiveSalary(list);
+        //sortedSalary(list);
+        //ageSortedStudents(list);
+        //printCapitalNAmes(list);
+        playWithRandomInts();
+    }
+
+    private static void playWithRandomInts() {
+        List<Integer> list = new Random()
+                .ints(10,1,100000)
+                .boxed()
+                //.forEach(System.out::println);
+                //.collect(Collectors.toCollection(ArrayList::new));
+                .collect(Collectors.toList());
+
+        long result = list.stream()
+                .map(x -> x/2)
+                .reduce((a,b) -> a+b)
+                .get();
+
+        System.out.println(result);
+    }
+
+    private static void printCapitalNAmes(List<Student> list) {
+        String filler = " ";
+        list.stream()
+                .map(s -> s.getFirstName().toUpperCase() + filler +
+                        s.getMiddleName().toLowerCase() + filler +
+                        s.getLastName().toUpperCase())
+                .forEach(System.out::println);
+    }
+
+    private static void ageSortedStudents(List<Student> list) {
+        list.stream()
+                .sorted(Comparator
+                        .comparing(Student::getAge)
+                        .thenComparing(Student::getSalary)
+                )
+                .forEach(System.out::println);
+    }
+
+    private static void findAllSalary(List<Student> list) {
         /* Map takes a function */
         list.stream()
-                .map((Student s) -> s.getSalary())
+                .map((Student s) -> s.getAge())
                 .sorted()
                 .collect(Collectors.toList())
-                .forEach(System.out::println)
-        ;
+                .forEach(System.out::println);
+    }
 
-        // Filtering the folks based on the salary
-        /*list.stream()
+    // Filtering the folks based on the salary
+    private static void findSelectiveSalary(List<Student> list) {
+        list.stream()
                 .filter(s -> s.getSalary() > 80000)
                 //.collect(Collectors.toList())
                 .forEach(System.out :: println);
@@ -41,11 +82,12 @@ public class TestStreams {
                 .orElse(null);
         System.out.println("Filtering the folks based on the salary\n");
         System.out.println(result);
+    }
 
+    private static void sortedSalary(List<Student> list){
         list.stream()
-                .map(s -> s.getDob())
+                .map(s -> s.getSalary())
                 .sorted()
                 .forEach(System.out::println);
-*/
     }
 }
