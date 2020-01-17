@@ -25,11 +25,12 @@ public class TestStreams {
         list.stream()
                 .map((Student s) -> s.getSalary())
                 .sorted()
-                //.collect(Collectors.toList())
-                .forEach(System.out::println);
+                .collect(Collectors.toList())
+                .forEach(System.out::println)
+        ;
 
         // Filtering the folks based on the salary
-        list.stream()
+        /*list.stream()
                 .filter(s -> s.getSalary() > 80000)
                 //.collect(Collectors.toList())
                 .forEach(System.out :: println);
@@ -45,6 +46,6 @@ public class TestStreams {
                 .map(s -> s.getDob())
                 .sorted()
                 .forEach(System.out::println);
-
+*/
     }
 }

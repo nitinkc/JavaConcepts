@@ -43,6 +43,7 @@ public class PDF2PredicateJoining {
         Predicate<String> doublePredicate = egg.and(brownEgg);
         Predicate<String> doublePredicateNegate = egg.and(brownEgg.negate());
 
+
     }
 
     private static void m1(Predicate<Integer> p, int[] arr){
@@ -54,4 +55,6 @@ public class PDF2PredicateJoining {
         System.out.println();
         return;
     }
+
+
 }

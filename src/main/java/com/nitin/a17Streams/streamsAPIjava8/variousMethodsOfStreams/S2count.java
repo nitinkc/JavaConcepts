@@ -27,6 +27,7 @@ public class S2count {
         long count = list
                 .stream()
                 .filter(strLong)
+                .map((str) -> str+str)
                 .count();
 
         System.out.println("# strings > 9 chars "+count);
@@ -41,6 +42,6 @@ public class S2count {
 
 
         //Exception : java.lang.IllegalStateException: stream has already been operated upon or closed
-        System.out.println(fromList.findFirst());
+        //System.out.println(fromList.findFirst());
     }
 }

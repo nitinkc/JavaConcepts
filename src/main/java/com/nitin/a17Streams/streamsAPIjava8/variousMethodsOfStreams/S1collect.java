@@ -29,7 +29,10 @@ public class S1collect {
         //Change all the names to uppercase
         // Using a function as a return value is expected
         Function<String,String> upperCase = (str) -> str.toUpperCase();
-        List<String> l2 = list.stream().map(upperCase).collect(Collectors.toList());
+        List<String> l2 = list
+                .stream()
+                .map(upperCase)
+                .collect(Collectors.toList());
         System.out.println(l2);
     }
 }
