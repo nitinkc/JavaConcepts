@@ -15,7 +15,7 @@ public class S8map {
 
         // Lambda Expression
         listStream
-                .map(a -> a.length())
+                .flatMap(a -> Stream.of(a.toLowerCase(), a.length(),a.toUpperCase()))
                 .forEach(b -> System.out.println(b));
 
         //The same is written in method reference

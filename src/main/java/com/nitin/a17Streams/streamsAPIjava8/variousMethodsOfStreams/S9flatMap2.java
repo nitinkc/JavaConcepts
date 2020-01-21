@@ -24,7 +24,7 @@ public class S9flatMap2 {
                     if(x%2 == 0)
                         return Stream.empty();
                     else
-                        return Stream.of(x, (int)Math.random()*900,x*x);
+                        return Stream.of(x, x*x);
                 }).collect(Collectors.toList());
         System.out.println(l);
     }
