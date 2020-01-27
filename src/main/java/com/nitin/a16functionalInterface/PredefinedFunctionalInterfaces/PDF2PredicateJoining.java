@@ -1,12 +1,10 @@
 package com.nitin.a16functionalInterface.PredefinedFunctionalInterfaces;
 
-import com.nitin.a8designPatternsNPrinciples.Creational.C4DataAccessObjectPattern.PersonDAO;
-
 import java.util.Arrays;
 import java.util.function.Predicate;
 
 /**
- * Created by Nitin Chaurasia on 1/30/18 at 8:37 PM.
+ * Created by Nitin Chaurasia on 1/30/18 at 8:37 PM.The file name should be application-datasource-h2.properties
  * P1 -> if number is > 10
  * P2 -> is even
  *
