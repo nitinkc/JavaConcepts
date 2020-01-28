@@ -7,6 +7,9 @@ public class F2InvokingLambda {
     public static void main(String[] args) {
         InvokingLambda i = () -> System.out.println("Invoking Lambda from functional interface");
         i.m1();
+
+        i = () -> System.out.println(Math.sqrt(8558));
+        i.m1();
     }
 }
 

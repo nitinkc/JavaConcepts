@@ -55,8 +55,7 @@ public class TestStreams {
         list.stream()
                 .sorted(Comparator
                         .comparing(Student::getAge)
-                        .thenComparing(Student::getSalary)
-                )
+                        .thenComparing(Student::getSalary))
                 .forEach(System.out::println);
     }
 

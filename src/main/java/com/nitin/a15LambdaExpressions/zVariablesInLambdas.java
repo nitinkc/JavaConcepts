@@ -5,8 +5,13 @@ package com.nitin.a15LambdaExpressions;
  * Lambda expression can access static variables, instance variables,
  * effectively final variables and effectively Final local variables
  */
-public class F1VariablesInLambdas {
+public class zVariablesInLambdas {
     String walk = "walk";//Instance Variable
+
+    public static void main(String[] args) {
+        zVariablesInLambdas f = new zVariablesInLambdas();
+        f.everyonePlay(true);
+    }
 
     void everyonePlay(boolean baby){
         String approach = "abmle";
@@ -20,11 +25,6 @@ public class F1VariablesInLambdas {
 
     void play(Gorilla g){
         System.out.println(g.move());
-    }
-
-    public static void main(String[] args) {
-        F1VariablesInLambdas f = new F1VariablesInLambdas();
-        f.everyonePlay(true);
     }
 }
 
