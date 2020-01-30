@@ -26,14 +26,12 @@ public class FileStream {
         //read file into stream, try-with-resources
         try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
             list = stream
-                    .map(str -> str.split(","))
+                    .map(str -> str.split(",",-1))
                     .skip(1)
 
                     .map(strArr -> {
                         String temp[] = strArr;
                         Cancer c;
-                        if(null != temp[0] && null != temp[1] && null != temp[2] &&
-                        null != temp[3] && null != temp[4] && null != temp[5] && null != temp[6]){
                             c = new Cancer(
                                     StringUtils.defaultString(temp[0],null),
                                     StringUtils.defaultString(temp[1],null),
@@ -44,15 +42,12 @@ public class FileStream {
                                     NumberUtils.toInt(temp[6],-1),
                                     NumberUtils.toFloat(temp[7],-1)
                             );
-                        }else{
-                            c = new Cancer();
-                        }
                         return c; })
                     .collect(Collectors.toCollection(ArrayList::new));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        //list.stream().forEach(System.out::println);
+        list.stream().forEach(System.out::println);
     }
 }
