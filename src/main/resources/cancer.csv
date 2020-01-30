@@ -101,7 +101,7 @@ Arizona,Thyroid,2007,Female,White,565.0,2688894,20.6
 Arizona,Thyroid,2007,Male,White,190.0,2665511,7.0
 Arizona,Thyroid,2008,Female,Asian or Pacific Islander,29.0,109750,25.2
 Arizona,Thyroid,2008,Female,White,660.0,2728728,23.7
-Arizona,Thyroid,2008,Female,Other Races and Unknown combined,22.0,,
+Arizona,Thyroid,2008,Female,Other Races and Unknown combined,22.0,null,null
 Arizona,Thyroid,2008,Male,White,212.0,2701226,7.6
 Arizona,Thyroid,2009,Female,American Indian or Alaska Native,26.0,178749,17.7
 Arizona,Thyroid,2009,Female,Asian or Pacific Islander,29.0,114334,26.1
