@@ -10,6 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -19,7 +20,7 @@ import java.util.stream.Stream;
 
 public class FileStream {
     public static void main(String args[]) throws URISyntaxException, IOException {
-        String fileName = "src/main/resources/temp.csv";
+        String fileName = "src/main/resources/cancer.csv";
         Path path = Paths.get(fileName);
         List<Cancer> list = null;
 
@@ -48,6 +49,18 @@ public class FileStream {
             e.printStackTrace();
         }
 
-        list.stream().forEach(System.out::println);
+        Map<Integer,List<Cancer>> map = list.stream()
+                .collect(Collectors.groupingBy(Cancer::getYear));
+
+        for(Map.Entry<Integer,List<Cancer>>itr:map.entrySet()){
+            System.out.println("Key: "+itr.getKey()+"== Value: "+itr.getValue().stream().count());
+        }
+
+        Map<String,List<Cancer>> map2 = list.stream()
+                .collect(Collectors.groupingBy(Cancer::getState));
+
+        for(Map.Entry<String,List<Cancer>>itr:map2.entrySet()){
+            System.out.println("Key: "+itr.getKey()+"== Value: "+itr.getValue().stream().count());
+        }
     }
 }
