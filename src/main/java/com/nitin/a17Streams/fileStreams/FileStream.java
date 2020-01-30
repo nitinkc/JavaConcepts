@@ -1,8 +1,16 @@
 package com.nitin.a17Streams.fileStreams;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URISyntaxException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
+import java.util.function.BiConsumer;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -10,15 +18,17 @@ import java.util.stream.Stream;
  */
 
 public class FileStream {
+    public static void main(String args[]) throws URISyntaxException, IOException {
+        String fileName = "src/main/resources/cancer.csv";
+        Path path = Paths.get(fileName);
 
-    public static void main(String args[]) {
-
-        String fileName = "classpath:resources/cancer.txt";
         //read file into stream, try-with-resources
-        try (Stream<String> stream = Files.lines(Paths.get("resources"))) {
-
-            stream.forEach(System.out::println);
-
+        try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
+            stream
+                    .map(str -> str.split(","))
+                    .collect(Collectors.groupingBy()
+                    .forEach((str, lng) -> System.out.println(str[0] + " : " +lng));
+                  //.filter(str -> str.equalsIgnoreCase("Alabama"))
         } catch (IOException e) {
             e.printStackTrace();
         }
