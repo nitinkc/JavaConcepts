@@ -1,12 +1,10 @@
-package com.nitin.a7oopsConcepts.interfaces.DefaultMethodsInJava8;
-
+package com.nitin.a10interfaces.DefaultMethodsInJava8;
 
 /**
  * Created by Nitin Chaurasia on 1/31/18 at 5:50 PM.
  */
 
 //CE : inherits unrelated defaults for m1() from types Left and DefaultMethodsInJava8.Right
-
 public class D2LeftRight implements Left,Right{//Compulsory give implementation
 
     public static void main(String[] args) {
@@ -17,7 +15,7 @@ public class D2LeftRight implements Left,Right{//Compulsory give implementation
     //Without this method override, CE will be there.
     @Override
     public void m1(){
-        //Left.super.m1();
+        Left.super.m1();
         Right.super.m1();
         System.out.println("Over ridden");
     }

@@ -1,4 +1,4 @@
-package com.nitin.a7oopsConcepts.interfaces.StaticMethodsInsideInterfacesFromJava8;
+package com.nitin.a10interfaces.StaticMethodsInsideInterfacesFromJava8;
 
 /**
  * Created by Nitin Chaurasia on 1/30/18 at 5:30 PM.

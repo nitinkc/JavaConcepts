@@ -1,7 +1,9 @@
-package com.nitin.a7oopsConcepts.interfaces.privateMethodsInInterfaceJava9;
+package com.nitin.a10interfaces.privateMethodsInInterfaceJava9;
 
 /**
  * Created by Nitin Chaurasia on 1/31/18 at 9:24 PM.
+ * private methods in Interfaces can be used, with implementation,
+ * to be used within Default methods.
  */
 public class CodeReusabilityInInterf implements Interf{
     public static void main(String[] args) {

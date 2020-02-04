@@ -14,8 +14,11 @@ public class L1BasicWithListIteration {
     public static void main(String[] args) {
         List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,9);
 
-        // EXTERNAL ITERATORS
-        // Complex, initial (boundary less than or less than equal to)
+        /************************
+         *  EXTERNAL ITERATORS (for and for each) (Manage outside)
+         ************************/
+
+         // Complex, initial (boundary less than or less than equal to)
         // Self inflicted wound pattern
        for(int i = 0; i < list.size(); i++){
             //System.out.println(list.get(i));
@@ -25,18 +28,16 @@ public class L1BasicWithListIteration {
        for (int element: list) {
             //System.out.println(element);
         }
-       /************************
-        * Above two were External Iterator (Manage outside)
-        * **********************
-        * */
 
-        // Internal iterator, put on autopilot
-        // just tell what to do, not how the iterations done
+        /************************
+         *  Internal iterator, put on autopilot
+         *  just tell what to do, not how the iterations done
+         ************************/
 
-        //method forEach is called on the object
+        // method forEach is called on the object
         // Anonymous inner class
-        //This gives polymorphism
-        //forEach method is now on a10collections
+        // This gives polymorphism
+        // forEach method is now on a10collections
        list.forEach(new Consumer<Integer>() {//Consumer is a new interface in java 8
             @Override
             public void accept(Integer value) {// method of consumer, which accepts the array

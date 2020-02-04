@@ -16,5 +16,5 @@ public class F2InvokingLambda {
 // functional interface even though not annotated
 //@FunctionalInterface
 interface InvokingLambda{
-    public void m1();
+    public abstract void m1();
 }

@@ -24,10 +24,10 @@ public class F4InvokingLambdaReturn {
 }
 
 interface InterfaceWithReturnMethod {
-    public int squareIt(int a);
+    public abstract int squareIt(int a);
 }
 
 @FunctionalInterface
 interface InterfaceForLambda{
-    public String doSomething(int a, int b);
+    public abstract String doSomething(int a, int b);
 }

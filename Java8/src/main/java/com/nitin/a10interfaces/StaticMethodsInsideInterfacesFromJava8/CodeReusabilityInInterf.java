@@ -1,4 +1,4 @@
-package com.nitin.a7oopsConcepts.interfaces.StaticMethodsInsideInterfacesFromJava8;
+package com.nitin.a10interfaces.StaticMethodsInsideInterfacesFromJava8;
 
 /**
  * Created by Nitin Chaurasia on 1/31/18 at 9:24 PM.
@@ -23,8 +23,13 @@ interface Interf1{
         m3();
     }
 
+    //private methods
     private static void m3(){
         System.out.println("m3 for code reusability");
+    }
+
+    default void m4(){
+        System.out.println("m4 Default method");
     }
 
 }
