@@ -1,5 +1,7 @@
 package com.nitin.zJava8Revisions.a1lambdas;
 
+import com.nitin.apacheCommons.ApacheCommons;
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -53,6 +55,10 @@ public class StreamsRevisionsInteger {
                 .reduce((x,y) -> x+y)
                 .get()
         );
+
+        //Find all Primes
+        intList.stream()
+                .filter(x -> Primes)
 
     }
 }
