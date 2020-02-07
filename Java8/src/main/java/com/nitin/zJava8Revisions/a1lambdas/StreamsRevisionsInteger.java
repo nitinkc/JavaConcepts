@@ -1,10 +1,11 @@
 package com.nitin.zJava8Revisions.a1lambdas;
 
-import com.nitin.apacheCommons.ApacheCommons;
+import org.apache.commons.math3.primes.Primes;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+
 
 /**
  * Created by nitin on Tuesday, February/04/2020 at 1:36 AM
@@ -57,8 +58,10 @@ public class StreamsRevisionsInteger {
         );
 
         //Find all Primes
+        System.out.println("\nFind all Prime numbers in the given list ");
         intList.stream()
-                .filter(x -> Primes)
-
+                .filter(x -> Primes.isPrime(x))
+                .sorted(Comparator.reverseOrder())
+                .forEach(System.out::println);
     }
 }
