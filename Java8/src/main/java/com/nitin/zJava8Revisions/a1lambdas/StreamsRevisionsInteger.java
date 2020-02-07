@@ -63,5 +63,8 @@ public class StreamsRevisionsInteger {
                 .filter(x -> Primes.isPrime(x))
                 .sorted(Comparator.reverseOrder())
                 .forEach(System.out::println);
+
+
+
     }
 }
