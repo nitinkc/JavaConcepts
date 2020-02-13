@@ -11,11 +11,12 @@ public class DifferentNames {
         return name -> name.startsWith(letter);
     }
 
-    public static final List<String> namesList = Arrays.asList("Brian", "Nate", "Neal", "Raju", "Sara", "Scott");
+    public static final List<String> namesList = Arrays.asList("Adrian", "Briana", "Chetan", "Neil", "Nitin", "Mukesh");
 
     public static void main(final String[] args) {
 
         {
+            //Simple Predicates
             final Predicate<String> startsWithN = name -> name.startsWith("N");
             final Predicate<String> startsWithB = name -> name.startsWith("B");
 
