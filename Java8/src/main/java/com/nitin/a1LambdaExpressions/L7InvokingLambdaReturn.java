@@ -1,9 +1,9 @@
-package com.nitin.a15LambdaExpressions;
+package com.nitin.a1LambdaExpressions;
 
 /**
  * Created by Nitin Chaurasia on 1/30/18 at 4:38 PM.
  */
-public class F4InvokingLambdaReturn {
+public class L7InvokingLambdaReturn {
     public static void main(String[] args) {
 
         //Since there is only one abstract method in the functional interface,

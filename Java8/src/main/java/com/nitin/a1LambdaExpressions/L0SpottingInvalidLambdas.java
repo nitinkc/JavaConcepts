@@ -1,7 +1,6 @@
-package com.nitin.a15LambdaExpressions;
+package com.nitin.a1LambdaExpressions;
 
 import entity.Cargo;
-
 import java.util.List;
 
 /**
@@ -22,7 +21,9 @@ public class L0SpottingInvalidLambdas {
         System.out.println(y.intMethod(2,3));
 
         /* Without Curly braces we can't use return keyword */
-        y = (n,m) -> {return n*m;};
+        y = (n,m) -> {
+            return n*m;
+        };
 
         /** RETURN Always need curly braces and ends with a colon */
         //y = (n,m) -> return n*m; //INVALID, curly braces missing

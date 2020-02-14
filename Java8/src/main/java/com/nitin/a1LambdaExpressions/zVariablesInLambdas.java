@@ -1,4 +1,4 @@
-package com.nitin.a15LambdaExpressions;
+package com.nitin.a1LambdaExpressions;
 
 /**
  * Created by Nitin C on 3/3/2016.

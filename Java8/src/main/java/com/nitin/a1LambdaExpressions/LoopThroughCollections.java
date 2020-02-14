@@ -1,4 +1,4 @@
-package com.nitin.a15LambdaExpressions;
+package com.nitin.a1LambdaExpressions;
 
 import java.util.Arrays;
 import java.util.List;

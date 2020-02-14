@@ -1,4 +1,4 @@
-package com.nitin.a15LambdaExpressions;
+package com.nitin.a1LambdaExpressions;
 
 import java.util.Arrays;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.function.Predicate;
  *
  * Strategy pattern. writing a function to be called from Lambda
  */
-public class L3 {
+public class L3FunctionalInterfaceAsArgument {
     public static void main(String[] args) {
         List<Integer> values = Arrays.asList(1,2,3,4,5,6);
 
