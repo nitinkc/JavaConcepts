@@ -1,4 +1,4 @@
-package com.nitin.sorting;
+package com.nitin.sortingNcomparators;
 
 import java.util.Arrays;
 import java.util.Comparator;

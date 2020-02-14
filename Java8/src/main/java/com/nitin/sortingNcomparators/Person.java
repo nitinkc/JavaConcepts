@@ -1,4 +1,4 @@
-package com.nitin.sorting;
+package com.nitin.sortingNcomparators;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

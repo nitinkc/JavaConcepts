@@ -17,6 +17,13 @@ public class Words {
                     new BufferedReader(new InputStreamReader(url.openStream()));
 
             System.out.println(reader.readLine());
+
+            RestTemplate restTemplate = new RestTemplate();
+            String fooResourceUrl
+                    = "http://localhost:8080/spring-rest/foos";
+            ResponseEntity<String> response
+                    = restTemplate.getForEntity(fooResourceUrl + "/1", String.class);
+
             final String data = reader.lines().collect(Collectors.joining());
 
             final String[] dataItems = data.split(",");
