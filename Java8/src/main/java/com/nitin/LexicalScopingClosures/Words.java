@@ -1,50 +1,36 @@
 package com.nitin.LexicalScopingClosures;
-import org.json.simple.JSONObject;
-import java.io.*;
-import java.net.URL;
-import java.nio.charset.Charset;
 
-/**
- * Created by nitin on Thursday, February/13/2020 at 1:53 AM
- */
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+/*
+       *Created by nitin on Thursday,February/13/2020at 1:53AM
+*/
 public class Words {
 
     public static void main(String[] args) throws IOException {
-        JSONObject json = null;
-        json = readJsonFromUrl("https://graph.facebook.com/19292868552");
 
-        System.out.println(json.toString());
-        System.out.println(json.get("id"));
-        /*try {
-            final URL url =
-                    new URL("https://api.datamuse.com/words?ml=duck&amp;max=100");
-            final BufferedReader reader =
-                    new BufferedReader(new InputStreamReader(url.openStream()));
+        String word = "blue";
+        String max = "10";
+        Map<String,String> uriVariables = new HashMap<>();
+        uriVariables.put("word",word);
+        uriVariables.put("max",max);
 
-            System.out.println(reader.readLine());
-        } catch(Exception ex) {
-            throw new RuntimeException(ex);
-        }*/
-    }
+        RestTemplate restTemplate = new RestTemplate();
+        //Response response = restTemplate.getForObject("https://api.datamuse.com/words?ml={word}&amp;max={max}", Response.class);
+        ResponseEntity<RestResponse[]> response = restTemplate.getForEntity("https://api.datamuse.com/words?ml={word}&amp;max={max}", RestResponse[].class,uriVariables);
 
-    public static <JSONException> JSONObject readJsonFromUrl(String url) throws IOException {
-        InputStream is = new URL(url).openStream();
-        try {
-            BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
-            String jsonText = readAll(rd);
-            JSONObject json = new JSONObject(jsonText);
-            return json;
-        } finally {
-            is.close();
+        //RestResponse responseNEW = response.getBody();
+        System.out.println("==== RESTful API Response using Spring RESTTemplate START =======");
+        for (RestResponse x:
+             response.getBody()) {
+            System.out.println(x.getWord());
+
         }
+        System.out.println("==== RESTful API Response using Spring RESTTemplate END =======");
     }
-
-    private static String readAll(Reader rd) throws IOException {
-        StringBuilder sb = new StringBuilder();
-        int cp;
-        while ((cp = rd.read()) != -1) {
-            sb.append((char) cp);
-        }
-        return sb.toString();
     }
-}
