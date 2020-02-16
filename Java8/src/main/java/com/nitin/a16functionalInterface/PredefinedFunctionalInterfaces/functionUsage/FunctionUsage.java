@@ -15,7 +15,6 @@ public class FunctionUsage {
     public static final int DEFAULT_VALUE = 9999;
 
     public static void main(String[] args) {
-
         List<String> list = Arrays.asList("1", "2", "3", "n", "", null);
 
         // Function to convert Strings to Int, put 9999 as default value for other cases

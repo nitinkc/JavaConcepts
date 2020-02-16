@@ -13,7 +13,7 @@ import lombok.*;
 @ToString
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class RestResponse {
+public class WordResponse {
 
     private String word;
     private int score;
