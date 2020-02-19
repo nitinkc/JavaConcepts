@@ -25,6 +25,5 @@ public class AssetRunner {
 
         System.out.println("Sum of all Assets of type Bond");
         System.out.println(AssetUtil.totalAssetValuesWithSelector(assets, asset -> asset.getAssetType() == Asset.AssetType.BOND));
-
     }
 }
