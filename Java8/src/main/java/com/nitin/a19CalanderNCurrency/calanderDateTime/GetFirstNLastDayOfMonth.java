@@ -12,7 +12,6 @@ public class GetFirstNLastDayOfMonth {
             System.out.println("Last day of the month: " + getLastDateOfMonth(i));
             System.out.println("**************************************************");
         }
-
     }
 
     public static Date getFirstDateOfMonth(int beginMonth) {
@@ -42,7 +41,5 @@ private static Date getLastDateOfMonth(int endMonth) {
 
         //return SimpleDateFormat("MM/dd/yyyy").format(calendar.getTime());
         return calendar.getTime();
-
     }
-
 }

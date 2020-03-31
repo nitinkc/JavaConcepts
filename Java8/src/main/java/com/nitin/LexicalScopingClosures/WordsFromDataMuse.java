@@ -28,6 +28,7 @@ public class WordsFromDataMuse {
         //RestResponse responseNEW = response.getBody();
         System.out.println("==== RESTful API Response using Spring RESTTemplate START =======");
 
+
         List<String> wordList = new ArrayList<>();
         for (WordResponse x: response.getBody()) {
             //System.out.println(x.getWord());
