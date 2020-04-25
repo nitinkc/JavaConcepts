@@ -24,13 +24,19 @@ public class GetNextMonthsNYearDates {
         //Add one month to the current Date
         calendar.add(Calendar.MONTH, 1);
         Date poiBeginDate = calendar.getTime();
+        poiBeginDate = DateUtilities.nullifyTime(poiBeginDate);
         //Add 12 months from one month of the current Date
         calendar.add(Calendar.MONTH, 12);
         //
         calendar.add(Calendar.DATE,-1);
         Date poiEndDate = calendar.getTime();
+        poiEndDate = DateUtilities.nullifyTime(poiEndDate);
 
         Timestamp start = new Timestamp(poiBeginDate.getTime());
         Timestamp end = new Timestamp(poiEndDate.getTime());
+
+        System.out.println();
+        System.out.println(start);
+        System.out.println(end);
     }
 }
