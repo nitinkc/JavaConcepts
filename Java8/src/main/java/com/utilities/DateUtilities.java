@@ -1,4 +1,4 @@
-package com.nitin.a19CalanderNCurrency.calanderDateTime;
+package com.utilities;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -1190,4 +1190,23 @@ public class DateUtilities implements Serializable {
         return 0;
     }
 
+    public static List<Date> getWeekendsInAYear(int year) throws ParseException {
+        // create a Calendar for the 1st of the required month
+        List<Date> date = new ArrayList<>();
+        for (int month = Calendar.JANUARY; month < Calendar.DECEMBER; month++) {
+            Calendar cal = new GregorianCalendar(year, month, 1);
+            do {
+                // get the day of the week for the current day
+                int day = cal.get(Calendar.DAY_OF_WEEK);
+                // check if it is a Saturday or Sunday
+                if (day == Calendar.SATURDAY || day == Calendar.SUNDAY) {
+                    date.add(DateUtilities.nullifyTime(cal.getTime()));
+                }
+                // advance to the next day
+                cal.add(Calendar.DAY_OF_YEAR, 1);
+            } while (cal.get(Calendar.MONTH) == month);
+            // stop when we reach the start of the next month
+        }
+        return date;
+    }
 }
