@@ -1,7 +1,6 @@
 package com.nitin.a19CalandarNCurrency.java8Calandar;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.Month;
 import java.time.Period;
 
@@ -11,11 +10,12 @@ import java.time.Period;
 
 public class L3Period {
     public static void main(String[] args) {
-        LocalDate bithday = LocalDate.of(1985, Month.JUNE,11);
+        LocalDate birthday = LocalDate.of(1985, Month.JUNE,11);
         LocalDate now = LocalDate.now();
+        Period p = Period.between(birthday,now);
 
-        Period p = Period.between(bithday,now);
-
+        System.out.println("Number of days");
         System.out.println(p.getYears() + " Years "+ p.getMonths() + " Months "+ p.getDays() + " Days");
+        System.out.println(p.toString());
     }
 }
