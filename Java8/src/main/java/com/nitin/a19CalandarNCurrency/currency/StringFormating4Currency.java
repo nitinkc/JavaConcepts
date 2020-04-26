@@ -1,4 +1,4 @@
-package com.nitin.a19CalanderNCurrency.currency;
+package com.nitin.a19CalandarNCurrency.currency;
 
 import org.apache.commons.lang3.math.NumberUtils;
 

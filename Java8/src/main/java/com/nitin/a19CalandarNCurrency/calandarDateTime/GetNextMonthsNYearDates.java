@@ -1,4 +1,4 @@
-package com.nitin.a19CalanderNCurrency.calanderDateTime;
+package com.nitin.a19CalandarNCurrency.calandarDateTime;
 
 import com.utilities.DateUtilities;
 

@@ -1,5 +1,6 @@
-package com.nitin.a19CalanderNCurrency.calanderDateTime;
+package com.nitin.a19CalandarNCurrency.calandarDateTime;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
 /**
@@ -32,7 +33,7 @@ X	Time zone	ISO 8601 time zone	-08; -0800; -08:00
 * */
 public class DateFormatting {
     public static void main(String[] args) {
-        SimpleDateFormat formatter = new SimpleDateFormat("EEE, MMM-dd-yyyy_HH:mm:ss z Z");
+        DateFormat formatter = new SimpleDateFormat("EEE, MMM-dd-yyyy_HH:mm:ss z Z");
         System.out.println(formatter.format(System.currentTimeMillis()));
 
         formatter = new SimpleDateFormat("MMddyyyy_HHmm");
