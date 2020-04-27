@@ -1209,4 +1209,20 @@ public class DateUtilities implements Serializable {
         }
         return date;
     }
+
+    public static List<Date> getLastNFridays(int n) throws ParseException {
+        // create a Calendar for the 1st of the required month
+        List<Date> lastNFridayDates = new ArrayList<>();
+        //Calendar cal = new GregorianCalendar(year, month, 1);
+        Calendar calendar = Calendar.getInstance();
+        int daysBackToFriday = 0;
+        //System.out.println(authTimestamp);
+        for (int i = 0; i < n; i++) {
+            daysBackToFriday = calendar.get(Calendar.DAY_OF_WEEK) + 1;
+            calendar.add(Calendar.DATE, daysBackToFriday*-1);
+            //System.out.println(sdf.format(calendar.getTime()));
+            lastNFridayDates.add(DateUtilities.nullifyTime(calendar.getTime()));
+        }
+            return lastNFridayDates;
+    }
 }
