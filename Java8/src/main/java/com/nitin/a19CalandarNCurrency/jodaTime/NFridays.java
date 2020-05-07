@@ -1,32 +1,28 @@
 package com.nitin.a19CalandarNCurrency.jodaTime;
 
+import com.utilities.DateUtilities;
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+
+import java.util.List;
+
 /**
  * Created by nichaurasia on Wednesday, May/06/2020 at 5:54 PM
  */
 
 public class NFridays {
     public static void main(String[] args) {
-        [‎5/‎6/‎2020 5:34 PM]  Shah, Karan:
-        DateTime today = DateTime.now();
-        DateTime sameDayLastWeek = today.minusWeeks(1);
-        fridayOfWeek = sameDayLastWeek.withDayOfWeek(DateTimeConstants.FRIDAY);
+        DateTimeFormatter dateFormat = DateTimeFormat.forPattern("E,d Y");
+        //.forPattern("G,C,Y,x,w,e,E,Y,D,M,d,a,K,h,H,k,m,s,S,z,Z");
 
-[‎5/‎6/‎2020 5:35 PM]
-        ok thanks
+        List<DateTime> list = DateUtilities.findLastNFridaysJodaTime(5);
 
-[‎5/‎6/‎2020 5:35 PM]  Shah, Karan:
-        while(dashboardStart.isBefore(fridayOfWeek)){
-
-            lastWeekMonth = fridayOfWeek.toString("MM");
-            lastWeekDay = fridayOfWeek.toString("dd");
-            lastWeekYear = fridayOfWeek.toString("yyyy");
-            weeksDropdownList.add(lastWeekMonth + "/" + lastWeekDay + "/" + lastWeekYear);
-
-            fridayOfWeek = fridayOfWeek.minusWeeks(1);
-            saturdayOfLastWeek = saturdayOfLastWeek.minusWeeks(1);
-
+        if (list != null) {
+            for (DateTime d : list) {
+                //System.out.println(dateFormat.print(d));
+                System.out.println(d.toString(DateTimeFormat.fullDateTime()));
+            }
         }
-
-
     }
 }

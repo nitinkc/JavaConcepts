@@ -1,5 +1,8 @@
 package com.utilities;
 
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeConstants;
+
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.text.DateFormat;
@@ -1224,5 +1227,25 @@ public class DateUtilities implements Serializable {
             lastNFridayDates.add(DateUtilities.nullifyTime(calendar.getTime()));
         }
             return lastNFridayDates;
+    }
+
+    public static List<DateTime> findLastNFridaysJodaTime(int N) {
+        if(N < 1)
+            return null;
+
+        List<DateTime> ret = new ArrayList<DateTime>();
+        DateTime today = DateTime.now();
+        DateTime sameDayLastWeek = today.minusWeeks(1);
+
+        //Friday of last week
+        DateTime fridayOfWeek = sameDayLastWeek.withDayOfWeek(DateTimeConstants.FRIDAY);
+        //DateTime saturdayOfLastWeek = fridayOfWeek.plusDays(1);
+        ret.add(fridayOfWeek);
+        //ret.add(saturdayOfLastWeek);
+        for (int i = 0; i < N-1; i++) {
+            fridayOfWeek = fridayOfWeek.minusWeeks(1);
+            ret.add(fridayOfWeek);
+        }
+        return ret;
     }
 }
