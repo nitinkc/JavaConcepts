@@ -10,5 +10,10 @@ public class EqualsTest {
 			System.out.println("true");
 		else
 			System.out.println("false");
+
+		if (i.equals(j)) //2 different objects
+			System.out.println("true");
+		else
+			System.out.println("false");
 	}
 }
