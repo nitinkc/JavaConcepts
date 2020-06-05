@@ -3,7 +3,7 @@ package com.nitin.a.sandBox;
 // Java program to demonstrate working of Comparator
 // interface more than one field
 
-import entity.Student;
+import com.entity.Student;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,7 +11,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Comparator;
 
-class StudentSortingComparator implements Comparator<entity.Student> {
+class StudentSortingComparator implements Comparator<com.entity.Student> {
 
     public static void main(String[] args) {
 
@@ -53,7 +53,7 @@ class StudentSortingComparator implements Comparator<entity.Student> {
     }
 
     @Override
-    public int compare(entity.Student customer1, entity.Student customer2) {
+    public int compare(com.entity.Student customer1, com.entity.Student customer2) {
 
         // for comparison
         int NameCompare = customer1.getName().compareTo(customer2.getName());
