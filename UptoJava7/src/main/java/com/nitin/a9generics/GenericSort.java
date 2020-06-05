@@ -1,4 +1,4 @@
-package manage;
+package com.nitin.a9generics;
 
 
 import java.util.*;

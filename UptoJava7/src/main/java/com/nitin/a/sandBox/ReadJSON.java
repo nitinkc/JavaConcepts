@@ -7,7 +7,6 @@ import org.apache.commons.io.IOUtils;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
-import org.json.simple.JSONObject;
 
 /**
  * Created by nitin on Wednesday, September/25/2019 at 10:30 PM

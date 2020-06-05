@@ -1,4 +1,4 @@
-package manage;
+package com.nitin.a10collections.d_maps;
 
 import java.util.*;
 

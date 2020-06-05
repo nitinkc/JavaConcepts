@@ -1,4 +1,4 @@
-package com.nitin.Multithreading.gLocks;
+package com.nitin.a12multithreading.gLocks;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;

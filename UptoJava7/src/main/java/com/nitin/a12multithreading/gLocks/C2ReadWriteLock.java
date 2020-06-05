@@ -1,4 +1,4 @@
-package com.nitin.Multithreading.gLocks;
+package com.nitin.a12multithreading.gLocks;
 
 /**
  * Created by Nitin C on 12/5/2015.
