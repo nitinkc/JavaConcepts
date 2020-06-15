@@ -1,4 +1,4 @@
-package com.nitin.a18java9.factoryMethodsForUnmodifiableCollection;
+package com.nitin.factoryMethodsForUnmodifiableCollection;
 
 import java.io.*;
 import java.util.List;

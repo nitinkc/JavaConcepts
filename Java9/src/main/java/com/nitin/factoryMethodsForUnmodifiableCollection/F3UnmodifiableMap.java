@@ -1,4 +1,4 @@
-package com.nitin.a18java9.factoryMethodsForUnmodifiableCollection;
+package com.nitin.factoryMethodsForUnmodifiableCollection;
 
 import java.util.Map;
 
