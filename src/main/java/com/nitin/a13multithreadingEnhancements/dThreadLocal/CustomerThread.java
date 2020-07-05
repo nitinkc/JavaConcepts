@@ -6,7 +6,7 @@ package com.nitin.a13multithreadingEnhancements.dThreadLocal;
 public class CustomerThread extends Thread {
     static int custId = 0;
 
-    private static ThreadLocal tl = new ThreadLocal(){
+    private static final ThreadLocal tl = new ThreadLocal(){
         protected Integer initialValue(){
             return ++custId;
         }

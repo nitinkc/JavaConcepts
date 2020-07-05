@@ -26,9 +26,9 @@ public class MatrixMultiplication {
     public static final int COL_B = 3;
 
     /* Pointer for the three Matrix*/
-    static double matA[][] = new double[ROW_A][COL_A];
-    static double matB[][] = new double[ROW_B][COL_B];
-    static double matC[][] = new double[ROW_A][COL_B];
+    static double[][] matA = new double[ROW_A][COL_A];
+    static double[][] matB = new double[ROW_B][COL_B];
+    static double[][] matC = new double[ROW_A][COL_B];
 
     /* Variables for tracking time execution time*/
     static double begin = 0, end = 0;
@@ -68,7 +68,7 @@ public class MatrixMultiplication {
 
         //play with only one object to understand a14concurrency challenges
         Multiply m = new Multiply();
-        Thread t[] = new Thread[numThreads];
+        Thread[] t = new Thread[numThreads];
 
         // Begin the counter for the execution time
         begin = System.currentTimeMillis();
@@ -135,7 +135,7 @@ public class MatrixMultiplication {
         //Matrix C (initialized to Zero)
         for (int i = 0; i < ROW_A; i++) {
             for (int j = 0; j < COL_B; j++) {
-                matC[i][j] = ((double) 0);
+                matC[i][j] = 0;
             }//End Loop for Column
         }//End Loop for Row
     }//Fill Matrix Ends
@@ -193,22 +193,22 @@ class Multiply implements Runnable {
         MatrixMultiplication m = new MatrixMultiplication();
 
         /* The matrix multiplication Algorithm */
-        for (int i = 0; i < m.ROW_A; i++) {
-            for (int j = 0; j < m.COL_B; j++) {
+        for (int i = 0; i < MatrixMultiplication.ROW_A; i++) {
+            for (int j = 0; j < MatrixMultiplication.COL_B; j++) {
                 /*Let only one thread enter after this and do the work for one entry of the resultant matrix*/
                 synchronized (m) {
-                    for (int k = 0; k < m.COL_A; k++) {
+                    for (int k = 0; k < MatrixMultiplication.COL_A; k++) {
                         /* KLUDGE: Something smells here: Correct output is not generated
                         The output is 3 times the real value,proving each entry is
                         acted upon by 3 threads. Problem can be solved by having only 3 threads, But
                          this was not the intended behaviour expected
                          */
-                        m.matC[i][j] = m.matC[i][j] + (m.matA[i][k] * m.matB[k][j]);
+                        MatrixMultiplication.matC[i][j] = MatrixMultiplication.matC[i][j] + (MatrixMultiplication.matA[i][k] * MatrixMultiplication.matB[k][j]);
                     }
 
                     // Console logging for the debugging
                     System.out.print("Operated by Thread : " + Thread.currentThread());
-                    System.out.print(" --- Entry inserted at " + i + "" + j + " is :" + m.matC[i][j]);
+                    System.out.print(" --- Entry inserted at " + i + "" + j + " is :" + MatrixMultiplication.matC[i][j]);
                 }
             }
             System.out.println();

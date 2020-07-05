@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 public class C4CyclicBarrier {
     int i = 0;
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         //creating CyclicBarrier with 3 parties i.e. 3 Threads needs to call await()
         final CyclicBarrier cb = new CyclicBarrier(3, new Runnable() {
@@ -36,7 +36,7 @@ public class C4CyclicBarrier {
     //Runnable task for each thread
     private static class Task implements Runnable {
 
-        private CyclicBarrier barrier;
+        private final CyclicBarrier barrier;
 
         public Task(CyclicBarrier barrier) {
             this.barrier = barrier;

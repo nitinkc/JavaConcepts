@@ -15,13 +15,11 @@ import java.util.GregorianCalendar;
 
 public class StringUtils {
     public static boolean isEmpty(String obj) {
-        if (obj != null && !"".equals(obj.trim())) return false;
-        return true;
+        return obj == null || "".equals(obj.trim());
     }
 
     public static boolean isNotEmpty(String obj) {
-        if (obj != null && !"".equals(obj.trim())) return true;
-        return false;
+        return obj != null && !"".equals(obj.trim());
     }
 
     public String convertDateToString(Date aDate, String pattern) {

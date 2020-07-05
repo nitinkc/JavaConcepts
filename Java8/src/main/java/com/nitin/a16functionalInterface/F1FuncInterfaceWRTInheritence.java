@@ -7,14 +7,14 @@ package com.nitin.a16functionalInterface;
 // SAM -> Single Abstract Method & Default and Static methods can be declared
 @FunctionalInterface
 interface FuncInterfaceWRTInheritence {
-    public void m1();
+    void m1();
 
     //Can declare any number of default and static methods in a Functional Interface
-    public default int m2(){
+    default int m2(){
         return 2;
     }
 
-    public static void m3(){
+    static void m3(){
         System.out.println("Can declare any number of default and static methods in a Functional Interface");
     }
 }
@@ -24,7 +24,7 @@ interface FuncInterfaceWRTInheritence {
 @FunctionalInterface
 interface ChildFuncInterfaceWRTInheritence extends FuncInterfaceWRTInheritence{
     //No Compile Time Error
-    public void m1();
+    void m1();
 
     // In the child interface we can’t define any new abstract methods otherwise child interface won’t be Functional
     // Interface and if we are trying to use @Functional Interface annotation then compiler gives an error message.
@@ -36,5 +36,5 @@ interface ChildFuncInterfaceWRTInheritence extends FuncInterfaceWRTInheritence{
 @FunctionalInterface
 interface emptyFunctionalInterface{
     // Exactly one abstract method is compulsory else Compile time Exception.
-    public void test();
+    void test();
 }

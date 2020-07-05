@@ -13,7 +13,7 @@ public class A1Demo {
 
 class AtomicIntCounter{
     // x is initialized with 9
-    private AtomicInteger x = new AtomicInteger(9);
+    private final AtomicInteger x = new AtomicInteger(9);
 
     //x.incrementAndGet
 }

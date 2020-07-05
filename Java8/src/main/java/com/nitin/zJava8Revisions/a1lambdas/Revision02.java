@@ -22,5 +22,5 @@ public class Revision02 {
 
 @FunctionalInterface
 interface TestInterface{
-    public abstract String method(String str1, String str2);
+    String method(String str1, String str2);
 }

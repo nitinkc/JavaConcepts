@@ -38,7 +38,7 @@ public class PurposeNPositionOfDeclaration {
 
         PurposeNPositionOfDeclaration obj = new PurposeNPositionOfDeclaration();
         // since created at the time of loading, can access from both instance & static areas directly
-        System.out.println(obj.s1);
+        System.out.println(s1);
 
         // Local Variable
         int local = 0;

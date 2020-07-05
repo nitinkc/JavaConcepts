@@ -13,7 +13,7 @@ public class InnerClassTest {
 }
 
 class MyOuter{
-	private int x = 56;
+	private final int x = 56;
 	
 	class MyInner{
 		public void seeOuter(){

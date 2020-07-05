@@ -9,10 +9,10 @@ import java.util.*;
  */
 
 public class GenericSort {
-	public static void main(String a[]){
+	public static void main(String[] a){
 
 
-		String name[] = {"Nitin","Mahak"};
+		String[] name = {"Nitin","Mahak"};
 		int[] e = new int[4];
 		for(int i = 0; i < e.length; i++){
 			e[i] = new Random().nextInt() % 1000;

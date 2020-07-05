@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
  */
 public class S2DropWhile {
     public static void main(String[] args) {
-        List<String> list = Arrays.asList(new String[]{"one","two","three","four","circuit breaker","five","six","seven"});
+        List<String> list = Arrays.asList("one","two","three","four","circuit breaker","five","six","seven");
 
         List<String> takeWhileList = list
                 .stream()

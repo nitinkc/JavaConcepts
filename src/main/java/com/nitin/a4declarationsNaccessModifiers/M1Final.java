@@ -8,11 +8,11 @@ public class M1Final {
 
     static String finalString;
     public M1Final(String s) {
-        this.finalString = s;
+        finalString = s;
     }
 
     public void setM1Final(String s){
-        this.finalString = s;
+        finalString = s;
     }
 
     public String getM1Final(){

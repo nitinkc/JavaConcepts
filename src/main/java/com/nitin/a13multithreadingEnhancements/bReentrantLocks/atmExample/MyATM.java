@@ -4,8 +4,8 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class MyATM {
-    private Lock lock;
-    private int balance = 1000;
+    private final Lock lock;
+    private final int balance = 1000;
 
     public MyATM(){
         lock = new ReentrantLock();

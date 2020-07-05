@@ -15,7 +15,7 @@ public class S7streamOf {
         s.forEach(System.out :: println);
 
         // For arrays
-        Double d[] = {10.0,10.1,10.2,10.3,10.4};
+        Double[] d = {10.0,10.1,10.2,10.3,10.4};
         Stream<Double> s1 = Stream.of(d);
         s1.forEach(System.out :: println);
     }

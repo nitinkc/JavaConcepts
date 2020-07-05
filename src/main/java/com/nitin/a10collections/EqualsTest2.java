@@ -32,9 +32,9 @@ public class EqualsTest2 {
 }
 	
 	class Friend{
-		private String name;
-		private String place;
-		private int age;
+		private final String name;
+		private final String place;
+		private final int age;
 		
 	public Friend(String name1,String place1,int age1){
 			/* Without using this.name type assignment
@@ -58,12 +58,10 @@ public class EqualsTest2 {
 		}
 		
 		public boolean equals(Object l){//leena Object is copied to l
-			if((l instanceof Friend)&&
-					(((Friend)l).getName() == this.name) && 
-					(((Friend)l).getPlace() == place) && 
-					(((Friend)l).getAge()==age)) //check the difference between this.name and name
-				return true;
-			else
-				return false;
+            //check the difference between this.name and name
+            return (l instanceof Friend) &&
+                    (((Friend) l).getName() == this.name) &&
+                    (((Friend) l).getPlace() == place) &&
+                    (((Friend) l).getAge() == age);
 		}
 	}

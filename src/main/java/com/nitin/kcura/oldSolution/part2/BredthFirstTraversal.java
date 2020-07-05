@@ -7,9 +7,9 @@ import java.util.*;
  * Created by Nitin Chaurasia on 11/10/15 at 10:05 PM.
  */
 public class BredthFirstTraversal {
-    private Set<Data> visited = new HashSet<Data>();
-    private Queue<CityDistance> inline = new LinkedList<CityDistance>();
-    private List<CityDistance> allCitiesWithDistance = new ArrayList<CityDistance>();
+    private final Set<Data> visited = new HashSet<Data>();
+    private final Queue<CityDistance> inline = new LinkedList<CityDistance>();
+    private final List<CityDistance> allCitiesWithDistance = new ArrayList<CityDistance>();
 
     public void traverseGraph(Map<Data, Set<Data>> citiesAdjList, Data root) {
         int currDistance = 0;

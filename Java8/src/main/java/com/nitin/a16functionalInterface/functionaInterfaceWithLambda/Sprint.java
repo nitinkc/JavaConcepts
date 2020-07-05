@@ -10,6 +10,6 @@ import com.nitin.a16functionalInterface.functionaInterfaceWithLambda.Animal;
 
 @FunctionalInterface
 public interface Sprint {
-    public void sprint(Animal animal);
+    void sprint(Animal animal);
 
 }

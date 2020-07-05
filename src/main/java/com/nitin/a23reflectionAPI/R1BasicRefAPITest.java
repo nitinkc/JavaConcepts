@@ -77,7 +77,7 @@ public class R1BasicRefAPITest {
     private void printMetadata(Class c) {
 
         //Discovering the methods of a class:
-        Method m[] = c.getDeclaredMethods();
+        Method[] m = c.getDeclaredMethods();
         System.out.println("METHODS IN CLASS ARE :- ");
         for (Method method : m) {
             System.out.println(method);
@@ -85,7 +85,7 @@ public class R1BasicRefAPITest {
         System.out.println("---------------------------");
 
         //Discovering the fields of a class:
-        Field f[] = c.getDeclaredFields();
+        Field[] f = c.getDeclaredFields();
         System.out.println("FIELDS IN CLASS ARE :- ");
         for (Field field : f) {
             System.out.println(field);
@@ -93,7 +93,7 @@ public class R1BasicRefAPITest {
         System.out.println("---------------------------");
 
         //Constructor in the Class are
-        Constructor cons[] = c.getDeclaredConstructors();
+        Constructor[] cons = c.getDeclaredConstructors();
         System.out.println("CONSTRUCTORS IN THE CLASS ARE :- ");
         for (Constructor constructor : cons) {
             System.out.println(constructor);

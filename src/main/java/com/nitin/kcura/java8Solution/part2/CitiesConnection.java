@@ -10,7 +10,7 @@ import java.util.Set;
  */
 public class CitiesConnection {
 
-    private Map<Data, Set<Data>> adjList = new HashMap<Data, Set<Data>>();
+    private final Map<Data, Set<Data>> adjList = new HashMap<Data, Set<Data>>();
 
     public Map<Data, Set<Data>> getAdjList() {
         return adjList;

@@ -8,7 +8,7 @@ package com.nitin.a5advancedClassDesign.nestedClasses.innerClass;
 
 
 interface Demo{
-    public void show();
+    void show();
 }
 
 public class I3AnonymousClassDemo {

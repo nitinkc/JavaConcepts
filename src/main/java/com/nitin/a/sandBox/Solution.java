@@ -10,7 +10,7 @@ import java.math.*;
 import java.util.regex.*;
 
 public class Solution {
-    public static void main(String args[] ) throws Exception {
+    public static void main(String[] args) throws Exception {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT */
         List<Shape> list = new ArrayList<>();
 

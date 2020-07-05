@@ -34,16 +34,16 @@ public class L2 {
 }
 
 interface Fly{
-    default public void takeOff(){
+    default void takeOff(){
         System.out.println("Fly::takeOff");
     }
-    default public void turn(){
+    default void turn(){
         System.out.println("Fly::turn");
     }
-    default public void cruise(){
+    default void cruise(){
         System.out.println("Fly::cruise");
     }
-    default public void land(){
+    default void land(){
         System.out.println("Fly::land");
     }
 
@@ -51,7 +51,7 @@ interface Fly{
 
 interface FastFly extends Fly{
     @Override
-    default public void takeOff(){
+    default void takeOff(){
         System.out.println("FastFly::TakeOff");
     }
 }
@@ -64,7 +64,7 @@ class Vehicle{
 }
 
 interface Sail{
-    default public void cruise(){
+    default void cruise(){
         System.out.println("Sail::cruise");
     }
 }

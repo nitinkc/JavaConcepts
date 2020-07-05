@@ -14,7 +14,7 @@ public class S7CountDownLatch {
 
         Processor p = new Processor(latch);
 
-        Thread t[] = new Thread[THREADS];
+        Thread[] t = new Thread[THREADS];
 
         for (int i = 0; i < THREADS; i++) {
             t[i] = new Thread(p);
@@ -33,7 +33,7 @@ public class S7CountDownLatch {
 }
 
 class Processor implements Runnable{
-    private CountDownLatch latch;
+    private final CountDownLatch latch;
 
     Processor(CountDownLatch latch){
         this.latch = latch;

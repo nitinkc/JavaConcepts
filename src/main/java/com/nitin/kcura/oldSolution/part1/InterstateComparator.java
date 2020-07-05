@@ -25,8 +25,8 @@ public class InterstateComparator implements Comparator<String > {
 
         //Based on the exercise, all Interstates will begin with prefix I-
         // Taking out the integer from name e.g I-25 will give 25
-        int num1 = Integer.parseInt(obj1.substring("I-".length(),obj1.length()));
-        int num2 = Integer.parseInt(obj2.substring("I-".length(),obj2.length()));
+        int num1 = Integer.parseInt(obj1.substring("I-".length()));
+        int num2 = Integer.parseInt(obj2.substring("I-".length()));
 
         if (num1 > num2) {
             return BIGGER;

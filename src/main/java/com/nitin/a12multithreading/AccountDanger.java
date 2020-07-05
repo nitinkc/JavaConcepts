@@ -1,7 +1,7 @@
 package com.nitin.a12multithreading;
 
 public class AccountDanger implements Runnable{
-	private Account a = new Account();
+	private final Account a = new Account();
 	public static void main(String[] args) {
 		AccountDanger r = new AccountDanger();
 		Thread one = new Thread(r);

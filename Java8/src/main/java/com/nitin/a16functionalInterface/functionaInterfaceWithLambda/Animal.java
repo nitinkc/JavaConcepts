@@ -4,9 +4,9 @@ package com.nitin.a16functionalInterface.functionaInterfaceWithLambda;
  * Created by Nitin Chaurasia on 5/9/16 at 10:45 PM.
  */
 public class Animal {
-    private String species;
-    private boolean canHop;
-    private boolean canSwim;
+    private final String species;
+    private final boolean canHop;
+    private final boolean canSwim;
 
     public Animal(String species, boolean canHop, boolean canSwim) {
         this.species = species;

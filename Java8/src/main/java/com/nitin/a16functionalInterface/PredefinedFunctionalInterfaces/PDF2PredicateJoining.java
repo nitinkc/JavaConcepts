@@ -16,7 +16,7 @@ import java.util.function.Predicate;
 
 public class PDF2PredicateJoining {
     public static void main(String[] args) {
-        int x[] = {0,5,10,15,20,25,30};
+        int[] x = {0,5,10,15,20,25,30};
 
         Predicate<Integer> p1 = i -> i > 10;
         Predicate<Integer> p2 = i -> i/2 == 0;

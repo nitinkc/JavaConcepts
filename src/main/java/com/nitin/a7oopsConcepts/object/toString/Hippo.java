@@ -4,8 +4,8 @@ package com.nitin.a7oopsConcepts.object.toString;
  * Created by Nitin Chaurasia on 3/4/16 at 11:01 PM.
  */
 public class Hippo {
-    private String name;
-    private double weight;
+    private final String name;
+    private final double weight;
 
     public Hippo(String name, double weight) {
         this.name = name;

@@ -8,7 +8,7 @@ package com.nitin.a2operators;
  */
 public class O8ShortCircuit {
     public static void main(String[] args) {
-        int a[] = {1,2,3,4};
+        int[] a = {1,2,3,4};
         if (a[1] > a[0] | a[3] > a[2]) // both operands are checked
             System.out.println("success");
 

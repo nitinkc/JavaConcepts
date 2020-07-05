@@ -20,7 +20,7 @@ public class B0NeedForSynchronization {
         public static double amount;
     }
     class TransThread extends Thread {
-        private FinTrans ft;
+        private final FinTrans ft;
 
         TransThread(FinTrans ft, String name) {
             super(name); // Save thread's name
@@ -35,14 +35,14 @@ public class B0NeedForSynchronization {
                     //CAN USE SYNCHRONIZED BLOCK, BUT WILL BE SERIOUSLY SLOW
                     //The same block can be written in a synchronized method
                     //synchronized (ft){
-                        ft.transName = "Deposit";
+                        FinTrans.transName = "Deposit";
                         try {
                             Thread.sleep((int) (Math.random() * 1000));
                         } catch (InterruptedException e) {
                         }
                         //Deposit should always be 2000
-                        ft.amount = 2000.0;
-                        System.out.println(ft.transName + " " + ft.amount);
+                        FinTrans.amount = 2000.0;
+                        System.out.println(FinTrans.transName + " " + FinTrans.amount);
                     //}//End Sync
 
                     // End of deposit thread's critical code section
@@ -50,13 +50,13 @@ public class B0NeedForSynchronization {
                     // Start of withdrawal thread's critical code section
                     //CAN USE SYNCHRONIZED BLOCK, BUT WILL BE SERIOUSLY SLOW
                     //synchronized (ft){
-                        ft.transName = "Withdrawal";
+                        FinTrans.transName = "Withdrawal";
                         try {
                             Thread.sleep((int) (Math.random() * 1000));
                         } catch (InterruptedException e) {
                         }
-                        ft.amount = 250.0;
-                        System.out.println(ft.transName + " " + ft.amount);
+                        FinTrans.amount = 250.0;
+                        System.out.println(FinTrans.transName + " " + FinTrans.amount);
                     //}//End Sync
 
                     // End of withdrawal thread's critical code section

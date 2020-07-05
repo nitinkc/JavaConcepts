@@ -11,7 +11,7 @@ import java.util.stream.Stream;
  */
 public class S4OfNullable {
     public static void main(String[] args) {
-        List<String> list = Arrays.asList(new String[]{"A", "B", null, "D", null, "F"});
+        List<String> list = Arrays.asList("A", "B", null, "D", null, "F");
 
         // First way of avoiding NullPointerException
         list.stream()

@@ -12,7 +12,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class Asset {
-    public enum AssetType{BOND, STOCK, COMMODITY};
+    public enum AssetType{BOND, STOCK, COMMODITY}
 
     private final AssetType assetType;
     private final int value;

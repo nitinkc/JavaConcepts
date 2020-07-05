@@ -4,7 +4,7 @@ import java.util.*;
 
 	public class H2HashTableEnumerationDemo {
 
-	   public static void main(String args[]) {
+	   public static void main(String[] args) {
 	      // Create a hash map
 	      Hashtable<String, Double> balance = new Hashtable<>();
 	      //Enumeration names;
@@ -21,13 +21,13 @@ import java.util.*;
 	      // Show all balances in hash table.
 		   Enumeration<String> names = balance.keys();
 	      while(names.hasMoreElements()) {
-	         str = (String) names.nextElement();
+	         str = names.nextElement();
 	         System.out.println(str + ": " +
 	         balance.get(str));
 	      }
 	      System.out.println();
 	      // Deposit 1,000 into Zara's account
-	      bal = ((Double)balance.get("Zara")).doubleValue();
+	      bal = balance.get("Zara").doubleValue();
 	      balance.put("Zara", new Double(bal+1000));
 	      System.out.println("Zara's new balance: " +
 	      balance.get("Zara"));

@@ -18,7 +18,7 @@ public class S1StringInterning {
         }
 
         String test1 = "Nitin";
-        String test2 = new String("Nitin");//// Forcing to create a new String
+        String test2 = "Nitin";//// Forcing to create a new String
         if (test1 == test2){
             System.out.println("Interning at Work");
         } else {
@@ -26,7 +26,7 @@ public class S1StringInterning {
         }
 
         //String three = new String("Nitin");// Forcing to create a new String
-        String three = new String("Nitin").intern();//intern used
+        String three = "Nitin".intern();//intern used
         String four = "Nitin";
         if (three == four){
             System.out.println("Interning at Work");

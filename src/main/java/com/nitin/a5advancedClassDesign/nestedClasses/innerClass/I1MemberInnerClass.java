@@ -4,7 +4,7 @@ package com.nitin.a5advancedClassDesign.nestedClasses.innerClass;
  * Created by Nitin Chaurasia on 3/5/16 at 12:03 AM.
  */
 public class I1MemberInnerClass {
-    private String name = "Nitin";
+    private final String name = "Nitin";
 
     protected class Inner{
         public int n = 3;
@@ -17,7 +17,7 @@ public class I1MemberInnerClass {
 
     // Demonstration of a private interface
     private interface PrivateInterface{
-        public void secretMethod();
+        void secretMethod();
     }
 
     //Have to instantiate Inner class to be of any use

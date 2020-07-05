@@ -23,13 +23,13 @@ public class D2LeftRight implements Left,Right{//Compulsory give implementation
 
 // Two interfaces by the same default methods being implemented in the same implementation class
 interface Left{
-    public default void m1(){
+    default void m1(){
         System.out.println("Left");
     }
 }
 
 interface Right{
-    public default void m1(){
+    default void m1(){
         System.out.println("Right");
     }
 }

@@ -26,7 +26,7 @@ public class L1Array1DDeclarationCreationInit {
             b[i] = (int) ((i*i) / Math.random());
         }
         // Declaration, Constructions and initialization
-        int d[] = {1,2,3,4,5,6};
+        int[] d = {1,2,3,4,5,6};
 
         // 1D Array Iteration
         for (int i = 0; i < d.length; i++) {

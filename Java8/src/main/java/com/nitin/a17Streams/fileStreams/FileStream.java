@@ -19,7 +19,7 @@ import java.util.stream.Stream;
  */
 
 public class FileStream {
-    public static void main(String args[]) throws URISyntaxException, IOException {
+    public static void main(String[] args) throws URISyntaxException, IOException {
         String fileName = "src/main/resources/cancer.csv";
         Path path = Paths.get(fileName);
         List<Cancer> list = null;
@@ -31,7 +31,7 @@ public class FileStream {
                     .skip(1)
 
                     .map(strArr -> {
-                        String temp[] = strArr;
+                        String[] temp = strArr;
                         Cancer c;
                             c = new Cancer(
                                     StringUtils.defaultString(temp[0],null),

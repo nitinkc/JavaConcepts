@@ -24,10 +24,10 @@ public class L7InvokingLambdaReturn {
 }
 
 interface InterfaceWithReturnMethod {
-    public abstract int squareIt(int a);
+    int squareIt(int a);
 }
 
 @FunctionalInterface
 interface InterfaceForLambda{
-    public abstract String doSomething(int a, int b);
+    String doSomething(int a, int b);
 }

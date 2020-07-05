@@ -53,7 +53,7 @@ public class Driver {
          */
         while (input.hasNext()){
             //Split the tokens based on the delimiter "\"
-            String temp[] = input.nextLine().split("\\|");
+            String[] temp = input.nextLine().split("\\|");
 
             //Put the tokens into an Object of Data Class and continue making a List of Data Object
             Data tempData = new Data();
@@ -64,7 +64,7 @@ public class Driver {
             tempData.setState(temp[2]);
 
             // Make a list of Interstates and Sort them for the convinience.
-            String interstates[] = temp[3].split(";");
+            String[] interstates = temp[3].split(";");
             //Sort the interstates and then put into the Object
             tempData.setInterstates(driver.sortInterstates(interstates));
 
@@ -192,7 +192,7 @@ public class Driver {
     //Method to Sort the Interstates
     private List<String> sortInterstates(String[] interstates) {
         List<String> temp = Arrays.asList(interstates);
-        Collections.sort(temp, new InterstateComparator());;
+        Collections.sort(temp, new InterstateComparator());
 
         return temp;
     }

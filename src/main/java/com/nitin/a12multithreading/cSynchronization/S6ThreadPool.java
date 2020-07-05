@@ -36,7 +36,7 @@ public class S6ThreadPool {
 }
 
 class Workers implements Runnable{
-    private int count;
+    private final int count;
     Workers(int i){
         this.count = i;
     }

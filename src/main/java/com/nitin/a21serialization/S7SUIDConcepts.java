@@ -6,7 +6,7 @@ import java.io.*;
  * Created by nitin on 1/3/16.
  */
 public class S7SUIDConcepts {
-    public static void main(String args[]) throws IOException,
+    public static void main(String[] args) throws IOException,
             ClassNotFoundException {
 
         File f = new File("src/com/nitin/a21serialization/suidTest.out");

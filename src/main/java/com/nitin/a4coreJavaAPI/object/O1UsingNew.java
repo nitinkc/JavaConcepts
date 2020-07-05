@@ -5,7 +5,7 @@ package com.nitin.a4coreJavaAPI.object;
  */
 public class O1UsingNew {
 
-    public static void main (String args[]) {
+    public static void main (String[] args) {
 
         Employee e = new Employee(1, "Nitin");
         Employee e1 = new Employee(2, "Chaurasia");
@@ -15,8 +15,8 @@ public class O1UsingNew {
 }
 
 class Employee {
-    private int id;
-    private String name;
+    private final int id;
+    private final String name;
 
     Employee(int id,String name){
     this.id=id;

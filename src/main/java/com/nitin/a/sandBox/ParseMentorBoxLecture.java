@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  * Created by Nitin Chaurasia on 2/15/18 at 8:47 PM.
  */
 public class ParseMentorBoxLecture {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         System.out.println("Hello");
 
         final String O_FILENAME = "/Users/nitin/OneDrive/Programming/Java/IntelliJ/mentorBox_lecture.txt";

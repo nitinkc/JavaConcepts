@@ -71,7 +71,7 @@ class MyThread1 extends Thread {
     @Override
     public void run() {
         try {
-            d.wish(name);
+            Display1.wish(name);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

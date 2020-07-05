@@ -5,12 +5,12 @@ package com.nitin.a4coreJavaAPI.arrays;
  */
 public class L3Arrays2DSkewed {
     public static void main (String[] args) {
-        String arr[][] = new String[3][];
+        String[][] arr = new String[3][];
         arr[0] = new String[3];//3 columns
         arr[1] = new String[2];//2 columns
         arr[2] = new String[5];//5 columns
 
-        int a[][] = {{1,23,3},{1,2}};
+        int[][] a = {{1,23,3},{1,2}};
 
         for (int i = 0; i < arr.length; i = i+1){
             //each row has a diff column

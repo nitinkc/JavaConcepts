@@ -11,13 +11,13 @@ public class S4TreeSetOfObjects {
     public static void main(String[] args) {
 
         Car a = new Car("Honda","CRV", new int[]{05,2019},
-                new ArrayList<String>(Arrays.asList(new String[]{"AWD", "Leather", "Sun Roof","Grey Interior"})));
+                new ArrayList<String>(Arrays.asList("AWD", "Leather", "Sun Roof","Grey Interior")));
         Car b = new Car("Toyota","RAV4", new int[]{03,2019},
-                new ArrayList<String>(Arrays.asList(new String[]{"2WD", "Cotton", "Sun Roof","Grey Interior"})));
+                new ArrayList<String>(Arrays.asList("2WD", "Cotton", "Sun Roof","Grey Interior")));
         Car c = new Car("Honda","Accord", new int[]{03,2018},
-                new ArrayList<String>(Arrays.asList(new String[]{"AWD", "Leather", "Sun Roof","Grey Interior"})));
+                new ArrayList<String>(Arrays.asList("AWD", "Leather", "Sun Roof","Grey Interior")));
         Car d = new Car("Toyota","Camry", new int[]{06,2018},
-                new ArrayList<String>(Arrays.asList(new String[]{"2WD", "Cotton", "Sun Roof","Grey Interior"})));
+                new ArrayList<String>(Arrays.asList("2WD", "Cotton", "Sun Roof","Grey Interior")));
 
         Set<Car> set = new TreeSet<>(new Comparator<Car>() {
             @Override

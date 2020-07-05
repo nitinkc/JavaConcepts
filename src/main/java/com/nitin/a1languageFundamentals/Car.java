@@ -40,8 +40,8 @@ public class Car {
 		LeftHandDrive ld1 = new RightHandDrive();
 		ld.drivingMode(); // relating a method to a method call
 		ld1.drivingMode();
-		ld.m1();
-		ld1.m1();
+		LeftHandDrive.m1();
+		LeftHandDrive.m1();
 		
 	}
 }

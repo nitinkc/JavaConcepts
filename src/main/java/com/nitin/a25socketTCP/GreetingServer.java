@@ -6,7 +6,7 @@ import java.net.*;
 import java.io.*;
 
 public class GreetingServer extends Thread {
-   private ServerSocket serverSocket;
+   private final ServerSocket serverSocket;
 
    public GreetingServer(int port) throws IOException {
       serverSocket = new ServerSocket(port);

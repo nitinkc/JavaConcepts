@@ -12,8 +12,8 @@ import java.util.Comparator;
 public class StudentComparator implements Comparator<Student>{
     @Override
     public int compare(Student o1, Student o2) {
-        Student s1 = (Student) o1;
-        Student s2 = (Student) o2;
+        Student s1 = o1;
+        Student s2 = o2;
 
         //System.out.println(s1.id.compareTo(s2.id));
 

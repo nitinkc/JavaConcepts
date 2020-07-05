@@ -33,12 +33,7 @@ public class HashMapEg {
 		}
 		
 		public boolean equals(Object o){
-			if((o instanceof Dog)&&(((Dog)o).name == this.name)){
-				return true;
-			}
-			else{
-				return false;
-			}
+			return (o instanceof Dog) && (((Dog) o).name == this.name);
 		}
 		public int HashCode(){
 			return name.length();

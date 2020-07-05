@@ -4,7 +4,7 @@ import java.util.*;
 
 
 public class ArrayAsList {
-	public static void main(String nitin[]){
+	public static void main(String[] nitin){
 		String[] a = {"one","two","three","four"};
 		String[] b = new String[]{"one","two","three","four"};//another way of declaration
 

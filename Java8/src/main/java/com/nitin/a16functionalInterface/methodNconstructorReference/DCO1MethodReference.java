@@ -18,6 +18,6 @@ class Test{
 
 @FunctionalInterface
 interface Interf{
-    public void m1();
+    void m1();
 }
 

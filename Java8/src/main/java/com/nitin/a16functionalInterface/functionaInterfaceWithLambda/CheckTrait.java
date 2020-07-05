@@ -15,5 +15,5 @@ import com.nitin.a16functionalInterface.functionaInterfaceWithLambda.Animal;
  */
 @FunctionalInterface
 public interface CheckTrait {
-    public boolean test(Animal a);
+    boolean test(Animal a);
 }

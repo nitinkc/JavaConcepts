@@ -16,7 +16,7 @@ public class QueueExample {
         Queue<Integer> q = new LinkedList<>();
 
         for (int i = 0; i < 10; i++) {
-            q.add((int) (i));
+            q.add(i);
         }
 
         System.out.println("Peek at the element at the head without taking the element out of the queue with element method");

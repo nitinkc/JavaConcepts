@@ -136,7 +136,7 @@ public class Driver8 {
 
         while (input.hasNext()) {
             //Split the tokens based on the delimiter "\"
-            String temp[] = input.nextLine().split("\\|");
+            String[] temp = input.nextLine().split("\\|");
 
             //Put the tokens into an Object of Data Class and continue making a List of Data Object
             Data tempData = new Data();

@@ -16,7 +16,7 @@ public class TreeMapComparatorPrimitiveKey {
             }
         });
 
-        String arr[] = new String[]{"nitin", "kumar", "chaurasia"};
+        String[] arr = new String[]{"nitin", "kumar", "chaurasia"};
 
         for (int i = 0; i < arr.length; i++) {
             map.put(i, arr[i]);

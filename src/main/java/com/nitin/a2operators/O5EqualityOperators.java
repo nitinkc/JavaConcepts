@@ -7,7 +7,7 @@ package com.nitin.a2operators;
  */
 public class O5EqualityOperators {
     public static void main(String[] args) {
-        String s1 = new String("Nitin");
+        String s1 = "Nitin";
         String s2 = "Nitin";
         //Reference Testing
         System.out.println(s1 == s2);// False as the two objects are different

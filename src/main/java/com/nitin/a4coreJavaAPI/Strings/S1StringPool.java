@@ -7,6 +7,6 @@ public class S1StringPool {
     public static void main(String[] args) {
 
         String a = "In String Pool"; // JVM uses the String Pool
-        String b = new String("Don't use String Pool");//
+        String b = "Don't use String Pool";//
     }
 }

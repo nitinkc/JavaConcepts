@@ -19,13 +19,13 @@ public class S1Example1 implements Interf{
 }
 
 interface Interf{
-    public static void m1(){
+    static void m1(){
         System.out.println("Static method as a utility method in an interface");
     }
 
 
     // Static methods are allowed, this method could be run directly from command prompt
-    public static void main (){
+    static void main(){
         System.out.println("MAin method from Interface Interf");
     }
 }

@@ -49,10 +49,10 @@ public class StaticInitializationBlocks {
         //System.out.println(c1.numberofobjects);
         Car1 c3 = new Car1();
         System.out.println("************************************ PROGRAM STARTS HERE *******************************************");
-        c1.numberofwheels = 4;
+        Car1.numberofwheels = 4;
         c1.enginecapacity = 1500;//non static var, related to each object
-         System.out.println(c2.numberofwheels);
-         System.out.println(c3.numberofwheels);
+         System.out.println(Car1.numberofwheels);
+         System.out.println(Car1.numberofwheels);
 
          System.out.println(c2.enginecapacity);
          System.out.println(c3.enginecapacity);

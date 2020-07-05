@@ -21,7 +21,7 @@ public class ApacheCommons {
     }
 
     private static void stringToCurrency() {
-        String amt[] = {"NK","22.7","23","2242523614.45436346"};
+        String[] amt = {"NK","22.7","23","2242523614.45436346"};
 
         for (String str : amt) {
             if(NumberUtils.isCreatable(str)){

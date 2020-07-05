@@ -6,7 +6,7 @@ package com.nitin.a7oopsConcepts;
 public class S1StringPoolingConcept {
     public static void main(String []args){
         // Two ways of Creating a String (new and "~~~")
-        String s = new String("nitin");
+        String s = "nitin";
         String x = "nitin";
         String y = "nitin";
 
@@ -22,8 +22,8 @@ public class S1StringPoolingConcept {
          FLYWAY DESIGN PATTERN.
         */
 
-        String s4 = new String("nitin");
-        String s5 = new String("nitin");
+        String s4 = "nitin";
+        String s5 = "nitin";
         /*
         String s4 and s5 are two different String objecs lying in
         the "Heap"

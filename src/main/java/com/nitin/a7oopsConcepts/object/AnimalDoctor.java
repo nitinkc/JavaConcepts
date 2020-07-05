@@ -29,7 +29,7 @@ public class AnimalDoctor {
 		}
 	}
 	
-	public static void main(String args[]){
+	public static void main(String[] args){
 		Dogs[] dog = {new Dogs(), new Dogs()};
 		Bird[] bird = {new Bird(),new Bird(),new Bird()};
 		Cats[] cat = {new Cats()};

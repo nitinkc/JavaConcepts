@@ -79,7 +79,7 @@ public class S2BasicSetInteger {
      * @param set
      */
     private static void addSet(Set<Integer> set){
-        set.addAll(Arrays.asList(new Integer[]{2, 4, 6, 9, 10, 11, 12}));
+        set.addAll(Arrays.asList(2, 4, 6, 9, 10, 11, 12));
         set.add(1234);
     }
 }

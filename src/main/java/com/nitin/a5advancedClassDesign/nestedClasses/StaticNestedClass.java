@@ -7,7 +7,7 @@ package com.nitin.a5advancedClassDesign.nestedClasses;
  */
 public class StaticNestedClass {
     static class Nested{
-        private int price = 6;
+        private final int price = 6;
     }
 
     public static void main(String[] args) {

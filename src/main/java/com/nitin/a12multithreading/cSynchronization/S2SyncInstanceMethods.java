@@ -6,7 +6,7 @@ package com.nitin.a12multithreading.cSynchronization;
 public class S2SyncInstanceMethods {
     public static void main(String[] args) throws InterruptedException {
         Worker w = new Worker();
-        Thread t[] = new Thread[10];
+        Thread[] t = new Thread[10];
 
         long start = System.currentTimeMillis();
 

@@ -19,7 +19,7 @@ public class S3Iterate {
         // Iterate with 3 Arguments
         Stream
                 .iterate(1, x -> x < 10, x -> x+1)
-                .forEach(x -> System.out.println(x)); ;
+                .forEach(x -> System.out.println(x));
 
 
     }

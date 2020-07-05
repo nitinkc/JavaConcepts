@@ -81,11 +81,11 @@ public class L0SpottingInvalidLambdas {
 
     @FunctionalInterface
     interface TestInterfaceVoidMethod{
-        public void voidMethod();
+        void voidMethod();
     }
 
     @FunctionalInterface
     interface TestInterfaceReturnMethod{
-        public int intMethod(int a, int b);
+        int intMethod(int a, int b);
     }
 }
