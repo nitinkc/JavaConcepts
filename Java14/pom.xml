@@ -8,8 +8,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+    <artifactId>Java14</artifactId>
+    <groupId>Java14</groupId>
 
-    <artifactId>Java8</artifactId>
     <dependencies>
         <dependency>
             <groupId>Utilities</groupId>
@@ -24,11 +25,10 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>10</source>
-                    <target>10</target>
+                    <source>14</source>
+                    <target>14</target>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>

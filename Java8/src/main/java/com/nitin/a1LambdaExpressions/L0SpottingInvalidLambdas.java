@@ -1,6 +1,6 @@
 package com.nitin.a1LambdaExpressions;
 
-import entity.Cargo;
+import com.entity.Cargo;
 import java.util.List;
 
 /**
