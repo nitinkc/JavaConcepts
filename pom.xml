@@ -15,6 +15,7 @@
         <module>Java14</module>
         <module>Utilities</module>
         <module>Java9</module>
+        <module>Java15</module>
     </modules>
 
     <properties>
@@ -79,19 +80,13 @@
             <artifactId>joda-time</artifactId>
             <version>2.10.6</version>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>RELEASE</version>
+            <version>4.12</version>
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 </project>

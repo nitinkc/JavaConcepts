@@ -28,6 +28,7 @@
                     <source>14</source>
                     <target>14</target>
                 </configuration>
+                <version>3.8.1</version>
             </plugin>
         </plugins>
     </build>

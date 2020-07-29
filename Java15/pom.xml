@@ -8,8 +8,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>Java9</groupId>
-    <artifactId>Java9</artifactId>
+    <artifactId>Java15</artifactId>
 
     <dependencies>
         <dependency>
@@ -18,14 +17,6 @@
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/io.reactivex.rxjava3/rxjava -->
-        <dependency>
-            <groupId>io.reactivex.rxjava3</groupId>
-            <artifactId>rxjava</artifactId>
-            <version>3.0.0-RC1</version>
-        </dependency>
-
     </dependencies>
 
     <build>
@@ -33,8 +24,8 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>9</source>
-                    <target>9</target>
+                    <source>15</source>
+                    <target>15</target>
                 </configuration>
                 <version>3.8.1</version>
             </plugin>

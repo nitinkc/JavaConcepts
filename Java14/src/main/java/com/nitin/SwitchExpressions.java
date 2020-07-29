@@ -1,7 +1,7 @@
 package com.nitin;
 
 /**
- * Created by nichaurasia on Friday, June/05/2020 at 2:52 AM
+ * Created by Nitin Chaurasia on Friday, June/05/2020 at 2:52 AM
  */
 
 public class SwitchExpressions {
