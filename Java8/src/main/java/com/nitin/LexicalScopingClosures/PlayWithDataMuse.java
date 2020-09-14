@@ -35,14 +35,14 @@ public class PlayWithDataMuse {
         System.out.println(wordsByLengthCount);
 
         //filtering(s -> !s.contains("c")
-        Map<Integer, List<String>> wordsByCharacter=
+       /* Map<Integer, List<String>> wordsByCharacter=
                 words.stream()
-                        .collect(groupingBy(String::length,filtering(x->x.length() == 7,toList())));
+                        .collect(groupingBy(String::length, filtering(x->x.length() == 7,toList())));
 
-        System.out.println(wordsByCharacter);
+        System.out.println(wordsByCharacter);*/
 
 
-        var result = words.stream()
+        /*var result = words.stream()
                 .collect(
                         groupingBy(String::length,
                                 mapping(toStringList(),
@@ -50,9 +50,9 @@ public class PlayWithDataMuse {
                                                 filtering(s -> s.length() > 0,
                                                         mapping(String::toUpperCase,
                                                                 reducing("", (s, s2) -> s + s2)))))
-                        ));
+                        ));*/
 
-        System.out.println(result);
+       // System.out.println(result);
 
     }
 

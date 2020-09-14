@@ -1,8 +1,5 @@
 package com.nitin.a16functionalInterface.PredefinedFunctionalInterfaces;
 
-import com.sun.javadoc.ProgramElementDoc;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
