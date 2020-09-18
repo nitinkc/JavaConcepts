@@ -117,4 +117,5 @@ Mnemonic for
 - use explicit type when we have both an upper and a lower bound.
 
 
-So for example, in Java 8 streams, if we're pulling a value from the stream to use, that's super. Whereas if we are using the value in the lambda that we're providing, that's extends.
+>So for example, in Java 8 streams, if we're pulling a value from the stream to use, that's super. 
+Whereas if we are using the value in the lambda that we're providing, that's extends.
