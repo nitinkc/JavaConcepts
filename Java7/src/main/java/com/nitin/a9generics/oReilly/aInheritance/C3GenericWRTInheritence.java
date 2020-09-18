@@ -14,12 +14,14 @@ public class C3GenericWRTInheritence {
 
         //The Inheritance process is NOT LEGAL between the collections.
         List<Integer> ints = Arrays.asList(1,2,3,4,5);
-        //Even though Integer is Child class of Number, the below is illegal
-        //System.out.println(sumList(ints));//incompatible types: java.util.List<java.lang.Integer> cannot be converted to java.util.List<java.lang.Number>
+        /* Even though Integer is Child class of Number, the below is illegal */
+        //System.out.println(sumList(ints));
+        /* incompatible types: java.util.List<java.lang.Integer> cannot be converted to java.util.List<java.lang.Number> */
 
         //THIS PROBLEM IS RESOLVED WITH WILDCARDS
     }
 
+    //Sum List accepts a List of numbers whihc is a super class of all the numbers (see Read me)
     private static int sumList(List<Number> numbers) {
         return numbers.stream()
                 //.mapToInt(x -> x.intValue())

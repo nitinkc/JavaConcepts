@@ -1,7 +1,5 @@
 package com.nitin.a9generics.oReilly.bWildcards;
 
-import org.apache.commons.lang3.math.NumberUtils;
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,9 +24,7 @@ public class B2UpperBounds {
         * this means - if you declare a collection, with a bounded wildcard,
         you can use methods from the Bound (AClass)
         * Eg: ? extends Number, the methods of Number can also be used
-    * USING -> List<? extends Number> each element Supports Number methods as well, along with ?
-*/
-
+    * USING -> List<? extends Number> each element Supports Number methods as well, along with ? */
     }
 
     private static void callMethodsOfBoundedClass(List<? extends Number> list) {
@@ -50,10 +46,10 @@ public class B2UpperBounds {
         System.out.println(sumList(bigDecimals));
     }
 
-    // Upper bounds solves the problem. Number and its child classes can be used.
+    // Upper bounds solves the problem. Number and its child classes can be used (see ReadMe).
     private static Double sumList(List<? extends Number> list) {
         return list.stream()
-                .mapToDouble(Number::doubleValue)
+                .mapToDouble(Number::doubleValue)//Using Number as the Upper Bound Class
                 .sum();
     }
 }

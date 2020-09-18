@@ -16,6 +16,12 @@ public class BasicInheritance {
         System.out.println(objects);
 
         List<String> strings = new ArrayList<>();
+
+        //Compile time error
+        //incompatible types: java.util.List<java.lang.String> cannot be converted to java.util.List<java.lang.Object>
+        //List<Object> objectsTest = strings;//eventhough Object is super class of strings
+        /* List of Strings is not a subclass of List of Pbjects */
+
         Object o = "anotherString";  //String is subclass of Object so this is Valid
 
         //Compile time error:Error:incompatible types: java.lang.Object cannot be converted to java.lang.String
