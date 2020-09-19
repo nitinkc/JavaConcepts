@@ -12,7 +12,7 @@ public class Sorting {
     public static void main(String[] args) {
         final List<Person> list = Arrays.asList(
                 new Person("John",20),
-                new Person("Wayne", 25),
+                new Person("Wayne", 20),
                 new Person("Dow", 30),
                 new Person("Jane", 35)
         );
@@ -23,7 +23,10 @@ public class Sorting {
 
         //Same way of writing above, without using utility method
         list.stream()
-                .sorted(Comparator.comparing(Person::getAge).thenComparing(Person::getName))
+                .sorted(Comparator
+                        .comparing(Person::getAge)
+                        .thenComparing(Person::getName)
+                )
                 .forEach(System.out::println);
     }
 }
