@@ -29,7 +29,7 @@ class CarRunner {
     showAll(getColoredCar(cars, "Black"));
 
     System.out.println("************ getColoredCarIterable ************");
-    showAll(getColoredCarIterable(cars, "Octarine"));
+    showAll(getColoredCarIterable(cars, "Black"));
 
     //Original List doesn't change
     showAll(cars);

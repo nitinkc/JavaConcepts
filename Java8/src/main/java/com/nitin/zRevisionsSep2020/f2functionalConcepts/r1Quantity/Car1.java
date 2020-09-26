@@ -101,7 +101,7 @@ class Car1 {
     //return new RedCarCriterion();
   }
 
-  /*  Not Singleton as there is amn argument, threshold, that is unique to each object.*/
+  /*  Not Singleton as there is an argument, threshold, that is unique to each object.*/
   public static CarCriteria1 getGasLevelCarCriterion(int threshold){
     return new GasLevelCarCriterion(threshold);
   }

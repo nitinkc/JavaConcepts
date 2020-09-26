@@ -10,7 +10,7 @@ public class B1Unbounded {
     public static void main(String[] args) {
         List<?> list = Arrays.asList((22/7),"test", LocalDate.now(),'c');
 
-        //size method is indepoendent of underlying data type
+        //size method is independent of underlying data type
         System.out.println(list.size());
 
         //Invoking Lambda on the list
