@@ -18,15 +18,16 @@ public class Example1 {
                     return checkStarts;
                 };
 
+        final Function<String, Predicate<String>> startsWithLetterFunctionSimplified =
+                letter -> name -> name.startsWith(letter);
+
         System.out.println("Block 3");
         System.out.println(namesList.stream()
-                .filter(startsWithLetterFunction
-                        .apply("N"))
+                .filter(startsWithLetterFunction.apply("N"))
                 .count());
 
         System.out.println(namesList.stream()
-                .filter(startsWithLetterFunction
-                        .apply("B"))
+                .filter(startsWithLetterFunction.apply("B"))
                 .count());
     }
 }

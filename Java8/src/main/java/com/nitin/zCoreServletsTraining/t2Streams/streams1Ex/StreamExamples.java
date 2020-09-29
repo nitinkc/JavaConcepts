@@ -5,22 +5,28 @@ import java.util.function.*;
 import java.util.stream.Collectors;
 //import java.util.stream.Stream;   Not needed. See commented-out line below.
 
-/** Solutions to first set of Stream exercises from Java 8 tutorial at coreservlets.com.
- */
+/** Solutions to first set of Stream exercises from Java 8 tutorial at */
 
 public class StreamExamples {
   public static void main(String[] args) {
     List<String> words = 
-        Arrays.asList("hi", "hello", "hola", "bye", "goodbye", "adios");
+        Arrays.asList("hi", "hello", "ho la", "bye", "goodbye", "adios");
     //  Stream<String> wordStream = words.stream();  Then, reuse the Stream. NO!! Why not?
     
     // Problem 1
+    Predicate<String> wordsWithSpace = s -> s.contains(" ");
     System.out.println("Words (with spaces):");
-    words.stream().forEach(s -> System.out.println("  " + s));
+    words
+            .stream()
+            .filter(wordsWithSpace)
+            .forEach(s -> System.out.println("  " + s));
     
     // Problem 2
     System.out.println("Words (no spaces):");
-    words.stream().forEach(System.out::println);
+    words
+            .stream()
+            .filter(wordsWithSpace.negate())
+            .forEach(System.out::println);
     
     // Problem 3
     List<String> excitingWords = words.stream()

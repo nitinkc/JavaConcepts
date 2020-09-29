@@ -6,11 +6,6 @@ import java.util.stream.*;
 
 /** Various examples of Stream functionality, shown and explained in the Stream
  *  sections of the Java 8 tutorial at coreservlets.com.
- *  <p>
- *  From <a href="http://courses.coreservlets.com/Course-Materials/">the
- *  coreservlets.com tutorials on JSF 2, PrimeFaces, JavaScript, jQuery, Angular 2,
- *  GWT, Android, Spring, Hibernate, JPA, RESTful Web Services, Hadoop, 
- *  servlets, JSP, and Java 8 and Java 9 programming</a>.
  */
 
 public class StreamSamples {

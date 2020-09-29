@@ -8,6 +8,7 @@ import lombok.ToString;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Stream;
 
 /**
  * Created by nitin on Tuesday, February/04/2020 at 3:19 AM
@@ -25,8 +26,7 @@ public class StreamsRevisionObject {
         studentList.add(s1);studentList.add(s2);studentList.add(s3);studentList.add(s4);studentList.add(s5);
 
         // Show Students with Age sort, and name
-        studentList
-                .stream()
+        Stream.of(s1,s2,s3,s4,s5)
                 .sorted(Comparator
                         .comparing(Student::getAge).reversed()
                         .thenComparing(Student::getName).reversed()
@@ -41,6 +41,8 @@ public class StreamsRevisionObject {
                 .sorted()
                 .forEach(System.out::println);
 
+
+        // Sum Total of all the Student ages.
         System.out.println(
                 studentList.stream()
                 .map((Student s) -> s.getAge())

@@ -2,6 +2,7 @@ package com.nitin.a17Streams.dataStreams;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Created by nitin on Sunday, January/05/2020 at 12:02 AM
@@ -13,7 +14,7 @@ public class TestStreams {
         Student s3 = new Student("Mohandas","Karamchand","Gandhi",134,new Date(1869,11,02),85000);
         Student s4 = new Student("John","","Joe",34,new Date(1985,06,11),70000);
         Student s5 = new Student("Nitin","","Chaurasia",34,new Date(1986,06,11),69000);
-
+        Stream.of(s1,s2,s3);
         List<Student> list = new ArrayList<>();
         list.add(s1);list.add(s2);list.add(s3);list.add(s4);list.add(s5);
         //Stream<Student> listStream = Stream.of(s1,s2,s3,s4,s5);

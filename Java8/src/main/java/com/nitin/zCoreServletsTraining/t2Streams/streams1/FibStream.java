@@ -4,12 +4,6 @@ import java.util.List;
 import java.util.stream.*;
 
 /** A class with static methods to build streams of Fibonacci numbers.
- *  <p>
- *  From <a href="http://courses.coreservlets.com/Course-Materials/">the
- *  coreservlets.com tutorials on JSF 2, PrimeFaces, Ajax, JavaScript, jQuery, GWT, Android,
- *  Spring, Hibernate, JPA, RESTful Web Services, Hadoop, Spring MVC,
- *  servlets, JSP, Java 8 lambdas and streams (for those that know Java already), 
- *  and Java 8 programming (for those new to Java)</a>.
  */
 
 public class FibStream {
