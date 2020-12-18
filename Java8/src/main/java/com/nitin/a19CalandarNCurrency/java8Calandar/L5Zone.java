@@ -15,7 +15,10 @@ public class L5Zone {
         System.out.println(zone);
 
         System.out.println("Current Time here is : \n" +
-                ZonedDateTime.now().format(DateTimeFormatter.ofPattern(myDateTimePattern)));
+                ZonedDateTime
+                        .now()
+                        .format(DateTimeFormatter.ofPattern(myDateTimePattern)));
+
         ZoneId india = ZoneId.of("Asia/Kolkata");
         ZonedDateTime timeInIndia = ZonedDateTime.now(india);
 

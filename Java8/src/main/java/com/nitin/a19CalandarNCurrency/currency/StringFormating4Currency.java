@@ -16,7 +16,7 @@ public class StringFormating4Currency {
             //double amount = Double.parseDouble(temp);
             double amount = NumberUtils.toDouble(temp,-1L);
             //DecimalFormat formatter = new DecimalFormat("#,###.00");
-            NumberFormat formatter = NumberFormat.getCurrencyInstance(new Locale("en", "IN"));
+            NumberFormat formatter = NumberFormat.getCurrencyInstance(new Locale("en", "CA"));
 
             System.out.println(formatter.format(amount));
             //System.out.println(formatter.format(amount).toString());

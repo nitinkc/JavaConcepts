@@ -1,15 +1,12 @@
 package com.j15.foreignMemoryAccessAPI;
 
-import jdk.incubator.foreign.MemoryAddress;
-import jdk.incubator.foreign.MemoryHandles;
-import jdk.incubator.foreign.MemorySegment;
 
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 
 public class TestForeignMemory {
     public static void main(String[] args) {
-        VarHandle intHandle = MemoryHandles.varHandle(int.class,
+        /*VarHandle intHandle = MemoryHandles.varHandle(int.class,
                 ByteOrder.nativeOrder());
 
         try (MemorySegment segment = MemorySegment.allocateNative(100)) {
@@ -17,6 +14,6 @@ public class TestForeignMemory {
             for (int i = 0; i < 25; i++) {
                 intHandle.set(base.addOffset(i * 4), i);
             }
-        }
+        }*/
     }
 }
