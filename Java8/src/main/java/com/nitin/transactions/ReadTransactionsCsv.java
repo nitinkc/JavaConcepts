@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 
 public class ReadTransactionsCsv {
     public static List<Transaction> getData () {
-        String file = "src/main/java/com/nitin/transactions/transactions.csv";
+        String file = "Java8/src/main/java/com/nitin/transactions/transactions.csv";
 
         return readFileNreturnList(file);
     }
