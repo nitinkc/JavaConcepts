@@ -1,4 +1,4 @@
-package com.nitin.zJava8Revisions.ShareMarkets;
+package com.nitin.EnumWithJ8;
 
 import java.util.Arrays;
 import java.util.List;

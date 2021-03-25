@@ -1,4 +1,4 @@
-package com.nitin.zJava8Revisions.ShareMarkets;
+package com.nitin.EnumWithJ8;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
