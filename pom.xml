@@ -10,13 +10,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
+        <module>Utilities</module>
         <module>Java7</module>
         <module>Java8</module>
-        <module>Java14</module>
-        <module>Utilities</module>
-        <module>Java9</module>
-        <module>Java15</module>
-        <module>Java11</module>
+        <module>JavaLatest</module>
     </modules>
 
     <properties>
