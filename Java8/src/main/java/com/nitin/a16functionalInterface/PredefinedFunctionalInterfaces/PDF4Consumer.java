@@ -22,7 +22,6 @@ public class PDF4Consumer {
     public static void main(String[] args) {
 
         Consumer<String> c = s -> System.out.println(s);
-
         c.accept("Nitin");
         c.accept("Kirti");
 
@@ -32,7 +31,6 @@ public class PDF4Consumer {
 
         b1.accept("Chicken", 1);
         b2.accept("Mutton", 2);
-
         System.out.println(map);
     }
 }
