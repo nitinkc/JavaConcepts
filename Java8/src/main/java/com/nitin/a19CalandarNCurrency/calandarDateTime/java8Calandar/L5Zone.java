@@ -1,4 +1,4 @@
-package com.nitin.a19CalandarNCurrency.java8Calandar;
+package com.nitin.a19CalandarNCurrency.calandarDateTime.java8Calandar;
 
 import java.time.ZoneId;
 import java.time.ZonedDateTime;

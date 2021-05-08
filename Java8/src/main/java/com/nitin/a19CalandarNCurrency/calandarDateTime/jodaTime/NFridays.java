@@ -1,4 +1,4 @@
-package com.nitin.a19CalandarNCurrency.jodaTime;
+package com.nitin.a19CalandarNCurrency.calandarDateTime.jodaTime;
 
 import com.utilities.DateUtilities;
 import org.joda.time.DateTime;
