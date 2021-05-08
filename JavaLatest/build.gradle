@@ -13,7 +13,7 @@ repositories {
         url = uri('http://repo.maven.apache.org/maven2')
     }
     flatDir {
-        dirs '../Utilities/target'
+        dirs '../Utilities/build/libs'
     }
 }
 
