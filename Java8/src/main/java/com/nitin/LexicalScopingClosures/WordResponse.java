@@ -1,6 +1,5 @@
 package com.nitin.LexicalScopingClosures;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 /**
@@ -12,7 +11,6 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 @AllArgsConstructor
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class WordResponse {
 
     private String word;

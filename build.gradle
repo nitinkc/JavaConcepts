@@ -21,12 +21,9 @@ subprojects {
     dependencies {
         implementation 'mysql:mysql-connector-java:8.0.17'
         implementation 'org.apache.commons:commons-lang3:3.9'
-        implementation 'commons-io:commons-io:2.6'
         implementation 'org.apache.commons:commons-math3:3.6.1'
         implementation 'com.googlecode.json-simple:json-simple:1.1'
-        //implementation 'com.fasterxml.jackson.core:jackson-databind:[2.9.10.4,)'
         // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
-        implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.3'
 
         implementation 'org.springframework:spring-web:4.0.0.RELEASE'
         implementation 'joda-time:joda-time:2.10.6'
