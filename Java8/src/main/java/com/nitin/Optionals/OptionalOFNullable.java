@@ -10,8 +10,8 @@ import java.util.UUID;
 
 public class OptionalOFNullable {
     public static void main(String[] args) {
-        //String string = "38400000-8cf0-11bd-b23e-10b96e4ef00d";
-        String string = null;
+        String string = "38400000-8cf0-11bd-b23e-10b96e4ef00d";
+        // string = null;
         UUID x = Optional.ofNullable(UUID.fromString(string)).orElse(UUID.randomUUID());
 
         Hhd hhd = new Hhd(x, UUID.randomUUID(), UUID.randomUUID(), "Nitin");
