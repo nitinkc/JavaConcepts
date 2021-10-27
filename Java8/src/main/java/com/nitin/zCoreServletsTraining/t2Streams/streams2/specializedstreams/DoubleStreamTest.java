@@ -1,7 +1,9 @@
 package com.nitin.zCoreServletsTraining.t2Streams.streams2.specializedstreams;
 
-import java.util.*;
-import java.util.stream.*;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.DoubleStream;
+import java.util.stream.Stream;
 
 // Notice the call to "boxed" in the second example!
 

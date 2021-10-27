@@ -1,7 +1,9 @@
 package com.nitin.zCoreServletsTraining.t1Lambdas.lambdas4.comparator;
+
 import com.nitin.zCoreServletsTraining.t1Lambdas.lambdas4.function.Employee;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Comparator;
 
 
 public class ComparingExamples {

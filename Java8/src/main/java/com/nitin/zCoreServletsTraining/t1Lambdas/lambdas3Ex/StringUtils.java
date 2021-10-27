@@ -1,7 +1,9 @@
 package com.nitin.zCoreServletsTraining.t1Lambdas.lambdas3Ex;
 
-import java.util.*;
-import java.util.function.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 /** Some String-specific versions of methods that transform Lists. See
  *  ElementUtils for the better, generically-typed versions.

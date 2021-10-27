@@ -1,9 +1,10 @@
 package com.nitin.zCoreServletsTraining.t4FileIO.fileIO.readfiles1;
 
-import java.nio.charset.*;
-import java.nio.file.*;
-import java.util.*;
-import java.util.stream.*;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /** The enable1 word list is a public-domain file containing over
  *  175,000 supposed words accepted by many US Scrabble clubs.

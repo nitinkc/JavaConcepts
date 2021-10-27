@@ -1,8 +1,11 @@
 package com.nitin.zCoreServletsTraining.t2Streams.streams3Ex;
 
-import java.util.*;
-import java.util.stream.*;
-import com.nitin.zCoreServletsTraining.t2Streams.streams3Ex.timing.*;
+import com.nitin.zCoreServletsTraining.t2Streams.streams3Ex.timing.Op;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.DoubleStream;
 
 /** Solutions to third set of Stream exercises from Java 8 tutorial at coreservlets.com.
  */

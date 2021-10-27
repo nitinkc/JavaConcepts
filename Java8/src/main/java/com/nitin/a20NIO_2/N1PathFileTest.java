@@ -2,7 +2,6 @@ package com.nitin.a20NIO_2;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.text.CharacterIterator;
 
 /**
  * Created by Nitin C on 3/4/2016.

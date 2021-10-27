@@ -1,6 +1,8 @@
 package com.nitin.a21serialization;
 
-import java.io.*;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 /**
  * Created by Nitin Chaurasia on 8/2/15 at 12:37 AM.
  */

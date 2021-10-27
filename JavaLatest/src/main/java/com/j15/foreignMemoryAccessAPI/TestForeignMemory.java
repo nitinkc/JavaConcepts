@@ -1,9 +1,6 @@
 package com.j15.foreignMemoryAccessAPI;
 
 
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
-
 public class TestForeignMemory {
     public static void main(String[] args) {
         /*VarHandle intHandle = MemoryHandles.varHandle(int.class,

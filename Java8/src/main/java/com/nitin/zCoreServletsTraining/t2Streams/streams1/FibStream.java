@@ -1,7 +1,8 @@
 package com.nitin.zCoreServletsTraining.t2Streams.streams1;
 
 import java.util.List;
-import java.util.stream.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /** A class with static methods to build streams of Fibonacci numbers.
  */

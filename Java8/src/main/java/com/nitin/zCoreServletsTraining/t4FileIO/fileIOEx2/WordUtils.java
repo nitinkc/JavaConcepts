@@ -1,6 +1,6 @@
 package com.nitin.zCoreServletsTraining.t4FileIO.fileIOEx2;
 
-import java.util.stream.*;
+import java.util.stream.Stream;
 
 /** Some Stream-based static methods for finding words in files.
  *  <p>

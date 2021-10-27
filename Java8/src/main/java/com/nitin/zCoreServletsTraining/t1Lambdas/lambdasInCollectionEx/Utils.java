@@ -1,6 +1,9 @@
 package com.nitin.zCoreServletsTraining.t1Lambdas.lambdasInCollectionEx;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Utils {
   private static Map<Integer,Integer> primeCounts = new HashMap<>();

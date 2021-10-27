@@ -1,9 +1,9 @@
 package com.nitin.LexicalScopingClosures;
 
-import java.util.List;
 import java.util.Arrays;
-import java.util.function.Predicate;
+import java.util.List;
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class HigherOrderPredicate {
 

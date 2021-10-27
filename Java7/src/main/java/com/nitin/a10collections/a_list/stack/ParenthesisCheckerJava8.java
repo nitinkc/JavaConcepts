@@ -1,7 +1,6 @@
 package com.nitin.a10collections.a_list.stack;
 
 import java.util.Stack;
-import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 /**

@@ -1,5 +1,7 @@
 package com.nitin.a10collections.b_set;
-import java.util.*;
+
+import java.util.HashSet;
+import java.util.Set;
 public class FindDuplicates {
 	public static void main(String[] args) {
 

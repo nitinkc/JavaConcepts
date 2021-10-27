@@ -1,6 +1,6 @@
 package com.nitin.zCoreServletsTraining.t1Lambdas.lambdas1.timing;
 
-import java.util.*;
+import java.util.Arrays;
 
 public class TimingTests {
   public static void main(String[] args) {

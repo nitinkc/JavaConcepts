@@ -1,7 +1,10 @@
 package com.nitin.zCoreServletsTraining.t1Lambdas.lambdasInCollection.maps;
 
-import java.math.*;
-import java.util.*;
+import java.math.BigInteger;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class PrimeMap {
   private static Map<Integer,BigInteger> primes = new HashMap<>();

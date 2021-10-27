@@ -1,5 +1,7 @@
 package com.nitin.a24regex;
-import java.util.regex.*;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 public class RegexSmall {
 
 	public static void main(String[] args) {

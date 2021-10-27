@@ -1,8 +1,6 @@
 package com.nitin.a4coreJavaAPI;
 
-import java.util.Calendar;
-
-  public enum EnumDemo {
+public enum EnumDemo {
       SUNDAY  (1),  //calls constructor with value =1
       MONDAY(2),
       TUESDAY   (3),

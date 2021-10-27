@@ -1,5 +1,7 @@
 package com.nitin.a10collections;
-import java.util.*;
+
+import java.util.SortedMap;
+import java.util.TreeMap;
 public class BakedCollection {
 	public static void main(String[] args) {
 		TreeMap<String, String> map = new TreeMap<String, String>();

@@ -1,6 +1,9 @@
 package com.nitin.zCoreServletsTraining.t2Streams.streams2.streams;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class EmployeeSamples {
   private static final List<Employee> SAMPLE_EMPLOYEES = 

@@ -1,6 +1,7 @@
 package com.nitin.zCoreServletsTraining.t4FileIO.fileIO.paths;
 
-import java.nio.file.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /** Some examples of simple Path methods */
 

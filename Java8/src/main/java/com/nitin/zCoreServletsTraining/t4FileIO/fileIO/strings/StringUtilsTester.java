@@ -1,8 +1,10 @@
 package com.nitin.zCoreServletsTraining.t4FileIO.fileIO.strings;
 
-import org.junit.*;
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
+import org.junit.Test;
+
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 /** Some unit tests using the newer assertThat style.
  *  See StringUtilsTester for a variation that uses the

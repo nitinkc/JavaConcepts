@@ -1,9 +1,12 @@
 package com.nitin.zCoreServletsTraining.t4FileIO.fileIO.writefiles;
 
-import java.io.*;
+import java.io.IOException;
 import java.nio.charset.Charset;
-import java.nio.file.*;
-import java.util.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.List;
 
 /** Writes to a file from a List in one fell swoop. Works in either
  *  Java 7 or Java 8, unlike the file reading examples that used

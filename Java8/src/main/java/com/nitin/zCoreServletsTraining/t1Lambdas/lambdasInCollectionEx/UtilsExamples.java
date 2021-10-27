@@ -1,8 +1,8 @@
 package com.nitin.zCoreServletsTraining.t1Lambdas.lambdasInCollectionEx;
 
-import java.util.*;
+import com.nitin.zCoreServletsTraining.t1Lambdas.lambdasInCollectionEx.timing.Op;
 
-import com.nitin.zCoreServletsTraining.t1Lambdas.lambdasInCollectionEx.timing.*;
+import java.util.List;
 
 public class UtilsExamples {
   private static int cutoff = 1_000;

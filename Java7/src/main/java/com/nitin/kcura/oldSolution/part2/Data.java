@@ -1,7 +1,5 @@
 package com.nitin.kcura.oldSolution.part2;
 
-import java.util.Comparator;
-import java.util.List;
 import java.util.Set;
 
 /**

@@ -3,11 +3,9 @@ package com.nitin.a.sandBox;
 /**
  * Created by nitin on Sunday, October/13/2019 at 8:00 PM
  */
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Solution {
     public static void main(String[] args) throws Exception {

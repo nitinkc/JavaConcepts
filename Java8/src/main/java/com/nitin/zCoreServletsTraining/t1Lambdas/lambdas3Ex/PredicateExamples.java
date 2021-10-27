@@ -1,6 +1,7 @@
 package com.nitin.zCoreServletsTraining.t1Lambdas.lambdas3Ex;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
 public class PredicateExamples {
   public static void main(String[] args) {

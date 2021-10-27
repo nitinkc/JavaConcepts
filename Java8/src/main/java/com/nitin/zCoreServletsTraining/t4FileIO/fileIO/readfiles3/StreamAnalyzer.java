@@ -1,8 +1,9 @@
 package com.nitin.zCoreServletsTraining.t4FileIO.fileIO.readfiles3;
 
-import java.io.*;
-import java.nio.file.*;
-import java.util.stream.*;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.stream.Stream;
 
 @FunctionalInterface
 public interface StreamAnalyzer<T> {

@@ -1,6 +1,7 @@
 package com.nitin.zCoreServletsTraining.t2Streams.streams1;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
 public class EmpSamples {
   private static Emp[] sampleEmps = {

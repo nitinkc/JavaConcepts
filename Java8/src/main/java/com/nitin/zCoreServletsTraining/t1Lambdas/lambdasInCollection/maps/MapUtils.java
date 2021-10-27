@@ -1,6 +1,6 @@
 package com.nitin.zCoreServletsTraining.t1Lambdas.lambdasInCollection.maps;
 
-import java.util.*;
+import java.util.Map;
 
 public class MapUtils {
   public static <K,V> void printMapEntries(Map<K,V> map) {

@@ -1,10 +1,14 @@
 package com.nitin.zCoreServletsTraining.t1Lambdas.lambdasInCollection.lists;
 
-import java.util.*;
-import java.util.function.*;
-import java.util.stream.*;
+import com.nitin.zCoreServletsTraining.t1Lambdas.lambdasInCollection.timing.Op;
 
-import com.nitin.zCoreServletsTraining.t1Lambdas.lambdasInCollection.timing.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.function.Predicate;
+import java.util.function.UnaryOperator;
+import java.util.stream.Collectors;
 
 /** Class that attempts to compare the performance of removeIf, replaceAll, and sort
  *  vs. streaming the List, using the corresponding Stream methods, and then accumulating

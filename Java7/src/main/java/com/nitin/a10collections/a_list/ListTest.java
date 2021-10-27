@@ -1,5 +1,8 @@
 package com.nitin.a10collections.a_list;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 class Family{
 	String name;

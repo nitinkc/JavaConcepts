@@ -1,8 +1,12 @@
 package com.nitin.zCoreServletsTraining.t2Streams.streams1;
 
-import java.util.*;
-import java.util.function.*;
-import java.util.stream.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /** Various examples of Stream functionality, shown and explained in the Stream
  *  sections of the Java 8 tutorial at coreservlets.com.

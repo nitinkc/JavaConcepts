@@ -3,7 +3,6 @@ package com.nitin.a10collections.c_queue;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Random;
 
 /**
  * Created by nitin.chaurasia on 2/11/2017.

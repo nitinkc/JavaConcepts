@@ -1,6 +1,7 @@
 package com.nitin.zCoreServletsTraining.t1Lambdas.lambdas3.function;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
 public class EmployeeSamples {
   private static Employee[] sampleEmployees = {

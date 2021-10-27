@@ -1,6 +1,7 @@
 package com.nitin.a10collections.d_maps;
 
-import java.util.*;
+import java.util.Enumeration;
+import java.util.Hashtable;
 
 	public class H2HashTableEnumerationDemo {
 

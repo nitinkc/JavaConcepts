@@ -1,6 +1,5 @@
 package com.nitin.a9generics.oReilly.types;
 
-import java.util.Random;
 import java.util.function.Function;
 
 public class Pair<F, S> {

@@ -1,6 +1,7 @@
 package com.nitin.zCoreServletsTraining.t4FileIO.fileIOEx2;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
 /** Solutions to second set of file I/O exercises from Java 8 tutorial at coreservlets.com.
  * */

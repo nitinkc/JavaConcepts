@@ -1,7 +1,9 @@
 package com.nitin.a16functionalInterface.PredefinedFunctionalInterfaces.consumerUsage;
 
-import java.util.*;
-import java.util.function.BiConsumer;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 import java.util.function.Consumer;
 
 /**
