@@ -9,6 +9,9 @@ public class NullabilityTest {
 
         String getOrderStopDate = null;//"Nitin";
 
-        System.out.println(Optional.ofNullable(getOrderStopDate).map(StringUtils::upperCase).orElse(null));
+        String result = Optional.ofNullable(getOrderStopDate)
+                .map(StringUtils::upperCase)
+                .orElse("Or-Else Block");
+        System.out.println(result);
     }
 }
