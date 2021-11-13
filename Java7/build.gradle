@@ -27,8 +27,11 @@ dependencies {
     implementation 'org.springframework:spring-web:4.0.0.RELEASE'
     implementation 'joda-time:joda-time:2.10.6'
     testImplementation 'junit:junit:4.12'
-    compileOnly 'org.projectlombok:lombok:1.18.10'
-}
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.22'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'}
 
 group = 'Java7'
 version = '1.0-SNAPSHOT'

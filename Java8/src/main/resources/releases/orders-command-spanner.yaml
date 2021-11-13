@@ -1,0 +1,17 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: orders-command-spanner
+spec:
+  releaseName: orders-command-spanner
+  chart:
+    git: <github>.git
+    path: cwow-orders-command-spanner
+    ref: 0.31.15
+  values:
+    image:
+      repository: <dockerhub-artifactory>/orders-command-spanner
+      tag: 2021-11-08T15-36-d717d3722-541
+  valuesFrom:
+  - configMapKeyRef:
+      name: environment-overrides
