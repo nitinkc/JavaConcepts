@@ -1,0 +1,43 @@
+
+allprojects {
+    group = 'JavaConcepts'
+    version = '1.0-SNAPSHOT'
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'maven-publish'
+
+    repositories {
+        mavenLocal()
+        maven {
+            url = uri('http://repo.maven.apache.org/maven2')
+        }
+    }
+
+    dependencies {
+        implementation 'mysql:mysql-connector-java:8.0.17'
+        implementation 'org.apache.commons:commons-lang3:3.9'
+        implementation 'org.apache.commons:commons-math3:3.6.1'
+        implementation 'com.googlecode.json-simple:json-simple:1.1'
+        // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+
+        implementation 'org.springframework:spring-web:4.0.0.RELEASE'
+        implementation 'joda-time:joda-time:2.10.6'
+        testImplementation 'junit:junit:4.12'
+        compileOnly 'org.projectlombok:lombok:1.18.22'
+        annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+        testCompileOnly 'org.projectlombok:lombok:1.18.22'
+        testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'    }
+
+    sourceCompatibility = '1.8'
+
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                from(components.java)
+            }
+        }
+    }
+}
