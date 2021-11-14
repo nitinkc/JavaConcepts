@@ -37,4 +37,4 @@ dependencies {
 
 group = 'JavaConcepts'
 version = '1.0-SNAPSHOT'
-sourceCompatibility = '15'
+sourceCompatibility = '17'
