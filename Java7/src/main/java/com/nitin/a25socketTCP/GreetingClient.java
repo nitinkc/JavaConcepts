@@ -2,9 +2,10 @@ package com.nitin.a25socketTCP;
 
 //File Name GreetingClient.java
 
-import java.net.*;
-import java.io.*;
-import java.util.concurrent.TimeUnit;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.Socket;
 
 public class GreetingClient {
    public static void main(String[] args) throws IOException {

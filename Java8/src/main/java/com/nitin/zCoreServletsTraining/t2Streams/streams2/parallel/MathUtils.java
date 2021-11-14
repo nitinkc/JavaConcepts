@@ -1,6 +1,6 @@
 package com.nitin.zCoreServletsTraining.t2Streams.streams2.parallel;
 
-import java.util.stream.*;
+import java.util.stream.DoubleStream;
 
 public class MathUtils {
   public static double fancySum1(double[] nums) {

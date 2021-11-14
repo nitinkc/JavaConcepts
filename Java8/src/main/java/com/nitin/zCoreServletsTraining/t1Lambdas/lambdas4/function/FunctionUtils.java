@@ -1,7 +1,10 @@
 package com.nitin.zCoreServletsTraining.t1Lambdas.lambdas4.function;
 
-import java.util.*;
-import java.util.function.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 /** Some methods to illustrate use of the default or static methods (i.e., the non-abstract)
  *  methods of Function, Predicate, etc.

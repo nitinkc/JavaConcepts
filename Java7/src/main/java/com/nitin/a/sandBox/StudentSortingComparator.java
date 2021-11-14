@@ -5,11 +5,7 @@ package com.nitin.a.sandBox;
 
 import com.entity.Student;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Comparator;
+import java.util.*;
 
 class StudentSortingComparator implements Comparator<com.entity.Student> {
 

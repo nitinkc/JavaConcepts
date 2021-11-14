@@ -2,7 +2,8 @@ package com.nitin.zCoreServletsTraining.t2Streams.streams1;
 
 import java.math.BigInteger;
 import java.util.List;
-import java.util.stream.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class PrimeStream {
   /** Makes an "infinite" (unbounded) stream of consecutive prime numbers. 

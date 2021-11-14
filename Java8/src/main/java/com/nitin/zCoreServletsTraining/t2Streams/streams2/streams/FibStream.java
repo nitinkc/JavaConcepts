@@ -1,7 +1,8 @@
 package com.nitin.zCoreServletsTraining.t2Streams.streams2.streams;
 
 import java.util.List;
-import java.util.stream.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FibStream {
   

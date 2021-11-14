@@ -1,6 +1,7 @@
 package com.nitin.zCoreServletsTraining.t4FileIO.fileIO.readfiles2;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
 public class FileReadingExamples {
   public static void main(String[] args) {

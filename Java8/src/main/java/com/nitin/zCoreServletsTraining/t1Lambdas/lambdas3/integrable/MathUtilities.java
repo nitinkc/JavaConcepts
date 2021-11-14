@@ -1,6 +1,6 @@
 package com.nitin.zCoreServletsTraining.t1Lambdas.lambdas3.integrable;
 
-import java.util.function.*;
+import java.util.function.DoubleUnaryOperator;
 
 /** A numerical integration routine. Minor variation of previous versions,
  *  which uses the builtin DoubleUnaryOperator interface

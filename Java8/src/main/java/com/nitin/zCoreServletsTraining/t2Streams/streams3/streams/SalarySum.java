@@ -1,9 +1,12 @@
 package com.nitin.zCoreServletsTraining.t2Streams.streams3.streams;
 
-import java.util.*;
-import org.junit.*;
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
+import org.junit.Test;
+
+import java.util.List;
+
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 /** Different ways to sum the salaries of a List of Employees. */
 

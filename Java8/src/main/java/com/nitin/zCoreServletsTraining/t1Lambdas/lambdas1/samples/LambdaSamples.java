@@ -1,14 +1,17 @@
 package com.nitin.zCoreServletsTraining.t1Lambdas.lambdas1.samples;
 
-import com.nitin.zCoreServletsTraining.t1Lambdas.lambdas1.integrable.*;
-
-import java.awt.event.*;
-import java.io.*;
-import java.net.*;
-import java.util.*;
-import java.util.concurrent.*;
+import com.nitin.zCoreServletsTraining.t1Lambdas.lambdas1.integrable.MathUtilities;
 
 import javax.swing.*;
+import java.awt.event.TextListener;
+import java.io.Flushable;
+import java.net.ContentHandler;
+import java.net.ContentHandlerFactory;
+import java.net.CookiePolicy;
+import java.util.Arrays;
+import java.util.Formattable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class LambdaSamples {
   private final String[] testStrings = {"one", "two", "three", "four"};

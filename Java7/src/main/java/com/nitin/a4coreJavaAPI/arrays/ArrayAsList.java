@@ -1,6 +1,7 @@
 package com.nitin.a4coreJavaAPI.arrays;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
 
 public class ArrayAsList {

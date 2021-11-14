@@ -1,7 +1,9 @@
 package com.nitin.zCoreServletsTraining.t4FileIO.fileIO.java7;
 
 import java.nio.charset.Charset;
-import java.nio.file.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 /** Reads from file into a List in one fell swoop. Uses

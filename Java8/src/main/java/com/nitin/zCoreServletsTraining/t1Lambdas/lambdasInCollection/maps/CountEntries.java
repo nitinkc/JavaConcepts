@@ -1,6 +1,7 @@
 package com.nitin.zCoreServletsTraining.t1Lambdas.lambdasInCollection.maps;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CountEntries {
   public static void main(String[] args) {

@@ -1,6 +1,7 @@
 package com.nitin.zCoreServletsTraining.t4FileIO.fileIO.readfiles1;
 
-import java.nio.file.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class XsAndYs {
   public static void main(String[] args) throws Exception {

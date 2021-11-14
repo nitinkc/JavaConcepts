@@ -1,9 +1,8 @@
 package com.nitin.kcura.oldSolution.part2;
 
-import com.nitin.kcura.oldSolution.part2.BredthFirstTraversal;
-import com.nitin.kcura.oldSolution.part2.CitiesConnection;
-
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.util.*;
 

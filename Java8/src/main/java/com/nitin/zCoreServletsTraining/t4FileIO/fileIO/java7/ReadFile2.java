@@ -1,8 +1,11 @@
 package com.nitin.zCoreServletsTraining.t4FileIO.fileIO.java7;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.nio.charset.Charset;
-import java.nio.file.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /** Reads one line at a time, rather than using Files.readAllLines
  *  as in ReadFile1. 

@@ -11,11 +11,9 @@ package com.nitin.a4declarationsNaccessModifiers;
  */
 
 //Static Import
+
 import static java.lang.Float.MAX_VALUE;
-//import static java.lang.Integer.MAX_VALUE;
-import static java.lang.Math.max;
-import static java.lang.Math.random;
-import static java.lang.Math.sqrt;
+import static java.lang.Math.*;
 
 public class D2ImportStatements {
     public static void main(String[] args) {

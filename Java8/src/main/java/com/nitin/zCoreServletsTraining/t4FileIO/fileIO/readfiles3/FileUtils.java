@@ -1,10 +1,11 @@
 package com.nitin.zCoreServletsTraining.t4FileIO.fileIO.readfiles3;
 
-import java.util.*;
-import java.util.function.*;
-import java.util.stream.*;
+import com.nitin.zCoreServletsTraining.t4FileIO.fileIO.strings.StringUtils;
 
-import com.nitin.zCoreServletsTraining.t4FileIO.fileIO.strings.*;
+import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /** Finds various information about the word list. Uses the third and fourth
  *  file-reading variations, where the code is split into a file-processing method

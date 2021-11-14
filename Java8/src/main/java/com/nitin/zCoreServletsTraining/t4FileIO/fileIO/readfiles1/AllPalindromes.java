@@ -1,7 +1,9 @@
 package com.nitin.zCoreServletsTraining.t4FileIO.fileIO.readfiles1;
 
-import java.nio.file.*;
-import com.nitin.zCoreServletsTraining.t4FileIO.fileIO.strings.*;
+import com.nitin.zCoreServletsTraining.t4FileIO.fileIO.strings.StringUtils;
+
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 /** Prints all palindromes. Uses the first, simplest, and least flexible
  *  file-reading variation, where code is placed directly in "main".

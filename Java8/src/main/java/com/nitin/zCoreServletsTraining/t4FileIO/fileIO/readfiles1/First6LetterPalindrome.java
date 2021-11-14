@@ -1,7 +1,9 @@
 package com.nitin.zCoreServletsTraining.t4FileIO.fileIO.readfiles1;
 
-import java.nio.file.*;
-import com.nitin.zCoreServletsTraining.t4FileIO.fileIO.strings.*;
+import com.nitin.zCoreServletsTraining.t4FileIO.fileIO.strings.StringUtils;
+
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class First6LetterPalindrome {
   public static void main(String[] args) throws Exception {

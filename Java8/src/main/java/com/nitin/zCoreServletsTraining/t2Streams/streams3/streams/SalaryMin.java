@@ -1,12 +1,12 @@
 package com.nitin.zCoreServletsTraining.t2Streams.streams3.streams;
 
+import org.junit.Test;
+
+import java.util.List;
+
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
-
-import java.util.*;
-
-import org.junit.*;
 
 public class SalaryMin {
   private static List<Employee> googlers = EmployeeSamples.getGooglers();

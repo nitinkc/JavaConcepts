@@ -1,8 +1,6 @@
 package com.nitin.zOReiley2020SimonRoberts.f3closures.s5replaceCriteria2Predicate;
 
 import java.util.*;
-
-//Using Java 8 built in Predicate.
 import java.util.function.Predicate;
 
 class Car {

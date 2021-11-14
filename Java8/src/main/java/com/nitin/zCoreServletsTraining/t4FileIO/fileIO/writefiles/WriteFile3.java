@@ -1,8 +1,11 @@
 package com.nitin.zCoreServletsTraining.t4FileIO.fileIO.writefiles;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.charset.Charset;
-import java.nio.file.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /** Writes to file without having to make List first. Wraps
  *  the BufferedWriter in a PrintWriter.

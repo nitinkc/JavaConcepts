@@ -1,6 +1,6 @@
 package com.nitin.zCoreServletsTraining.t1Lambdas.lambdas3.methodrefs;
 
-import java.util.function.*;
+import java.util.function.Function;
 
 public class Utils {
   public static <T,R> R transform(T value, Function<T,R> f) {

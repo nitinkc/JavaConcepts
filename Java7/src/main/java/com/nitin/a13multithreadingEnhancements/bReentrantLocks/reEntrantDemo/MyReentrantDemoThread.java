@@ -1,7 +1,5 @@
 package com.nitin.a13multithreadingEnhancements.bReentrantLocks.reEntrantDemo;
 
-import com.nitin.a13multithreadingEnhancements.bReentrantLocks.reEntrantDemo.Display;
-
 /**
  * Created by nitin.chaurasia on 12/26/2016.
  */

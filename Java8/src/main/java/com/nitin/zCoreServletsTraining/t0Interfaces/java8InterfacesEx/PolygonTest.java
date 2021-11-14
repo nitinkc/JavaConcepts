@@ -1,6 +1,6 @@
 package com.nitin.zCoreServletsTraining.t0Interfaces.java8InterfacesEx;
 
-import java.util.*;
+import java.util.Arrays;
 
 public class PolygonTest {
   public static void main(String[] args) {

@@ -2,7 +2,8 @@ package com.nitin.zCoreServletsTraining.t2Streams.streams3.streams;
 
 import java.math.BigInteger;
 import java.util.*;
-import java.util.stream.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /** Various examples of stream functionality, shown and explained in the stream
  *  sections of the Java 8 tutorial at coreservlets.com.

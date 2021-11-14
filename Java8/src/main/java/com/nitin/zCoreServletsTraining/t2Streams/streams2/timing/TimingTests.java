@@ -1,6 +1,6 @@
 package com.nitin.zCoreServletsTraining.t2Streams.streams2.timing;
 
-import java.util.*;
+import java.util.Arrays;
 
 public class TimingTests {
   public static void main(String[] args) {

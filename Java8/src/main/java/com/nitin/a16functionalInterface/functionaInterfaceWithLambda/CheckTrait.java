@@ -1,7 +1,5 @@
 package com.nitin.a16functionalInterface.functionaInterfaceWithLambda;
 
-import com.nitin.a16functionalInterface.functionaInterfaceWithLambda.Animal;
-
 /**
  * Created by Nitin Chaurasia on 3/3/16 at 12:23 AM.
  * If an interface contain only one abstract method, such type of interfaces are called functional

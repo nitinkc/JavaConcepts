@@ -1,7 +1,8 @@
 package com.nitin.zCoreServletsTraining.t2Streams.streams3Ex;
 
-import java.util.*;
-import java.util.stream.*;
+import java.util.Random;
+import java.util.stream.DoubleStream;
+import java.util.stream.Stream;
 
 public class MathUtils {
   /** Produces an array containing size doubles, each between 0 and 1.

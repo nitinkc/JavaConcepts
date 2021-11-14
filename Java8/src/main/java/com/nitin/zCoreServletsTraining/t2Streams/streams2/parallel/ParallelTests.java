@@ -1,6 +1,6 @@
 package com.nitin.zCoreServletsTraining.t2Streams.streams2.parallel;
 
-import com.nitin.zCoreServletsTraining.t2Streams.streams2.timing.*;
+import com.nitin.zCoreServletsTraining.t2Streams.streams2.timing.Op;
 
 public class ParallelTests {
   public static void main(String[] args) {

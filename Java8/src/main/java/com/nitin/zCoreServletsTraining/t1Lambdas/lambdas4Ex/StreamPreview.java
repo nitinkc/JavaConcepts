@@ -1,6 +1,7 @@
 package com.nitin.zCoreServletsTraining.t1Lambdas.lambdas4Ex;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
 public class StreamPreview {
   public static void main(String[] args) {

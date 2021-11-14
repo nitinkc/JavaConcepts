@@ -1,10 +1,14 @@
 package com.nitin.zCoreServletsTraining.t4FileIO.fileIOEx1;
 
-import java.io.*;
-import java.nio.charset.*;
-import java.nio.file.*;
-import java.util.*;
-import java.util.stream.*;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /** Solutions to first set of File I/O exercises from Java 8 tutorial at coreservlets.com.
  *  These solutions use the overly simplistic approach where main throws Exception, because we

@@ -1,6 +1,6 @@
 package com.nitin.a10collections.a_list.stack;
 
-import java.util.*;
+import java.util.Stack;
 
 /**
  * Created by nitin on Thu, 2/2/17 at 10:34 PM.

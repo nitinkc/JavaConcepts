@@ -1,6 +1,6 @@
 package com.nitin.zCoreServletsTraining.t1Lambdas.lambdas1.comparator;
 
-import java.util.*;
+import java.util.Arrays;
 
 public class StringSorter5 {
   public static void doTests() {

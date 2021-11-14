@@ -1,5 +1,7 @@
 package com.nitin.a4coreJavaAPI.arrays;
-import java.util.*;
+
+import java.util.Arrays;
+import java.util.Comparator;
 public class SearchArrayTest {
 	public static void main(String[] args) {
 		String[] list = {"zz","ab", "cd", "ef", "gh", "ij", "kl", "mn", "op", "qr"};

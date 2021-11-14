@@ -1,5 +1,7 @@
 package com.nitin.a10collections.d_maps.HashMap;
-import java.util.*;
+
+import java.util.HashMap;
+import java.util.Map;
 public class HashMapEg {
 		public static void main(String[] args) {
 		Map<Object , Object> m = new HashMap<Object , Object>();

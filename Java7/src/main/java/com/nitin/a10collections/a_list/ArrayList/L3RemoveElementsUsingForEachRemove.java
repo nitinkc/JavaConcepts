@@ -1,7 +1,6 @@
 package com.nitin.a10collections.a_list.ArrayList;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**

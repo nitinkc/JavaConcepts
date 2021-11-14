@@ -2,7 +2,6 @@ package com.nitin.a10collections.a_list.ArrayList.ListApplication;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * Created by Nitin Chaurasia on 1/24/18 at 9:27 PM.

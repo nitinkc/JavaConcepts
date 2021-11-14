@@ -1,6 +1,7 @@
 package com.nitin.zCoreServletsTraining.t2Streams.streams2Ex;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
 /** Solutions to second set of Stream exercises from Java 8 tutorial at coreservlets.com.
  *  <p>
