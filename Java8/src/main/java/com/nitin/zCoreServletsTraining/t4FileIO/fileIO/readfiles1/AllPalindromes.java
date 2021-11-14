@@ -2,6 +2,7 @@ package com.nitin.zCoreServletsTraining.t4FileIO.fileIO.readfiles1;
 
 import com.nitin.zCoreServletsTraining.t4FileIO.fileIO.strings.StringUtils;
 
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -10,11 +11,15 @@ import java.nio.file.Paths;
  */
 
 public class AllPalindromes {
-  public static void main(String[] args) throws Exception {
-    String inputFile = "Java8/src/main/java/com/nitin/zCoreServletsTraining/t4FileIO/fileIO/readfiles1/enable1-word-list.txt";
+  public static void main(String[] args) {
+    String inputFile = "../Java8/src/main/java/com/nitin/zCoreServletsTraining/t4FileIO/fileIO/readfiles1/enable1-word-list.txt";
 
-    Files.lines(Paths.get(inputFile))
-         .filter(StringUtils::isPalindrome)
-         .forEach(System.out::println);
+    try {
+      Files.lines(Paths.get(inputFile))
+           .filter(StringUtils::isPalindrome)
+           .forEach(System.out::println);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 }

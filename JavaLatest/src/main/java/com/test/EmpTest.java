@@ -3,7 +3,7 @@ package com.test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class empTest {
+public class EmpTest {
     public static void main(String[] args) {
         Employee e1 = new Employee("Jane","","Joe",34,90000);
         Employee e2 = new Employee("Andrew","J","Smith",29,80000);

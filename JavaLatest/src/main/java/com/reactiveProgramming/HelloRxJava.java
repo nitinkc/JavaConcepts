@@ -14,7 +14,9 @@ public class HelloRxJava {
                      emitter.onNext("Mic Testing 1....2.....3...");
                  });
 
-        observable.subscribe(element -> System.out.println("Subscriber 1 "+element));
-        observable.subscribe(element -> System.out.println("Subscriber 2 "+element));
+        for (int i = 0; i < 10; i++) {
+            int finalI = i;
+            observable.subscribe(element -> System.out.println("Subscriber " + finalI +element));
+        }
     }
 }
