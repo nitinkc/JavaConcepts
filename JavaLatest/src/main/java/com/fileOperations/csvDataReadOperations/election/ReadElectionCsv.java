@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 
 public class ReadElectionCsv {
     public static List<ElectionEntity> getData () {
-        String file = "Java8/src/main/java/com/nitin/election/india_general_election_2014.csv";
+        String file = "JavaLatest/src/main/java/com/fileOperations/csvDataReadOperations/election/india_general_election_2014.csv";
 
         return readFileNreturnList(file);
     }

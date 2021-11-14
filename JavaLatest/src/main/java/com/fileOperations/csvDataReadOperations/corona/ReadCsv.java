@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 public class ReadCsv {
     public static List<Entity> getData () {
-        String file = "Java8/src/main/java/com/nitin/corona/us_simplified.csv";
+        String file = "JavaLatest/src/main/java/com/fileOperations/csvDataReadOperations/corona/us_simplified.csv";
 
         return readFileNreturnList(file);
     }
