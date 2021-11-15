@@ -1,0 +1,12 @@
+###########################################################################
+2021-11-15T02:55:24.586334
+Total # of Strings 0 with total # Partition is 0
+Batch Size : 1000
+Total Time Taken in parallel : 2
+Total Time Taken in sequential : 0
+###########################################################################
+2021-11-15T03:05:06.940406
+Total # of Strings 172823 with total # Partition is 173
+Batch Size : 1000
+Total Time Taken in parallel : 6642
+Total Time Taken in sequential : 23019

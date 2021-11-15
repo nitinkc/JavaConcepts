@@ -13,8 +13,7 @@ out/
 .DS_Store
 
 # Output files of programs
-*.txt
-
+.log
 # Maven Related
 target/
 
