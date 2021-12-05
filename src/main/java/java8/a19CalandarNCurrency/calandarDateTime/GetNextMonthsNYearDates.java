@@ -1,6 +1,6 @@
 package java8.a19CalandarNCurrency.calandarDateTime;
 
-import com.utilities.DateUtilities;
+import com.utilities.OldDateUtilities;
 
 import java.sql.Timestamp;
 import java.util.Calendar;
@@ -15,7 +15,7 @@ public class GetNextMonthsNYearDates {
 
         Calendar calendar = Calendar.getInstance();
         Date currentDate = calendar.getTime();
-        currentDate = DateUtilities.nullifyTime(currentDate);
+        currentDate = OldDateUtilities.nullifyTime(currentDate);
         Timestamp authTimestamp = new Timestamp(currentDate.getTime());
 
         System.out.println(authTimestamp);
@@ -27,12 +27,12 @@ public class GetNextMonthsNYearDates {
         //Add one month to the current Date
         calendar.add(Calendar.MONTH, 1);
         Date poiBeginDate = calendar.getTime();
-        poiBeginDate = DateUtilities.nullifyTime(poiBeginDate);
+        poiBeginDate = OldDateUtilities.nullifyTime(poiBeginDate);
         //Add 12 months from one month of the current Date
         calendar.add(Calendar.MONTH, 12);
         calendar.add(Calendar.DATE,-1);
         Date poiEndDate = calendar.getTime();
-        poiEndDate = DateUtilities.nullifyTime(poiEndDate);
+        poiEndDate = OldDateUtilities.nullifyTime(poiEndDate);
 
         Timestamp start = new Timestamp(poiBeginDate.getTime());
         Timestamp end = new Timestamp(poiEndDate.getTime());

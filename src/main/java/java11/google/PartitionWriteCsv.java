@@ -17,7 +17,7 @@ public class PartitionWriteCsv {
         final int BATCH_SIZE = 1000;
 
         //Read from a CSV file and Write into another
-        String inputFile = "Java8/src/main/java/com/nitin/zCoreServletsTraining/t4FileIO/fileIO/readfiles1/enable1-word-list.txt";
+        String inputFile = "src/main/java/com/nitin/zCoreServletsTraining/t4FileIO/fileIO/readfiles1/enable1-word-list.txt";
         List<String> stringList = new ArrayList<>();
         try {
            stringList  = Files.lines(Paths.get(inputFile)).collect(Collectors.toList());

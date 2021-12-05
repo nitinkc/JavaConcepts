@@ -13,9 +13,9 @@ import java.util.stream.Collectors;
 public class N2App {
     public static void main(String[] args) {
 
-        Path readFilesFromFolderPath = Paths.get("Java8/src/main/resources/releases");
-        Path input = Paths.get("Java8/src/main/resources/input.txt");
-        Path writeIntoFilename = Paths.get("Java8/src/main/resources/nitin.txt");
+        Path readFilesFromFolderPath = Paths.get("src/main/resources/releases");
+        Path input = Paths.get("src/main/resources/input.txt");
+        Path writeIntoFilename = Paths.get("src/main/resources/nitin.txt");
 
         List<File> filesInFolder = getAllFilesFromFolder(readFilesFromFolderPath);
         List<String> configFileStr = getStringsFromEachFileInFolder(filesInFolder);

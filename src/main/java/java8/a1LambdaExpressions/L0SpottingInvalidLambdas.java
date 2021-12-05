@@ -1,7 +1,7 @@
 package java8.a1LambdaExpressions;
 
 
-import java11.entity.Cargo;
+import com.entity.Cargo;
 
 import java.util.List;
 

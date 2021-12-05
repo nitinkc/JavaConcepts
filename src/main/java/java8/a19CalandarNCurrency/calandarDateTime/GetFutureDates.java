@@ -1,6 +1,6 @@
 package java8.a19CalandarNCurrency.calandarDateTime;
 
-import com.utilities.DateUtilities;
+import com.utilities.OldDateUtilities;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
@@ -14,7 +14,7 @@ public class GetFutureDates {
     public static void main(String[] args) {
         Calendar calendar = Calendar.getInstance();
         Date currentDate = calendar.getTime();
-        currentDate = DateUtilities.nullifyTime(currentDate);
+        currentDate = OldDateUtilities.nullifyTime(currentDate);
         Timestamp authTimestamp = new Timestamp(currentDate.getTime());
 
         String datePattern = "EEE, MMM, dd yyyy HH:mm:ss z Z";
@@ -26,11 +26,11 @@ public class GetFutureDates {
         //Find a date 30 days from Now and then 365 days from that day
         calendar.add(Calendar.DATE, 30);
         Date poiBeginDate = calendar.getTime();
-        poiBeginDate = DateUtilities.nullifyTime(poiBeginDate);
+        poiBeginDate = OldDateUtilities.nullifyTime(poiBeginDate);
         //Add 12 months from one month of the current Date
         calendar.add(Calendar.DATE, 365);
         Date poiEndDate = calendar.getTime();
-        poiEndDate = DateUtilities.nullifyTime(poiEndDate);
+        poiEndDate = OldDateUtilities.nullifyTime(poiEndDate);
 
         Timestamp start = new Timestamp(poiBeginDate.getTime());
         Timestamp end = new Timestamp(poiEndDate.getTime());

@@ -11,7 +11,7 @@ public class FileWrite {
 
     public static void doSomethingParallely(String singleString) {
         Charset characterSet = Charset.defaultCharset();
-        Path path = Paths.get("JavaLatest/src/main/java/com/google/output.txt");
+        Path path = Paths.get("src/main/java/com/google/output.txt");
         try {
             //System.out.println("Writing into file the word :: " + singleString);
             //Files.write(path, Collections.singleton(singleString), characterSet, StandardOpenOption.APPEND);

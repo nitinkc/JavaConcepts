@@ -1,6 +1,6 @@
 package java8.a16functionalInterface.PredefinedFunctionalInterfaces.sorting;
 
-import java11.entity.Student;
+import com.entity.Student;
 
 import java.util.Comparator;
 import java.util.Set;

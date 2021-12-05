@@ -1,6 +1,6 @@
 package java8.a19CalandarNCurrency.calandarDateTime;
 
-import com.utilities.DateUtilities;
+import com.utilities.OldDateUtilities;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class GetPreviousNFridays {
     public static void main(String[] args) throws ParseException {
-        List<Date> list = DateUtilities.getLastNFridays(15);
+        List<Date> list = OldDateUtilities.getLastNFridays(15);
         String datePattern = "EEE, MMM, dd yyyy HH:mm:ss z Z";
         SimpleDateFormat sdf=new SimpleDateFormat(datePattern);
         Date tempDate = null;
