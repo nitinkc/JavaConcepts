@@ -1,6 +1,6 @@
 package oReilly.a6erasure;
 
-import java7.a9generics.oReilly.a6erasure.ProcessColors;
+import java.generics.a9generics.oReilly.a6erasure.ProcessColors;
 import org.junit.Before;
 import org.junit.Test;
 

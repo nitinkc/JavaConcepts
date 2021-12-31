@@ -1,6 +1,6 @@
 package oReilly.a4sorting;
 
-import java7.a9generics.oReilly.a4sorting.SortingMaps;
+import java.generics.a9generics.oReilly.a4sorting.SortingMaps;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,6 +1,6 @@
 package oReilly.a4sorting;
 
-import java7.a9generics.oReilly.a4sorting.S1SortingDemo;
+import java.generics.a9generics.oReilly.a4sorting.S1SortingDemo;
 import org.junit.Test;
 
 import java.util.List;
