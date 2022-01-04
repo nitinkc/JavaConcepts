@@ -57,7 +57,7 @@
 
 [src/main/java/nitin/oops/polymorphism/overriding/notes.md](src/main/java/nitin/oops/polymorphism/overriding/notes.md)
 
-[src/main/java/nitin/exceptionHandling/commonExceptions/common unchecked exceptions.md](src/main/java/nitin/exceptionHandling/commonExceptions/common unchecked exceptions.md)
+[src/main/java/nitin/exceptionHandling/commonExceptions/common-unchecked-exceptions.md](src/main/java/nitin/exceptionHandling/commonExceptions/common_unchecked_exceptions.md)
 
 [src/main/java/nitin/interfaces/notes.md](src/main/java/nitin/interfaces/notes.md)
 
