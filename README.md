@@ -33,42 +33,31 @@
 
 [src/main/java/nitin/generic/oReilly/a5map/ReadMe.md](src/main/java/nitin/generic/oReilly/a5map/ReadMe.md)
 
-[src/main/java/nitin/zOReiley2020SimonRoberts/f6moreSyntax/readMe.md](src/main/java/nitin
-/zOReiley2020SimonRoberts/f6moreSyntax/readMe.md)
+[src/main/java/nitin/zOReiley2020SimonRoberts/f6moreSyntax/readMe.md](src/main/java/nitin/zOReiley2020SimonRoberts/f6moreSyntax/readMe.md)
 
-[src/main/java/nitin/zOReiley2020SimonRoberts/f4pureFunction/ReadMe.md](src/main/java/nitin
-/zOReiley2020SimonRoberts/f4pureFunction/ReadMe.md)
+[src/main/java/nitin/zOReiley2020SimonRoberts/f4pureFunction/ReadMe.md](src/main/java/nitin/zOReiley2020SimonRoberts/f4pureFunction/ReadMe.md)
 
-[src/main/java/nitin/zOReiley2020SimonRoberts/f3closures/s6codingAdapter/readMe.md](src/main/java/nitin
-/zOReiley2020SimonRoberts/f3closures/s6codingAdapter/readMe.md)
+[src/main/java/nitin/zOReiley2020SimonRoberts/f3closures/s6codingAdapter/readMe.md](src/main/java/nitin/zOReiley2020SimonRoberts/f3closures/s6codingAdapter/readMe.md)
 
-[src/main/java/nitin/zOReiley2020SimonRoberts/f3closures/s5replaceCriteria2Predicate/ReadMe.md](src/main/java
-/nitin/zOReiley2020SimonRoberts/f3closures/s5replaceCriteria2Predicate/ReadMe.md)
+[src/main/java/nitin/zOReiley2020SimonRoberts/f3closures/s5replaceCriteria2Predicate/ReadMe.md](src/main/java/nitin/zOReiley2020SimonRoberts/f3closures/s5replaceCriteria2Predicate/ReadMe.md)
 
-[src/main/java/nitin/zOReiley2020SimonRoberts/f3closures/ReadMe.md](src/main/java/nitin/zOReiley2020SimonRoberts
-/f3closures/ReadMe.md)
+[src/main/java/nitin/zOReiley2020SimonRoberts/f3closures/ReadMe.md](src/main/java/nitin/zOReiley2020SimonRoberts/f3closures/ReadMe.md)
 
-[src/main/java/nitin/zOReiley2020SimonRoberts/f2functionalConcepts/r5genericsNgeneralization/readMe.md](src/main
-/java/nitin/zOReiley2020SimonRoberts/f2functionalConcepts/r5genericsNgeneralization/readMe.md)
+[src/main/java/nitin/zOReiley2020SimonRoberts/f2functionalConcepts/r5genericsNgeneralization/readMe.md](src/main/java/nitin/zOReiley2020SimonRoberts/f2functionalConcepts/r5genericsNgeneralization/readMe.md)
 
-[src/main/java/nitin/zOReiley2020SimonRoberts/f2functionalConcepts/readMe.md](src/main/java/nitin
-/zOReiley2020SimonRoberts/f2functionalConcepts/readMe.md)
+[src/main/java/nitin/zOReiley2020SimonRoberts/f2functionalConcepts/readMe.md](src/main/java/nitin/zOReiley2020SimonRoberts/f2functionalConcepts/readMe.md)
 
-[src/main/java/nitin/zOReiley2020SimonRoberts/f2functionalConcepts/r4GivingTypeToALambda/readMe.md](src/main/jav
-a/nitin/zOReiley2020SimonRoberts/f2functionalConcepts/r4GivingTypeToALambda/readMe.md)
+[src/main/java/nitin/zOReiley2020SimonRoberts/f2functionalConcepts/r4GivingTypeToALambda/readMe.md](src/main/java/nitin/zOReiley2020SimonRoberts/f2functionalConcepts/r4GivingTypeToALambda/readMe.md)
 
 [src/main/java/nitin/cloning/notes.md](src/main/java/nitin/cloning/notes.md)
 
 [src/main/java/nitin/oops/abstraction/basics.md](src/main/java/nitin/oops/abstraction/basics.md)
 
-[src/main/java/nitin/oops/polymorphism/overloading/notes.md](src/main/java/nitin/oops/polymorphism/overloading
-/notes.md)
+[src/main/java/nitin/oops/polymorphism/overloading/notes.md](src/main/java/nitin/oops/polymorphism/overloading/notes.md)
 
-[src/main/java/nitin/oops/polymorphism/overriding/notes.md](src/main/java/nitin/oops/polymorphism/overriding
-/notes.md)
+[src/main/java/nitin/oops/polymorphism/overriding/notes.md](src/main/java/nitin/oops/polymorphism/overriding/notes.md)
 
-[src/main/java/nitin/exceptionHandling/commonExceptions/common unchecked exceptions.md](src/main/java/nitin
-/exceptionHandling/commonExceptions/common unchecked exceptions.md)
+[src/main/java/nitin/exceptionHandling/commonExceptions/common unchecked exceptions.md](src/main/java/nitin/exceptionHandling/commonExceptions/common unchecked exceptions.md)
 
 [src/main/java/nitin/interfaces/notes.md](src/main/java/nitin/interfaces/notes.md)
 
