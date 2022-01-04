@@ -13,7 +13,7 @@
 
 [src/main/java/nitin/multithreading/concurrentVSdistributed.md](src/main/java/nitin/multithreading/concurrentVSdistributed.md)
 
-[src/main/java/nitin/multithreading/raceConditionsNCritical Section.md](src/main/java/nitin/multithreading/raceConditionsNCritical Section.md)
+[src/main/java/nitin/multithreading/raceConditionsNCriticalSection.md](src/main/java/nitin/multithreading/raceConditionsNCriticalSection.md)
 
 [src/main/java/nitin/iO/streams/javaIO_Class_Properties.md](src/main/java/nitin/iO/streams/javaIO_Class_Properties.md)
 
