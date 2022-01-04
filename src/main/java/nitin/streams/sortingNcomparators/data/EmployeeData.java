@@ -6,8 +6,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @Author Created by nichaurasia
- * @create on Tuesday, September/29/2020 at 6:55 PM
+ * @author Created by nichaurasia
+ * Created on Tuesday, September/29/2020 at 6:55 PM
  */
 
 public class EmployeeData {

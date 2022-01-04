@@ -5,8 +5,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 /**
- * @Author Created by nichaurasia
- * @create on Sunday, December/20/2020 at 7:34 PM
+ * @author Created by nichaurasia
+ * Created on Sunday, December/20/2020 at 7:34 PM
  */
 
 public class FileReadWrite {

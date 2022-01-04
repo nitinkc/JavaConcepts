@@ -1,8 +1,8 @@
 package nitin.iO.fileOperations.csvDataReadOperations.bills.entity;
 
 /**
- * @Author Created by nichaurasia
- * @create on Wednesday, September/30/2020 at 10:13 PM
+ * @author Created by nichaurasia
+ * Created on Wednesday, September/30/2020 at 10:13 PM
  */
 
 public enum Transactions {

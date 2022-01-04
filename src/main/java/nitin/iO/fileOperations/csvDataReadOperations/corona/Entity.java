@@ -7,8 +7,8 @@ import lombok.ToString;
 import java.util.Date;
 
 /**
- * @Author Created by nichaurasia
- * @create on Wednesday, September/30/2020 at 9:38 AM
+ * @author Created by nichaurasia
+ * Created on Wednesday, September/30/2020 at 9:38 AM
  */
 
 @Getter

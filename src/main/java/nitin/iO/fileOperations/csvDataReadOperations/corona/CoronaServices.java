@@ -8,8 +8,8 @@ import java.util.logging.Logger;
 
 
 /**
- * @Author Created by nichaurasia
- * @create on Wednesday, September/30/2020 at 11:22 AM
+ * @author Created by nichaurasia
+ * Created on Wednesday, September/30/2020 at 11:22 AM
  */
 
 public class CoronaServices {

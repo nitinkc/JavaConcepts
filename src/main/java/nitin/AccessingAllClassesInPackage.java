@@ -1,6 +1,11 @@
-package java;
+package nitin;
+
+import com.google.common.reflect.ClassPath;
+import org.reflections.Reflections;
+import org.reflections.scanners.SubTypesScanner;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Set;
@@ -25,5 +30,22 @@ public class AccessingAllClassesInPackage {
             // handle the exception
         }
         return null;
+    }
+
+    public Set<Class> findAllClassesUsingGoogleGuava(String packageName) throws IOException {
+        return ClassPath.from(ClassLoader.getSystemClassLoader())
+                .getAllClasses()
+                .stream()
+                .filter(clazz -> clazz.getPackageName()
+                        .equalsIgnoreCase(packageName))
+                .map(clazz -> clazz.load())
+                .collect(Collectors.toSet());
+    }
+
+    public Set<Class> findAllClassesUsingReflectionsLibrary(String packageName) {
+        Reflections reflections = new Reflections(packageName, new SubTypesScanner(false));
+        return reflections.getSubTypesOf(Object.class)
+                .stream()
+                .collect(Collectors.toSet());
     }
 }

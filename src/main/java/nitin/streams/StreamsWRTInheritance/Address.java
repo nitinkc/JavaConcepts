@@ -5,8 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @Author Created by nichaurasia
- * @create on Tuesday, September/29/2020 at 3:09 AM
+ * @author Created by nichaurasia
+ * Created on Tuesday, September/29/2020 at 3:09 AM
  */
 
 @Getter

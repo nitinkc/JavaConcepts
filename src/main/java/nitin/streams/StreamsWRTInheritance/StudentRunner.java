@@ -4,8 +4,8 @@ import nitin.streams.StreamsWRTInheritance.data.StudentData;
 import java.util.List;
 
 /**
- * @Author Created by nichaurasia
- * @create on Tuesday, September/29/2020 at 10:24 PM
+ * @author Created by nichaurasia
+ * Created on Tuesday, September/29/2020 at 10:24 PM
  */
 
 public class StudentRunner {

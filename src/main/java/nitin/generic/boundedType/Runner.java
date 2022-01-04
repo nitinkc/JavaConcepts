@@ -1,8 +1,8 @@
 package nitin.generic.boundedType;
 
 /**
- * @Author Created by nichaurasia
- * @create on Tuesday, September/29/2020 at 2:29 AM
+ * @author Created by nichaurasia
+ * Created on Tuesday, September/29/2020 at 2:29 AM
  */
 
 public class Runner {

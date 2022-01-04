@@ -10,8 +10,8 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @Author Created by nichaurasia
- * @create on Tuesday, September/29/2020 at 7:40 PM
+ * @author Created by nichaurasia
+ * Created on Tuesday, September/29/2020 at 7:40 PM
  */
 
 public class StudentData {

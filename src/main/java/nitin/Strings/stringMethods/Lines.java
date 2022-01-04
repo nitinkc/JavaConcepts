@@ -3,8 +3,8 @@ package nitin.Strings.stringMethods;
 import java.util.stream.Collectors;
 
 /**
- * @Author Created by nichaurasia
- * @create on Sunday, December/20/2020 at 7:14 PM
+ * @author Created by nichaurasia
+ * Created on Sunday, December/20/2020 at 7:14 PM
  */
 
 public class Lines {

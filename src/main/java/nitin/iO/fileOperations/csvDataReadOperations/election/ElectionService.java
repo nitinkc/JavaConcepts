@@ -8,8 +8,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * @Author Created by nichaurasia
- * @create on Wednesday, September/30/2020 at 5:41 PM
+ * @author Created by nichaurasia
+ * Created on Wednesday, September/30/2020 at 5:41 PM
  */
 
 public class ElectionService {

@@ -13,8 +13,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @Author Created by nichaurasia
- * @create on Tuesday, September/29/2020 at 11:23 PM
+ * @author Created by nichaurasia
+ * Created on Tuesday, September/29/2020 at 11:23 PM
  */
 
 public class ReadTransactionsCsv {

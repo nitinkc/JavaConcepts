@@ -1,8 +1,8 @@
 package nitin.Strings.stringMethods;
 
 /**
- * @Author Created by nichaurasia
- * @create on Sunday, December/20/2020 at 7:19 PM
+ * @author Created by nichaurasia
+ * Create on Sunday, December/20/2020 at 7:19 PM
  */
 
 public class Strip {

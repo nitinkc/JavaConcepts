@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @Author Created by nichaurasia
- * @create on Thursday, October/01/2020 at 1:24 AM
+ * @author Created by nichaurasia
+ * Created on Thursday, October/01/2020 at 1:24 AM
  */
 
 // https://github.com/eugenp/tutorials/blob/master/core-java-modules/core-java-8/src/test/java/com/baeldung/java_8_features/groupingby/Java8GroupingByCollectorUnitTest.java

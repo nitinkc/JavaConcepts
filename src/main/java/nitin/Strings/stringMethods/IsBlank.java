@@ -1,8 +1,8 @@
 package nitin.Strings.stringMethods;
 
 /**
- * @Author Created by nichaurasia
- * @create on Sunday, December/20/2020 at 5:52 PM
+ * @author Created by nichaurasia
+ * Created on Sunday, December/20/2020 at 5:52 PM
  */
 
 public class IsBlank {

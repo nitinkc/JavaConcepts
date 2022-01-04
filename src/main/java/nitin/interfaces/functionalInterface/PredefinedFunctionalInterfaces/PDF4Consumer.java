@@ -14,7 +14,7 @@ import java.util.function.Consumer;
  * Ex: we use Consumer with forEach
  * a_list.forEach(System.out :: print);
  * OR
- * Consumer<String> c1 = System.out::println;
+ */ /*Consumer<String> c1 = System.out::println;
  * a_list.forEach(c1);
  * Consumer<String> c2 = x -> System.out.println(x);
  */

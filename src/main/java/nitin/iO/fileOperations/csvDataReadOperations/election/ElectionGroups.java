@@ -8,8 +8,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @Author Created by nichaurasia
- * @create on Wednesday, September/30/2020 at 11:22 PM
+ * @author Created by nichaurasia
+ * Created on Wednesday, September/30/2020 at 11:22 PM
  */
 
 public class ElectionGroups {

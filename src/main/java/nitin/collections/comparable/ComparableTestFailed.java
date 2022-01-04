@@ -15,8 +15,8 @@ import java.util.TreeSet;
  *
  * This problem CANNOT be solved with COMPARATOR.
  * comparator can be used when we call java Utility Class
- * a10collections.sort(List<Integer>, comparator<...>)
  */
+ // a10collections.sort(List<Integer>, comparator<...>)
 public class ComparableTestFailed {
     public static void main(String[] args) {
         Student s1 = new Student(4,"Lucy","Taylor","Jenkov Taylor");

@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @Author Created by nichaurasia
- * @create on Wednesday, September/30/2020 at 7:43 PM
+ * @author Created by nichaurasia
+ * Created on Wednesday, September/30/2020 at 7:43 PM
  */
 
 // https://www.oracle.com/technical-resources/articles/java/architect-streams-pt2.html

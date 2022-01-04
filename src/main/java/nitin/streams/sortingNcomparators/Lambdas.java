@@ -4,8 +4,8 @@ import java.util.Comparator;
 import java.util.function.Predicate;
 
 /**
- * @Author Created by nichaurasia
- * @create on Sunday, September/27/2020 at 4:59 PM
+ * @author Created by nichaurasia
+ * Created on Sunday, September/27/2020 at 4:59 PM
  */
 
 public class Lambdas {

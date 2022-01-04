@@ -1,8 +1,8 @@
 package nitin.zOReiley2020SimonRoberts.f2functionalConcepts.r4GivingTypeToALambda;
 
 /**
- * @Author Created by nichaurasia
- * @create on Friday, September/18/2020 at 12:11 PM
+ * @author Created by nichaurasia
+ * Created on Friday, September/18/2020 at 12:11 PM
  */
 
 @FunctionalInterface

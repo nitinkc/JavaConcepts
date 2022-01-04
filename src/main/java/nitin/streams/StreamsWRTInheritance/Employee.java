@@ -6,8 +6,8 @@ import lombok.Setter;
 import java.util.Date;
 
 /**
- * @Author Created by nichaurasia
- * @create on Tuesday, September/29/2020 at 7:36 PM
+ * @author Created by nichaurasia
+ * Created on Tuesday, September/29/2020 at 7:36 PM
  */
 
 @Getter

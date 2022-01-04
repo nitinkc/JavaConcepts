@@ -1,8 +1,8 @@
 package nitin.streams.StreamsWRTInheritance;
 
 /**
- * @Author Created by nichaurasia
- * @create on Tuesday, September/29/2020 at 3:18 AM
+ * @author Created by nichaurasia
+ * Created on Tuesday, September/29/2020 at 3:18 AM
  */
 
 public enum StudentOf {

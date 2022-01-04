@@ -2,7 +2,7 @@ package nitin.a2operators;
 
 /**
  * Created by Nitin Chaurasia on 12/28/16 at 10:32 PM.
- * && and || : just to improve the performance of the system.
+ * &amp;&amp; and || : just to improve the performance of the system.
  * Applicable only for Boolean type.
  * second operand evaluation is optional
  */
