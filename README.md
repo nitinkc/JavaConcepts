@@ -7,19 +7,15 @@
 
 [src/main/java/nitin/a2operators/operators.md](src/main/java/nitin/a2operators/operators.md)
 
-[src/main/java/nitin/accessModifiers/staticTest/notes.md](src/main/java/nitin/accessModifiers/staticTest
-/notes.md)
+[src/main/java/nitin/accessModifiers/staticTest/notes.md](src/main/java/nitin/accessModifiers/staticTest/notes.md)
 
 [src/main/java/nitin/accessModifiers/final/notes.md](src/main/java/nitin/accessModifiers/final/notes.md)
 
-[src/main/java/nitin/multithreading/concurrentVSdistributed.md](src/main/java/nitin/multithreading
-/concurrentVSdistributed.md)
+[src/main/java/nitin/multithreading/concurrentVSdistributed.md](src/main/java/nitin/multithreading/concurrentVSdistributed.md)
 
-[src/main/java/nitin/multithreading/raceConditionsNCritical Section.md](src/main/java/nitin/multithreading
-/raceConditionsNCritical Section.md)
+[src/main/java/nitin/multithreading/raceConditionsNCritical Section.md](src/main/java/nitin/multithreading/raceConditionsNCritical Section.md)
 
-[src/main/java/nitin/iO/streams/javaIO_Class_Properties.md](src/main/java/nitin/iO/streams
-/javaIO_Class_Properties.md)
+[src/main/java/nitin/iO/streams/javaIO_Class_Properties.md](src/main/java/nitin/iO/streams/javaIO_Class_Properties.md)
 
 [src/main/java/nitin/object/notes.md](src/main/java/nitin/object/notes.md)
 
@@ -31,11 +27,9 @@
 
 [src/main/java/nitin/generic/oReilly/a3Max/readMe.md](src/main/java/nitin/generic/oReilly/a3Max/readMe.md)
 
-[src/main/java/nitin/generic/oReilly/a4sorting/ReadMe.md](src/main/java/nitin/generic/oReilly/a4sorting
-/ReadMe.md)
+[src/main/java/nitin/generic/oReilly/a4sorting/ReadMe.md](src/main/java/nitin/generic/oReilly/a4sorting/ReadMe.md)
 
-[src/main/java/nitin/generic/oReilly/a6erasure/ReadMe.md](src/main/java/nitin/generic/oReilly/a6erasure
-/ReadMe.md)
+[src/main/java/nitin/generic/oReilly/a6erasure/ReadMe.md](src/main/java/nitin/generic/oReilly/a6erasure/ReadMe.md)
 
 [src/main/java/nitin/generic/oReilly/a5map/ReadMe.md](src/main/java/nitin/generic/oReilly/a5map/ReadMe.md)
 
