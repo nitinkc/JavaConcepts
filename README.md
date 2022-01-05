@@ -15,7 +15,7 @@
 
 [src/main/java/nitin/multithreading/raceConditionsNCriticalSection.md](src/main/java/nitin/multithreading/raceConditionsNCriticalSection.md)
 
-[src/main/java/nitin/iO/streams/javaIO_Class_Properties.md](src/main/java/nitin/iO/streams/javaIO_Class_Properties.md)
+[src/main/java/nitin/iO/streams/javaIO_Class_Properties.md](src/main/java/nitin/io/streams/javaIO_Class_Properties.md)
 
 [src/main/java/nitin/object/notes.md](src/main/java/nitin/object/notes.md)
 
