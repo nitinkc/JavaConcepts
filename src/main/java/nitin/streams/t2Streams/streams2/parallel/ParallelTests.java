@@ -24,9 +24,14 @@ public class ParallelTests {
       Op serialSum =   () -> MathUtils.fancySum1(nums);
       Op parallelSum = () -> MathUtils.fancySum2(nums);
       System.out.printf("Serial sum for length   %,d.%n", size);
-      Op.timeOp(serialSum);
+      double serialTime = Op.timeOp(serialSum);
+      double parallelTime = Op.timeOp(parallelSum);
+      System.out.printf("  Elapsed time: %.3f seconds.%n", serialTime);
       System.out.printf("Parallel sum for length %,d.%n", size);
+      System.out.printf("  Elapsed time: %.3f seconds.%n", parallelTime);
+
       Op.timeOp(parallelSum);
+      System.out.printf("Percent Difference %.3f %n", ((serialTime - parallelTime)/parallelTime) * 100);
     }
   }
 }

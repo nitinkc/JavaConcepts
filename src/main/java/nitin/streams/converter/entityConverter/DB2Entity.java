@@ -7,6 +7,6 @@ import org.checkerframework.checker.units.qual.A;
 @AllArgsConstructor
 @Data
 public class DB2Entity {
-    private Boolean isAutoFlowRate;
-    private Double autoFlowRateRatio;
+    private Boolean isAutoFlowRateDB2;
+    private Double autoFlowRateRatioDB2;
 }

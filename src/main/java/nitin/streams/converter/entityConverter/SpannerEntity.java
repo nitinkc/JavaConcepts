@@ -8,6 +8,6 @@ import lombok.Data;
 @Data
 @Builder
 public class SpannerEntity {
-    private Boolean isAuto;
-    private Double rateRatio;
+    private Boolean isAutoSpanner;
+    private Double rateRatioSpanner;
 }

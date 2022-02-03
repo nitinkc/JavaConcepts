@@ -16,9 +16,6 @@ public class StudentComparator implements Comparator<Student> {
             return -1;
         else
         return fNameComparator(s1,s2);
-
-
-
     }
     private int fNameComparator(Student s1, Student s2 ) {
         if(s1.fName.compareTo(s2.fName)>1)
@@ -28,6 +25,4 @@ public class StudentComparator implements Comparator<Student> {
         else
             return 0;
     }
-
-
 }

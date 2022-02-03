@@ -15,13 +15,13 @@ package nitin.LambdaExpressions.t1Lambdas.lambdasInCollection.timing;
 public interface Op {
   void runOp();
   
-  static void timeOp(Op operation) {
+  static double timeOp(Op operation) {
     long startTime = System.nanoTime();
     operation.runOp();
     long endTime = System.nanoTime();
     double oneBillion = 1_000_000_000;
     double elapsedSeconds = (endTime - startTime)/oneBillion;
-    System.out.printf("  Elapsed time: %.3f seconds.%n", elapsedSeconds);
+    return elapsedSeconds;
   }
   
   default Op combinedOp(Op secondOp) {
