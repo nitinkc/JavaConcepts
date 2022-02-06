@@ -6,7 +6,7 @@ import java.util.*;
 
 /**
  * Created by Nitin Chaurasia on 11/9/15 at 3:43 PM as a part of the kCura interview process.
- *
+ * <p>
  * The data is present in a file the name of which is expected as a command line argument.
  * If the file name is not given, the program terminates giving an error
  * NOTE: The Data is assumed to be in a predefined format, thus the check for the
@@ -15,16 +15,16 @@ import java.util.*;
 
 
 /*
-    * Main Class that runs the project
-    * Arguments to the main function is a name of the file containing data in pipe delimited format
-    * delimited form
+ * Main Class that runs the project
+ * Arguments to the main function is a name of the file containing data in pipe delimited format
+ * delimited form
  */
 
 public class Driver {
     public static final String CITIES_FILE = "Cities_By_Population.txt";
     public static final String INTERSTATES_FILE = "Interstates_By_City.txt";
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Driver driver = new Driver();
         driver.deleteOutputFiles();
         if (args.length == 0 || args.length > 1) {
@@ -51,7 +51,7 @@ public class Driver {
            The contents are put in the form of objects of type Data into a
            List.
          */
-        while (input.hasNext()){
+        while (input.hasNext()) {
             //Split the tokens based on the delimiter "\"
             String[] temp = input.nextLine().split("\\|");
 
@@ -99,7 +99,7 @@ public class Driver {
      * Solving First Part of Option 1 in which data is written in a file named Cities_By_Population.txt
      * In a specified format with a customized sorting order.
      */
-    public void writeCitiesByPopulation(List<Data> list){
+    public void writeCitiesByPopulation(List<Data> list) {
 
         FileWriter fw = null;
         try {
@@ -117,7 +117,7 @@ public class Driver {
         // Write the formatted Data into file
         Iterator<Data> itr = list.listIterator();
         int currentPopulation = -1;
-        while (itr.hasNext()){
+        while (itr.hasNext()) {
             Data curr = itr.next();
             // Grouping the cities with same population, if the population is same, all cities are clubbed
             if (currentPopulation == curr.getPopulation()) {
@@ -170,19 +170,19 @@ public class Driver {
         }
 
         List<String> AllInterstatesSorted = new ArrayList<String>();
-        for (String key : interstateCount.keySet()){
+        for (String key : interstateCount.keySet()) {
             AllInterstatesSorted.add(key);
         }
 
         //Keep a sorted list of Interstates to get the matching values from the Map
-        Collections.sort(AllInterstatesSorted,new InterstateComparator());
+        Collections.sort(AllInterstatesSorted, new InterstateComparator());
 
 
         // Writing Interstates names and its count into the file
-        for (int i = 0; i < AllInterstatesSorted.size(); i++){
+        for (int i = 0; i < AllInterstatesSorted.size(); i++) {
             String key = AllInterstatesSorted.get(i);
             int value = interstateCount.get(key);
-            printToFile.println(key + " " + value );
+            printToFile.println(key + " " + value);
         }
 
         printToFile.close();

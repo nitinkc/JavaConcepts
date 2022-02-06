@@ -15,7 +15,7 @@ import io.reactivex.internal.operators.observable.ObservableCreate;
 public class ObservableNObserver {
     public static void main(String[] args) {
 
-        Observable<Integer> observable = new ObservableCreate<Integer> (new ObservableOnSubscribe<Integer>() {
+        Observable<Integer> observable = new ObservableCreate<Integer>(new ObservableOnSubscribe<Integer>() {
 
             @Override
             public void subscribe(@NonNull ObservableEmitter<Integer> observableEmitter) throws Exception {

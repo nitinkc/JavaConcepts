@@ -4,7 +4,7 @@ import java.util.concurrent.CountDownLatch;
 
 /**
  * Created by Nitin Chaurasia on 12/5/15 at 10:39 PM.
- *
+ * <p>
  * Demonstrating
  */
 public class S7CountDownLatch {
@@ -32,10 +32,10 @@ public class S7CountDownLatch {
     }
 }
 
-class Processor implements Runnable{
+class Processor implements Runnable {
     private final CountDownLatch latch;
 
-    Processor(CountDownLatch latch){
+    Processor(CountDownLatch latch) {
         this.latch = latch;
     }
 

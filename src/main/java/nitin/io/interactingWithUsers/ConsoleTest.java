@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 /**
  * Created by Nitin Chaurasia on 3/6/16 at 2:10 AM.
- *
+ * <p>
  * Using Console to read input(usable only outside IDE)
  * System.console() returns null in an IDE
  * reader() and writer()
@@ -23,7 +23,7 @@ public class ConsoleTest {
     public static void main(String[] args) {
         Console console = System.console();
 
-        if (console == null){
+        if (console == null) {
             // Not available in IDE's
             throw new RuntimeException("Console not available");
         } else {
@@ -58,7 +58,7 @@ public class ConsoleTest {
             char[] verify = console.readPassword();
 
             // Password Verification
-            boolean match = Arrays.equals(password,verify);
+            boolean match = Arrays.equals(password, verify);
 
             // Immediately clear password from memory
             for (int i = 0; i < password.length; i++) {
@@ -66,7 +66,7 @@ public class ConsoleTest {
                 verify[i] = 'x';
             }
 
-            console.format("Your Password was " + ( match ? "Correct" : "Incorrect"));
+            console.format("Your Password was " + (match ? "Correct" : "Incorrect"));
 
             // Printing out the read data
             console.format("Your name is " + name);

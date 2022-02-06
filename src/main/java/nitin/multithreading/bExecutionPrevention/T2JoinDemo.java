@@ -2,9 +2,9 @@ package nitin.multithreading.bExecutionPrevention;
 
 /**
  * Created by Nitin Chaurasia on 12/3/15 at 12:03 AM.
- *
+ * <p>
  * Wait until the Completion of some other Thread
- *
+ * <p>
  * Throws interruptedException (handle else compile error)
  */
 public class T2JoinDemo {
@@ -16,9 +16,9 @@ public class T2JoinDemo {
 
         // Main Thread (Calling Thread) Will wait until t1 Finishes
         // Output is deterministic
-        try{
+        try {
             t1.join();
-        } catch (InterruptedException e){
+        } catch (InterruptedException e) {
             System.out.println(e.fillInStackTrace());
         }
 
@@ -30,7 +30,7 @@ public class T2JoinDemo {
     }
 }
 
-class ThreadJoin implements Runnable{
+class ThreadJoin implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 1000; i++) {

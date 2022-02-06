@@ -180,7 +180,7 @@ public class Driver {
 
     */
 /* Utility method to delete the files.
-     * in case of testing it is used *//*
+ * in case of testing it is used *//*
 
     private static void deleteOutputFiles() {
         File citiesFile = new File(FILE_PATH + CITIES_FILE);

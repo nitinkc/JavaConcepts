@@ -12,8 +12,12 @@ public class F1ImmutableList {
         //Traditional way
 
         List<Integer> list = new ArrayList<>();
-        list.add(2);list.add(3);list.add(4);
-        list.add(5);list.add(6);list.add(7);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        list.add(6);
+        list.add(7);
 
         //This is how an unmodifiable collection is created
         list = Collections.unmodifiableList(list);
@@ -26,7 +30,7 @@ public class F1ImmutableList {
 
         /* JAVA 9 Enhancement; of() method is static factory method */
         // shortcut way to create UNMODIFIABLE Collection Object (no add or remove works after it)
-        List<Integer> l = List.of(2,3,4,5,6,7);//upto 10 elements, post which var-arg method
+        List<Integer> l = List.of(2, 3, 4, 5, 6, 7);//upto 10 elements, post which var-arg method
         // but using var arg is costly
 
         //Internally java.util.ImmutableCollections$ListN, inner class is created, not ArrayList or LL

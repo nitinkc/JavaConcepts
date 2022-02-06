@@ -21,15 +21,15 @@ public class ApacheCommons {
     }
 
     private static void stringToCurrency() {
-        String[] amt = {"NK","22.7","23","2242523614.45436346"};
+        String[] amt = {"NK", "22.7", "23", "2242523614.45436346"};
 
         for (String str : amt) {
-            if(NumberUtils.isCreatable(str)){
+            if (NumberUtils.isCreatable(str)) {
                 str = "$" + new java.text.DecimalFormat("#,##0.00").format(Double.parseDouble(str));
                 System.out.println(str);
             }
 
-            if(str != null){
+            if (str != null) {
                 //Number format exception on str="NK"
                 //str = "$" + new java.text.DecimalFormat("##0.00").format(Double.parseDouble(str));
                 //System.out.println(str);

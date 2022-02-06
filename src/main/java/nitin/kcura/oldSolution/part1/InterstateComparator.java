@@ -4,13 +4,13 @@ import java.util.Comparator;
 
 /**
  * Created by Nitin Chaurasia on 11/10/15.
- *
+ * <p>
  * Based on the Assumption given in the Exercise, The same city will not
  * appear more than once in the input file and thus it can safely be deduced that
  * The total number of times an interstate name appears in the input file is equal to
  * the total number of different cities is passes through
  */
-public class InterstateComparator implements Comparator<String > {
+public class InterstateComparator implements Comparator<String> {
 
     public static final int BIGGER = 1;
     public static final int SMALLER = -1;
@@ -30,10 +30,9 @@ public class InterstateComparator implements Comparator<String > {
 
         if (num1 > num2) {
             return BIGGER;
-        } else if (num1 < num2){
+        } else if (num1 < num2) {
             return SMALLER;
-        }
-        else{
+        } else {
             throw new IllegalArgumentException("Two Interstates with same name in a Same City");
         }
     }

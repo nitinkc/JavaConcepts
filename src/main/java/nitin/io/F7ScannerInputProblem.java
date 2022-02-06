@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class F7ScannerInputProblem {
     public static void main(String[] args) {
 
-    /* Demonstration of Scanner input Problem (nextLine())caused by \n */
+        /* Demonstration of Scanner input Problem (nextLine())caused by \n */
 
         Scanner fromConsole = new Scanner(System.in);
 

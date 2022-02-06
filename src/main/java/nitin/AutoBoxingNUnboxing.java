@@ -20,9 +20,9 @@ public class AutoBoxingNUnboxing {
     }
 
     private static void doSomething(Integer in) {
-    //unboxing, at runtime Integer.intValue() is called implicitly to return int
+        //unboxing, at runtime Integer.intValue() is called implicitly to return int
         int j = in;
-    //unboxing, Integer is passed where int was expected
+        //unboxing, Integer is passed where int was expected
         doPrimitive(in);
     }
 

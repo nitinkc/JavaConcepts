@@ -28,7 +28,7 @@ public class BasicListString {
 
         // How to Add
         //addSet(b_set);
-       System.out.println("Longest string is="+findlongestString(list));
+        System.out.println("Longest string is=" + findlongestString(list));
 
         //How to Iterate
         printSet(list);
@@ -41,13 +41,13 @@ public class BasicListString {
 
     private static String findlongestString(List<String> list) {
         Iterator<String> itr = list.iterator();
-            String ret=null;
-        int temp=0;
-        while(itr.hasNext()){
+        String ret = null;
+        int temp = 0;
+        while (itr.hasNext()) {
             String curr = itr.next();
-            if (curr.length()>=temp){
-                temp=curr.length();
-               ret=curr;
+            if (curr.length() >= temp) {
+                temp = curr.length();
+                ret = curr;
 
             }
         }
@@ -56,10 +56,10 @@ public class BasicListString {
     }
 
     /**
-     *  3 main methids of iterator
-     1. hasNext()
-     2. next()
-     3. remove()
+     * 3 main methids of iterator
+     * 1. hasNext()
+     * 2. next()
+     * 3. remove()
      */
     private static void printSet(List<String> list) {
         //Printing with Iterator
@@ -73,7 +73,6 @@ public class BasicListString {
         System.out.println();
 
     }
-
 
 
 }

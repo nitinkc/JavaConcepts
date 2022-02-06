@@ -12,7 +12,7 @@ public class Driver {
         System.out.println(s == Season.SUMMER); // true
 
         // Looping through the ENUM
-        for (Season itr : Season.values()){
+        for (Season itr : Season.values()) {
             System.out.println(itr.ordinal() + " --- " + itr.name());
         }
     }

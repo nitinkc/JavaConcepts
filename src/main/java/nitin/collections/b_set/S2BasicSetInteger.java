@@ -38,9 +38,9 @@ public class S2BasicSetInteger {
     private static void removeOddNumber(Set<Integer> set) {
         Iterator<Integer> itr = set.iterator();
 
-        while(itr.hasNext()){
+        while (itr.hasNext()) {
             int curr = itr.next();
-            if (curr%2 != 0){
+            if (curr % 2 != 0) {
                 itr.remove();
                 // ConcurrentModificationException
                 //b_set.remove(curr);
@@ -50,10 +50,10 @@ public class S2BasicSetInteger {
     }
 
     /**
-     *  3 main methods of iterator
-     1. hasNext()
-     2. next()
-     3. remove()
+     * 3 main methods of iterator
+     * 1. hasNext()
+     * 2. next()
+     * 3. remove()
      */
     private static void printSet(Set<Integer> set) {
         //Printing with Iterator
@@ -67,7 +67,7 @@ public class S2BasicSetInteger {
 
         System.out.println("Print Using For Each Loop");
 
-        for(Integer i : set){
+        for (Integer i : set) {
             System.out.print(i);
         }
 
@@ -81,7 +81,7 @@ public class S2BasicSetInteger {
      *
      * @param set
      */
-    private static void addSet(Set<Integer> set){
+    private static void addSet(Set<Integer> set) {
         set.addAll(Arrays.asList(2, 4, 6, 9, 10, 11, 12));
         set.add(1234);
     }

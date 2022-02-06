@@ -11,9 +11,8 @@ public class T5NameCustomization {
         //There is Always a main Thread
         System.out.println(t);// Main Thread
         /* Thread[Nitin,5,main]
-        *  Thread Name, PRIORITY = 5, by Default for main, Method executing the thread
-        * */
-
+         *  Thread Name, PRIORITY = 5, by Default for main, Method executing the thread
+         * */
 
 
         //Name Customization

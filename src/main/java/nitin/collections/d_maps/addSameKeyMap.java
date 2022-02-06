@@ -9,16 +9,16 @@ import java.util.Map;
  */
 public class addSameKeyMap {
     public static void main(String[] args) {
-        Map<Integer,String> map = new HashMap<Integer, String>();
-        map.put(1,"abc");
-        map.put(2,"abc");
-        map.put(1,"Sangram"); // overwritten
+        Map<Integer, String> map = new HashMap<Integer, String>();
+        map.put(1, "abc");
+        map.put(2, "abc");
+        map.put(1, "Sangram"); // overwritten
 
-        Iterator<Integer> itr= map.keySet().iterator();
+        Iterator<Integer> itr = map.keySet().iterator();
 
-        while (itr.hasNext()){
+        while (itr.hasNext()) {
             int key = itr.next();
-            System.out.println(key + "  -  " + map.get(key) );
+            System.out.println(key + "  -  " + map.get(key));
         }
     }
 }

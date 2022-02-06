@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Nitin Chaurasia on 12/5/15 at 10:09 PM.
- *
+ * <p>
  * Smaller Synhronized Blocks
  */
 public class S6ThreadPool {
@@ -16,7 +16,7 @@ public class S6ThreadPool {
         ExecutorService executor = Executors.newFixedThreadPool(10);
 
         //No need to create the instance of Thread class
-        for(int i=0; i<50; i++) {
+        for (int i = 0; i < 50; i++) {
             executor.submit(new Workers(i));
         }
 
@@ -35,11 +35,13 @@ public class S6ThreadPool {
 
 }
 
-class Workers implements Runnable{
+class Workers implements Runnable {
     private final int count;
-    Workers(int i){
+
+    Workers(int i) {
         this.count = i;
     }
+
     @Override
     public void run() {
         System.out.println("Starting... " + count);
@@ -51,7 +53,7 @@ class Workers implements Runnable{
         System.out.println("Ending... " + count);
     }
 
-    public int getCount(){
+    public int getCount() {
         return count;
     }
 

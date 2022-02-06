@@ -9,7 +9,7 @@ import java.util.List;
  * ArrayList arrayList=new ArrayList(11);
  * ArrayList Initial Size 10; Later incremented by 3/2 + 1
  * Vector Initial Size 16; Incremented by 2X
- *
+ * <p>
  * list.remove() --> ConcurrentModificationException
  * itr.remove() --> correct way to remove
  */
@@ -25,7 +25,7 @@ public class L3RemoveElementsUsingIterator {
         list.remove(2);// Removing the element, from anywhere
 
         System.out.println("******************* LIST BEFORE REMOVAL ***************************** ");
-        System.out.println(list );
+        System.out.println(list);
 
         Iterator itr = list.iterator();
 
@@ -39,6 +39,6 @@ public class L3RemoveElementsUsingIterator {
         }// The a_list will be empty after this
 
         System.out.println("******************* LIST AFTER REMOVAL ***************************** ");
-        System.out.println(list );
+        System.out.println(list);
     }
 }

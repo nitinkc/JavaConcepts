@@ -13,8 +13,8 @@ public class ApostrophyIssue {
 
         StringUtils.replace(var2, "'", "&rsquo;");
 
-        String selectedRad = "onClick='setSelectedValue(\"" + var1 + delimiterS + var2+"\")'";
-        String selectedRadWithApostropy = "onClick='setSelectedValue(\""+ var1 + delimiterS + "Eutsler's" +"\")'";
+        String selectedRad = "onClick='setSelectedValue(\"" + var1 + delimiterS + var2 + "\")'";
+        String selectedRadWithApostropy = "onClick='setSelectedValue(\"" + var1 + delimiterS + "Eutsler's" + "\")'";
 
         System.out.println(selectedRad);
 

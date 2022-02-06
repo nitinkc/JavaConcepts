@@ -42,12 +42,12 @@ class Display1 {
      * The Static Sync method puts a class level lock.
      * When a thread executes a static Sync method then remaining threads are not allowed to
      * execute ANY static Sync Methodof that class simultaneously.
-     *
+     * <p>
      * BUT remaining threads can execute following methods
      * 1. normal static
      * 2. nornal instance
      * 3. synchronized instance
-      */
+     */
 
     public static synchronized void wish(String name) throws InterruptedException {
         for (int i = 0; i < 10; i++) {

@@ -6,9 +6,11 @@ package nitin.LambdaExpressions.t1Lambdas.lambdas2.integrable;
 // We will see later that we can dispense with this interface
 // definition totally and use java.util.DoubleUnaryOperato instead.
 
-/** Represents a function to be integrated. */
+/**
+ * Represents a function to be integrated.
+ */
 
 @FunctionalInterface
 public interface Integrable {
-  double eval(double x);
+    double eval(double x);
 } 

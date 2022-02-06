@@ -10,11 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
  * @author Juneau
  */
 public class WildcardExample {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         List<Integer> intList = new ArrayList<Integer>();
         intList.add(2);
         intList.add(4);
@@ -36,32 +35,33 @@ public class WildcardExample {
         checkList(intList, 3);
         checkList(objList, strList);
         checkList(strList, objList);
-        
+
         checkNumber(intList, 3);
         // The following will not work since strList is not a List of Number types
         //checkNumber(strList, "three");
     }
-    
+
     /**
      * This method will print a List of unknown type
-     * @param myList 
+     *
+     * @param myList
      */
-    public static <T> void printList(List<T> myList){
-        for(Object e:myList){
+    public static <T> void printList(List<T> myList) {
+        for (Object e : myList) {
             System.out.println(e);
         }
     }
-    
-    public static <T> void checkList(List<?> myList, T obj){
-        if(myList.contains(obj)){
+
+    public static <T> void checkList(List<?> myList, T obj) {
+        if (myList.contains(obj)) {
             System.out.println("The list " + myList + " contains the element: " + obj);
         } else {
             System.out.println("The list " + myList + " does not contain the element: " + obj);
         }
     }
-    
-    public static <T> void checkNumber(List<? extends Number> myList, T obj){
-        if(myList.contains(obj)){
+
+    public static <T> void checkNumber(List<? extends Number> myList, T obj) {
+        if (myList.contains(obj)) {
             System.out.println("The list " + myList + " contains the element: " + obj);
         } else {
             System.out.println("The list " + myList + " does not contain the element: " + obj);

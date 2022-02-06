@@ -39,13 +39,13 @@ public class ParseMentorBox {
         int titleCount = 0, subTitleCount = 0;
         while (in.hasNext()) {
             String str = in.nextLine();
-            if (str.equals(searchTitle)){
+            if (str.equals(searchTitle)) {
                 output.print(in.nextLine() + "\t ||");
                 System.out.println(str);
                 titleCount++;
             }
 
-            if (str.equals(searchSubTitle)){
+            if (str.equals(searchSubTitle)) {
                 output.println(in.nextLine());
                 System.out.println(str);
                 output.println("*******************");

@@ -30,7 +30,7 @@ public class GetNextMonthsNYearDates {
         poiBeginDate = OldDateUtilities.nullifyTime(poiBeginDate);
         //Add 12 months from one month of the current Date
         calendar.add(Calendar.MONTH, 12);
-        calendar.add(Calendar.DATE,-1);
+        calendar.add(Calendar.DATE, -1);
         Date poiEndDate = calendar.getTime();
         poiEndDate = OldDateUtilities.nullifyTime(poiEndDate);
 

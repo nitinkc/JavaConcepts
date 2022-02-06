@@ -20,11 +20,11 @@ public class S4CustomizedSerialization {
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File("src/com/nitin/a21serialization/serialObjectCoustomized.txt")));
 
         // Call the overridden readObject from the class Login
-        Login c = (Login)ois.readObject();
+        Login c = (Login) ois.readObject();
         ois.close();
 
-        System.out.println(l.uname +" : "+l.pwd);
-        System.out.println(c.uname +" : "+c.pwd);
+        System.out.println(l.uname + " : " + l.pwd);
+        System.out.println(c.uname + " : " + c.pwd);
     }
 }
 
@@ -33,7 +33,7 @@ class Login implements Serializable {
     transient String pwd = "123@abc##";//Passwords are transient because do not sent over inter net as a string
 
     //Automatically executed at the time of Serialization. PRIVATE METHOD, NOT PUBLIC
-    private void writeObject(ObjectOutputStream os) throws Exception{
+    private void writeObject(ObjectOutputStream os) throws Exception {
         //perform default a21serialization (Nitin...null) 
         os.defaultWriteObject();
 
@@ -45,7 +45,7 @@ class Login implements Serializable {
     // Automatically executed at the time of De-Serialization
     private void readObject(ObjectInputStream is) throws Exception {
         is.defaultReadObject();
-        String epwd = (String)is.readObject();
+        String epwd = (String) is.readObject();
         pwd = epwd.substring(5);//Decripting the password 
     }
 }

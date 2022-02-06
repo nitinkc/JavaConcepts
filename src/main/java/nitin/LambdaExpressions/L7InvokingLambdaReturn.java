@@ -8,17 +8,17 @@ public class L7InvokingLambdaReturn {
 
         //Since there is only one abstract method in the functional interface,
         // type mapping is easy for the compiler
-        InterfaceWithReturnMethod i = x -> x*x;
+        InterfaceWithReturnMethod i = x -> x * x;
         System.out.println(i.squareIt(4));
         System.out.println(i.squareIt(18));
 
-        InterfaceForLambda i1 = (x,y) -> String.valueOf(x+y);
-        System.out.println(i1.doSomething(23,7));
+        InterfaceForLambda i1 = (x, y) -> String.valueOf(x + y);
+        System.out.println(i1.doSomething(23, 7));
         System.out.println(i1.doSomething(76, 8));
 
         // takes like string
-        InterfaceForLambda i2 = (c,d) -> String.valueOf(c*d);
-        System.out.println(i2.doSomething(3,7));
+        InterfaceForLambda i2 = (c, d) -> String.valueOf(c * d);
+        System.out.println(i2.doSomething(3, 7));
         System.out.println(i2.doSomething(5, 8));
     }
 }
@@ -28,6 +28,6 @@ interface InterfaceWithReturnMethod {
 }
 
 @FunctionalInterface
-interface InterfaceForLambda{
+interface InterfaceForLambda {
     String doSomething(int a, int b);
 }

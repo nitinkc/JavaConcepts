@@ -9,12 +9,10 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 
-public class LogDemo
-{
+public class LogDemo {
     private static Log logger = LogFactory.getLog(LogDemo.class);
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         logger.info("Test info");
         logger.debug("Test info");
         logger.error("Test error");

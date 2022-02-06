@@ -1,13 +1,13 @@
 package nitin.generic.examples;
 
 
-public class GenericNumberContainer <T extends Number> {
+public class GenericNumberContainer<T extends Number> {
     private T obj;
 
-    public GenericNumberContainer(){
+    public GenericNumberContainer() {
     }
-    
-    public GenericNumberContainer(T t){
+
+    public GenericNumberContainer(T t) {
         obj = t;
     }
 

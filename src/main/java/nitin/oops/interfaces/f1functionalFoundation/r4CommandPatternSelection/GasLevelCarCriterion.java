@@ -1,6 +1,6 @@
 package nitin.oops.interfaces.f1functionalFoundation.r4CommandPatternSelection;
 
-public class GasLevelCarCriterion implements CarCriteria{
+public class GasLevelCarCriterion implements CarCriteria {
 
     private int threshold;
 

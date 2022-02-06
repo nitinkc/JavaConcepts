@@ -2,7 +2,7 @@ package nitin.multithreading.cSynchronization;
 
 /**
  * Created by Nitin Chaurasia on 12/3/15 at 11:01 PM.
- *
+ * <p>
  * Synchronized(this) - To get lock on current object
  * Synchronized(obj) - To get lock on object
  * Synchronized(classname.class) - To get a class level Lock

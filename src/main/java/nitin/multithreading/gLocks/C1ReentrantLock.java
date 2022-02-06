@@ -24,7 +24,7 @@ public class C1ReentrantLock {
     }
 }
 
-class RLock implements Runnable{
+class RLock implements Runnable {
 
     // From java.util.concurrent.locks
     Lock l = new ReentrantLock();

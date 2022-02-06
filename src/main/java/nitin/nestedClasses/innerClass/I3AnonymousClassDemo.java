@@ -7,7 +7,7 @@ package nitin.nestedClasses.innerClass;
  */
 
 
-interface Demo{
+interface Demo {
     void show();
 }
 
@@ -18,17 +18,18 @@ public class I3AnonymousClassDemo {
 
     public static void main(String[] args) {
 
-        Demo demo = new Demo(){//Anonymous Class
+        Demo demo = new Demo() {//Anonymous Class
             public void show() {
                 System.out.println("Show from Anonymous class...");
             }
         };
 
-        I3AnonymousClassDemo ref=new I3AnonymousClassDemo(){//Anonymous inner Class
+        I3AnonymousClassDemo ref = new I3AnonymousClassDemo() {//Anonymous inner Class
             public void data() {
                 System.out.println("Anonymous Inner Class...");
             }
-            public void display(){
+
+            public void display() {
                 System.out.println("Display of Outer...");
             }
         };

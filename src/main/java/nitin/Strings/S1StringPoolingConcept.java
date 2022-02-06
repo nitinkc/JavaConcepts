@@ -4,7 +4,7 @@ package nitin.Strings;
  * Created by Nitin C on 11/26/2015.
  */
 public class S1StringPoolingConcept {
-    public static void main(String []args){
+    public static void main(String[] args) {
         // Two ways of Creating a String (new and "~~~")
         String s = "";
         String x = "";

@@ -25,9 +25,9 @@ public class PDF4Consumer {
         c.accept("Nitin");
         c.accept("Kirti");
 
-        Map<String,Integer> map = new HashMap<>();
-        BiConsumer<String,Integer> b1 = map::put;
-        BiConsumer<String,Integer> b2 = (k,v) -> map.put(k,v);
+        Map<String, Integer> map = new HashMap<>();
+        BiConsumer<String, Integer> b1 = map::put;
+        BiConsumer<String, Integer> b2 = (k, v) -> map.put(k, v);
 
         b1.accept("Chicken", 1);
         b2.accept("Mutton", 2);

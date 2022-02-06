@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 public class StreamAssignment {
     public static void main(String[] args) {
-        List<String> list = Arrays.asList("Great","Grand","Uncle");
+        List<String> list = Arrays.asList("Great", "Grand", "Uncle");
         List<StringDto> resultList = new ArrayList<>();
 
 //        for (String str:list) {
@@ -20,7 +20,7 @@ public class StreamAssignment {
 //        }
 
         resultList = list.stream()
-            .map(item -> new StringDto(com.utilities.StringUtils.reverseString(StringUtils.upperCase(item)), Math.round(Math.random())))
+                .map(item -> new StringDto(com.utilities.StringUtils.reverseString(StringUtils.upperCase(item)), Math.round(Math.random())))
                 .collect(Collectors.toList());
         resultList.stream().forEach(item -> System.out.println(item));
 
@@ -38,7 +38,7 @@ public class StreamAssignment {
 @Data
 @AllArgsConstructor
 @ToString
-class StringDto{
+class StringDto {
     private String str;
     private long random;
 }
@@ -46,6 +46,6 @@ class StringDto{
 @Data
 @AllArgsConstructor
 @ToString
-class SomeDto{
+class SomeDto {
     private String str;
 }

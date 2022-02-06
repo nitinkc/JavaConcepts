@@ -9,12 +9,12 @@ import java.util.stream.Stream;
  */
 public class S8map {
     public static void main(String[] args) {
-        Stream<String> listStream = Stream.of("Nitin","Nidhi","Niti");
+        Stream<String> listStream = Stream.of("Nitin", "Nidhi", "Niti");
         List<Integer> x = new ArrayList<>();
 
         // Lambda Expression
         listStream
-                .flatMap(a -> Stream.of(a.toLowerCase(), a.length(),a.toUpperCase()))
+                .flatMap(a -> Stream.of(a.toLowerCase(), a.length(), a.toUpperCase()))
                 .forEach(b -> System.out.println(b));
 
         //The same is written in method reference

@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
  */
 
 public class ReadElectionCsv {
-    public static List<ElectionEntity> getData () {
+    public static List<ElectionEntity> getData() {
         String file = "JavaLatest/src/main/java/com/fileOperations/csvDataReadOperations/election/india_general_election_2014.csv";
 
         return readFileNreturnList(file);
@@ -48,11 +48,11 @@ public class ReadElectionCsv {
     private static ElectionEntity makeObjects(String[] line) {
         ElectionEntity e = null;
         //State,Assembly,Candidate,Party,Votes
-        e =  new ElectionEntity(line[0],
+        e = new ElectionEntity(line[0],
                 line[1],
                 line[2],
                 line[3],
-                NumberUtils.toInt(line[4],0)
+                NumberUtils.toInt(line[4], 0)
         );
 
         //System.out.println(e);

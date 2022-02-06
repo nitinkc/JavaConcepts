@@ -13,10 +13,9 @@ public class O1DeclaringOptional {
      * value could possibly be null.
      * Optional is a box that contains values in it
      * Optional is of 16 bytes, and is an Object. creates a separate memory, excessive use should be avoided
-     *  as it can create performance issues.
-     *
-     *  Optional is immutable. Once assigned, it cannot be reassigned.
-     *
+     * as it can create performance issues.
+     * <p>
+     * Optional is immutable. Once assigned, it cannot be reassigned.
      */
 
     String str = "String";

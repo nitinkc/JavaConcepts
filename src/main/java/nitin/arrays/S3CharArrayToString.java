@@ -5,7 +5,7 @@ package nitin.arrays;
  */
 public class S3CharArrayToString {
     public static void main(String[] args) {
-        char[] a = {'a','b','c'};
+        char[] a = {'a', 'b', 'c'};
 
         //String constructor that takes charArray
         String data = new String(a);

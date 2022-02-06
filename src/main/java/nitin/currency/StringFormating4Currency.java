@@ -14,7 +14,7 @@ public class StringFormating4Currency {
         for (String temp : number) {
             // Double.parseDouble does not handle null pointer or number pointer exception
             //double amount = Double.parseDouble(temp);
-            double amount = NumberUtils.toDouble(temp,-1L);
+            double amount = NumberUtils.toDouble(temp, -1L);
             //DecimalFormat formatter = new DecimalFormat("#,###.00");
             NumberFormat formatter = NumberFormat.getCurrencyInstance(new Locale("en", "CA"));
 

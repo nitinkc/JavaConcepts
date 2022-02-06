@@ -7,11 +7,11 @@ public class MyATM {
     private final Lock lock;
     private final int balance = 1000;
 
-    public MyATM(){
+    public MyATM() {
         lock = new ReentrantLock();
     }
 
-    public int withdraw(int amount){
+    public int withdraw(int amount) {
         int temp = balance;
         lock.lock();
 
@@ -20,7 +20,7 @@ public class MyATM {
         return temp;
     }
 
-    public int deposit(int amount){
+    public int deposit(int amount) {
         int temp = balance;
         lock.lock();
 

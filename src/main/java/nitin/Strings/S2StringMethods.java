@@ -12,7 +12,7 @@ public class S2StringMethods {
 
         // Index Of
         System.out.println(x.indexOf('M'));
-        System.out.println(x.indexOf('a',3));
+        System.out.println(x.indexOf('a', 3));
         System.out.println(x.indexOf("Days"));
         System.out.println(x.indexOf("gudi", 4));
 

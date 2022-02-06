@@ -12,7 +12,7 @@ public class AssetRunner {
         List<Asset> assets = Arrays.asList(
                 new Asset(Asset.AssetType.STOCK, 1000),
                 new Asset(Asset.AssetType.STOCK, 2000),
-                new Asset(Asset.AssetType.BOND,300),
+                new Asset(Asset.AssetType.BOND, 300),
                 new Asset(Asset.AssetType.BOND, 500)
         );
 

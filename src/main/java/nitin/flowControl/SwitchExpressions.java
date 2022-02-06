@@ -12,7 +12,7 @@ public class SwitchExpressions {
             case "M", "W", "F" -> "Monday Wednesday Friday";
             case "Tuesday", "TH", "Sat" -> "Tuesday Thursday Saturday";
             default -> {
-                if(day.isEmpty())
+                if (day.isEmpty())
                     yield "Please insert a valid day";
                 else
                     yield "Sunday";

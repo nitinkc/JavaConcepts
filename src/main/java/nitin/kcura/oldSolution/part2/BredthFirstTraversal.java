@@ -39,7 +39,7 @@ public class BredthFirstTraversal {
     public String printList() {
         String value = "";
         for (CityDistance cityDistance : allCitiesWithDistance) {
-            value = value + cityDistance.data + " " +cityDistance.distance + "\n";
+            value = value + cityDistance.data + " " + cityDistance.distance + "\n";
             System.out.println("Distance: " + value);
         }
         return value;

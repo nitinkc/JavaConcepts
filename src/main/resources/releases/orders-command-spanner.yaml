@@ -13,5 +13,5 @@ spec:
       repository: <dockerhub-artifactory>/orders-command-spanner
       tag: 2021-11-08T15-36-d717d3722-541
   valuesFrom:
-  - configMapKeyRef:
-      name: environment-overrides
+    - configMapKeyRef:
+        name: environment-overrides

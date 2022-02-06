@@ -6,7 +6,8 @@ import java.io.*;
  * Created by nitin on 1/2/16.
  */
 public class S1BasicSerialization {
-    private static final String FILE_NAME =  "src/com/nitin/a21serialization/serialObject.txt";
+    private static final String FILE_NAME = "src/com/nitin/a21serialization/serialObject.txt";
+
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         Dog d = new Dog();
 
@@ -14,7 +15,7 @@ public class S1BasicSerialization {
         File f = new File(FILE_NAME);
 
         //Checking if the File exists or not
-        if(!f.exists()){
+        if (!f.exists()) {
             f.createNewFile();
             //If file by that name does not exist, then create the file
             System.out.println("Created File...");
@@ -58,12 +59,12 @@ public class S1BasicSerialization {
 }
 
 //IF serializable is not implemented then you get NotSerializableException
-class Dog implements Serializable{
+class Dog implements Serializable {
     String name = "Jackie";
     int age = 10;
 
     @Override
-    public String toString(){
+    public String toString() {
         return (this.name + " : " + this.age);
     }
 }

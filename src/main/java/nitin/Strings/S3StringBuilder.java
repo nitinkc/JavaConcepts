@@ -2,17 +2,16 @@ package nitin.Strings;
 
 /**
  * Created by nitin.chaurasia on 11/21/2016.
-
- StringBuilder is NON-SYNCHRONIZED thus more efficient
- StringBuffer is SYNCHRONIZED (THREAD SAFE) means two threads
- can call the methods of the object simultaneously. Thus comparatively
- less efficient
-
+ * <p>
+ * StringBuilder is NON-SYNCHRONIZED thus more efficient
+ * StringBuffer is SYNCHRONIZED (THREAD SAFE) means two threads
+ * can call the methods of the object simultaneously. Thus comparatively
+ * less efficient
  */
 public class S3StringBuilder {
     public static void main(String[] args) {
-        StringBuilder a = new StringBuilder ("test1");
-        StringBuffer b = new StringBuffer ("test2");
+        StringBuilder a = new StringBuilder("test1");
+        StringBuffer b = new StringBuffer("test2");
         String c = "test3";
 
         a.append(" next1");

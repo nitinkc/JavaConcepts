@@ -9,7 +9,7 @@ import java.time.Month;
 
 public class L2LDTAddition {
     public static void main(String[] args) {
-        LocalDateTime dt = LocalDateTime.of(1985, Month.JUNE,11,0,0,0);
+        LocalDateTime dt = LocalDateTime.of(1985, Month.JUNE, 11, 0, 0, 0);
         dt = dt.plusMonths(6);
         dt = dt.minusMinutes(6);
         System.out.println(dt);

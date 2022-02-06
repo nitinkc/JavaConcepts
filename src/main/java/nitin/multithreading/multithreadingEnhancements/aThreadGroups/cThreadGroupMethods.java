@@ -8,11 +8,12 @@ public class cThreadGroupMethods {
         ThreadGroup pg = new ThreadGroup("Parent Group");
         ThreadGroup cg = new ThreadGroup("Child Group");
 
-        MyThread t1 = new MyThread(pg,"ChildThread1");
+        MyThread t1 = new MyThread(pg, "ChildThread1");
         MyThread t2 = new MyThread(pg, "ChildThread2");
 
         //Start the Thread
-        t1.start(); t2.start();
+        t1.start();
+        t2.start();
 
         System.out.println(pg.activeCount());//2
         System.out.println(pg.activeGroupCount());//1

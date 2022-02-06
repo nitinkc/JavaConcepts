@@ -4,12 +4,13 @@ package nitin.multithreading.aBasics;
  * Created by Nitin Chaurasia on 12/2/15 at 11:03 PM.
  */
 public class T6ThreadPriority {
-    /** Default Priority for main is 5.
-     *
+    /**
+     * Default Priority for main is 5.
+     * <p>
      * All Child Threads inheriting from the parent has same priority
      * With Same Priority, un-deterministic order
      * Priority Varies from 1 to 10 (10 being the most)
-     * */
+     */
 
     public static void main(String[] args) {
 

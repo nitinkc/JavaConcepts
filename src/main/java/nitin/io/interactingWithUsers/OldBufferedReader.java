@@ -14,7 +14,7 @@ public class OldBufferedReader {
         System.out.println("Enter a String");
         String input = null;
         try {
-             input = bf.readLine();
+            input = bf.readLine();
         } catch (IOException e) {
             e.printStackTrace();
         }

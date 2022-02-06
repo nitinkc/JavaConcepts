@@ -66,12 +66,12 @@ public class TransactionGroup {
 
     private static void getMaxAmountByCity(List<Transaction> transactions) {
         transactions.stream()
-               // .collect(Collectors.groupingBy(Transaction::getCity,
-               //         Collectors.maxBy(Comparator.comparing(Transaction::getValue))))
+                // .collect(Collectors.groupingBy(Transaction::getCity,
+                //         Collectors.maxBy(Comparator.comparing(Transaction::getValue))))
                 .collect(Collectors.groupingBy(Transaction::getCity,
-                            Collectors.collectingAndThen
-                                    (Collectors.maxBy(Comparator.comparing(Transaction::getValue)),
-                                                            optional -> optional.get().getValue())))
+                        Collectors.collectingAndThen
+                                (Collectors.maxBy(Comparator.comparing(Transaction::getValue)),
+                                        optional -> optional.get().getValue())))
                 .entrySet()
                 .stream()
                 .sorted(reversedValueOrder)

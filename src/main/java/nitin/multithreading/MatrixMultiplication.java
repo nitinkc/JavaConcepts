@@ -59,7 +59,7 @@ public class MatrixMultiplication {
             return; //used to control the untimely exit
         }
 
-		/* Generate Random numbers and fill them in the Matrix*/
+        /* Generate Random numbers and fill them in the Matrix*/
         MatrixMultiplication mm = new MatrixMultiplication();
 
         //Fill the Matrices with Random Values
@@ -72,7 +72,7 @@ public class MatrixMultiplication {
 
         // Begin the counter for the execution time
         begin = System.currentTimeMillis();
-         /* Multithreaded Multiplication */
+        /* Multithreaded Multiplication */
         for (int i = 0; i < numThreads; i++) {
             t[i] = new Thread(m);
             t[i].start();
@@ -112,10 +112,10 @@ public class MatrixMultiplication {
     }//Main Ends here
 
     void fillMatrix() {
-    /* Initialize the seed to generate Random Values */
+        /* Initialize the seed to generate Random Values */
         Random generator = new Random(System.currentTimeMillis());
 
-	/* Generate Matrices*/
+        /* Generate Matrices*/
         //Matrix A
         for (int i = 0; i < ROW_A; i++) {
             for (int j = 0; j < COL_A; j++) {
@@ -183,9 +183,9 @@ public class MatrixMultiplication {
 }
 
 /* For multithreaded threaded multiplication, Rows from matrix A is to be multiplied with Columns
-     * of matrix B resulting in the Rows of Matrix C. Thus each thread can work on some Rows,
-	 * depending upon the division of jobs into threads
-	 * */
+ * of matrix B resulting in the Rows of Matrix C. Thus each thread can work on some Rows,
+ * depending upon the division of jobs into threads
+ * */
 class Multiply implements Runnable {
     @Override
     public void run() {

@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
  */
 
 public class ReadCsv {
-    public static List<Entity> getData () {
+    public static List<Entity> getData() {
         String file = "JavaLatest/src/main/java/com/fileOperations/csvDataReadOperations/corona/us_simplified.csv";
 
         return readFileNreturnList(file);
@@ -49,16 +49,15 @@ public class ReadCsv {
     private static Entity makeObjects(String[] line) {
         Entity e = null;
         try {
-            e =  new Entity(new SimpleDateFormat("yyyy-MM-dd").parse(line[0]),
-                    NumberUtils.toInt(line[1],0),
+            e = new Entity(new SimpleDateFormat("yyyy-MM-dd").parse(line[0]),
+                    NumberUtils.toInt(line[1], 0),
                     line[2],
                     line[3],
                     Integer.parseInt(line[4]),
                     Integer.parseInt(line[5]),
                     Integer.parseInt(line[6]),
                     line[7]);
-        }
-        catch (ParseException parseException) {
+        } catch (ParseException parseException) {
             parseException.printStackTrace();
         }
 

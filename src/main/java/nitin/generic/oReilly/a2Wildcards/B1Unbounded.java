@@ -8,7 +8,7 @@ import java.util.List;
 // we're saying we don't know what the underlying type is
 public class B1Unbounded {
     public static void main(String[] args) {
-        List<?> list = Arrays.asList((22/7),"test", LocalDate.now(),'c');
+        List<?> list = Arrays.asList((22 / 7), "test", LocalDate.now(), 'c');
 
         //size method is independent of underlying data type
         System.out.println(list.size());
@@ -20,6 +20,6 @@ public class B1Unbounded {
         //list.add("another String");//incompatible types: java.lang.String cannot be converted to capture#1 of ?
 
         //CHECK THE contailsAll() METHOD
-        System.out.println(list.containsAll(Arrays.asList("test", (22/7))));
+        System.out.println(list.containsAll(Arrays.asList("test", (22 / 7))));
     }
 }

@@ -12,24 +12,25 @@ package nitin.a1languageFundamentals;
 public class VarArg {
     public static void main(String[] args) {
         varArgMethod(10);// non var agr gets priority
-        varArgMethod(10,20);
-        varArgMethod(10,20,30);
-        varArgMultiple("Nitin", 10,20);
+        varArgMethod(10, 20);
+        varArgMethod(10, 20, 30);
+        varArgMultiple("Nitin", 10, 20);
     }
 
     // non var arg method
-    static void varArgMethod(int x){
+    static void varArgMethod(int x) {
         System.out.println(x);
     }
+
     // Variable number of arguments including zero
-    static void varArgMethod(int... x){
+    static void varArgMethod(int... x) {
         System.out.println("From Var Arg. Stores the argument in an array");
         System.out.println(x.length);
     }
 
-    static void varArgMultiple(String name, float... y){
+    static void varArgMultiple(String name, float... y) {
         System.out.println(name);
-        for (float i : y){
+        for (float i : y) {
             System.out.println(i);
         }
     }

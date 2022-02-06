@@ -10,8 +10,8 @@ public class FindMatchingAnimals {
         print(new Animal("Kangaroo", true, false), a -> a.isCanHop());
     }
 
-    private static void print(Animal animal, CheckTrait trait){
-        if(trait.test(animal)){
+    private static void print(Animal animal, CheckTrait trait) {
+        if (trait.test(animal)) {
             System.out.println(animal);//toString of Animal gets Printed
         }
     }

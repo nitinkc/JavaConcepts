@@ -5,6 +5,6 @@ package nitin.streams;
  */
 
 //Three input parameters and the last one is the Output parameter
-public interface MyFunction<T,U,V,R> extends FunctionalInterface{
+public interface MyFunction<T, U, V, R> extends FunctionalInterface {
     R apply(T t, U u, V v);
 }

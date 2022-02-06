@@ -27,10 +27,10 @@ public class S2count {
         long count = list
                 .stream()
                 .filter(strLong)
-                .map((str) -> str+str)
+                .map((str) -> str + str)
                 .count();
 
-        System.out.println("# strings > 9 chars "+count);
+        System.out.println("# strings > 9 chars " + count);
 
         Stream<String> stringList = Stream.of("Cat", "Dog", "Elephant", "Frog", "Goat");
         System.out.println(stringList.count());

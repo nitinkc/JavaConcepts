@@ -6,7 +6,8 @@ package nitin.multithreading.multithreadingEnhancements.cThreadPoolsAKAExecutorF
 public class PrintJobRunnable implements Runnable {
 
     String name;
-    PrintJobRunnable(String name){
+
+    PrintJobRunnable(String name) {
         this.name = name;
     }
 

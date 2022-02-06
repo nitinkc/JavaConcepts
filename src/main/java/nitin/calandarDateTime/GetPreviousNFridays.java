@@ -14,7 +14,7 @@ public class GetPreviousNFridays {
     public static void main(String[] args) throws ParseException {
         List<Date> list = OldDateUtilities.getLastNFridays(15);
         String datePattern = "EEE, MMM, dd yyyy HH:mm:ss z Z";
-        SimpleDateFormat sdf=new SimpleDateFormat(datePattern);
+        SimpleDateFormat sdf = new SimpleDateFormat(datePattern);
         Date tempDate = null;
         for (Date date : list) {
             //tempDate = sdf.format(date);

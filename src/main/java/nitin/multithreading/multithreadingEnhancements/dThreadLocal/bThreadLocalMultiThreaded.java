@@ -10,6 +10,9 @@ public class bThreadLocalMultiThreaded {
         CustomerThread c3 = new CustomerThread("Customer Thread-3");
         CustomerThread c4 = new CustomerThread("Customer Thread-4");
 
-        c1.start(); c2.start(); c3.start();c4.start();
+        c1.start();
+        c2.start();
+        c3.start();
+        c4.start();
     }
 }

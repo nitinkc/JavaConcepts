@@ -65,6 +65,7 @@ public class S3BasicSetString {
 
     /**
      * ASSUMPTION: largest string occurs ONLY Once;
+     *
      * @param set
      * @return
      */
@@ -77,7 +78,7 @@ public class S3BasicSetString {
             //Save the current value to avoid two itr.next
             String current = itr.next();
 
-            if (current.length() > strLen ){
+            if (current.length() > strLen) {
                 strLen = current.length();
                 ret = current;
             }

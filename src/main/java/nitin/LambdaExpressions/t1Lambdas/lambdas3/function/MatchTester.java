@@ -12,10 +12,11 @@ import static com.nitin.zCoreServletsTraining.t1Lambdas.lambdas3.function.Employ
 import static com.nitin.zCoreServletsTraining.t1Lambdas.lambdas3.function.FunctionUtils.*;
 
 */
-/** Testing the three versions of matching:
- *  1) Specific to Employee and the property (findEmployeeByFirstName, findEmployeeBySalary)
- *  2) Specific to Employee, with Predicate for the test (firstMatchingEmployee)
- *  2) Generically typed, with Predicate for the test (firstMatch)
+/**
+ * Testing the three versions of matching:
+ * 1) Specific to Employee and the property (findEmployeeByFirstName, findEmployeeBySalary)
+ * 2) Specific to Employee, with Predicate for the test (firstMatchingEmployee)
+ * 2) Generically typed, with Predicate for the test (firstMatch)
  *//*
 
 public class MatchTester {

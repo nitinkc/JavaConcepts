@@ -28,17 +28,18 @@ public class S6ParentNotSerChildSer {
 class Vehicle {
     int a = 90;
 
-    Vehicle(){
+    Vehicle() {
     }
 }
 
 //Since Parent has Serializable implemeted, Chine need not be so
-class FourVehicle extends Vehicle implements Serializable{
+class FourVehicle extends Vehicle implements Serializable {
     int b = 45;
 
     FourVehicle() {
 
     }
+
     @Override
     public String toString() {
         return "FourVehicle{" +

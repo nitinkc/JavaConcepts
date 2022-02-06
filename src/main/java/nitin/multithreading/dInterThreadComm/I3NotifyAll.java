@@ -9,6 +9,7 @@ public class I3NotifyAll {
 
     //To control the Flow. Just by using Join it did not work
     int status = 1;
+
     public static void main(String[] args) {
 
         I3NotifyAll na = new I3NotifyAll();

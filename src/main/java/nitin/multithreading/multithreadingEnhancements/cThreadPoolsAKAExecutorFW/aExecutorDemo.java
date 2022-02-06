@@ -18,7 +18,7 @@ public class aExecutorDemo {
 
         ExecutorService service = Executors.newFixedThreadPool(9);
 
-        for (PrintJobRunnable job : jobs){
+        for (PrintJobRunnable job : jobs) {
             service.submit(job);
         }
         service.shutdown();

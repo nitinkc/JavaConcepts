@@ -19,7 +19,7 @@ public class PDF3Function {
         System.out.println(f2.apply("chaurasia"));
 
         //Implement a function to return square of an integer
-        Function<Integer,Integer> f3 = x -> x*x;
+        Function<Integer, Integer> f3 = x -> x * x;
         System.out.println(f3.apply(3));
 
     }

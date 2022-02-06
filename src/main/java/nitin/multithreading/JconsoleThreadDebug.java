@@ -16,7 +16,7 @@ public class JconsoleThreadDebug {
 }
 
 
-class DebugClass implements Runnable{
+class DebugClass implements Runnable {
     @Override
     public void run() {
         System.out.println("-----Debugging starts------");

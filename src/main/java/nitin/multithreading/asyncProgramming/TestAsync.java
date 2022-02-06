@@ -13,6 +13,6 @@ public class TestAsync {
     @Async
     public static void asyncMethodWithVoidReturnType(int i) {
         System.out.println("Execute method asynchronously. #" + i
-                + " :: "+Thread.currentThread().getName());
+                + " :: " + Thread.currentThread().getName());
     }
 }

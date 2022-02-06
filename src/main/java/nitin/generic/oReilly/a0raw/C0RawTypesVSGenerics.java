@@ -31,7 +31,7 @@ public class C0RawTypesVSGenerics {
 
         System.out.println("From Generic Collection");
         for (String s : strings) {
-            if(s != null){
+            if (s != null) {
                 System.out.printf("%s has %d characters \n", s, s.length());
             }
         }

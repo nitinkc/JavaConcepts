@@ -2,7 +2,7 @@ package nitin.oops.interfaces;
 
 /**
  * Created by nitin on 12/29/16.
- *
+ * <p>
  * Marker Interface : Interface contains no methods
  * ex: Serializable, Cloneable
  * JVM is responsible for providing required ability in marker interfaces

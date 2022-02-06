@@ -15,8 +15,8 @@ public class N1PathFileTest {
         System.out.println("Filename is: " + path.getFileName());
         System.out.println("Root is " + path.getRoot());
         Path currentParent = path;
-        while((currentParent = currentParent.getParent()) != null){
-            System.out.println(" Current parent is: "+currentParent);
+        while ((currentParent = currentParent.getParent()) != null) {
+            System.out.println(" Current parent is: " + currentParent);
         }
     }
 }

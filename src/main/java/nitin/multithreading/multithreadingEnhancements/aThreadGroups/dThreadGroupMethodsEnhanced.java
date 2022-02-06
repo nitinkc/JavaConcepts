@@ -2,7 +2,7 @@ package nitin.multithreading.multithreadingEnhancements.aThreadGroups;
 
 /**
  * Created by nitin.chaurasia on 12/25/2016.
- *
+ * <p>
  * Displaying the System Thread groups MetaData
  */
 public class dThreadGroupMethodsEnhanced {
@@ -11,7 +11,7 @@ public class dThreadGroupMethodsEnhanced {
         Thread[] t = new Thread[system.activeCount()];
 
         system.enumerate(t);
-        for (Thread t1 : t){
+        for (Thread t1 : t) {
             System.out.println(t1.getName() + " ... " + t1.isDaemon());
         }
     }

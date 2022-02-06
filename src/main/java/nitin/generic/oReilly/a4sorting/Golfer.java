@@ -5,7 +5,8 @@ public class Golfer implements Comparable<Golfer> {
     private String last;
     private int score;
 
-    public Golfer() {}
+    public Golfer() {
+    }
 
     public Golfer(String first, String last) {
         this.first = first;

@@ -2,14 +2,13 @@ package nitin.javaMemoryModel;
 
 /**
  * Created by nitin.chaurasia on 2/16/2017.
- *
+ * <p>
  * In Java Pass by reference is not possible for Primitive Types
- *
  */
 public class PassingValues {
 
     public static void main(String[] args) {
-        
+
         int localValue = 5;
         String localString = "Nitin";
 

@@ -5,7 +5,7 @@ package nitin.oops.interfaces.a10interfaces.DefaultMethodsInJava8;
  */
 
 //CE : inherits unrelated defaults for m1() from types Left and DefaultMethodsInJava8.Right
-public class D2LeftRight implements Left,Right{//Compulsory give implementation
+public class D2LeftRight implements Left, Right {//Compulsory give implementation
 
     public static void main(String[] args) {
         D2LeftRight d = new D2LeftRight();
@@ -14,7 +14,7 @@ public class D2LeftRight implements Left,Right{//Compulsory give implementation
 
     //Without this method override, CE will be there.
     @Override
-    public void m1(){
+    public void m1() {
         Left.super.m1();
         Right.super.m1();
         System.out.println("Over ridden");
@@ -22,14 +22,14 @@ public class D2LeftRight implements Left,Right{//Compulsory give implementation
 }
 
 // Two interfaces by the same default methods being implemented in the same implementation class
-interface Left{
-    default void m1(){
+interface Left {
+    default void m1() {
         System.out.println("Left");
     }
 }
 
-interface Right{
-    default void m1(){
+interface Right {
+    default void m1() {
         System.out.println("Right");
     }
 }

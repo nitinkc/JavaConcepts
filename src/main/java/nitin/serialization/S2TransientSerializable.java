@@ -4,7 +4,7 @@ import java.io.*;
 
 /**
  * Created by nitin on 1/2/16.
- *
+ * <p>
  * Transient does not work when Static or Final is used
  */
 public class S2TransientSerializable {
@@ -19,7 +19,7 @@ public class S2TransientSerializable {
 
         //Deserialization
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File("src/com/nitin/a21serialization/serialObjectTransient.txt")));
-        Cat c = (Cat)ois.readObject();
+        Cat c = (Cat) ois.readObject();
         ois.close();
         System.out.println("*********************** After Deserialization ****************************");
         System.out.println(c);

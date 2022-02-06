@@ -2,22 +2,25 @@ package nitin.oops.interfaces;
 
 /**
  * Created by nitin on 12/29/16.
- *
+ * <p>
  * BasicConnection Class can extend only one class but can implement multiple interfaces
  */
 interface Interface {
     void m1();
+
     void m2();
 }
 
-interface AnotherInterface{
+interface AnotherInterface {
     void m1();
+
     void m3();
+
     void m4();
 }
 
 // Not compulsory to provide all implementation (declare the class as abstract)
- abstract class ServiceProvider implements Interface{
+abstract class ServiceProvider implements Interface {
 
     @Override
     public void m1() {
@@ -26,7 +29,7 @@ interface AnotherInterface{
 }
 
 // Compulsorily all methods needs to be implemented
-class AnotherServiceProvider extends ServiceProvider implements Interface, AnotherInterface{
+class AnotherServiceProvider extends ServiceProvider implements Interface, AnotherInterface {
 
     public static void main(String[] args) {
         AnotherServiceProvider a = new AnotherServiceProvider();

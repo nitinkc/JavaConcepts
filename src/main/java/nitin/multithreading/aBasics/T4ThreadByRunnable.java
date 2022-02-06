@@ -2,9 +2,9 @@ package nitin.multithreading.aBasics;
 
 /**
  * Created by Nitin Chaurasia on 12/2/15 at 10:30 PM.
- *
+ * <p>
  * This Method is Preferred to DEFINE A THREAD
- *
+ * <p>
  * We can extend other class while Implementing Runnable Interface
  */
 public class T4ThreadByRunnable {

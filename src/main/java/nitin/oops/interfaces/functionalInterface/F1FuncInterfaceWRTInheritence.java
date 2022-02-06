@@ -10,11 +10,11 @@ interface FuncInterfaceWRTInheritence {
     void m1();
 
     //Can declare any number of default and static methods in a Functional Interface
-    default int m2(){
+    default int m2() {
         return 2;
     }
 
-    static void m3(){
+    static void m3() {
         System.out.println("Can declare any number of default and static methods in a Functional Interface");
     }
 }
@@ -22,7 +22,7 @@ interface FuncInterfaceWRTInheritence {
 
 // In the child interface we can define exactly same parent interface abstract method.
 @FunctionalInterface
-interface ChildFuncInterfaceWRTInheritence extends FuncInterfaceWRTInheritence{
+interface ChildFuncInterfaceWRTInheritence extends FuncInterfaceWRTInheritence {
     //No Compile Time Error
     void m1();
 
@@ -34,7 +34,7 @@ interface ChildFuncInterfaceWRTInheritence extends FuncInterfaceWRTInheritence{
 }
 
 @FunctionalInterface
-interface emptyFunctionalInterface{
+interface emptyFunctionalInterface {
     // Exactly one abstract method is compulsory else Compile time Exception.
     void test();
 }

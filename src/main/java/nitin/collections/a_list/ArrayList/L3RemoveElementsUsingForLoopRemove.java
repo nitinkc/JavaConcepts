@@ -8,19 +8,27 @@ import java.util.List;
  * ArrayList arrayList=new ArrayList(11);
  * ArrayList Initial Size 10; Later incremented by 3/2 + 1
  * Vector Initial Size 16; Incremented by 2X
- *
+ * <p>
  * list.remove() --> ConcurrentModificationException
  * itr.remove() --> correct way to remove
  */
 public class L3RemoveElementsUsingForLoopRemove {
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
-        list.add("A");list.add("B");list.add("C");list.add("D");list.add("E");
-        list.add("F");list.add("G");list.add("H");list.add("I");list.add("J");
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        list.add("D");
+        list.add("E");
+        list.add("F");
+        list.add("G");
+        list.add("H");
+        list.add("I");
+        list.add("J");
         //list.remove(2);// Removing the element, from anywhere
 
         System.out.println("******************* LIST BEFORE REMOVAL ***************************** ");
-        System.out.println(list );
+        System.out.println(list);
 
         System.out.println("******************* LIST DURING REMOVAL ***************************** ");
         // Removing the elements from the a_list
@@ -34,6 +42,6 @@ public class L3RemoveElementsUsingForLoopRemove {
         }
 
         System.out.println("******************* LIST AFTER REMOVAL ***************************** ");
-        System.out.println(list );
+        System.out.println(list);
     }
 }

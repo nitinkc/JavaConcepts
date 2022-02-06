@@ -18,7 +18,7 @@ public class S10CriticalSectionProblem {
     }
 }
 
-class Account implements Runnable{
+class Account implements Runnable {
     // Shared in the heap Area, thus available to all
     int balance = 5;
 

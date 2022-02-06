@@ -5,7 +5,7 @@ import java.util.*;
 public class HashMapRevisions {
 
     public static void main(String[] args) {
-        int[] a = new int[]{10,20,30,40,50,60,70,80};
+        int[] a = new int[]{10, 20, 30, 40, 50, 60, 70, 80};
         int target = 150;
         List<Integer> list = new ArrayList<>();
 
@@ -17,12 +17,12 @@ public class HashMapRevisions {
         }
 
         Iterator<Integer> itr = map.keySet().iterator();
-        while(itr.hasNext()) {
+        while (itr.hasNext()) {
             int key = itr.next();
             int value = map.get(key);
 
             //Bug: Fails if target/2 exist in the Array
-            if (map.containsKey(value) ){
+            if (map.containsKey(value)) {
                 list.add(key);
             }
         }

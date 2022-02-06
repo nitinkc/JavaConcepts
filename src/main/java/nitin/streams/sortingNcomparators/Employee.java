@@ -17,10 +17,10 @@ public class Employee {
     private final String name;
     private final int age;
     private final double salary;
-    private final char  level;
+    private final char level;
     private final int experience;
 
-    public int ageDifference(final Employee other){
+    public int ageDifference(final Employee other) {
         return this.age - other.age;
     }
 }

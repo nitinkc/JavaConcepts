@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 /**
  * Created by Nitin Chaurasia on 2/1/18 at 1:41 AM.
- *
+ * <p>
  * takeWhile() like filter() method will take elements from the Stream as long as predicate returns true.
  * If predicate returns false, at that point onwards remaining elements won't be processed,
  * i.e rest of the Stream is discarded.
@@ -19,10 +19,10 @@ public class S1takeWhileVSdropWhile {
             list.add(i);
         }
 
-       //list = Cargo.intCargo(6);
+        //list = Cargo.intCargo(6);
 
         System.out.println(list);
-       //filtering the even elements out
+        //filtering the even elements out
         List<Integer> l = list
                 .stream()
                 .filter(x -> x % 2 == 0)

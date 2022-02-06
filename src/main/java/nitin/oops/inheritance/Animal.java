@@ -14,14 +14,14 @@ public class Animal {
         this.age = age;
     }
 
-    public Animal(int age){
+    public Animal(int age) {
 
     }
 
 
 }
 
-class Lion extends Animal{
+class Lion extends Animal {
 
     public Lion(int age) {
         super(age);

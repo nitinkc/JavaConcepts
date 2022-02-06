@@ -22,15 +22,15 @@ public class PlayWithDataMuse {
         final Function<String, Predicate<String>> startsWithLetter =
                 (String letter) -> (String word) -> word.startsWith(letter);
 
-        Map<Integer, List<String>> wordsByLength=
+        Map<Integer, List<String>> wordsByLength =
                 words.stream()
                         .collect(groupingBy(String::length));
         //System.out.println("Group by Length : " + wordsByLength );
 
         //Print Word count of each word, based on Length
-        Map<Integer, Long> wordsByLengthCount=
+        Map<Integer, Long> wordsByLengthCount =
                 words.stream()
-                .collect(groupingBy(String::length,counting()));
+                        .collect(groupingBy(String::length, counting()));
 
         System.out.println(wordsByLengthCount);
 
@@ -52,7 +52,7 @@ public class PlayWithDataMuse {
                                                                 reducing("", (s, s2) -> s + s2)))))
                         ));*/
 
-       // System.out.println(result);
+        // System.out.println(result);
 
     }
 

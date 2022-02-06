@@ -16,7 +16,7 @@ public class F6ComparatorAsLambda {
         );
 
         addElements(students);
-        students.forEach(System.out :: println);
+        students.forEach(System.out::println);
     }
 
     private static void addElements(Set<Student> students) {
@@ -26,8 +26,10 @@ public class F6ComparatorAsLambda {
         Student s4 = new Student("zname4", 24);
         Student s5 = new Student("zname4", 24);
 
-        students.add(s1);students.add(s2);
-        students.add(s3);students.add(s4);
+        students.add(s1);
+        students.add(s2);
+        students.add(s3);
+        students.add(s4);
         students.add(s5);
     }
 }

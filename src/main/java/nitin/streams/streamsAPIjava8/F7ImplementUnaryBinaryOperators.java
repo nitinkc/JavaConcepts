@@ -16,7 +16,7 @@ public class F7ImplementUnaryBinaryOperators {
         BinaryOperator<String> binaryOperator1 = String::concat;
         BinaryOperator<String> binaryOperator2 = (string, toAdd) -> string.concat(toAdd);
 
-        System.out.println(binaryOperator1.apply("Nitin"," Chaurasia"));
-        System.out.println(binaryOperator2.apply("Kirti"," Chaurasia"));
+        System.out.println(binaryOperator1.apply("Nitin", " Chaurasia"));
+        System.out.println(binaryOperator2.apply("Kirti", " Chaurasia"));
     }
 }

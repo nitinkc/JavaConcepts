@@ -15,14 +15,14 @@ public class BasicMapString {
         // With Tree b_set it will sort to DNSO
 
         // Sorted values while iterating
-        Map<Integer,String> map = new TreeMap<>();
+        Map<Integer, String> map = new TreeMap<>();
 
-        map.put(1,"Abcd");
-        map.put(2,"sangram");
-        map.put(3,"A");
-        map.put(4,"sa");
-        map.put(5,"Abc");
-        map.put(6,"sangrampisal");
+        map.put(1, "Abcd");
+        map.put(2, "sangram");
+        map.put(3, "A");
+        map.put(4, "sa");
+        map.put(5, "Abc");
+        map.put(6, "sangrampisal");
 
         //printMapUsingSet(map);
         System.out.print("Longest Key is-----");
@@ -36,14 +36,14 @@ public class BasicMapString {
 
         Iterator itr = key.iterator();
         String ret = null;
-        int strlength=-1;
+        int strlength = -1;
         while (itr.hasNext()) {
             Integer tempKey = (Integer) itr.next();
-            String tempValue=map.get(tempKey);
+            String tempValue = map.get(tempKey);
 
-            if (tempValue.length()>=strlength) {
-                strlength=tempValue.length();
-                ret=tempValue;
+            if (tempValue.length() >= strlength) {
+                strlength = tempValue.length();
+                ret = tempValue;
             }
         }
         return ret;
@@ -51,10 +51,11 @@ public class BasicMapString {
 
     /**
      * Map is not a part of Collection thus Iterator is not available
-     *
+     * <p>
      * There are two ways to iterate a map
      * 1. Using Set (for loop)
      * 2. Using EntrySet (for each)
+     *
      * @param map
      */
     private static void printMapUsingSet(Map<Integer, String> map) {
@@ -62,9 +63,9 @@ public class BasicMapString {
         Set<Integer> key = map.keySet();
 
         Iterator itr = key.iterator();
-        while(itr.hasNext()) {
-            Integer tempKey = (Integer)itr.next();
-            System.out.print("Value is : "+map.get(tempKey) + ", key is : "+ tempKey + "\n");
+        while (itr.hasNext()) {
+            Integer tempKey = (Integer) itr.next();
+            System.out.print("Value is : " + map.get(tempKey) + ", key is : " + tempKey + "\n");
         }
     }
 }

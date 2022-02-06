@@ -6,9 +6,9 @@ package nitin.arrays;
 public class L1Array1DDeclarationCreationInit {
     public static void main(String[] args) {
         // Three ways of Declaring
-        int []a;
+        int[] a;
         float[] b;
-        int []c;
+        int[] c;
 
         //Allocation
         b = new float[3];
@@ -16,17 +16,18 @@ public class L1Array1DDeclarationCreationInit {
 
         // Allocations & Assigmnment
         // a = {1,2,3,4,5};// Array initializer not allowed here
-        a = new int[]{1,2,3,4,5};
+        a = new int[]{1, 2, 3, 4, 5};
 
         // Assignment type 1
-        c[0] = 9 ; c[1] = -3;
+        c[0] = 9;
+        c[1] = -3;
 
         // auto assignment
         for (int i = 0; i < b.length; i++) {
-            b[i] = (int) ((i*i) / Math.random());
+            b[i] = (int) ((i * i) / Math.random());
         }
         // Declaration, Constructions and initialization
-        int[] d = {1,2,3,4,5,6};
+        int[] d = {1, 2, 3, 4, 5, 6};
 
         // 1D Array Iteration
         for (int i = 0; i < d.length; i++) {

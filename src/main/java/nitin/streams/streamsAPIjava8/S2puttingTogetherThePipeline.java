@@ -17,9 +17,9 @@ public class S2puttingTogetherThePipeline {
     }
 
     private static void m1() {
-        List<Integer> list = Arrays.asList(1,23,45,67,8,9,123,124,564,123);
+        List<Integer> list = Arrays.asList(1, 23, 45, 67, 8, 9, 123, 124, 564, 123);
 
-        Predicate<Integer> even = (n -> n%2 != 0);
+        Predicate<Integer> even = (n -> n % 2 != 0);
         Predicate<Integer> gtThan = (n -> n > 30);
         Predicate<Integer> ltThan = (n -> n < 500);
 
@@ -36,7 +36,7 @@ public class S2puttingTogetherThePipeline {
     }
 
     private static void m2() {
-        Stream<String> list = Stream.of("Abacus","Babylon","Cairo","Damascus","Estury");
+        Stream<String> list = Stream.of("Abacus", "Babylon", "Cairo", "Damascus", "Estury");
 
         list.filter(s -> s.length() > 5)
                 .sorted(Comparator.reverseOrder())

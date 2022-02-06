@@ -14,7 +14,7 @@ public class F4PrintReaderWriter {
         File f = new File("src/com/nitin/IO_FileHandling/nitin.txt");
 
         // Use File writer for appending, WITHOUT IT THE PRINTWRITER OVER WRITES THE FILE!!
-        FileWriter fw = new FileWriter(f,true);
+        FileWriter fw = new FileWriter(f, true);
         PrintWriter pw = new PrintWriter(fw);
 
         pw.append("TESTING");

@@ -11,9 +11,11 @@ public class dInheritableThreadLocal {
 
 
 }
-class ParentThread1 extends Thread{
+
+class ParentThread1 extends Thread {
     public static InheritableThreadLocal tl = new InheritableThreadLocal();
-    public void run(){
+
+    public void run() {
         tl.set("Parent Thread Local");
         System.out.println("Parent Thread Local Value = " + tl.get());
 

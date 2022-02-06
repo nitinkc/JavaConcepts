@@ -12,15 +12,15 @@ public class CodeReusabilityInInterf implements Interf1 {
     }
 }
 
-interface Interf1{
-    static void m1(){
+interface Interf1 {
+    static void m1() {
         System.out.println("From m1");
-       // m3();
+        // m3();
     }
 
-    static void m2(){
+    static void m2() {
         System.out.println("From m2");
-       // m3();
+        // m3();
     }
 
     //private methods
@@ -29,7 +29,7 @@ interface Interf1{
         System.out.println("m3 for code reusability");
     }*/
 
-    default void m4(){
+    default void m4() {
         System.out.println("m4 Default method");
     }
 

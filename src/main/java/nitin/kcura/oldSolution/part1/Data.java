@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by Nitin Chaurasia on 11/9/15 at 11:06 PM.
  */
-public class Data{
+public class Data {
 
     private int population;
     private String city;
@@ -48,19 +48,19 @@ public class Data{
 
     @Override
     /* Formats the data like population, name of cities and states in the desired format
-    *  It takes the help of the interstatesToString method for printing the names of the
-    *  interstates.
-    * */
+     *  It takes the help of the interstatesToString method for printing the names of the
+     *  interstates.
+     * */
     public String toString() {
         String value = "";
-         value = value + population + "\n\n" + city + ", " + state + "\n" + "Interstates: " +
-                 interstatesToString(getInterstates()) + "\n";
+        value = value + population + "\n\n" + city + ", " + state + "\n" + "Interstates: " +
+                interstatesToString(getInterstates()) + "\n";
         return value;
     }
 
     /* Formats the data when the cities have the same population as per the requirements
-    *  Cities with same population should be clubbed together.
-    * */
+     *  Cities with same population should be clubbed together.
+     * */
     public String aggragateCities() {
         String value = "";
         value = city + ", " + state + "\n" + "Interstates: " +
@@ -71,16 +71,16 @@ public class Data{
 
     /* Method to Print List of Interstates in the required format
      */
-    public String interstatesToString(List iStates){
+    public String interstatesToString(List iStates) {
         String result = "";
         for (int i = 0; i < iStates.size() - 1; i++) {
-            result += iStates.get(i) + ", " ;
+            result += iStates.get(i) + ", ";
         }
         // Avoiding off-by-one error in comma
         // the last name of the city should not end with a comma.
-        result = result + iStates.get(iStates.size()-1);
+        result = result + iStates.get(iStates.size() - 1);
 
         return result;
-        }
+    }
 
 }

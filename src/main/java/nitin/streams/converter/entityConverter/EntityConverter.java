@@ -13,7 +13,7 @@ public interface EntityConverter<I, O> {
         return out;
     }
 
-    default <R> O convert(O output, R fromEntity,  BiConsumer<O, R> func) {
+    default <R> O convert(O output, R fromEntity, BiConsumer<O, R> func) {
         func.accept(output, fromEntity);
         return output;
     }

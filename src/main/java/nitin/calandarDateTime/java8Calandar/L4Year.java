@@ -15,11 +15,11 @@ public class L4Year {
 
         for (int i = 1300; i <= 2020; i++) {
             y = Year.of(i);
-            if(y.isLeap()){
+            if (y.isLeap()) {
                 leapYear.add(i);
             }
         }
 
-        leapYear.stream().forEach( l -> System.out.println(l) );
+        leapYear.stream().forEach(l -> System.out.println(l));
     }
 }

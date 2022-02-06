@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * Created by nitin.chaurasia on 12/26/2016.
  */
-public class MyTryLockWithArgumentDemoThread extends Thread{
+public class MyTryLockWithArgumentDemoThread extends Thread {
 
     static ReentrantLock l = new ReentrantLock();
 

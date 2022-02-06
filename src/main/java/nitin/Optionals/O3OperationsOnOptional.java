@@ -22,7 +22,6 @@ public class O3OperationsOnOptional {
         System.out.println(emptyMap);
 
 
-
         //filter
         //flatMap
 

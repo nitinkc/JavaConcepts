@@ -48,7 +48,7 @@ class DecidiousPlants extends Plants {
 }
 
 //Now we don't want this child class to be Serialised, so throw NotSerializableException from the over ridden writeObject Class
-class ConiferousPlants extends Plants{
+class ConiferousPlants extends Plants {
     int c = 40;
 
     private void writeObject(ObjectOutputStream os) throws NotSerializableException {

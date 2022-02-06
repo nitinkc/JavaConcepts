@@ -2,7 +2,7 @@ package nitin.multithreading.aBasics;
 
 /**
  * Created by Nitin Chaurasia on 12/5/15 at 10:01 PM.
- *
+ * <p>
  * Calling the thread using the Anonymous Inner Class
  */
 public class T7AnonymousThreadCall {
@@ -12,7 +12,7 @@ public class T7AnonymousThreadCall {
             @Override
             public void run() {
                 for (int i = 0; i < 500; i++) {
-                    System.out.println("From Thread 1: "+ Thread.currentThread() + " "+i);
+                    System.out.println("From Thread 1: " + Thread.currentThread() + " " + i);
                 }
             }
         });
@@ -22,7 +22,7 @@ public class T7AnonymousThreadCall {
             @Override
             public void run() {
                 for (int i = 0; i < 500; i++) {
-                    System.out.println("From Thread 2: "+ Thread.currentThread() + " "+i);
+                    System.out.println("From Thread 2: " + Thread.currentThread() + " " + i);
                 }
             }
         });
@@ -31,7 +31,7 @@ public class T7AnonymousThreadCall {
 
         //The Main function continues
         for (int i = 0; i < 5; i++) {
-            System.out.println("From Main: "+ Thread.currentThread() + " "+i);
+            System.out.println("From Main: " + Thread.currentThread() + " " + i);
         }
     }
 }

@@ -25,7 +25,7 @@ public class BasicInheritance {
 
         //Compile time error:Error:incompatible types: java.lang.Object cannot be converted to java.lang.String
         //strings.add(o);
-        strings.add((String)o);
+        strings.add((String) o);
 
         System.out.println(strings);
     }

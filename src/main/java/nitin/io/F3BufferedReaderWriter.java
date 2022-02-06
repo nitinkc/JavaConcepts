@@ -29,7 +29,7 @@ public class F3BufferedReaderWriter {
         // We have a String in Return
         String line = br.readLine();
 
-        while(line != null){ // The EOF is null!!
+        while (line != null) { // The EOF is null!!
             System.out.println(line);
             line = br.readLine();
         }

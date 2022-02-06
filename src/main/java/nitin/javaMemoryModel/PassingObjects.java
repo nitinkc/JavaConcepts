@@ -21,7 +21,7 @@ public class PassingObjects {
     }
 }
 
-class Customer{
+class Customer {
     private String name;
 
     public Customer(String name) {

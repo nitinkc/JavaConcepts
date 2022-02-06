@@ -16,7 +16,7 @@ public class aBasicsThreadGroups {
         ThreadGroup g1 = new ThreadGroup("First thread");
         System.out.println(g1.getParent().getName());//main
 
-        ThreadGroup g2 = new ThreadGroup(g1,"Second thread");
+        ThreadGroup g2 = new ThreadGroup(g1, "Second thread");
         System.out.println(g2.getParent().getName());//First Thread
     }
 }

@@ -2,7 +2,7 @@ package nitin.arrays;
 
 /**
  * Created by nitin.chaurasia on 12/27/2016.
- *          Array Type              |                    Allowed elements
+ * Array Type              |                    Allowed elements
  * 1. Primitive Type Arrays         |      Any type which can be implicitly promoted to declared type
  * 2. Object Type Arrays            |      Either declared type objects or its child class objects
  * 3. Abstract Class Type           |      Child class objects are allowed

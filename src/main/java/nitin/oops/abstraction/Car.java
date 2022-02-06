@@ -7,7 +7,7 @@ public abstract class Car {
     public abstract void engine();
 
     // Partial implementation
-    public void blowHorn(){
+    public void blowHorn() {
         System.out.println("Honk - Honk");
     }
 }

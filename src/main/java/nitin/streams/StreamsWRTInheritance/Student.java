@@ -14,7 +14,7 @@ import java.util.Date;
 @Setter
 @Getter
 @ToString
-public class Student extends Person{
+public class Student extends Person {
     public Long enrollmentNumber;
     public StudentOf studentOf;
 

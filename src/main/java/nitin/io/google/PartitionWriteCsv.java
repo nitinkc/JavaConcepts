@@ -20,12 +20,12 @@ public class PartitionWriteCsv {
         String inputFile = "src/main/java/com/nitin/zCoreServletsTraining/t4FileIO/fileIO/readfiles1/enable1-word-list.txt";
         List<String> stringList = new ArrayList<>();
         try {
-           stringList  = Files.lines(Paths.get(inputFile)).collect(Collectors.toList());
+            stringList = Files.lines(Paths.get(inputFile)).collect(Collectors.toList());
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        List<List<String>> partition= Lists.partition(stringList, BATCH_SIZE);
+        List<List<String>> partition = Lists.partition(stringList, BATCH_SIZE);
 
         long startP = System.currentTimeMillis();
         partition.forEach(singleStringList -> {

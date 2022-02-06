@@ -13,12 +13,12 @@ import java.time.format.DateTimeParseException;
  * In Java 7, they introduce the the ability to catch multiple exceptions in the same catch block.
  * catch (FileNotFoundException | IOException e) redundant exceptions gives the error.
  * Error MULTI-CATCH Must be disjoint
- *
+ * <p>
  * Multi-catch is effectively final
  */
 public class E6multicatch {
     public static void main(String[] args) {
-        try{
+        try {
             Path path = Paths.get("text.txt");
             String text = new String(Files.readAllBytes(path));
             LocalDate date = LocalDate.parse(text);

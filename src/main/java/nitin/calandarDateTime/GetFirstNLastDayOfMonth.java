@@ -7,7 +7,7 @@ public class GetFirstNLastDayOfMonth {
 
     public static void main(String... args) {
 
-        for (int i = 1; i < 13 ; i++) {
+        for (int i = 1; i < 13; i++) {
             System.out.println("First day of the month: " + getFirstDateOfMonth(i));
             System.out.println("Last day of the month: " + getLastDateOfMonth(i));
             System.out.println("**************************************************");
@@ -19,7 +19,7 @@ public class GetFirstNLastDayOfMonth {
         Date date = calendar.getTime();
 
         //Find out the First day of the begin month
-        calendar.set(Calendar.YEAR, beginMonth-1, 1);
+        calendar.set(Calendar.YEAR, beginMonth - 1, 1);
 
         //calendar.setTime(date);
         int day = calendar.getActualMinimum(Calendar.DAY_OF_MONTH);
@@ -27,12 +27,12 @@ public class GetFirstNLastDayOfMonth {
         return calendar.getTime();
     }
 
-//    private static Date getLastDateOfMonth(int endMonth) {
-private static Date getLastDateOfMonth(int endMonth) {
+    //    private static Date getLastDateOfMonth(int endMonth) {
+    private static Date getLastDateOfMonth(int endMonth) {
         Calendar calendar = Calendar.getInstance();
         Date date = calendar.getTime();
 
-        calendar.set(Calendar.YEAR, endMonth-1, 1);
+        calendar.set(Calendar.YEAR, endMonth - 1, 1);
 
         //calendar.setTime(date);
         int day = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);

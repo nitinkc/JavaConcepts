@@ -10,11 +10,17 @@ public class S1StackBasics {
 //        List<Integer> stack = new Stack<>();//Only List methods are available
         Stack<Integer> stack = new Stack<>();
         //Push and add does the same thing
-        stack.push(10);stack.push(15); stack.push(35);
-        stack.add(11);stack.add(16); stack.add(36);
-        stack.push(12);stack.push(17); stack.push(37);
+        stack.push(10);
+        stack.push(15);
+        stack.push(35);
+        stack.add(11);
+        stack.add(16);
+        stack.add(36);
+        stack.push(12);
+        stack.push(17);
+        stack.push(37);
 
-        while(!stack.isEmpty()){
+        while (!stack.isEmpty()) {
             System.out.println(stack.peek());
             stack.pop();
         }

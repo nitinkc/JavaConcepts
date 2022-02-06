@@ -11,14 +11,14 @@ public class Pair<F, S> {
         this.second = second;
     }
 
-    public Pair<S,F> reverse() {
+    public Pair<S, F> reverse() {
         return new Pair<>(second, first);
     }
 
-    public <R,U> Pair<R,U> transform(
-            Function<F,R> xfirst,
-            Function<S,U> xsecond) {
-        return new Pair<R,U>(xfirst.apply(first), xsecond.apply(second));
+    public <R, U> Pair<R, U> transform(
+            Function<F, R> xfirst,
+            Function<S, U> xsecond) {
+        return new Pair<R, U>(xfirst.apply(first), xsecond.apply(second));
     }
 
 

@@ -12,11 +12,11 @@ import java.util.OptionalDouble;
 public class EmployeeServices {
     public static void main(String[] args) {
         final List<Employee> list = Arrays.asList(
-                new Employee("John",20,65000, 'C', 5),
-                new Employee("Wayne", 20,65430, 'C', 4),
-                new Employee("Dow", 30,74445,'B',6),
-                new Employee("Jane", 35,76546,'B',5),
-                new Employee("Don", 35,90000,'A',10)
+                new Employee("John", 20, 65000, 'C', 5),
+                new Employee("Wayne", 20, 65430, 'C', 4),
+                new Employee("Dow", 30, 74445, 'B', 6),
+                new Employee("Jane", 35, 76546, 'B', 5),
+                new Employee("Don", 35, 90000, 'A', 10)
         );
 
         System.out.println("Increment Salary by 10% if level C, 15% if level B and 20% if A");
@@ -42,7 +42,7 @@ public class EmployeeServices {
     private static void incrementSalary(List<Employee> list) {
         list.stream()
                 .filter(x -> x.getLevel() == 'C')
-                .map(x -> x.getSalary() + (x.getSalary()/10))
+                .map(x -> x.getSalary() + (x.getSalary() / 10))
                 .forEach(System.out::println);
     }
 
@@ -53,7 +53,7 @@ public class EmployeeServices {
     }
 
     private static void avgSalariesSum(List<Employee> list) {
-        OptionalDouble avgSalOptional= list.stream()
+        OptionalDouble avgSalOptional = list.stream()
                 .mapToDouble(Employee::getSalary)
                 .average();
 
@@ -64,7 +64,7 @@ public class EmployeeServices {
     private static void avgSalariesreduce(List<Employee> list) {
         System.out.println(list.stream()
                 .map((e) -> e.getSalary())
-                .reduce(0.0, (x,y) -> (x+y)));
+                .reduce(0.0, (x, y) -> (x + y)));
     }
 
     private static void howManyGT30Employee(List<Employee> list) {

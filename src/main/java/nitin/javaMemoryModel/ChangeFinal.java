@@ -8,15 +8,15 @@ public class ChangeFinal {
     public static void main(String[] args) {
 
         final Customer c = new Customer("Mahatma Gandhi");
-        System.out.println("Final String is : "+ c);
+        System.out.println("Final String is : " + c);
 
         // CHANGING THE FINAL variable, as the String lies in the Heap area. The c variable on the Stack is Final not
         // not the String on the heap;
         c.setName("Modi");
-        System.out.println("Final String is reset to : "+ c);
+        System.out.println("Final String is reset to : " + c);
     }
 
-    static class Customer{
+    static class Customer {
         private String name;
 
         public Customer(String name) {
@@ -32,7 +32,7 @@ public class ChangeFinal {
         }
 
         @Override
-        public String toString(){
+        public String toString() {
             return this.getName();
         }
     }

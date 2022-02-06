@@ -16,7 +16,7 @@ public class ListRemovalUsingForLoop {
         list.add(7);
 
         for (int i = 0; i < list.size(); i++) {
-            if (i == 2){
+            if (i == 2) {
                 //System.out.println(list.get(i));
                 list.remove(i);
             }

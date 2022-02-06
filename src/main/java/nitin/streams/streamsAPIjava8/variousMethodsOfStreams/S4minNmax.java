@@ -12,8 +12,11 @@ import java.util.stream.Stream;
 public class S4minNmax {
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
-        list.add("Pawan"); list.add("Chiranjeevi");list.add("RaviTeja");
-        list.add("Venkatesh");list.add("Nagarjuna");
+        list.add("Pawan");
+        list.add("Chiranjeevi");
+        list.add("RaviTeja");
+        list.add("Venkatesh");
+        list.add("Nagarjuna");
         System.out.println(list);
 
         //min accepts comparator to sort
@@ -23,7 +26,7 @@ public class S4minNmax {
         String max = list.stream().max((str1, str2) -> str1.compareTo(str2)).get();
         System.out.println(max);
 
-        Stream<String> stringList = Stream.of("Cat","Dog","Elephant","Frog","Goat");
+        Stream<String> stringList = Stream.of("Cat", "Dog", "Elephant", "Frog", "Goat");
         //min needs a comparator
         Optional<String> min2 = stringList.min((s1, s2) -> s1.compareToIgnoreCase(s2));
         min2.ifPresent(System.out::println);

@@ -1,8 +1,8 @@
-
 package nitin.generic.examples;
 
 /**
  * Object Container
+ *
  * @author Juneau
  */
 public class ObjectContainer {
@@ -21,5 +21,5 @@ public class ObjectContainer {
     public void setObj(Object obj) {
         this.obj = obj;
     }
-    
+
 }

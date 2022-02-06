@@ -6,5 +6,5 @@ package nitin.streams.StreamsWRTInheritance;
  */
 
 public enum Ethnicity {
-    ASIAN, NORTHAMERICAN, SOUTHAMERICAN,AFRICAN,EUROPEAN;
+    ASIAN, NORTHAMERICAN, SOUTHAMERICAN, AFRICAN, EUROPEAN;
 }

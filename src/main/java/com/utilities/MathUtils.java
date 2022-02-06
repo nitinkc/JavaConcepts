@@ -10,22 +10,22 @@ public class MathUtils {
 
     public static BigInteger factorial(int i) {
 
-        if(i < 0){
+        if (i < 0) {
             return BigInteger.valueOf(i);
         }
 
-        if (i==0){
+        if (i == 0) {
             return BigInteger.valueOf(1);
         }
         BigInteger ret = BigInteger.valueOf(1);
-        long begin=System.currentTimeMillis();
-        for (int x = i; i > 1;i--){
+        long begin = System.currentTimeMillis();
+        for (int x = i; i > 1; i--) {
             ret = BigInteger
                     .valueOf(x)
                     .multiply(ret);
         }
-        long end=System.currentTimeMillis();
-        System.out.println("total time take : " + (end-begin)  + " secs");
+        long end = System.currentTimeMillis();
+        System.out.println("total time take : " + (end - begin) + " secs");
 
         return ret;
     }

@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class TimeTest {
     public static void main(String[] args) throws ParseException {
-        Map<String,Object> map = new HashMap<>();
+        Map<String, Object> map = new HashMap<>();
         map.put("END_DATE", "2019-11-21");
         Timestamp endDate;
 

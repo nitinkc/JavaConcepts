@@ -16,12 +16,12 @@ public class L1LocalDateTime {
         Month mon = d.getMonth();
         int mm = d.getMonthValue();
         int year = d.getYear();
-        DayOfWeek dayOfWeek  = d.getDayOfWeek();
+        DayOfWeek dayOfWeek = d.getDayOfWeek();
         int hour = d.getHour();
         int min = d.getMinute();
         int sec = d.getSecond();
         int nanoSec = d.getNano();
-        System.out.println(dayOfWeek + ", "+ date +" - "+ mon +" - "+ mm +" - "+ year +" - "+ hour +" - "+ min+" - "+ sec + " - " + nanoSec);
+        System.out.println(dayOfWeek + ", " + date + " - " + mon + " - " + mm + " - " + year + " - " + hour + " - " + min + " - " + sec + " - " + nanoSec);
 
     }
 }

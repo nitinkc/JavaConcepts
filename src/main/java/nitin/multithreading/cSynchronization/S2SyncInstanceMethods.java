@@ -24,13 +24,14 @@ public class S2SyncInstanceMethods {
         long end = System.currentTimeMillis();
 
         System.out.println("The total Count is:" + w.count);
-        System.out.println("Total Time in Execution: " + (end-start));
+        System.out.println("Total Time in Execution: " + (end - start));
     }
 }
 
-class Worker implements Runnable{
+class Worker implements Runnable {
     //Variable residing in the Heap, shared among all the threads
     int count = 0;
+
     @Override
     public void run() {
         for (int i = 0; i < 10000; i++) {
@@ -43,7 +44,7 @@ class Worker implements Runnable{
     //Synchronize will make sure that the value of count is always accessed by only one thread at once
     // This will increase the time of execution
     // Not using suync will decrease the reliability of the results.
-    private  void count() {
+    private void count() {
         count++;
     }
 }

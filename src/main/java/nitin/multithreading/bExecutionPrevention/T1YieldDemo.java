@@ -1,14 +1,15 @@
 package nitin.multithreading.bExecutionPrevention;
 
 // To call the ThreadByRunnable Class for reusing multiple times
+
 import nitin.multithreading.aBasics.ThreadByRunnable;
 
 /**
  * Created by Nitin Chaurasia on 12/2/15 at 11:25 PM.
- *
+ * <p>
  * Pause current executing threads, giving chance to remaining
  * waiting Threads OF SAME PRIORITY.
- *
+ * <p>
  * If no waiting Threads, or all threads have lower Priority
  * Then Same thread will continue execution.
  */

@@ -18,7 +18,7 @@ public class S6toArray {
 
         String[] arr = list.stream().toArray(String[]::new);
 
-        for (String a : arr){
+        for (String a : arr) {
             System.out.println(a);
         }
 

@@ -13,8 +13,11 @@ import java.util.stream.Collectors;
 public class S1collect {
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
-        list.add("Pawan");list.add("Chiranjeevi");list.add("RaviTeja");
-        list.add("Venkatesh");list.add("Nagarjuna");
+        list.add("Pawan");
+        list.add("Chiranjeevi");
+        list.add("RaviTeja");
+        list.add("Venkatesh");
+        list.add("Nagarjuna");
         System.out.println(list);
 
         //Create a now list with actors having names longer than 9 characters
@@ -29,17 +32,17 @@ public class S1collect {
 
         //Change all the names to uppercase
         // Using a function as a return value is expected
-        Function<String,String> upperCase = (str) -> str.toUpperCase();
+        Function<String, String> upperCase = (str) -> str.toUpperCase();
         List<String> l2 = list
                 .stream()
                 .map(upperCase)
                 .collect(Collectors.toList());
         //System.out.println(l2);
 
-        Map<String,Integer> map = list.stream()
-                .collect(Collectors.toMap(Function.identity(),String::length));
+        Map<String, Integer> map = list.stream()
+                .collect(Collectors.toMap(Function.identity(), String::length));
 
-        map.forEach((key,value)-> System.out.println(key + value));
+        map.forEach((key, value) -> System.out.println(key + value));
 
     }
 }

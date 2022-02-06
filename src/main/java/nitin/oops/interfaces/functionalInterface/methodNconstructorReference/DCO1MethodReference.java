@@ -5,19 +5,19 @@ package nitin.oops.interfaces.functionalInterface.methodNconstructorReference;
  */
 public class DCO1MethodReference {
     public static void main(String[] args) {
-        Interf i = Test :: m2;
+        Interf i = Test::m2;
         i.m1();//Invokes m2 of Test Class
     }
 }
 
-class Test{
-    public static void m2(){
+class Test {
+    public static void m2() {
         System.out.println("Method m2 from class Test");
     }
 }
 
 @FunctionalInterface
-interface Interf{
+interface Interf {
     void m1();
 }
 

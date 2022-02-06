@@ -1,14 +1,16 @@
 package nitin.LambdaExpressions.t1Lambdas.lambdas3.function;
 
 public class Consultant extends Person {
-  public enum Speciality { COMPUTER_PROGRAMMING, MANAGEMENT_PRACTICES, EXTRATERRESTRIAL_LANGUAGES };
-  private Speciality speciality = Speciality.COMPUTER_PROGRAMMING;
+    public enum Speciality {COMPUTER_PROGRAMMING, MANAGEMENT_PRACTICES, EXTRATERRESTRIAL_LANGUAGES}
 
-  public Speciality getSpeciality() {
-    return speciality;
-  }
+    ;
+    private Speciality speciality = Speciality.COMPUTER_PROGRAMMING;
 
-  public void setSpeciality(Speciality speciality) {
-    this.speciality = speciality;
-  }
+    public Speciality getSpeciality() {
+        return speciality;
+    }
+
+    public void setSpeciality(Speciality speciality) {
+        this.speciality = speciality;
+    }
 }

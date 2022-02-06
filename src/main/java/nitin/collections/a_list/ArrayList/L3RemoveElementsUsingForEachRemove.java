@@ -8,7 +8,7 @@ import java.util.List;
  * ArrayList arrayList=new ArrayList(11);
  * ArrayList Initial Size 10; Later incremented by 3/2 + 1
  * Vector Initial Size 16; Incremented by 2X
- *
+ * <p>
  * list.remove() --> ConcurrentModificationException id used with Iterator
  * itr.remove() --> correct way to remove
  */
@@ -24,18 +24,18 @@ public class L3RemoveElementsUsingForEachRemove {
         list.remove(2);// Removing the element, from anywhere
 
         System.out.println("******************* LIST BEFORE REMOVAL ***************************** ");
-        System.out.println(list );
+        System.out.println(list);
 
         System.out.println("******************* LIST DURING REMOVAL ***************************** ");
         // Removing the elements from the a_list
 
         //FOR EACH is a Read Only Loop, so it will end in ConCurrent modification exception
-        for (String str: list) {
+        for (String str : list) {
             System.out.println(str);
             list.remove(str);//ConcurrentModificationException
         }
 
         System.out.println("******************* LIST AFTER REMOVAL ***************************** ");
-        System.out.println(list );
+        System.out.println(list);
     }
 }

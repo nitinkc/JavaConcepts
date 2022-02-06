@@ -17,13 +17,13 @@ public class F2FileReaderWriter {
 
         // Reading character by character
         // We have the Unicode value of the Character
-        while(i != -1){ //unicode of null is -1
-            System.out.println((char)i);
+        while (i != -1) { //unicode of null is -1
+            System.out.println((char) i);
             i = fr.read();
         }
-        
+
         // By default, its false, meaning, it will override, Put true to append
-        FileWriter fw = new FileWriter(f,true);
+        FileWriter fw = new FileWriter(f, true);
         fw.write("  Nitin\n");
 
         //Good practise to use flush

@@ -2,11 +2,11 @@ package nitin.multithreading.aBasics;
 
 /**
  * Created by Nitin Chaurasia on 12/2/15 at 9:29 PM.
- *
+ * <p>
  * Difference between t.start() and t.run()
  * t.start calls run() from within. if t.run is executed,
  * run method will execute normally.
- *
+ * <p>
  * ALSO. Since by extending, we are limiting to extending only one class.
  * NO CHANCE OF EXTENDING ANY OTHER CLASS!!
  * We cannot extend any other class. Thus implementing Runnable Interface
@@ -40,7 +40,7 @@ public class T2ThreadByExtending {
 
 // Thread Scheduler Decides which thread runs First
 // Undeterministic Response
-class ThreadDemo extends Thread{
+class ThreadDemo extends Thread {
 
     // If run method is not overridden, it will execute like an empty implementation
     @Override
@@ -50,11 +50,11 @@ class ThreadDemo extends Thread{
         }
     }
 
-     //OverLoading of Run is Possible, but start() will call run() without arguments
-        //Overloaded run method will behave like a normal method
+    //OverLoading of Run is Possible, but start() will call run() without arguments
+    //Overloaded run method will behave like a normal method
 
-        public void run(int i){
-            System.out.println("From Overloaded Run"+ i);
+    public void run(int i) {
+        System.out.println("From Overloaded Run" + i);
     }
 }
 

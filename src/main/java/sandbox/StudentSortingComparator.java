@@ -24,7 +24,12 @@ class StudentSortingComparator implements Comparator<Student> {
         Student obj6 = new Student("Sneha", 22);
 
         // add customer objects to ArrayList
-        al.add(obj1);al.add(obj2);al.add(obj3);al.add(obj4);al.add(obj5);al.add(obj6);
+        al.add(obj1);
+        al.add(obj2);
+        al.add(obj3);
+        al.add(obj4);
+        al.add(obj5);
+        al.add(obj6);
 
         // before Sorting arraylist: iterate using Iterator
         Iterator<Student> custIterator = al.iterator();

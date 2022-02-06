@@ -5,7 +5,7 @@ import java.util.Set;
 /**
  * Created by Nitin Chaurasia on 11/9/15 at 11:06 PM.
  */
-public class Data{
+public class Data {
 
     private int population;
 
@@ -44,16 +44,16 @@ public class Data{
 
     @Override
     /* Writes the names of the cities in the desired format
-    * */
+     * */
     public String toString() {
         String value = "";
-         value = value + population + "\n\n" + city.toString() + "\n" + "Interstates: " +
-                 interstatesToString(getInterstates()) + "\n";
+        value = value + population + "\n\n" + city.toString() + "\n" + "Interstates: " +
+                interstatesToString(getInterstates()) + "\n";
         return value;
     }
 
     /* Writes the data when the cities have the same population as per the requirements
-    * */
+     * */
     public String aggragateCities() {
         String value = "";
         value = city.toString() + "\n" + "Interstates: " +
@@ -63,10 +63,10 @@ public class Data{
 
     /* Method to Print List of Interstates in the required format
      */
-    public String interstatesToString(Set<String> iStates){
+    public String interstatesToString(Set<String> iStates) {
         String result = "";
         for (String interstates : iStates) {
-            result += interstates + ", " ;
+            result += interstates + ", ";
         }
         return result;
     }

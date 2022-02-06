@@ -12,53 +12,57 @@ public class I4AdapterClass extends AdapterX {
     }
 
     @Override
-    public void m3(){
+    public void m3() {
         System.out.println("Providing Implementation of only M3, even though we have access to all the methods, " +
                 "we can choose to implement what we like in Adapter pattern");
 
     }
 
     @Override
-    public void m2(){
+    public void m2() {
         System.out.println("Implementation if m2");
     }
 }
 
 
-interface X{
+interface X {
     void m1();
+
     void m2();
+
     void m3();
+
     void m4();
+
     void m5();
 }
 
 
 // Providing empty implementation
- abstract class AdapterX implements X{
+abstract class AdapterX implements X {
 
-     @Override
-     public void m1() {
+    @Override
+    public void m1() {
 
-     }
+    }
 
-     @Override
-     public void m2() {
+    @Override
+    public void m2() {
 
-     }
+    }
 
-     @Override
-     public void m3() {
+    @Override
+    public void m3() {
 
-     }
+    }
 
-     @Override
-     public void m4() {
+    @Override
+    public void m4() {
 
-     }
+    }
 
-     @Override
-     public void m5() {
+    @Override
+    public void m5() {
 
-     }
- }
+    }
+}

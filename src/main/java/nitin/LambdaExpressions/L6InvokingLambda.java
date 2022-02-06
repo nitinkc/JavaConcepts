@@ -15,6 +15,6 @@ public class L6InvokingLambda {
 
 // functional interface even though not annotated
 //@FunctionalInterface
-interface InvokingLambda{
+interface InvokingLambda {
     void m1();
 }

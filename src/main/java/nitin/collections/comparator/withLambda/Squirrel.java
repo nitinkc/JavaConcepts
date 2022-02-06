@@ -17,12 +17,13 @@ public class Squirrel {
         this.weight = weight;
     }
 
-    public Squirrel(String theSpecies){
+    public Squirrel(String theSpecies) {
         if (theSpecies == null)
             throw new IllegalArgumentException();
         else
             this.species = theSpecies;
     }
+
     public void setSpecies(String species) {
         this.species = species;
     }

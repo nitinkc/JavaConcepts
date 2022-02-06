@@ -8,7 +8,7 @@ public class L4AnonymousArrays {
     public static void main(String[] args) {
 
         //passing anonymous array in sum method
-        sum(new int[]{3,4,5,6,7,8,9,12});
+        sum(new int[]{3, 4, 5, 6, 7, 8, 9, 12});
     }
 
     private static void sum(int[] arr) {

@@ -33,47 +33,50 @@ public class L2 {
     }
 }
 
-interface Fly{
-    default void takeOff(){
+interface Fly {
+    default void takeOff() {
         System.out.println("Fly::takeOff");
     }
-    default void turn(){
+
+    default void turn() {
         System.out.println("Fly::turn");
     }
-    default void cruise(){
+
+    default void cruise() {
         System.out.println("Fly::cruise");
     }
-    default void land(){
+
+    default void land() {
         System.out.println("Fly::land");
     }
 
 }
 
-interface FastFly extends Fly{
+interface FastFly extends Fly {
     @Override
-    default void takeOff(){
+    default void takeOff() {
         System.out.println("FastFly::TakeOff");
     }
 }
 
 // Demonstration of Rule 3 3
-class Vehicle{
-    public void land(){
+class Vehicle {
+    public void land() {
         System.out.println("Vehicle::Land");
     }
 }
 
-interface Sail{
-    default void cruise(){
+interface Sail {
+    default void cruise() {
         System.out.println("Sail::cruise");
     }
 }
 
 //default cruise method is available in both the interfaces
 //SeaPlane inherits unrelated defaults for cruise() from types Fly and Sail
-class SeaPlane extends Vehicle implements FastFly, Sail{
+class SeaPlane extends Vehicle implements FastFly, Sail {
     //To avoid the method HAVE TO OVER WRITE
-    public void cruise(){
+    public void cruise() {
         System.out.println("Seaplane::cruise");
         FastFly.super.cruise();//super has to be used because interfaces can have static methoids
         // If you dont use super, it will thin u are calling static method. with super, its default

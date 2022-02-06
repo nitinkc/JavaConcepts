@@ -23,7 +23,7 @@ public class OptionalOFNullable {
 
     @AllArgsConstructor
     @ToString
-    static class Hhd{
+    static class Hhd {
         private UUID x;
         private UUID y;
         private UUID z;

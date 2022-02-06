@@ -3,6 +3,7 @@ package nitin.kcura.java8Solution.part1;
 import java.io.*;
 import java.nio.file.Files;
 import java.util.*;
+
 /**
  * Created by nitin on Sunday, October/06/2019 at 10:50 PM
  */
@@ -22,7 +23,7 @@ public class Driver8 {
         }
 
         deleteOutputFiles();
-        File dataFile = new File(FILE_PATH+args[0]);
+        File dataFile = new File(FILE_PATH + args[0]);
         // To keep the data of the File into list of Objects of type Data
         List<Data> list = new ArrayList<>();
 
@@ -74,10 +75,10 @@ public class Driver8 {
         // Convert list back to set.
         List<String> interstateCountList = new ArrayList<>(interstateCountMap.keySet());
         Collections.sort(interstateCountList, ((String a, String b)
-                                        -> Integer.parseInt(a.substring(2)) - Integer.parseInt(b.substring(2))));
+                -> Integer.parseInt(a.substring(2)) - Integer.parseInt(b.substring(2))));
         Iterator<String> itr2 = interstateCountList.iterator();
 
-        while(itr2.hasNext()){
+        while (itr2.hasNext()) {
             String key = itr2.next();
             int value = interstateCountMap.get(key);
             printToFile.println(key + " " + value);
@@ -109,7 +110,7 @@ public class Driver8 {
         // Write the formatted Data into file
         Iterator<Data> itr = list.listIterator();
         int currentPopulation = -1;
-        while (itr.hasNext()){
+        while (itr.hasNext()) {
             Data curr = itr.next();
             // Grouping the cities with same population, if the population is same, all cities are clubbed
             if (currentPopulation == curr.getPopulation()) {
@@ -158,10 +159,9 @@ public class Driver8 {
 
                     if (interstateNumber1 > interstateNumber2) {
                         return 1;
-                    } else if (interstateNumber1 < interstateNumber2){
+                    } else if (interstateNumber1 < interstateNumber2) {
                         return -1;
-                    }
-                    else{
+                    } else {
                         throw new IllegalArgumentException("Two Interstates with same name in a Same City");
                     }
                 }

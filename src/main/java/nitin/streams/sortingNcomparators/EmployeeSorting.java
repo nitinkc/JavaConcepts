@@ -65,7 +65,7 @@ public class EmployeeSorting {
         list
                 .stream()
                 .sorted(Lambdas.revAgeLambda
-                .thenComparing(Lambdas.salaryLambda))
+                        .thenComparing(Lambdas.salaryLambda))
                 .forEach(System.out::println);
     }
 
@@ -91,6 +91,6 @@ public class EmployeeSorting {
     private static void sortAgeByAgeDiffMethod(List<Employee> list) {
         list.stream()
                 .sorted(Lambdas.ageLambda)
-               .forEach(System.out::println);
+                .forEach(System.out::println);
     }
 }

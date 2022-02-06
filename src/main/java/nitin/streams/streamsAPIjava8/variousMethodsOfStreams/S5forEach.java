@@ -23,7 +23,7 @@ public class S5forEach {
         list.stream().forEach(str -> System.out.println(str));
 
         //Where ever Lambda is there it can be replaced by method reference
-        list.stream().forEach(System.out :: print);
+        list.stream().forEach(System.out::print);
 
     }
 }

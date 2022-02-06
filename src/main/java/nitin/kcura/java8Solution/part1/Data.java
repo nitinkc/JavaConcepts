@@ -55,6 +55,7 @@ public class Data {
                 interstatesToString(getInterstates()) + "\n";
         return value;
     }
+
     /* Formats the data when the cities have the same population as per the requirements
      *  Cities with same population should be clubbed together.
      * */
@@ -68,14 +69,14 @@ public class Data {
 
     /* Method to Print List of Interstates in the required format
      */
-    public String interstatesToString(List iStates){
+    public String interstatesToString(List iStates) {
         String result = "";
         for (int i = 0; i < iStates.size() - 1; i++) {
-            result += iStates.get(i) + ", " ;
+            result += iStates.get(i) + ", ";
         }
         // Avoiding off-by-one error in comma
         // the last name of the city should not end with a comma.
-        result = result + iStates.get(iStates.size()-1);
+        result = result + iStates.get(iStates.size() - 1);
 
         return result;
     }

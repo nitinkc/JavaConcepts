@@ -6,5 +6,5 @@ package nitin.streams.StreamsWRTInheritance;
  */
 
 public enum StudentOf {
-    ENGINEERING,NURSING,MEDICINE,LAW,MUSIC,SPORTS;
+    ENGINEERING, NURSING, MEDICINE, LAW, MUSIC, SPORTS;
 }

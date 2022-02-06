@@ -13,7 +13,7 @@ public class zVariablesInLambdas {
         f.everyonePlay(true);
     }
 
-    void everyonePlay(boolean baby){
+    void everyonePlay(boolean baby) {
         String approach = "abmle";
         // if reassigned : Error: local variables referenced from a lambda expression must
         // be final or effectively final approach = "run";
@@ -23,7 +23,7 @@ public class zVariablesInLambdas {
         play(() -> approach);//Effectively Final Local Variable as approach is not re-assigned
     }
 
-    void play(Gorilla g){
+    void play(Gorilla g) {
         System.out.println(g.move());
     }
 }

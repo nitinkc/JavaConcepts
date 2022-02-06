@@ -18,7 +18,7 @@ public class GetFutureDates {
         Timestamp authTimestamp = new Timestamp(currentDate.getTime());
 
         String datePattern = "EEE, MMM, dd yyyy HH:mm:ss z Z";
-        SimpleDateFormat sdf=new SimpleDateFormat(datePattern);
+        SimpleDateFormat sdf = new SimpleDateFormat(datePattern);
 
         System.out.println("Current Time : ");
         System.out.println(sdf.format(authTimestamp));

@@ -11,24 +11,24 @@ import java.util.function.Consumer;
  */
 public class ConsumerUsage {
     public static void main(String[] args) {
-        List<String> strList = Arrays.asList("test","this","is","a","test","this","test","is","not","complex");
+        List<String> strList = Arrays.asList("test", "this", "is", "a", "test", "this", "test", "is", "not", "complex");
 
         //Consumer<String> c = s -> System.out.print(s + " ,");
         //Consumer<String> c = System.out::println;
 
         strList.stream()
-                .filter(s ->s.length() < 6)
+                .filter(s -> s.length() < 6)
                 .forEach(s -> System.out.print(s + " ,"));
         System.out.println();
 
-        Map<String,Integer> map = new TreeMap<>();
+        Map<String, Integer> map = new TreeMap<>();
         //BiConsumer<String,Integer> b1 = map::put;
         Consumer<String> b2 = (k) -> {
-            if(map.containsKey(k)) {
-                map.put(k, map.get(k)+1);
-            }else{
-                map.put(k,1);
-                }
+            if (map.containsKey(k)) {
+                map.put(k, map.get(k) + 1);
+            } else {
+                map.put(k, 1);
+            }
         };
 
         //Passing 0 as the default key, it actually gets calculated while evaluated in biConsumer

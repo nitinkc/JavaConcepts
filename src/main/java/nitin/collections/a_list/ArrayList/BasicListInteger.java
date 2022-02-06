@@ -45,9 +45,9 @@ public class BasicListInteger {
     private static void removeOddNumber(List<Integer> list) {
         Iterator<Integer> itr = list.iterator();
 
-        while(itr.hasNext()){
+        while (itr.hasNext()) {
             int curr = itr.next();
-            if (curr%2 != 0){
+            if (curr % 2 != 0) {
                 itr.remove();
                 // ConcurrentModificationException
                 // list.remove(curr);
@@ -57,10 +57,10 @@ public class BasicListInteger {
     }
 
     /**
-     *  3 main methods of iterator
-     1. hasNext()
-     2. next()
-     3. remove()
+     * 3 main methods of iterator
+     * 1. hasNext()
+     * 2. next()
+     * 3. remove()
      */
     private static void printList(List<Integer> list) {
         //Printing with Iterator

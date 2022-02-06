@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class Cargo {
 
-    public static List<Integer> intCargo(int numberOfElements){
+    public static List<Integer> intCargo(int numberOfElements) {
 
         Random r = new Random(9999);
         List<Integer> ret = new ArrayList<>();

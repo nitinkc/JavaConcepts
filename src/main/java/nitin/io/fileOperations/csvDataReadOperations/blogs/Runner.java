@@ -48,12 +48,12 @@ public class Runner {
         posts.stream()
                 // BlogPostType : BlogPost
                 .collect(Collectors
-                                .groupingBy(BlogPost::getAuthor,
-                                                Collectors.mapping(BlogPost::getTitle,
-                                                //Create a stream consisting the Title,Like tuple
-                                                Collectors.joining("|| ", "Post titles: [", "]")
-                                                )
+                        .groupingBy(BlogPost::getAuthor,
+                                Collectors.mapping(BlogPost::getTitle,
+                                        //Create a stream consisting the Title,Like tuple
+                                        Collectors.joining("|| ", "Post titles: [", "]")
                                 )
+                        )
                 ).entrySet()
                 .stream()
                 .forEach(System.out::println);

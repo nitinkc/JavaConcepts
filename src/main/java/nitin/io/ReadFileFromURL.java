@@ -12,19 +12,19 @@ public class ReadFileFromURL {
             //The Project Gutenberg EBook of Pride and Prejudice, by Jane Austen
             URL url = new URL("https://www.gutenberg.org/files/1342/1342-0.txt");
             s = new Scanner(url.openStream());
-        }catch(IOException ex) {
+        } catch (IOException ex) {
             ex.printStackTrace(); // for now, simply output it.
         }
-            Map<String,Integer> map = new HashMap<>();
-            while(s.hasNext()) {
-                String oneLine = s.nextLine();
-                String[] wordsInOneLine = oneLine.split("\\s+");
-                findLargerWords(wordsInOneLine,map);
-            }
+        Map<String, Integer> map = new HashMap<>();
+        while (s.hasNext()) {
+            String oneLine = s.nextLine();
+            String[] wordsInOneLine = oneLine.split("\\s+");
+            findLargerWords(wordsInOneLine, map);
+        }
 
-        for (Map.Entry<String, Integer> entry: map.entrySet()) {
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
             //System.out.println("Key = " + entry.getKey() + " Value = "  + entry.getValue());
-            if (entry.getValue() > 4){
+            if (entry.getValue() > 4) {
                 list.add(entry.getKey());
             }
         }

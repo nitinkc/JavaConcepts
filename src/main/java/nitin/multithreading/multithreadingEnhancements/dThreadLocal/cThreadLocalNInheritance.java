@@ -10,9 +10,10 @@ public class cThreadLocalNInheritance {
     }
 }
 
-class ParentThread extends Thread{
+class ParentThread extends Thread {
     public static ThreadLocal tl = new ThreadLocal();
-    public void run(){
+
+    public void run() {
         tl.set("Parent Thread Local");
         System.out.println("Parent Thread Local Value = " + tl.get());
 
@@ -23,7 +24,7 @@ class ParentThread extends Thread{
 }
 
 class ChildThread extends Thread {
-    public void run(){
+    public void run() {
         System.out.println("Child Thread Local Value = " +
                 ParentThread.tl.get());//Parent Thread Local - should be null : REDO LAST VIDEO TOWARDS END
     }

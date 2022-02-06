@@ -6,7 +6,7 @@ package nitin.a2operators;
  * Post-Increment x++
  * Pre-Decrement --x
  * Post-Decrement  x++
- *
+ * <p>
  * Nesting not possible ++(--x) -> Compile time error
  * Can be applied to all primitive type except boolean
  */
@@ -32,7 +32,7 @@ public class O1UnaryIncrementDecrement {
         char ch = 'a';
         System.out.println(++ch);// b, Increment ch and then print
 
-        System.out.println(0/0.0); // Not a Number
+        System.out.println(0 / 0.0); // Not a Number
         int counter = 0;
         System.out.println(counter); // Outputs 0
         System.out.println(++counter); // Outputs 1

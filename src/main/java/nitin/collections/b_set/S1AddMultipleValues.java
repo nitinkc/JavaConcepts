@@ -10,7 +10,7 @@ import java.util.Iterator;
 public class S1AddMultipleValues {
     public static void main(String[] args) {
         //TreeSet<String> hashSet = new TreeSet<String>();
-        HashSet hashSet=new HashSet();
+        HashSet hashSet = new HashSet();
         hashSet.add("B");
         hashSet.add(null);
         hashSet.add("A");
@@ -20,7 +20,7 @@ public class S1AddMultipleValues {
 
         System.out.println("****************************************");
 
-        Iterator itr=hashSet.iterator();
+        Iterator itr = hashSet.iterator();
         while (itr.hasNext()) {
             System.out.println(itr.next());
         }

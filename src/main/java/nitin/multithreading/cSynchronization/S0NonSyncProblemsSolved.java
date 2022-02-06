@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class S0NonSyncProblemsSolved {
     private static int counter = 0;
 
-    public static synchronized void counter(){
+    public static synchronized void counter() {
         ++counter;
     }
 
@@ -28,7 +28,7 @@ public class S0NonSyncProblemsSolved {
         System.out.println(counterValues);
     }
 
-    public static void process(){
+    public static void process() {
         //counter =0;
         Thread t1 = new Thread(new Runnable() {
             @Override

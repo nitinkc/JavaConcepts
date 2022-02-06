@@ -23,8 +23,8 @@ public class aThreadLocalDemo {
          *                  Example 2
          * ##################################################
          * */
-         ThreadLocal tl2 = new ThreadLocal(){
-            public Object initialValue(){
+        ThreadLocal tl2 = new ThreadLocal() {
+            public Object initialValue() {
                 return "abc";
             }
         };

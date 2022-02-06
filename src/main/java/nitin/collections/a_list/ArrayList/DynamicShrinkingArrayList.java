@@ -12,7 +12,7 @@ public class DynamicShrinkingArrayList {
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
         list = readFileFromInternet();
-        System.out.println("Original List Size : "+list.size());
+        System.out.println("Original List Size : " + list.size());
 
         dynamicallyShrinkList(list, WORD_LENGTH);
         System.out.println("List After First shrinking " + list.size());
@@ -39,15 +39,15 @@ public class DynamicShrinkingArrayList {
             //The English word List
             URL url = new URL("https://www.mit.edu/~ecprice/wordlist.10000");
             s = new Scanner(url.openStream());
-        }catch(IOException ex) {
+        } catch (IOException ex) {
             ex.printStackTrace(); // for now, simply output it.
         }
 
         //Construct a list of Long Words
         List<String> list = new ArrayList<>();
-        while(s.hasNext()) {
+        while (s.hasNext()) {
             String word = s.nextLine();
-            if(word.length() > WORD_LENGTH - 1){
+            if (word.length() > WORD_LENGTH - 1) {
                 list.add(word);
             }
         }

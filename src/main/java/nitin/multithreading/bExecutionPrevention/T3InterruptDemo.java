@@ -2,7 +2,7 @@ package nitin.multithreading.bExecutionPrevention;
 
 /**
  * Created by Nitin Chaurasia on 12/3/15 at 12:57 AM.
- *
+ * <p>
  * A Thread Can Interrupt another Sleeping or Waiting Thread
  */
 public class T3InterruptDemo {
@@ -22,14 +22,14 @@ public class T3InterruptDemo {
     }
 }
 
-class ThreadInterruot implements Runnable{
+class ThreadInterruot implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 100; i++) {
             System.out.println("Lazy Child: " + i);
             try {
                 Thread.sleep(100);
-            }catch(InterruptedException e){
+            } catch (InterruptedException e) {
                 System.out.println("I am Interrupted");
                 e.printStackTrace();
             }

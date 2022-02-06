@@ -11,7 +11,7 @@ public class A1Demo {
     }
 }
 
-class AtomicIntCounter{
+class AtomicIntCounter {
     // x is initialized with 9
     private final AtomicInteger x = new AtomicInteger(9);
 

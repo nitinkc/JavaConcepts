@@ -16,7 +16,7 @@ public class WithLamdaExp {
 //        Thread t = new Thread(r);// instead of passing r, pass the lambda directly
 
         //Passing Lambda as Argument
-        Thread t = new Thread( () -> {
+        Thread t = new Thread(() -> {
             for (int i = 0; i < 5; i++) {
                 System.out.println("Child Thread");
             }

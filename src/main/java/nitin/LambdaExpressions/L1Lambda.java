@@ -15,21 +15,23 @@ public class L1Lambda {
     }
 
     // When only one parameter is available, small parenthesis is optional
-    private static List<Integer> doubling(List<Integer> nums){
+    private static List<Integer> doubling(List<Integer> nums) {
         //small parenthesis around x is optional
         //nums.replaceAll( (x) -> {return x*2;});//First Doubling
 
         // simplified
-        nums.replaceAll(x -> x%2 == 0 ? x : x*x);//Second Doubling
+        nums.replaceAll(x -> x % 2 == 0 ? x : x * x);//Second Doubling
         return nums;
     }
 
-    private static List<Integer> doublingWithIfElse(List<Integer> list){
+    private static List<Integer> doublingWithIfElse(List<Integer> list) {
         //Testing if else in Lambda
-        list.replaceAll( (x) -> { if (x%2 == 0)
-            return x;
-        else
-            return x*x;});
+        list.replaceAll((x) -> {
+            if (x % 2 == 0)
+                return x;
+            else
+                return x * x;
+        });
 
         return list;
     }

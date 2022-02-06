@@ -17,15 +17,15 @@ public class O2UnwrappingOptional {
         String emptyString = null;
 
         //Optional way
-        Optional<String> strOptional =  Optional.of(str);
+        Optional<String> strOptional = Optional.of(str);
         Optional<String> emptyStringOptional = Optional.empty();
         // get() method
-        System.out.println("1: "+strOptional.get());
+        System.out.println("1: " + strOptional.get());
 
         // isPresent Check
-        String ret      = strOptional.isPresent()? strOptional.get():"val not present";
-        String retEmpty = emptyStringOptional.isPresent() ? emptyStringOptional.get(): "Alternative Value";
-        System.out.println("2: "+ret);
+        String ret = strOptional.isPresent() ? strOptional.get() : "val not present";
+        String retEmpty = emptyStringOptional.isPresent() ? emptyStringOptional.get() : "Alternative Value";
+        System.out.println("2: " + ret);
         System.out.println("3: " + retEmpty);
 
         // orElse, orElseGet -> Provides an alternative in case of a null return.

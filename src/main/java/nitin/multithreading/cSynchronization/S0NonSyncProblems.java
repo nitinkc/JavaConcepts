@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Nitin Chaurasia on 3/25/18 at 12:58 AM.
- *
+ * <p>
  * Demo that the value of a counter is not incremented properly
  */
 public class S0NonSyncProblems {
@@ -23,8 +23,8 @@ public class S0NonSyncProblems {
         System.out.println(counterValues);
     }
 
-    public static void process(){
-        counter =0;
+    public static void process() {
+        counter = 0;
         Thread t1 = new Thread(new Runnable() {
             @Override
             public void run() {

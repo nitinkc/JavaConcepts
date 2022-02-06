@@ -10,15 +10,15 @@ import java.util.function.Predicate;
  * Created by Nitin Chaurasia on 1/30/18 at 5:41 PM.
  * A predicate is a function with a single argument and returns boolean value.
  * Predicate interface is present in Java.util.function package
-
- It’s a functional interface and it contains only one method i.e., test() 
+ * <p>
+ * It’s a functional interface and it contains only one method i.e., test()
  */
 public class PDF1Predicate {
     public static void main(String[] args) {
 
         // Predicate to test if an int is Greater than 10
         //Predicate<Integer> p = i -> {return i>10;};
-        Predicate<Integer> p1 = i ->  i>10;
+        Predicate<Integer> p1 = i -> i > 10;
         System.out.println(p1.test(10));
         System.out.println(p1.test(6));//false
 
@@ -30,13 +30,14 @@ public class PDF1Predicate {
 
         //Predicate to test of a Collection is Empty
         Predicate<Collection> p3 = c -> c.isEmpty();
-        ArrayList l1 = new ArrayList(); l1.add(23);
+        ArrayList l1 = new ArrayList();
+        l1.add(23);
         ArrayList l2 = new ArrayList();
         System.out.println(p3.test(l1));
         System.out.println(p3.test(l2));
 
 
-        List<String> list = Arrays.asList("first","second","third","testString");
+        List<String> list = Arrays.asList("first", "second", "third", "testString");
 
         // Static reference as there are no parameter
         Predicate<String> p4 = String::isEmpty;

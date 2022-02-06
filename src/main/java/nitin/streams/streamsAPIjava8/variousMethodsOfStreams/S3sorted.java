@@ -23,7 +23,7 @@ public class S3sorted {
         System.out.println(l);
 
         // Reverse Sorted, customised sorted order
-        List<String> l2 = list.stream().sorted((str1,str2) -> str2.compareTo(str1)).collect(Collectors.toList());
+        List<String> l2 = list.stream().sorted((str1, str2) -> str2.compareTo(str1)).collect(Collectors.toList());
 //        List<String> l3 = list.stream().sorted(new Comparator<String>() {
 //            @Override
 //            public int compare(String o1, String o2) {

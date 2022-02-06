@@ -2,7 +2,7 @@ package nitin.multithreading.aBasics;
 
 /**
  * Created by Nitin Chaurasia on 12/3/15 at 12:28 AM.
- *
+ * <p>
  * To just Pause
  */
 public class T3SleepDemo {
@@ -16,7 +16,6 @@ public class T3SleepDemo {
         Thread.sleep(2000);
 
         System.out.println("Line 3");
-
 
 
     }

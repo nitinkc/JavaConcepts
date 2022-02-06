@@ -34,7 +34,7 @@ public class StringUtils {
         return new String(temp);
     }
 
-    public static String reverseString(String str){
+    public static String reverseString(String str) {
         return new StringBuilder(str).reverse().toString();
     }
 }

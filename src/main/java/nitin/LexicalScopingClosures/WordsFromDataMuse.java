@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.Map;
 
 /**
-* Created by nitin on Thursday,February/13/2020at 1:53AM
-*/
+ * Created by nitin on Thursday,February/13/2020at 1:53AM
+ */
 public class WordsFromDataMuse {
 
-    public List<String>  getWords(String[] args) {
+    public List<String> getWords(String[] args) {
         String word = args[0];
         String max = args[1];
 
@@ -30,7 +30,7 @@ public class WordsFromDataMuse {
 
 
         List<String> wordList = new ArrayList<>();
-        for (WordResponse x: response.getBody()) {
+        for (WordResponse x : response.getBody()) {
             //System.out.println(x.getWord());
             wordList.add(x.getWord());
         }

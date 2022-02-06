@@ -13,7 +13,7 @@ public class Driver {
     //public static final String FILE_PATH = "src\\main\\java\\com\\nitin\\kcura\\java8Solution\\";
     public static final String FILE_PATH = "src/main/java/com/nitin/kcura/oldSolution/part2/";
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Driver driver = new Driver();
         driver.deleteOutputFiles();
         if (args.length == 0 || args.length > 1) {
@@ -24,7 +24,7 @@ public class Driver {
         String fileName = args[0];
 
         //Read the contents of the file and store locally
-        File dataFile = new File(FILE_PATH+fileName);
+        File dataFile = new File(FILE_PATH + fileName);
 
         //Read the File
         Scanner input = null;
@@ -39,7 +39,7 @@ public class Driver {
         List<Data> list = new ArrayList<Data>();
 
         //Read from the File, assuming the file is properly sanitized
-        while (input.hasNext()){
+        while (input.hasNext()) {
             //Split the tokens based on the delimiter "\"
             String[] temp = input.nextLine().split("\\|");
 
@@ -74,7 +74,7 @@ public class Driver {
         Data chicagoData = null;
         for (Data data : list) {
             citiesConnection.addNewCity(data);
-               if (data.getCity().equals(new City("Chicago", "Illinois"))) {
+            if (data.getCity().equals(new City("Chicago", "Illinois"))) {
                 chicagoData = data;
             }
         }
@@ -85,11 +85,11 @@ public class Driver {
     }
 
     /* Utility method to delete the files.
-    * in case of testing it is used
-    * */
+     * in case of testing it is used
+     * */
     public void deleteOutputFiles() {
-        File citiesFile = new File(FILE_PATH+CITIES_FILE);
-        File interstatesFile = new File(FILE_PATH+INTERSTATES_FILE);
+        File citiesFile = new File(FILE_PATH + CITIES_FILE);
+        File interstatesFile = new File(FILE_PATH + INTERSTATES_FILE);
         try {
             Files.deleteIfExists(citiesFile.toPath());
             Files.deleteIfExists(interstatesFile.toPath());

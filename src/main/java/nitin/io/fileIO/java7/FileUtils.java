@@ -8,15 +8,16 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class FileUtils {
-  public static List<String> getLines(String file) throws IOException {
-    Path path = Paths.get(file);
-    return(Files.readAllLines(path, Charset.defaultCharset()));
-  }
-  
-  public static Path writeLines(String file, List<String> lines) throws IOException {
-    Path path = Paths.get(file);
-    return(Files.write(path, lines, Charset.defaultCharset()));
-  }
-  
-  private FileUtils() {} // Uninstantiatable class
+    public static List<String> getLines(String file) throws IOException {
+        Path path = Paths.get(file);
+        return (Files.readAllLines(path, Charset.defaultCharset()));
+    }
+
+    public static Path writeLines(String file, List<String> lines) throws IOException {
+        Path path = Paths.get(file);
+        return (Files.write(path, lines, Charset.defaultCharset()));
+    }
+
+    private FileUtils() {
+    } // Uninstantiatable class
 }

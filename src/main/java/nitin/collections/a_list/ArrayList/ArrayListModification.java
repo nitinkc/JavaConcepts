@@ -22,8 +22,8 @@ public class ArrayListModification {
         }
 
         for (int i = 0; i < list.size(); i++) {
-            if(i == 5)
-                list.get(i-4).setA(i*2);
+            if (i == 5)
+                list.get(i - 4).setA(i * 2);
         }
 
         System.out.println();
@@ -36,6 +36,6 @@ public class ArrayListModification {
 @Getter
 @Setter
 @AllArgsConstructor
-class ListInteger{
+class ListInteger {
     private int a;
 }

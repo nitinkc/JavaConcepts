@@ -10,13 +10,14 @@ abstract class X {
     public abstract void check();
 }
 
-class Y extends X{
+class Y extends X {
 
     @Override
     public void check() {
 
     }
 }
+
 class MultipleClassInaFile {
     public static void main(String[] args) {
         X obj1 = new Y();

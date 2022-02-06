@@ -7,13 +7,14 @@ import java.util.concurrent.Callable;
  */
 public class PrintJobCallable implements Callable {
     int num;
-    PrintJobCallable(int num){
+
+    PrintJobCallable(int num) {
         this.num = num;
     }
 
     @Override
     public Object call() throws Exception {
-        System.out.println(Thread.currentThread().getName() + " is responsible for adding first " + num +" numbers");
+        System.out.println(Thread.currentThread().getName() + " is responsible for adding first " + num + " numbers");
 
         int sum = 0;
         for (int i = 0; i < num; i++) {

@@ -7,18 +7,18 @@ import java.util.List;
  * Created by Nitin Chaurasia on 2/1/18 at 12:47 AM.
  */
 public class F4SerializationWRTunmodifiableColl {
-    private static final String FILE_NAME =  "src/main/java/com/nitin/zjava9/factoryMethodsForUnmodifiableCollection/serialization.txt";
+    private static final String FILE_NAME = "src/main/java/com/nitin/zjava9/factoryMethodsForUnmodifiableCollection/serialization.txt";
 
-    public static void main(String[] args) throws IOException,ClassNotFoundException{
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
 
         //Obtaining the File name
         File f = new File(FILE_NAME);
 
         //Creating unmodifiable Collection
-        List<Integer> list = List.of(1,2,3,4,5);
+        List<Integer> list = List.of(1, 2, 3, 4, 5);
 
         //Checking if the File exists or not
-        if(!f.exists()){
+        if (!f.exists()) {
             f.createNewFile();
             //If file by that name does not exist, then create the file
             System.out.println("Created File...");

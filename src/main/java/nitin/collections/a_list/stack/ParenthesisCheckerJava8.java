@@ -11,24 +11,24 @@ public class ParenthesisCheckerJava8 {
         System.out.println(checker("({{}}(){()})"));
     }
 
-    private static boolean checker(String str){
+    private static boolean checker(String str) {
         Stack<Character> s = new Stack<>();
 
         Consumer<Character> consumer = (c) -> {
-            if(c.toString().equals("(") || c == '{') {
+            if (c.toString().equals("(") || c == '{') {
                 s.push(c);
             }
 
-            if(c == '}' && s.peek() == '{'){
+            if (c == '}' && s.peek() == '{') {
                 s.pop();
             }
 
-            if(c == ')' && s.peek() == '('){
+            if (c == ')' && s.peek() == '(') {
                 s.pop();
             }
         };
         str.chars()
-                .mapToObj(i->(char)i)
+                .mapToObj(i -> (char) i)
                 .forEach(x -> consumer.accept(x));
 
         return s.isEmpty();

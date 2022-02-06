@@ -9,15 +9,15 @@ package nitin.zOReiley2020SimonRoberts.f3closures.s4designCleanup;
 public interface Criteria<E> {
     boolean test(E e);
 
-    default Criteria<E> and(Criteria<E> crit2){
+    default Criteria<E> and(Criteria<E> crit2) {
         return x -> this.test(x) && crit2.test(x);
     }
 
-    default Criteria<E> or( Criteria<E> crit2){
+    default Criteria<E> or(Criteria<E> crit2) {
         return x -> this.test(x) || crit2.test(x);
     }
 
-    default Criteria<E> negate(){
+    default Criteria<E> negate() {
         return x -> !this.test(x);
     }
 }

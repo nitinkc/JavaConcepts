@@ -2,12 +2,11 @@ package nitin.exceptionHandling.customizedExceptions;
 
 /**
  * Created by Nitin C on 11/27/2015.
- *
+ * <p>
  * User defined exceptions should ALWAYS be checked
  * But you can extend any exception class
  * 1. Exception for custom checked exception
  * 2. RuntimeException for unchecked
- *
  */
 public class CannotSwimException extends Exception {
     public CannotSwimException() {

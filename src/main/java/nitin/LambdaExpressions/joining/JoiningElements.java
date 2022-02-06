@@ -9,21 +9,21 @@ import java.util.stream.Collectors;
  */
 public class JoiningElements {
     public static void main(String[] args) {
-        List<String> list = Arrays.asList("John","Doe","Jane","Dow","Yong","Lee");
+        List<String> list = Arrays.asList("John", "Doe", "Jane", "Dow", "Yong", "Lee");
 
-        for (int i = 0; i < list.size() -1; i++) {
+        for (int i = 0; i < list.size() - 1; i++) {
             System.out.print(list.get(i) + ",");
         }
-        System.out.println(list.get(list.size()-1));
+        System.out.println(list.get(list.size() - 1));
 
         System.out.println();
         // No more Off-By-One Error
-        System.out.println(String.join(", ",list));
+        System.out.println(String.join(", ", list));
 
         System.out.println(
                 list.stream()
-                .map(String::toUpperCase)
-                .collect(Collectors.joining(" && "))
+                        .map(String::toUpperCase)
+                        .collect(Collectors.joining(" && "))
         );
     }
 }

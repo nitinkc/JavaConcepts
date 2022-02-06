@@ -13,7 +13,7 @@ public class B2UpperBounds {
         // numbers.add(3);
         //inheritanceProblemSolved();
 
-        List<? extends Number> list = Arrays.asList(3.14, (22/7), 1.00, 2);
+        List<? extends Number> list = Arrays.asList(3.14, (22 / 7), 1.00, 2);
         callMethodsOfBoundedClass(list);
         /*
         * Generic java collections are covarient

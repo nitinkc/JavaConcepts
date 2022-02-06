@@ -14,17 +14,17 @@ public class L0SpottingInvalidLambdas {
         int resultForStoringY;
 
         //Defining Lambda
-        y = (arg1,arg2) ->  arg1+arg2;
-        resultForStoringY = y.intMethod(1,2);
+        y = (arg1, arg2) -> arg1 + arg2;
+        resultForStoringY = y.intMethod(1, 2);
         System.out.println(resultForStoringY);
 
         // VALID LAMBDA
-        y = (n,m) -> n*m;
-        System.out.println(y.intMethod(2,3));
+        y = (n, m) -> n * m;
+        System.out.println(y.intMethod(2, 3));
 
         /* Without Curly braces we can't use return keyword */
-        y = (n,m) -> {
-            return n*m;
+        y = (n, m) -> {
+            return n * m;
         };
 
         /** RETURN Always need curly braces and ends with a colon */
@@ -65,14 +65,14 @@ public class L0SpottingInvalidLambdas {
         (a,b) -> { int c = 9; return a+b }// CORRECT AS C is an independent local variable
 */
 
-        int a = 10, b=20;
-        List<Integer> list = Cargo.intCargoSequence(5,10);
+        int a = 10, b = 20;
+        List<Integer> list = Cargo.intCargoSequence(5, 10);
 
         TestInterfaceVoidMethod x = () -> System.out.println("Test");
         x = System.out::println;
         x.voidMethod();
 
-        x = ()->System.out.print(resultForStoringY);
+        x = () -> System.out.print(resultForStoringY);
         x.voidMethod();
 
         //for each expects a Consumer
@@ -82,12 +82,12 @@ public class L0SpottingInvalidLambdas {
     }
 
     @FunctionalInterface
-    interface TestInterfaceVoidMethod{
+    interface TestInterfaceVoidMethod {
         void voidMethod();
     }
 
     @FunctionalInterface
-    interface TestInterfaceReturnMethod{
+    interface TestInterfaceReturnMethod {
         int intMethod(int a, int b);
     }
 }

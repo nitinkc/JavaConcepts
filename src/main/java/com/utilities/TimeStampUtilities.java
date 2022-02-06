@@ -66,8 +66,8 @@ public class TimeStampUtilities {
             Calendar cal2 = new GregorianCalendar();
 
             int factor = 0;
-            java.util.Date date1 =  new SimpleDateFormat("yyyy-MM-dd").parse(aBirthDate);
-            java.util.Date date2 =  new SimpleDateFormat("yyyy-MM-dd").parse(currentDate);
+            java.util.Date date1 = new SimpleDateFormat("yyyy-MM-dd").parse(aBirthDate);
+            java.util.Date date2 = new SimpleDateFormat("yyyy-MM-dd").parse(currentDate);
             cal1.setTime(date1);
             cal2.setTime(date2);
             if (cal2.get(Calendar.DAY_OF_YEAR) < cal1.get(Calendar.DAY_OF_YEAR)) {

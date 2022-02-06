@@ -10,7 +10,7 @@ import java.util.stream.Stream;
  * A Stream Pileline is the operation (STREAM OPERATIONS) that run on a stream to produce a result
  * Finite Streams have a limit
  * infinite Streams are like sunrise/sunset cycle
- *
+ * <p>
  * SOURCE : Where the stream comes from
  * INTERMEDIATE OPERATIONS : Transforms the stream into another stream. STREAMS USE LAZY EVALUATION.
  * The intermediate operations do not run until the terminal operation runs.
@@ -22,7 +22,7 @@ public class S1Introduction {
         Stream<String> empty = Stream.empty();
         System.out.println(empty);
 
-        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,9);
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
         //Creating a Stream from a list
         Stream<Integer> fromList = list.stream();
         //Creating a parallel Stream
@@ -31,6 +31,6 @@ public class S1Introduction {
         Stream<Double> randoms = Stream.generate(() -> Math.random());
 
         randoms.forEach(System.out::println);//Infinite Stream of Random numbers
-       // randoms.forEach((element) -> System.out.println(element));
+        // randoms.forEach((element) -> System.out.println(element));
     }
 }

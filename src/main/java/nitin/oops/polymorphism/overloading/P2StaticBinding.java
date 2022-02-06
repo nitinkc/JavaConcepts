@@ -2,7 +2,7 @@ package nitin.oops.polymorphism.overloading;
 
 /**
  * Created by nitin.chaurasia on 3/4/2017.
- *
+ * <p>
  * Static polymorphism in Java is achieved by method overloading
  * compile time polymorphism or static binding
  * uses type information (class in Java) for binding
@@ -27,31 +27,31 @@ public class P2StaticBinding {
     }
 }
 
-    class DemoOverload{
+class DemoOverload {
 
-        public int add(int x, int y){  //method 1
+    public int add(int x, int y) {  //method 1
 
-            return x+y;
-
-        }
-
-        public int add(int x, int y, int z){ //method 2
-
-            return x+y+z;
-
-        }
-
-        public int add(double x, int y){ //method 3
-
-            return (int)x+y;
-
-        }
-
-        public int add(int x, double y){ //method 4
-
-            return x+(int)y;
-
-        }
+        return x + y;
 
     }
+
+    public int add(int x, int y, int z) { //method 2
+
+        return x + y + z;
+
+    }
+
+    public int add(double x, int y) { //method 3
+
+        return (int) x + y;
+
+    }
+
+    public int add(int x, double y) { //method 4
+
+        return x + (int) y;
+
+    }
+
+}
 

@@ -45,7 +45,7 @@ public class ParseMentorBoxLecture {
         while (in.hasNext()) {
             String str = in.nextLine();
             s += str;
-            if (str.contains(searchTitle)){
+            if (str.contains(searchTitle)) {
                 output.println(str + "\t ||");
                 System.out.println(str);
                 titleCount++;

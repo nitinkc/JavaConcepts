@@ -1,8 +1,8 @@
-# Unchecked Exception: 
+# Unchecked Exception:
 
-* Handling is NOT verified during Compile time. 
-* These exceptions occurs because of bad programming. 
-* The program won’t give a compilation error. 
+* Handling is NOT verified during Compile time.
+* These exceptions occurs because of bad programming.
+* The program won’t give a compilation error.
 * All Unchecked exceptions are direct sub classes of RuntimeException class.
 
 ## Common Exceptions

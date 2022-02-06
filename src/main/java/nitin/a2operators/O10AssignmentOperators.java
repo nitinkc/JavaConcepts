@@ -14,7 +14,7 @@ public class O10AssignmentOperators {
         int x = 10;
 
         /****** Chained Assignment  ******/
-        int a,b,c,d;
+        int a, b, c, d;
         a = b = c = d = 20;
 
         // We cant perform assignment at the time of declaration

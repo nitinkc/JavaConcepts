@@ -9,7 +9,7 @@ import java.util.List;
 public class F1Break {
     public static void main(String[] args) {
 
-        List<Integer> a = Arrays.asList(1,2,3,4,5,6,7,8,9);
+        List<Integer> a = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
 
         for (int i = 0; i < a.size(); i++) {
            /* for (int j = 0; j < i; j++) {
@@ -17,9 +17,9 @@ public class F1Break {
             }*/
             System.out.print(i + "\t");
             //Breaking out of the loop and performing prints
-            if(i == 5)
+            if (i == 5)
                 break;
-            System.out.println("After Break : "  + i);
+            System.out.println("After Break : " + i);
         }
         System.out.println("After for loop");
     }

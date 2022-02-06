@@ -14,7 +14,7 @@ public class S3ObjectGraphSerialization {
 
         //Deserialization
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File("src/com/nitin/a21serialization/serialObjectGraph.txt")));
-        Animal c = (Animal)ois.readObject();
+        Animal c = (Animal) ois.readObject();
         ois.close();
 
         System.out.println(c.fla.h.toString());
@@ -22,16 +22,16 @@ public class S3ObjectGraphSerialization {
     }
 }
 
-class Animal implements Serializable{
+class Animal implements Serializable {
     FourLeggedAnimal fla = new FourLeggedAnimal();
 }
 
-class FourLeggedAnimal implements Serializable{ // if implements serializable is not used : java.io.NotSerializableException: com.nitin.a21serialization.FourLeggedAnimal
+class FourLeggedAnimal implements Serializable { // if implements serializable is not used : java.io.NotSerializableException: com.nitin.a21serialization.FourLeggedAnimal
 
     Horse h = new Horse();
 }
 
-class Horse implements Serializable{
+class Horse implements Serializable {
     String name = "Chetak";
 
     @Override

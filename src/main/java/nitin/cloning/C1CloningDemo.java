@@ -21,8 +21,7 @@ public class C1CloningDemo {
  * If the Cloneable Interface is not implemented it throws CloneNotSupportedException
  */
 
-class Stock implements Cloneable
-{
+class Stock implements Cloneable {
     int price;
     String name;
 

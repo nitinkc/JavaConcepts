@@ -9,11 +9,11 @@ import java.util.Scanner;
  */
 public class F6ScannerFromFile {
     public static void main(String[] args) throws FileNotFoundException {
-         /* READING THE DATA FROM THE FILE */
+        /* READING THE DATA FROM THE FILE */
         File f = new File("src/com/nitin/IO_FileHandling/nitin.txt");
         Scanner toFile = new Scanner(f);
 
-        while (toFile.hasNext()){
+        while (toFile.hasNext()) {
             //Every line is treated as  String
             System.out.println(toFile.next());
         }
@@ -23,7 +23,7 @@ public class F6ScannerFromFile {
         //next() -> Reads the characters upto (but not including) space
         //Resetting the pointer to the Start of the File
         toFile = new Scanner(f);
-        while(toFile.hasNext()){
+        while (toFile.hasNext()) {
             System.out.println(toFile.nextLine());
         }
     }

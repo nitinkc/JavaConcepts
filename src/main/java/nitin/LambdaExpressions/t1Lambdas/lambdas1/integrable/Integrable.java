@@ -7,8 +7,10 @@ package nitin.LambdaExpressions.t1Lambdas.lambdas1.integrable;
 // let you make a much more reusable numerical integration routine
 // than you could have had in Java 7.
 
-/** Represents a function to be integrated. */
+/**
+ * Represents a function to be integrated.
+ */
 
 public interface Integrable {
-  double eval(double x);
+    double eval(double x);
 } 

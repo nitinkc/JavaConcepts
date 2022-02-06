@@ -9,7 +9,7 @@ import java.util.function.Consumer;
  */
 public class LoopThroughCollections {
     public static void main(String[] args) {
-        List<Integer> list = Arrays.asList(1,2,1,4,5,6);
+        List<Integer> list = Arrays.asList(1, 2, 1, 4, 5, 6);
 
         // PRINT USING ArrayList Default toString method
         System.out.println(list);
@@ -19,7 +19,7 @@ public class LoopThroughCollections {
         System.out.println();
 
         //Print using static reference
-        list.forEach(System.out :: print);// How to insert a comma between elements
+        list.forEach(System.out::print);// How to insert a comma between elements
         System.out.println();
 
         //Demonstration that forEach accepts Consumer

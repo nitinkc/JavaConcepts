@@ -1080,7 +1080,7 @@ public class OldDateUtilities implements Serializable {
                 sbMMDDYYYY.append(sYYYYMMDD, 0, 4);
             }
         } catch (Exception e) {
-          e.printStackTrace();
+            e.printStackTrace();
         }
         return getTimestamp(sbMMDDYYYY.toString());
     }
@@ -1093,7 +1093,7 @@ public class OldDateUtilities implements Serializable {
             try {
                 tsDate = new Timestamp(sdf.parse(sMMDDYYYY).getTime());
             } catch (java.text.ParseException e) {
-              e.printStackTrace();
+                e.printStackTrace();
             }
             return tsDate;
         } else {
@@ -1222,15 +1222,15 @@ public class OldDateUtilities implements Serializable {
         //System.out.println(authTimestamp);
         for (int i = 0; i < n; i++) {
             daysBackToFriday = calendar.get(Calendar.DAY_OF_WEEK) + 1;
-            calendar.add(Calendar.DATE, daysBackToFriday*-1);
+            calendar.add(Calendar.DATE, daysBackToFriday * -1);
             //System.out.println(sdf.format(calendar.getTime()));
             lastNFridayDates.add(OldDateUtilities.nullifyTime(calendar.getTime()));
         }
-            return lastNFridayDates;
+        return lastNFridayDates;
     }
 
     public static List<DateTime> findLastNFridaysJodaTime(int N) {
-        if(N < 1)
+        if (N < 1)
             return null;
 
         List<DateTime> ret = new ArrayList<DateTime>();
@@ -1242,7 +1242,7 @@ public class OldDateUtilities implements Serializable {
         //DateTime saturdayOfLastWeek = fridayOfWeek.plusDays(1);
         ret.add(fridayOfWeek);
         //ret.add(saturdayOfLastWeek);
-        for (int i = 0; i < N-1; i++) {
+        for (int i = 0; i < N - 1; i++) {
             fridayOfWeek = fridayOfWeek.minusWeeks(1);
             ret.add(fridayOfWeek);
         }

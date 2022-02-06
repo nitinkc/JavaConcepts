@@ -25,12 +25,12 @@ public class ElectionService {
         System.out.println("***********************************************************");
         System.out.println("Votes Casted in Indore");
         //votesInIndore(list);
-        LOGGER.log(Level.INFO,"Starting long calculations: " + stopwatch);
-        LOGGER.log(Level.OFF,"Starting long calculations: " + stopwatch);
+        LOGGER.log(Level.INFO, "Starting long calculations: " + stopwatch);
+        LOGGER.log(Level.OFF, "Starting long calculations: " + stopwatch);
 
         System.out.println("***********************************************************");
         System.out.println("Total Votes received by AAP in MP");
-        int countAAPinMP = countAAPinMP(list,"Madhya Pradesh", "Aam Aadmi Party");
+        int countAAPinMP = countAAPinMP(list, "Madhya Pradesh", "Aam Aadmi Party");
         System.out.println(countAAPinMP);
 
 
@@ -43,7 +43,7 @@ public class ElectionService {
         System.out.println("***********************************************************");
         System.out.println("Total Votes by each party in MP");
         //list.stream()
-                //.flatMap()
+        //.flatMap()
     }
 
     private static Integer countAAPinMP(List<ElectionEntity> list, String state, String party) {
@@ -56,7 +56,7 @@ public class ElectionService {
 
     private static void votesInIndore(List<ElectionEntity> list) {
         list.stream()
-        .filter(election -> election.getAssembly().equalsIgnoreCase("Indore"))
-        .forEach(System.out::println);
+                .filter(election -> election.getAssembly().equalsIgnoreCase("Indore"))
+                .forEach(System.out::println);
     }
 }

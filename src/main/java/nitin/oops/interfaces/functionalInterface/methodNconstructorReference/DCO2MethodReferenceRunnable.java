@@ -28,8 +28,8 @@ public class DCO2MethodReferenceRunnable {
 
 //method m1 is like run method of Runnable class, in terms of arguments and return types
 // This is non static method or instance Method
-class RunTest{
-    public void m1(){
+class RunTest {
+    public void m1() {
         for (int i = 0; i < 10; i++) {
             System.out.println("Child thread");
         }

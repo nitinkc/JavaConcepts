@@ -9,7 +9,7 @@ import java.util.function.Predicate;
 
 public class AssetUtil {
 
-    public static int totalAssetValues(final List<Asset> assets){
+    public static int totalAssetValues(final List<Asset> assets) {
         return assets.stream()
                 //.filter(asset -> asset.getAssetType() == Asset.AssetType.STOCK)
                 .filter(asset -> true)
@@ -17,7 +17,7 @@ public class AssetUtil {
                 .sum();
     }
 
-    public static int totalAssetValuesWithSelector(final List<Asset> assets, final Predicate<Asset> assetSelector){
+    public static int totalAssetValuesWithSelector(final List<Asset> assets, final Predicate<Asset> assetSelector) {
 
         return assets.stream()
                 .filter(assetSelector)
@@ -25,5 +25,6 @@ public class AssetUtil {
                 .sum();
     }
 
-    private AssetUtil(){}
+    private AssetUtil() {
+    }
 }

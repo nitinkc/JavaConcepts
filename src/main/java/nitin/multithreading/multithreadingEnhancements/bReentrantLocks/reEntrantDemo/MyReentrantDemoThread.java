@@ -8,12 +8,12 @@ public class MyReentrantDemoThread extends Thread {
     Display d;
     String name;
 
-    MyReentrantDemoThread(Display d, String name){
+    MyReentrantDemoThread(Display d, String name) {
         this.d = d;
         this.name = name;
     }
 
-    public void run(){
+    public void run() {
         d.wishSynchronized(name);
         d.wishReentrantLocked(name);
     }

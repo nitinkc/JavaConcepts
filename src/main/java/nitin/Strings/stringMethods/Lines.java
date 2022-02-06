@@ -14,7 +14,7 @@ public class Lines {
 
         System.out.println(
                 str.lines()
-                .collect(Collectors.toList())
+                        .collect(Collectors.toList())
         );
     }
 }

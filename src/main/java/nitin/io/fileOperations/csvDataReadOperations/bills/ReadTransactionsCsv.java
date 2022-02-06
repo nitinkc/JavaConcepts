@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
  */
 
 public class ReadTransactionsCsv {
-    public static List<Transaction> getData () {
+    public static List<Transaction> getData() {
         String file = "JavaLatest/src/main/java/com/fileOperations/csvDataReadOperations/bills/transactions.csv";
 
         return readFileNreturnList(file);
@@ -50,7 +50,7 @@ public class ReadTransactionsCsv {
     private static Transaction makeObjects(String[] line) {
         Transaction e = null;
         //int id, double value, Currency currency, Transactions type, String city
-        e =  new Transaction(
+        e = new Transaction(
                 NumberUtils.toInt(line[0]),
                 NumberUtils.toDouble(line[1]),
                 Currency.valueOf(line[2]),

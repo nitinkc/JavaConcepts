@@ -42,8 +42,9 @@ public class City {
             return false;
         } else if (!(obj instanceof City)) {
             return false;
-          // Checking the city names under all the conditions, cities can be in lower case.
+            // Checking the city names under all the conditions, cities can be in lower case.
             // If both city name and state name are equal return true
-        } else return ((City) obj).getCityname().toLowerCase().equals(cityname.toLowerCase()) && ((City) obj).getState().toLowerCase().equals(state.toLowerCase());
+        } else
+            return ((City) obj).getCityname().toLowerCase().equals(cityname.toLowerCase()) && ((City) obj).getState().toLowerCase().equals(state.toLowerCase());
     }
 }

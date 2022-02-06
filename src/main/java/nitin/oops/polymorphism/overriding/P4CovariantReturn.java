@@ -12,15 +12,15 @@ public class P4CovariantReturn {
     }
 }
 
-class P{
-    public Object m1(){
+class P {
+    public Object m1() {
         return null;
     }
 }
 
-class C extends P{
+class C extends P {
     //Covariant return type (String is child of Object)
-    public String m1(){
+    public String m1() {
         return null;
     }
 }

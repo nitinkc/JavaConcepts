@@ -6,7 +6,7 @@ package nitin.exceptionHandling.customizedExceptions;
 public class Driver {
     public static void main(String[] args) {
         //Compiler wont let the program execute
-       // throw new CannotSwimException("Nitin");
+        // throw new CannotSwimException("Nitin");
 
         try {
             //throw new CannotSwimException("Nitin executes his custom Exception");

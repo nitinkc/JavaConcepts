@@ -5,7 +5,7 @@ package nitin.oops.interfaces.a10interfaces.privateMethodsInInterfaceJava9;
  * private methods in Interfaces can be used, with implementation,
  * to be used within Default methods.
  */
-public class CodeReusabilityInInterf implements Interf{
+public class CodeReusabilityInInterf implements Interf {
     public static void main(String[] args) {
         CodeReusabilityInInterf t = new CodeReusabilityInInterf();
         t.m1();
@@ -13,13 +13,13 @@ public class CodeReusabilityInInterf implements Interf{
     }
 }
 
-interface Interf{
-    default void m1(){
+interface Interf {
+    default void m1() {
         System.out.println("From m1");
         //m3();
     }
 
-    default void m2(){
+    default void m2() {
         System.out.println("From m2");
         //m3();
     }

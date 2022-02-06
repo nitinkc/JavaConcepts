@@ -6,6 +6,7 @@ From Default package it is recognizing.
 //ERROR: For classes in the Package, it is not recognizing
 
  */
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,11 +16,11 @@ import java.lang.reflect.Method;
 
 /**
  * Created by com.nitin.a23reflectionAPI.Nitin Chaurasia on 12/3/15 at 11:54 PM.
- *
+ * <p>
  * There are 3 ways to get the instance of Class class. They are as follows:
- *    forName() method of Class class
- *    getClass() method of Object class
- *    the .class syntax
+ * forName() method of Class class
+ * getClass() method of Object class
+ * the .class syntax
  */
 public class R1BasicRefAPITest {
     public static void main(String[] args) throws
@@ -106,7 +107,7 @@ public class R1BasicRefAPITest {
         Field[] fields = c.getFields();
         //Methods for super class as well
         System.out.println("Fields IN THE CLASS ARE (getFields method):- ");
-        for ( Field fld : fields) {
+        for (Field fld : fields) {
             System.out.println(fld);
         }
         System.out.println("---------------------------");
@@ -114,7 +115,7 @@ public class R1BasicRefAPITest {
 
         Method[] methods = c.getMethods();
         System.out.println("methods IN THE CLASS ARE :- ");
-        for ( Method mtd : methods) {
+        for (Method mtd : methods) {
             System.out.println(mtd);
         }
         System.out.println("---------------------------");
@@ -122,7 +123,7 @@ public class R1BasicRefAPITest {
         //Discovering the interfaces implemented by a class:
         Class[] interfaces = c.getInterfaces();
         System.out.println("INTERFACES IN THE CLASS ARE :- ");
-        for ( Class i : interfaces) {
+        for (Class i : interfaces) {
             System.out.println(i);
         }
         System.out.println("---------------------------");
@@ -144,32 +145,33 @@ public class R1BasicRefAPITest {
     }
 }
 
-    /**
-     * Class Written for the Reflection API Testing
-     */
+/**
+ * Class Written for the Reflection API Testing
+ */
 
-class Nitin{
+class Nitin {
     int x;
     Child s;
 
-    Nitin(){
+    Nitin() {
     }
-    Nitin(int a, String b, boolean c){
+
+    Nitin(int a, String b, boolean c) {
         //A Constructor
     }
 
-    public void m1(){
+    public void m1() {
         //Any method
         return;
     }
 
-    public int m2(){
+    public int m2() {
         //Any other method
 
         return 0;
     }
 }
- 
+
 /**
  * Data Class Containing only data.
  */

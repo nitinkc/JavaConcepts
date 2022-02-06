@@ -6,9 +6,10 @@ package nitin.nestedClasses.innerClass;
 public class I1MemberInnerClass {
     private final String name = "Nitin";
 
-    protected class Inner{
+    protected class Inner {
         public int n = 3;
-        public void m1(){
+
+        public void m1() {
             for (int i = 0; i < 10; i++) {
                 System.out.print(name + " : ");//Inner class have access to outer class field
             }
@@ -16,17 +17,17 @@ public class I1MemberInnerClass {
     }
 
     // Demonstration of a private interface
-    private interface PrivateInterface{
+    private interface PrivateInterface {
         void secretMethod();
     }
 
     //Have to instantiate Inner class to be of any use
-    public void callInner(){
+    public void callInner() {
         Inner inner = new Inner();
         inner.m1();
     }
 
-    public class ImplementPrivateInterface implements PrivateInterface{
+    public class ImplementPrivateInterface implements PrivateInterface {
         @Override
         public void secretMethod() {
             System.out.println("Implemented Secret method of private interface in an inner class");

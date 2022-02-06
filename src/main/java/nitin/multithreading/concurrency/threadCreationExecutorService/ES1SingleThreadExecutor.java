@@ -7,7 +7,7 @@ import java.util.concurrent.Executors;
  * Created by Nitin C on 3/3/2016.
  * Concurrency API includes the Executors factory class that can
  * be used to create instances of the ExecutorServiceObject
- *
+ * <p>
  * Tasks are guaranteed to be executed int he order they are submitted for a single-threaded application
  */
 public class ES1SingleThreadExecutor {
@@ -26,8 +26,7 @@ public class ES1SingleThreadExecutor {
                 }
             });
             System.out.println("END");
-        }
-        finally {
+        } finally {
             // A thread executor creates anon-daemon thread on the first task taht is executed, so failing to call
             // shutdown() will result in your application never terminating
             // shutdownNow() attempts to stop all running thread

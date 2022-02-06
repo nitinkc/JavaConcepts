@@ -10,6 +10,6 @@ public class SquirrelComparator implements Comparator<Squirrel> {
     public int compare(Squirrel s1, Squirrel s2) {
         Comparator<Squirrel> c = Comparator.comparing(s -> s.getSpecies());
         c = c.thenComparing(s -> s.getWeight());
-        return c.compare(s1,s2);
+        return c.compare(s1, s2);
     }
 }

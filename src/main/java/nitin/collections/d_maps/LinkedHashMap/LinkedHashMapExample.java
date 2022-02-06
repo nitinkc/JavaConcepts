@@ -21,31 +21,31 @@ public class LinkedHashMapExample {
     public static void demo(String str) {
         //String.chars returns int streams
 
-        Map<Character,Integer> map = new LinkedHashMap<>();
+        Map<Character, Integer> map = new LinkedHashMap<>();
         //BiConsumer<String,Integer> b1 = map::put;
-        BiConsumer<Character,Integer> b2 = (k, v) -> {
-            if(map.containsKey(k)) {
-                map.put(k, map.get(k)+1);
-            }else{
-                map.put(k,1);
+        BiConsumer<Character, Integer> b2 = (k, v) -> {
+            if (map.containsKey(k)) {
+                map.put(k, map.get(k) + 1);
+            } else {
+                map.put(k, 1);
             }
         };
         str.chars()
-                .mapToObj( i -> (char)i)
+                .mapToObj(i -> (char) i)
                 //Ignoring the case
-                .map(x->Character.toLowerCase(x))
+                .map(x -> Character.toLowerCase(x))
                 //Putting the character and its count into the map
-                .forEach(x -> b2.accept(x,0));
+                .forEach(x -> b2.accept(x, 0));
 
         String ret = "";
-        for (Map.Entry<Character,Integer> entry: map.entrySet()){
+        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
             char c = entry.getKey();
             int i = entry.getValue();
 
-            ret = ret + "'"+c+"'"+":"+i+",";
+            ret = ret + "'" + c + "'" + ":" + i + ",";
         }
 
         //Off by one Error : Removing the last Comma
-        System.out.println(ret.substring(0,ret.length()-1));
+        System.out.println(ret.substring(0, ret.length() - 1));
     }
 }

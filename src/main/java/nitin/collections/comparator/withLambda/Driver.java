@@ -23,7 +23,7 @@ public class Driver {
 
         Iterator itr = s.iterator();
 
-        while (itr.hasNext()){
+        while (itr.hasNext()) {
             System.out.println(itr.next());
         }
     }

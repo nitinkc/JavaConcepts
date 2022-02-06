@@ -6,7 +6,7 @@ package nitin.oops.abstraction;
 public abstract class Animal {
     protected int age;
 
-    public void eat(){
+    public void eat() {
         System.out.println("Animal is eating");
     }
 

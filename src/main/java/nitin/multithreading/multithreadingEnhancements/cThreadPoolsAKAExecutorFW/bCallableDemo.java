@@ -20,7 +20,7 @@ public class bCallableDemo {
 
         ExecutorService service = Executors.newFixedThreadPool(3);
 
-        for (PrintJobCallable job: jobs) {
+        for (PrintJobCallable job : jobs) {
             Future f = service.submit(job);//To hold the return
             try {
                 System.out.println("Return Value is : " + f.get());

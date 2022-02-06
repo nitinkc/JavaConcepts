@@ -30,22 +30,22 @@ public class BasicConnection {
 
         // 3. Create Query
         PreparedStatement ps = conn.prepareStatement(QUERY);
-		//ps.setString(1,"id");
+        //ps.setString(1,"id");
 
-		// 4. Execute statement
-		ResultSet rs = ps.executeQuery();
+        // 4. Execute statement
+        ResultSet rs = ps.executeQuery();
 
-		//Traverse through the Cursor
-		//if (rs.next()){ //To Print just one row
-        while(rs.next()){
-		    //Traverse through the iterator.
+        //Traverse through the Cursor
+        //if (rs.next()){ //To Print just one row
+        while (rs.next()) {
+            //Traverse through the iterator.
             int e_id = rs.getInt(1);
             String e_name = rs.getString(2);
 
             System.out.println(e_id + " - " + e_name);
         }
 
-		// 5. Close Connection
-		conn.close();
+        // 5. Close Connection
+        conn.close();
     }
 }

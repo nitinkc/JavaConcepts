@@ -45,7 +45,7 @@ class VolatileTest implements Runnable {
 
             //Search atomic
             System.out.println(" read j: " + j + "\t v:" + v + "\t" +
-                    "write ++ j : " + ++j + "\t ++v:" + ++v + "\t"+Thread.currentThread());
+                    "write ++ j : " + ++j + "\t ++v:" + ++v + "\t" + Thread.currentThread());
         }
     }
 }

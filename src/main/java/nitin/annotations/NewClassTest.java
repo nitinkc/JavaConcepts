@@ -6,7 +6,6 @@ package nitin.annotations;
 public class NewClassTest {
 
     /**
-     *
      * @param args
      */
     public static void main(String[] args) {
