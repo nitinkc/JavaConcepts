@@ -11,7 +11,7 @@ import java.util.function.Predicate;
  * A predicate is a function with a single argument and returns boolean value.
  * Predicate interface is present in Java.util.function package
 
- It’s a functional interface and it contains only one method i.e., test() 
+ It’s a functional interface and it contains only one method i.e., test() 
  */
 public class PDF1Predicate {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package nitin.reflectionAPI;//package com.nitin.reflectionAPI;
+package nitin.reflectionAPI;
 /*
 Package Name has to be deleted because the Class.forName method is not recognizing the Class
 From Default package it is recognizing.
@@ -6,6 +6,9 @@ From Default package it is recognizing.
 //ERROR: For classes in the Package, it is not recognizing
 
  */
+import lombok.Getter;
+import lombok.Setter;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -34,7 +37,7 @@ public class R1BasicRefAPITest {
 
         // Type 1: Class.forName() mathod
         // should be used if you know the fully qualified name
-        c = Class.forName("java.reflectionAPI.Nitin");
+        c = Class.forName("nitin.reflectionAPI.Nitin");
 
         System.out.println(c.getClass());
         t.printMetadata(c);
@@ -59,7 +62,7 @@ public class R1BasicRefAPITest {
         Nitin n = new Nitin();
 
         Class c1 = Nitin.class;
-        Class c2 = Class.forName("java.reflectionAPI.Nitin");
+        Class c2 = Class.forName("nitin.reflectionAPI.Nitin");
         Class c3 = n.getClass();
 
         //All the three references points to the same object.
@@ -147,7 +150,7 @@ public class R1BasicRefAPITest {
 
 class Nitin{
     int x;
-    Sindhu s;
+    Child s;
 
     Nitin(){
     }
@@ -170,23 +173,9 @@ class Nitin{
 /**
  * Data Class Containing only data.
  */
-class Sindhu{
-    private int kiddo;
+@Getter
+@Setter
+class Child {
+    private int kid;
     private String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getKiddo() {
-        return kiddo;
-    }
-
-    public void setKiddo(int kiddo) {
-        this.kiddo = kiddo;
-    }
 }

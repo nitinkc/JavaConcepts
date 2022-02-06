@@ -1,5 +1,8 @@
 package nitin.collections.a_list.ArrayList.ListSortingApplication;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -21,7 +24,6 @@ public class ListSortDriver {
         System.out.println("List before sorting");
         for(Student s:students) {
             System.out.println(s);
-
         }
 
         Collections.sort(students,new StudentComparator());
@@ -31,4 +33,13 @@ public class ListSortDriver {
 
         }
     }
+}
+
+@Data
+@AllArgsConstructor
+class Student {
+    int id;
+    String fName;
+    String lName;
+    String fathersFullName;
 }

@@ -11,24 +11,20 @@ public class S1StringInterning {
         String one = "Hello";
         String two = "Hello";
 
-        if (one == two){
-            System.out.println("Interning at Work");
-        } else {
-            System.out.println("Not a String Intern");
-        }
+        testIntern(one, two);
 
         String test1 = "Nitin";
         String test2 = "Nitin";//// Forcing to create a new String
-        if (test1 == test2){
-            System.out.println("Interning at Work");
-        } else {
-            System.out.println("Not a String Intern");
-        }
+        testIntern(test1, test2);
 
-        //String three = new String("Nitin");// Forcing to create a new String
-        String three = "Nitin".intern();//intern used
+        String three = new String("Nitin");// Forcing to create a new String
+        //String three = "Nitin".intern();//intern used
         String four = "Nitin";
-        if (three == four){
+        testIntern(three, four);
+    }
+
+    private static void testIntern(String one, String two) {
+        if (one == two) {
             System.out.println("Interning at Work");
         } else {
             System.out.println("Not a String Intern");

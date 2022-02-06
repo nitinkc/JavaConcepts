@@ -4,7 +4,7 @@ package nitin.oops.polymorphism;
  * Created by nitin.chaurasia on 3/4/2017.
  *
  * Dynamic polymorphism in Java is achieved by method overriding
- * As the method to call is determined at runtime, this is called dynamic binding or late binding.
+ * As the method to call is determined at runtime, this is called dynamic binding or late binding.
  */
 public class P3DynamicBinding {
     public static void main(String[] args){

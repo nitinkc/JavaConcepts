@@ -8,8 +8,8 @@ public class S3SynchronizedMethodDemo {
         Display d1 = new Display();
 
         // Concurrency happens when a same Object is being acted upon
-        Thread t1 = new MyThread(d1, "Nitin");
-        Thread t2 = new MyThread(d1, "Sindhu");
+        Thread t1 = new MyThread(d1, "Thread1");
+        Thread t2 = new MyThread(d1, "Thread2");
 
 //        t1.start();
 //        t2.start();

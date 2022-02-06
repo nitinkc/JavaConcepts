@@ -68,11 +68,8 @@ public class BasicListInteger {
         //From this point on, DO NOT USE b_set.get or b_set.remove!!
         // USE ONLY ITERATOR
         while (itr.hasNext()) {
-
             System.out.print(itr.next() + " - ");
         }
         System.out.println();
-
     }
-
 }

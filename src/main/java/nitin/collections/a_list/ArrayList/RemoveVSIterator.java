@@ -1,4 +1,4 @@
-package nitin.collections.a_list.ArrayList.ListApplication;
+package nitin.collections.a_list.ArrayList;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,7 +18,7 @@ public class RemoveVSIterator {
 
     private static void filterRange(ArrayList<Integer> list, int min, int max) {
 
-        //To remove an element from an arraylist, running from the end is a good deal    
+        //To remove an element from an arraylist, running from the end is a good deal    
         for (int i = list.size() - 1; i >= 0; i--) {
             if (list.get(i) >= min && list.get(i) <= max)
                 list.remove(i);

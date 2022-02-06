@@ -30,12 +30,10 @@ public class BasicListString {
         //addSet(b_set);
        System.out.println("Longest string is="+findlongestString(list));
 
-
         //How to Iterate
         printSet(list);
 
         //How to Remove
-
 
         //printSet(b_set);
 

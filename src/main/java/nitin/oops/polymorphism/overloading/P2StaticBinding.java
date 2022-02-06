@@ -4,7 +4,7 @@ package nitin.oops.polymorphism.overloading;
  * Created by nitin.chaurasia on 3/4/2017.
  *
  * Static polymorphism in Java is achieved by method overloading
- * compile time polymorphism or static binding
+ * compile time polymorphism or static binding
  * uses type information (class in Java) for binding
  * private, static, final, static variables } methods, not participation in polymorphism
  */

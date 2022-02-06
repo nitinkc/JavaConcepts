@@ -11,18 +11,22 @@ package nitin.Strings;
  */
 public class S3StringBuilder {
     public static void main(String[] args) {
-        StringBuilder a = new StringBuilder ("Nitin");
-        StringBuffer b = new StringBuffer ("Priyanka");
-        String c = "Ritesh";
+        StringBuilder a = new StringBuilder ("test1");
+        StringBuffer b = new StringBuffer ("test2");
+        String c = "test3";
 
-        a.append(" Chaurasia");
-        b.append(" Pathipati");
-        c.concat("Samal");//Not working
+        a.append(" next1");
+        b.append(" next2");
+        c = c.concat(" next3");//Not working
 
+        String s = new StringBuilder()
+                .append("Nitin").append(" Kumar").append(" Chaurasia")
+                .toString();
 
         System.out.println(a);
         System.out.println(b);
         System.out.println(c);
+        System.out.println(s);
 
     }
 }

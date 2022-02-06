@@ -40,7 +40,6 @@ public class ComparableTestFailed {
     }
 }
 
-
 class Student implements Comparable{
     int id;
     String fName;
