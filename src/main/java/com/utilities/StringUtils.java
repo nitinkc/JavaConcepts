@@ -2,15 +2,7 @@ package com.utilities;
 
 import lombok.NoArgsConstructor;
 
-import java.sql.Date;
-import java.sql.Timestamp;
-import java.text.DateFormat;
-import java.text.Format;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Arrays;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 /**
  * Created by nichaurasia on Saturday, April/25/2020 at 3:46 AM

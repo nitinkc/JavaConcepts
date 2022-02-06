@@ -1,6 +1,5 @@
 package nitin.collections.a_list.stack;
 
-import java.util.List;
 import java.util.Stack;
 import java.util.function.Consumer;
 
