@@ -62,11 +62,8 @@ public class WalmartCodingTest {
                 Character c = word.charAt(i);
                 if (map.containsKey(c) && map.get(c) > 0) {
                     map.put(c, map.get(c) - 1);
-                    //flag[i] = true;
-               }//else{
-//                    break;
-//                }
-                return word;
+                    flag[i] = true;
+                }
             }
 
             if (allTrue(flag)) {
