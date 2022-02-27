@@ -1,9 +1,12 @@
 package nitin;
 
 /*
-You are running a classroom and suspect that some of your students are passing around the answers to multiple choice questions disguised as random strings.
+You are running a classroom and suspect that some of your students are passing around the answers to multiple choice
+questions disguised as random strings.
 
-Your task is to write a function that, given a list of words and a string, finds and returns the word in the list that is scrambled up inside the string, if any exists. There will be at most one matching word. The letters don't need to be in order or next to each other. The letters cannot be reused.
+Your task is to write a function that, given a list of words and a string, finds and returns the word in the list
+that is scrambled up inside the string, if any exists. There will be at most one matching word. The letters don't need
+to be in order or next to each other. The letters cannot be reused.
 
 Example:
 words = ['cat', 'baby', 'dog', 'bird', 'car', 'ax']
@@ -67,6 +70,7 @@ public class WalmartCodingTest {
             }
 
             if (allTrue(flag)) {
+                //ret = word;
                 return word;
             }
         }
