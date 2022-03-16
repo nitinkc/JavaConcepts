@@ -38,5 +38,9 @@ public class DateFormatting {
 
         formatter = new SimpleDateFormat("MMddyyyy_HHmm");
         System.out.println(formatter.format(System.currentTimeMillis()));
+
+
+        formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.Z");
+        System.out.println(formatter.format(System.currentTimeMillis()));
     }
 }

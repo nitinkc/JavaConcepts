@@ -1,9 +1,11 @@
 package nitin.streams.converter.dtoConverter;
 
 import lombok.Data;
+import lombok.ToString;
 
 @Data
-public class DosageDto {
+@ToString
+public class Dto {
     private String idDto;
     private String doseQtyDto;
 }

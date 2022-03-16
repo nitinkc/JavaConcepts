@@ -1,39 +1,53 @@
 package nitin;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import com.google.common.collect.Lists;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.ToString;
+
+import java.util.*;
 
 public class Test {
+    private static final List<String> PURE_TX_ORDERS = Lists.newArrayList("CAPD_ORDER", "CCPD_ORDER", "HHD_ORDER");
+
+
     public static void main(String[] args) {
-        /* Make a new empty map */
-        Map<Character, Integer> hashMap = new HashMap<Character, Integer>();
-        Map<Character, Integer> treeMap = new TreeMap<>();// Natural Ordering is preserved
-
-        String longestEnglishWord = "pneumonoultramicroscopicsilicovolcanoconiosis";
-
-        createMapUsingGetOrDefault(treeMap, longestEnglishWord);
-        System.out.println(treeMap);
-
-        createMap(hashMap, longestEnglishWord);
-        System.out.println(hashMap);
-    }
-
-    private static void createMapUsingGetOrDefault(Map<Character, Integer> treeMap, String longestEnglishWord) {
-        for (int i = 0; i < longestEnglishWord.length(); i++) {
-            Character key = longestEnglishWord.charAt(i);
-             treeMap.put(key, treeMap.getOrDefault(key, 0) + 1);//Notice Default Value 0
+        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
+        for (int i = 1; i < list.size(); i = i +2) {
+            Collections.swap(list, i-1,i);
         }
-    }
+        System.out.println(list);
 
-    private static void createMap(Map<Character, Integer> hashMap, String longestEnglishWord) {
-        for (int i = 0; i < longestEnglishWord.length(); i++) {
-            Character key = longestEnglishWord.charAt(i);
-            if (hashMap.containsKey(key)) {
-                hashMap.put(key, hashMap.get(key) + 1);//Initialize with 1
-            } else {
-                hashMap.put(key, 1);
-            }
-        }
+        Collections.reverse(list);
+        System.out.println(list);
+
+//        Collections.emptyList();
+//        Collections.binarySearch();
+//        Collections.min();
+//        Collections.max()
+
+
+        String str = "Nitin";
+        List<Order> activeOrders = new ArrayList<>();
+        activeOrders.add(new Order(1, "OrderType", "CAPD_ORDER"));
+        activeOrders.add(new Order(2, "OrderType", "HHD_ORDERw"));
+        activeOrders.add(new Order(3, "OrderType", "HHD_ORDER"));
+        activeOrders.add(new Order(4, "OrderType", "CCPD_ORDER"));
+        activeOrders.add(new Order(5, "OrderType", "CCPD_ORDER"));
+
+        activeOrders.stream().filter(order -> PURE_TX_ORDERS.contains(order.getOrderableItemDisplay()))
+                .forEach(order -> {
+                    System.out.println(order);
+                });
+
     }
+}
+
+@AllArgsConstructor
+@Data
+@ToString
+class Order{
+    int id;
+    String orderType;
+    String orderableItemDisplay;
 }
