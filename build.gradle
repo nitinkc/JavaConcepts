@@ -32,10 +32,10 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok:1.18.22'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
     implementation 'org.reflections:reflections:0.10.2'
-
-    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.13.2'
-
+    implementation 'org.apache.commons:commons-collections4:4.0'
+    implementation 'org.apache.commons:commons-lang3:3.0'
+    implementation 'commons-io:commons-io:2.11.0'
 }
 
 task myJavadocs(type: Javadoc) {
