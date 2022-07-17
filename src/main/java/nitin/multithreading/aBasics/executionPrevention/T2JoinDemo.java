@@ -1,4 +1,4 @@
-package nitin.multithreading.bExecutionPrevention;
+package nitin.multithreading.aBasics.executionPrevention;
 
 /**
  * Created by Nitin Chaurasia on 12/3/15 at 12:03 AM.

@@ -22,7 +22,5 @@ public class aExecutorDemo {
             service.submit(job);
         }
         service.shutdown();
-
-
     }
 }

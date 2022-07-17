@@ -1,4 +1,4 @@
-package nitin.streams.fileStreams;
+package com.entity;
 
 import lombok.*;
 

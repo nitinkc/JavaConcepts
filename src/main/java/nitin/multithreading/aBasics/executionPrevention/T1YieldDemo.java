@@ -1,4 +1,4 @@
-package nitin.multithreading.bExecutionPrevention;
+package nitin.multithreading.aBasics.executionPrevention;
 
 // To call the ThreadByRunnable Class for reusing multiple times
 

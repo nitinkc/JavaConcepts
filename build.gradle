@@ -9,7 +9,10 @@ version = '1.0-SNAPSHOT'
 repositories {
     gradlePluginPortal()
     mavenLocal()
-    maven { url = uri('http://repo.maven.apache.org/maven2') }
+    maven {
+        url = uri('http://repo.maven.apache.org/maven2')
+        allowInsecureProtocol = true
+    }
     flatDir { dirs '../Utilities/build/libs' }
 }
 
@@ -36,6 +39,9 @@ dependencies {
     implementation 'org.apache.commons:commons-collections4:4.0'
     implementation 'org.apache.commons:commons-lang3:3.0'
     implementation 'commons-io:commons-io:2.11.0'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.3'
+
 }
 
 task myJavadocs(type: Javadoc) {

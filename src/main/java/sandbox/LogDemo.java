@@ -16,6 +16,5 @@ public class LogDemo {
         logger.info("Test info");
         logger.debug("Test info");
         logger.error("Test error");
-
     }
 }

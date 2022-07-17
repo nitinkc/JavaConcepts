@@ -18,7 +18,7 @@ public class MyTryLockDemoThread extends Thread {
         if (l.tryLock()) {
             System.out.println(Thread.currentThread().getName() + "... got Lock and performing Safe Operations");
             try {
-                Thread.sleep(25000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 //Swallowing Exception
             }

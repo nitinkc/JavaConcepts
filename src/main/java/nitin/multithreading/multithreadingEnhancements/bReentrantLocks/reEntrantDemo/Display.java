@@ -15,7 +15,7 @@ public class Display {
         for (int i = 0; i < 10; i++) {
             System.out.print("Good Morning : ");
             try {
-                Thread.sleep(2000);//wait for two secs
+                Thread.sleep(500);//wait for two secs
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -29,7 +29,7 @@ public class Display {
         for (int i = 0; i < 10; i++) {
             System.out.print("Good Morning : ");
             try {
-                Thread.sleep(2000);//wait for two secs
+                Thread.sleep(500);//wait for two secs
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

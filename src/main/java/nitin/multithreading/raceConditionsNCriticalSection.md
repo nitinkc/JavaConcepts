@@ -7,7 +7,7 @@ significant, is called race condition
 
 The section that leads to race condition is called critical section
 
-CS should be executed as an atomic instructiuon
+CS should be executed as an atomic instruction
 
 break larger section into smaller.
 
