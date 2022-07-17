@@ -53,4 +53,19 @@ public class CThenCombineTest {
                 .join();//so that results can be collected
         stopTimer();
     }
+
+    @Test
+    public void fullNameWithGreetingAndGoodByesServiceTest() {
+        startTimer();
+        //when
+        CompletableFuture<String> completableFuture = cf.fullNameWithGreetingAndGoodByesService();
+
+        //then
+        completableFuture
+                .thenAccept(fullNameWithGreetings -> {
+                    assertEquals(fullNameWithGreetings,"Hello!! john doe, Thank You!!");
+                })
+                .join();//so that results can be collected
+        stopTimer();
+    }
 }
