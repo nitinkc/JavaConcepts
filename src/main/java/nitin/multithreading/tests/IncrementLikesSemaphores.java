@@ -2,7 +2,6 @@ package nitin.multithreading.tests;
 
 import java.math.BigDecimal;
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class IncrementLikesSemaphores extends IncrementLikes{
         private Semaphore semaphore = new Semaphore(1);//1 thread means it behaves as mutex.

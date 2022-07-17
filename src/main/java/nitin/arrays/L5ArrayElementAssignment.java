@@ -16,18 +16,18 @@ public class L5ArrayElementAssignment {
         // Case 2 : Object type arrays. Elements can be either declared type or its child class
         Object[] b = new Object[3];
         b[0] = new Object();
-        b[1] = new Integer(10);
+        b[1] = Integer.valueOf(10);
         b[2] = "Nitin";
 
         Number[] c = new Number[2];
-        c[0] = new Integer(10);
-        c[1] = new Double(6.32);
+        c[0] = Integer.valueOf(10);
+        c[1] = Double.valueOf(6.32);
 
         // Case 3 : Abstract Class Type Arrays. Elements can be of Child objects
         Number[] d = new Number[2];
         //d[0] = new Number();// abstract cannot be instantiated
-        d[0] = new Integer(10);
-        d[1] = new Double(6.32);
+        d[0] = Integer.valueOf(10);
+        d[1] = Double.valueOf(6.32);
 
         // Case 4 : Interface Type Array. elements are implementation class objects
         Runnable[] r = new Runnable[2];

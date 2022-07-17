@@ -5,7 +5,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class Test {
     private static final List<String> PURE_TX_ORDERS = Lists.newArrayList("CAPD_ORDER", "CCPD_ORDER", "HHD_ORDER");

@@ -429,7 +429,7 @@ public class OldDateUtilities implements Serializable {
             Timestamp tsTimestamp1,
             Timestamp tsTimestamp2) {
         int iAge = getMonthsBetween(tsTimestamp1, tsTimestamp2);
-        Integer IAge = new Integer(iAge);
+        Integer IAge = Integer.valueOf(iAge);
         java.math.BigDecimal bdYear =
                 new java.math.BigDecimal(IAge.doubleValue() / 12.0);
         return bdYear;
@@ -484,7 +484,7 @@ public class OldDateUtilities implements Serializable {
         int date2 = (calendarInstance2.get(Calendar.DATE));
         Double julian1 = getJulianDay(year1, month1, date1);
         Double julian2 = getJulianDay(year2, month2, date2);
-        Double dJulianDay = new Double(julian2.intValue() - julian1.intValue());
+        Double dJulianDay = Double.valueOf(julian2.intValue() - julian1.intValue());
         return Math.abs(dJulianDay.longValue());
     }
 
@@ -493,14 +493,14 @@ public class OldDateUtilities implements Serializable {
             iYear--;
             iMonth += 12;
         }
-        Double A = new Double(Math.floor(iYear / 100.0));
+        Double A = Double.valueOf(Math.floor(iYear / 100.0));
         int a1 = A.intValue();
-        Double B = new Double(Math.floor(a1 / 4.0));
+        Double B = Double.valueOf(Math.floor(a1 / 4.0));
         int C = 2 - a1 + B.intValue();
-        Double E = new Double(Math.floor(365.25 * (iYear + 4716)));
-        Double F = new Double(Math.floor(30.6001 * (iMonth + 1)));
-        Double julianDay = new Double((double) C + iDay + E.intValue() + F.intValue() - 1524.5);
-        if (julianDay.compareTo(new Double(2299160.5)) < 0) {
+        Double E = Double.valueOf(Math.floor(365.25 * (iYear + 4716)));
+        Double F = Double.valueOf(Math.floor(30.6001 * (iMonth + 1)));
+        Double julianDay = Double.valueOf((double) C + iDay + E.intValue() + F.intValue() - 1524.5);
+        if (julianDay.compareTo(Double.valueOf(2299160.5)) < 0) {
             System.out.println("Throw some exception");
         }
         return julianDay;

@@ -17,7 +17,7 @@ public class JavaHouseVisit {
         javaHouse.addCup(new FrenchRoast(), 16);
         javaHouse.addBag(new ItalianRoast(), 12);
         javaHouse.addBag(new DoughnutRoast(), 6);
-        //javaHouse.addCup(new Integer(3), 3);  Not a CoffeeType, so does not compile
+        //javaHouse.addCup(Integer.valueOf(3), 3);  Not a CoffeeType, so does not compile
         javaHouse.checkout();
 
         // Retrieve the current purchase list

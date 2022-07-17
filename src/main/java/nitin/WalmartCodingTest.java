@@ -34,8 +34,8 @@ W = number of words in `words`
 S = maximal length of each word or string
 */
 
-import java.io.*;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class WalmartCodingTest {
     public static void main(String[] argv) {

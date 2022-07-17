@@ -1,7 +1,11 @@
 package com.entity;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.annotation.processing.Generated;
 
@@ -21,29 +25,32 @@ import javax.annotation.processing.Generated;
         "Date"
 })
 @Generated("jsonschema2pojo")
+@Getter
+@Setter
+@ToString
 public class CovidIndia {
     @JsonProperty("Country")
-    public String country;
+    private String country;
     @JsonProperty("CountryCode")
-    public String countryCode;
+    private String countryCode;
     @JsonProperty("Province")
-    public String province;
+    private String province;
     @JsonProperty("City")
-    public String city;
+    private String city;
     @JsonProperty("CityCode")
-    public String cityCode;
+    private String cityCode;
     @JsonProperty("Lat")
-    public String lat;
+    private String lat;
     @JsonProperty("Lon")
-    public String lon;
+    private String lon;
     @JsonProperty("Confirmed")
-    public Integer confirmed;
+    private Integer confirmed;
     @JsonProperty("Deaths")
-    public Integer deaths;
+    private Integer deaths;
     @JsonProperty("Recovered")
-    public Integer recovered;
+    private Integer recovered;
     @JsonProperty("Active")
-    public Integer active;
+    private Integer active;
     @JsonProperty("Date")
-    public String date;
+    private String date;
 }

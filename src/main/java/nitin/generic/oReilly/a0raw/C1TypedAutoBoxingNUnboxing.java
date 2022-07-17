@@ -13,7 +13,7 @@ public class C1TypedAutoBoxingNUnboxing {
 
         List<Integer> intsList = new ArrayList<>();
         intsList.add(3);//Adding primitive
-        intsList.add(new Integer(4));//Unnecessasary Boxing
+        intsList.add(Integer.valueOf(4));//Unnecessasary Boxing
 
         int x = intsList.get(0);
         int y = intsList.get(1);//Auto unboxing performed and assigned to a primitive
