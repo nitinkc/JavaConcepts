@@ -10,8 +10,14 @@ import com.entity.openLibrary.Isbn;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.*;
@@ -169,7 +175,8 @@ public class JsonReadUtility {
 
        // System.out.println(getBookDetailsOpenLibrary("9781108074568").getIsbn().getNumberOfPages());
 
-        getBookDetailsOpenLibrary("9780980200447,0385472579").forEach(isbn -> System.out.println(isbn.getNumberOfPages()));
+       // getBookDetailsOpenLibrary("9780980200447,0385472579").forEach(isbn -> System.out.println(isbn.getNumberOfPages()));
+        getOpenLibIsbnSearchResultsWithGson();
 
     }
 
@@ -177,48 +184,16 @@ public class JsonReadUtility {
         URL url = new URL("https://openlibrary.org/api/books?bibkeys=ISBN:9780980200447,ISBN:0385472579,LCCN:62019420&jscmd=data&format=json");
         HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();
         httpConn.setRequestMethod("GET");
-        ObjectMapper mapper = new ObjectMapper();
-        JsonNode jsonNode = null;
-
-        Map<String, Isbn> resultsMap = new HashMap<>();
-        try {
-           jsonNode = mapper.readTree(url);//readValue(new URL(url.toString()), OpenLibrary.class);
-            resultsMap = mapper.treeToValue(jsonNode, Map.class);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        Iterator<String> itr = resultsMap.keySet().iterator();
-
-        while (itr.hasNext()){
-            String key = itr.next();
-            Isbn isbn = mapper.convertValue(resultsMap.get(key), Isbn.class);
-            System.out.println(isbn.getNumberOfPages());
-        }
-       //Jackson Library used
-      /* if(jsonNode.isObject()){
-            Iterator<String> fieldNames = jsonNode.fieldNames();
-
-            while (fieldNames.hasNext()){
-                String fieldName = fieldNames.next();
-                JsonNode fieldValue = jsonNode.get(fieldName);
-
-                Isbn isbn = mapper.treeToValue(fieldValue, Isbn.class);
-                System.out.println(isbn.getNumberOfPages());
-            }
-        }*/
-
-
         // Google GSON library used
-       /* JsonObject jsonobj =  JsonParser.parseReader(new InputStreamReader((InputStream) httpConn.getContent())).getAsJsonObject();
+        JsonObject jsonobj = JsonParser.parseReader(new InputStreamReader((InputStream) httpConn.getContent())).getAsJsonObject();
         Gson gson = new Gson();
-        for (Map.Entry<String, JsonElement> entry : jsonobj.entrySet()){
-            String key   = entry.getKey();
+        for (Map.Entry<String, JsonElement> entry : jsonobj.entrySet()) {
+            String key = entry.getKey();
             JsonElement value = entry.getValue();
             JsonObject jsonObject = value.getAsJsonObject();
             System.out.println(jsonObject.toString());
-            Isbn result = gson.fromJson(jsonObject,Isbn.class);
+            Isbn result = gson.fromJson(jsonObject, Isbn.class);
             System.out.println(result.getNumberOfPages());
-        }*/
+        }
     }
 }
