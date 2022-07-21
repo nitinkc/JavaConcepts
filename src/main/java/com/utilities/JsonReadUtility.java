@@ -7,25 +7,14 @@ import com.entity.crossRef.CrossRef;
 import com.entity.git.GitUser;
 import com.entity.gutendex.Gutendex;
 import com.entity.openLibrary.Isbn;
-import com.entity.openLibrary.OpenLibrary;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.ProtocolException;
 import java.net.URL;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class JsonReadUtility {
 
@@ -133,17 +122,38 @@ public class JsonReadUtility {
         return results;
     }
 
-    public static OpenLibrary getBookDetailsOpenLibrary(String searchString){
-        ObjectMapper mapper = new ObjectMapper();
-        OpenLibrary results = null;
-        String url = "https://openlibrary.org/api/books?bibkeys=ISBN:" + searchString+"&format=json&jscmd=data";//Returns a singl;e git user
+    public static List<Isbn> getBookDetailsOpenLibrary(String searchString) throws IOException {
+        //Form the Search string like : ISBN:9780980200447,ISBN:0385472579,LCCN:62019420
+        //Given Comma separated search strings
+        String[] isbnStr = searchString.split(",");
+        StringBuilder searchStringBuilder = new StringBuilder();
+        for (int i = 0; i < isbnStr.length; i++) {
+            searchStringBuilder.append("ISBN:");
+            searchStringBuilder.append(isbnStr[i]);
+            searchStringBuilder.append(",");//Will result in Off-By-One error, but doesn't affec t results
+        }
 
+        URL url = new URL("https://openlibrary.org/api/books?bibkeys="+ searchStringBuilder.toString()+ "&format=json&jscmd=data");
+        HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();
+        httpConn.setRequestMethod("GET");
+
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode jsonNode = null;
+        List<Isbn> isbns = new ArrayList<>();
+        Map<String, Isbn> resultsMap = new HashMap<>();
         try {
-            results = mapper.readValue(new URL(url), OpenLibrary.class);
+            jsonNode = mapper.readTree(url);
+            resultsMap = mapper.treeToValue(jsonNode, Map.class);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return results;
+
+        Iterator<String> itr = resultsMap.keySet().iterator();//Reponse from the service is in the dynamic form ISBN:9780980200447: {
+        while (itr.hasNext()){
+            String key = itr.next();//ISBN:9780980200447 is the key
+            isbns.add(mapper.convertValue(resultsMap.get(key), Isbn.class));
+        }
+        return isbns;
     }
     public static void main(String[] args) throws IOException {
         //cardReader();
@@ -159,47 +169,56 @@ public class JsonReadUtility {
 
        // System.out.println(getBookDetailsOpenLibrary("9781108074568").getIsbn().getNumberOfPages());
 
-        test();
+        getBookDetailsOpenLibrary("9780980200447,0385472579").forEach(isbn -> System.out.println(isbn.getNumberOfPages()));
+
     }
 
-    public static void test() throws IOException {
+    public static void getOpenLibIsbnSearchResultsWithGson() throws IOException {
         URL url = new URL("https://openlibrary.org/api/books?bibkeys=ISBN:9780980200447,ISBN:0385472579,LCCN:62019420&jscmd=data&format=json");
         HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();
         httpConn.setRequestMethod("GET");
-
         ObjectMapper mapper = new ObjectMapper();
-        OpenLibrary results = new OpenLibrary();
-
         JsonNode jsonNode = null;
+
+        Map<String, Isbn> resultsMap = new HashMap<>();
         try {
            jsonNode = mapper.readTree(url);//readValue(new URL(url.toString()), OpenLibrary.class);
-            Map<String, Isbn> resultsMap = mapper.treeToValue(jsonNode.get("ISBN:9780980200447"), Map.class);
+            resultsMap = mapper.treeToValue(jsonNode, Map.class);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-       /* Jackson Library used
-       if(jsonNode.isObject()){
+        Iterator<String> itr = resultsMap.keySet().iterator();
+
+        while (itr.hasNext()){
+            String key = itr.next();
+            Isbn isbn = mapper.convertValue(resultsMap.get(key), Isbn.class);
+            System.out.println(isbn.getNumberOfPages());
+        }
+       //Jackson Library used
+      /* if(jsonNode.isObject()){
             Iterator<String> fieldNames = jsonNode.fieldNames();
 
-            String fieldName = fieldNames.next();
-            JsonNode fieldValue = jsonNode.get(fieldName);
+            while (fieldNames.hasNext()){
+                String fieldName = fieldNames.next();
+                JsonNode fieldValue = jsonNode.get(fieldName);
 
-            Isbn isbn = mapper.treeToValue(fieldValue, Isbn.class);
-            System.out.println(isbn.getNumberOfPages());
-
+                Isbn isbn = mapper.treeToValue(fieldValue, Isbn.class);
+                System.out.println(isbn.getNumberOfPages());
+            }
         }*/
 
 
         // Google GSON library used
-        JsonObject jsonobj =  JsonParser.parseReader(new InputStreamReader((InputStream) httpConn.getContent())).getAsJsonObject();
-       // JsonObject isbn = value.getAsJsonObject().getAsJsonObject(key);
-
+       /* JsonObject jsonobj =  JsonParser.parseReader(new InputStreamReader((InputStream) httpConn.getContent())).getAsJsonObject();
+        Gson gson = new Gson();
         for (Map.Entry<String, JsonElement> entry : jsonobj.entrySet()){
             String key   = entry.getKey();
             JsonElement value = entry.getValue();
-            System.out.println(value.getAsJsonObject());
-        }
-        System.out.println(jsonobj.entrySet().size());
+            JsonObject jsonObject = value.getAsJsonObject();
+            System.out.println(jsonObject.toString());
+            Isbn result = gson.fromJson(jsonObject,Isbn.class);
+            System.out.println(result.getNumberOfPages());
+        }*/
     }
 }
