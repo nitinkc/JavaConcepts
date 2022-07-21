@@ -140,8 +140,6 @@ public class JsonReadUtility {
         }
 
         URL url = new URL("https://openlibrary.org/api/books?bibkeys="+ searchStringBuilder.toString()+ "&format=json&jscmd=data");
-        HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();
-        httpConn.setRequestMethod("GET");
 
         ObjectMapper mapper = new ObjectMapper();
         JsonNode jsonNode = null;
@@ -191,7 +189,6 @@ public class JsonReadUtility {
             String key = entry.getKey();
             JsonElement value = entry.getValue();
             JsonObject jsonObject = value.getAsJsonObject();
-            System.out.println(jsonObject.toString());
             Isbn result = gson.fromJson(jsonObject, Isbn.class);
             System.out.println(result.getNumberOfPages());
         }
