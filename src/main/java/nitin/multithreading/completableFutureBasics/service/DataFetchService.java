@@ -5,7 +5,6 @@ import com.entity.Vehicle;
 import com.entity.VehicleTransformed;
 import com.utilities.JsonReadUtility;
 
-import java.sql.Struct;
 import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -24,7 +23,7 @@ public class DataFetchService {
     }
 
     public String firstNameService(){
-        delay(1000);
+        delay(1000);//simulating task completion latency
         logMessage("From firstNameService");
         return "john";
     }
@@ -35,12 +34,12 @@ public class DataFetchService {
         return "doe";
     }
 
-    public CompletableFuture<String> findVehicleWithGreatMileage(List<VehicleTransformed> vehicleList){
+    public CompletableFuture<VehicleTransformed> findVehicleWithGreatMileage(List<VehicleTransformed> vehicleList){
         logMessage("From composeVehicleData");
         //Returning the vehicle with maximum mileage
         return CompletableFuture.supplyAsync(() -> vehicleList.stream()
                 .sorted(Comparator.comparing(VehicleTransformed::getMileage).reversed())
-                .findFirst().get().getMileage().toString());
+                .findFirst().get());
     }
 
     public CompletableFuture<String> futureName(String name){

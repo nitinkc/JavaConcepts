@@ -10,10 +10,10 @@ import java.util.concurrent.CompletableFuture;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class BCompletableFutureAdvancedTest {
+public class BThenApplyTest {
 
     DataFetchService dfs = new DataFetchService();
-    BCompletableFutureAdvanced cf = new BCompletableFutureAdvanced(dfs);
+    BThenApply cf = new BThenApply(dfs);
 
     @Test
     public void vehicleCompletableFutureTest() {

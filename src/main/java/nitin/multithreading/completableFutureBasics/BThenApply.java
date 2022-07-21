@@ -1,20 +1,18 @@
 package nitin.multithreading.completableFutureBasics;
 
-import com.entity.Vehicle;
 import com.entity.VehicleTransformed;
 import nitin.multithreading.completableFutureBasics.functions.DataTransformationFunctions;
 import nitin.multithreading.completableFutureBasics.service.DataFetchService;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class BCompletableFutureAdvanced {
+public class BThenApply {
 
     DataFetchService dataFetchService;
 
-    public BCompletableFutureAdvanced(DataFetchService dataFetchService){
+    public BThenApply(DataFetchService dataFetchService){
         this.dataFetchService =  dataFetchService;
     }
 

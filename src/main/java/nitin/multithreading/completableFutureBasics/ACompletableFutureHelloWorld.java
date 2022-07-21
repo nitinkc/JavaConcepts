@@ -1,13 +1,9 @@
 package nitin.multithreading.completableFutureBasics;
 
-import com.entity.CovidIndia;
-import com.entity.CovidIndiaTransformed;
 import nitin.multithreading.completableFutureBasics.functions.DataTransformationFunctions;
 import nitin.multithreading.completableFutureBasics.service.DataFetchService;
 
-import java.time.ZonedDateTime;
 import java.util.concurrent.CompletableFuture;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static com.utilities.PerformanceUtility.startTimer;

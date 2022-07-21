@@ -1,6 +1,5 @@
 package nitin.multithreading.completableFutureBasics;
 
-import com.utilities.MultiThreadUtility;
 import nitin.multithreading.completableFutureBasics.service.DataFetchService;
 
 import java.util.concurrent.CompletableFuture;
@@ -16,7 +15,7 @@ public class CThenCombine {
         this.dataFetchService =  dataFetchService;
     }
 
-    //Two Completable Futures
+    //Combining Two Completable Futures
     public CompletableFuture<String> fullNameService() {
 
         //All are independent Tasks
@@ -49,7 +48,7 @@ public class CThenCombine {
         return fullNameCompletableFuture;
     }
 
-    //Three Completable Futures
+    //Four Completable Futures
     public CompletableFuture<String> fullNameWithGreetingAndGoodByesService() {
 
         CompletableFuture<String> firstName = CompletableFuture.supplyAsync(() -> dataFetchService.firstNameService());

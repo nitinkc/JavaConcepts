@@ -1,16 +1,12 @@
 package nitin.multithreading.completableFutureBasics;
 
 import com.entity.VehicleTransformed;
-import com.utilities.MultiThreadUtility;
 import nitin.multithreading.completableFutureBasics.functions.DataTransformationFunctions;
 import nitin.multithreading.completableFutureBasics.service.DataFetchService;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
-
-import static com.utilities.MultiThreadUtility.delay;
 
 public class DThenCompose {
     DataFetchService dataFetchService;
@@ -22,14 +18,15 @@ public class DThenCompose {
     private List<VehicleTransformed> vehicleCompletableFuture() {
         CompletableFuture<List<VehicleTransformed>> x = CompletableFuture
                 .supplyAsync(() -> dataFetchService.fetchVehicles())
-                //.thenApply(vehicleList -> vehicleList.stream().map(DataTransformationFunctions.vehicleFunction));
-                .thenApply(vehicleList -> vehicleList.stream().map(vehicle -> DataTransformationFunctions.vehicleFunction.apply(vehicle)).collect(Collectors.toList()));
+                .thenApply(vehicleList -> vehicleList.stream()
+                        .map(vehicle -> DataTransformationFunctions.vehicleFunction.apply(vehicle))
+                        .collect(Collectors.toList()));
 
         return x.join();
     }
 
 
-    public CompletableFuture<String> getHeighestMileageCar() {
+    public CompletableFuture<VehicleTransformed> getHeighestMileageCar() {
 
         return CompletableFuture.supplyAsync(this::vehicleCompletableFuture)
                 .thenCompose((previousVehicleFuture) ->

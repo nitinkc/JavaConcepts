@@ -1,6 +1,7 @@
 package nitin.multithreading.completableFutureBasics;
 
 
+import com.entity.VehicleTransformed;
 import com.utilities.PerformanceUtility;
 import nitin.multithreading.completableFutureBasics.service.DataFetchService;
 import org.junit.Assert;
@@ -24,7 +25,7 @@ public class DThenComposeTest {
         test.thenAccept(result -> {
             Assert.assertEquals(result, "Hello john");
         }).join();
-        PerformanceUtility.stopTimer();
+        PerformanceUtility.stopTimer();//Takes time = task1 + task2
     }
 
     @Test
@@ -32,10 +33,11 @@ public class DThenComposeTest {
 
         PerformanceUtility.startTimer();
         //when
-        CompletableFuture<String> test = cf.getHeighestMileageCar();//Get name from one service and pass the name into another
+        CompletableFuture<VehicleTransformed> test = cf.getHeighestMileageCar();//Get name from one service and pass the name into another
 
         //then
         test.thenAccept(result -> {
+            //System.out.println(result);
             Assert.assertNotNull(result);
         }).join();
         PerformanceUtility.stopTimer();
