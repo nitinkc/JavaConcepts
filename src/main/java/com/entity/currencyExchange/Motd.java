@@ -1,5 +1,4 @@
-
-package com.entity.openLibrary;
+package com.entity.currencyExchange;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -9,20 +8,21 @@ import lombok.*;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "url",
-    "name"
+    "msg",
+    "url"
 })
 @Getter
 @Setter
+@JsonIgnoreProperties(ignoreUnknown = true)
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @EqualsAndHashCode
-public class Author {
+public class Motd {
 
+    @JsonProperty("msg")
+    public String msg;
     @JsonProperty("url")
     public String url;
-    @JsonProperty("name")
-    public String name;
 
 }

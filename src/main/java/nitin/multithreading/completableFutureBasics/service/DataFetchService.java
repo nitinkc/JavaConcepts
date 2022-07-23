@@ -3,7 +3,7 @@ package nitin.multithreading.completableFutureBasics.service;
 import com.entity.CovidIndia;
 import com.entity.Vehicle;
 import com.entity.VehicleTransformed;
-import com.utilities.JsonReadUtility;
+import com.utilities.RestGETReadUtility;
 
 import java.util.Comparator;
 import java.util.List;
@@ -15,11 +15,11 @@ import static com.utilities.MultiThreadUtility.logMessage;
 public class DataFetchService {
 
     public List<CovidIndia> fetchCovidIndiaData(){
-        return JsonReadUtility.covidReader();
+        return RestGETReadUtility.covidReader();
     }
 
     public List<Vehicle> fetchVehicles(){
-        return JsonReadUtility.getRandomVehicles();
+        return RestGETReadUtility.getRandomVehicles();
     }
 
     public String firstNameService(){

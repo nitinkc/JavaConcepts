@@ -10,6 +10,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -119,7 +120,7 @@ public class Item {
     @JsonProperty("container-title")
     public List<String> containerTitle = null;
     @JsonProperty("ISBN")
-    public List<String> isbn = null;
+    public List<String> isbn = new ArrayList<>();
     @JsonProperty("alternative-id")
     public List<String> alternativeId = null;
     @JsonProperty("issue")

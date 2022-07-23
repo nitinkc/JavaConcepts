@@ -1,13 +1,15 @@
 package nitin.multithreading.completableFutureBasics;
 
 import com.entity.VehicleTransformed;
+import lombok.NoArgsConstructor;
 import nitin.multithreading.completableFutureBasics.functions.DataTransformationFunctions;
 import nitin.multithreading.completableFutureBasics.service.DataFetchService;
+import org.junit.Assert;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
-
+@NoArgsConstructor
 public class DThenCompose {
     DataFetchService dataFetchService;
 
@@ -38,5 +40,10 @@ public class DThenCompose {
         //Fetch the name from the first name serviceTask and then feed the output to the futureName service for greeting
         return CompletableFuture.supplyAsync(dataFetchService::firstNameService)
                 .thenCompose((firstNameFromPrevious) -> dataFetchService.futureName(firstNameFromPrevious));
+    }
+
+    //CHECK TEST CASES AS WELL
+    public static void main(String[] args) {
+
     }
 }

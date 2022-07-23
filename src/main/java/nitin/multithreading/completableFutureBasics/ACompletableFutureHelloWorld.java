@@ -25,6 +25,5 @@ public class ACompletableFutureHelloWorld {
             ;
         stopTimer();//If join is not used, the operation continues and program reaches here, without actually download the data
         System.out.println("Completed!!");
-
     }
 }
