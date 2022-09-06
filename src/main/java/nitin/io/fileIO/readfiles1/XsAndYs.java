@@ -1,11 +1,13 @@
 package nitin.io.fileIO.readfiles1;
 
+import com.config.Configs;
+
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class XsAndYs {
     public static void main(String[] args) throws Exception {
-        String inputFile = "Java8/src/main/java/com/nitin/zCoreServletsTraining/t4FileIO/fileIO/enable1-word-list.txt";
+        String inputFile = Configs.ENABLE1_WORD_LIST_PATH;
         int letterCount =
                 Files.lines(Paths.get(inputFile))
                         .filter(word -> word.contains("x"))

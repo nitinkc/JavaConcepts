@@ -1,6 +1,7 @@
 package nitin.io.fileIO.readfiles3;
 
 
+import com.config.Configs;
 import nitin.io.fileIO.strings.StringUtils;
 
 import java.util.Arrays;
@@ -26,7 +27,7 @@ public class FileReadingExamples {
      */
 
     public static void main(String[] args) {
-        String filename = "src/main/java/nitin/iO/fileIO/enable1-word-list.txt";
+        String filename = Configs.ENABLE1_WORD_LIST_PATH;
         if (args.length > 0) {
             filename = args[0];
         }

@@ -1,6 +1,8 @@
 package nitin.streams.sortingNcomparators;
 
-import java.util.Arrays;
+import com.entity.EmployeeSimple;
+import com.entity.SampleData;
+
 import java.util.List;
 import java.util.OptionalDouble;
 
@@ -11,13 +13,7 @@ import java.util.OptionalDouble;
 
 public class EmployeeServices {
     public static void main(String[] args) {
-        final List<Employee> list = Arrays.asList(
-                new Employee("John", 20, 65000, 'C', 5),
-                new Employee("Wayne", 20, 65430, 'C', 4),
-                new Employee("Dow", 30, 74445, 'B', 6),
-                new Employee("Jane", 35, 76546, 'B', 5),
-                new Employee("Don", 35, 90000, 'A', 10)
-        );
+        final List<EmployeeSimple> list = SampleData.getSimpleEmployees();
 
         System.out.println("Increment Salary by 10% if level C, 15% if level B and 20% if A");
         incrementSalary(list);
@@ -39,35 +35,35 @@ public class EmployeeServices {
 
     }
 
-    private static void incrementSalary(List<Employee> list) {
+    private static void incrementSalary(List<EmployeeSimple> list) {
         list.stream()
                 .filter(x -> x.getLevel() == 'C')
                 .map(x -> x.getSalary() + (x.getSalary() / 10))
                 .forEach(System.out::println);
     }
 
-    private static void anyMatchageGT30Employee(List<Employee> list) {
+    private static void anyMatchageGT30Employee(List<EmployeeSimple> list) {
         System.out.println(list.stream()
                 //.distinctBy()
                 .anyMatch(Lambdas.ageGT30Predicate));
     }
 
-    private static void avgSalariesSum(List<Employee> list) {
+    private static void avgSalariesSum(List<EmployeeSimple> list) {
         OptionalDouble avgSalOptional = list.stream()
-                .mapToDouble(Employee::getSalary)
+                .mapToDouble(EmployeeSimple::getSalary)
                 .average();
 
         avgSalOptional
                 .ifPresent(System.out::println);
     }
 
-    private static void avgSalariesreduce(List<Employee> list) {
+    private static void avgSalariesreduce(List<EmployeeSimple> list) {
         System.out.println(list.stream()
                 .map((e) -> e.getSalary())
                 .reduce(0.0, (x, y) -> (x + y)));
     }
 
-    private static void howManyGT30Employee(List<Employee> list) {
+    private static void howManyGT30Employee(List<EmployeeSimple> list) {
 
         System.out.println(list.stream()
                 .filter(Lambdas.ageGT30Predicate)

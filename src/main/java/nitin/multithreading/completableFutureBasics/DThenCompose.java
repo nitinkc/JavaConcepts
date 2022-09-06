@@ -1,10 +1,9 @@
 package nitin.multithreading.completableFutureBasics;
 
-import com.entity.VehicleTransformed;
+import com.entity.dto.VehicleTransformed;
 import lombok.NoArgsConstructor;
 import nitin.multithreading.completableFutureBasics.functions.DataTransformationFunctions;
 import nitin.multithreading.completableFutureBasics.service.DataFetchService;
-import org.junit.Assert;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;

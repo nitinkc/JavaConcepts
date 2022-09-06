@@ -1,2 +1,8 @@
 orders-command-spanner 2021-11-08T15-36-d717d3722-541 Verified
 orders-events-handler 2021-11-03T11-13-cb20aad-59 NotVerified
+###########################################################################
+2022-08-06T23:25:28.795609
+Total # of Strings 172823 with total # Partition is 173
+Batch Size : 1000
+Total Time Taken in parallel : 6861
+Total Time Taken in sequential : 30070

@@ -1,8 +1,10 @@
 package nitin.streams.StreamsWRTInheritance;
 
-import nitin.streams.StreamsWRTInheritance.data.StudentData;
+import com.entity.SampleData;
+import com.entity.Student;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author Created by nichaurasia
@@ -11,10 +13,12 @@ import java.util.List;
 
 public class StudentRunner {
     public static void main(String[] args) {
-        List<? extends Student> studentList = StudentData.createStudent();
+        List<Student> studentList = SampleData.getStudents();
+
+        studentList = studentList.stream()
+                .filter(student -> student.getFirstName().startsWith("A")).collect(Collectors.toList());
 
         studentList.stream()
-                .filter(student -> student.getFirstName().startsWith("A"))
-                .forEach(System.out::println);
+                .forEach(x -> System.out.println(x));
     }
 }

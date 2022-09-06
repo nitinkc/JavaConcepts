@@ -1,5 +1,6 @@
 package nitin.io.google;
 
+import com.config.Configs;
 import com.google.common.collect.Lists;
 
 import java.io.FileWriter;
@@ -17,7 +18,7 @@ public class PartitionWriteCsv {
         final int BATCH_SIZE = 1000;
 
         //Read from a CSV file and Write into another
-        String inputFile = "src/main/java/com/nitin/zCoreServletsTraining/t4FileIO/fileIO/readfiles1/enable1-word-list.txt";
+        String inputFile = Configs.ENABLE1_WORD_LIST_PATH;
         List<String> stringList = new ArrayList<>();
         try {
             stringList = Files.lines(Paths.get(inputFile)).collect(Collectors.toList());
@@ -43,7 +44,7 @@ public class PartitionWriteCsv {
     }
 
     private static void results(int size, int partitionSize, int BATCH_SIZE, long parallelTime, long sequentialTime) {
-        final String FILENAME = "JavaLatest/src/main/java/com/google/nitin.txt";
+        final String FILENAME = "src/main/resources/nitin.txt";
         PrintWriter output = null;
         // Erasing files if already exist
         try {

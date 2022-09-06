@@ -1,6 +1,8 @@
 package nitin.LambdaExpressions.t1Lambdas.lambdas1Ex;
 
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 
 public class SortingExamples {
     public static void main(String[] args) {
@@ -33,5 +35,9 @@ public class SortingExamples {
         System.out.println("Sorted by whether it contains 'e' [v1] : " +
                 Arrays.asList(words));
 
+        List<String> list = Arrays.asList(words);
+
+        list.sort(Comparator.reverseOrder());
+        list.stream().forEach(System.out::println);
     }
 }

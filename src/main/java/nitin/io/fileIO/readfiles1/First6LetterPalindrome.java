@@ -1,6 +1,7 @@
 package nitin.io.fileIO.readfiles1;
 
 
+import com.config.Configs;
 import nitin.io.fileIO.strings.StringUtils;
 
 import java.nio.file.Files;
@@ -8,7 +9,7 @@ import java.nio.file.Paths;
 
 public class First6LetterPalindrome {
     public static void main(String[] args) throws Exception {
-        String inputFile = "src/main/java/nitin/iO/fileIO/enable1-word-list.txt";
+        String inputFile = Configs.ENABLE1_WORD_LIST_PATH;
         String firstPalindrome =
                 Files.lines(Paths.get(inputFile))
                         .filter(word -> word.length() == 6)

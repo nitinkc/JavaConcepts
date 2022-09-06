@@ -1,9 +1,9 @@
 
 package com.entity.openLibrary;
 
-import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
-import org.junit.Ignore;
 
 import java.util.List;
 

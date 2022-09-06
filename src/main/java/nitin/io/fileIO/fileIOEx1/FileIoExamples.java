@@ -1,5 +1,7 @@
 package nitin.io.fileIO.fileIOEx1;
 
+import com.config.Configs;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.charset.Charset;
@@ -19,15 +21,15 @@ import java.util.stream.Collectors;
 
 public class FileIoExamples {
     public static void main(String[] args) throws Exception {
-        String inputFile = "src/main/java/nitin/iO/fileIO/enable1-word-list.txt";
+        String inputFile = Configs.ENABLE1_WORD_LIST_PATH;
         nLetterWord(inputFile, 10);
         abcWord(inputFile);
         abcWordMixedCase(inputFile);
         longestWordWithout(inputFile, "a", "e");
         shortestWordWith(inputFile, "q");
-        storeTwitterList(inputFile, "src/main/java/nitin/iO/fileIO/twitter-words.txt");
+        storeTwitterList(inputFile, "src/main/resources/twitter-words.txt");
         numPathsInProject();
-        storeNums(17, 100, "src/main/java/nitin/iO/fileIO/random-nums.txt");
+        storeNums(17, 100, "src/main/resources/random-nums.txt");
     }
 
     public static void nLetterWord(String inputFile, int wordLength) throws Exception {

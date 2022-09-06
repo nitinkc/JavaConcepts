@@ -16,18 +16,16 @@ public class ParallelTest {
         updates();
     }
     private static void updates() {
-        System.out.println("Gathering DB Data from ORDER_ACTION_SIGNATURE");
-
-        List<Cancer> existingHhdRecords = CsvReadUtility.getCancerData();
-        List<List<Cancer>> partition = Lists.partition(existingHhdRecords, BATCH_SIZE);
+        List<Cancer> cancerList = CsvReadUtility.getCancerData();
+        List<List<Cancer>> partition = Lists.partition(cancerList, BATCH_SIZE);
 
         System.out.println("total partitions " + partition.size());
         try {
             partition.parallelStream()
                 .forEach(cancerPartitionList -> {
                     List<Object> objectList = new ArrayList<>();
-                    //cancerPartitionList.parallelStream().forEach(singleHhdOrder -> { no fork join here
-                    cancerPartitionList.forEach(singleHhdOrder -> {
+                    cancerPartitionList.parallelStream().forEach(singleHhdOrder -> { //no fork join here
+                    //cancerPartitionList.forEach(singleHhdOrder -> {
                         singleHhdOrder.setRace(null);//Changing int to double
                         singleHhdOrder.setCancer_sites("test");
                         objectList.add(singleHhdOrder);

@@ -1,9 +1,9 @@
 package nitin.multithreading.completableFutureBasics.functions;
 
 import com.entity.CovidIndia;
-import com.entity.CovidIndiaTransformed;
 import com.entity.Vehicle;
-import com.entity.VehicleTransformed;
+import com.entity.dto.CovidIndiaTransformed;
+import com.entity.dto.VehicleTransformed;
 
 import java.time.ZonedDateTime;
 import java.util.function.Function;

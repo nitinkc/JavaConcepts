@@ -1,6 +1,9 @@
 package nitin.oops.interfaces.functionalInterface.PredefinedFunctionalInterfaces.functionUsage;
 
-import com.entity.Student;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 import org.apache.commons.lang3.math.NumberUtils;
 
 import java.util.Arrays;
@@ -63,4 +66,13 @@ public class FunctionUsage {
 
         finalList.forEach(System.out::println);
     }
+}
+
+@Getter
+@Setter
+@RequiredArgsConstructor
+@AllArgsConstructor
+class Student{
+    String name;
+    int age;
 }

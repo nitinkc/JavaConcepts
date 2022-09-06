@@ -2,7 +2,7 @@ package nitin.multithreading.completableFutureBasics.service;
 
 import com.entity.CovidIndia;
 import com.entity.Vehicle;
-import com.entity.VehicleTransformed;
+import com.entity.dto.VehicleTransformed;
 import com.utilities.RestGETReadUtility;
 
 import java.util.Comparator;
@@ -32,6 +32,12 @@ public class DataFetchService {
         delay(1000);
         logMessage("From lastNameService");
         return "doe";
+    }
+
+    public String greetingsService(){
+        delay(1000);
+        logMessage("From Hello!!");
+        return "Hello!!";
     }
 
     public CompletableFuture<VehicleTransformed> findVehicleWithGreatMileage(List<VehicleTransformed> vehicleList){

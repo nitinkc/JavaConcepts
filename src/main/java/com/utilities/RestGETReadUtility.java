@@ -73,7 +73,7 @@ public class RestGETReadUtility {
         return randomVehicleList;
 
     }
-    public static int getConnectionResponse(String urlLink) throws IOException {
+    private static int getConnectionResponse(String urlLink) throws IOException {
         URL url = new URL(urlLink);
 
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();

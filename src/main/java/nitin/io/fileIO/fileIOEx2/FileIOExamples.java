@@ -1,5 +1,7 @@
 package nitin.io.fileIO.fileIOEx2;
 
+import com.config.Configs;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -9,7 +11,7 @@ import java.util.List;
 
 public class FileIOExamples {
     public static void main(String[] args) {
-        String filename = "src/main/java/nitin/iO/fileIO/enable1-word-list.txt";
+        String filename = Configs.ENABLE1_WORD_LIST_PATH;
         List<String> testWords =
                 Arrays.asList("foo", "bar", "baz12345678", "boo1234567");
 

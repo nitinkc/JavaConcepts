@@ -1,5 +1,7 @@
 package nitin.io.fileIO.paths;
 
+import com.config.Configs;
+
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -10,7 +12,7 @@ import java.nio.file.Paths;
 public class PathExamples {
     public static void main(String[] args) {
 
-        String file = "src/main/java/nitin/iO/fileIO/enable1-word-list.txt";
+        String file = Configs.ENABLE1_WORD_LIST_PATH;
 
         Path p1 = Paths.get(file);
         System.out.println("Simple Path");

@@ -1,6 +1,9 @@
 package nitin.oops.interfaces.functionalInterface.PredefinedFunctionalInterfaces.sorting;
 
-import com.entity.Student;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 import java.util.Comparator;
 import java.util.Set;
@@ -32,4 +35,13 @@ public class F6ComparatorAsLambda {
         students.add(s4);
         students.add(s5);
     }
+}
+
+@Getter
+@Setter
+@RequiredArgsConstructor
+@AllArgsConstructor
+class Student{
+    String name;
+    int age;
 }

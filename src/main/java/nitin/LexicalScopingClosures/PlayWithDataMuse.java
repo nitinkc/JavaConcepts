@@ -1,5 +1,7 @@
 package nitin.LexicalScopingClosures;
 
+import com.utilities.WordsFromDataMuse;
+
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
@@ -15,8 +17,7 @@ public class PlayWithDataMuse {
         WordsFromDataMuse wordsFromDataMuse = new WordsFromDataMuse();
         List<String> words = wordsFromDataMuse.getWords(new String[]{"loathe", "1000"});
 
-        System.out.println(words.stream()
-                .count());
+        System.out.println("Total words received :: " + words.stream().count());
 
         //Function taking a String as input and returning a Predicate
         final Function<String, Predicate<String>> startsWithLetter =

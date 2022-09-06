@@ -1,5 +1,6 @@
 package nitin.streams;
 
+import com.utilities.StringUtility;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.ToString;
@@ -20,7 +21,7 @@ public class StreamAssignment {
 //        }
 
         resultList = list.stream()
-                .map(item -> new StringDto(com.utilities.StringUtils.reverseString(StringUtils.upperCase(item)), Math.round(Math.random())))
+                .map(item -> new StringDto(StringUtility.reverseString(StringUtils.upperCase(item)), Math.round(Math.random())))
                 .collect(Collectors.toList());
         resultList.stream().forEach(item -> System.out.println(item));
 
@@ -28,7 +29,7 @@ public class StreamAssignment {
         // Example 2
         List<SomeDto> resultList2 = new ArrayList<>();
         resultList2 = list.stream()
-                .map(item -> new SomeDto(com.utilities.StringUtils.reverseString((item))))
+                .map(item -> new SomeDto(StringUtility.reverseString((item))))
                 .collect(Collectors.toList());
 
         resultList2.stream().forEach(item -> System.out.println(item));

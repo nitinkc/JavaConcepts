@@ -20,10 +20,10 @@ public class JoiningElements {
         // No more Off-By-One Error
         System.out.println(String.join(", ", list));
 
-        System.out.println(
-                list.stream()
-                        .map(String::toUpperCase)
-                        .collect(Collectors.joining(" && "))
-        );
+        String list2 = list.stream()
+                .map(String::toUpperCase)
+                .collect(Collectors.joining(" && "));
+                        
+        System.out.println(list2);
     }
 }

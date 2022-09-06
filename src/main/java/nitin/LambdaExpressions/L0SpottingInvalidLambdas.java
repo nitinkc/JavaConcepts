@@ -1,7 +1,7 @@
 package nitin.LambdaExpressions;
 
 
-import com.entity.Cargo;
+import com.entity.SampleData;
 
 import java.util.List;
 
@@ -66,7 +66,7 @@ public class L0SpottingInvalidLambdas {
 */
 
         int a = 10, b = 20;
-        List<Integer> list = Cargo.intCargoSequence(5, 10);
+        List<Integer> list = SampleData.intCargoSequence(5, 10);
 
         TestInterfaceVoidMethod x = () -> System.out.println("Test");
         x = System.out::println;

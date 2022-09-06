@@ -1,5 +1,7 @@
 package nitin.io.fileIO.readfiles1;
 
+import com.config.Configs;
+
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -26,8 +28,8 @@ import java.util.stream.Collectors;
 
 public class FourLetterWords {
     public static void main(String[] args) throws Exception {
-        String inputFile = "src/main/java/nitin/iO/fileIO/enable1-word-list.txt";
-        String outputFile = "src/main/java/nitin/iO/fileIO/four-letter-words.txt";
+        String inputFile = Configs.ENABLE1_WORD_LIST_PATH;
+        String outputFile = Configs.FOUR_LETTER_WORDS;
         int length = 4;
         List<String> words =
                 Files.lines(Paths.get(inputFile))
