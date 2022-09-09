@@ -17,13 +17,15 @@ public class TestSorting {
         listOfPersons.add(new Person("O'Rear, Drisana A."));
         listOfPersons.add(new Person("O'Donnchada, Ania X."));
         listOfPersons.add(new Person("Schlotterbeck, Brady X."));
+        listOfPersons.add(new Person(null));
+
 
         /*listOfPersons.stream()
-                .sorted(Comparator.comparing(Person::getPersontFullName,Comparator.nullsLast(Comparator.naturalOrder())))
+                .sorted(Comparator.comparing(Person::getPersonFullName,Comparator.nullsLast(Comparator.naturalOrder())))
                 .collect(Collectors.toList());*/
 
-        //listOfPersons.sort(Comparator.comparing(Person::getPersontFullName,Comparator.nullsLast(Comparator.naturalOrder())));
-        Collections.sort(listOfPersons, Comparator.comparing(Person::getPersontFullName,Comparator.nullsLast(Comparator.naturalOrder())));
+        //listOfPersons.sort(Comparator.comparing(Person::getPersonFullName,Comparator.nullsLast(Comparator.naturalOrder())));
+        Collections.sort(listOfPersons, Comparator.comparing(Person::getPersonFullName,Comparator.nullsLast(Comparator.naturalOrder())));
         listOfPersons.stream().forEach(System.out::println);
 
     }
@@ -36,5 +38,5 @@ public class TestSorting {
 @ToString
 class Person {
 
-    private String persontFullName; //Last ,First,Mid
+    private String personFullName; //Last ,First,Mid
 }

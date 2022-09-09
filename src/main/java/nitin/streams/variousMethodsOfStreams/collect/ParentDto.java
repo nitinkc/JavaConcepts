@@ -1,4 +1,4 @@
-package nitin.streams;
+package nitin.streams.variousMethodsOfStreams.collect;
 
 import lombok.Builder;
 import lombok.Getter;

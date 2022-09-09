@@ -1,4 +1,4 @@
-package nitin.Optionals;
+package nitin.streams.Optionals;
 
 import lombok.AllArgsConstructor;
 import lombok.ToString;

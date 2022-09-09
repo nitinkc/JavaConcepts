@@ -1,4 +1,4 @@
-package nitin.streams.streams3.parallel;
+package nitin.streams.parallel;
 
 import java.util.stream.DoubleStream;
 

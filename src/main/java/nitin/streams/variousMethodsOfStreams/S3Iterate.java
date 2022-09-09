@@ -1,4 +1,4 @@
-package nitin.streams;
+package nitin.streams.variousMethodsOfStreams;
 
 import java.util.stream.Stream;
 

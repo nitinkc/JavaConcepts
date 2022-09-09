@@ -1,4 +1,4 @@
-package nitin.streams.streams3.specializedstreams;
+package nitin.streams.specializedstreams;
 
 public class UseArgs {
     public static int firstNumber(int... nums) {

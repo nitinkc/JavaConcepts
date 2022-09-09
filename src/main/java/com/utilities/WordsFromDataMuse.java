@@ -1,6 +1,6 @@
 package com.utilities;
 
-import nitin.LexicalScopingClosures.WordResponse;
+import nitin.streams.LexicalScopingClosures.WordResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 

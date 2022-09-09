@@ -1,4 +1,4 @@
-package nitin.streams.streams3.timing;
+package nitin.streams.timing;
 
 import java.util.Arrays;
 

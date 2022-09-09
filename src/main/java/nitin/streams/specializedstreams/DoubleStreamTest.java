@@ -1,4 +1,4 @@
-package nitin.streams.streams3.specializedstreams;
+package nitin.streams.specializedstreams;
 
 import java.util.List;
 import java.util.stream.Collectors;

@@ -8,10 +8,10 @@ public class StringBuilderPerformance {
         StringBuilder sb = new StringBuilder();
         StopWatch stopWatch = new StopWatch();
 
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < 100; i++) {
             stopWatch.reset();
             stopWatch.start();
-            for (int j = 0; j < 1000000; j++) {
+            for (int j = 0; j < 100; j++) {
                 sb.append(j).append(",");
             }
             sb.append(i).append(",");

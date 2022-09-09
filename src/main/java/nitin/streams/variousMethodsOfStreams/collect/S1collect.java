@@ -1,4 +1,4 @@
-package nitin.streams.variousMethodsOfStreams;
+package nitin.streams.variousMethodsOfStreams.collect;
 
 import java.util.ArrayList;
 import java.util.List;

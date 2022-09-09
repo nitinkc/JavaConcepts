@@ -1,4 +1,4 @@
-package nitin.streams;
+package nitin.streams.variousMethodsOfStreams.collect;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -11,7 +11,9 @@ public class JoinTest {
 
         // System.out.println(message);
 
-        String test = strings.stream().collect(Collectors.joining(","));
+        String test = strings
+                .stream()
+                .collect(Collectors.joining(","));
         System.out.println(test);
     }
 }

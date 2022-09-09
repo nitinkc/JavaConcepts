@@ -1,6 +1,6 @@
-package nitin.streams.streams3.parallel;
+package nitin.streams.parallel;
 
-import nitin.streams.streams3.timing.Op;
+import nitin.streams.timing.Op;
 
 public class ParallelTests {
     public static void main(String[] args) {
