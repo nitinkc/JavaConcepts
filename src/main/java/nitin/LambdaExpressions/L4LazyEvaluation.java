@@ -39,6 +39,7 @@ public class L4LazyEvaluation {
         System.out.println(
                 values.stream()
                         .filter(L4LazyEvaluation::isGT3)//another way of calling a method from lambda
+                        //.filter(value -> L4LazyEvaluation.isGT3(value))
                         .filter(L4LazyEvaluation::isEven)//functions like filter and map are called intermediate functions.  They are LAzy
                         .map(L4LazyEvaluation::doubleIt)
                         .findFirst() //terminal Function: triggers the computations, the code ACTUALLY STARTS WORKING

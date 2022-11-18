@@ -1,4 +1,4 @@
-package nitin.streams.variousMethodsOfStreams.takeWhileVSdropWhile;
+package com.nitin.learning.streams.takeWhileVSdropWhile;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -14,37 +14,46 @@ public class S2DropWhile {
     public static void main(String[] args) {
         List<String> list = Arrays.asList("one", null, "two", "three", "four", null,"circuit breaker", "five",
                 "six", "seven","","",null,null);
-
         //list = Arrays.asList(null,null,null,null);
         //list = Arrays.asList("","","","");
 
-        List<String> takeWhileList = list
-                .stream()
-                .filter(str -> null != str)
-                .takeWhile(str -> str.length() < 7)
-                //.takeWhile(str -> str.equals("one"))
-                .collect(Collectors.toList());
-       System.out.println(takeWhileList);
+        takeWhileUntilLen7Comes(list);
 
         //DropWhile runs from the first negative condition is met.
+        dropStringsuntilLen7Comes(list);
+
+        pickFirstNonNullSortedString(list);
+    }
+
+    private static void dropStringsuntilLen7Comes(List<String> list) {
         List<String> dropWhileList = list
                 .stream()
-                .filter(str -> null != str)
+                //.filter(str -> null != str)
+                .filter(Objects::nonNull)
                 .dropWhile(str -> str.length() < 7)
                 .collect(Collectors.toList());
         System.out.println(dropWhileList);
-
-        List<String> singleElementList = pickFirstNonNullSortedString(list);
-        System.out.println(singleElementList);
     }
 
-    private static List<String> pickFirstNonNullSortedString(List<String> list) {
-        return Collections.singletonList(Optional.of(list
+    private static void takeWhileUntilLen7Comes(List<String> list) {
+        List<String> takeWhileList = list
+                .stream()
+                //.filter(str -> null != str)
+                .filter(Objects::nonNull)
+                .takeWhile(str -> str.length() < 7)//take the strings until a string of lenght 7 comes
+                .collect(Collectors.toList());
+        System.out.println(takeWhileList);
+    }
+
+    private static void pickFirstNonNullSortedString(List<String> list) {
+        List<String> singleElementList =  Collections.singletonList(Optional.of(list
                 .stream()
                 .filter(singleStr -> null != singleStr)//Removing nulls
                 .sorted(Comparator.naturalOrder())
                 .dropWhile(str -> str.isBlank())//Removing Empty Strings
                 //.peek(x-> System.out.println(x))
                 .findFirst()).get().orElse(StringUtils.EMPTY));
+
+        System.out.println(singleElementList);
     }
 }

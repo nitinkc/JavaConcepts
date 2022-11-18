@@ -1,5 +1,6 @@
 package nitin.collections.a_list;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -17,7 +18,13 @@ public class L2CopyOnWrite {
 
         Iterator iterator = list.iterator();
         while (iterator.hasNext()) {
-            list.add("bcd"); //Adding while Iterating possible with CopyOnWriteArrayList
+            list.add("bcd"); //Adding while Iterating possible with CopyOnWriteArrayList, Concurrent modification Exception with ArrayList
+            System.out.println(iterator.next());
+        }
+
+        System.out.println("********************************");
+        iterator = list.iterator();
+        while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
     }

@@ -1,4 +1,4 @@
-package nitin.streams.LexicalScopingClosures;
+package com.entity;
 
 import lombok.*;
 
