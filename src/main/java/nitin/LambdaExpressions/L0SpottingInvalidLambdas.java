@@ -10,41 +10,45 @@ import java.util.List;
  */
 public class L0SpottingInvalidLambdas {
     public static void main(String[] args) {
-        TestInterfaceReturnMethod y;
-        int resultForStoringY;
+        TestInterfaceReturnMethod y;//Functional Interface
 
         //Defining Lambda
-        y = (arg1, arg2) -> arg1 + arg2;
-        resultForStoringY = y.intMethod(1, 2);
+        y = (arg1, arg2) -> arg1 + arg2;//Providing implementation to the abstract method
+
+        int resultForStoringY = y.methodWtih2Args(1, 2);
         System.out.println(resultForStoringY);
 
-        // VALID LAMBDA
-        y = (n, m) -> n * m;
-        System.out.println(y.intMethod(2, 3));
+        y = (n, m) -> n * m;//redefining implementation
+        System.out.println(y.methodWtih2Args(2, 3));
 
         /* Without Curly braces we can't use return keyword */
-        y = (n, m) -> {
+        y = (n, m) -> {//if using curly braces, have to use return statement
             return n * m;
         };
+        /* RETURN Always need curly braces and ends with a colon */
 
-        /** RETURN Always need curly braces and ends with a colon */
-        //y = (n,m) -> return n*m; //INVALID, curly braces missing
-        // n->{return n*n};//INVALID, semi colon missing
-        //n->{n*n;};//INVALID, no return statement.
-
-
-        // () can be omitted only if there is EXACTLY one parameter and NO DATA TYPE
+        /********************* INVALID LAMBDAS ********************/
         /*
+        y = (n,m) -> return n*m; //INVALID, curly braces missing
+        n->{return n*n};//INVALID, semi colon missing
+        n->{n*n;};//INVALID, no return statement.
+        */
 
+        // () can be omitted only if there is EXACTLY ONE Parameter and NO DATA TYPE
+
+
+        /*
         String a = "Nitin";
-        //VALID Lambdas
-        () -> true; //ZERO Parameter
-        a -> {return a.startsWith("Ni");}
-        (String a) -> a.startsWith("Ni")
-        (int x) -> {} //One parameter and no function body
-        (int y) -> {return;}
 
-        (a , b) -> a.startsWith("Ni")//2 parameters
+        //VALID Lambdas
+        MyFunctionalInterface t;
+        t = () -> true; //ZERO Parameter, return Boolean
+        t = a -> {return a.startsWith("Ni");}
+        t = (String a) -> a.startsWith("Ni")
+        t = (int x) -> {} //One parameter and no function body
+        t = (int y) -> {return;}
+
+        s = (a , b) -> a.startsWith("Ni")//2 parameters
 
         multiple parameters need to be enclosed in the brackets.
         a,b -> a.startsWith("Ni")//DOES NOT COMPILE : need small brackets
@@ -88,6 +92,6 @@ public class L0SpottingInvalidLambdas {
 
     @FunctionalInterface
     interface TestInterfaceReturnMethod {
-        int intMethod(int a, int b);
+        int methodWtih2Args(int a, int b);
     }
 }

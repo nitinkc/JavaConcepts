@@ -47,14 +47,14 @@ public class L1BasicWithListIteration {
 
         // FUNDAMENTAL DIFFERENCE  SEMANTICALLY
 
-        // Polymorphism says : don't worry how things are done, worry about what you wanna do
+        // Polymorphism says : don't worry how things are done, worry about what you want to do
         // and decide the implementation at one time. Whether its sequential or concurrent or lazy,
         // i don't want now, it want to postpone the decision to a later time
 
         // Ceremony is the things that you HAVE do before you do before you do what you REALLY want to do
         list.forEach((Integer element) -> System.out.print(element));
         System.out.println();
-        /* forEach says i am accepting a FUNCTION
+        /* forEach says i am accepting a function CONSUMER
          * a Function has 4 things - name, return type, parameter list and Body
          * Most Imp: is Body of the function
          * Body of the function -> System.out.println(element)

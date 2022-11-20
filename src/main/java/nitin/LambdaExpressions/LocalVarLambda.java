@@ -2,6 +2,7 @@ package nitin.LambdaExpressions;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
@@ -15,7 +16,8 @@ public class LocalVarLambda {
 
         String result = list.stream()
                 //.map(x -> x.toUpperCase())
-                //.map((@NotNull var x) -> x.toUpperCase())
+                .filter(Objects::nonNull)
+                .map((var x) -> x.toUpperCase())
                 .collect(Collectors.joining(","));
         System.out.println(result);
     }

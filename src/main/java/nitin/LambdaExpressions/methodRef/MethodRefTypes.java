@@ -14,7 +14,6 @@ public class MethodRefTypes {
 
         List<String> updatedList = list
                 .stream()
-                //.map(str -> str.toUpperCase())
                 .map(String::toUpperCase)
                 .collect(Collectors.toList());
 
@@ -24,9 +23,4 @@ public class MethodRefTypes {
 
 
     }
-}
-
-@FunctionalInterface
-interface MyFunctionalInterface1{
-    Integer doSomeJob(Integer a);
 }
