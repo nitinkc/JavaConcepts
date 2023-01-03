@@ -1,7 +1,8 @@
 package nitin.multithreading.completableFutureBasics;
 
 import com.entity.dto.VehicleTransformed;
-import nitin.multithreading.completableFutureBasics.service.DataFetchService;
+import nitin.streams.completableFutureBasics.BThenApply;
+import nitin.streams.completableFutureBasics.service.DataFetchService;
 import org.junit.Test;
 
 import java.util.List;

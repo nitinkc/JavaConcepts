@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class InternetUtilities {
 
-    private static final String URL = "https://www.mit.edu/~ecprice/wordlist.10000";
+    private static final String URL = "https://www.mit.edu/~ecprice/wordlist.100000";
 
     public static List<String> bringWordListFromNet() {
         Scanner s = getScannerFromURL();

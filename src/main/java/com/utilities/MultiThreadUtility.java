@@ -17,7 +17,11 @@ public class MultiThreadUtility {
         }
     }
 
-    public static void logMessage(String message){
+    public static void logShortMessage(String message){
         System.out.println(Thread.currentThread().getName() + " :: "  + message);
+    }
+
+    public static void logMessage(String message){
+        System.out.println(Thread.currentThread() + " :: "  + message);
     }
 }

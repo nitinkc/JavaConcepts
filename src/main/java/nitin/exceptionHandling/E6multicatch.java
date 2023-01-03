@@ -1,5 +1,7 @@
 package nitin.exceptionHandling;
 
+import lombok.SneakyThrows;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -18,15 +20,15 @@ import java.time.format.DateTimeParseException;
  */
 public class E6multicatch {
     public static void main(String[] args) {
+
+        Path path = Paths.get("text.txt");
+        String text = null;
         try {
-            Path path = Paths.get("text.txt");
-            String text = new String(Files.readAllBytes(path));
-            LocalDate date = LocalDate.parse(text);
-            System.out.println(date);
-        } catch (DateTimeParseException | IOException e) { //No duplicity of code
+            text = new String(Files.readAllBytes(path));
+        } catch (IOException e) {
             e.printStackTrace();
-            // e = new RuntimeException; java forbids reassigning the exception variable. EFFECTIVELY FINAL
-            throw new RuntimeException();
         }
+        LocalDate date = LocalDate.parse(text);
+            System.out.println(date);
     }
 }

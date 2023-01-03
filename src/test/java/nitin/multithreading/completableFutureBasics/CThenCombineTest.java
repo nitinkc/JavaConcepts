@@ -1,6 +1,7 @@
 package nitin.multithreading.completableFutureBasics;
 
-import nitin.multithreading.completableFutureBasics.service.DataFetchService;
+import nitin.streams.completableFutureBasics.CThenCombine;
+import nitin.streams.completableFutureBasics.service.DataFetchService;
 import org.junit.Test;
 
 import java.util.concurrent.CompletableFuture;

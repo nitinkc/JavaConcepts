@@ -22,9 +22,17 @@ public class R3MonoFromSupplier {
         System.out.println("================================");
         //Mono from runnable (doesnt take in, doesnt take out), helpful in Notifying things
         Mono<Object> fromRunnable = Mono.fromRunnable(() -> System.out.println("Some time consuming Operations"));
+
         fromRunnable.subscribe(data -> System.out.println(data),
                 error -> System.out.println(error.getMessage()),
                 () -> System.out.println("Process completed :: Sending emails")
+        );
+
+        Mono<Object> fromRunnable2 = Mono.fromRunnable(() -> System.out.println("Some time consuming Operations 2"));
+
+        fromRunnable2.subscribe(data -> System.out.println(data),
+                error -> System.out.println(error.getMessage()),
+                () -> System.out.println("Process completed 2 :: Sending emails")
         );
     }
 

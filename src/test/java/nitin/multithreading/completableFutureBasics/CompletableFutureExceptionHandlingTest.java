@@ -1,6 +1,7 @@
 package nitin.multithreading.completableFutureBasics;
 
-import nitin.multithreading.completableFutureBasics.service.DataFetchService;
+import nitin.streams.completableFutureBasics.CompletableFutureExceptionHandling;
+import nitin.streams.completableFutureBasics.service.DataFetchService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

@@ -14,6 +14,7 @@ import java.util.Date;
 @AllArgsConstructor
 @ToString
 @RequiredArgsConstructor
+@Builder
 public class Person {
     private String firstName;
     private String lastName;

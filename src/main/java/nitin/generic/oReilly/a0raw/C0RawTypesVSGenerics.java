@@ -1,5 +1,6 @@
 package nitin.generic.oReilly.a0raw;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,11 +31,11 @@ public class C0RawTypesVSGenerics {
         strings.add(null);
 
         System.out.println("From Generic Collection");
-        for (String s : strings) {
-            if (s != null) {
-                System.out.printf("%s has %d characters \n", s, s.length());
-            }
-        }
+//        for (String s : strings) {
+//            if (s != null) {
+//                System.out.printf("%s has %d characters \n", s, s.length());
+//            }
+//        }
         System.out.println("***********************");
     }
 

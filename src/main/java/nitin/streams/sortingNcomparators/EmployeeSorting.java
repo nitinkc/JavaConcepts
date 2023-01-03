@@ -65,8 +65,10 @@ public class EmployeeSorting {
                 .get());
     }
 
-    private static void reverseSortUsingAgeNSalaryLambda(List<EmployeeSimple> list) {
-        list
+    private static void reverseSortUsingAgeNSalaryLambda(List<EmployeeSimple> employees) {
+
+
+        employees
                 .stream()
                 .sorted(Lambdas.revAgeLambda
                         .thenComparing(Lambdas.salaryLambda))
@@ -74,8 +76,9 @@ public class EmployeeSorting {
     }
 
     private static void reverseSortUsingAgeLambda(List<EmployeeSimple> list) {
-        list.stream()
-                .sorted(Lambdas.revAgeLambda)
+        Comparator<EmployeeSimple> salaryComparator = (e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary());
+        Comparator<EmployeeSimple> salaryComparatorMethodRef =  EmployeeSimple::salaryDifference;
+        list.stream().sorted(EmployeeSimple::salaryDifference)
                 .forEach(System.out::println);
     }
 

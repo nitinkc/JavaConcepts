@@ -16,7 +16,9 @@ public class Example2 {
         // Reference to an instance method of an **arbitrary object** of a particular type
         System.out.println(myApp.playBiFunction("Hello ","World!", String::concat));
         // Reference to an **instance method** of a particular object
+        System.out.println(myApp.playBiFunction("Hello ","World!", ((a,b) -> myApp.appendStrings(a,b))));
         System.out.println(myApp.playBiFunction("Hello ","World!", myApp::appendStrings));
+
         // Reference to a static method
         System.out.println(myApp.playBiFunction("Hello ", "World!", MethodReferences::staticAppendStrings));
 
@@ -25,14 +27,13 @@ public class Example2 {
         // Reference to a static method
         System.out.println(myApp.playBiFunction(3.0,4.0, Math::hypot));
 
+        /************************************* ANOTHER EXAMPLE *****************************************************/
         List<EmployeeSimple> list = SampleData.getSimpleEmployees();
         PrintStream printStream = System.out;
         // Reference to an **instance method** of a particular object
         list.forEach(printStream::println);
 
-        String str = "Nitin";
-        System.out.println(str.toUpperCase());
-        //System.out.println(str::length);
-
+        //Reference to an Instance Method of an Arbitrary Object of a Particular Type
+        list.forEach(EmployeeSimple::printNameWithSalary);
     }
 }

@@ -13,24 +13,24 @@ import java.util.OptionalDouble;
 
 public class EmployeeServices {
     public static void main(String[] args) {
-        final List<EmployeeSimple> list = SampleData.getSimpleEmployees();
+        final List<EmployeeSimple> employees = SampleData.getSimpleEmployees();
 
         System.out.println("Increment Salary by 10% if level C, 15% if level B and 20% if A");
-        incrementSalary(list);
+        incrementSalary(employees);
         System.out.println();
 
         System.out.println("Any Match ageGT30Predicate");
-        anyMatchageGT30Employee(list);
+        anyMatchageGT30Employee(employees);
 
         System.out.println("how many ageGT30");
-        howManyGT30Employee(list);
+        howManyGT30Employee(employees);
 
         System.out.println("Average of salaries");
-        avgSalariesSum(list);
+        avgSalariesSum(employees);
 
         //TODO :
         System.out.println("Average of salaries");
-        avgSalariesreduce(list);
+        avgSalariesreduce(employees);
 
 
     }
