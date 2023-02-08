@@ -28,6 +28,8 @@ import java.util.*;
 public class RestGETReadUtility {
 
     ObjectMapper mapper = new ObjectMapper();
+    private static final String VEHICLE_URL = "https://random-data-api.com/api/vehicle/random_vehicle?size=";
+
 
     public static void cardReader() {
         ObjectMapper mapper = new ObjectMapper();
@@ -41,7 +43,6 @@ public class RestGETReadUtility {
         }
         System.out.println(listCard.size());
     }
-
 
     public static List<CovidIndia> covidReader() {
         ObjectMapper mapper = new ObjectMapper();
@@ -60,13 +61,12 @@ public class RestGETReadUtility {
 
     }
 
-    public static List<Vehicle> getRandomVehicles(){
+    public static List<Vehicle> getRandomVehicles(int size){
         ObjectMapper mapper = new ObjectMapper();
-        List<Vehicle> randomVehicleList = null;
-        String url = "https://random-data-api.com/api/vehicle/random_vehicle?size=100";
+        List<Vehicle> randomVehicleList = new ArrayList<>();
 
         try {
-            randomVehicleList = mapper.readValue(new URL(url), new TypeReference<List<Vehicle>>() {});
+            randomVehicleList = mapper.readValue(new URL(VEHICLE_URL+size), new TypeReference<List<Vehicle>>() {});
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -74,24 +74,14 @@ public class RestGETReadUtility {
 
     }
     private static int getConnectionResponse(String urlLink) throws IOException {
-        URL url = new URL(urlLink);
 
-        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-        conn.setRequestMethod("GET");
-        conn.connect();
-
-        int responsecode = conn.getResponseCode();
-        if (responsecode != 200) {
-            throw new RuntimeException("HttpResponseCode: " + responsecode);
-        }
-
-        return responsecode;
+        return 0;
     }
 
     public static GitUser getRandomGitUsers(){
         ObjectMapper mapper = new ObjectMapper();
         GitUser randomGitUser = null;
-        String url = "https://random-data-api.com/api/omniauth/github_get?size=100";//Returns a singl;e git user
+        String url = "https://random-data-api.com/api/omniauth/github_get?size=100";//Returns a single git user
 
 
         try {

@@ -21,12 +21,12 @@ public class FaultyParallel_ProdCode_SharedMutability {
 
         System.out.println("total partitions " + partition.size());
         try {
-            partition.stream()
+            partition.parallelStream()
                 .forEach(cancerPartitionList -> {
                     List<Object> objectList = new ArrayList<>();
 
                     //This was the impurity due to which the DB updates were not happening properly
-                    cancerPartitionList.stream().forEach(singleHhdOrder -> { //no fork join here
+                    cancerPartitionList.parallelStream().forEach(singleHhdOrder -> { //no fork join here
                     //cancerPartitionList.forEach(singleHhdOrder -> {
                         singleHhdOrder.setRace(null);//Changing int to double
                         singleHhdOrder.setCancer_sites("test");

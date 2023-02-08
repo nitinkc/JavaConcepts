@@ -3,17 +3,20 @@ package nitin.multithreading.completableFutureBasics;
 
 import com.entity.dto.VehicleTransformed;
 import com.utilities.PerformanceUtility;
-import nitin.streams.completableFutureBasics.DThenCompose;
-import nitin.streams.completableFutureBasics.service.DataFetchService;
+import nitin.asynchronousProgramming.A12ThenCompose;
+import nitin.asynchronousProgramming.completableFutureBasics.service.DataFetchService;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.concurrent.CompletableFuture;
 
+@ExtendWith(MockitoExtension.class)
 public class DThenComposeTest {
 
     DataFetchService dfs = new DataFetchService();
-    DThenCompose cf = new DThenCompose(dfs);
+    A12ThenCompose cf = new A12ThenCompose(dfs);
 
     @Test
     public void futureNameTest() {

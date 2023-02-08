@@ -1,19 +1,19 @@
-package nitin.streams.completableFutureBasics;
+package nitin.asynchronousProgramming;
 
-import nitin.streams.completableFutureBasics.service.DataFetchService;
+import nitin.asynchronousProgramming.completableFutureBasics.service.DataFetchService;
 
 import java.util.concurrent.CompletableFuture;
 
 import static com.utilities.MultiThreadUtility.logShortMessage;
 
-public class CompletableFutureExceptionHandling {
+public class A5CompletableFutureExceptionHandling {
 
     DataFetchService dataFetchService = new DataFetchService();
 
     public String async_call_exception_handle(){
-        CompletableFuture<String> greetings = CompletableFuture.supplyAsync(() -> this.dataFetchService.greetingsService());
-        CompletableFuture<String> firstName = CompletableFuture.supplyAsync(() -> this.dataFetchService.firstNameService());
-        CompletableFuture<String> lastName = CompletableFuture.supplyAsync(() -> this.dataFetchService.lastNameService());
+        CompletableFuture<String> greetings = CompletableFuture.supplyAsync(() -> this.dataFetchService.greetingsService(1000));
+        CompletableFuture<String> firstName = CompletableFuture.supplyAsync(() -> this.dataFetchService.firstNameService(1000));
+        CompletableFuture<String> lastName = CompletableFuture.supplyAsync(() -> this.dataFetchService.lastNameService(1000));
 
         CompletableFuture<String> fullNameCompletableFuture =
                 greetings
@@ -43,9 +43,9 @@ public class CompletableFutureExceptionHandling {
     }
 
     public String async_call_exception_exceptionally(){
-        CompletableFuture<String> greetings = CompletableFuture.supplyAsync(() -> this.dataFetchService.greetingsService());
-        CompletableFuture<String> firstName = CompletableFuture.supplyAsync(() -> this.dataFetchService.firstNameService());
-        CompletableFuture<String> lastName = CompletableFuture.supplyAsync(() -> this.dataFetchService.lastNameService());
+        CompletableFuture<String> greetings = CompletableFuture.supplyAsync(() -> this.dataFetchService.greetingsService(1000));
+        CompletableFuture<String> firstName = CompletableFuture.supplyAsync(() -> this.dataFetchService.firstNameService(1000));
+        CompletableFuture<String> lastName = CompletableFuture.supplyAsync(() -> this.dataFetchService.lastNameService(1000));
 
         CompletableFuture<String> fullNameCompletableFuture =
                 greetings

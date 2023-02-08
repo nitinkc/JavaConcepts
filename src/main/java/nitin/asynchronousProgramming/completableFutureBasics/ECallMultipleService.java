@@ -1,4 +1,4 @@
-package nitin.streams.completableFutureBasics;
+package nitin.asynchronousProgramming.completableFutureBasics;
 
 import com.entity.crossRef.Item;
 import com.entity.gutendex.Author;

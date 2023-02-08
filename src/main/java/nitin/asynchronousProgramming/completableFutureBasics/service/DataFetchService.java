@@ -1,4 +1,4 @@
-package nitin.streams.completableFutureBasics.service;
+package nitin.asynchronousProgramming.completableFutureBasics.service;
 
 import com.entity.CovidIndia;
 import com.entity.Vehicle;
@@ -9,8 +9,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import static com.utilities.MultiThreadUtility.delay;
-import static com.utilities.MultiThreadUtility.logShortMessage;
+import static com.utilities.MultiThreadUtility.*;
 
 public class DataFetchService {
 
@@ -18,30 +17,30 @@ public class DataFetchService {
         return RestGETReadUtility.covidReader();
     }
 
-    public List<Vehicle> fetchVehicles(){
-        return RestGETReadUtility.getRandomVehicles();
+    public List<Vehicle> fetchVehicles(int size){
+        return RestGETReadUtility.getRandomVehicles(size);
     }
 
-    public String firstNameService(){
-        delay(1000);//simulating task completion latency
-        logShortMessage("From firstNameService");
+    public String firstNameService(int delayInMillisec){
+        delay(delayInMillisec);//simulating task completion latency
+        logMessage("From firstNameService");
         return "john";
     }
 
-    public String lastNameService(){
-        delay(1000);
-        logShortMessage("From lastNameService");
+    public String lastNameService(int delayInMillisec){
+        delay(delayInMillisec);
+        logMessage("From lastNameService");
         return "doe";
     }
 
-    public String greetingsService(){
-        delay(1000);
-        logShortMessage("From Hello!!");
-        return "Hello!!";
+    public String greetingsService(int delayInMillisec){
+        delay(delayInMillisec);
+        logMessage("From Hello!!");
+        return "Hello!";
     }
 
     public CompletableFuture<VehicleTransformed> findVehicleWithGreatMileage(List<VehicleTransformed> vehicleList){
-        logShortMessage("From composeVehicleData");
+        logMessage("From composeVehicleData");
         //Returning the vehicle with maximum mileage
         return CompletableFuture.supplyAsync(() -> vehicleList.stream()
                 .sorted(Comparator.comparing(VehicleTransformed::getMileage).reversed())

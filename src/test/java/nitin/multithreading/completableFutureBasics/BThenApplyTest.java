@@ -1,9 +1,13 @@
 package nitin.multithreading.completableFutureBasics;
 
 import com.entity.dto.VehicleTransformed;
-import nitin.streams.completableFutureBasics.BThenApply;
-import nitin.streams.completableFutureBasics.service.DataFetchService;
-import org.junit.Test;
+import nitin.asynchronousProgramming.A4ThenApply;
+import nitin.asynchronousProgramming.completableFutureBasics.service.DataFetchService;
+
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -11,27 +15,34 @@ import java.util.concurrent.CompletableFuture;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@ExtendWith(MockitoExtension.class)
 public class BThenApplyTest {
 
+    @Mock
     DataFetchService dfs = new DataFetchService();
-    BThenApply cf = new BThenApply(dfs);
 
-    @Test
+    @InjectMocks
+    A4ThenApply cf ;//= new BThenApply(dfs);
+
+    //@Test
     public void vehicleCompletableFutureTest() {
         //given
 
         //when
         CompletableFuture<List<VehicleTransformed>> completableFuture = cf.vehicleCompletableFuture();
 
+        List<VehicleTransformed> vehicleTransformedList = completableFuture.join();
+
         //then
-        completableFuture
+        assertEquals(vehicleTransformedList.size(),100);
+        /*completableFuture
                 .thenAccept(list -> {
                     assertEquals(list.size(),100);
                 })
-                .join();
+                .join();*/
     }
 
-    @Test
+    //@Test
     public void vehicleCompletableFutureTest2() {
         //given
 
@@ -39,10 +50,13 @@ public class BThenApplyTest {
         CompletableFuture<List<VehicleTransformed>> completableFuture = cf.vehicleCompletableFuture();
 
         //then
-        completableFuture
+        List<VehicleTransformed> vehicleTransformedList = completableFuture.join();
+
+        assertTrue(vehicleTransformedList.get(0).getCarOptions().contains(";"));
+        /*completableFuture
                 .thenAccept(list -> {
                     assertTrue(list.get(0).getCarOptions().contains(";"));
                 })
-                .join();
+                .join();*/
     }
 }

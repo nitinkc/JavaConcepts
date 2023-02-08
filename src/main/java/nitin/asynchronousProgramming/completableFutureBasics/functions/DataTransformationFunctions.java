@@ -1,4 +1,4 @@
-package nitin.streams.completableFutureBasics.functions;
+package nitin.asynchronousProgramming.completableFutureBasics.functions;
 
 import com.entity.CovidIndia;
 import com.entity.Vehicle;

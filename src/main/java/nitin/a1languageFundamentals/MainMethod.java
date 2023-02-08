@@ -13,15 +13,16 @@ package nitin.a1languageFundamentals;
  */
 public class MainMethod {
     /*final*/
-    static synchronized strictfp public void main(String[] args) {
+
+    /*static synchronized strictfp public void main(String[] args) {
         System.out.println("Parent Testing");
-    }
+    }*/
 }
 
 class ChildMain extends MainMethod {//method hiding
 
-    static synchronized strictfp public void main(String[] args) {
+    /*static synchronized strictfp public void main(String[] args) {
         System.out.println("Child Testing");
-    }
+    }*/
 
 }

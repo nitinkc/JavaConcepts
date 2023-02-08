@@ -1,6 +1,6 @@
 package nitin.streams.LexicalScopingClosures;
 
-import com.utilities.WordsFromDataMuse;
+import com.utilities.InternetUtilities;
 
 import java.util.List;
 import java.util.Map;
@@ -14,8 +14,8 @@ import static java.util.stream.Collectors.*;
  */
 public class PlayWithDataMuse {
     public static void main(String[] args) {
-        WordsFromDataMuse wordsFromDataMuse = new WordsFromDataMuse();
-        List<String> words = wordsFromDataMuse.getWords(new String[]{"loathe", "1000"});
+        InternetUtilities internetUtilities = new InternetUtilities();
+        List<String> words = internetUtilities.getWords(new String[]{"loathe", "1000"});
 
         System.out.println("Total words received :: " + words.stream().count());
 

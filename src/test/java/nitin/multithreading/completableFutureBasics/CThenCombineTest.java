@@ -1,24 +1,27 @@
 package nitin.multithreading.completableFutureBasics;
 
-import nitin.streams.completableFutureBasics.CThenCombine;
-import nitin.streams.completableFutureBasics.service.DataFetchService;
+import nitin.asynchronousProgramming.A12ThenCombine;
+import nitin.asynchronousProgramming.completableFutureBasics.service.DataFetchService;
 import org.junit.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.concurrent.CompletableFuture;
 
 import static com.utilities.PerformanceUtility.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@ExtendWith(MockitoExtension.class)
 public class CThenCombineTest {
 
     DataFetchService dfs = new DataFetchService();
-    CThenCombine cf = new CThenCombine(dfs);
+    A12ThenCombine cf = new A12ThenCombine();
 
     @Test
     public void thenCombineCF() {
         //Sequential Time : Should take over 2000 milli seconds adn there has been artificial delay introduced
         startTimer();
-        System.out.println((dfs.firstNameService()+ " " +dfs.lastNameService()).toUpperCase());
+        System.out.println((dfs.firstNameService()+ " " +dfs.lastNameService(1000)).toUpperCase());
         stopTimer();
 
         resetTimer();

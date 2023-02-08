@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-    //    implementation name: 'Utilities-1.0-SNAPSHOT'
+    //implementation name: 'Utilities-1.0-SNAPSHOT'
     implementation 'junit:junit:4.13.2'
     implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
     implementation 'mysql:mysql-connector-java:8.0.29'
