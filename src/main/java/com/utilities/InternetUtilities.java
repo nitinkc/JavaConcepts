@@ -1,7 +1,6 @@
 package com.utilities;
 
 import com.entity.Beer;
-import com.entity.Vehicle;
 import com.entity.WordResponse;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -34,7 +33,7 @@ public class InternetUtilities {
         return list;
     }
 
-    public List<String> getWords(String[] args) {
+    public static List<String> getWords(String[] args) {
         String word = args[0];
         String max = args[1];
 
@@ -60,7 +59,7 @@ public class InternetUtilities {
         return wordList;
     }
 
-    public List<Beer> getBeers(int size) {
+    public static List<Beer> getBeers(int size) {
         ObjectMapper mapper = new ObjectMapper();
         List<Beer> beerList = new ArrayList<>();
 

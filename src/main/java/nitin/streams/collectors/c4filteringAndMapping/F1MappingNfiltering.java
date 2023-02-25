@@ -3,7 +3,10 @@ package nitin.streams.collectors.c4filteringAndMapping;
 import com.entity.EmployeeSimple;
 import com.entity.SampleData;
 
-import java.util.*;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 

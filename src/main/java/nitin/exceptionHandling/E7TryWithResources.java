@@ -6,8 +6,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Created by Nitin C on 11/27/2015.

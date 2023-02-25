@@ -13,5 +13,5 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class IntraStatsLine implements Payloadable {
     List<EventComments> eventComments;
-    private String varianceCount = "0";
+    private String varianceCount;
 }

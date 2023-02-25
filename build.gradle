@@ -54,6 +54,10 @@ dependencies {
 
     implementation 'com.github.javafaker:javafaker:1.0.2'
 
+    //Map Struct
+    implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+
     //SL4J
     // https://mvnrepository.com/artifact/org.slf4j/slf4j-nop
     testImplementation 'org.slf4j:slf4j-nop:2.0.3'

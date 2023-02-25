@@ -1,7 +1,5 @@
 package nitin.streams.Optionals;
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.Optional;
 
 public class NullabilityTest {

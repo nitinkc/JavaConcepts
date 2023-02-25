@@ -1,9 +1,5 @@
 package nitin.serialization;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.ToString;
-
 import java.io.*;
 
 /**

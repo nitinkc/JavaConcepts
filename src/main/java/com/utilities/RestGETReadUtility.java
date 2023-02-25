@@ -30,7 +30,6 @@ public class RestGETReadUtility {
     ObjectMapper mapper = new ObjectMapper();
     private static final String VEHICLE_URL = "https://random-data-api.com/api/vehicle/random_vehicle?size=";
 
-
     public static void cardReader() {
         ObjectMapper mapper = new ObjectMapper();
         List<Card> listCard = null;

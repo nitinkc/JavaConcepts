@@ -55,7 +55,6 @@ public class TimeStampUtilities {
     public static int getAgeFromBrithDate(String aBirthDate) {
         int age = 0;
         try {
-
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
             Calendar calendar = Calendar.getInstance();
             java.util.Date date = calendar.getTime();
@@ -83,8 +82,6 @@ public class TimeStampUtilities {
     }
 
     public static Timestamp convertDateToTimestamp(Date aDate) {
-
-
         Timestamp timestamp = new Timestamp(aDate.getTime());
 
         return timestamp;

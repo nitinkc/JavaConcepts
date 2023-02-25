@@ -1,0 +1,28 @@
+{
+  "name" : "John Doe",
+  "dateOfBirth" : 1676878272857,
+  "phones" : {
+    "Work" : "(123) 456 7890",
+    "Cell" : "987-654-3210",
+    "Home" : "963-852-7410"
+  },
+  "addresses" : [{
+    "addressLine1" : null,
+    "addressLine2" : null,
+    "city" : null,
+    "state" : null,
+    "zip" : null
+    }, {
+    "addressLine1" : null,
+    "addressLine2" : null,
+    "city" : null,
+    "state" : null,
+    "zip" : null
+    }, {
+    "addressLine1" : "134 Plum Nelly Circle",
+    "addressLine2" : null,
+    "city" : "Brentwood",
+    "state" : "TN",
+    "zip" : "37027"
+    }]
+}

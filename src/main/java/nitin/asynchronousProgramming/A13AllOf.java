@@ -2,7 +2,6 @@ package nitin.asynchronousProgramming;
 
 import nitin.asynchronousProgramming.completableFutureBasics.service.DataFetchService;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;

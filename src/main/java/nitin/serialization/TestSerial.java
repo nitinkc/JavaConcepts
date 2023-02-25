@@ -1,7 +1,10 @@
 package nitin.serialization;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.ToString;
 
 import java.io.Serializable;
 

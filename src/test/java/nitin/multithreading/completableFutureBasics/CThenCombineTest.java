@@ -21,7 +21,7 @@ public class CThenCombineTest {
     public void thenCombineCF() {
         //Sequential Time : Should take over 2000 milli seconds adn there has been artificial delay introduced
         startTimer();
-        System.out.println((dfs.firstNameService()+ " " +dfs.lastNameService(1000)).toUpperCase());
+        System.out.println((dfs.firstNameService(3)+ " " +dfs.lastNameService(1000)).toUpperCase());
         stopTimer();
 
         resetTimer();

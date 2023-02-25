@@ -1,13 +1,7 @@
 package nitin.reactiveProgramming.reactorLib;
 
-import com.entity.EmployeeSimple;
-import com.entity.SampleData;
 import com.github.javafaker.Faker;
 import reactor.core.publisher.Mono;
-
-import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
 public class R2MultiSubscribe {
     public static void main(String[] args) {

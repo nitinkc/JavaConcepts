@@ -3,9 +3,7 @@ package nitin.serialization;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 
 public class JacksonMapperTest {
     public static void main(String[] args) throws IOException {

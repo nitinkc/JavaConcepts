@@ -4,7 +4,6 @@ import com.entity.reports.EventComments;
 import com.entity.reports.IntraStatsLine;
 import com.entity.reports.SampleIntraStatLine;
 
-import java.util.Comparator;
 import java.util.List;
 
 public class AdvancedComparator {
