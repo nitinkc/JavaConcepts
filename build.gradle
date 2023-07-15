@@ -10,17 +10,11 @@ repositories {
     gradlePluginPortal()
     mavenLocal()
     maven {
-        url = uri('http://repo.maven.apache.org/maven2')
+        url = uri('https://repo.maven.apache.org/maven2')
         allowInsecureProtocol = true
     }
     flatDir { dirs '../Utilities/build/libs' }
     mavenCentral()
-    maven {
-        url "https://repo.itextsupport.com/dito"
-    }
-    maven {
-        url "https://repo.itextsupport.com/releases"
-    }
 }
 
 dependencies {
@@ -68,7 +62,6 @@ dependencies {
     // https://mvnrepository.com/artifact/org.slf4j/slf4j-nop
     testImplementation 'org.slf4j:slf4j-nop:2.0.3'
 
-    implementation 'com.itextpdf:dito:1.4.1'
     testImplementation 'io.projectreactor:reactor-test:3.1.0.RELEASE'
     //Testing Framework
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'

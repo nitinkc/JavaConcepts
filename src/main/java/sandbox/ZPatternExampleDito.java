@@ -1,5 +1,5 @@
 package sandbox;
-
+/*
 import com.itextpdf.dito.binding.DataContext;
 import com.itextpdf.dito.binding.DefaultDataContext;
 import com.itextpdf.dito.builder.DitoDocumentBuilder;
@@ -25,5 +25,5 @@ public class ZPatternExampleDito {
         // Generate the output PDF
         DitoDocumentBuilder.buildDocument(documentNode, new FileOutputStream("z_pattern_output.pdf"));
     }
-}
+}*/
 
