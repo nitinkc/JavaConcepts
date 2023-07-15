@@ -4,6 +4,7 @@ import org.apache.commons.lang3.BooleanUtils;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 public class Test {
     public static void main(String[] args) {
@@ -17,6 +18,7 @@ public class Test {
             Class c = requestEntity.get("isMostRecent").getClass();
             System.out.println("not String but " + c);
         }
+        System.out.println(UUID.fromString("00693"));
 
     }
 }
