@@ -5,8 +5,6 @@ import nitin.mappers.mapstruct.model.Tester;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-import java.util.List;
-
 @Mapper(componentModel = "default")
 public interface TestMapper {
     @Mapping(target="test", source="tester.test", numberFormat = "₹#.00")
