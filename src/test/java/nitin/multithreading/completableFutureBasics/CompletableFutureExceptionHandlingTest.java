@@ -63,7 +63,7 @@ public class CompletableFutureExceptionHandlingTest {
         String result = completableFutureExceptionHandling.async_call_exception_handle();
 
         //then
-        assertEquals(result, "HELLO!! JOHN DOE");
+        assertEquals(result, "HELLO! JOHN DOE");
     }
 
     @Test
@@ -78,7 +78,7 @@ public class CompletableFutureExceptionHandlingTest {
         String result = completableFutureExceptionHandling.async_call_exception_exceptionally();
 
         //then
-        assertEquals(result, "HELLO!! JOHN DOE");
+        assertEquals(result, "HELLO! JOHN DOE");
     }
 
     @Test

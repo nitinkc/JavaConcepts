@@ -2,7 +2,9 @@ plugins {
     id 'java'
     id 'maven-publish'
 }
-
+// Set Java version
+sourceCompatibility = 20
+targetCompatibility = 20
 group = 'JavaConcepts'
 version = '1.0-SNAPSHOT'
 
