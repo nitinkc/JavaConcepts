@@ -7,15 +7,23 @@ import java.util.Map;
 
 public class Test {
     public static void main(String[] args) {
-        Map<String, Object> requestEntity = new HashMap<>();
-        requestEntity.put("isMostRecent",123);
-        if(requestEntity.get("isMostRecent") instanceof String){
-            //Takes care of true, True, Y,Yes etc
-            BooleanUtils.toBoolean((String) requestEntity.get("isMostRecent"));
-            System.out.println("String");
-        }else {
-            Class c = requestEntity.get("isMostRecent").getClass();
-            System.out.println("not String but " + c);
+        removeDigit("133235",'3');
+    }
+
+    public static String removeDigit(String number, char digit) {
+        //Brute force. Finding all the possibilities exhaustively and keeping the MAX out of all possobolity
+        int possibility = -1;
+        int idx = number.indexOf(digit); //first indef of
+        while(number.indexOf(digit, idx) != -1){
+            String tempStr = number;
+            StringBuilder sb = new StringBuilder(number);
+            sb.setCharAt(idx,Character.MIN_VALUE);
+            System.out.println(sb);
+            String str = sb.toString();
+            int currentPossibility = Integer.parseInt(str);
+            possibility = Math.max(possibility, currentPossibility );
+            idx = idx+1;
         }
+        return String.valueOf(possibility);
     }
 }
