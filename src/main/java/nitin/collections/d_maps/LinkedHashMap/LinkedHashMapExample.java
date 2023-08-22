@@ -24,6 +24,7 @@ public class LinkedHashMapExample {
         Map<Character, Integer> map = new LinkedHashMap<>();
         //BiConsumer<String,Integer> b1 = map::put;
         BiConsumer<Character, Integer> b2 = (k, v) -> {
+            //map.put(k, map.getOrDefault(k,1)  + 1);
             if (map.containsKey(k)) {
                 map.put(k, map.get(k) + 1);
             } else {

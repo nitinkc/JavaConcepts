@@ -1,5 +1,10 @@
 package nitin.collections.d_maps.TreeMap;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
 import java.util.Comparator;
 import java.util.Set;
 import java.util.TreeSet;
@@ -18,8 +23,7 @@ public class TreeMapComparatorObjectKey {
         set.add(new City("Sanford", "FL", 32773));
 
 
-        for (City city :
-                set) {
+        for (City city : set) {
             System.out.println(city);
         }
     }
@@ -27,51 +31,16 @@ public class TreeMapComparatorObjectKey {
 
 // Comparable can be used here so that the Objects are comparable and be used directly.
 // Writing a separate Comparator to further customize the
+@Getter
+@Setter
+@AllArgsConstructor
+@ToString
 class City {
 
     //Integer is used so that City.getZip1.compareTo(City.getZip2) be used
     String name;
     String state;
     Integer zip;
-
-    public City(String name, String state, Integer zip) {
-        this.name = name;
-        this.state = state;
-        this.zip = zip;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public Integer getZip() {
-        return zip;
-    }
-
-    public void setZip(Integer zip) {
-        this.zip = zip;
-    }
-
-    @Override
-    public String toString() {
-        return "City{" +
-                "name='" + name + '\'' +
-                ", state='" + state + '\'' +
-                ", zip=" + zip +
-                '}';
-    }
 }
 
 // Comparator of City is used so that Object Casting can be avoided
