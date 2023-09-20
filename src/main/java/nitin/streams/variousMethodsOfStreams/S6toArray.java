@@ -18,10 +18,12 @@ public class S6toArray {
 
         String[] arr = list.stream().toArray(String[]::new);
 
+        Object[] objectArray = list.toArray();
+        String[] listArray = list.toArray(new String[0]);
+
+
         for (String a : arr) {
             System.out.println(a);
         }
-
-
     }
 }

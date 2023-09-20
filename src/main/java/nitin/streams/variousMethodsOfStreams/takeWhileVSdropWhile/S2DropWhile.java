@@ -1,4 +1,4 @@
-package com.nitin.learning.streams.takeWhileVSdropWhile;
+package nitin.streams.variousMethodsOfStreams.takeWhileVSdropWhile;
 
 import org.apache.commons.lang3.StringUtils;
 

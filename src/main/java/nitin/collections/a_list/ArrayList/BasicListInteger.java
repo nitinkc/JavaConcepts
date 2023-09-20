@@ -10,33 +10,14 @@ import java.util.List;
 public class BasicListInteger {
     public static void main(String[] args) {
 
-        // With Integer, no need to override hashCode ansd equals
-        // With Tree b_set it will sort to DNSO
-
-        // Sorted values while iterating
-
         List<Integer> list = new ArrayList<Integer>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.add(6);
-        list.add(5);
-        list.add(4);
-
-        // Ordering not guarenteed in HashSet
-        //Set<Integer> b_set = new TreeSet<Integer>();
-
-        // How to Add
-        //addSet(b_set);
-
+        list.add(1);list.add(2);list.add(3);list.add(6);list.add(5);list.add(4);
         removeOddNumber(list);
 
         //How to Iterate
         printList(list);
 
         //NOTE: FOR EACH NOT APPLICABLE FOR ITERATOR
-
-        //How to Remove
 
         //printSet(b_set);
 
@@ -50,7 +31,7 @@ public class BasicListInteger {
             if (curr % 2 != 0) {
                 itr.remove();
                 // ConcurrentModificationException
-                // list.remove(curr);
+                list.remove(curr);
             }
         }
 

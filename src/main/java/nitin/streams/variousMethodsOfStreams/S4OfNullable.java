@@ -3,6 +3,7 @@ package nitin.streams.variousMethodsOfStreams;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -11,21 +12,22 @@ import java.util.stream.Stream;
  */
 public class S4OfNullable {
     public static void main(String[] args) {
-        List<String> list = Arrays.asList("A", "B", null, "D", null, "F");
+        List<String> list = Arrays.asList("Andy", "B", null, "D", null, "F");
 
         // First way of avoiding NullPointerException
-        list.stream()
+        List<String> collect = list.stream()
                 .filter(object -> object != null)
+                .filter(Objects::nonNull)
                 .map(str -> str.toLowerCase())
-                .collect(Collectors.toList())
-                .forEach(System.out::println);
+                .collect(Collectors.toList());
+        System.out.println(collect);
 
         // Use of FlatMap with ofNullable to avoid null pointer exception
-        list.stream()
+        List<String> strings = list.stream()
                 .flatMap(object -> Stream.ofNullable(object))
                 .map(str -> str.toLowerCase())
-                .collect(Collectors.toList())
-                .forEach(System.out::println);
-    }
+                .collect(Collectors.toList());
 
+        System.out.println(strings);
+    }
 }

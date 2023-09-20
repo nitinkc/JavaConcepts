@@ -7,12 +7,14 @@ import java.util.stream.Collectors;
 /**
  * Created by Nitin C on 3/3/2016.
  */
-public class S10distinct {
+public class S1filter {
     public static void main(String[] args) {
-        List<Integer> intList = Arrays.asList(1, 2, 2,3,3,3,3, 4, 5, 6, 7, 8, 9);
+        List<Integer> list = Arrays.asList(1,4,6,8,9,7,5,3,2);
 
-        List<Integer> collect = intList.stream()
-                .distinct()//What to do without bothering how to do
+        // Filter takes in a Predicate functional interface
+        List<Integer> collect = list.stream()
+                .filter(num -> num % 2 != 0)
+                .filter(num -> num % 2 == 0)
                 .collect(Collectors.toList());
 
         System.out.println(collect);

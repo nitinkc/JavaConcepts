@@ -1,5 +1,8 @@
 package nitin.streams.variousMethodsOfStreams;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -18,5 +21,9 @@ public class S7streamOf {
         Double[] d = {10.0, 10.1, 10.2, 10.3, 10.4};
         Stream<Double> s1 = Stream.of(d);
         s1.forEach(System.out::println);
+
+        List<Double> collect = Stream.of(d).collect(Collectors.toList());
+
+        List<Double> doubleList = Arrays.asList(d);
     }
 }

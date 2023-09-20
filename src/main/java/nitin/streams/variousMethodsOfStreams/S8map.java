@@ -1,23 +1,25 @@
 package nitin.streams.variousMethodsOfStreams;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
+import java.util.stream.Collectors;
 
 /**
  * Created by Nitin C on 3/3/2016.
  */
 public class S8map {
     public static void main(String[] args) {
-        Stream<String> listStream = Stream.of("Nitin", "Nidhi", "Niti");
-        List<Integer> x = new ArrayList<>();
+        List<String> stringList = List.of("Nitin", "Nidhi", "Niti");
 
         // Lambda Expression
-        listStream
-                .flatMap(a -> Stream.of(a.toLowerCase(), a.length(), a.toUpperCase()))
+        stringList.stream()
+                .map(a -> a.toLowerCase())
                 .forEach(b -> System.out.println(b));
 
         //The same is written in method reference
-        //list.map(String::length).forEach(System.out::print);
+        List<String> strings = stringList.stream()
+                .map(String::toLowerCase)
+                .collect(Collectors.toList());
+
+        System.out.println(strings);
     }
 }

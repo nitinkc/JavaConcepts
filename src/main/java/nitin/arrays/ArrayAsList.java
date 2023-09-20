@@ -15,10 +15,9 @@ public class ArrayAsList {
         System.out.println(Arrays.asList(a).contains("two"));//true
         System.out.println(Arrays.asList(a).contains("Nitin"));//false
 
-        // Arrays Class has method asList returning is
+        // Arrays Class has method asList that converts Array into a List (or Arraylist)
         System.out.println(Arrays.asList(a));
         List<String> aList = Arrays.asList(a);
         System.out.println(aList.size());
     }
-
 }

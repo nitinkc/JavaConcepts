@@ -18,12 +18,17 @@ public class S3sorted {
         list.add("Nagarjuna");
         System.out.println(list);
 
+        System.out.println("SORTED LIST");
         // Sort elements of the Stream, using DNSO
-        List<String> l = list.stream().sorted().collect(Collectors.toList());
+        List<String> l = list.stream()
+                .sorted()
+                .collect(Collectors.toList());
         System.out.println(l);
 
         // Reverse Sorted, customised sorted order
-        List<String> l2 = list.stream().sorted((str1, str2) -> str2.compareTo(str1)).collect(Collectors.toList());
+        List<String> l2 = list.stream()
+                .sorted((str1, str2) -> str2.compareTo(str1))
+                .collect(Collectors.toList());
 //        List<String> l3 = list.stream().sorted(new Comparator<String>() {
 //            @Override
 //            public int compare(String o1, String o2) {
@@ -33,10 +38,14 @@ public class S3sorted {
         System.out.println(l2);
 
 
+        System.out.println("COMPARATOR USE CASE");
         list.stream()
-                .sorted(Comparator.comparing(String::length)
-                        .thenComparing((str1, str2) -> str2.compareTo(str1)))
-                .forEach(System.out::println);
+                .sorted(Comparator
+                        .comparing(String::length)
+                        //.thenComparing((str1, str2) -> str2.compareTo(str1))
+                        .thenComparing(Comparator.reverseOrder())
+                )
+                .forEach(System.out::print);
 
     }
 }

@@ -19,11 +19,11 @@ public class AutoBoxingNUnboxing {
         list.add(j);
     }
 
-    private static void doSomething(Integer in) {
+    private static void doSomething(Integer wrapperInt) {
         //unboxing, at runtime Integer.intValue() is called implicitly to return int
-        int j = in;
+        int j = wrapperInt;
         //unboxing, Integer is passed where int was expected
-        doPrimitive(in);
+        doPrimitive(wrapperInt);
     }
 
     private static void doPrimitive(int i) {

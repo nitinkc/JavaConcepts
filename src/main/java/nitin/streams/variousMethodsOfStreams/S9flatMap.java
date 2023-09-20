@@ -14,19 +14,18 @@ import java.util.stream.Stream;
 public class S9flatMap {
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
-        list.add("Pawan");
-        list.add("Chiranjeevi");
-        list.add("RaviTeja");
-        list.add("Venkatesh");
-        list.add("Nagarjuna");
+        list.add("Pawan");list.add("Chiranjeevi");list.add("RaviTeja");
+        list.add("Venkatesh");list.add("Nagarjuna");
         System.out.println(list);
 
         // for each values, generate uppercase and find length
         List<String> l = list.stream()
-                .flatMap(x -> Stream.of(x.toUpperCase(), String.valueOf(x.length()), x.toLowerCase()))
+                .flatMap(x -> Stream.of(x, x.toUpperCase(), String.valueOf(x.length()), x.toLowerCase()))
                 .collect(Collectors.toList());
 
         System.out.println(l);
+
+        System.out.println();
 
         l.stream()
                 //.map(str -> str.toLowerCase())

@@ -13,13 +13,12 @@ public class S3Iterate {
         Stream
                 .iterate(1, x -> x + 3)
                 .limit(5)
-                .forEach(System.out::println);
+                .forEach(System.out::print);
 
+        System.out.println();
         // Iterate with 3 Arguments
         Stream
-                .iterate(1, x -> x < 10, x -> x + 1)
-                .forEach(x -> System.out.println(x));
-
-
+                .iterate(2, x -> x < 10, x -> x + 2)
+                .forEach(x -> System.out.print(x + "\t"));
     }
 }
