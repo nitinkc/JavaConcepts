@@ -13,7 +13,7 @@ public class A1Intro {
         CompletableFuture
                 .supplyAsync(() -> {//Runs in a separate thread and releases it
                     System.out.println("supp: " + Thread.currentThread());
-                    return 3.14;
+                    return Math.PI;
                 })
                 .thenAccept(data -> System.out.println("Message received from supply Async: "+data));
 

@@ -21,7 +21,7 @@ public class A1WithJoin {
                 .join()//Blocks the main thread until the supplyAsync is done
         ;
 
-        //Becaue of join, DONE will be printed after async call is done
+        //Because of join, DONE will be printed after async call is done
         System.out.println("DONE: " + Thread.currentThread());
     }
 }
