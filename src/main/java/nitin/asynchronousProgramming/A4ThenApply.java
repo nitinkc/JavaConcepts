@@ -17,8 +17,7 @@ public class A4ThenApply {
      * Completion Stage method
      * used for applying transformations, takes a Function
      * thenApply deals with **Function that returns** a value
-     * returns CompletableFuture<T>() of TypeT
-     * @return
+     * returns CompletableFuture of TypeT
      */
 
     public static void main(String[] args) {

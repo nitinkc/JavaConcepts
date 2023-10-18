@@ -1,10 +1,9 @@
 plugins {
     id 'java'
     id 'maven-publish'
+    id 'org.jetbrains.kotlin.jvm' version '1.9.20-RC'
 }
 // Set Java version
-sourceCompatibility = 20
-targetCompatibility = 20
 group = 'JavaConcepts'
 version = '1.0-SNAPSHOT'
 
@@ -30,8 +29,8 @@ dependencies {
     //Lombok
     compileOnly "org.projectlombok:lombok:$lombokVersion"
     annotationProcessor "org.projectlombok:lombok:$lombokVersion"
-    testCompileOnly "org.projectlombok:lombok:1.18.22"
-    testAnnotationProcessor "org.projectlombok:lombok:1.18.22"
+    testCompileOnly "org.projectlombok:lombok:$lombokVersion"
+    testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
     //Apache Commons
     implementation "org.apache.commons:commons-collections4:$commonsCollectionsVersion"
     implementation "org.apache.commons:commons-lang3:$commonsLangVersion"
@@ -64,6 +63,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.5.1'
     testImplementation group: 'org.mockito', name: 'mockito-core', version: mockitoCoreVersion
     testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: mockitoCoreVersion
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
 task myJavadocs(type: Javadoc) {
@@ -81,4 +81,7 @@ publishing {
             from(components.java)
         }
     }
+}
+kotlin {
+    jvmToolchain(20)
 }

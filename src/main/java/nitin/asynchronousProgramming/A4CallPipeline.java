@@ -25,6 +25,7 @@ public class A4CallPipeline {
         System.out.println("Pipeline is built");
 
 
+        // Manually complete the future with the value 42
         completableFuture.complete(3);//Pipeline doesnot run until the complete is supplied a value.
     }
 

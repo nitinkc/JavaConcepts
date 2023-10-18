@@ -16,9 +16,6 @@ public class CoffeeBag implements Bag {
         return this.ounces;
     }
 
-    /**
-     * @param size the size to set
-     */
     public void setWeight(double ounces) {
         this.ounces = ounces;
     }

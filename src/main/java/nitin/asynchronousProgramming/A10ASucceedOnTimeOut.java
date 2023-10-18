@@ -44,6 +44,6 @@ public class A10ASucceedOnTimeOut {
 
     private static void failureOnTimeOut(CompletableFuture<Integer> future) {
         future.orTimeout(1, TimeUnit.SECONDS);//Does not keep the pipeline in PENDING state
-        //for more than a second. the value doesn't arrive in 1 sec (timeout) then resolve it, via the default value
+        //for more than a second. the value doesn't arrive in 1 sec (timeout) then cancel it, and completes it exceptionally with a TimeoutException
     }
 }

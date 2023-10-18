@@ -1,15 +1,15 @@
 package nitin.asynchronousProgramming;
 
+import com.utilities.MultiThreadUtility;
 import org.apache.commons.lang3.RandomUtils;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
-import static com.utilities.MultiThreadUtility.delay;
-
 public class A1Intro {
     public static void main(String[] args) {
-        System.out.println("m: " + Thread.currentThread());
+        System.out.println("main thread1: " + Thread.currentThread());
+
         CompletableFuture
                 .supplyAsync(() -> {//Runs in a separate thread and releases it
                     System.out.println("supp: " + Thread.currentThread());
@@ -17,16 +17,21 @@ public class A1Intro {
                 })
                 .thenAccept(data -> System.out.println("Message received from supply Async: "+data));
 
-        delay(1000);
+        System.out.println("main thread2: " + Thread.currentThread());
 
+        //eg2();
+        //eg3();
+    }
 
-
+    private static void eg2() {
         getData()
                 .thenAccept(data -> System.out.println(data))
                 .thenRun(() -> System.out.println("Can continue from this on..."))
                 .thenRun(() -> System.out.println("this never ends"))
                 .thenRun(() -> System.out.println("tap on, get data... get out..."));
+    }
 
+    private static void eg3() {
         try {
             System.out.println(getData().get());//BAD IDEA, forces exception handling, it's a BLOCKING CALL for forGET
         } catch (InterruptedException e) {
@@ -43,6 +48,10 @@ public class A1Intro {
 
     public static CompletableFuture<Double> getData(){
         return CompletableFuture.supplyAsync(
-                () -> 22.7);//Returning a random number Asyncronously
+                () -> {
+                    System.out.println("Getting the data......");
+                    MultiThreadUtility.delay(1000);//Try commenting and see how it's changing the thread
+                    return 22.7;
+                });
     }
 }
