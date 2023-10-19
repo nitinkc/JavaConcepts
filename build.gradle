@@ -3,10 +3,25 @@ plugins {
     id 'maven-publish'
     id 'org.jetbrains.kotlin.jvm' version '1.9.20-RC'
 }
-// Set Java version
+
 group = 'JavaConcepts'
 version = '1.0-SNAPSHOT'
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs += "--enable-preview"
+}
+tasks.withType(Test) {
+    jvmArgs += "--enable-preview"
+}
+tasks.withType(JavaExec) {
+    jvmArgs += "--enable-preview"
+}
 repositories {
     gradlePluginPortal()
     mavenLocal()
@@ -64,6 +79,8 @@ dependencies {
     testImplementation group: 'org.mockito', name: 'mockito-core', version: mockitoCoreVersion
     testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: mockitoCoreVersion
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    //Kotlin
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3") // Use kotlinx-coroutines-core for non-Android projects
 }
 
 task myJavadocs(type: Javadoc) {
