@@ -1,9 +1,9 @@
-package nitin.asynchronousProgramming.completableFutureBasics;
+package nitin.multithreading.asynchronousProgramming.completableFutureBasics;
 
 import com.entity.CovidIndia;
 import com.entity.dto.CovidIndiaTransformed;
-import nitin.asynchronousProgramming.completableFutureBasics.functions.DataTransformationFunctions;
-import nitin.asynchronousProgramming.completableFutureBasics.service.DataFetchService;
+import nitin.multithreading.asynchronousProgramming.completableFutureBasics.functions.DataTransformationFunctions;
+import nitin.multithreading.asynchronousProgramming.completableFutureBasics.service.DataFetchService;
 
 import java.util.Comparator;
 import java.util.List;

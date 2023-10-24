@@ -1,4 +1,4 @@
-package nitin.asynchronousProgramming;
+package nitin.multithreading.asynchronousProgramming;
 
 import com.utilities.MultiThreadUtility;
 import org.apache.commons.lang3.RandomUtils;

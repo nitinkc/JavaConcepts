@@ -1,8 +1,8 @@
 package nitin.multithreading.completableFutureBasics;
 
 import com.entity.dto.VehicleTransformed;
-import nitin.asynchronousProgramming.A4ThenApply;
-import nitin.asynchronousProgramming.completableFutureBasics.service.DataFetchService;
+import nitin.multithreading.asynchronousProgramming.A4ThenApply;
+import nitin.multithreading.asynchronousProgramming.completableFutureBasics.service.DataFetchService;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;

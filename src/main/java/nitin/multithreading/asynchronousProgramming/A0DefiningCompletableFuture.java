@@ -1,6 +1,6 @@
-package nitin.asynchronousProgramming;
+package nitin.multithreading.asynchronousProgramming;
 
-import nitin.asynchronousProgramming.completableFutureBasics.service.DataFetchService;
+import nitin.multithreading.asynchronousProgramming.completableFutureBasics.service.DataFetchService;
 
 import java.util.concurrent.CompletableFuture;
 

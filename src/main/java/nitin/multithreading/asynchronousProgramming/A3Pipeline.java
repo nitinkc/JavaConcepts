@@ -1,4 +1,4 @@
-package nitin.asynchronousProgramming;
+package nitin.multithreading.asynchronousProgramming;
 
 import com.entity.EmployeeSimple;
 import com.entity.SampleData;

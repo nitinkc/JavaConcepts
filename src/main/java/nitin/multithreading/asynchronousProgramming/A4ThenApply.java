@@ -1,9 +1,9 @@
-package nitin.asynchronousProgramming;
+package nitin.multithreading.asynchronousProgramming;
 
 import com.entity.Vehicle;
 import com.entity.dto.VehicleTransformed;
-import nitin.asynchronousProgramming.completableFutureBasics.functions.DataTransformationFunctions;
-import nitin.asynchronousProgramming.completableFutureBasics.service.DataFetchService;
+import nitin.multithreading.asynchronousProgramming.completableFutureBasics.functions.DataTransformationFunctions;
+import nitin.multithreading.asynchronousProgramming.completableFutureBasics.service.DataFetchService;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;

@@ -39,7 +39,6 @@ public class P1Intro {
 
         //Find the name of the first employee greater than 40 years of age
 
-
         System.out.print(employees.parallelStream()
                 .filter(Objects::nonNull).filter(emp -> null != emp.getAge()).filter(emp -> null != emp.getName())
                 .filter(emp -> emp.getAge() > 25)

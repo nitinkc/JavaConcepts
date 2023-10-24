@@ -1,4 +1,4 @@
-package nitin.asynchronousProgramming;
+package nitin.multithreading.asynchronousProgramming;
 
 import java.util.concurrent.CompletableFuture;
 
