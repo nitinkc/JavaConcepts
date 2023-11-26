@@ -1,4 +1,5 @@
 package nitin.virtualThreads
+/*
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -21,4 +22,4 @@ suspend fun task21(){
     delay(1000)
     println("exiting task2 ${Thread.currentThread()}")
 
-}
+}*/

@@ -1,5 +1,6 @@
 package nitin.virtualThreads
 
+/*
 fun main(args : Array<String>) = run {
     task1()
     task2()
@@ -16,4 +17,4 @@ fun task1(){
 fun task2(){
     println("entering task2 ${Thread.currentThread()}")
     println("exiting task2 ${Thread.currentThread()}")
-}
+}*/

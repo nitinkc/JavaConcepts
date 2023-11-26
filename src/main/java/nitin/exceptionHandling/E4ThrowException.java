@@ -5,7 +5,6 @@ package nitin.exceptionHandling;
  */
 public class E4ThrowException {
 
-
     public static void main(String[] args) {
         try {
             //Compiler forces to handle the "throw new exception"
@@ -16,5 +15,6 @@ public class E4ThrowException {
         //Exception after this line will not happen
 
         System.out.println("AFTER TRY-CATCH");
+
     }
 }

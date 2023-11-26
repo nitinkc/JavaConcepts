@@ -1,18 +1,17 @@
 plugins {
     id 'java'
     id 'maven-publish'
-    id 'org.jetbrains.kotlin.jvm' version '1.9.20-RC'
     id "org.sonarqube" version "4.4.1.3373" //For local testing
 }
 
 group = 'JavaConcepts'
 version = '1.0-SNAPSHOT'
 
-java {
+/*java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(21)
     }
-}
+}*/
 
 tasks.withType(JavaCompile) {
     options.compilerArgs += "--enable-preview"
@@ -79,9 +78,6 @@ dependencies {
     testImplementation Testing.junit.jupiter
     testImplementation group: 'org.mockito', name: 'mockito-core', version: mockitoCoreVersion
     testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: mockitoCoreVersion
-    implementation Kotlin.stdlib.jdk8
-    //Kotlin
-    implementation(KotlinX.coroutines.core) // Use kotlinx-coroutines-core for non-Android projects
 }
 
 sonarqube {
@@ -115,7 +111,4 @@ publishing {
             from(components.java)
         }
     }
-}
-kotlin {
-    jvmToolchain(20)
 }
