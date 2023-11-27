@@ -1,8 +1,6 @@
 package nitin.exceptionHandling;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -22,9 +20,27 @@ public class E7TryWithResources {
     public static final String P2  = "src/main/resources/p2.txt";
 
     public static void main(String[] args) {
+
         Path inputPath = Paths.get(P1);
         Path outputPath = Paths.get(P2);
         newApproach(inputPath,outputPath);
+
+        String filePath = "src/main/resources/test.txt";
+        String writeMe = "Testing";
+        readFile(filePath,writeMe);
+    }
+
+    public static Integer readFile(String path, String writeMe) {
+
+        //Try with Resource
+        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File(path)));) {
+            oos.writeObject(writeMe);
+        } catch (FileNotFoundException e)  {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public static void newApproach(Path p1, Path p2){

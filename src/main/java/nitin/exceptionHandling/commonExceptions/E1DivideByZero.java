@@ -1,4 +1,4 @@
-package nitin.exceptionHandling;
+package nitin.exceptionHandling.commonExceptions;
 
 /**
  * Created by Nitin C on 11/27/2015.

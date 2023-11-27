@@ -19,5 +19,4 @@ public class E3FinallyMagic {
             System.out.println("It executes even after return from catch");
         }
     }
-
 }

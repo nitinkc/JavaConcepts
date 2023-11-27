@@ -1,6 +1,9 @@
 package nitin.exceptionHandling;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -17,7 +20,10 @@ import java.time.LocalDate;
  */
 public class E6multicatch {
     public static void main(String[] args) {
-
+        String filePath = "src/main/resources/test.txt";
+        String writeMe = "Testing";
+        readFile(filePath,writeMe);
+        //---------------
         Path path = Paths.get("text.txt");
         String text = null;
         try {
@@ -27,5 +33,20 @@ public class E6multicatch {
         }
         LocalDate date = LocalDate.parse(text);
             System.out.println(date);
+    }
+
+    public static Integer readFile(String path, String writeMe) {
+
+        //Try with Resource
+        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File(path)));) {
+            writeMe = writeMe + " :: "+String.valueOf(10/10);
+            oos.writeObject(writeMe);
+
+        } catch (IOException | ArithmeticException e )  {
+            e.printStackTrace();
+        }finally {
+            System.out.println("Always Run this as well");
+        }
+        return null;
     }
 }
