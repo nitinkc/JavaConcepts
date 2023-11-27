@@ -1,18 +1,13 @@
-package sandbox;
-
-import org.apache.commons.lang3.BooleanUtils;
+package nitin.exceptionHandling.inFunctionalProgramming;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.*;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-public class Test {
+public class GetHttpMessageFromCode {
     private static final String BASE_URL = "https://httpstat.us/";
 
     public static void main(String[] args) throws IOException {
@@ -26,19 +21,21 @@ public class Test {
         //Functional Style
         codeList
                 .parallelStream()
-                .map(code -> {
-                    try {
-                        return getHttpCodeDef(Integer.toString(code));
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
-                })//If getHttpCodeDef throws an exception, should nto use try catch in functional style
-                .map(String::toUpperCase)
+                .map(code ->  tryGetHttpCodeDef(Integer.toString(code)))//If getHttpCodeDef throws an exception, should not use try catch in functional style
+                //.map(String::toUpperCase)
+                .map(result -> result.map(String::toUpperCase))
+                .map(result -> switch (result){
+                    case Success data -> data.getResult();
+                    case Failure err-> err.getError();
+                })
                 .forEach(code -> System.out.println("Response received from code : " + code));
     }
 
+    public static Try<String> tryGetHttpCodeDef(String code) {
+        return Try.of(() -> getHttpCodeDef(code));
+    }
 
-    public static String getHttpCodeDef(String code) throws IOException {
+        public static String getHttpCodeDef(String code) {
         StringBuilder response = new StringBuilder();
 
         try {
