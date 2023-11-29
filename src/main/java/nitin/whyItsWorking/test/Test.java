@@ -55,6 +55,9 @@ public class Test {
             if (!isAnemic) {
                 CareCategory careCategoryDTO =  CareCategory.builder()
                         .labTestName(labTest)
+                        .currentMonth(List.of())
+                        .previousMonth(List.of())
+                        .secondPreviousMonth(List.of())
                         .build();
                 anemiaCareCategory.add(careCategoryDTO);
             }
