@@ -32,7 +32,7 @@ public class R1BasicRefAPITest {
         R1BasicRefAPITest t = new R1BasicRefAPITest();
 
         /*
-        For every loaded class, the JVM maintains an associated Class object
+        For every loaded class, the JVM maintains an associated Class a5object
          */
         Class c = null;
 
@@ -43,7 +43,7 @@ public class R1BasicRefAPITest {
         System.out.println(c.getClass());
         t.printMetadata(c);
 
-        //Type 2: Creating the Instance when the Class name and object name both are known!!
+        //Type 2: Creating the Instance when the Class name and a5object name both are known!!
         Nitin n = (Nitin) c.newInstance();
         // Can use n just like an created with new keyword
 
@@ -66,7 +66,7 @@ public class R1BasicRefAPITest {
         Class c2 = Class.forName("nitin.reflectionAPI.Nitin");
         Class c3 = n.getClass();
 
-        //All the three references points to the same object.
+        //All the three references points to the same a5object.
         if (c1 == c2) {
             System.out.println(" equal");
         }

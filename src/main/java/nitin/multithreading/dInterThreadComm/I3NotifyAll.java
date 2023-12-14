@@ -14,7 +14,7 @@ public class I3NotifyAll {
 
         I3NotifyAll na = new I3NotifyAll();
 
-        // Three threads acting on the same object
+        // Three threads acting on the same a5object
         A1 a = new A1(na);
         B1 b = new B1(na);
         C1 c = new C1(na);
@@ -81,7 +81,7 @@ class B1 extends Thread {
                 for (int i = 0; i < 100; i++) {
 
                     while (notifyAllExample.status != 2) {
-                        notifyAllExample.wait();  // wait and notifi method are from object class
+                        notifyAllExample.wait();  // wait and notifi method are from a5object class
                         // sleep method is from thread class
                         // sleep method never releases the lock
                     }

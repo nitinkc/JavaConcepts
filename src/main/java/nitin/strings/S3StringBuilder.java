@@ -5,7 +5,7 @@ package nitin.strings;
  * <p>
  * StringBuilder is NON-SYNCHRONIZED thus more efficient
  * StringBuffer is SYNCHRONIZED (THREAD SAFE) means two threads
- * can call the methods of the object simultaneously. Thus comparatively
+ * can call the methods of the a5object simultaneously. Thus comparatively
  * less efficient
  */
 public class S3StringBuilder {

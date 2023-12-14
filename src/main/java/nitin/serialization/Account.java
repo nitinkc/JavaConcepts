@@ -15,7 +15,7 @@ public class Account implements Serializable {
     public void writeObject(ObjectOutputStream os) throws Exception {
         os.defaultWriteObject();//perform default serialization (Durga...null)
         String epwd = "123" + pwd; //Encrypting the password (123Anushka)
-        os.writeObject(epwd);// write it as a separate object
+        os.writeObject(epwd);// write it as a separate a5object
     }
 
     /* Automatically executed at the time of De-Serialization */

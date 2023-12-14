@@ -10,7 +10,7 @@ public class S2SyncInstanceMethods {
 
         long start = System.currentTimeMillis();
 
-        //10 Threads operating concurrently on a same object
+        //10 Threads operating concurrently on a same a5object
         for (int i = 0; i < 10; i++) {
             t[i] = new Thread(w);
             t[i].start();

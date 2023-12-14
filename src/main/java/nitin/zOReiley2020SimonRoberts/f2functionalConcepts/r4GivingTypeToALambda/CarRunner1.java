@@ -36,7 +36,7 @@ class CarRunner1 {
 
         // Giving context to an stand alone Lambda to help determine its type.
         // The Cast provides the necessasary context for the Lambda expression to be successful.
-        // ((CarCriteria1)(c -> c.getColor().equals("Red"))) is an object reference of type CarCriteria1 and thus the test
+        // ((CarCriteria1)(c -> c.getColor().equals("Red"))) is an a5object reference of type CarCriteria1 and thus the test
         // method can be invoked.
         boolean b1 = ((CarCriteria1) (c -> c.getColor().equals("Red"))).test(Car1.withGasColorPassengers(0, "Red"));
 

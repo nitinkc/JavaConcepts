@@ -24,7 +24,7 @@ class CarRunner1 {
         //Factory type of approach. Instead of calling a static field, call a static method.
         //showAll(getCarsByCriteria1(cars, Car1.RED_CAR_CRITERION));
 
-        //Here getRedCarCriterion has a choice of implementing the new object or the single static object
+        //Here getRedCarCriterion has a choice of implementing the new a5object or the single static a5object
         // If the below line is to be used 5 10 times within the same code, the new approach will created multiple objects,
         // while the static field will only create it once
         //showAll(getCarsByCriteria1(cars, Car1.getRedCarCriterion()));

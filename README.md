@@ -11,13 +11,13 @@ Gradle upgrade branch
 find . -type f -name '*.java' | wc -l 795
 
 # Topics
-[src/main/java/nitin/flowControl/FlowControl.md](src/main/java/nitin/flowControl/FlowControl.md)
+[src/main/java/nitin/flowControl/FlowControl.md](src/main/java/nitin/a4flowControl/FlowControl.md)
 
 [src/main/java/nitin/a2operators/operators.md](src/main/java/nitin/a2operators/operators.md)
 
-[src/main/java/nitin/accessModifiers/final/notes.md](src/main/java/nitin/accessModifiers/final/notes.md)
+[src/main/java/nitin/accessModifiers/final/notes.md](src/main/java/nitin/a3accessModifiers/final/notes.md)
 
-[src/main/java/nitin/object/notes.md](src/main/java/nitin/object/notes.md)
+[src/main/java/nitin/object/notes.md](src/main/java/nitin/a5object/notes.md)
 
 [src/main/java/nitin/a1languageFundamentals/Notes.md](src/main/java/nitin/a1languageFundamentals/Notes.md)
 

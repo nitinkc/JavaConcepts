@@ -13,9 +13,9 @@ public class Example2 {
 
         // Calling the method with a lambda expression
         System.out.println(myApp.playBiFunction("Hello ", "World!", (a, b) -> a.concat(b)));
-        // Reference to an instance method of an **arbitrary object** of a particular type
+        // Reference to an instance method of an **arbitrary a5object** of a particular type
         System.out.println(myApp.playBiFunction("Hello ","World!", String::concat));
-        // Reference to an **instance method** of a particular object
+        // Reference to an **instance method** of a particular a5object
         System.out.println(myApp.playBiFunction("Hello ","World!", ((a,b) -> myApp.appendStrings(a,b))));
         System.out.println(myApp.playBiFunction("Hello ","World!", myApp::appendStrings));
 
@@ -30,7 +30,7 @@ public class Example2 {
         /************************************* ANOTHER EXAMPLE *****************************************************/
         List<EmployeeSimple> list = SampleData.getSimpleEmployees();
         PrintStream printStream = System.out;
-        // Reference to an **instance method** of a particular object
+        // Reference to an **instance method** of a particular a5object
         list.forEach(printStream::println);
 
         //Reference to an Instance Method of an Arbitrary Object of a Particular Type

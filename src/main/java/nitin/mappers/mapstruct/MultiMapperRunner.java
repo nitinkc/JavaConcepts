@@ -20,7 +20,7 @@ public class MultiMapperRunner {
     public static void main(String[] args) throws IOException {
         final PersonMapper mapper = Mappers.getMapper(PersonMapper.class);
 
-        URL resource = new URL("file:src/main/resources/json/single-object-mapper.json");
+        URL resource = new URL("file:src/main/resources/json/single-a5object-mapper.json");
         ObjectMapper om = new ObjectMapper();
 
         //Convert this to CompletableFuturesSingleMapperRunner

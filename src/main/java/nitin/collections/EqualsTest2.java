@@ -4,7 +4,7 @@ public class EqualsTest2 {
 
     public static void main(String[] args) {
         Friend leena = new Friend("Leena", "Delhi", 24);
-        Friend leenaJacob = new Friend("Leena", "Delhi", 24); //Another object of type Friend.
+        Friend leenaJacob = new Friend("Leena", "Delhi", 24); //Another a5object of type Friend.
         Friend leejac = leena; //same reference to the Object leena
 
         if (leenaJacob.equals(leena)) //these 2 objects are same in the eyes of equals() method, but not in the eyes of ==
@@ -17,12 +17,12 @@ public class EqualsTest2 {
         else
             System.out.println("Both are Unequal n the eyes of == method");
 
-        if (leejac.equals(leena)) //leejac refers to leena so there is only one object
+        if (leejac.equals(leena)) //leejac refers to leena so there is only one a5object
             System.out.println("Both are equal");
         else
             System.out.println("Both are UNequal");
 
-        if (leejac == leena) //leejac refers to leena so there is only one object
+        if (leejac == leena) //leejac refers to leena so there is only one a5object
             System.out.println("Both are equal");
         else
             System.out.println("Both are UNequal");

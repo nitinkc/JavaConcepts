@@ -7,7 +7,7 @@ import java.util.TreeSet;
 
 /**
  * Created by synergisticit on 2/25/2016.
- * while adding into a set, a test of equality happens, to determine if the object being pushed already exist
+ * while adding into a set, a test of equality happens, to determine if the a5object being pushed already exist
  */
 public class S2BasicSetInteger {
     public static void main(String[] args) {

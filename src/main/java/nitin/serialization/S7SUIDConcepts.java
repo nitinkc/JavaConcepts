@@ -33,7 +33,7 @@ public class S7SUIDConcepts {
 }
 
 // invalid classException will only be thrown when some modification is done
-// in the class and that modification has to do with the state of the object.
+// in the class and that modification has to do with the state of the a5object.
 // provided serialversion uid is not defined explicitly
 class Serialtest implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -61,11 +61,11 @@ class Serialtest implements Serializable {
     }
 
     public void m2() {
-        System.out.println(" changes done to methos check and compare with saved object");
+        System.out.println(" changes done to methos check and compare with saved a5object");
     }
 
     // conclusion if we try to add a method or remove a method than it does not
-    // effects the state of the object.
+    // effects the state of the a5object.
     public void m4() {
         int a = 9;
         System.out.println(a);

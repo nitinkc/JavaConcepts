@@ -15,17 +15,17 @@ class CarRunner {
     like a red color or a gas level. What we would like to be able to do is to say,
     here is the behavior that will select or identify the kind of vehicle that we want in this output list.
 
-    And we tend, as object oriented programmers, not to think in terms of behavior as arguments to functions.
-    But it turns out that an object is the amalgamation of both state, things like gas levels, and behavior,
-    the methods that we apply to that object, all in one place. And if we pass an object as an argument,
-    we pass the behavior that that object contains. That means that we could pass the selection behavior by
-    passing an object, primarily for the purpose of behavior rather than just for the purpose of its state.
+    And we tend, as a5object oriented programmers, not to think in terms of behavior as arguments to functions.
+    But it turns out that an a5object is the amalgamation of both state, things like gas levels, and behavior,
+    the methods that we apply to that a5object, all in one place. And if we pass an a5object as an argument,
+    we pass the behavior that that a5object contains. That means that we could pass the selection behavior by
+    passing an a5object, primarily for the purpose of behavior rather than just for the purpose of its state.
 
     So what we would like to be able to do is to **pass an argument** in here that tells us how to
     select something and call a behavior on it in here.
 
-    So, hopefully the idea that we can pass an object as a function argument, or as a method argument,
-    and it takes with it the behavior that is built into that object, is starting to make a little bit of sense.
+    So, hopefully the idea that we can pass an a5object as a function argument, or as a method argument,
+    and it takes with it the behavior that is built into that a5object, is starting to make a little bit of sense.
      */
         List<Car> cars = Arrays.asList(
                 //Calling static Factories

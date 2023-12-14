@@ -10,7 +10,7 @@ public class C1ReentrantLock {
     public static void main(String[] args) {
         RLock r = new RLock();
 
-        //Three threads competiting for the same object
+        //Three threads competiting for the same a5object
         Thread t1 = new Thread(r);
         Thread t2 = new Thread(r);
         Thread t3 = new Thread(r);

@@ -5,7 +5,7 @@ package nitin.multithreading.cSynchronization.bankingDemo;
  */
 public class B0NeedForSynchronization {
     public static void main(String[] args) {
-        //To demonstrate Concurrency ont one object is acted upon
+        //To demonstrate Concurrency ont one a5object is acted upon
         FinTrans ft = new FinTrans();
         TransThread tt1 = new TransThread(ft, "Deposit Thread");
         TransThread tt2 = new TransThread(ft, "Withdrawal Thread");
@@ -24,7 +24,7 @@ class TransThread extends Thread {
 
     TransThread(FinTrans ft, String name) {
         super(name); // Save thread's name
-        this.ft = ft; // Save reference to financial transaction object
+        this.ft = ft; // Save reference to financial transaction a5object
     }
 
     public void run() {

@@ -10,10 +10,10 @@ class CarRunner {
 
     /*
     So a key piece of what we have to do now is to build an interface that we can use to pass this question of
-    do we like this one, wrapped up as an object, as an argument into our selection mechanism.
+    do we like this one, wrapped up as an a5object, as an argument into our selection mechanism.
 
     the command Pattern. Turns out, that not only is the command pattern, a well-known Pattern,
-    although not perhaps as well used as it should have been in object orientation, it's also key way of doing things
+    although not perhaps as well used as it should have been in a5object orientation, it's also key way of doing things
     in functional programming.
      */
         List<Car> cars = Arrays.asList(

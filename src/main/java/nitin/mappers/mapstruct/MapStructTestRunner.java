@@ -13,7 +13,7 @@ public class MapStructTestRunner {
     public static void main(String[] args) throws IOException {
         final TestMapper mapper = Mappers.getMapper(TestMapper.class);
 
-        URL resource = new URL("file:src/main/resources/json/object-mapper-tester.json");
+        URL resource = new URL("file:src/main/resources/json/a5object-mapper-tester.json");
         ObjectMapper om = new ObjectMapper();
 
         Tester tester = getTestData(resource, om);

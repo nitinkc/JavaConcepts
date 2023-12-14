@@ -14,7 +14,7 @@ public class SingleMapperRunner {
     public static void main(String[] args) throws IOException {
         final EmployeeMapper mapper = Mappers.getMapper(EmployeeMapper.class);
 
-        URL resource = new URL("file:src/main/resources/json/single-object-mapper.json");
+        URL resource = new URL("file:src/main/resources/json/single-a5object-mapper.json");
         ObjectMapper om = new ObjectMapper();
 
         //Convert this to CompletableFuturesSingleMapperRunner

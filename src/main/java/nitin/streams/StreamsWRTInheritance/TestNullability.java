@@ -10,7 +10,7 @@ import java.util.Optional;
 
 public class TestNullability {
     public static void main(String[] args) {
-        /* Using map to modify object */
+        /* Using map to modify a5object */
         String myDateTimePattern = "yyyy-MM-dd'T'HH:mm:ss.SSSZ";
 
         ZoneId zone = ZoneId.systemDefault();

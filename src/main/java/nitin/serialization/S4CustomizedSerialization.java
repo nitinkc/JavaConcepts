@@ -39,7 +39,7 @@ class Login implements Serializable {
 
         //Encrypting the password (!@#@$123@abc##) 
         String epwd = "!@#@$" + pwd;
-        os.writeObject(epwd);// write it as a separate object 
+        os.writeObject(epwd);// write it as a separate a5object 
     }
 
     // Automatically executed at the time of De-Serialization

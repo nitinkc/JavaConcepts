@@ -4,8 +4,8 @@ package nitin.a1languageFundamentals.variables;
  * Created by Nitin Chaurasia on 12/28/16 at 12:25 AM.
  * 1. Instance Variable
  * # Also known as Object level variables or attributes
- * # For each object, a separate copy of variable is maintained
- * # created at the time of object creation and destroyed at time of object destruction
+ * # For each a5object, a separate copy of variable is maintained
+ * # created at the time of a5object creation and destroyed at time of a5object destruction
  * # declared within the class BUT outside any constructor, block or method
  * # not required to perform initialization explicitly, JVM provides default values
  * # scope: Same as Object

@@ -10,7 +10,7 @@ public class F3BufferedReaderWriter {
 
         File f = new File("src/com/nitin/IO_FileHandling/nitin.txt");
 
-        // Buffered Writer needs a WRITER object to communicate with File
+        // Buffered Writer needs a WRITER a5object to communicate with File
         FileWriter fw = new FileWriter(f, true);
 
         BufferedWriter bw = new BufferedWriter(fw);

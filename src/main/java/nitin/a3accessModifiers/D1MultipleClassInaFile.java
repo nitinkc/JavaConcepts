@@ -1,4 +1,4 @@
-package nitin.accessModifiers;
+package nitin.a3accessModifiers;
 
 /**
  * Created by Nitin C on 11/25/2015.

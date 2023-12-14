@@ -10,8 +10,8 @@ class CarRunner {
 
     /*
     That was the version of ordering things for lists prior to Java eight but the essential thing that's going on here
-    is that we've created an object, implementing the comparator interface such that, the sort method could use the
-    behavior defined in that object to decide, are these two objects in the right order, or the wrong order and that
+    is that we've created an a5object, implementing the comparator interface such that, the sort method could use the
+    behavior defined in that a5object to decide, are these two objects in the right order, or the wrong order and that
     was the basis on which it could then proceed to sort objects of a type it had never seen before based on an
     ordering criterion that did not come to anybody's head at the time when the sort method was written.
      */

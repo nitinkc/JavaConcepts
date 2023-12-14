@@ -1,4 +1,4 @@
-package nitin.object;
+package nitin.a5object;
 
 abstract class Animal {
     public abstract void checkup();

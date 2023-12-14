@@ -45,7 +45,7 @@ public class T4forEach {
     private static ArrayList<String> getData(String url) {
         var words = new ArrayList<String>();
         try {
-            // Create a URL object
+            // Create a URL a5object
             URL urlObject = new URL(url);
             // Open a connection to the URL
             BufferedReader reader = new BufferedReader(new InputStreamReader(urlObject.openStream()));

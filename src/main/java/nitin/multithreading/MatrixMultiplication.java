@@ -66,7 +66,7 @@ public class MatrixMultiplication {
         /*FOR DEBUGGING: ALL VALUES IN MAT A are 3 and MAT B are 1*/
         mm.fillMatrix();
 
-        //play with only one object to understand a14concurrency challenges
+        //play with only one a5object to understand a14concurrency challenges
         Multiply m = new Multiply();
         Thread[] t = new Thread[numThreads];
 

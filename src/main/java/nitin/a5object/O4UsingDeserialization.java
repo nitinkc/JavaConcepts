@@ -1,4 +1,4 @@
-package nitin.object;
+package nitin.a5object;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

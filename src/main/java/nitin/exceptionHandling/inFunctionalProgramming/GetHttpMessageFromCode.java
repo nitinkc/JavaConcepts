@@ -39,7 +39,7 @@ public class GetHttpMessageFromCode {
         StringBuilder response = new StringBuilder();
 
         try {
-            // Create URL object
+            // Create URL a5object
             URL apiUrl = new URL(BASE_URL + code);
 
             // Open connection

@@ -9,7 +9,7 @@ public class S1Example1 implements Interf {
         // the only way to call Interface static method is via the interface name.
         Interf.m1();
 
-        //INVALID : via object reference now allowed
+        //INVALID : via a5object reference now allowed
         S1Example1 s = new S1Example1();
         //s.m1();
         //Not available to Implementation class

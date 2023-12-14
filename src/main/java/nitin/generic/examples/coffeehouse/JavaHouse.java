@@ -146,7 +146,7 @@ public class JavaHouse {
                 darkTypes.add((Dark) coffeeType);
             } else if (coffeeType instanceof Medium) {
                 // Note that no cast is required, since mediumTypes accepts
-                // any CoffeeType object
+                // any CoffeeType a5object
                 mediumTypes.add(coffeeType);
             } else if (coffeeType instanceof Light) {
                 lightTypes.add((Light) coffeeType);

@@ -56,7 +56,7 @@ public class Person {
      * The toString method is briefly covered in the
      * "Advanced topics" section at end of the 2nd OOP lecture,
      * but the idea is that it is called automatically when
-     * you print a Person object.
+     * you print a Person a5object.
      */
     @Override
     public String toString() {

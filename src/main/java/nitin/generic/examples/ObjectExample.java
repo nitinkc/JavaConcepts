@@ -28,7 +28,7 @@ public class ObjectExample {
 
     /**
      * Utilizing a container that uses generics allows us to store any type
-     * of data within the object in a type-safe manner
+     * of data within the a5object in a type-safe manner
      */
     public static void testGenerics() {
         GenericContainer<String> stringContainer = new GenericContainer<String>();

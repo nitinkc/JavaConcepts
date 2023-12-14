@@ -10,7 +10,7 @@ package nitin.multithreading.aBasics.executionPrevention;
  * <p>
  * Another difference isThread.sleep() method is a static method and applies on current thread,
  * while wait() is an instance specific method and only got wake up if some other thread
- * calls notify method on same object.
+ * calls notify method on same a5object.
  */
 public class T4SleepNWait {
 }

@@ -34,7 +34,7 @@ public class L1BasicWithListIteration {
          *  just tell what to do, not how the iterations done
          ************************/
 
-        // method forEach is called on the object
+        // method forEach is called on the a5object
         // Anonymous inner class
         // This gives polymorphism
         // forEach method is now on a10collections

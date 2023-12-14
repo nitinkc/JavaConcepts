@@ -7,7 +7,7 @@ import java.util.TreeSet;
 /**
  * Created by synergisticit on 2/25/2016
  * <p>
- * If we wish to insert Student object into TreeSet (which needs compare logic), we will get the following error
+ * If we wish to insert Student a5object into TreeSet (which needs compare logic), we will get the following error
  * java.lang.ClassCastException if Student does not implement java.lang.Comparable
  * MNEMONIC BC (comparaBle - ClassCast)
  * <p>

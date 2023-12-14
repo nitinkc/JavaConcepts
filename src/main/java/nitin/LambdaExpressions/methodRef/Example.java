@@ -13,8 +13,8 @@ public class Example {
 
         //Taking the definition into another class, or using another class to define the interface
         MethodReferences obj = new MethodReferences();
-        // Reference to the method using the object of the class myMethod
-        Display<Integer> displayInstanceMethodParticularObject = ((a,b) -> obj.myMethod(a,b));//putting the definition in object of another class
+        // Reference to the method using the a5object of the class myMethod
+        Display<Integer> displayInstanceMethodParticularObject = ((a,b) -> obj.myMethod(a,b));//putting the definition in a5object of another class
         // Calling the method inside the functional interface Display
         displayInstanceMethodParticularObject.displayResults(1,3);
 

@@ -15,7 +15,7 @@ public class EmployeeListMapper {
     public static void main(String[] args) throws IOException {
         final ObjectMapper objectMapper = new ObjectMapper();
 
-        URL url = new URL("file:src/main/resources/json/array-object-mapper.json");
+        URL url = new URL("file:src/main/resources/json/array-a5object-mapper.json");
 
         //typeRefForArray(objectMapper, url);
         typeRefForListOfMap(objectMapper, url);
@@ -24,8 +24,8 @@ public class EmployeeListMapper {
     }
 
     private static void typeRefForListOfMap(ObjectMapper objectMapper, URL url) throws IOException {
-        //File from = new File("src/main/resources/json/array-object-mapper.json");
-        //File from = new File("src/main/resources/json/single-object-mapper.json");
+        //File from = new File("src/main/resources/json/array-a5object-mapper.json");
+        //File from = new File("src/main/resources/json/single-a5object-mapper.json");
 
         TypeReference<List<HashMap<String,Object>>> typeRef
                 = new TypeReference<List<HashMap<String,Object>>>() {};

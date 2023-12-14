@@ -34,7 +34,7 @@ public class PDF5Supplier {
 
         System.out.println(d1 + " --- " + d2);
 
-        /* A supplier is often used when constructing new object */
+        /* A supplier is often used when constructing new a5object */
 
         //Constructor Reference
         Supplier<StringBuilder> myString = StringBuilder::new;

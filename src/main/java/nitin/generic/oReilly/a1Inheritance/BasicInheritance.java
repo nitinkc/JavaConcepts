@@ -6,7 +6,7 @@ import java.util.List;
 
 public class BasicInheritance {
     public static void main(String[] args) {
-        //Generic list of object that can have any type of Object
+        //Generic list of a5object that can have any type of Object
         List<Object> objects = new ArrayList<>();
         objects.add("string");
         objects.add(LocalDateTime.now());

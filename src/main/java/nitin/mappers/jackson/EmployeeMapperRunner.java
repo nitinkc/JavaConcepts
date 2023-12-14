@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 
 public class EmployeeMapperRunner {
     public static void main(String[] args) throws IOException {
-        URL resource = new URL("file:src/main/resources/json/single-object-mapper.json");
+        URL resource = new URL("file:src/main/resources/json/single-a5object-mapper.json");
         ObjectMapper om = new ObjectMapper();
 
 
@@ -27,7 +27,7 @@ public class EmployeeMapperRunner {
     }
 
     private static void jsonFromFile() throws IOException {
-        URL resource = new URL("file:src/main/resources/json/single-object-mapper.json");
+        URL resource = new URL("file:src/main/resources/json/single-a5object-mapper.json");
         ObjectMapper om = new ObjectMapper();
 
         Employee employee = om.readValue(resource, Employee.class);

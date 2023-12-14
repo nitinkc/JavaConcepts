@@ -90,14 +90,14 @@ class Car1 {
     };
 
     //Factory method : Much better than the constructor approach
-    //Here getRedCarCriterion has a choice of implementing the new object or the single static object
+    //Here getRedCarCriterion has a choice of implementing the new a5object or the single static a5object
     //public static RedCarCriterion getRedCarCriterion(){
     public static CarCriteria1 getRedCarCriterion() {
         return RED_CAR_CRITERION; //This is Singleton design pattern.
         //return new RedCarCriterion();
     }
 
-    /*  Not Singleton as there is amn argument, threshold, that is unique to each object.*/
+    /*  Not Singleton as there is amn argument, threshold, that is unique to each a5object.*/
     public static CarCriteria1 getGasLevelCarCriterion(int threshold) {
         return new GasLevelCarCriterion(threshold);
     }

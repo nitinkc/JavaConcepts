@@ -1,4 +1,4 @@
-package nitin.accessModifiers.staticTest;
+package nitin.a3accessModifiers.staticTest;
 
 /**
  * Created by Nitin C on 11/25/2015.
@@ -50,7 +50,7 @@ public class StaticInitializationBlocks {
         Car1 c3 = new Car1();
         System.out.println("************************************ PROGRAM STARTS HERE *******************************************");
         Car1.numberofwheels = 4;
-        c1.enginecapacity = 1500;//non static var, related to each object
+        c1.enginecapacity = 1500;//non static var, related to each a5object
         System.out.println(Car1.numberofwheels);
         System.out.println(Car1.numberofwheels);
 

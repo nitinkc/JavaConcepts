@@ -15,7 +15,7 @@ public class S2StringImmutable {
         System.out.println(s);
 
         // Proving immutability. s.concat() didnot change the original
-        // but created a new object and printed. s still points to the original
+        // but created a new a5object and printed. s still points to the original
         System.out.println(s.concat(""));
         System.out.println(s);
     }
