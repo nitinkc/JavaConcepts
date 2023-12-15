@@ -1,6 +1,7 @@
 package nitin.a4flowControl;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -8,21 +9,24 @@ import java.util.List;
  */
 
 public class SwitchExpressions {
+    final static List<String> ANEMIA_LABS = Arrays.asList(
+            "HEMOGLOBIN",//Sort Order based on Array Index. 0 = lowest, array.size()-1 = biggest
+            "IRON SATURATION",
+            "FERRITIN",
+            "IRON",
+            "MCV",
+            "RETIC COUNT",
+            "ABSOLUTE RETIC COUNT",
+            "WBC");
+
     public static void main(String[] args) {
         String day = "sun";
 
-        String result = getString(day);
-        System.out.println(result);
+        //System.out.println(getString(day));
 
-        final List<String> ANEMIA_LABS = Arrays.asList("HEMOGLOBIN (g/dL)",//Sort Order based on Array Index. 0 = lowest, array.size()-1 = biggest
-                "IRON SATURATION (%)",
-                "FERRITIN (ng/mL)",
-                "IRON (ug/dL)",
-                "MCV (fL)",
-                "RETIC COUNT (%)",
-                "ABSOLUTE RETIC COUNT (x 10'6 cells/uL)",
-                "WBC (x 10'3 cells/uL)");
-
+        for(String lab : ANEMIA_LABS){
+            System.out.println(getString2(lab));
+        }
     }
 
     private static String getString(String day) {
@@ -39,15 +43,16 @@ public class SwitchExpressions {
         return result;
     }
 
-    private static String getString2(List<String> str) {
+    private static String getString2(String str) {
+
         String result = switch (str) {
-            case "Iron" -> "No 1";
-            case  -> "Tuesday Thursday Saturday";
+            case "IRON" -> "Iron Lab";
+            case "FERRITIN" -> "FERRITIN Lab";
             default -> {
-                if (day.isEmpty())
+                if (ANEMIA_LABS.isEmpty())
                     yield "Please insert a valid day";
                 else
-                    yield "Sunday";
+                    yield "Invalid Labs";
             }
         };
         return result;
