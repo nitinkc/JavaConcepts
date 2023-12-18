@@ -10,7 +10,10 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Test {
     static final List<String> ANEMIA_LABS = Arrays.asList("HEMOGLOBIN (g/dL)",
