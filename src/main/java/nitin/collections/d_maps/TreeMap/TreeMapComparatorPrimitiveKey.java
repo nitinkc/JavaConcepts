@@ -26,6 +26,4 @@ public class TreeMapComparatorPrimitiveKey {
             System.out.println("Key is : " + entry.getKey() + " And value is : " + entry.getValue());
         }
     }
-
 }
-
