@@ -7,12 +7,6 @@ plugins {
 group = 'JavaConcepts'
 version = '1.0-SNAPSHOT'
 
-/*java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
-    }
-}*/
-
 tasks.withType(JavaCompile) {
     options.compilerArgs += "--enable-preview"
 }

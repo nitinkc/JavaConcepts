@@ -14,21 +14,28 @@ import java.util.Queue;
 public class PriorityQu {
     static class PQsort implements Comparator<Integer> {
         public int compare(Integer one, Integer two) {
-            return two - one;
+            return one - two;
         }
     }
 
     public static void main(String[] args) {
         int[] q = {5, 3, 8, 6, 9, 1, 7};
-        Queue<Integer> pq = new PriorityQueue<Integer>();
+        Queue<Integer> pq = new PriorityQueue<>(Comparator.reverseOrder());
         for (int i : q) {
-            pq.offer(i);
+            pq.offer(i);//Add values
         }
+
+        System.out.println("Printing Priority Queue");
         System.out.println(pq); //Print directly
 
         for (int j : q) {
-            System.out.print(" " + pq.poll());
+            System.out.print(" " + pq.poll());//Poll removes the elements
         }
+
+        //pqWithSort(q);
+    }
+
+    private static void pqWithSort(int[] q) {
         PQsort pqs = new PQsort();
         PriorityQueue<Integer> pq2 = new PriorityQueue<Integer>(10, pqs);
         for (int x : q) // load queue
