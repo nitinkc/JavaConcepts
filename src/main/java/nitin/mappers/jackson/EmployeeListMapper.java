@@ -15,7 +15,7 @@ public class EmployeeListMapper {
     public static void main(String[] args) throws IOException {
         final ObjectMapper objectMapper = new ObjectMapper();
 
-        URL url = new URL("file:src/main/resources/json/array-a5object-mapper.json");
+        URL url = new URL("file:src/main/resources/json/array-object-mapper.json");
 
         //typeRefForArray(objectMapper, url);
         typeRefForListOfMap(objectMapper, url);

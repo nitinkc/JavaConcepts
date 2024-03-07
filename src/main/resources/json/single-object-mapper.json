@@ -1,28 +1,87 @@
-{
-  "name" : "John Doe",
-  "dateOfBirth" : 1676878272857,
-  "phones" : {
-    "Work" : "(123) 456 7890",
-    "Cell" : "987-654-3210",
-    "Home" : "963-852-7410"
+[
+  {
+    "name": "John Doe",
+    "dateOfBirth": 1676878272857,
+    "datelocaltzdt": "2023-08-04T12:15:00",
+    "phones": {
+      "Work": "(123) 456 7890",
+      "Cell": "987-654-3210",
+      "Home": "963-852-7410"
+    },
+    "addresses": [
+      {
+        "addressLine1": null,
+        "addressLine2": null,
+        "city": null,
+        "state": null,
+        "zip": null
+      },
+      {
+        "addressLine1": null,
+        "addressLine2": null,
+        "city": null,
+        "state": null,
+        "zip": null
+      },
+      {
+        "addressLine1": "134 Plum Nelly Circle",
+        "addressLine2": null,
+        "city": "Brentwood",
+        "state": "TN",
+        "zip": "37027"
+      }
+    ]
   },
-  "addresses" : [{
-    "addressLine1" : null,
-    "addressLine2" : null,
-    "city" : null,
-    "state" : null,
-    "zip" : null
-    }, {
-    "addressLine1" : null,
-    "addressLine2" : null,
-    "city" : null,
-    "state" : null,
-    "zip" : null
-    }, {
-    "addressLine1" : "134 Plum Nelly Circle",
-    "addressLine2" : null,
-    "city" : "Brentwood",
-    "state" : "TN",
-    "zip" : "37027"
-    }]
-}
+  {
+    "name": "Alice Smith",
+    "dateOfBirth": 1648262272857,
+    "datelocaltzdt": "2023-09-12T08:30:00",
+    "phones": {
+      "Work": "(111) 222 3333",
+      "Cell": "444-555-6666",
+      "Home": "777-888-9999"
+    },
+    "addresses": [
+      {
+        "addressLine1": null,
+        "addressLine2": null,
+        "city": null,
+        "state": null,
+        "zip": null
+      },
+      {
+        "addressLine1": "456 Elm Street",
+        "addressLine2": null,
+        "city": "Springfield",
+        "state": "IL",
+        "zip": "62701"
+      }
+    ]
+  },
+  {
+    "name": "Bob Johnson",
+    "dateOfBirth": 1625182272857,
+    "datelocaltzdt": "2023-07-18T16:45:00",
+    "phones": {
+      "Work": "(999) 888 7777",
+      "Cell": "666-555-4444",
+      "Home": "333-222-1111"
+    },
+    "addresses": [
+      {
+        "addressLine1": null,
+        "addressLine2": null,
+        "city": null,
+        "state": null,
+        "zip": null
+      },
+      {
+        "addressLine1": "789 Oak Avenue",
+        "addressLine2": null,
+        "city": "Oakland",
+        "state": "CA",
+        "zip": "94601"
+      }
+    ]
+  }
+]
