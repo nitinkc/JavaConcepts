@@ -66,33 +66,6 @@ public class Test {
             }
         }
 
-       // Why is above logic is wiorking wihout the need of the below logic???
-
-        /* TODO: Check if this logic is really needed or not.
-       //Set the idtRoundingDTO.getLabs1() for Anemia for 8 labs always
-        List<Labs1DTO> mbdLabs = labs1AnemiaAndMbd
-                .stream()
-                .filter(allLabs -> allLabs.getCareCategoryName().equalsIgnoreCase("MBD"))
-                .toList();
-
-
-        List<Labs1DTO> modifiedAnemiaLabs = labs1AnemiaAndMbd
-                .stream()
-                .filter(allLabs -> allLabs.getCareCategoryName().equalsIgnoreCase("Anemia"))
-                .toList();
-
-        modifiedAnemiaLabs.get(0).setCareCategory(anemiaCareCategory);
-        //Create a new Labs1Dto with existing mdb labs and modified anemia labs
-        List<Labs1DTO> updatedLabs1DTO = new ArrayList<>();
-        //TODO : only one element present
-        if(mbdLabs.size() >0)
-            updatedLabs1DTO.add(mbdLabs.get(0));
-        //Anemia labs will always be present
-        updatedLabs1DTO.add(modifiedAnemiaLabs.get(0));
-
-        //Finally set the labs
-        idtRoundingDTO.setLabs1(updatedLabs1DTO);*/
-
         System.out.println(example);
     }
 

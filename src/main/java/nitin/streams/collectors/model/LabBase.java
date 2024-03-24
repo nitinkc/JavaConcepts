@@ -1,12 +1,10 @@
-
-package sandbox.test;
+package nitin.streams.collectors.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,30 +18,23 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AdditionalLab {
+public class LabBase {
 
-    @JsonProperty("careCategoryName")
-    public String careCategoryName;
-    @JsonProperty("lab_test_code")
-    public String labTestCode;
+    @JsonProperty("categoryName")
+    public String categoryName;
+    @JsonProperty("testCodeId")
+    public String testCodeId;
     @JsonProperty("name")
     public String name;
     @JsonProperty("uom")
     public String uom;
-    @JsonProperty("drawDate")
-    public String drawDate;
-    @JsonProperty("drawDateDt")
-    public String drawDateDt;
 
-    @JsonProperty("drawDatelocaltzdt")
+    @JsonProperty("dateTime")
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    private LocalDateTime drawDatelocaltzdt;
+    public LocalDateTime dateTime;
 
-    @JsonProperty("davitaLabFlag")
-    public Object davitaLabFlag;
     @JsonProperty("value")
     public String value;
-    @JsonProperty("outOfRangeInd")
-    public Object outOfRangeInd;
-
+    @JsonProperty("sortOrder")
+    public int sortOrder;
 }

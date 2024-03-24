@@ -1,5 +1,5 @@
 
-package sandbox.test;
+package nitin.streams.collectors.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -17,7 +17,11 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AdditionalLabsDto {
-    @JsonProperty("additionalLabs")
-    public List<AdditionalLab> additionalLabs;
+public class Lab {
+
+    @JsonProperty("month")
+    private String month;
+    @JsonProperty("labsData")//Can have maximum of 3 labs each column
+    private List<LabsDatum> labsData;//Can have maximum of 3 labs each column
+
 }

@@ -1,12 +1,15 @@
 
-package sandbox.test;
+package nitin.streams.collectors.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -14,11 +17,14 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class LabsDatum {
+public class LabDetail {
 
-    public String value;
-    public Boolean davitaLabFlag;
-    public String drawDate;
-    public Boolean outOfRangeInd;
+    @JsonProperty("name")
+    private String name;
+    @JsonProperty("uom")
+    private String uom;
+    private int sortOrder;
+    @JsonProperty("labs")
+    private List<Lab> labs;//Keeps 13 months of similar labs
 
 }

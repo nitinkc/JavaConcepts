@@ -1,4 +1,4 @@
-package nitin.calandarDateTime.java8Calandar.zonedDateTime;
+package nitin.calandarDateTime.java8Calandar;
 
 import java.time.LocalTime;
 import java.time.ZoneId;
@@ -15,7 +15,8 @@ public class ZDCTests {
         ZoneId india   = ZoneId.of("Asia/Kolkata");//UTC+05:30
         ZoneId chicago = ZoneId.of("US/Central");
         ZoneId ny      = ZoneId.of("UTC-05:00");
-        System.out.println(ZoneOffset.SHORT_IDS.get("IST"));
+
+        System.out.println(ZoneOffset.SHORT_IDS.get("IST"));//ZoneOffset doesn't count Daylight savings
         //ZoneId.getAvailableZoneIds().stream().forEach(x -> System.out.println(x));
 
         ZonedDateTime timeChicago = ZonedDateTime.now(chicago);

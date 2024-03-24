@@ -13,7 +13,7 @@ public class L4Year {
         Year y = null;
         List<Integer> leapYear = new ArrayList<>();
 
-        for (int i = 1300; i <= 2020; i++) {
+        for (int i = 1300; i <= 2028; i++) {
             y = Year.of(i);
             if (y.isLeap()) {
                 leapYear.add(i);

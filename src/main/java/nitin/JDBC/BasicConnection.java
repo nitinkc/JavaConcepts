@@ -45,6 +45,8 @@ public class BasicConnection {
             System.out.println(e_id + " - " + e_name);
         }
         // 5. Close Connection
+        ps.close();
+        rs.close();
         conn.close();
     }
 }

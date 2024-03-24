@@ -24,4 +24,10 @@ public class MultiThreadUtility {
     public static void logMessage(String message){
         System.out.println(message + " : "  + Thread.currentThread()  );
     }
+
+    public static void foreverThread() {
+        long numberOfHours = 1;
+        Thread appThread = new Thread(()-> delay(numberOfHours * 60 * 1000));
+        appThread.start();
+    }
 }

@@ -1,5 +1,5 @@
 
-package sandbox.test;
+package nitin.streams.collectors.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -17,13 +17,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class LabDetail {
-
-    @JsonProperty("name")
-    public String name;
-    @JsonProperty("uom")
-    public String uom;
-    @JsonProperty("labs")
-    public List<Lab> labs;//Keeps 13 months of similar labs
-
+public class AdditionalLabsDto {
+    @JsonProperty("additionalLabs")
+    private List<AdditionalLab> additionalLabs;
 }

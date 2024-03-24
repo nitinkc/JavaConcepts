@@ -1,4 +1,4 @@
-package nitin.calandarDateTime.java8Calandar.zonedDateTime;
+package nitin.calandarDateTime.java8Calandar;
 
 import java.sql.Timestamp;
 import java.time.ZonedDateTime;

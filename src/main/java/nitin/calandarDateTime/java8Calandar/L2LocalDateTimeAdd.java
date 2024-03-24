@@ -7,7 +7,7 @@ import java.time.Month;
  * Created by nichaurasia on Saturday, April/25/2020 at 10:29 PM
  */
 
-public class L2LDTAddition {
+public class L2LocalDateTimeAdd {
     public static void main(String[] args) {
         LocalDateTime dt = LocalDateTime.of(1985, Month.JUNE, 11, 0, 0, 0);
         dt = dt.plusMonths(6);

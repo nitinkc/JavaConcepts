@@ -1,42 +1,44 @@
-package nitin.calandarDateTime;
+package nitin.calandarDateTime.old;
 
 import com.utilities.OldDateUtilities;
 
 import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
 /**
- * Created by nitin on Wednesday, May/06/2020 at 5:33 PM
+ * Created by nichaurasia on Thursday, April/23/2020 at 10:57 AM
  */
-public class GetFutureDates {
+
+public class GetNextMonthsNYearDates {
     public static void main(String[] args) {
+
         Calendar calendar = Calendar.getInstance();
         Date currentDate = calendar.getTime();
         currentDate = OldDateUtilities.nullifyTime(currentDate);
         Timestamp authTimestamp = new Timestamp(currentDate.getTime());
 
-        String datePattern = "EEE, MMM, dd yyyy HH:mm:ss z Z";
-        SimpleDateFormat sdf = new SimpleDateFormat(datePattern);
+        System.out.println(authTimestamp);
 
-        System.out.println("Current Time : ");
-        System.out.println(sdf.format(authTimestamp));
-
-        //Find a date 30 days from Now and then 365 days from that day
-        calendar.add(Calendar.DATE, 30);
+        /*
+        If Current Date Dt: 04/17/2020
+        POI -> 05/17/2020 to 05/16/2021.
+        */
+        //Add one month to the current Date
+        calendar.add(Calendar.MONTH, 1);
         Date poiBeginDate = calendar.getTime();
         poiBeginDate = OldDateUtilities.nullifyTime(poiBeginDate);
         //Add 12 months from one month of the current Date
-        calendar.add(Calendar.DATE, 365);
+        calendar.add(Calendar.MONTH, 12);
+        calendar.add(Calendar.DATE, -1);
         Date poiEndDate = calendar.getTime();
         poiEndDate = OldDateUtilities.nullifyTime(poiEndDate);
 
         Timestamp start = new Timestamp(poiBeginDate.getTime());
         Timestamp end = new Timestamp(poiEndDate.getTime());
 
-        System.out.println("####################################");
-        System.out.println(sdf.format(start));
-        System.out.println(sdf.format(end));
+        System.out.println();
+        System.out.println(start);
+        System.out.println(end);
     }
 }
