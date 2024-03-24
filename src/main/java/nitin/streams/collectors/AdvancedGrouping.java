@@ -1,5 +1,6 @@
 package nitin.streams.collectors;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -37,6 +38,7 @@ public class AdvancedGrouping {
             String writeValueAsString = new ObjectMapper()
                     .registerModule(new JavaTimeModule())
                     .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
+                    .setSerializationInclusion(JsonInclude.Include.ALWAYS)
                     .writerWithDefaultPrettyPrinter()
                     .writeValueAsString(finalJson);
             System.out.println(writeValueAsString);
