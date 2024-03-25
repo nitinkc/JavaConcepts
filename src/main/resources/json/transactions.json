@@ -1,0 +1,353 @@
+[
+  {
+    "date": "2023-01-15",
+    "items": [
+      {
+        "name": "item1",
+        "amount": 50
+      },
+      {
+        "name": "item2",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "date": "2023-02-20",
+    "items": [
+      {
+        "name": "item3",
+        "amount": 100
+      }
+    ]
+  },
+  {
+    "date": "2023-01-25",
+    "items": [
+      {
+        "name": "item2",
+        "amount": 50
+      },
+      {
+        "name": "item3",
+        "amount": 100
+      }
+    ]
+  },
+  {
+    "date": "2023-03-10",
+    "items": [
+      {
+        "name": "item1",
+        "amount": 50
+      },
+      {
+        "name": "item2",
+        "amount": 50
+      },
+      {
+        "name": "item3",
+        "amount": 100
+      }
+    ]
+  },
+  {
+    "date": "2023-02-05",
+    "items": [
+      {
+        "name": "item1",
+        "amount": 50
+      },
+      {
+        "name": "item3",
+        "amount": 100
+      }
+    ]
+  },
+  {
+    "date": "2023-04-15",
+    "items": [
+      {
+        "name": "item1",
+        "amount": 50
+      },
+      {
+        "name": "item2",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "date": "2023-07-15",
+    "items": [
+      {
+        "name": "item1",
+        "amount": 50
+      },
+      {
+        "name": "item2",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "date": "2023-10-15",
+    "items": [
+      {
+        "name": "item1",
+        "amount": 50
+      },
+      {
+        "name": "item2",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "date": "2023-01-15",
+    "items": [
+      {
+        "name": "item1",
+        "amount": 50
+      },
+      {
+        "name": "item2",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "date": "2023-01-30",
+    "items": [
+      {
+        "name": "item2",
+        "amount": 40
+      },
+      {
+        "name": "item3",
+        "amount": 60
+      }
+    ]
+  },
+  {
+    "date": "2023-02-05",
+    "items": [
+      {
+        "name": "item1",
+        "amount": 30
+      },
+      {
+        "name": "item3",
+        "amount": 70
+      }
+    ]
+  },
+  {
+    "date": "2023-02-20",
+    "items": [
+      {
+        "name": "item3",
+        "amount": 80
+      },
+      {
+        "name": "item4",
+        "amount": 20
+      }
+    ]
+  },
+  {
+    "date": "2023-03-10",
+    "items": [
+      {
+        "name": "item1",
+        "amount": 45
+      },
+      {
+        "name": "item2",
+        "amount": 55
+      }
+    ]
+  },
+  {
+    "date": "2023-03-25",
+    "items": [
+      {
+        "name": "item1",
+        "amount": 20
+      },
+      {
+        "name": "item3",
+        "amount": 80
+      }
+    ]
+  },
+  {
+    "date": "2023-04-15",
+    "items": [
+      {
+        "name": "item2",
+        "amount": 60
+      },
+      {
+        "name": "item3",
+        "amount": 40
+      }
+    ]
+  },
+  {
+    "date": "2023-04-30",
+    "items": [
+      {
+        "name": "item1",
+        "amount": 70
+      },
+      {
+        "name": "item4",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "date": "2023-05-05",
+    "items": [
+      {
+        "name": "item2",
+        "amount": 50
+      },
+      {
+        "name": "item4",
+        "amount": 50
+      }
+    ]
+  },
+  {
+    "date": "2023-05-20",
+    "items": [
+      {
+        "name": "item1",
+        "amount": 40
+      },
+      {
+        "name": "item3",
+        "amount": 60
+      }
+    ]
+  },
+  {
+    "date": "2023-06-10",
+    "items": [
+      {
+        "name": "item1",
+        "amount": 60
+      },
+      {
+        "name": "item2",
+        "amount": 40
+      }
+    ]
+  },
+  {
+    "date": "2023-06-25",
+    "items": [
+      {
+        "name": "item3",
+        "amount": 70
+      },
+      {
+        "name": "item4",
+        "amount": 30
+      }
+    ]
+  },
+  {
+    "date": "2023-07-15",
+    "items": [
+      {
+        "name": "item1",
+        "amount": 55
+      },
+      {
+        "name": "item2",
+        "amount": 45
+      }
+    ]
+  },
+  {
+    "date": "2023-07-30",
+    "items": [
+      {
+        "name": "item2",
+        "amount": 35
+      },
+      {
+        "name": "item4",
+        "amount": 65
+      }
+    ]
+  },
+  {
+    "date": "2023-08-05",
+    "items": [
+      {
+        "name": "item1",
+        "amount": 25
+      },
+      {
+        "name": "item3",
+        "amount": 75
+      }
+    ]
+  },
+  {
+    "date": "2023-08-20",
+    "items": [
+      {
+        "name": "item3",
+        "amount": 60
+      },
+      {
+        "name": "item4",
+        "amount": 40
+      }
+    ]
+  },
+  {
+    "date": "2023-09-10",
+    "items": [
+      {
+        "name": "item1",
+        "amount": 45
+      },
+      {
+        "name": "item2",
+        "amount": 55
+      }
+    ]
+  },
+  {
+    "date": "2023-09-25",
+    "items": [
+      {
+        "name": "item1",
+        "amount": 30
+      },
+      {
+        "name": "item3",
+        "amount": 70
+      }
+    ]
+  },
+  {
+    "date": "2023-10-15",
+    "items": [
+      {
+        "name": "item2",
+        "amount": 60
+      },
+      {
+        "name": "item3",
+        "amount": 40
+      }
+    ]
+  }
+]

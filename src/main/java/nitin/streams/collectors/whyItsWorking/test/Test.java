@@ -1,9 +1,9 @@
-package nitin.whyItsWorking.test;
+package nitin.streams.collectors.whyItsWorking.test;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import nitin.whyItsWorking.example.CareCategory;
-import nitin.whyItsWorking.example.Example;
-import nitin.whyItsWorking.example.Labs;
+import nitin.streams.collectors.whyItsWorking.example.CareCategory;
+import nitin.streams.collectors.whyItsWorking.example.Example;
+import nitin.streams.collectors.whyItsWorking.example.Labs;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;

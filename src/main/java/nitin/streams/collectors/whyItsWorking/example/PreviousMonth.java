@@ -1,4 +1,4 @@
-package nitin.whyItsWorking.example;
+package nitin.streams.collectors.whyItsWorking.example;
 
 import lombok.Data;
 

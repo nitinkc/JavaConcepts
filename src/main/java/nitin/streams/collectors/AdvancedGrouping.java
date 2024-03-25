@@ -27,8 +27,7 @@ public class AdvancedGrouping {
         List<Map<String,Object>> data = new ArrayList<>();
         try {
             String response = getJsonStringFromFile("src/main/resources/json/groupingBy.json");
-            data = mapper.readValue(response, new TypeReference<>() {
-            });
+            data = mapper.readValue(response, new TypeReference<>() {});
         } catch (IOException e) {
             log.info(e.getMessage());
         }
