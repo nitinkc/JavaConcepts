@@ -72,7 +72,7 @@ class Car1 {
     //Static inner class shares the same behaviour with all the instances. Static members vs instance members ->
     // the criteria is shared wil all the objects
     static class GasLevelCarCriterion implements CarCriteria1 {
-        private int threshold;
+        private final int threshold;
 
         public GasLevelCarCriterion(int threshold) {
             this.threshold = threshold;

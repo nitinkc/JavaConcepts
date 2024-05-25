@@ -339,7 +339,7 @@ public class OldDateUtilities implements Serializable {
                 sbMonth.append(iMonth);
             }
             sbYYYYMM.append(calendarInstance1.get(Calendar.YEAR));
-            sbYYYYMM.append(sbMonth.toString());
+            sbYYYYMM.append(sbMonth);
             sYYYYMM = sbYYYYMM.toString();
         }
         return sYYYYMM;
@@ -362,11 +362,11 @@ public class OldDateUtilities implements Serializable {
             if (slash) {
                 sbYYYYMM.append(calendarInstance1.get(Calendar.YEAR));
                 sbYYYYMM.append("/");
-                sbYYYYMM.append(sbMonth.toString());
+                sbYYYYMM.append(sbMonth);
                 sYYYYMM = sbYYYYMM.toString();
             } else {
                 sbYYYYMM.append(calendarInstance1.get(Calendar.YEAR));
-                sbYYYYMM.append(sbMonth.toString());
+                sbYYYYMM.append(sbMonth);
                 sYYYYMM = sbYYYYMM.toString();
             }
         }
@@ -431,7 +431,7 @@ public class OldDateUtilities implements Serializable {
         int iAge = getMonthsBetween(tsTimestamp1, tsTimestamp2);
         Integer IAge = Integer.valueOf(iAge);
         java.math.BigDecimal bdYear =
-                new java.math.BigDecimal(IAge.doubleValue() / 12.0);
+                java.math.BigDecimal.valueOf(IAge.doubleValue() / 12.0);
         return bdYear;
     }
 
@@ -735,13 +735,12 @@ public class OldDateUtilities implements Serializable {
         gregorianCalendar.setTime(tsFromThisDate);
         int iDay = gregorianCalendar.get(Calendar.DATE);
         gregorianCalendar.set((Calendar.DATE), iDay - 1);
-        StringBuffer sbPreviousDate = new StringBuffer();
-        sbPreviousDate.append(gregorianCalendar.get(Calendar.MONTH) + 1);
-        sbPreviousDate.append("-");
-        sbPreviousDate.append(gregorianCalendar.get(Calendar.DATE));
-        sbPreviousDate.append("-");
-        sbPreviousDate.append(gregorianCalendar.get(Calendar.YEAR));
-        return sbPreviousDate.toString();
+        String sbPreviousDate = (gregorianCalendar.get(Calendar.MONTH) + 1) +
+                "-" +
+                gregorianCalendar.get(Calendar.DATE) +
+                "-" +
+                gregorianCalendar.get(Calendar.YEAR);
+        return sbPreviousDate;
     }
 
     public static String getPreviousTimeStamp(Timestamp tsFromThisDate) {
@@ -750,13 +749,12 @@ public class OldDateUtilities implements Serializable {
         gregorianCalendar.setTime(tsFromThisDate);
         int iDay = gregorianCalendar.get(Calendar.DATE);
         gregorianCalendar.set((Calendar.DATE), iDay - 1);
-        StringBuffer sbPreviousDate = new StringBuffer();
-        sbPreviousDate.append(gregorianCalendar.get(Calendar.MONTH) + 1);
-        sbPreviousDate.append("/");
-        sbPreviousDate.append(gregorianCalendar.get(Calendar.DATE));
-        sbPreviousDate.append("/");
-        sbPreviousDate.append(gregorianCalendar.get(Calendar.YEAR));
-        return sbPreviousDate.toString();
+        String sbPreviousDate = (gregorianCalendar.get(Calendar.MONTH) + 1) +
+                "/" +
+                gregorianCalendar.get(Calendar.DATE) +
+                "/" +
+                gregorianCalendar.get(Calendar.YEAR);
+        return sbPreviousDate;
     }
 
     public static String getPreviousMonth(Timestamp tsGivenTimestamp) {
@@ -765,13 +763,12 @@ public class OldDateUtilities implements Serializable {
         gregorianCalendar.setTime(tsGivenTimestamp);
         int iMonth = gregorianCalendar.get(Calendar.MONTH);
         gregorianCalendar.set((Calendar.MONTH), iMonth - 1);
-        StringBuffer sbPreviousMonth = new StringBuffer();
-        sbPreviousMonth.append(gregorianCalendar.get(Calendar.MONTH) + 1);
-        sbPreviousMonth.append("/");
-        sbPreviousMonth.append(gregorianCalendar.get(Calendar.DATE));
-        sbPreviousMonth.append("/");
-        sbPreviousMonth.append(gregorianCalendar.get(Calendar.YEAR));
-        return sbPreviousMonth.toString();
+        String sbPreviousMonth = (gregorianCalendar.get(Calendar.MONTH) + 1) +
+                "/" +
+                gregorianCalendar.get(Calendar.DATE) +
+                "/" +
+                gregorianCalendar.get(Calendar.YEAR);
+        return sbPreviousMonth;
     }
 
     public static Timestamp getTimestamp(java.util.Date dDate1) {
@@ -881,13 +878,12 @@ public class OldDateUtilities implements Serializable {
         } else if (sMonth.equals("December")) {
             imonth = 12;
         }
-        StringBuffer sbDate = new StringBuffer();
-        sbDate.append(imonth);
-        sbDate.append("/");
-        sbDate.append(iday);
-        sbDate.append("/");
-        sbDate.append(sYear);
-        return getTimestamp(sbDate.toString());
+        String sbDate = imonth +
+                "/" +
+                iday +
+                "/" +
+                sYear;
+        return getTimestamp(sbDate);
     }
 
     public static java.sql.Timestamp getMinTimestamp(ArrayList alTimestamp) {
@@ -902,8 +898,7 @@ public class OldDateUtilities implements Serializable {
                 if (i == 0) {
                     tsMinTimestamp = tsFirstTimestamp;
                 }
-                if (dateLTDateInTimestamp(tsNextTimestamp, tsMinTimestamp)
-                        == true) {
+                if (dateLTDateInTimestamp(tsNextTimestamp, tsMinTimestamp)) {
                     tsMinTimestamp = tsNextTimestamp;
                 }
             }
@@ -925,8 +920,7 @@ public class OldDateUtilities implements Serializable {
                 if (i == 0) {
                     tsMaxTimestamp = tsFirstTimestamp;
                 }
-                if (dateGTDateInTimestamp(tsNextTimestamp, tsMaxTimestamp)
-                        == true) {
+                if (dateGTDateInTimestamp(tsNextTimestamp, tsMaxTimestamp)) {
                     tsMaxTimestamp = tsNextTimestamp;
                 }
             }
@@ -1119,7 +1113,7 @@ public class OldDateUtilities implements Serializable {
             }
             sbYYYYMM.append(calendarInstance1.get(Calendar.YEAR));
             sbYYYYMM.append("/");
-            sbYYYYMM.append(sbMonth.toString());
+            sbYYYYMM.append(sbMonth);
             sbYYYYMM.append("/");
             sbYYYYMM.append(calendarInstance1.get(Calendar.DATE));
             sYYYYMM = sbYYYYMM.toString();

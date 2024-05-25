@@ -7,11 +7,11 @@ import java.util.Comparator;
 
 
 public class ComparingExamples {
-    private static Employee[] employees = {new Employee("John", "Doe", 1, 234_567),
+    private static final Employee[] employees = {new Employee("John", "Doe", 1, 234_567),
             new Employee("Jane", "Doe", 2, 333_333),
             new Employee("Sammy", "Smith", 3, 99_000),
             new Employee("Sally", "Smith", 4, 99_000)};
-    private static String[] words =
+    private static final String[] words =
             {"hi", "hello", "hola", "bye", "goodbye", "adios"};
 
     public static void main(String[] args) {

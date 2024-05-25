@@ -11,28 +11,6 @@ import java.util.GregorianCalendar;
 
 public class TimeStampUtilities {
 
-    public String convertDateToString(Date aDate, String pattern) {
-
-        String aDateStr = null;
-
-        if ((aDate != null)) {
-            Format formatter = new SimpleDateFormat(pattern);
-            aDateStr = formatter.format(aDate);
-        }
-        return aDateStr;
-    }
-
-    public String convertTimestampToString(Timestamp aTimestamp, String pattern) {
-
-        String aDateStr = null;
-
-        if ((aTimestamp != null)) {
-            Format formatter = new SimpleDateFormat(pattern);
-            aDateStr = formatter.format(aTimestamp);
-        }
-        return aDateStr;
-    }
-
     public static Timestamp convertStringToTimeStampWithFormat(String time, String format) {
 
         Timestamp aTimestamp = null;
@@ -50,7 +28,6 @@ public class TimeStampUtilities {
         }
         return aTimestamp;
     }
-
 
     public static int getAgeFromBrithDate(String aBirthDate) {
         int age = 0;
@@ -87,11 +64,32 @@ public class TimeStampUtilities {
         return timestamp;
     }
 
-
     public static Timestamp addingMonthToTimestamp(Timestamp aDate) {
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(aDate.getTime());
         calendar.add(Calendar.MONTH, 11);
         return new Timestamp(calendar.getTimeInMillis());
+    }
+
+    public String convertDateToString(Date aDate, String pattern) {
+
+        String aDateStr = null;
+
+        if ((aDate != null)) {
+            Format formatter = new SimpleDateFormat(pattern);
+            aDateStr = formatter.format(aDate);
+        }
+        return aDateStr;
+    }
+
+    public String convertTimestampToString(Timestamp aTimestamp, String pattern) {
+
+        String aDateStr = null;
+
+        if ((aTimestamp != null)) {
+            Format formatter = new SimpleDateFormat(pattern);
+            aDateStr = formatter.format(aTimestamp);
+        }
+        return aDateStr;
     }
 }

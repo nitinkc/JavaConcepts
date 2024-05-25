@@ -44,6 +44,6 @@ public class PassByValuePrimitive {
 
 @Data
 @AllArgsConstructor
-class Customer{
+class Customer {
     String name;
 }

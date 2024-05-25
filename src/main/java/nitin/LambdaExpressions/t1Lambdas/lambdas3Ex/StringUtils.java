@@ -17,6 +17,9 @@ import java.util.function.Predicate;
  */
 
 public class StringUtils {
+    private StringUtils() {
+    } // Uninstantiatable class
+
     public static List<String> allMatches(List<String> candidates,
                                           Predicate<String> matchFunction) {
         List<String> results = new ArrayList<>();
@@ -28,7 +31,6 @@ public class StringUtils {
         return (results);
     }
 
-
     public static List<String> transformedList(List<String> originals,
                                                Function<String, String> transformer) {
         List<String> results = new ArrayList<>();
@@ -37,7 +39,4 @@ public class StringUtils {
         }
         return (results);
     }
-
-    private StringUtils() {
-    } // Uninstantiatable class
 }

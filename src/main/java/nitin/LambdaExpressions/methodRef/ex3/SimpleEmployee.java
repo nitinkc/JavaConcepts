@@ -14,12 +14,11 @@ public class SimpleEmployee {
     private String jobLevel;//level + exp + age
     private String salary;
 
-    public void printMe(){
-        StringBuilder sb = new StringBuilder();
-        sb.append(this.getName()).append(" ");
-        sb.append(this.getJobLevel()).append(" ");
-        sb.append(this.getSalary()).append(" ");
+    public void printMe() {
+        String sb = this.getName() + " " +
+                this.getJobLevel() + " " +
+                this.getSalary() + " ";
 
-        System.out.println(sb.toString());
+        System.out.println(sb);
     }
 }

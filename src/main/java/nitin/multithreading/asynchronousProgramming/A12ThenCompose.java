@@ -8,12 +8,13 @@ import nitin.multithreading.asynchronousProgramming.completableFutureBasics.serv
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
+
 @NoArgsConstructor
 public class A12ThenCompose {
     static DataFetchService dataFetchService;
 
-    public A12ThenCompose(DataFetchService dataFetchService){
-        this.dataFetchService =  dataFetchService;
+    public A12ThenCompose(DataFetchService dataFetchService) {
+        A12ThenCompose.dataFetchService = dataFetchService;
     }
 
     //CHECK TEST CASES AS WELL
@@ -23,6 +24,7 @@ public class A12ThenCompose {
      * Transform data from one form to another
      * Input is Function functional interface
      * Deals with methods that return completableFuture
+     *
      * @param args
      */
     public static void main(String[] args) {
@@ -46,7 +48,7 @@ public class A12ThenCompose {
                         dataFetchService.findVehicleWithGreatMileage(previousVehicleFuture));
     }
 
-    public static CompletableFuture<String> getGreetings_compose(){
+    public static CompletableFuture<String> getGreetings_compose() {
 
         //Fetch the name from the first name serviceTask and then feed the output to the futureName service for greeting
         return CompletableFuture.supplyAsync(() -> dataFetchService.firstNameService(1000))

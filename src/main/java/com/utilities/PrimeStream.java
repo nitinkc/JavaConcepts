@@ -6,6 +6,9 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class PrimeStream {
+    private PrimeStream() {
+    } // Uninstantiatable class
+
     /**
      * Makes an "infinite" (unbounded) stream of consecutive prime numbers.
      * This method is for when you want to control the size-limiting steps later.
@@ -43,7 +46,4 @@ public class PrimeStream {
     public static BigInteger[] makePrimeArray(int numDigits, int numPrimes) {
         return (makePrimeStream(numDigits, numPrimes).toArray(BigInteger[]::new));
     }
-
-    private PrimeStream() {
-    } // Uninstantiatable class
 }

@@ -15,7 +15,7 @@ public class A1Intro {
                     System.out.println("supp: " + Thread.currentThread());
                     return Math.PI;
                 })
-                .thenAccept(data -> System.out.println("Message received from supply Async: "+data));
+                .thenAccept(data -> System.out.println("Message received from supply Async: " + data));
 
         System.out.println("main thread2: " + Thread.currentThread());
 
@@ -41,12 +41,12 @@ public class A1Intro {
         }
     }
 
-    public static CompletableFuture<Integer> generateRand(){
+    public static CompletableFuture<Integer> generateRand() {
         return CompletableFuture.supplyAsync(
-                () -> RandomUtils.nextInt(1,10));//Returning a random number Asyncronously
+                () -> RandomUtils.nextInt(1, 10));//Returning a random number Asyncronously
     }
 
-    public static CompletableFuture<Double> getData(){
+    public static CompletableFuture<Double> getData() {
         return CompletableFuture.supplyAsync(
                 () -> {
                     System.out.println("Getting the data......");

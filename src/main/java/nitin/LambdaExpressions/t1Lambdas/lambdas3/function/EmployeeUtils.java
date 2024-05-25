@@ -6,6 +6,22 @@ import java.util.function.Supplier;
 
 public class EmployeeUtils {
 
+    @SuppressWarnings("rawtypes")
+    private final static Supplier[] peopleGenerators =
+            {Person::new, Writer::new, Artist::new, Consultant::new,
+                    EmployeeSamples::randomEmployee,
+                    () -> {
+                        Writer w = new Writer();
+                        w.setFirstName("Ernest");
+                        w.setLastName("Hemingway");
+                        w.setBookType(Writer.BookType.FICTION);
+                        return (w);
+                    }
+            };
+
+    private EmployeeUtils() {
+    } // Uninstantiatable class; static methods only
+
     /**
      * Returns the first employee from the List that has the given first name. Returns null
      * if no matches are found. Note that if would be better to return Optional instead of null;
@@ -51,19 +67,6 @@ public class EmployeeUtils {
         return (null);
     }
 
-    @SuppressWarnings("rawtypes")
-    private final static Supplier[] peopleGenerators =
-            {Person::new, Writer::new, Artist::new, Consultant::new,
-                    EmployeeSamples::randomEmployee,
-                    () -> {
-                        Writer w = new Writer();
-                        w.setFirstName("Ernest");
-                        w.setLastName("Hemingway");
-                        w.setBookType(Writer.BookType.FICTION);
-                        return (w);
-                    }
-            };
-
     public static Person randomPerson() {
         Supplier<Person> generator = RandomUtils.randomElement(peopleGenerators);
         return (generator.get());
@@ -81,7 +84,4 @@ public class EmployeeUtils {
         }
         return (sum);
     }
-
-    private EmployeeUtils() {
-    } // Uninstantiatable class; static methods only
 }

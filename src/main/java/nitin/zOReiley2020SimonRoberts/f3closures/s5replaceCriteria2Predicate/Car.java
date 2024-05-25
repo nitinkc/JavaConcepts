@@ -33,6 +33,26 @@ class Car {
         return self;
     }
 
+    /*********************************************************************************************************************
+     * *******************************************************************************************************************
+     * *******************************************************************************************************************
+     ********************************************************************************************************************/
+
+    public static Predicate<Car> getFourPassengerCriterion() {
+        // Return type of the Lambda is carCriteria1
+        return car -> car.getPassengers().size() == 4;
+    }
+
+    public static Predicate<Car> getGasLevelCarCriteria(int threshold) {
+        return car1 -> car1.getGasLevel() >= threshold;
+    }
+
+    // Factory method to return a criteria of Car based on multiple car color
+    public static Predicate<Car> getColorCriteria(String... colors) {
+        Set<String> colorSet = new HashSet<>(Arrays.asList(colors));
+        return c -> colorSet.contains(c.color);
+    }
+
     public int getGasLevel() {
         return gasLevel;
     }
@@ -62,25 +82,5 @@ class Car {
     public String toString() {
         return "Car{" + "gasLevel=" + gasLevel + ", color=" + color + ", passengers=" + passengers
                 + (trunkContents != null ? ", trunkContents=" + trunkContents : " no trunk") + '}';
-    }
-
-    /*********************************************************************************************************************
-     * *******************************************************************************************************************
-     * *******************************************************************************************************************
-     ********************************************************************************************************************/
-
-    public static Predicate<Car> getFourPassengerCriterion() {
-        // Return type of the Lambda is carCriteria1
-        return car -> car.getPassengers().size() == 4;
-    }
-
-    public static Predicate<Car> getGasLevelCarCriteria(int threshold) {
-        return car1 -> car1.getGasLevel() >= threshold;
-    }
-
-    // Factory method to return a criteria of Car based on multiple car color
-    public static Predicate<Car> getColorCriteria(String... colors) {
-        Set<String> colorSet = new HashSet<>(Arrays.asList(colors));
-        return c -> colorSet.contains(c.color);
     }
 }

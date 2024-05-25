@@ -11,8 +11,8 @@ import java.util.Optional;
 public class OptionalOrElse {
     public static void main(String[] args) {
         Patient patient = Patient.builder()
-                .medTests(Arrays.asList(null,"aMed","bMed"))
-                .labTests(Arrays.asList(null,null,null,null))
+                .medTests(Arrays.asList(null, "aMed", "bMed"))
+                .labTests(Arrays.asList(null, null, null, null))
                 .build();
 
         Patient patient2 = Patient.builder()
@@ -33,10 +33,10 @@ public class OptionalOrElse {
         }*/
 
         List<String> singleLab = Optional.ofNullable(Collections.singletonList(
-                    patient.getLabTests()
-                    .stream()
-                    .filter(data -> null != data)
-                    .findFirst().orElse(StringUtils.EMPTY)))
+                        patient.getLabTests()
+                                .stream()
+                                .filter(data -> null != data)
+                                .findFirst().orElse(StringUtils.EMPTY)))
                 .orElse(Collections.emptyList());
 
         patient.setLabTests(singleLab);
@@ -63,7 +63,7 @@ public class OptionalOrElse {
 @AllArgsConstructor
 @Builder
 @ToString
-class Patient{
+class Patient {
     List<String> labTests;
     List<String> medTests;
 }

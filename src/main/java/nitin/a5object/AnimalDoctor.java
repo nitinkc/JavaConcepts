@@ -23,12 +23,6 @@ class Bird extends Animal {
 }
 
 public class AnimalDoctor {
-    public void checkAnimals(Animal[] animals) {
-        for (Animal a : animals) {
-            a.checkup();
-        }
-    }
-
     public static void main(String[] args) {
         Dogs[] dog = {new Dogs(), new Dogs()};
         Bird[] bird = {new Bird(), new Bird(), new Bird()};
@@ -38,6 +32,12 @@ public class AnimalDoctor {
         rinkoo.checkAnimals(cat);
         rinkoo.checkAnimals(bird);
         rinkoo.checkAnimals(dog);
+    }
+
+    public void checkAnimals(Animal[] animals) {
+        for (Animal a : animals) {
+            a.checkup();
+        }
     }
 
 }

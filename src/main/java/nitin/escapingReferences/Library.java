@@ -1,11 +1,10 @@
 package nitin.escapingReferences;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Library {
-    private Map<String, Book> books;
+    private final Map<String, Book> books;
 
     public Library() {
         this.books = new HashMap<>();

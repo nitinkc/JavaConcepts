@@ -10,16 +10,16 @@ public class A11AFailOnTimeOut {
         CompletableFuture<Integer> future = new CompletableFuture<>();
 
         future
-                .thenApply(data -> data+3)
+                .thenApply(data -> data + 3)
                 .exceptionally(throwable -> handleExceptionally(throwable))
-                .thenApply(data -> data*2)
+                .thenApply(data -> data * 2)
                 .thenAccept(data -> System.out.println("Result from Future " + data));
 
         System.out.println("Pipeline is built....");
 
         delay(1000);
 
-        future.orTimeout( 1, TimeUnit.SECONDS);//This will blowout if the state is resolved
+        future.orTimeout(1, TimeUnit.SECONDS);//This will blowout if the state is resolved
         delay(2000);//Delay between timeout and completion is taking into account
 
         future.complete(2);

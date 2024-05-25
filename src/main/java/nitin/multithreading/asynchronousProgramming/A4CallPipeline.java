@@ -18,9 +18,9 @@ public class A4CallPipeline {
     private static void intro0() {
         CompletableFuture<Integer> completableFuture = new CompletableFuture<Integer>();
         completableFuture
-                .thenApply(data -> data*2)
-                        .thenApply(data -> data + 1)
-                        .thenAccept(data -> System.out.println(data));
+                .thenApply(data -> data * 2)
+                .thenApply(data -> data + 1)
+                .thenAccept(data -> System.out.println(data));
 
         System.out.println("Pipeline is built");
 
@@ -59,14 +59,14 @@ public class A4CallPipeline {
         CompletableFuture<Integer> future = new CompletableFuture<>();
 
         future
-                .thenApply(data -> 2/data*2)
+                .thenApply(data -> 2 / data * 2)
                 .exceptionally(throwable -> {
                     System.out.println(throwable.getMessage());
                     return 9;
                 })
-                .thenApply(data -> data+1)
+                .thenApply(data -> data + 1)
                 .thenAccept(data -> System.out.println("Result from Future " + data))
-                .thenRun(()-> System.out.println("Process Completed!!"));
+                .thenRun(() -> System.out.println("Process Completed!!"));
 
         System.out.println("Pipeline is built....");
 

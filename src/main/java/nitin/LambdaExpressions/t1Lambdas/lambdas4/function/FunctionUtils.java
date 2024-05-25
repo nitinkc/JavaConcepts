@@ -18,6 +18,9 @@ import java.util.function.Predicate;
  */
 
 public class FunctionUtils {
+    public FunctionUtils() {
+    } // Uninstantiatable class; static methods only
+
     /**
      * Returns first entry from list that passes the match function. This is
      * a generalized version of EmployeeUtils.firstMatchingEmployee.
@@ -30,6 +33,12 @@ public class FunctionUtils {
         }
         return (null);
     }
+
+    // @SafeVarargs is difficult to understand. The issue is that it is not always safe to use varargs for generic types:
+    // the resultant array can have runtime type problems if you modify entries in it.
+    // But, if you only read the values and never modify them, varargs is perfectly safe.
+    // @SafeVarargs says "I am not doing anything dangerous, please suppress the compiler warnings".
+    // For details, see http://docs.oracle.com/javase/8/docs/technotes/guides/language/non-reifiable-varargs.html
 
     /**
      * Returns a List of all entries from input list that pass the match function.
@@ -45,12 +54,6 @@ public class FunctionUtils {
         }
         return (matches);
     }
-
-    // @SafeVarargs is difficult to understand. The issue is that it is not always safe to use varargs for generic types:
-    // the resultant array can have runtime type problems if you modify entries in it.
-    // But, if you only read the values and never modify them, varargs is perfectly safe.
-    // @SafeVarargs says "I am not doing anything dangerous, please suppress the compiler warnings".
-    // For details, see http://docs.oracle.com/javase/8/docs/technotes/guides/language/non-reifiable-varargs.html
 
     /**
      * Returns a Predicate that is the result of ANDing all the argument Predicates.
@@ -131,7 +134,4 @@ public class FunctionUtils {
             operation.accept(e);
         }
     }
-
-    public FunctionUtils() {
-    } // Uninstantiatable class; static methods only
 }

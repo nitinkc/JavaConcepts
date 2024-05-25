@@ -26,6 +26,6 @@ public class HashMapRevisions {
                 list.add(key);
             }
         }
-        System.out.println(list.toString());
+        System.out.println(list);
     }
 }

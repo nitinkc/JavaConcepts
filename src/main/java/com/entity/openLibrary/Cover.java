@@ -1,4 +1,3 @@
-
 package com.entity.openLibrary;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -8,9 +7,9 @@ import lombok.*;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "small",
-    "medium",
-    "large"
+        "small",
+        "medium",
+        "large"
 })
 @Getter
 @Setter

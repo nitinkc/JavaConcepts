@@ -10,23 +10,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JacksonMapperTypes {
-    ObjectMapper mapper = new ObjectMapper();
     private static final String VEHICLE_URL = "https://random-data-api.com/api/vehicle/random_vehicle?size=";
+    ObjectMapper mapper = new ObjectMapper();
 
     public static void main(String[] args) throws IOException {
-    //List<RandomVehicle> randomVehicles = getFewRandomVehicles(10);
-    //System.out.println(randomVehicles.size());
-    //System.out.println(randomVehicles.get(0).toString());
+        //List<RandomVehicle> randomVehicles = getFewRandomVehicles(10);
+        //System.out.println(randomVehicles.size());
+        //System.out.println(randomVehicles.get(0).toString());
 
         RandomVehicle randomVehicle = getSingleJsonFromFile();
     }
 
-    public static List<RandomVehicle> getFewRandomVehicles(int size){
+    public static List<RandomVehicle> getFewRandomVehicles(int size) {
         ObjectMapper mapper = new ObjectMapper();
         List<RandomVehicle> randomVehicleList = new ArrayList<>();
 
         try {
-            randomVehicleList = mapper.readValue(new URL(VEHICLE_URL+size), new TypeReference<List<RandomVehicle>>() {});
+            randomVehicleList = mapper.readValue(new URL(VEHICLE_URL + size), new TypeReference<List<RandomVehicle>>() {
+            });
         } catch (IOException e) {
             e.printStackTrace();
         }

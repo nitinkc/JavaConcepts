@@ -14,6 +14,9 @@ import java.util.stream.Stream;
  */
 
 public class FolderUtils {
+    private FolderUtils() {
+    } // Uninstantiatable class
+
     public static void printAllPaths(Stream<Path> paths) {
         paths.forEach(System.out::println);
     }
@@ -62,7 +65,4 @@ public class FolderUtils {
             System.err.println("IOException: " + ioe);
         }
     }
-
-    private FolderUtils() {
-    } // Uninstantiatable class
 }

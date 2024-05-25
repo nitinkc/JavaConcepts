@@ -36,13 +36,13 @@ public class R3MonoFromSupplier {
         );
     }
 
-    private static String nameRepo(){
+    private static String nameRepo() {
         System.out.println("Fetching name : ");
         return Faker.instance().name().fullName();
     }
 
-    private static CompletableFuture<String> nameRepoCompletableFuture(){
+    private static CompletableFuture<String> nameRepoCompletableFuture() {
         System.out.println("Fetching name from Completable Future : ");
-        return CompletableFuture.supplyAsync(() -> "From Comp fut :: "+Faker.instance().name().fullName());
+        return CompletableFuture.supplyAsync(() -> "From Comp fut :: " + Faker.instance().name().fullName());
     }
 }

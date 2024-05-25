@@ -17,25 +17,25 @@ import java.nio.file.Paths;
  */
 public class E7TryWithResources {
     public static final String P1 = "src/main/resources/p1.txt";
-    public static final String P2  = "src/main/resources/p2.txt";
+    public static final String P2 = "src/main/resources/p2.txt";
 
     public static void main(String[] args) {
 
         Path inputPath = Paths.get(P1);
         Path outputPath = Paths.get(P2);
-        newApproach(inputPath,outputPath);
+        newApproach(inputPath, outputPath);
 
         String filePath = "src/main/resources/test.txt";
         String writeMe = "Testing";
-        readFile(filePath,writeMe);
+        readFile(filePath, writeMe);
     }
 
     public static Integer readFile(String path, String writeMe) {
 
         //Try with Resource
-        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File(path)));) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File(path)))) {
             oos.writeObject(writeMe);
-        } catch (FileNotFoundException e)  {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
@@ -43,11 +43,11 @@ public class E7TryWithResources {
         return null;
     }
 
-    public static void newApproach(Path p1, Path p2){
+    public static void newApproach(Path p1, Path p2) {
         try (BufferedReader in = Files.newBufferedReader(p1);
              BufferedWriter out = Files.newBufferedWriter(p2)) {
             out.write(in.readLine());
-        }catch (IOException e){
+        } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }

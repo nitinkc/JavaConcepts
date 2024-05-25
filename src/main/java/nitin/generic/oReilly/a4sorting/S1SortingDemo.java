@@ -9,7 +9,7 @@ import static java.util.Comparator.*;
 import static java.util.stream.Collectors.toList;
 
 public class S1SortingDemo {
-    private List<String> sampleStrings = Arrays.asList("this", "is", "a", "list", "of", "strings");
+    private final List<String> sampleStrings = Arrays.asList("this", "is", "a", "list", "of", "strings");
 
     // Default sort from Java 7-
     public List<String> alphaSort() {

@@ -12,6 +12,11 @@ package nitin.nestedClasses.innerClass;
 public class I2LocalInnerClass {
     int length = 5;
 
+    public static void main(String[] args) {
+        I2LocalInnerClass outer = new I2LocalInnerClass();
+        outer.calculate();
+    }
+
     public void calculate() {
 
         int width = 20; // Effectively final local variable, as it is not reassigned
@@ -25,10 +30,5 @@ public class I2LocalInnerClass {
         }
         Inner inner = new Inner();
         inner.area();// Calling the area() of the inner with the method of the
-    }
-
-    public static void main(String[] args) {
-        I2LocalInnerClass outer = new I2LocalInnerClass();
-        outer.calculate();
     }
 }

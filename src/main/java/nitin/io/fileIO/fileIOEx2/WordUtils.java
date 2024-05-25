@@ -6,6 +6,9 @@ import java.util.stream.Stream;
  * Some Stream-based static methods for finding words in files.
  */
 public class WordUtils {
+    private WordUtils() {
+    } // Uninstantiatable class
+
     public static void print10LetterWord(Stream<String> words) {
         String result =
                 words.filter(word -> word.length() == 10)
@@ -49,7 +52,4 @@ public class WordUtils {
     public static long numWordsContaining(String filename, String subString) {
         return (StreamAnalyzer.analyzeFile(filename, lines -> numWordsContaining(lines, subString)));
     }
-
-    private WordUtils() {
-    } // Uninstantiatable class
 }

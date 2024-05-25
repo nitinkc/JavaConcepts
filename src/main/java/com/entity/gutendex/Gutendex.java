@@ -1,4 +1,3 @@
-
 package com.entity.gutendex;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -14,10 +13,10 @@ import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "count",
-    "next",
-    "previous",
-    "results"
+        "count",
+        "next",
+        "previous",
+        "results"
 })
 @Generated("jsonschema2pojo")
 @Getter

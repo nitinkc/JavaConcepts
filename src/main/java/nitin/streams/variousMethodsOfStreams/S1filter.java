@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
  */
 public class S1filter {
     public static void main(String[] args) {
-        List<Integer> list = Arrays.asList(1,4,6,8,9,7,5,3,2);
+        List<Integer> list = Arrays.asList(1, 4, 6, 8, 9, 7, 5, 3, 2);
 
         // Filter takes in a Predicate functional interface
         List<Integer> collect = list.stream()

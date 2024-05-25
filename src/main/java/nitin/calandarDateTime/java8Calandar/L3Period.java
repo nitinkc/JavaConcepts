@@ -16,6 +16,6 @@ public class L3Period {
 
         System.out.println("Number of days");
         System.out.println(p.getYears() + " Years " + p.getMonths() + " Months " + p.getDays() + " Days");
-        System.out.println(p.toString());
+        System.out.println(p);
     }
 }

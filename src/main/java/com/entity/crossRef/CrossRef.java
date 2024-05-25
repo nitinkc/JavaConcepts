@@ -1,4 +1,3 @@
-
 package com.entity.crossRef;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -12,10 +11,10 @@ import lombok.Setter;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "status",
-    "message-type",
-    "message-version",
-    "message"
+        "status",
+        "message-type",
+        "message-version",
+        "message"
 })
 @AllArgsConstructor
 @NoArgsConstructor

@@ -21,7 +21,7 @@ public class A3CompletableFutureDataService {
         startTimer();
         CompletableFuture<List<CovidIndiaTransformed>> listCompletableFuture =
                 CompletableFuture.supplyAsync(() -> dataFetchService.fetchCovidIndiaData())//returns the completable future of type entity
-                .thenApply(covidIndiaList -> getIndiaTransformedList(covidIndiaList));//Applying function to each element of list
+                        .thenApply(covidIndiaList -> getIndiaTransformedList(covidIndiaList));//Applying function to each element of list
         stopTimer();//If join is not used, the operation continues and program reaches here, without actually download the data
 
         //Get the data out of the future

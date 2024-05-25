@@ -12,10 +12,6 @@ interface Demo {
 }
 
 public class I3AnonymousClassDemo {
-    public void data() {
-        System.out.println("Outer Class");
-    }
-
     public static void main(String[] args) {
 
         Demo demo = new Demo() {//Anonymous Class
@@ -35,5 +31,9 @@ public class I3AnonymousClassDemo {
         };
         ref.data();
         demo.show();
+    }
+
+    public void data() {
+        System.out.println("Outer Class");
     }
 }

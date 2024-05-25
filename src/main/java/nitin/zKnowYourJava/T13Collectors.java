@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class T13Collectors {
     public static void main(String[] args) {
-        var numbers = Arrays.asList(10,12,23,43,65,77,14);
+        var numbers = Arrays.asList(10, 12, 23, 43, 65, 77, 14);
 
         var min = numbers.stream().collect(Collectors.minBy(Comparator.comparing(num -> num)));
         var max = numbers.stream().collect(Collectors.maxBy(Comparator.comparing(num -> num)));
@@ -33,4 +33,5 @@ public class T13Collectors {
     }
 }
 
-record MinMax(int min, int max){ }
+record MinMax(int min, int max) {
+}

@@ -21,6 +21,9 @@ import java.util.function.DoubleUnaryOperator;
  */
 
 public class MathUtilities {
+    private MathUtilities() {
+    }  // Uninstantiatable class: static methods only
+
     public static double integrate(DoubleUnaryOperator function, double x1, double x2, int numSlices) {
         if (numSlices < 1) {
             numSlices = 1;
@@ -54,7 +57,4 @@ public class MathUtilities {
         System.out.printf("Exact answer = %s.%n", resultDescription);
         System.out.printf("                                  ~= %,.8f.%n", exactAnswer);
     }
-
-    private MathUtilities() {
-    }  // Uninstantiatable class: static methods only
 }

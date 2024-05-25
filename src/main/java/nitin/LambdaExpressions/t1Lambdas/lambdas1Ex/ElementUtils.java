@@ -6,6 +6,9 @@ package nitin.LambdaExpressions.t1Lambdas.lambdas1Ex;
  */
 
 public class ElementUtils {
+    private ElementUtils() {
+    } // Uninstantiatable class; contains only static methods.
+
     public static <T> T betterElement(T element1,
                                       T element2,
                                       TwoElementPredicate<T> tester) {
@@ -15,7 +18,4 @@ public class ElementUtils {
         }
         return (element2);
     }
-
-    private ElementUtils() {
-    } // Uninstantiatable class; contains only static methods.
 }

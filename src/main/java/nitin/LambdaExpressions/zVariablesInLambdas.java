@@ -1,5 +1,9 @@
 package nitin.LambdaExpressions;
 
+interface Gorilla {
+    String move();
+}
+
 /**
  * Created by Nitin C on 3/3/2016.
  * Lambda expression can access static variables, instance variables,
@@ -26,8 +30,4 @@ public class zVariablesInLambdas {
     void play(Gorilla g) {
         System.out.println(g.move());
     }
-}
-
-interface Gorilla {
-    String move();
 }

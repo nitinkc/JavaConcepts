@@ -18,7 +18,7 @@ public class IncrementLikesReentrantLocksTest {
         int count = 1000;
 
         IncrementLikesReentrantLocks il = new IncrementLikesReentrantLocks();
-        Set<BigDecimal> uniqueSequences = getLikes(count , il);
+        Set<BigDecimal> uniqueSequences = getLikes(count, il);
         Assert.assertEquals(count, uniqueSequences.size());
     }
 
@@ -29,13 +29,13 @@ public class IncrementLikesReentrantLocksTest {
 
         for (int i = 0; i < count; i++) {
 
-            System.out.println("Created Task: " + executor.toString());
-            Future<BigDecimal> future  = executor.submit(il::incrementLikeBigInt);
+            System.out.println("Created Task: " + executor);
+            Future<BigDecimal> future = executor.submit(il::incrementLikeBigInt);
             futures.add(future);
         }
 
         for (Future<BigDecimal> future : futures) {
-            BigDecimal result  = future.get();//Future returns the datatype of the method thats been multithreaded
+            BigDecimal result = future.get();//Future returns the datatype of the method thats been multithreaded
             System.out.println("Result from Future " + result);
             uniqueSequences.add(result);
         }

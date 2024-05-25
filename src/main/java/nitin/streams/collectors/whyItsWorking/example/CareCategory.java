@@ -1,4 +1,3 @@
-
 package nitin.streams.collectors.whyItsWorking.example;
 
 import lombok.AllArgsConstructor;
@@ -7,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+
 @Data
 @Builder
 @AllArgsConstructor

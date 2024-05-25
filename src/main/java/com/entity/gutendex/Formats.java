@@ -1,4 +1,3 @@
-
 package com.entity.gutendex;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -14,22 +13,22 @@ import javax.annotation.processing.Generated;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "text/plain; charset=us-ascii",
-    "application/x-mobipocket-ebook",
-    "application/rdf+xml",
-    "application/epub+zip",
-    "text/plain",
-    "text/html; charset=iso-8859-1",
-    "text/html",
-    "application/zip",
-    "image/jpeg",
-    "text/plain; charset=iso-8859-1",
-    "text/html; charset=us-ascii",
-    "text/plain; charset=utf-8",
-    "text/html; charset=utf-8",
-    "audio/mpeg",
-    "audio/mp4",
-    "audio/ogg"
+        "text/plain; charset=us-ascii",
+        "application/x-mobipocket-ebook",
+        "application/rdf+xml",
+        "application/epub+zip",
+        "text/plain",
+        "text/html; charset=iso-8859-1",
+        "text/html",
+        "application/zip",
+        "image/jpeg",
+        "text/plain; charset=iso-8859-1",
+        "text/html; charset=us-ascii",
+        "text/plain; charset=utf-8",
+        "text/html; charset=utf-8",
+        "audio/mpeg",
+        "audio/mp4",
+        "audio/ogg"
 })
 @Generated("jsonschema2pojo")
 @Getter

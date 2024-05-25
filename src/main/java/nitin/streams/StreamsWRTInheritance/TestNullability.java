@@ -20,28 +20,26 @@ public class TestNullability {
 
         String zonedDateTime = Optional.ofNullable(timeInNashville)
                 .map(time -> {
-                    StringBuilder sb = new StringBuilder();
-                    sb.append("Time in "+ zone+ " : ");
-                    sb.append(time.format(DateTimeFormatter.ofPattern(myDateTimePattern)));
-                    sb.append("\n");
-                    sb.append("Time in "+ india+ " : ");
-                    sb.append(ZonedDateTime.now(india).format(DateTimeFormatter.ofPattern(myDateTimePattern)));
-                    return sb.toString();
+                    String sb = "Time in " + zone + " : " +
+                            time.format(DateTimeFormatter.ofPattern(myDateTimePattern)) +
+                            "\n" +
+                            "Time in " + india + " : " +
+                            ZonedDateTime.now(india).format(DateTimeFormatter.ofPattern(myDateTimePattern));
+                    return sb;
                 })
-                .orElse(new StringBuilder().toString());
+                .orElse("");
 
         System.out.println(zonedDateTime);
     }
 
     public static void logStudent(Student student) {
 
-        StringBuilder sb = new StringBuilder();
-        sb.append("Result is ")
-                .append(Optional.of(student.getFirstName()).orElse("")).append(",")
-                .append(null != student.getLastName() ? student.getLastName()  :"").append(",")
-                .append(null != student.getAddress() ? student.getAddress()  :"").append(",")
-                .append(null != student.getDob()? student.getDob():"");
+        String sb = "Result is " +
+                Optional.of(student.getFirstName()).orElse("") + "," +
+                (null != student.getLastName() ? student.getLastName() : "") + "," +
+                (null != student.getAddress() ? student.getAddress() : "") + "," +
+                (null != student.getDob() ? student.getDob() : "");
 
-        System.out.println(sb.toString());
+        System.out.println(sb);
     }
 }

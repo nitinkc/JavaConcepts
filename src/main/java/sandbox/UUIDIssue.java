@@ -17,15 +17,15 @@ public class UUIDIssue {
 
         try {
             uuidString = UUID.fromString(numberAsString);
-        } catch (IllegalArgumentException e){
-            System.err.println(e.toString());
+        } catch (IllegalArgumentException e) {
+            System.err.println(e);
         }
         System.out.println(uuidString);
 
         try {
             uuidString = UUID.nameUUIDFromBytes(numberAsString.getBytes(StandardCharsets.UTF_8));
-        }catch (Exception e){
-            System.out.println(e.toString());
+        } catch (Exception e) {
+            System.out.println(e);
         }
         System.out.println(uuidString);
 
@@ -33,7 +33,7 @@ public class UUIDIssue {
     }
 
     private static void getUuidFromList() {
-        List<String> idList = Arrays.asList("00693", "12345", "11016", null,"00693");
+        List<String> idList = Arrays.asList("00693", "12345", "11016", null, "00693");
 
         //Removing duplicates as Map cannot have 2 identical keys
         idList = idList

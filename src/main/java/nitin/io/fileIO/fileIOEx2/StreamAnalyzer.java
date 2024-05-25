@@ -7,9 +7,7 @@ import java.util.stream.Stream;
 
 @FunctionalInterface
 public interface StreamAnalyzer<T> {
-    T analyzeStream(Stream<String> strings);
-
-    public static <T> T analyzeFile(String filename, StreamAnalyzer<T> analyzer) {
+    static <T> T analyzeFile(String filename, StreamAnalyzer<T> analyzer) {
         try (Stream<String> lines = Files.lines(Paths.get(filename))) {
             return (analyzer.analyzeStream(lines));
         } catch (IOException ioe) {
@@ -17,4 +15,6 @@ public interface StreamAnalyzer<T> {
             return (null);
         }
     }
+
+    T analyzeStream(Stream<String> strings);
 }

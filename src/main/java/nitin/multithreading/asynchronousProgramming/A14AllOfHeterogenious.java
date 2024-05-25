@@ -16,7 +16,7 @@ public class A14AllOfHeterogenious {
         InternetUtilities internetUtilities = new InternetUtilities();
 
         CompletableFuture<List<Beer>> beerCompletableFuture =
-                CompletableFuture.supplyAsync(() -> internetUtilities.getBeers(1));
+                CompletableFuture.supplyAsync(() -> InternetUtilities.getBeers(1));
         CompletableFuture<List<Vehicle>> vehicleCompletableFuture =
                 CompletableFuture.supplyAsync(() -> RestGETReadUtility.getRandomVehicles(1));
 

@@ -10,6 +10,9 @@ import java.util.stream.Stream;
 
 public class FibStream {
 
+    private FibStream() {
+    } // Uninstantiatable class
+
     /**
      * Makes an "infinite" (unbounded) stream of Fibonacci numbers
      * (1, 1, 2, 3, 5, 8, 13, 21, 34, and so forth).
@@ -44,7 +47,4 @@ public class FibStream {
     public static Long[] makeFibArray(int numFibs) {
         return (makeFibStream(numFibs).toArray(Long[]::new));
     }
-
-    private FibStream() {
-    } // Uninstantiatable class
 }

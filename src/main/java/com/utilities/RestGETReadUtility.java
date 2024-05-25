@@ -27,8 +27,8 @@ import java.util.*;
 
 public class RestGETReadUtility {
 
-    ObjectMapper mapper = new ObjectMapper();
     private static final String VEHICLE_URL = "https://random-data-api.com/api/vehicle/random_vehicle?size=";
+    ObjectMapper mapper = new ObjectMapper();
 
     public static void cardReader() {
         ObjectMapper mapper = new ObjectMapper();
@@ -36,7 +36,7 @@ public class RestGETReadUtility {
         String url = "https://random-data-api.com/api/business_credit_card/random_card?size=100";
 
         try {
-             listCard = mapper.readValue(new URL(url), List.class);
+            listCard = mapper.readValue(new URL(url), List.class);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -49,10 +49,11 @@ public class RestGETReadUtility {
 
         String url = "https://api.covid19api.com/total/country/india";
         //Getting the response code
-       // int responsecode = getConnectionResponse(url);
+        // int responsecode = getConnectionResponse(url);
 
         try {
-            covidIndiaList = mapper.readValue(new URL(url), new TypeReference<List<CovidIndia>>() {});
+            covidIndiaList = mapper.readValue(new URL(url), new TypeReference<List<CovidIndia>>() {
+            });
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -60,41 +61,43 @@ public class RestGETReadUtility {
 
     }
 
-    public static List<Vehicle> getRandomVehicles(int size){
+    public static List<Vehicle> getRandomVehicles(int size) {
         ObjectMapper mapper = new ObjectMapper();
         List<Vehicle> randomVehicleList = new ArrayList<>();
 
         try {
-            randomVehicleList = mapper.readValue(new URL(VEHICLE_URL+size), new TypeReference<List<Vehicle>>() {});
+            randomVehicleList = mapper.readValue(new URL(VEHICLE_URL + size), new TypeReference<List<Vehicle>>() {
+            });
         } catch (IOException e) {
             e.printStackTrace();
         }
         return randomVehicleList;
 
     }
+
     private static int getConnectionResponse(String urlLink) throws IOException {
 
         return 0;
     }
 
-    public static GitUser getRandomGitUsers(){
+    public static GitUser getRandomGitUsers() {
         ObjectMapper mapper = new ObjectMapper();
         GitUser randomGitUser = null;
         String url = "https://random-data-api.com/api/omniauth/github_get?size=100";//Returns a single git user
 
 
         try {
-            randomGitUser = mapper.readValue(new URL(url), GitUser.class );//TODO : NOT WORKING, find a way to map to an array of GitUSers
+            randomGitUser = mapper.readValue(new URL(url), GitUser.class);//TODO : NOT WORKING, find a way to map to an array of GitUSers
         } catch (IOException e) {
             e.printStackTrace();
         }
         return randomGitUser;
     }
 
-    public static Gutendex getGutenbergResults(String searchString){
+    public static Gutendex getGutenbergResults(String searchString) {
         ObjectMapper mapper = new ObjectMapper();
         Gutendex results = null;
-        String url = "https://gutendex.com/books/?search="+searchString;//Returns a singl;e git user
+        String url = "https://gutendex.com/books/?search=" + searchString;//Returns a singl;e git user
 
         try {
             results = mapper.readValue(new URL(url), Gutendex.class);
@@ -104,10 +107,10 @@ public class RestGETReadUtility {
         return results;
     }
 
-    public static CrossRef getCrossRef(String searchString){
+    public static CrossRef getCrossRef(String searchString) {
         ObjectMapper mapper = new ObjectMapper();
         CrossRef results = null;
-        String url = "https://api.crossref.org/works?query.author="+searchString;//Returns a singl;e git user
+        String url = "https://api.crossref.org/works?query.author=" + searchString;//Returns a singl;e git user
 
         try {
             results = mapper.readValue(new URL(url), CrossRef.class);
@@ -117,7 +120,7 @@ public class RestGETReadUtility {
         return results;
     }
 
-    public static List<OpenLibDto> getBookDetailsOpenLibrary(String searchString)  {
+    public static List<OpenLibDto> getBookDetailsOpenLibrary(String searchString) {
         //Form the Search string like : ISBN:9780980200447,ISBN:0385472579,LCCN:62019420
         //Given Comma separated search strings
         String[] isbnStr = searchString.split(",");
@@ -130,7 +133,7 @@ public class RestGETReadUtility {
 
         URL url = null;
         try {
-            url = new URL("https://openlibrary.org/api/books?bibkeys="+ searchStringBuilder.toString()+ "&format=json&jscmd=data");
+            url = new URL("https://openlibrary.org/api/books?bibkeys=" + searchStringBuilder + "&format=json&jscmd=data");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
@@ -147,7 +150,7 @@ public class RestGETReadUtility {
 
         List<OpenLibDto> openLibDtos = new ArrayList<>();
         Iterator<String> itr = resultsMap.keySet().iterator();//Reponse from the service is in the dynamic form ISBN:9780980200447: {
-        while (itr.hasNext()){
+        while (itr.hasNext()) {
             String key = itr.next();//ISBN:9780980200447 is the key
             openLibDtos.add(mapper.convertValue(resultsMap.get(key), OpenLibDto.class));
         }
@@ -170,7 +173,7 @@ public class RestGETReadUtility {
         }
     }
 
-    public static CurrencyExchange convertCurrency(){
+    public static CurrencyExchange convertCurrency() {
         String url_string = "https://api.exchangerate.host/convert?from=USD&to=INR&base=USD&historical=true&format=json";
         ObjectMapper mapper = new ObjectMapper();
 

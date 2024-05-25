@@ -40,7 +40,7 @@ public class SampleIntraStatLine {
                 .build();
 
         IntraStatsLine intraStatsLine = IntraStatsLine.builder()
-                .eventComments(Arrays.asList(eventComments,eventComments2))
+                .eventComments(Arrays.asList(eventComments, eventComments2))
                 .varianceCount("9")
                 .build();
         return (intraStatsLine);

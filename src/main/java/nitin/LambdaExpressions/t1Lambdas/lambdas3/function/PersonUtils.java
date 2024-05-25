@@ -6,6 +6,9 @@ public class PersonUtils {
     private static final String[] possibleLastNames =
             {"Anderson", "Bradley", "Carson", "Donaldson", "Evans", "Fisher"};
 
+    private PersonUtils() {
+    }
+
     public static String randomFirstName() {
         return (RandomUtils.randomElement(possibleFirstNames));
     }
@@ -14,8 +17,5 @@ public class PersonUtils {
         return (RandomUtils.randomElement(possibleLastNames));
     }
 
-    private PersonUtils() {
-    }
-
-    ; // Uninstantiatable class
+    // Uninstantiatable class
 }

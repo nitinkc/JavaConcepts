@@ -14,8 +14,8 @@ import java.util.Map;
 
 @Mapper
 public interface PersonMapper {
-    @Mapping(target="employeeFirstName", source="employee.name")
-    @Mapping(target="employeeLastName", source="employee.name")
+    @Mapping(target = "employeeFirstName", source = "employee.name")
+    @Mapping(target = "employeeLastName", source = "employee.name")
     @Mapping(target = "birthDate", source = "employee.dob", dateFormat = "dd-MM-yyyy HH:mm:ss")
     @Mapping(target = "phones", source = "employee.phones", qualifiedByName = "processPhoneMap")//Map to List
     @Mapping(target = "beerBrand", source = "beer.brand")
@@ -35,8 +35,8 @@ public interface PersonMapper {
     @Named("processPhoneMap")
     default List<String> processPhoneMap(Map<String, String> phoneMap) {
         List<String> list = new ArrayList<>();
-        for (Map.Entry<String, String> entry : phoneMap.entrySet()){
-            String key   = entry.getKey();
+        for (Map.Entry<String, String> entry : phoneMap.entrySet()) {
+            String key = entry.getKey();
             String value = entry.getValue();
             list.add(key + " -> " + value);
         }

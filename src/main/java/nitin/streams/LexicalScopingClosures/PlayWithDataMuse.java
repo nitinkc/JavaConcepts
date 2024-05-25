@@ -15,7 +15,7 @@ import static java.util.stream.Collectors.*;
 public class PlayWithDataMuse {
     public static void main(String[] args) {
         InternetUtilities internetUtilities = new InternetUtilities();
-        List<String> words = internetUtilities.getWords(new String[]{"loathe", "1000"});
+        List<String> words = InternetUtilities.getWords(new String[]{"loathe", "1000"});
 
         System.out.println("Total words received :: " + words.stream().count());
 

@@ -20,10 +20,10 @@ public class S2TransientSerializable {
                 .build();
 
         //Testing for the Final
-        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File("src/main/java/nitin/serialization/serialObjectTransient.txt")));) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File("src/main/java/nitin/serialization/serialObjectTransient.txt")))) {
             oos.writeObject(testSerial);
             System.out.println(testSerial);
-        } catch (FileNotFoundException e)  {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
@@ -31,7 +31,7 @@ public class S2TransientSerializable {
 
 
         //Deserialization
-        try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File("src/main/java/nitin/serialization/serialObjectTransient.txt")))) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File("src/main/java/nitin/serialization/serialObjectTransient.txt")))) {
             TestSerial c = (TestSerial) ois.readObject();
             ois.close();
             System.out.println("*********************** After Deserialization ****************************");

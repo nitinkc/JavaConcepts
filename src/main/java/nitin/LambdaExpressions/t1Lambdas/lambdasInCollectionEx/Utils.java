@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Utils {
-    private static Map<Integer, Integer> primeCounts = new HashMap<>();
+    private static final Map<Integer, Integer> primeCounts = new HashMap<>();
 
     public static List<Double> randomNumberList(int size) {
         List<Double> nums = new ArrayList<>(size);

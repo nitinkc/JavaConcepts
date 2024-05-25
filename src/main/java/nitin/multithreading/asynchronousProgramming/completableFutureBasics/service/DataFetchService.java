@@ -14,33 +14,33 @@ import static com.utilities.MultiThreadUtility.logMessage;
 
 public class DataFetchService {
 
-    public List<CovidIndia> fetchCovidIndiaData(){
+    public List<CovidIndia> fetchCovidIndiaData() {
         return RestGETReadUtility.covidReader();
     }
 
-    public List<Vehicle> fetchVehicles(int size){
+    public List<Vehicle> fetchVehicles(int size) {
         return RestGETReadUtility.getRandomVehicles(size);
     }
 
-    public String firstNameService(int delayInMillisec){
+    public String firstNameService(int delayInMillisec) {
         delay(delayInMillisec);//simulating task completion latency
         logMessage("From firstNameService");
         return "john";
     }
 
-    public String lastNameService(int delayInMillisec){
+    public String lastNameService(int delayInMillisec) {
         delay(delayInMillisec);
         logMessage("From lastNameService");
         return "doe";
     }
 
-    public String greetingsService(int delayInMillisec){
+    public String greetingsService(int delayInMillisec) {
         delay(delayInMillisec);
         logMessage("From Hello!!");
         return "Hello!";
     }
 
-    public CompletableFuture<VehicleTransformed> findVehicleWithGreatMileage(List<VehicleTransformed> vehicleList){
+    public CompletableFuture<VehicleTransformed> findVehicleWithGreatMileage(List<VehicleTransformed> vehicleList) {
         logMessage("From composeVehicleData");
         //Returning the vehicle with maximum mileage
         return CompletableFuture.supplyAsync(() -> vehicleList.stream()
@@ -48,10 +48,10 @@ public class DataFetchService {
                 .findFirst().get());
     }
 
-    public CompletableFuture<String> futureName(String name){
+    public CompletableFuture<String> futureName(String name) {
         return CompletableFuture.supplyAsync(() -> {
             delay(1000);
-            return ("Hello " + name );
+            return ("Hello " + name);
         });
     }
 }

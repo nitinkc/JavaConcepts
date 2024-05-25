@@ -30,28 +30,29 @@
         "zip": "37027"
       }
     ]
-  },{
-  "name": "Jane Doe",
-  "dateOfBirth": 1676878272857,
-  "phones": {
-    "Cell": "987-654-3210",
-    "Home": "963 852 7410"
   },
-  "addresses": [
-    {
-      "addressLine1": null,
-      "addressLine2": null,
-      "city": null,
-      "state": null,
-      "zip": null
+  {
+    "name": "Jane Doe",
+    "dateOfBirth": 1676878272857,
+    "phones": {
+      "Cell": "987-654-3210",
+      "Home": "963 852 7410"
     },
-    {
-      "addressLine1": "209 Club Pkwy",
-      "addressLine2": null,
-      "city": "Nashville",
-      "state": "TN",
-      "zip": "37221"
-    }
-  ]
-}
+    "addresses": [
+      {
+        "addressLine1": null,
+        "addressLine2": null,
+        "city": null,
+        "state": null,
+        "zip": null
+      },
+      {
+        "addressLine1": "209 Club Pkwy",
+        "addressLine2": null,
+        "city": "Nashville",
+        "state": "TN",
+        "zip": "37221"
+      }
+    ]
+  }
 ]

@@ -7,13 +7,21 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class SortGolfers {
-    private List<Golfer> golfers = Arrays.asList(
+    private final List<Golfer> golfers = Arrays.asList(
             new Golfer("Jack", "Nicklaus", 68),
             new Golfer("Tiger", "Woods", 70),
             new Golfer("Tom", "Watson", 70),
             new Golfer("Ty", "Webb", 68),
             new Golfer("Bubba", "Watson", 70)
     );
+
+    public static void main(String[] args) {
+        SortGolfers sg = new SortGolfers();
+//        sg.defaultSort();
+//        sg.sortByScoreThenLast();
+//        sg.sortByScoreThenLastThenFirst();
+        sg.partitionByScore();
+    }
 
     // default sort is by score
     public void defaultSort() {
@@ -48,13 +56,5 @@ public class SortGolfers {
             System.out.println(k);
             v.forEach(System.out::println);
         });
-    }
-
-    public static void main(String[] args) {
-        SortGolfers sg = new SortGolfers();
-//        sg.defaultSort();
-//        sg.sortByScoreThenLast();
-//        sg.sortByScoreThenLastThenFirst();
-        sg.partitionByScore();
     }
 }

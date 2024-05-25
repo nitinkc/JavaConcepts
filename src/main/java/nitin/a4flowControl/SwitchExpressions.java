@@ -23,7 +23,7 @@ public class SwitchExpressions {
 
         //System.out.println(getString(day));
 
-        for(String lab : ANEMIA_LABS){
+        for (String lab : ANEMIA_LABS) {
             System.out.println(getString2(lab));
         }
     }

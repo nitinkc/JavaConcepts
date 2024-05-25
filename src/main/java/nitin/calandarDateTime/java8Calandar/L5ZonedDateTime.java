@@ -18,7 +18,7 @@ public class L5ZonedDateTime {
         ZonedDateTime timeInTheCityWhereCodeIsExecuted = ZonedDateTime.now(zone);
         ZonedDateTime timeInIndia = ZonedDateTime.now(india);
 
-        System.out.print("Time in "+ zone+ " : ");
+        System.out.print("Time in " + zone + " : ");
         System.out.println(timeInTheCityWhereCodeIsExecuted.format(DateTimeFormatter.ofPattern(myDateTimePattern)));
 
         System.out.print("Time in India : ");

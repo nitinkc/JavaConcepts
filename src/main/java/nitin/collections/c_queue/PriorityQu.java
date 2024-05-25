@@ -12,12 +12,6 @@ import java.util.Queue;
  */
 
 public class PriorityQu {
-    static class PQsort implements Comparator<Integer> {
-        public int compare(Integer one, Integer two) {
-            return one - two;
-        }
-    }
-
     public static void main(String[] args) {
         int[] q = {5, 3, 8, 6, 9, 1, 7};
         Queue<Integer> pq = new PriorityQueue<>(Comparator.reverseOrder());
@@ -48,5 +42,11 @@ public class PriorityQu {
 
         for (int k : q) // review queue
             System.out.print(pq2.poll() + " ");
+    }
+
+    static class PQsort implements Comparator<Integer> {
+        public int compare(Integer one, Integer two) {
+            return one - two;
+        }
     }
 }

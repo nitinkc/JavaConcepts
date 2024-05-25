@@ -15,9 +15,9 @@ public class Test {
 
 
     public static void main(String[] args) {
-        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
-        for (int i = 1; i < list.size(); i = i +2) {
-            Collections.swap(list, i-1,i);
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        for (int i = 1; i < list.size(); i = i + 2) {
+            Collections.swap(list, i - 1, i);
         }
         System.out.println(list);
 
@@ -49,7 +49,7 @@ public class Test {
 @AllArgsConstructor
 @Data
 @ToString
-class Order{
+class Order {
     int id;
     String orderType;
     String orderableItemDisplay;

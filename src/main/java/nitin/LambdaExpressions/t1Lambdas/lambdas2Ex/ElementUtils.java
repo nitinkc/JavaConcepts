@@ -12,6 +12,9 @@ package nitin.LambdaExpressions.t1Lambdas.lambdas2Ex;
  */
 
 public class ElementUtils {
+    private ElementUtils() {
+    } // Uninstantiatable class; contains only static methods.
+
     public static <T> T betterElement(T element1, T element2,
                                       TwoElementPredicate<T> tester) {
         if (tester.isBetter(element1, element2)) {
@@ -19,7 +22,4 @@ public class ElementUtils {
         }
         return (element2);
     }
-
-    private ElementUtils() {
-    } // Uninstantiatable class; contains only static methods.
 }

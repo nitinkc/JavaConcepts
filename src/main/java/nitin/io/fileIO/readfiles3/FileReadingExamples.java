@@ -9,6 +9,9 @@ import java.util.List;
 
 public class FileReadingExamples {
 
+    private FileReadingExamples() {
+    } // Uninstantiatable class: static methods only
+
     /**
      * The enable1 word list is a public-domain file containing over
      * 175,000 supposed words accepted by many US Scrabble clubs.
@@ -118,7 +121,4 @@ public class FileReadingExamples {
                 word -> !word.contains("qu"));
         System.out.printf("All words in file %s with q not followed by u: %s.%n", filename, matches2);
     }
-
-    private FileReadingExamples() {
-    } // Uninstantiatable class: static methods only
 }

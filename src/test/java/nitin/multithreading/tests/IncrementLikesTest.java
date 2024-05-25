@@ -26,12 +26,12 @@ public class IncrementLikesTest {
         List<Future<Integer>> futures = new ArrayList<>();
 
         for (int i = 0; i < count; i++) {
-            System.out.println("Created Task: " + executor.toString());
+            System.out.println("Created Task: " + executor);
             futures.add(executor.submit(il::incrementLike));
         }
 
         for (Future<Integer> future : futures) {
-            Integer result  = future.get();//Future returns the datatype of the method thats been multithreaded
+            Integer result = future.get();//Future returns the datatype of the method thats been multithreaded
             System.out.println("Result from Future " + result);
             uniqueSequences.add(result);
         }

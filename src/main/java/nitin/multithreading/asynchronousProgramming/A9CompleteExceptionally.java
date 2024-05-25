@@ -9,9 +9,9 @@ public class A9CompleteExceptionally {
         CompletableFuture<Integer> future = new CompletableFuture<>();
 
         future
-                .thenApply(data -> data+1)
+                .thenApply(data -> data + 1)
                 .exceptionally(throwable -> handleExcptionally(throwable))
-                .thenApply(data -> data*2)
+                .thenApply(data -> data * 2)
                 .thenAccept(data -> System.out.println("Result from Future " + data));
 
         System.out.println("Pipeline is built....");

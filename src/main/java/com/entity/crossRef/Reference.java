@@ -1,4 +1,3 @@
-
 package com.entity.crossRef;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -12,8 +11,8 @@ import lombok.Setter;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "key",
-    "unstructured"
+        "key",
+        "unstructured"
 })
 @AllArgsConstructor
 @NoArgsConstructor

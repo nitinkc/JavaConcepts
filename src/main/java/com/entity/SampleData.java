@@ -63,7 +63,7 @@ public class SampleData {
                     new Address("121 Crazy Street", null, "Seattle", "WA", "USA", 84258),
                     Long.valueOf(1100112233), StudentOf.ENGINEERING)
     );
-    private static List<EmployeeSimple> SIMPLE_EMPLOYEES = Arrays.asList(
+    private static final List<EmployeeSimple> SIMPLE_EMPLOYEES = Arrays.asList(
             new EmployeeSimple("John", 20, Double.valueOf("65000"), 'C', 5),
             new EmployeeSimple("Wayne", 20, Double.valueOf("65430"), 'C', 4),
             new EmployeeSimple("Dow", 30, Double.valueOf("74445"), 'B', 6),

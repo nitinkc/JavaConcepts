@@ -21,7 +21,7 @@ public class A7ThreadOfExecution {
         //Takes time based on the slowest method. total time = Max(method1, method2, method3) + tiny extra processing time
         asyncRun(dataFetchService);
 
-       // test();
+        // test();
         System.out.println("m: " + Thread.currentThread());
 
     }
@@ -46,38 +46,38 @@ public class A7ThreadOfExecution {
         String lastName = dataFetchService.lastNameService(1000);
         stopTimer();
 
-        System.out.println(hello  + " "+  firstName + " "+ lastName);
+        System.out.println(hello + " " + firstName + " " + lastName);
         resetTimer();
     }
 
-    private static void asyncRun(DataFetchService dataFetchService){
+    private static void asyncRun(DataFetchService dataFetchService) {
         startTimer();
         // May run in the main thread if all the executions are done,
         // or it may run in a different thread
-        CompletableFuture<String> helloFuture = CompletableFuture.supplyAsync(()-> dataFetchService.greetingsService(1000));
+        CompletableFuture<String> helloFuture = CompletableFuture.supplyAsync(() -> dataFetchService.greetingsService(1000));
         //delay(2000);
-        CompletableFuture<String> firstNameFuture = CompletableFuture.supplyAsync(()-> dataFetchService.firstNameService(1000));
-        CompletableFuture<String> lastNameFuture = CompletableFuture.supplyAsync(()-> dataFetchService.lastNameService(1000));
+        CompletableFuture<String> firstNameFuture = CompletableFuture.supplyAsync(() -> dataFetchService.firstNameService(1000));
+        CompletableFuture<String> lastNameFuture = CompletableFuture.supplyAsync(() -> dataFetchService.lastNameService(1000));
         stopTimer();//Shows the time of pipeline Creation - NOT EXECUTION
 
         resetTimer();
 
         startTimer();//Actual call to the pipeline
-        System.out.println(helloFuture.join()  + " "+  firstNameFuture.join() + " "+ lastNameFuture.join());//Prefer join instead of GET
+        System.out.println(helloFuture.join() + " " + firstNameFuture.join() + " " + lastNameFuture.join());//Prefer join instead of GET
         stopTimer();
     }
 
     private static void getPrintln(Double data) {
-        System.out.println("p: "  + Thread.currentThread() + " data : "+data);
+        System.out.println("p: " + Thread.currentThread() + " data : " + data);
     }
 
-    public static Double compute(){
+    public static Double compute() {
         System.out.println("c: " + Thread.currentThread());
         delay(1000);
         return 3.14;
     }
 
-    public static CompletableFuture<Double> getData(){
+    public static CompletableFuture<Double> getData() {
         System.out.println("d: " + Thread.currentThread());
         return CompletableFuture.supplyAsync(() -> compute());
     }

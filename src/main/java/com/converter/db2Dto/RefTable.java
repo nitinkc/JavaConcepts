@@ -16,7 +16,7 @@ import java.io.Serial;
 @Table(name = RefTable.NAME)
 public class RefTable extends ReferenceDataAuditFields {
 
-    public static final String NAME="REF_TABLE";
+    public static final String NAME = "REF_TABLE";
     @Serial
     private static final long serialVersionUID = -6116147807948969283L;
 

@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Fibonacci {
     private static int i;
-    private static Map<Integer, Integer> fibMap = new HashMap<>();
+    private static final Map<Integer, Integer> fibMap = new HashMap<>();
 
     public static void main(String[] args) {
         profileFib();

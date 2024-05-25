@@ -1,4 +1,3 @@
-
 package com.entity.crossRef;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -15,10 +14,10 @@ import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "given",
-    "family",
-    "sequence",
-    "affiliation"
+        "given",
+        "family",
+        "sequence",
+        "affiliation"
 })
 @Generated("jsonschema2pojo")
 @JsonIgnoreProperties(ignoreUnknown = true)

@@ -77,7 +77,7 @@ public class EmployeeSorting {
 
     private static void reverseSortUsingAgeLambda(List<EmployeeSimple> list) {
         Comparator<EmployeeSimple> salaryComparator = (e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary());
-        Comparator<EmployeeSimple> salaryComparatorMethodRef =  EmployeeSimple::salaryDifference;
+        Comparator<EmployeeSimple> salaryComparatorMethodRef = EmployeeSimple::salaryDifference;
         list.stream().sorted(EmployeeSimple::salaryDifference)
                 .forEach(System.out::println);
     }
@@ -101,15 +101,14 @@ public class EmployeeSorting {
                 .forEach(System.out::println);
     }
 
-    private static List<String> test(List<EmployeeSimple> list){
+    private static List<String> test(List<EmployeeSimple> list) {
         List<String> empList = list.stream()
-                .sorted(Comparator.comparing(EmployeeSimple::getSalary,Comparator.nullsLast(Comparator.naturalOrder())))
+                .sorted(Comparator.comparing(EmployeeSimple::getSalary, Comparator.nullsLast(Comparator.naturalOrder())))
                 .map(employee -> {
-                    StringBuilder sb = new StringBuilder();
-                    sb.append(employee.getName()).append(" has a salary of ");
-                    sb.append(employee.getSalary()).append(" at the age of ");
-                    sb.append(employee.getAge());
-                    return sb.toString();
+                    String sb = employee.getName() + " has a salary of " +
+                            employee.getSalary() + " at the age of " +
+                            employee.getAge();
+                    return sb;
                 })
                 .collect(Collectors.toList());
 

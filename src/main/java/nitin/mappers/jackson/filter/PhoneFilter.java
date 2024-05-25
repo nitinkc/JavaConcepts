@@ -3,7 +3,7 @@ package nitin.mappers.jackson.filter;
 import java.util.regex.Pattern;
 
 public class PhoneFilter {
-    private static Pattern phonePattern = Pattern.compile("\\d{3}-\\d{3}-\\d{4}");
+    private static final Pattern phonePattern = Pattern.compile("\\d{3}-\\d{3}-\\d{4}");
 
     @Override
     public boolean equals(Object obj) {

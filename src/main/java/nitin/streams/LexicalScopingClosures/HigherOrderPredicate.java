@@ -7,14 +7,14 @@ import java.util.function.Predicate;
 
 public class HigherOrderPredicate {
 
+    public static final List<String> namesList = Arrays.asList("Adrian", "Briana", "Chetan", "Neil", "Nitin", "Mukesh");
+
     // Method returning a function. Filter accepts a Predicate & this method is
     // made to return a predicate, to be used within filter
     /* LEXICAL SCOPING : vriable letter has lexical scoping*/
     public static Predicate<String> checkIfStartsWith(final String letter) {
         return name -> name.startsWith(letter);
     }
-
-    public static final List<String> namesList = Arrays.asList("Adrian", "Briana", "Chetan", "Neil", "Nitin", "Mukesh");
 
     public static void main(final String[] args) {
 

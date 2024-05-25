@@ -1,4 +1,3 @@
-
 package com.entity.crossRef;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -13,9 +12,9 @@ import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "date-parts",
-    "date-time",
-    "timestamp"
+        "date-parts",
+        "date-time",
+        "timestamp"
 })
 @AllArgsConstructor
 @NoArgsConstructor

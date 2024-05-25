@@ -10,6 +10,9 @@ package nitin.LambdaExpressions.t1Lambdas.lambdas1.integrable;
  * the builtin DoubleUnaryOperator interface instead.
  */
 public class MathUtilities {
+    private MathUtilities() {
+    }  // Class cannot be instantiated
+
     public static double integrate(Integrable function, double x1, double x2, int numSlices) {
         if (numSlices < 1) {
             numSlices = 1;
@@ -43,7 +46,4 @@ public class MathUtilities {
         System.out.printf("Exact answer = %s.%n", resultDescription);
         System.out.printf("                                  ~= %,.8f.%n", exactAnswer);
     }
-
-    private MathUtilities() {
-    }  // Class cannot be instantiated
 }

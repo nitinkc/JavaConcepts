@@ -36,7 +36,7 @@ public class R4FluxCreation {
 
         System.out.println("------ From Array ------");
         //Flux from Arrays
-        String title[] = {ReactorUtils.faker().book().title(),
+        String[] title = {ReactorUtils.faker().book().title(),
                 ReactorUtils.faker().book().title(),
                 ReactorUtils.faker().book().title()};
         Flux<String> fromArray = Flux.fromArray(title);

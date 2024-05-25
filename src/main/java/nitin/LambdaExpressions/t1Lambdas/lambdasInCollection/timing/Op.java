@@ -14,8 +14,6 @@ package nitin.LambdaExpressions.t1Lambdas.lambdasInCollection.timing;
 
 @FunctionalInterface
 public interface Op {
-    void runOp();
-
     static double timeOp(Op operation) {
         long startTime = System.nanoTime();
         operation.runOp();
@@ -24,6 +22,8 @@ public interface Op {
         double elapsedSeconds = (endTime - startTime) / oneBillion;
         return elapsedSeconds;
     }
+
+    void runOp();
 
     default Op combinedOp(Op secondOp) {
         return (() -> {

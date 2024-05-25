@@ -20,11 +20,10 @@ public class R2MultiSubscribe {
         String fakeName = Faker.instance().funnyName().name();
         Mono<String> stringMono = Mono
                 .just(fakeName)
-                .map(fName -> fName + " : " + fName.length()/0)
-                ;
+                .map(fName -> fName + " : " + fName.length() / 0);
 
         //Subscribe with single parameter
-        stringMono.subscribe(item -> System.out.println("Received from Publisher :: "+ item));
+        stringMono.subscribe(item -> System.out.println("Received from Publisher :: " + item));
 
         //
         stringMono.subscribe(

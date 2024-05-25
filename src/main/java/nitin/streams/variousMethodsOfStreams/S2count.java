@@ -40,8 +40,8 @@ public class S2count {
         //Creating a Stream from list
         Stream<Integer> fromList = intList.stream();
         System.out.println(fromList
-                        .filter(num -> num %2 == 0)
-                        .count()//The stream ends with the reduction operation
+                .filter(num -> num % 2 == 0)
+                .count()//The stream ends with the reduction operation
         );
 
 

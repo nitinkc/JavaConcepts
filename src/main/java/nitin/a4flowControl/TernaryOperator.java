@@ -6,7 +6,7 @@ package nitin.a4flowControl;
 public class TernaryOperator {
     public static void main(String[] args) {
 
-        String x = true ? "Nitin" : "Kirti";
+        String x = "Nitin";
         System.out.println(x);
     }
 }

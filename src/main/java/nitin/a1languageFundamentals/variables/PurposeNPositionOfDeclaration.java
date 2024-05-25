@@ -24,15 +24,13 @@ package nitin.a1languageFundamentals.variables;
  * # Only applicable modifier is FINAL. private, public, protected, static Not allowed
  */
 public class PurposeNPositionOfDeclaration {
+    /* Static Variables */
+    static int s1 = 10;
+    static int s2;
     /* Instance Variables */
     String s;
     int x;
     boolean bool;
-
-    /* Static Variables */
-    static int s1 = 10;
-    static int s2;
-
 
     public static void main(String[] args) {
 

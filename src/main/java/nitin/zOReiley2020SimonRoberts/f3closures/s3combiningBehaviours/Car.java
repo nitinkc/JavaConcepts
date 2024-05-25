@@ -32,37 +32,6 @@ class Car {
         return self;
     }
 
-    public int getGasLevel() {
-        return gasLevel;
-    }
-
-    public Car addGas(int g) {
-        return new Car(gasLevel + g, color, passengers, trunkContents);
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public List<String> getPassengers() {
-        return passengers;
-    }
-
-    public List<String> getTrunkContents() {
-        return trunkContents;
-    }
-
-    //This could return null; DELIBERATELY WRITTEN FOR DEMO
-    public List<String> getTrunkContentsOpt() {
-        return (trunkContents);
-    }
-
-    @Override
-    public String toString() {
-        return "Car{" + "gasLevel=" + gasLevel + ", color=" + color + ", passengers=" + passengers
-                + (trunkContents != null ? ", trunkContents=" + trunkContents : " no trunk") + '}';
-    }
-
     /*********************************************************************************************************************
      * *******************************************************************************************************************
      * *******************************************************************************************************************
@@ -93,5 +62,36 @@ class Car {
 
     public static <E> Criteria<E> negate(Criteria<E> crit) {
         return x -> !crit.test(x);
+    }
+
+    public int getGasLevel() {
+        return gasLevel;
+    }
+
+    public Car addGas(int g) {
+        return new Car(gasLevel + g, color, passengers, trunkContents);
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public List<String> getPassengers() {
+        return passengers;
+    }
+
+    public List<String> getTrunkContents() {
+        return trunkContents;
+    }
+
+    //This could return null; DELIBERATELY WRITTEN FOR DEMO
+    public List<String> getTrunkContentsOpt() {
+        return (trunkContents);
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" + "gasLevel=" + gasLevel + ", color=" + color + ", passengers=" + passengers
+                + (trunkContents != null ? ", trunkContents=" + trunkContents : " no trunk") + '}';
     }
 }

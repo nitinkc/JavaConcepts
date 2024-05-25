@@ -6,8 +6,8 @@ import java.util.stream.Collectors;
 public class T9toList {
     public static void main(String[] args) {
         //Which is better : toList or .collect(Collectors.toList())
-        var result = List.of(1,2,3).stream()
-                .map(num -> num*2)
+        var result = List.of(1, 2, 3).stream()
+                .map(num -> num * 2)
                 //.toList();
                 //.collect(Collectors.toList());//Mutable
                 .collect(Collectors.toUnmodifiableList());//Immutable

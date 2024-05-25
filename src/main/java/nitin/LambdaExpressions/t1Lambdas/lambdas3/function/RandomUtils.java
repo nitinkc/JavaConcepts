@@ -12,7 +12,7 @@ import java.util.Random;
  * and Java 8 programming (for those new to Java)</a>.
  */
 public class RandomUtils {
-    private static Random r = new Random();
+    private static final Random r = new Random();
 
     /**
      * Return a random int from 0 to range-1. So, randomInt(4)

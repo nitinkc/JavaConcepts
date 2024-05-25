@@ -10,9 +10,9 @@ public class A10ASucceedOnTimeOut {
         CompletableFuture<Integer> future = new CompletableFuture<>();
 
         future
-                .thenApply(data -> data+3)
+                .thenApply(data -> data + 3)
                 .exceptionally(throwable -> handleExcptionally(throwable))
-                .thenApply(data -> data*2)
+                .thenApply(data -> data * 2)
                 .thenAccept(data -> System.out.println("Result from Future " + data));
 
         System.out.println("Pipeline is built....");

@@ -14,7 +14,7 @@ public class E3FinallyMagic {
         } catch (ArithmeticException e) {
             System.out.println(e);
             e.printStackTrace();//behaves like coming from a separate thread
-            return;// Finally happens even after the return
+            // Finally happens even after the return
         } finally {
             System.out.println("It executes even after return from catch");
         }

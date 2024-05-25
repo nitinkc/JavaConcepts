@@ -32,7 +32,7 @@ public class ObjectExample {
      */
     public static void testGenerics() {
         GenericContainer<String> stringContainer = new GenericContainer<String>();
-        stringContainer.setObj(new String("Test"));
+        stringContainer.setObj("Test");
         //stringContainer.setObj(3); // will not compile...type error
         System.out.println("Value of stringContainer :" + stringContainer.getObj());
         GenericContainer<Integer> intContainer = new GenericContainer<Integer>();

@@ -21,11 +21,23 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
 @ExtendWith(MockitoExtension.class)
 public class JacksonMapperTypesTest {
 
     @Mock
     private ObjectMapper objectMapper;
+
+    private static RandomVehicle getSingleJsonFromFile() throws IOException {
+        URL resource = new URL("file:src/test/resources/json/single_random_vehicle.json");
+        ObjectMapper mapper = new ObjectMapper();
+
+        RandomVehicle vehicle = mapper.readValue(resource, RandomVehicle.class);
+        String convertedJson = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(vehicle);
+
+        System.out.println(convertedJson);
+        return vehicle;
+    }
 
     @Test
     void getFewRandomVehicles() throws JsonProcessingException {
@@ -62,7 +74,7 @@ public class JacksonMapperTypesTest {
 
         List<RandomVehicle> randomVehicles = List.of(randomVehicle);
         //Mockito.when(objectMapper.readValue(Mockito.anyString(), Mockito.eq(RandomVehicle.class))).thenReturn(randomVehicles);
-        assertTrue(JacksonMapperTypes.getFewRandomVehicles(1).size() == 1);
+        assertEquals(1, JacksonMapperTypes.getFewRandomVehicles(1).size());
         // Mockito.verify(objectMapper, Mockito.times(1)).readValue(Mockito.anyString(), Mockito.eq(RandomVehicle.class));
     }
 
@@ -128,24 +140,13 @@ public class JacksonMapperTypesTest {
         RandomVehicle vehicle = getSingleJsonFromFile();
         assertNotNull(vehicle);
         //assertThat(vehicle.getColor(), null);//containsString("Red"));
-        assertEquals(vehicle.getCarOptions().size(),11);
-      // assertNull(vehicle.getColor());
+        assertEquals(vehicle.getCarOptions().size(), 11);
+        // assertNull(vehicle.getColor());
     }
 
     @Test
     void test_json_single_file_nulls() throws IOException {
         RandomVehicle vehicle = getSingleJsonFromFile();
         assertNotNull(vehicle);
-    }
-
-    private static RandomVehicle getSingleJsonFromFile() throws IOException {
-        URL resource = new URL("file:src/test/resources/json/single_random_vehicle.json");
-        ObjectMapper mapper = new ObjectMapper();
-
-        RandomVehicle vehicle = mapper.readValue(resource, RandomVehicle.class);
-        String convertedJson = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(vehicle);
-
-        System.out.println(convertedJson);
-        return vehicle;
     }
 }

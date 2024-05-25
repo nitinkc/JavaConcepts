@@ -35,8 +35,8 @@ public class T4forEach {
         List<String> result = new ArrayList<>();//Shared Mutability
 
         words.parallelStream()//.stream
-            .map(String::toUpperCase)
-            .forEach(name -> result.add(name));//Mutation is OK and sharing is good.
+                .map(String::toUpperCase)
+                .forEach(name -> result.add(name));//Mutation is OK and sharing is good.
         //Shared Mutability is BAD
 
         System.out.println("initial size = " + result.size());

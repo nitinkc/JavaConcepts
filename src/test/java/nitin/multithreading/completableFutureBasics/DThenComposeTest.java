@@ -23,7 +23,7 @@ public class DThenComposeTest {
 
         PerformanceUtility.startTimer();
         //when
-        CompletableFuture<String> test = cf.getGreetings_compose();//Get name from one service and pass the name into another
+        CompletableFuture<String> test = A12ThenCompose.getGreetings_compose();//Get name from one service and pass the name into another
 
         //then
         test.thenAccept(result -> {
@@ -37,7 +37,7 @@ public class DThenComposeTest {
 
         PerformanceUtility.startTimer();
         //when
-        CompletableFuture<VehicleTransformed> test = cf.getHeighestMileageCar();//Get name from one service and pass the name into another
+        CompletableFuture<VehicleTransformed> test = A12ThenCompose.getHeighestMileageCar();//Get name from one service and pass the name into another
 
         //then
         test.thenAccept(result -> {

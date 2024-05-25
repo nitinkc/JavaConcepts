@@ -22,7 +22,7 @@ public class S9flatMap2 {
         List<Integer> l = list.stream()
                 .flatMap(x -> {
                     if (x % 2 == 0)
-                        return Stream.of(x*x*x);
+                        return Stream.of(x * x * x);
                     else
                         return Stream.of(x, x * x);
                 }).collect(Collectors.toList());

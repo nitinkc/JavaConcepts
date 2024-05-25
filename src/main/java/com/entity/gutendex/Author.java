@@ -1,4 +1,3 @@
-
 package com.entity.gutendex;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -13,9 +12,9 @@ import javax.annotation.processing.Generated;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "name",
-    "birth_year",
-    "death_year"
+        "name",
+        "birth_year",
+        "death_year"
 })
 @Generated("jsonschema2pojo")
 @Getter

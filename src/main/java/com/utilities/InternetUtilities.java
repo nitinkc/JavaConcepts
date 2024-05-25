@@ -64,7 +64,8 @@ public class InternetUtilities {
         List<Beer> beerList = new ArrayList<>();
 
         try {
-            beerList = mapper.readValue(new URL(RANDOM_BEERS_URL+size), new TypeReference<List<Beer>>() {});
+            beerList = mapper.readValue(new URL(RANDOM_BEERS_URL + size), new TypeReference<List<Beer>>() {
+            });
         } catch (IOException e) {
             e.printStackTrace();
         }

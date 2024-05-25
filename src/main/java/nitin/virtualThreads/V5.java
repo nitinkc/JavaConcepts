@@ -19,13 +19,14 @@ public class V5 {
 
         for (int i = 0; i < MAX_THREADS; i++) {
             var index = i;
-            executorService.submit(() -> fetchFile(index,FILE_PATH));
+            executorService.submit(() -> fetchFile(index, FILE_PATH));
         }
 
         executorService.shutdown();
         executorService.awaitTermination(10, TimeUnit.SECONDS);
     }
-    public static void fetchFile(int index, String path){
+
+    public static void fetchFile(int index, String path) {
         try {
             System.out.println(index + " Before : " + Thread.currentThread());
             MultiThreadUtility.delay(5000);

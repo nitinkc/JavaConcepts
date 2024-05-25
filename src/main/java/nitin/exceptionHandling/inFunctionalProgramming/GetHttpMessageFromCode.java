@@ -12,7 +12,7 @@ public class GetHttpMessageFromCode {
     private static final String BASE_URL = "https://httpstat.us/";
 
     public static void main(String[] args) throws IOException {
-        List<Integer> codeList = Arrays.asList(301, 299,410, 505, 200, 201, 300);//205 exception
+        List<Integer> codeList = Arrays.asList(301, 299, 410, 505, 200, 201, 300);//205 exception
         //Imperative style
         /*for(Integer code : codeList){
             String httpCodeDef = getHttpCodeDef(Integer.toString(code));
@@ -22,12 +22,12 @@ public class GetHttpMessageFromCode {
         //Functional Style
         codeList
                 .parallelStream()
-                .map(code ->  tryGetHttpCodeDef(Integer.toString(code)))//If getHttpCodeDef throws an exception, should not use try catch in functional style
+                .map(code -> tryGetHttpCodeDef(Integer.toString(code)))//If getHttpCodeDef throws an exception, should not use try catch in functional style
                 //.map(String::toUpperCase)
                 .map(result -> result.map(String::toUpperCase))
-                .map(result -> switch (result){
+                .map(result -> switch (result) {
                     case Success data -> data.getResult();
-                    case Failure err-> err.getError();
+                    case Failure err -> err.getError();
                 })
                 .forEach(code -> System.out.println("Response received from code : " + code));
     }
@@ -36,7 +36,7 @@ public class GetHttpMessageFromCode {
         return Try.of(() -> getHttpCodeDef(code));
     }
 
-        public static String getHttpCodeDef(String code) {
+    public static String getHttpCodeDef(String code) {
         StringBuilder response = new StringBuilder();
 
         try {

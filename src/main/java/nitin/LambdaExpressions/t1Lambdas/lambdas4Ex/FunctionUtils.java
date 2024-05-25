@@ -5,6 +5,9 @@ import java.util.stream.Stream;
 
 public class FunctionUtils {
 
+    private FunctionUtils() {
+    } // Uninstantiatable class
+
     /**
      * Returns a Predicate that is the result of ANDing all the argument Predicates.
      * If no Predicates are supplied, it returns a Predicate that always returns
@@ -61,7 +64,4 @@ public class FunctionUtils {
                 .findFirst()
                 .orElse(null));
     }
-
-    private FunctionUtils() {
-    } // Uninstantiatable class
 }

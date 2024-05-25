@@ -8,12 +8,14 @@ public class EmptyListFilter {
     @Override
     public boolean equals(Object obj) {
         System.out.println("Invoked EmptyListFilter");
-        if (obj == null || !(obj instanceof List)) {return false;}
-        Optional<Object> result = ((List)obj).stream().filter(
+        if (obj == null || !(obj instanceof List)) {
+            return false;
+        }
+        Optional<Object> result = ((List) obj).stream().filter(
                 eachObj -> Arrays.asList(eachObj.getClass().getDeclaredFields()).stream().filter(eachField -> {
                     try {
                         eachField.setAccessible(true);
-                        if ( eachField.get(eachObj)  != null && !eachField.get(eachObj).toString().isEmpty()) {
+                        if (eachField.get(eachObj) != null && !eachField.get(eachObj).toString().isEmpty()) {
                             return true;
                         }
                     } catch (Exception e) {
@@ -21,6 +23,6 @@ public class EmptyListFilter {
                     }
                     return false;
                 }).count() > 0).findAny();
-        return  !result.isPresent();
+        return !result.isPresent();
     }
 }

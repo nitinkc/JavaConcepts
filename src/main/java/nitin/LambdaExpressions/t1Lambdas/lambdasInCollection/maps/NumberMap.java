@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class NumberMap {
-    private static Map<Integer, String> numberMap = new HashMap<>();
+    private static final Map<Integer, String> numberMap = new HashMap<>();
 
     static {
         numberMap.put(1, "uno");

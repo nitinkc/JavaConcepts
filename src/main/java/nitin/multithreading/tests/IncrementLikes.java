@@ -7,19 +7,20 @@ public class IncrementLikes {
     private Integer like = Integer.valueOf(0);//Initialzying from zero
     private BigDecimal likeBigDecimal = BigDecimal.ZERO;
 
-    public Integer getNextLikeCount(){
+    public Integer getNextLikeCount() {
         return like;
     }
-    public Integer incrementLike(){
+
+    public Integer incrementLike() {
         return like++;
     }
 
-    public BigDecimal getNextLikeCountBigDecimal(){
+    public BigDecimal getNextLikeCountBigDecimal() {
         return likeBigDecimal;
     }
 
-    public BigDecimal incrementLikeBigInt(){
+    public BigDecimal incrementLikeBigInt() {
         likeBigDecimal = likeBigDecimal.add(BigDecimal.ONE);
-        return likeBigDecimal ;
+        return likeBigDecimal;
     }
 }

@@ -23,6 +23,5 @@ public class RemoveVSIterator {
             if (list.get(i) >= min && list.get(i) <= max)
                 list.remove(i);
         }
-        return;
     }
 }

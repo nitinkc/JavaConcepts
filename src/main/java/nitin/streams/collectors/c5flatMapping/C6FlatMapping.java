@@ -21,7 +21,7 @@ public class C6FlatMapping {
 
     //map first and flattening later -> mapFlattening -> flatMap
     public static void main(String[] args) {
-        List<Integer> numbers = List.of(1,2,3,4);
+        List<Integer> numbers = List.of(1, 2, 3, 4);
         one2one(numbers);
         one2Many(numbers);
         one2manyFlatMap(numbers);

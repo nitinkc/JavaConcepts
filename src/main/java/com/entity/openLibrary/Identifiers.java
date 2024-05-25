@@ -1,4 +1,3 @@
-
 package com.entity.openLibrary;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -10,15 +9,15 @@ import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "amazon",
-    "google",
-    "librarything",
-    "goodreads",
-    "isbn_10",
-    "isbn_13",
-    "lccn",
-    "oclc",
-    "openlibrary"
+        "amazon",
+        "google",
+        "librarything",
+        "goodreads",
+        "isbn_10",
+        "isbn_13",
+        "lccn",
+        "oclc",
+        "openlibrary"
 })
 @Getter
 @Setter

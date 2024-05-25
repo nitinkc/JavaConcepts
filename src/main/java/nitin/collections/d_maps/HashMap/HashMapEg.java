@@ -3,6 +3,8 @@ package nitin.collections.d_maps.HashMap;
 import java.util.HashMap;
 import java.util.Map;
 
+enum Pets {CATS, DOGS, HORSES}
+
 public class HashMapEg {
     public static void main(String[] args) {
         Map<Object, Object> m = new HashMap<Object, Object>();
@@ -27,8 +29,6 @@ public class HashMapEg {
 
 class Cat {
 }
-
-enum Pets {CATS, DOGS, HORSES}
 
 class Dog {
     String name;

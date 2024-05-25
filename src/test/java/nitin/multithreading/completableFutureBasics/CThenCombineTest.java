@@ -21,7 +21,7 @@ public class CThenCombineTest {
     public void thenCombineCF() {
         //Sequential Time : Should take over 2000 milli seconds adn there has been artificial delay introduced
         startTimer();
-        System.out.println((dfs.firstNameService(3)+ " " +dfs.lastNameService(1000)).toUpperCase());
+        System.out.println((dfs.firstNameService(3) + " " + dfs.lastNameService(1000)).toUpperCase());
         stopTimer();
 
         resetTimer();
@@ -29,7 +29,7 @@ public class CThenCombineTest {
         //when
         startTimer();
         //Async Task: Should take Max(task1, Task2), close to a little over 1000 milli seconds
-        CompletableFuture<String> completableFuture = cf.fullNameService();
+        CompletableFuture<String> completableFuture = A12ThenCombine.fullNameService();
         stopTimer();//results are not returned yet
 
         //then
@@ -37,7 +37,7 @@ public class CThenCombineTest {
         startTimer();
         completableFuture
                 .thenAccept(fullName -> {
-                    assertEquals(fullName,"JOHN DOE");
+                    assertEquals(fullName, "JOHN DOE");
                 })
                 .join();//so that results can be collected
         stopTimer();
@@ -47,12 +47,12 @@ public class CThenCombineTest {
     public void fullNameWithGreetingServiceTest() {
         startTimer();
         //when
-        CompletableFuture<String> completableFuture = cf.fullNameWithGreetingService();
+        CompletableFuture<String> completableFuture = A12ThenCombine.fullNameWithGreetingService();
 
         //then
         completableFuture
                 .thenAccept(fullNameWithGreetings -> {
-                    assertEquals(fullNameWithGreetings,"HELLO!! JOHN DOE");
+                    assertEquals(fullNameWithGreetings, "HELLO!! JOHN DOE");
                 })
                 .join();//so that results can be collected
         stopTimer();
@@ -62,12 +62,12 @@ public class CThenCombineTest {
     public void fullNameWithGreetingAndGoodByesServiceTest() {
         startTimer();
         //when
-        CompletableFuture<String> completableFuture = cf.fullNameWithGreetingAndGoodByesService();
+        CompletableFuture<String> completableFuture = A12ThenCombine.fullNameWithGreetingAndGoodByesService();
 
         //then
         completableFuture
                 .thenAccept(fullNameWithGreetings -> {
-                    assertEquals(fullNameWithGreetings,"Hello!! john doe, Thank You!!");
+                    assertEquals(fullNameWithGreetings, "Hello!! john doe, Thank You!!");
                 })
                 .join();//so that results can be collected
         stopTimer();

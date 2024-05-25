@@ -16,29 +16,12 @@ public class Student {
         gradeLetters.put(0, "F");
     }
 
-    private String name;
-    private int score;
-
-    public String getName() {
-        return name;
-    }
-
-    public int getScore() {
-        return score;
-    }
-
-    public String getLetterGrade() {
-        return gradeLetters.floorEntry(score).getValue();
-    }
+    private final String name;
+    private final int score;
 
     public Student(String name, int score) {
         this.name = name;
         this.score = score;
-    }
-
-    @Override
-    public String toString() {
-        return name + ", " + score + "%";
     }
 
     public static void main(String[] args) {
@@ -69,5 +52,22 @@ public class Student {
         grades.entrySet().stream()
                 .sorted(order)
                 .forEach(e -> System.out.println(e.getValue() + " students achieved grade " + e.getKey()));
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public String getLetterGrade() {
+        return gradeLetters.floorEntry(score).getValue();
+    }
+
+    @Override
+    public String toString() {
+        return name + ", " + score + "%";
     }
 }

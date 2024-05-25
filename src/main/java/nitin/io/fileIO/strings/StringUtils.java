@@ -2,6 +2,9 @@ package nitin.io.fileIO.strings;
 
 public class StringUtils {
 
+    private StringUtils() {
+    } // Uninstantiatable class: static methods only
+
     /**
      * Returns a reversed copy of a non-null String.
      */
@@ -17,7 +20,4 @@ public class StringUtils {
     public static boolean isPalindrome(String s) {
         return (s.equalsIgnoreCase(reverseString(s)));
     }
-
-    private StringUtils() {
-    } // Uninstantiatable class: static methods only
 }

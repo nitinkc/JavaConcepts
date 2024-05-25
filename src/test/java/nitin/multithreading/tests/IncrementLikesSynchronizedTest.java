@@ -39,7 +39,7 @@ public class IncrementLikesSynchronizedTest {
         }
 
         for (Future<BigDecimal> future : futures) {
-            BigDecimal result  = future.get();//Future returns the datatype of the method thats been multithreaded
+            BigDecimal result = future.get();//Future returns the datatype of the method thats been multithreaded
             System.out.println("Result from Future " + result);
             uniqueSequences.add(result);
         }
@@ -59,7 +59,7 @@ public class IncrementLikesSynchronizedTest {
         }
 
         for (Future<Integer> future : futures) {
-            Integer result  = future.get();//Future returns the datatype of the method thats been multithreaded
+            Integer result = future.get();//Future returns the datatype of the method thats been multithreaded
             System.out.println("Result from Future " + result);
             uniqueSequences.add(result);
         }

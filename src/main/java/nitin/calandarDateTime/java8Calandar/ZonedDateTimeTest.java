@@ -30,13 +30,13 @@ public class ZonedDateTimeTest {
             System.out.println("...1...EXCEPTION Start date should not less than Stop date");
         }
 
-        if(start.isEqual(stop)){
+        if (start.isEqual(stop)) {
             System.out.println("...2...EXCEPTION Start date equals Stop date");
         }
 
         System.out.println("###################################################");
-        ZonedDateTime approvalStartDate = ZonedDateTime.parse("2022-03-01T23:00:00.000-0530",DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZ"));//2022-03-31 22:59:59.999, 2022-02-28 23:00:00.000
-        ZonedDateTime approvalEndDate    = ZonedDateTime.parse("2022-04-01T03:59:59.999Z");
+        ZonedDateTime approvalStartDate = ZonedDateTime.parse("2022-03-01T23:00:00.000-0530", DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZ"));//2022-03-31 22:59:59.999, 2022-02-28 23:00:00.000
+        ZonedDateTime approvalEndDate = ZonedDateTime.parse("2022-04-01T03:59:59.999Z");
 
         System.out.println("Approval Start Date: " + approvalStartDate.toLocalDate().toString().replace("-", "/"));
         System.out.println("Approval Start Date: " + approvalStartDate.format(DateTimeFormatter.ofPattern("yyyy/MM/dd")));

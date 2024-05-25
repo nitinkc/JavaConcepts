@@ -1,4 +1,3 @@
-
 package com.entity.crossRef;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -11,10 +10,10 @@ import lombok.Setter;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "start",
-    "content-version",
-    "delay-in-days",
-    "URL"
+        "start",
+        "content-version",
+        "delay-in-days",
+        "URL"
 })
 @AllArgsConstructor
 @NoArgsConstructor

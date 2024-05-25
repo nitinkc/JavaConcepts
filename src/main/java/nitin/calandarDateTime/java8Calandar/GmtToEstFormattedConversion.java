@@ -65,7 +65,7 @@ public class GmtToEstFormattedConversion {
                                     .withZone(ZoneOffset.UTC))
                     .withZoneSameInstant(ZoneId.of(timeZoneIso));
 
-        } catch (ZoneRulesException e){
+        } catch (ZoneRulesException e) {
             System.out.println(e.getMessage());
             throw new ZoneRulesException("Invalid Timezone :: " + timeZoneIso);
         }

@@ -5,6 +5,29 @@ import java.util.Collections;
 import java.util.List;
 
 class Car1 {
+    /*********************************************************************************************************************
+     * *******************************************************************************************************************
+     * *******************************************************************************************************************
+     ********************************************************************************************************************/
+
+
+    //Using Anonymous Class
+    /*  private static final RedCarCriterion RED_CAR_CRITERION = new *//*RedCarCriterion();
+
+  static class RedCarCriterion implements *//*CarRunner1.CarCriteria1 {
+    @Override
+    public boolean test(Car1 car) {
+      return car.getColor().equals("Red");
+    }
+  }*/
+
+
+    private static final CarCriteria1 RED_CAR_CRITERION = new CarCriteria1() {
+        @Override
+        public boolean test(Car1 car) {
+            return car.getColor().equals("Red");
+        }
+    };
     //Fields of Class Car
     private final int gasLevel;
     private final String color;
@@ -31,6 +54,19 @@ class Car1 {
 
         Car1 self = new Car1(gas, color, p, Arrays.asList("jack", "wrench", "spare wheel"));
         return self;
+    }
+
+    //Factory method : Much better than the constructor approach
+    //Here getRedCarCriterion has a choice of implementing the new a5object or the single static a5object
+    //public static RedCarCriterion getRedCarCriterion(){
+    public static CarCriteria1 getRedCarCriterion() {
+        return RED_CAR_CRITERION; //This is Singleton design pattern.
+        //return new RedCarCriterion();
+    }
+
+    /*  Not Singleton as there is amn argument, threshold, that is unique to each a5object.*/
+    public static CarCriteria1 getGasLevelCarCriterion(int threshold) {
+        return new GasLevelCarCriterion(threshold);
     }
 
     public int getGasLevel() {
@@ -64,48 +100,10 @@ class Car1 {
                 + (trunkContents != null ? ", trunkContents=" + trunkContents : " no trunk") + '}';
     }
 
-
-    /*********************************************************************************************************************
-     * *******************************************************************************************************************
-     * *******************************************************************************************************************
-     ********************************************************************************************************************/
-
-
-    //Using Anonymous Class
-    /*  private static final RedCarCriterion RED_CAR_CRITERION = new *//*RedCarCriterion();
-
-  static class RedCarCriterion implements *//*CarRunner1.CarCriteria1 {
-    @Override
-    public boolean test(Car1 car) {
-      return car.getColor().equals("Red");
-    }
-  }*/
-
-
-    private static final CarCriteria1 RED_CAR_CRITERION = new CarCriteria1() {
-        @Override
-        public boolean test(Car1 car) {
-            return car.getColor().equals("Red");
-        }
-    };
-
-    //Factory method : Much better than the constructor approach
-    //Here getRedCarCriterion has a choice of implementing the new a5object or the single static a5object
-    //public static RedCarCriterion getRedCarCriterion(){
-    public static CarCriteria1 getRedCarCriterion() {
-        return RED_CAR_CRITERION; //This is Singleton design pattern.
-        //return new RedCarCriterion();
-    }
-
-    /*  Not Singleton as there is amn argument, threshold, that is unique to each a5object.*/
-    public static CarCriteria1 getGasLevelCarCriterion(int threshold) {
-        return new GasLevelCarCriterion(threshold);
-    }
-
     //Static inner class shares the same behaviour with all the instances. Static members vs instance members ->
     // the criteria is shared wil all the objects
     private static class GasLevelCarCriterion implements CarCriteria1 {
-        private int threshold;
+        private final int threshold;
 
         public GasLevelCarCriterion(int threshold) {
             this.threshold = threshold;

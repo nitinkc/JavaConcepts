@@ -15,7 +15,7 @@ public class EntityToDtoConverter extends DtoConverter<Dto> {
         return new Dto();
     }
 
-    public Dto toDto(Entity entity){
+    public Dto toDto(Entity entity) {
         return convert(entity, null, ENTITY_TO_DTO);
     }
 }

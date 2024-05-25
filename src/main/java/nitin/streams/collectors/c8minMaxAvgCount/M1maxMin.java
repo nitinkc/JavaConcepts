@@ -25,6 +25,7 @@ public class M1maxMin {
         minByAndMaxBy(employees);
 
     }
+
     private static void minByMaxByIntro(List<EmployeeSimple> employees) {
         EmployeeSimple collect = employees.stream()
                 .filter(Objects::nonNull).filter(emp -> null != emp.getAge()).filter(emp -> null != emp.getName())

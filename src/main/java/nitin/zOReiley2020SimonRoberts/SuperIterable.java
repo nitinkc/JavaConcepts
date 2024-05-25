@@ -8,38 +8,10 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class SuperIterable<E> implements Iterable<E> {
-    private Iterable<E> self;
+    private final Iterable<E> self;
 
     public SuperIterable(Iterable<E> toWrap) {
         self = toWrap;
-    }
-
-    public SuperIterable<E> filter(Predicate<E> pred) {
-        List<E> rv = new ArrayList<>();
-
-        for (E e : self) {
-            if (pred.test(e)) {
-                rv.add(e);
-            }
-        }
-        return new SuperIterable<>(rv);
-    }
-
-    public <F> SuperIterable<F> map(Function<E, F> op) {
-        List<F> rv = new ArrayList<>();
-        self.forEach(e -> rv.add(op.apply(e)));
-        return new SuperIterable<>(rv);
-    }
-
-    public <F> SuperIterable<F> flatMap(Function<E, SuperIterable<F>> op) {
-        List<F> rv = new ArrayList<>();
-        self.forEach(e -> op.apply(e).forEach(f -> rv.add(f)));
-        return new SuperIterable<>(rv);
-    }
-
-    @Override
-    public Iterator<E> iterator() {
-        return self.iterator();
     }
 
     public static void main(String[] args) {
@@ -104,5 +76,33 @@ public class SuperIterable<E> implements Iterable<E> {
                                 .map(p -> p + " is in a " + c.getColor() + " car with lots of fuel"))
                 .forEach(m -> System.out.println(m));
 
+    }
+
+    public SuperIterable<E> filter(Predicate<E> pred) {
+        List<E> rv = new ArrayList<>();
+
+        for (E e : self) {
+            if (pred.test(e)) {
+                rv.add(e);
+            }
+        }
+        return new SuperIterable<>(rv);
+    }
+
+    public <F> SuperIterable<F> map(Function<E, F> op) {
+        List<F> rv = new ArrayList<>();
+        self.forEach(e -> rv.add(op.apply(e)));
+        return new SuperIterable<>(rv);
+    }
+
+    public <F> SuperIterable<F> flatMap(Function<E, SuperIterable<F>> op) {
+        List<F> rv = new ArrayList<>();
+        self.forEach(e -> op.apply(e).forEach(f -> rv.add(f)));
+        return new SuperIterable<>(rv);
+    }
+
+    @Override
+    public Iterator<E> iterator() {
+        return self.iterator();
     }
 }

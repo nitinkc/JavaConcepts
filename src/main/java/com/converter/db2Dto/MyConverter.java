@@ -8,7 +8,7 @@ public class MyConverter implements DbToDtoConverter<DataDto, Data> {
     public DataDto convert(Data data) {
         return DataDto.builder()
                 .createReleaseNumber(data.getReleaseNumber())
-                .refData(refDataReadDao.findById(RefTable.class,data.getRefDataId()))
+                .refData(refDataReadDao.findById(RefTable.class, data.getRefDataId()))
                 .build();
     }
 }

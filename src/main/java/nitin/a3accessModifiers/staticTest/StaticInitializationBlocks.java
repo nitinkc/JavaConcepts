@@ -8,7 +8,6 @@ class Car1 {
 
     static int numberofobjects;
     static int numberofwheels = 4;
-    int enginecapacity;
 
     /*
      * Runs FIRST. At Class loading .
@@ -27,6 +26,8 @@ class Car1 {
         System.out.println(++numberofwheels);
         System.out.println("*****************Static Block 2 END ************************");
     }
+
+    int enginecapacity;
 
     public Car1() {
 

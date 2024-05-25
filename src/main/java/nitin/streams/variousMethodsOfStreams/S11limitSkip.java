@@ -13,14 +13,14 @@ public class S11limitSkip {
 
         List<Integer> integerList = intList.stream()
                 .limit(5)
-                .map(num -> num*num)
+                .map(num -> num * num)
                 .collect(Collectors.toList());
 
         System.out.println(integerList);
 
         List<Integer> integerList2 = intList.stream()
                 .skip(5)
-                .map(num -> num*num)
+                .map(num -> num * num)
                 .collect(Collectors.toList());
         System.out.println(integerList2);
 

@@ -8,13 +8,13 @@ import lombok.*;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "motd",
-    "success",
-    "query",
-    "info",
-    "historical",
-    "date",
-    "result"
+        "motd",
+        "success",
+        "query",
+        "info",
+        "historical",
+        "date",
+        "result"
 })
 @Getter
 @Setter

@@ -21,7 +21,7 @@ public class ReferenceDataAuditFields implements Serializable {
     @Serial
     private static final long serialVersionUID = -3784354643L;
 
-    @Column( name = "START_DATE")
+    @Column(name = "START_DATE")
     private Timestamp startDate;
 
     @Column(name = "END_DATE")

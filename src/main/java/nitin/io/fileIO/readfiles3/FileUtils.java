@@ -17,6 +17,9 @@ import java.util.stream.Stream;
 
 public class FileUtils {
 
+    private FileUtils() {
+    } // Uninstantiatable class: static methods only
+
     /**
      * Prints all palindromes in the Stream.
      */
@@ -63,6 +66,12 @@ public class FileUtils {
                 .orElse(null));
     }
 
+    // @SafeVarargs is difficult to understand. The issue is that it is not always safe to use varargs for generic types:
+    // the resultant array can have runtime type problems if you modify entries in it.
+    // But, if you only read the values and never modify them, varargs is perfectly safe.
+    // @SafeVarargs says "I am not doing anything dangerous, please suppress the compiler warnings".
+    // For details, see http://docs.oracle.com/javase/8/docs/technotes/guides/language/non-reifiable-varargs.html
+
     /**
      * Returns the first palindrome in the file.
      * Returns null if there is no match.
@@ -71,12 +80,6 @@ public class FileUtils {
     public static String firstPalindrome(String filename) {
         return (StreamAnalyzer.analyzeFile(filename, FileUtils::firstPalindrome));
     }
-
-    // @SafeVarargs is difficult to understand. The issue is that it is not always safe to use varargs for generic types:
-    // the resultant array can have runtime type problems if you modify entries in it.
-    // But, if you only read the values and never modify them, varargs is perfectly safe.
-    // @SafeVarargs says "I am not doing anything dangerous, please suppress the compiler warnings".
-    // For details, see http://docs.oracle.com/javase/8/docs/technotes/guides/language/non-reifiable-varargs.html
 
     /**
      * Returns a Predicate that is the result of ANDing all the argument Predicates.
@@ -106,6 +109,10 @@ public class FileUtils {
                 .orElse(null));
     }
 
+    /* Returns a List<T> of all elements in Stream that pass all of the tests.
+     *  Returns an empty List if there is no match.
+     */
+
     /**
      * Returns first line in file that passes all of the tests.
      * Returns null if there is no match.
@@ -116,7 +123,7 @@ public class FileUtils {
         return (StreamAnalyzer.analyzeFile(filename, stream -> firstMatch(stream, tests)));
     }
 
-    /* Returns a List<T> of all elements in Stream that pass all of the tests.
+    /* Returns a List<String> of all lines in file that pass all of the tests.
      *  Returns an empty List if there is no match.
      */
 
@@ -126,10 +133,6 @@ public class FileUtils {
         return (elements.filter(combinedTest)
                 .collect(Collectors.toList()));
     }
-
-    /* Returns a List<String> of all lines in file that pass all of the tests.
-     *  Returns an empty List if there is no match.
-     */
 
     @SafeVarargs
     public static List<String> allMatches(String filename, Predicate<String>... tests) {
@@ -156,7 +159,4 @@ public class FileUtils {
     public static Integer letterCount(String filename, Predicate<String>... tests) {
         return (StreamAnalyzer.analyzeFile(filename, stream -> letterCount(stream, tests)));
     }
-
-    private FileUtils() {
-    } // Uninstantiatable class: static methods only
 }

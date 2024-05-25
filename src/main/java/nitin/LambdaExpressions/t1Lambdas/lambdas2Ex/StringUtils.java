@@ -1,6 +1,9 @@
 package nitin.LambdaExpressions.t1Lambdas.lambdas2Ex;
 
 public class StringUtils {
+    private StringUtils() {
+    } // Uninstantiatable class; contains only static methods.
+
     public static int eChecker(String s1, String s2) {
         int compareFlag = 0;
         if (s1.contains("e") && !s2.contains("e")) {
@@ -19,7 +22,4 @@ public class StringUtils {
             return (s2);
         }
     }
-
-    private StringUtils() {
-    } // Uninstantiatable class; contains only static methods.
 }

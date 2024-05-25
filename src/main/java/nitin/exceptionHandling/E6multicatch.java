@@ -22,7 +22,7 @@ public class E6multicatch {
     public static void main(String[] args) {
         String filePath = "src/main/resources/test.txt";
         String writeMe = "Testing";
-        readFile(filePath,writeMe);
+        readFile(filePath, writeMe);
         //---------------
         Path path = Paths.get("text.txt");
         String text = null;
@@ -32,19 +32,19 @@ public class E6multicatch {
             e.printStackTrace();
         }
         LocalDate date = LocalDate.parse(text);
-            System.out.println(date);
+        System.out.println(date);
     }
 
     public static Integer readFile(String path, String writeMe) {
 
         //Try with Resource
-        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File(path)));) {
-            writeMe = writeMe + " :: "+String.valueOf(10/10);
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File(path)))) {
+            writeMe = writeMe + " :: " + 1;
             oos.writeObject(writeMe);
 
-        } catch (IOException | ArithmeticException e )  {
+        } catch (IOException | ArithmeticException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             System.out.println("Always Run this as well");
         }
         return null;

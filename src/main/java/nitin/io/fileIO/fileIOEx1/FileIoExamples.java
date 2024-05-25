@@ -20,6 +20,9 @@ import java.util.stream.Collectors;
  */
 
 public class FileIoExamples {
+    private FileIoExamples() {
+    } // Uninstantiatable class
+
     public static void main(String[] args) throws Exception {
         String inputFile = Configs.ENABLE1_WORD_LIST_PATH;
         nLetterWord(inputFile, 10);
@@ -119,7 +122,4 @@ public class FileIoExamples {
             System.err.println("IOException: " + ioe);
         }
     }
-
-    private FileIoExamples() {
-    } // Uninstantiatable class
 }

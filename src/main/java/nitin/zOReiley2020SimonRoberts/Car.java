@@ -5,6 +5,9 @@ import java.util.function.Predicate;
 
 public class Car {
 
+    private static final Predicate<Car> RED_CAR_CRITERION
+            = c -> c.color.equals("Red");
+    private static final Comparator<Car> fuelComparator = (o1, o2) -> o1.gasLevel - o2.gasLevel;
     //Fields of Class Car
     private final int gasLevel;
     private final String color;
@@ -41,6 +44,27 @@ public class Car {
         return self;
     }
 
+    public static Predicate<Car> getColorCriterion(String... colors) {
+        Set<String> colorSet = new TreeSet<>(Arrays.asList(colors));
+        return c -> colorSet.contains(c.getColor());
+    }
+
+    public static Predicate<Car> getRedCarCriterion() {
+        return RED_CAR_CRITERION;
+    }
+
+    public static Predicate<Car> getGasLevelCarCriterion(final int threshold) {
+        return c -> c.gasLevel >= threshold;
+    }
+
+    public static Predicate<Car> getFourPassengerCriterion() {
+        return c -> c.passengers.size() >= 4;
+    }
+
+    public static Comparator<Car> getFuelComparator() {
+        return fuelComparator;
+    }
+
     public int getGasLevel() {
         return gasLevel;
     }
@@ -70,30 +94,4 @@ public class Car {
         return "Car{" + "gasLevel=" + gasLevel + ", color=" + color + ", passengers=" + passengers
                 + (trunkContents != null ? ", trunkContents=" + trunkContents : " no trunk") + '}';
     }
-
-    public static Predicate<Car> getColorCriterion(String... colors) {
-        Set<String> colorSet = new TreeSet<>(Arrays.asList(colors));
-        return c -> colorSet.contains(c.getColor());
-    }
-
-    public static Predicate<Car> getRedCarCriterion() {
-        return RED_CAR_CRITERION;
-    }
-
-    private static final Predicate<Car> RED_CAR_CRITERION
-            = c -> c.color.equals("Red");
-
-    public static Predicate<Car> getGasLevelCarCriterion(final int threshold) {
-        return c -> c.gasLevel >= threshold;
-    }
-
-    public static Predicate<Car> getFourPassengerCriterion() {
-        return c -> c.passengers.size() >= 4;
-    }
-
-    public static Comparator<Car> getFuelComparator() {
-        return fuelComparator;
-    }
-
-    private static final Comparator<Car> fuelComparator = (o1, o2) -> o1.gasLevel - o2.gasLevel;
 }

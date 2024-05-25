@@ -17,6 +17,13 @@ public class Primes {
     // equivalent, and thus is NOT fooled by Carmichael numbers.
     // See Cormen et al.'s Introduction to Algorithms for details.
     private static final int ERR_VAL = 100;
+    private static final String[] DIGITS =
+            "0,1,2,3,4,5,6,7,8,9".split(",");
+    private static final String[] NON_ZERO_DIGITS =
+            "0,1,2,3,4,5,6,7,8,9".split(",");
+
+    private Primes() {
+    } // Uninstantiatable class
 
     /**
      * Finds the next prime number above a threshold.
@@ -48,11 +55,6 @@ public class Primes {
         return (n.mod(TWO).equals(ZERO));
     }
 
-    private static final String[] DIGITS =
-            "0,1,2,3,4,5,6,7,8,9".split(",");
-    private static final String[] NON_ZERO_DIGITS =
-            "0,1,2,3,4,5,6,7,8,9".split(",");
-
     private static String randomDigit(boolean isZeroOk) {
         if (isZeroOk) {
             return (RandomUtils.randomElement(DIGITS));
@@ -67,7 +69,7 @@ public class Primes {
      */
 
     public static BigInteger randomNum(int numDigits) {
-        StringBuilder s = new StringBuilder("");
+        StringBuilder s = new StringBuilder();
         // First digit must be non-zero.
         s.append(randomDigit(false));
         for (int i = 0; i < numDigits - 1; i++) {
@@ -96,7 +98,4 @@ public class Primes {
             currentPrime = nextPrime(currentPrime);
         }
     }
-
-    private Primes() {
-    } // Uninstantiatable class
 }

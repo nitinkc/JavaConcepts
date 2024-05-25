@@ -49,7 +49,7 @@ public class N2App {
         List<String> configFileStr = new ArrayList<>();
         for (File f : filesInFolder) {
             StringBuilder sb = new StringBuilder();
-            sb.append(f.getName().substring(0, f.getName().length() - 5)).append(" ");
+            sb.append(f.getName(), 0, f.getName().length() - 5).append(" ");
             try {
                 List<String> temp =
                         Files.lines(f.toPath())
@@ -100,7 +100,7 @@ public class N2App {
     private static void extracted(List<File> filesInFolder, List<String> inputStr, List<String> writeLine) {
         for (File f : filesInFolder) {
             StringBuilder sb = new StringBuilder();
-            sb.append(f.getName().substring(0, f.getName().length() - 5)).append(" ");
+            sb.append(f.getName(), 0, f.getName().length() - 5).append(" ");
             try {
                 Files.lines(f.toPath())
                         .filter(line -> line.contains("tag")) // this line filters any line out which does not meet the condition

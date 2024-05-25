@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 public class P1Intro {
     public static void main(String[] args) {
-        List<Integer> list = List.of(0,1,2,3,4,5,6,7,9,8);
+        List<Integer> list = List.of(0, 1, 2, 3, 4, 5, 6, 7, 9, 8);
 
         //sequential(list);
         //streamDotParallel(list.stream());
@@ -69,9 +69,10 @@ public class P1Intro {
         }
 
         list.parallelStream()
-                .filter(num -> num*1 == num)
+                .filter(num -> num == num)
                 .map(num -> incrementWith1SecDelay(num))
-                .forEach(e -> {});
+                .forEach(e -> {
+                });
     }
 
     private static void reducePitfalls(List<Integer> list) {
@@ -85,7 +86,7 @@ public class P1Intro {
 
     private static Integer add(Integer a, Integer b) {
         int result = a + b;
-        System.out.println("a = " + a + " b = " + b + " r = " + result + " " +Thread.currentThread());
+        System.out.println("a = " + a + " b = " + b + " r = " + result + " " + Thread.currentThread());
         return result;
     }
 
@@ -94,14 +95,14 @@ public class P1Intro {
         list.parallelStream()
                 .map(num -> incrementWith1SecDelay(num))
                 .sequential()//This takes precedence due to its proximity with forEach (Reduce operation)
-                .forEach(num -> System.out.print(num+" "));
+                .forEach(num -> System.out.print(num + " "));
     }
 
     private static void streamDotParallel(Stream<Integer> listStream) {
         System.out.println("\nstreamDotParallel");
         listStream.parallel()//if Stream is already provided,or outside our control
                 .map(num -> incrementWith1SecDelay(num))
-                .forEachOrdered(num -> System.out.print(num+" "));
+                .forEachOrdered(num -> System.out.print(num + " "));
     }
 
     private static void parallelStreamWithOrder(List<Integer> list) {
@@ -110,10 +111,10 @@ public class P1Intro {
                 .map(num -> {
                     MultiThreadUtility.delay(1000);
                     num = num + 1;
-                    System.out.println("map: " + num+"--" + Thread.currentThread());
+                    System.out.println("map: " + num + "--" + Thread.currentThread());
                     return num;
                 })
-                .forEachOrdered(num -> System.out.println("feo: " + num+"--" + Thread.currentThread()));
+                .forEachOrdered(num -> System.out.println("feo: " + num + "--" + Thread.currentThread()));
     }
 
     private static void parallelStreamWithoutOrder(List<Integer> list) {
@@ -123,10 +124,10 @@ public class P1Intro {
                 .map(num -> {
                     MultiThreadUtility.delay(1000);
                     num = num + 1;
-                    System.out.println("map: " + num+"--" + Thread.currentThread());
+                    System.out.println("map: " + num + "--" + Thread.currentThread());
                     return num;
                 })
-                .forEach(num -> System.out.println("fe : " + num+"--" + Thread.currentThread()));
+                .forEach(num -> System.out.println("fe : " + num + "--" + Thread.currentThread()));
     }
 
     private static void sequential(List<Integer> list) {
@@ -135,10 +136,10 @@ public class P1Intro {
         list.stream()
                 .sequential()//Without this method also it will work similar
                 .map(num -> incrementWith1SecDelay(num))
-                .forEach(num -> System.out.print(num+" "));
+                .forEach(num -> System.out.print(num + " "));
     }
 
-    private static int incrementWith1SecDelay(int number){
+    private static int incrementWith1SecDelay(int number) {
         MultiThreadUtility.logMessage(String.valueOf(number));
         MultiThreadUtility.delay(1000);
         return number + 1;

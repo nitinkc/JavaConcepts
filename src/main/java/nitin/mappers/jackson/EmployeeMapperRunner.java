@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 
 public class EmployeeMapperRunner {
     static ObjectMapper objectMapper;
+
     static {
         objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
@@ -36,7 +37,8 @@ public class EmployeeMapperRunner {
     private static void jsonFromFile() throws IOException {
         URL resource = new URL("file:src/main/resources/json/single-object-mapper.json");
 
-        List<Employee> employees = objectMapper.readValue(resource, new TypeReference<List<Employee>>() {});
+        List<Employee> employees = objectMapper.readValue(resource, new TypeReference<List<Employee>>() {
+        });
 
         //Removing the empty addresses
         employees.forEach(eachEmployee -> eachEmployee.setAddresses(filterEmptyObjects(eachEmployee.getAddresses())));
@@ -70,7 +72,7 @@ public class EmployeeMapperRunner {
                 .name("Jane")
                 .dob(Date.from(ZonedDateTime.now().plusDays(1).toInstant()))
                 .datelocaltzdt(LocalDateTime.parse("2023-08-04T12:15:00", DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss")))
-                .phones(Map.of("Mobile","123-456-7890", "Work", "(222) 222 2222"))
+                .phones(Map.of("Mobile", "123-456-7890", "Work", "(222) 222 2222"))
                 .addresses(List.of(Address.builder().build()))
                 .build();
 
@@ -81,8 +83,9 @@ public class EmployeeMapperRunner {
     }
 
     private static void typeRefForMap(ObjectMapper objectMapper, URL url) throws IOException {
-        TypeReference<List<HashMap<String,Object>>> typeRef
-                = new TypeReference<List<HashMap<String,Object>>>() {};
+        TypeReference<List<HashMap<String, Object>>> typeRef
+                = new TypeReference<List<HashMap<String, Object>>>() {
+        };
 
         List<HashMap<String, Object>> employees = objectMapper.readValue(url, typeRef);
 

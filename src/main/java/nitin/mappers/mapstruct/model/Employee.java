@@ -14,9 +14,13 @@ import java.util.Map;
 @AllArgsConstructor
 @Builder
 public class Employee {
-    @JsonProperty("name") private String name;
-    @JsonProperty("dateOfBirth") private Date dob;
-    @JsonProperty("phones") private Map<String, String> phones;
-    @JsonProperty("addresses") private List<Address> addresses;
+    @JsonProperty("name")
+    private String name;
+    @JsonProperty("dateOfBirth")
+    private Date dob;
+    @JsonProperty("phones")
+    private Map<String, String> phones;
+    @JsonProperty("addresses")
+    private List<Address> addresses;
     private String nullTester;
 }

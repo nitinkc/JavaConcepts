@@ -10,13 +10,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
  * @author Juneau
  */
 public class ItalianRoast extends CoffeeType implements Dark {
     List<String> description;
-    
-    public ItalianRoast(){
+
+    public ItalianRoast() {
         description = new ArrayList();
         description.add(BOLD);
         description.add(ROBUST);
@@ -28,5 +27,5 @@ public class ItalianRoast extends CoffeeType implements Dark {
     public List<String> getDescription() {
         return description;
     }
- 
+
 }

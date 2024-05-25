@@ -22,7 +22,7 @@ public class A8ChangingThreadPool {
 
     }
 
-    public static CompletableFuture<Double> getData(){
+    public static CompletableFuture<Double> getData() {
          /* In Spring properties yml, more arguments to Constructor can be passed.
         spring:
           task:
@@ -39,13 +39,13 @@ public class A8ChangingThreadPool {
         return CompletableFuture.supplyAsync(() -> compute(), pool);
     }
 
-    public static Double compute(){
+    public static Double compute() {
         System.out.println("c: " + Thread.currentThread());
         delay(1000);
         return 3.14;
     }
 
     private static void getPrintln(Double data) {
-        System.out.println("p: "  + Thread.currentThread() + " data : "+data);
+        System.out.println("p: " + Thread.currentThread() + " data : " + data);
     }
 }

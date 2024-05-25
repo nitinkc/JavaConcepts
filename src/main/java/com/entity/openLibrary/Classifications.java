@@ -1,4 +1,3 @@
-
 package com.entity.openLibrary;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -10,8 +9,8 @@ import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "lc_classifications",
-    "dewey_decimal_class"
+        "lc_classifications",
+        "dewey_decimal_class"
 })
 @Getter
 @Setter

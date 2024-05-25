@@ -26,7 +26,7 @@ public class C3GroupBy {
                 .filter(Objects::nonNull).filter(emp -> null != emp.getName())
                 //.collect(Collectors.groupingBy(emp -> emp.getName()));
                 .collect(groupingBy(EmployeeSimple::getName));//Grouping By -> Taking function as a parameter
-        System.out.println("By Name :: "+byName);
+        System.out.println("By Name :: " + byName);
     }
 
     private static void ageByName() {

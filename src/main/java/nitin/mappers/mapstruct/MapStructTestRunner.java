@@ -30,7 +30,7 @@ public class MapStructTestRunner {
 
     }
 
-    private static Tester getTestData(URL resource, ObjectMapper om)  {
+    private static Tester getTestData(URL resource, ObjectMapper om) {
         Tester tester = new Tester();
         try {
             tester = om.readValue(resource, Tester.class);

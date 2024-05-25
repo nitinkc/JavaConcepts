@@ -9,6 +9,9 @@ import java.util.function.Predicate;
 
 public class AssetUtil {
 
+    private AssetUtil() {
+    }
+
     public static int totalAssetValues(final List<Asset> assets) {
         return assets.stream()
                 //.filter(asset -> asset.getAssetType() == Asset.AssetType.STOCK)
@@ -23,8 +26,5 @@ public class AssetUtil {
                 .filter(assetSelector)
                 .mapToInt(Asset::getValue)
                 .sum();
-    }
-
-    private AssetUtil() {
     }
 }

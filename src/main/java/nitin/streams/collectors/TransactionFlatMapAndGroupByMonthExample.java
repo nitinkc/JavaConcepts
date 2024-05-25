@@ -7,17 +7,14 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.Month;
-import java.time.Year;
 import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
-
-import static com.utilities.JsonUtils.getJsonStringFromFile;
 
 public class TransactionFlatMapAndGroupByMonthExample {
     static ObjectMapper objectMapper = new ObjectMapper();

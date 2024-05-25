@@ -13,26 +13,22 @@ import java.util.Random;
 public class MatrixMultiplication {
     /*GLOBAL VARIABLE DECLARATION */
 
-    //Random Number Range
-    public final int MAXRAND = 99;
-
-    /* Declare number of Threads for Execution (Min 1 thread)*/
-    static int numThreads = 1;
-
     //Dimensions of the Matrices to be multiplied
     public static final int ROW_A = 3;
     public static final int COL_A = 3;
     public static final int ROW_B = 3;
     public static final int COL_B = 3;
-
+    /* Declare number of Threads for Execution (Min 1 thread)*/
+    static int numThreads = 1;
     /* Pointer for the three Matrix*/
     static double[][] matA = new double[ROW_A][COL_A];
     static double[][] matB = new double[ROW_B][COL_B];
     static double[][] matC = new double[ROW_A][COL_B];
-
     /* Variables for tracking time execution time*/
     static double begin = 0, end = 0;
     static double time_spent = 0;
+    //Random Number Range
+    public final int MAXRAND = 99;
 
     /* MAIN BEGINS */
     public static void main(String[] args) {
@@ -208,7 +204,7 @@ class Multiply implements Runnable {
 
                     // Console logging for the debugging
                     System.out.print("Operated by Thread : " + Thread.currentThread());
-                    System.out.print(" --- Entry inserted at " + i + "" + j + " is :" + MatrixMultiplication.matC[i][j]);
+                    System.out.print(" --- Entry inserted at " + i + j + " is :" + MatrixMultiplication.matC[i][j]);
                 }
             }
             System.out.println();

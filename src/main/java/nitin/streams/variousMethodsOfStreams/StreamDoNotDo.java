@@ -27,15 +27,15 @@ public class StreamDoNotDo {
     }
 
     private static List<Integer> transformationOdd(List<Integer> integerList) {
-       List<Integer> list = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
 
         //Works until now, but stopped all of a sudden
         // Code behaves - erratically with parallel Stream
-       integerList.parallelStream()
-               .filter(num -> num%2 != 0)
-               .map(num -> num*2)
-               .forEach(num -> list.add(num));//shared Mutability
-                //BAD IDEA with ParallelStream - due to shared mutability - this is impure
+        integerList.parallelStream()
+                .filter(num -> num % 2 != 0)
+                .map(num -> num * 2)
+                .forEach(num -> list.add(num));//shared Mutability
+        //BAD IDEA with ParallelStream - due to shared mutability - this is impure
         return list;
 
         //[14, 18, 2, 10, 6]

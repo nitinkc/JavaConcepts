@@ -17,7 +17,7 @@ public class S1StringInterning {
         String test2 = "Nitin";//// Forcing to create a new String
         testIntern(test1, test2);
 
-        String three = new String("Nitin");// Forcing to create a new String
+        String three = "Nitin";// Forcing to create a new String
         //String three = "Nitin".intern();//intern used
         String four = "Nitin";
         testIntern(three, four);

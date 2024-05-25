@@ -28,13 +28,13 @@ public class SingleMapperRunner {
     private static void checkIfNeeded(Employee employee) {
         //Removing the empty addresses
         employee.setAddresses(employee.getAddresses().stream()
-                        .filter(singleAddress -> (
-                                null != singleAddress.getAddressLine1() ||
+                .filter(singleAddress -> (
+                        null != singleAddress.getAddressLine1() ||
                                 null != singleAddress.getAddressLine2() ||
                                 null != singleAddress.getCity() ||
                                 null != singleAddress.getState() ||
                                 null != singleAddress.getZip()
-                        )).collect(Collectors.toList()));
+                )).collect(Collectors.toList()));
 
         //String jsonString = om.writerWithDefaultPrettyPrinter().writeValueAsString(employee);
         //System.out.println(jsonString);

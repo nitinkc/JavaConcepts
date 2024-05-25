@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class EmployeeSamples {
-    private static Employee[] sampleEmployees = {
+    private static final Employee[] sampleEmployees = {
             new Employee("Harry", "Hacker", 1, 234_567),
             new Employee("Polly", "Programmer", 2, 333_333),
             new Employee("Cody", "Coder", 8, 199_999),
@@ -17,6 +17,9 @@ public class EmployeeSamples {
             new Employee("Amy", "Accountant", 25, 85_000)
     };
 
+    private EmployeeSamples() {
+    } // Uninstantiatable class
+
     public static List<Employee> getSampleEmployees() {
         return (Arrays.asList(sampleEmployees));
     }
@@ -24,7 +27,4 @@ public class EmployeeSamples {
     public static Employee randomEmployee() {
         return (RandomUtils.randomElement(sampleEmployees));
     }
-
-    private EmployeeSamples() {
-    } // Uninstantiatable class
 }

@@ -1,12 +1,14 @@
 package com.converter.dtoConverter;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class DtoConvertorRunner {
 
     static Entity entity;
+
     static {
         entity = Entity.builder()
                 .idEntity("uuid")
@@ -15,8 +17,9 @@ public class DtoConvertorRunner {
                 .age(29)
                 .build();
     }
+
     public static void main(String[] args) {
-        List<Entity> list = Arrays.asList(entity);
+        List<Entity> list = Collections.singletonList(entity);
         List<Dto> dtoList = entityToDto(list);
 
         dtoList.stream().forEach(System.out::println);

@@ -1,19 +1,19 @@
 package nitin.exceptionHandling.inFunctionalProgramming;
 
 public final class Failure<T> implements Try<T> {
-    private Throwable throwable;
+    private final Throwable throwable;
 
-    Failure(Throwable throwable){
+    Failure(Throwable throwable) {
         this.throwable = throwable;
     }
 
     @Override
-    public T getResult(){
+    public T getResult() {
         throw new RuntimeException("Invalid invocation");
     }
 
     @Override
-    public Throwable getError(){
+    public Throwable getError() {
         return throwable;
     }
 }

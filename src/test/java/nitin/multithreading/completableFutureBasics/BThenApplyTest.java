@@ -21,19 +21,19 @@ public class BThenApplyTest {
     DataFetchService dfs = new DataFetchService();
 
     @InjectMocks
-    A4ThenApply cf ;//= new BThenApply(dfs);
+    A4ThenApply cf;//= new BThenApply(dfs);
 
     //@Test
     public void vehicleCompletableFutureTest() {
         //given
 
         //when
-        CompletableFuture<List<VehicleTransformed>> completableFuture = cf.vehicleCompletableFuture();
+        CompletableFuture<List<VehicleTransformed>> completableFuture = A4ThenApply.vehicleCompletableFuture();
 
         List<VehicleTransformed> vehicleTransformedList = completableFuture.join();
 
         //then
-        assertEquals(vehicleTransformedList.size(),100);
+        assertEquals(vehicleTransformedList.size(), 100);
         /*completableFuture
                 .thenAccept(list -> {
                     assertEquals(list.size(),100);
@@ -46,7 +46,7 @@ public class BThenApplyTest {
         //given
 
         //when
-        CompletableFuture<List<VehicleTransformed>> completableFuture = cf.vehicleCompletableFuture();
+        CompletableFuture<List<VehicleTransformed>> completableFuture = A4ThenApply.vehicleCompletableFuture();
 
         //then
         List<VehicleTransformed> vehicleTransformedList = completableFuture.join();

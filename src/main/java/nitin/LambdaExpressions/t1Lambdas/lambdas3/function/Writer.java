@@ -1,9 +1,6 @@
 package nitin.LambdaExpressions.t1Lambdas.lambdas3.function;
 
 public class Writer extends Person {
-    public enum BookType {FICTION, NO_FICTION, PROPHETIC_UTTERANCES}
-
-    ;
     private BookType bookType = BookType.FICTION;
 
     public BookType getBookType() {
@@ -13,4 +10,6 @@ public class Writer extends Person {
     public void setBookType(BookType bookType) {
         this.bookType = bookType;
     }
+
+    public enum BookType {FICTION, NO_FICTION, PROPHETIC_UTTERANCES}
 }

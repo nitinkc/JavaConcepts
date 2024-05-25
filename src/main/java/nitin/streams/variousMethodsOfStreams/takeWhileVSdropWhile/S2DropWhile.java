@@ -12,8 +12,8 @@ import java.util.stream.Collectors;
  */
 public class S2DropWhile {
     public static void main(String[] args) {
-        List<String> list = Arrays.asList("one", null, "two", "three", "four", null,"circuit breaker", "five",
-                "six", "seven","","",null,null);
+        List<String> list = Arrays.asList("one", null, "two", "three", "four", null, "circuit breaker", "five",
+                "six", "seven", "", "", null, null);
         //list = Arrays.asList(null,null,null,null);
         //list = Arrays.asList("","","","");
 
@@ -46,7 +46,7 @@ public class S2DropWhile {
     }
 
     private static void pickFirstNonNullSortedString(List<String> list) {
-        List<String> singleElementList =  Collections.singletonList(Optional.of(list
+        List<String> singleElementList = Collections.singletonList(Optional.of(list
                 .stream()
                 .filter(singleStr -> null != singleStr)//Removing nulls
                 .sorted(Comparator.naturalOrder())

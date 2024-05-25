@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.List;
 
 class Car1 {
+    //Making private to force the use of factory or singleton
+    private static final RedCarCriterion RED_CAR_CRITERION = new RedCarCriterion();
     //Fields of Class Car
     private final int gasLevel;
     private final String color;
@@ -31,6 +33,19 @@ class Car1 {
 
         Car1 self = new Car1(gas, color, p, Arrays.asList("jack", "wrench", "spare wheel"));
         return self;
+    }
+
+    //Factory method : Much better than the constructor approach
+    //Here getRedCarCriterion has a choice of implementing the new a5object or the single static a5object
+    //public static RedCarCriterion getRedCarCriterion(){
+    public static CarCriteria1 getRedCarCriterion() {
+        return RED_CAR_CRITERION; //This is Singleton design pattern.
+        //return new RedCarCriterion();
+    }
+
+    /*  Not Singleton as there is an argument, threshold, that is unique to each a5object.*/
+    public static CarCriteria1 getGasLevelCarCriterion(int threshold) {
+        return new GasLevelCarCriterion(threshold);
     }
 
     public int getGasLevel() {
@@ -72,7 +87,7 @@ class Car1 {
     //Static inner class shares the same behaviour with all the instances. Static members vs instance members ->
     // the criteria is shared wil all the objects
     private static class GasLevelCarCriterion implements CarCriteria1 {
-        private int threshold;
+        private final int threshold;
 
         public GasLevelCarCriterion(int threshold) {
             this.threshold = threshold;
@@ -89,21 +104,5 @@ class Car1 {
         public boolean test(Car1 car) {
             return car.getColor().equals("Red");
         }
-    }
-
-    //Making private to force the use of factory or singleton
-    private static final RedCarCriterion RED_CAR_CRITERION = new RedCarCriterion();
-
-    //Factory method : Much better than the constructor approach
-    //Here getRedCarCriterion has a choice of implementing the new a5object or the single static a5object
-    //public static RedCarCriterion getRedCarCriterion(){
-    public static CarCriteria1 getRedCarCriterion() {
-        return RED_CAR_CRITERION; //This is Singleton design pattern.
-        //return new RedCarCriterion();
-    }
-
-    /*  Not Singleton as there is an argument, threshold, that is unique to each a5object.*/
-    public static CarCriteria1 getGasLevelCarCriterion(int threshold) {
-        return new GasLevelCarCriterion(threshold);
     }
 }

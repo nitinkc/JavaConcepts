@@ -8,6 +8,9 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class FileUtils {
+    private FileUtils() {
+    } // Uninstantiatable class
+
     public static List<String> getLines(String file) throws IOException {
         Path path = Paths.get(file);
         return (Files.readAllLines(path, Charset.defaultCharset()));
@@ -17,7 +20,4 @@ public class FileUtils {
         Path path = Paths.get(file);
         return (Files.write(path, lines, Charset.defaultCharset()));
     }
-
-    private FileUtils() {
-    } // Uninstantiatable class
 }

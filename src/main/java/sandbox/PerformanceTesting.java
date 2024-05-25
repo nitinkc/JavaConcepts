@@ -80,7 +80,7 @@ public class PerformanceTesting {
         System.out.println("Average Concatenation Memory Used: " + averageConcatenationMemoryUsedInMB + " MB");
         System.out.println("Average Float Operations Memory Used: " + averageFloatOperationsMemoryUsedInMB + " MB");
 
-       // System.out.println("Result of string concatenation: " + result);
+        // System.out.println("Result of string concatenation: " + result);
         System.out.println("Result of floating-point arithmetic: " + total);
     }
 

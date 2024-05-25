@@ -14,8 +14,11 @@ import java.util.stream.Stream;
 public class S9flatMap {
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
-        list.add("Pawan");list.add("Chiranjeevi");list.add("RaviTeja");
-        list.add("Venkatesh");list.add("Nagarjuna");
+        list.add("Pawan");
+        list.add("Chiranjeevi");
+        list.add("RaviTeja");
+        list.add("Venkatesh");
+        list.add("Nagarjuna");
         System.out.println(list);
 
         // for each values, generate uppercase and find length

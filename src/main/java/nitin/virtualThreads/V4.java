@@ -18,7 +18,7 @@ public class V4 {
 
     }
 
-    public static void doNothing(){
+    public static void doNothing() {
         //System.out.println(Thread.currentThread());
         MultiThreadUtility.delay(200);//Sleeping for 2 secs
     }

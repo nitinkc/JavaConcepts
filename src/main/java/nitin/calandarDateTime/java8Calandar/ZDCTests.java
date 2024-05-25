@@ -11,10 +11,10 @@ public class ZDCTests {
     public static void main(String[] args) {
 
         //TimeZone
-        ZoneId zone    = ZoneId.systemDefault();//Uses Z for UTC
-        ZoneId india   = ZoneId.of("Asia/Kolkata");//UTC+05:30
+        ZoneId zone = ZoneId.systemDefault();//Uses Z for UTC
+        ZoneId india = ZoneId.of("Asia/Kolkata");//UTC+05:30
         ZoneId chicago = ZoneId.of("US/Central");
-        ZoneId ny      = ZoneId.of("UTC-05:00");
+        ZoneId ny = ZoneId.of("UTC-05:00");
 
         System.out.println(ZoneOffset.SHORT_IDS.get("IST"));//ZoneOffset doesn't count Daylight savings
         //ZoneId.getAvailableZoneIds().stream().forEach(x -> System.out.println(x));
@@ -47,7 +47,7 @@ public class ZDCTests {
     public static String formatZonedDateTime(ZonedDateTime zonedDateTime) {
         String dateTimePattern = "yyyy-MM-dd'T'HH:mm:ssz";
         String timestamp = null;
-        if (null != zonedDateTime){
+        if (null != zonedDateTime) {
             timestamp = zonedDateTime.format(DateTimeFormatter.ofPattern(dateTimePattern));
         }
         return timestamp;

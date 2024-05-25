@@ -10,9 +10,9 @@ public class T8TypeInference2 {
         //var list = List.<Object>of(2, 3.14, "text", new StringBuilder("edit"));// java.lang.UnsupportedOperationException
         //List<Object> list = List.of(2, 3.14, "text", new StringBuilder("edit"));// java.lang.UnsupportedOperationException
 
-        try{
+        try {
             list.add(new T8TypeInference2());
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e);
         }
     }

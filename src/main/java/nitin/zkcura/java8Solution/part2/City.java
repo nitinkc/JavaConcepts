@@ -8,6 +8,12 @@ public class City {
     private String cityname;
     private String state;
 
+    //Constructor
+    public City(String city, String state) {
+        this.cityname = city;
+        this.state = state;
+    }
+
     public String getCityname() {
         return cityname;
     }
@@ -21,12 +27,6 @@ public class City {
     }
 
     public void setState(String state) {
-        this.state = state;
-    }
-
-    //Constructor
-    public City(String city, String state) {
-        this.cityname = city;
         this.state = state;
     }
 
@@ -45,6 +45,6 @@ public class City {
             // Checking the city names under all the conditions, cities can be in lower case.
             // If both city name and state name are equal return true
         } else
-            return ((City) obj).getCityname().toLowerCase().equals(cityname.toLowerCase()) && ((City) obj).getState().toLowerCase().equals(state.toLowerCase());
+            return ((City) obj).getCityname().equalsIgnoreCase(cityname) && ((City) obj).getState().equalsIgnoreCase(state);
     }
 }

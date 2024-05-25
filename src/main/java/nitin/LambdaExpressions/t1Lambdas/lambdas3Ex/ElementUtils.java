@@ -17,6 +17,9 @@ import java.util.function.Predicate;
  */
 
 public class ElementUtils {
+    private ElementUtils() {
+    } // Uninstantiatable class
+
     public static <T> List<T> allMatches(List<T> candidates,
                                          Predicate<T> matchFunction) {
         List<T> results = new ArrayList<>();
@@ -36,7 +39,4 @@ public class ElementUtils {
         }
         return (results);
     }
-
-    private ElementUtils() {
-    } // Uninstantiatable class
 }

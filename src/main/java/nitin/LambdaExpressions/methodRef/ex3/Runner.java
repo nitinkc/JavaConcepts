@@ -14,29 +14,29 @@ import java.util.stream.Collectors;
 
 public class Runner {
 
-    public void runMeFirst(){
+    public void runMeFirst() {
         MethodRefTest methodRefTest = new MethodRefTest();
 
-        System.out.println(methodRefTest.testMethodRef("John", "Doe", (p,q) -> p.concat(q)));
+        System.out.println(methodRefTest.testMethodRef("John", "Doe", (p, q) -> p.concat(q)));
         System.out.println(methodRefTest.testMethodRef("John", "Doe", (String::concat)));
 
         //Reference to a static method
-        System.out.println(methodRefTest.testMethodRef(3.0,4.0, (a,b) -> findHypotenous(a,b)));
-        System.out.println(methodRefTest.testMethodRef(3.0,4.0, Math::hypot));//Static
-        System.out.println(methodRefTest.testMethodRef(3.0,4.0, MathUtils::normalizeAngle));
+        System.out.println(methodRefTest.testMethodRef(3.0, 4.0, (a, b) -> findHypotenous(a, b)));
+        System.out.println(methodRefTest.testMethodRef(3.0, 4.0, Math::hypot));//Static
+        System.out.println(methodRefTest.testMethodRef(3.0, 4.0, MathUtils::normalizeAngle));
 
         ObjectTypeTest obj = new ObjectTypeTest();
         //Ref. to an instance method of a particular a5object
-        System.out.println(methodRefTest.testMethodRef("John", "Doe", (p,q) -> obj.appendAndCapitalize(p,q)));
+        System.out.println(methodRefTest.testMethodRef("John", "Doe", (p, q) -> obj.appendAndCapitalize(p, q)));
         System.out.println(methodRefTest.testMethodRef("John", "Doe", obj::appendAndCapitalize));
-        System.out.println(methodRefTest.testMethodRef(3.0,4.0, this::findHypotenous));//using this
+        System.out.println(methodRefTest.testMethodRef(3.0, 4.0, this::findHypotenous));//using this
 
         //Ref. to an instance method of an arbitrary a5object of a particular type
-        System.out.println(methodRefTest.testMethodRef("Jane", "Doe", (p,q) -> p.concat(q)));
+        System.out.println(methodRefTest.testMethodRef("Jane", "Doe", (p, q) -> p.concat(q)));
         System.out.println(methodRefTest.testMethodRef("Jane", "Doe", String::concat));
     }
 
-    public void runMe(){
+    public void runMe() {
         System.out.println("*********************************************************");
         List<EmployeeSimple> list = SampleData.getSimpleEmployees();
         //Ref. to an instance method of an arbitrary a5object of a particular typ
@@ -70,6 +70,6 @@ public class Runner {
     }
 
     private Double findHypotenous(Double a, Double b) {
-        return Math.hypot(a,b);
+        return Math.hypot(a, b);
     }
 }

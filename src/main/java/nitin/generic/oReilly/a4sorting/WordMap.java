@@ -1,6 +1,7 @@
 package nitin.generic.oReilly.a4sorting;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -12,14 +13,14 @@ import static java.util.stream.Collectors.counting;
 import static java.util.stream.Collectors.groupingBy;
 
 public class WordMap {
-    private Path resourceDir = Paths.get("src/main/resources");
+    private final Path resourceDir = Paths.get("src/main/resources");
     private String fileName = "simple_file.txt";
 
     public Map<String, Long> createWordMap() {
         Map<String, Long> map = new HashMap<>();
         try {
             String text = new String(Files.readAllBytes(
-                    resourceDir.resolve(fileName)), "UTF-8");
+                    resourceDir.resolve(fileName)), StandardCharsets.UTF_8);
             String[] words = text.split("\\W+");
             map = Arrays.stream(words)
                     .map(String::toLowerCase)

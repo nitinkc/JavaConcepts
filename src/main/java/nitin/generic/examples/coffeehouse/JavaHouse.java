@@ -125,7 +125,7 @@ public class JavaHouse {
      */
     public <T> long countTypes(T coffeeType) {
         long count = purchase.stream().filter(
-                (sale) -> (sale.getType().getType().equals(coffeeType)))
+                        (sale) -> (sale.getType().getType().equals(coffeeType)))
                 .count();
         return count;
     }
@@ -135,7 +135,8 @@ public class JavaHouse {
      * the individual CoffeeType from each element within the purchase list.  It
      * then determines if the CoffeeType is an instance of Dark, Medium, or Light,
      * and places it into the appropriate container.
-     * @param coffeeSale 
+     *
+     * @param coffeeSale
      */
     public void sortByCoffeeStrength(List<? extends CoffeeSaleType> coffeeSale) {
         for (CoffeeSaleType saleType : coffeeSale) {

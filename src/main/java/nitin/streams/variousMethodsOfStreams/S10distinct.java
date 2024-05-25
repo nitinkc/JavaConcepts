@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
  */
 public class S10distinct {
     public static void main(String[] args) {
-        List<Integer> intList = Arrays.asList(1, 2, 2,3,3,3,3, 4, 5, 6, 7, 8, 9);
+        List<Integer> intList = Arrays.asList(1, 2, 2, 3, 3, 3, 3, 4, 5, 6, 7, 8, 9);
 
         List<Integer> collect = intList.stream()
                 .distinct()//What to do without bothering how to do

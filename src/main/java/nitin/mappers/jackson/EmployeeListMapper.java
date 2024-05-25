@@ -27,8 +27,9 @@ public class EmployeeListMapper {
         //File from = new File("src/main/resources/json/array-a5object-mapper.json");
         //File from = new File("src/main/resources/json/single-a5object-mapper.json");
 
-        TypeReference<List<HashMap<String,Object>>> typeRef
-                = new TypeReference<List<HashMap<String,Object>>>() {};
+        TypeReference<List<HashMap<String, Object>>> typeRef
+                = new TypeReference<List<HashMap<String, Object>>>() {
+        };
 
         List<HashMap<String, Object>> employees = objectMapper.readValue(url, typeRef);
 //        for(Employee employee : employees){
@@ -41,8 +42,9 @@ public class EmployeeListMapper {
     }
 
     private static void typeRefForArray(ObjectMapper objectMapper, URL url) throws IOException {
-        final List<Employee> employees = objectMapper.readValue(url, new TypeReference<List<Employee>>() {});
-        for(Employee employee : employees){
+        final List<Employee> employees = objectMapper.readValue(url, new TypeReference<List<Employee>>() {
+        });
+        for (Employee employee : employees) {
             //Removing the empty addresses
             employee.setAddresses(filterEmptyObjects(employee.getAddresses()));
         }

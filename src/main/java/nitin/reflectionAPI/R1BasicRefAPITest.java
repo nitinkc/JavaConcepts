@@ -162,7 +162,6 @@ class Nitin {
 
     public void m1() {
         //Any method
-        return;
     }
 
     public int m2() {

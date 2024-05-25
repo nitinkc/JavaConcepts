@@ -117,7 +117,7 @@ public class Driver8 {
                 printToFile.println(curr.aggragateCities());
             } else {
                 currentPopulation = curr.getPopulation();
-                printToFile.println(curr.toString());
+                printToFile.println(curr);
             }
         }
 

@@ -1,6 +1,5 @@
 # Operators
 
-
 # Operators
 
 1. **Increment / Decrement (`++`, `--`)**
@@ -60,4 +59,5 @@
 14. **Evaluation Order of Java Operands**
     - Specifies the order in which operands are evaluated in an expression.
 
-Note: Operator precedence and operand evaluation order are crucial for understanding how expressions are processed in Java. Always use parentheses to clarify and control the order of evaluation when needed.
+Note: Operator precedence and operand evaluation order are crucial for understanding how expressions are processed in
+Java. Always use parentheses to clarify and control the order of evaluation when needed.

@@ -34,6 +34,28 @@ class Car1 {
         return self;
     }
 
+    /*********************************************************************************************************************
+     * *******************************************************************************************************************
+     * *******************************************************************************************************************
+     ********************************************************************************************************************/
+
+    // Factory for creating GasLevelCarCriterion using anonymous inner class. Variable is shared between lambda.
+    // Its effectively final. Can be used, but cannot be modified
+    public static Criteria<Car1> getGasLevelCarCriterion(int threshold) {
+
+        //threshold = threshold + 1;//Variable 'threshold' is accessed from within inner class, needs to be final or effectively final
+        return new Criteria<Car1>() {
+            @Override
+            public boolean test(Car1 car1) {
+                return car1.getGasLevel() >= threshold;
+            }
+        };
+    }
+
+    public static Criteria<Car1> getGasLevelCarCriterionLambda(int threshold) {
+        return car1 -> car1.getGasLevel() >= threshold;
+    }
+
     public int getGasLevel() {
         return gasLevel;
     }
@@ -63,28 +85,6 @@ class Car1 {
     public String toString() {
         return "Car{" + "gasLevel=" + gasLevel + ", color=" + color + ", passengers=" + passengers
                 + (trunkContents != null ? ", trunkContents=" + trunkContents : " no trunk") + '}';
-    }
-
-    /*********************************************************************************************************************
-     * *******************************************************************************************************************
-     * *******************************************************************************************************************
-     ********************************************************************************************************************/
-
-    // Factory for creating GasLevelCarCriterion using anonymous inner class. Variable is shared between lambda.
-    // Its effectively final. Can be used, but cannot be modified
-    public static Criteria<Car1> getGasLevelCarCriterion(int threshold) {
-
-        //threshold = threshold + 1;//Variable 'threshold' is accessed from within inner class, needs to be final or effectively final
-        return new Criteria<Car1>() {
-            @Override
-            public boolean test(Car1 car1) {
-                return car1.getGasLevel() >= threshold;
-            }
-        };
-    }
-
-    public static Criteria<Car1> getGasLevelCarCriterionLambda(int threshold) {
-        return car1 -> car1.getGasLevel() >= threshold;
     }
 
   /*private static class GasLevelCarCriterion implements Criteria<Car1> {

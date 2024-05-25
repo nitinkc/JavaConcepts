@@ -14,8 +14,9 @@ public class A12ThenCombine {
      * Completion stage method
      * used to combine Independent Completable Futures
      * Takes two arguments
-     *      CompletionStage, BiFunction
+     * CompletionStage, BiFunction
      * Returns a CompletableFuture
+     *
      * @param args
      */
     public static void main(String[] args) {
@@ -32,6 +33,7 @@ public class A12ThenCombine {
         future4.thenAccept(data -> System.out.println(data)).join();
         System.out.println("--------------------------");
     }
+
     //Combining Two Completable Futures
     public static CompletableFuture<String> fullNameService() {
 
@@ -42,7 +44,7 @@ public class A12ThenCombine {
         CompletableFuture<String> fullNameCompletableFuture =
                 firstName
                         .thenCombine(lastName, (fn, ln) -> getAppendedString(fn, ln))//Completion stage is the last name service.
-                .thenApply(completeName -> completeName.toUpperCase());
+                        .thenApply(completeName -> completeName.toUpperCase());
 
         return fullNameCompletableFuture;
     }
@@ -58,10 +60,12 @@ public class A12ThenCombine {
 
         CompletableFuture<String> fullNameCompletableFuture =
                 greetings.thenCombine(firstName, (previous, current) -> {
-                    return previous + " " + current;})
-                .thenCombine(lastName, (fn, ln) -> {
-                    return new StringBuilder().append(fn).append(" ").append(ln).toString();})//Completion stage is the last name service.
-                .thenApply(completeName -> completeName.toUpperCase());
+                            return previous + " " + current;
+                        })
+                        .thenCombine(lastName, (fn, ln) -> {
+                            return fn + " " + ln;
+                        })//Completion stage is the last name service.
+                        .thenApply(completeName -> completeName.toUpperCase());
 
         return fullNameCompletableFuture;
     }
@@ -86,16 +90,15 @@ public class A12ThenCombine {
         });
 
         CompletableFuture<String> fullNameCompletableFuture =
-                    intro.thenCombine(firstName, (previous, current) -> getAppendedString(previous,current)) //previous is greeting, current is first name
+                intro.thenCombine(firstName, (previous, current) -> getAppendedString(previous, current)) //previous is greeting, current is first name
                         .thenCombine(lastName, (fn, ln) -> getAppendedString(fn, ln))//Completion stage is the last name service.
-                        .thenCombine(extro, (prev, curr) -> prev+curr)
-                        .thenApply(completeName -> completeName.toUpperCase())
-                ;
+                        .thenCombine(extro, (prev, curr) -> prev + curr)
+                        .thenApply(completeName -> completeName.toUpperCase());
 
         return fullNameCompletableFuture;
     }
 
     private static String getAppendedString(String str1, String str2) {
-        return new StringBuilder().append(str1).append(" ").append(str2).toString();
+        return str1 + " " + str2;
     }
 }

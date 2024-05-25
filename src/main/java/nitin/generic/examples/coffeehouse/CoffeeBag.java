@@ -2,11 +2,11 @@ package nitin.generic.examples.coffeehouse;
 
 
 public class CoffeeBag implements Bag {
-    
+
     private double ounces;
     private CoffeeType type;
-    
-    public CoffeeBag(CoffeeType type, double ounces){
+
+    public CoffeeBag(CoffeeType type, double ounces) {
         this.type = type;
         this.ounces = ounces;
     }

@@ -8,16 +8,6 @@ package nitin.multithreading.aBasics;
 public class T1ThreadRunsParentDies extends Thread {// by overriding run method
     static final int MAX = 500;
 
-    @Override
-    public void run() {
-        int count = 1;
-
-        for (int i = 1; i <= MAX; i++) {
-            System.out.print(Thread.currentThread());
-            System.out.println(" : Child Thread execution : " + i);
-        }
-    }
-
     public static void main(String[] args) {
         //Starting the Thread
         new T1ThreadRunsParentDies().start();
@@ -30,6 +20,16 @@ public class T1ThreadRunsParentDies extends Thread {// by overriding run method
             System.out.println("Main Thread execution" + i);
         }
 
+    }
+
+    @Override
+    public void run() {
+        int count = 1;
+
+        for (int i = 1; i <= MAX; i++) {
+            System.out.print(Thread.currentThread());
+            System.out.println(" : Child Thread execution : " + i);
+        }
     }
 
 }

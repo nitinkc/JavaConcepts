@@ -9,9 +9,12 @@ import java.util.function.Predicate;
 import static nitin.LambdaExpressions.t1Lambdas.lambdas4.function.FunctionUtils.*;
 
 public class HigherOrderFunctionExamples {
-    private static List<Employee> employees = EmployeeSamples.getSampleEmployees();
-    private static List<String> words =
+    private static final List<Employee> employees = EmployeeSamples.getSampleEmployees();
+    private static final List<String> words =
             Arrays.asList("hi", "hello", "hola", "bye", "goodbye", "adios");
+
+    private HigherOrderFunctionExamples() {
+    }
 
     public static void main(String[] args) {
         //predicateExamples();
@@ -96,8 +99,5 @@ public class HigherOrderFunctionExamples {
         Function<Integer, Predicate<Employee>> makeIsRichPredicate = salaryLowerBound -> (e -> e.getSalary() > salaryLowerBound);
         List<Employee> richEmployees2 = allMatches(employees, makeIsRichPredicate.apply(200_000));
         System.out.printf("Rich employees [via Function that returns Predicate]: %s.%n", richEmployees2);
-    }
-
-    private HigherOrderFunctionExamples() {
     }
 }

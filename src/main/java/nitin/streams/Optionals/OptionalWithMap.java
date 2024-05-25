@@ -12,6 +12,6 @@ public class OptionalWithMap {
 
         String test = map.get(5);
 
-        System.out.println((String) test);
+        System.out.println(test);
     }
 }

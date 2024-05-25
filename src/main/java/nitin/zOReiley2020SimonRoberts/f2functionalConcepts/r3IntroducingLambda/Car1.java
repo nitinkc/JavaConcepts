@@ -5,6 +5,23 @@ import java.util.Collections;
 import java.util.List;
 
 class Car1 {
+    /*********************************************************************************************************************
+     * *******************************************************************************************************************
+     * *******************************************************************************************************************
+     ********************************************************************************************************************/
+
+    //Anonymous Inner Class
+  /*private static final CarRunner1.CarCriteria1 RED_CAR_CRITERION = new CarRunner1.CarCriteria1() {
+  @Override
+  public boolean test(Car1 car) {
+    return car.getColor().equals("Red");
+  }
+};*/
+
+    //Replacing anony. class with Lambda
+    private static final CarCriteria1 RED_CAR_CRITERION = (Car1 car) -> {
+        return car.getColor().equals("Red");
+    };// This colon is marking the end of the assignment of the LHS
     //Fields of Class Car
     private final int gasLevel;
     private final String color;
@@ -33,6 +50,15 @@ class Car1 {
         return self;
     }
 
+    public static CarCriteria1 getRedCarCriterion() {
+        return RED_CAR_CRITERION; //This is Singleton design pattern.
+        //return new RedCarCriterion();
+    }
+
+    public static CarCriteria1 getGasLevelCarCriterion(int threshold) {
+        return new GasLevelCarCriterion(threshold);
+    }
+
     public int getGasLevel() {
         return gasLevel;
     }
@@ -53,6 +79,9 @@ class Car1 {
         return trunkContents;
     }
 
+    //Simplified
+    //private static final CarRunner1.CarCriteria1 RED_CAR_CRITERION =  c ->  c.getColor().equals("Red");
+
     //This could return null; DELIBERATELY WRITTEN FOR DEMO
     public List<String> getTrunkContentsOpt() {
         return (trunkContents);
@@ -64,38 +93,8 @@ class Car1 {
                 + (trunkContents != null ? ", trunkContents=" + trunkContents : " no trunk") + '}';
     }
 
-    /*********************************************************************************************************************
-     * *******************************************************************************************************************
-     * *******************************************************************************************************************
-     ********************************************************************************************************************/
-
-    //Anonymous Inner Class
-  /*private static final CarRunner1.CarCriteria1 RED_CAR_CRITERION = new CarRunner1.CarCriteria1() {
-  @Override
-  public boolean test(Car1 car) {
-    return car.getColor().equals("Red");
-  }
-};*/
-
-    //Replacing anony. class with Lambda
-    private static final CarCriteria1 RED_CAR_CRITERION = (Car1 car) -> {
-        return car.getColor().equals("Red");
-    };// This colon is marking the end of the assignment of the LHS
-
-    //Simplified
-    //private static final CarRunner1.CarCriteria1 RED_CAR_CRITERION =  c ->  c.getColor().equals("Red");
-
-    public static CarCriteria1 getRedCarCriterion() {
-        return RED_CAR_CRITERION; //This is Singleton design pattern.
-        //return new RedCarCriterion();
-    }
-
-    public static CarCriteria1 getGasLevelCarCriterion(int threshold) {
-        return new GasLevelCarCriterion(threshold);
-    }
-
     private static class GasLevelCarCriterion implements CarCriteria1 {
-        private int threshold;
+        private final int threshold;
 
         public GasLevelCarCriterion(int threshold) {
             this.threshold = threshold;

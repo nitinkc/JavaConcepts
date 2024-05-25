@@ -37,10 +37,10 @@ public class S7SUIDConcepts {
 // provided serialversion uid is not defined explicitly
 class Serialtest implements Serializable {
     private static final long serialVersionUID = 1L;
+    static int x = 0; // static variables are not serialized  212236
     // serialversionuid is computed by compiler
     int a;
     int f;
-    static int x = 0; // static variables are not serialized  212236
     transient int y = 0;// transient variables are not serialized
     int bb = 0;
 

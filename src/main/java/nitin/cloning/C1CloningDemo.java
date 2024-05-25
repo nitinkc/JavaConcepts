@@ -25,6 +25,13 @@ class Stock implements Cloneable {
     int price;
     String name;
 
+    //Constructor
+    public Stock(int price, String name) {
+        super();
+        this.price = price;
+        this.name = name;
+    }
+
     public int getPrice() {
         return price;
     }
@@ -38,13 +45,6 @@ class Stock implements Cloneable {
     }
 
     public void setName(String name) {
-        this.name = name;
-    }
-
-    //Constructor
-    public Stock(int price, String name) {
-        super();
-        this.price = price;
         this.name = name;
     }
 

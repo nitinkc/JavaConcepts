@@ -25,7 +25,7 @@ public class PerformanceTests {
     private static ArrayList<Integer> list2;
     private static LinkedList<Integer> list3;
     private static ArrayList<Integer> list4;
-    private static String message = "%s entries in %s with %,d elements.%n";
+    private static final String message = "%s entries in %s with %,d elements.%n";
 
     public static void main(String[] args) {
         profileRemoveIf();

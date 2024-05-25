@@ -1,5 +1,6 @@
 package nitin.generic.oReilly.types;
 
+import java.util.Objects;
 import java.util.function.Function;
 
 public class Pair<F, S> {
@@ -41,12 +42,10 @@ public class Pair<F, S> {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Pair)) return false;
+        if (!(o instanceof Pair<?, ?> pair)) return false;
 
-        Pair<?, ?> pair = (Pair<?, ?>) o;
-
-        if (first != null ? !first.equals(pair.first) : pair.first != null) return false;
-        return second != null ? second.equals(pair.second) : pair.second == null;
+        if (!Objects.equals(first, pair.first)) return false;
+        return Objects.equals(second, pair.second);
     }
 
     @Override

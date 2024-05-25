@@ -5,6 +5,9 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class FunctionUtils {
+    public FunctionUtils() {
+    } // Uninstantiatable class; static methods only
+
     /**
      * Returns first entry from list that passes the match function. This is
      * a generalized version of EmployeeUtils.firstMatchingEmployee.
@@ -33,7 +36,4 @@ public class FunctionUtils {
     public static int mapSum(List<Integer> entries) {
         return (mapSum(entries, Function.identity()));
     }
-
-    public FunctionUtils() {
-    } // Uninstantiatable class; static methods only
 }

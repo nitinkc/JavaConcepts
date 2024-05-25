@@ -22,7 +22,7 @@ public class A0DefiningCompletableFuture {
         System.out.println("main: " + Thread.currentThread());
 
         getStringCompletableFuture(dataFetchService)
-                .thenAccept(greetings -> System.out.println("Message received from supply Async: "+greetings))
+                .thenAccept(greetings -> System.out.println("Message received from supply Async: " + greetings))
         ;
 
         //delay(1000);//Introducing delays to let the completable future finish without using join or get

@@ -2,7 +2,7 @@ package com.converter.entityConverter;
 
 public class ConverterRunner {
 
-    private static EntityConverterImpl entityConverter = new EntityConverterImpl();
+    private static final EntityConverterImpl entityConverter = new EntityConverterImpl();
 
     public static void main(String[] args) {
 

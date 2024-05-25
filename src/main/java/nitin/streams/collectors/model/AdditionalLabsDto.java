@@ -1,4 +1,3 @@
-
 package nitin.streams.collectors.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

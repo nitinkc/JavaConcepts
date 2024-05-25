@@ -23,7 +23,7 @@ public class JoiningElements {
         String list2 = list.stream()
                 .map(String::toUpperCase)
                 .collect(Collectors.joining(" && "));
-                        
+
         System.out.println(list2);
     }
 }

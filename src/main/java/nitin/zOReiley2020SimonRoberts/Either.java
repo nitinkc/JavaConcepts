@@ -22,6 +22,16 @@ public class Either<E> {
         return self;
     }
 
+    public static <E, F> Function<E, Either<F>> wrap(ExceptionFunction<E, F> f) {
+        return e -> {
+            try {
+                return Either.success(f.apply(e));
+            } catch (Throwable t) {
+                return Either.failure(t);
+            }
+        };
+    }
+
     public boolean succeeded() {
         return value != null;
     }
@@ -48,15 +58,5 @@ public class Either<E> {
         if (problem != null) {
             cons.accept(problem);
         }
-    }
-
-    public static <E, F> Function<E, Either<F>> wrap(ExceptionFunction<E, F> f) {
-        return e -> {
-            try {
-                return Either.success(f.apply(e));
-            } catch (Throwable t) {
-                return Either.failure(t);
-            }
-        };
     }
 }

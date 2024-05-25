@@ -13,6 +13,9 @@ import java.util.Arrays;
  */
 
 public class ArrayUtils {
+    private ArrayUtils() {
+    }
+
     /**
      * Prints an array by turning it into a List, then printing the List.
      * Lists already have useful toString methods that print the individual
@@ -36,8 +39,5 @@ public class ArrayUtils {
         System.out.printf("%s}%n", entries[lastIndex]);
     }
 
-    private ArrayUtils() {
-    }
-
-    ; // Uninstantiatable class; contains only static methods.
+    // Uninstantiatable class; contains only static methods.
 }

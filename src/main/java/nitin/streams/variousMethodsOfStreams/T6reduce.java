@@ -21,7 +21,7 @@ public class T6reduce {
     }
 
     public static void m2() {
-        List<Integer> intStream = List.of(1, 2, 3, 4, 5, 6, 7,8,9,10);
+        List<Integer> intStream = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
         Integer reduced = intStream.stream()
                 .reduce(0, (a, b) -> a + b);

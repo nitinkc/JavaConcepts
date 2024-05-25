@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 public class PrimeMap {
-    private static Map<Integer, BigInteger> primes = new HashMap<>();
+    private static final Map<Integer, BigInteger> primes = new HashMap<>();
 
     public static void main(String[] args) {
         List<Integer> lengths = Arrays.asList(2, 10, 20, 100, 200);

@@ -24,10 +24,11 @@ public class AdvancedGrouping {
 
     public static void main(String[] args) {
 
-        List<Map<String,Object>> data = new ArrayList<>();
+        List<Map<String, Object>> data = new ArrayList<>();
         try {
             String response = getJsonStringFromFile("src/main/resources/json/groupingBy.json");
-            data = mapper.readValue(response, new TypeReference<>() {});
+            data = mapper.readValue(response, new TypeReference<>() {
+            });
         } catch (IOException e) {
             log.info(e.getMessage());
         }
@@ -53,7 +54,8 @@ public class AdvancedGrouping {
         List<? extends LabBase> labs = null;//list that contains elements of a type that is either LabBase or any subtype of LabBase
         Function<List<? extends LabBase>, Map<String, LabDetail>> buildLabDetailsMap = null;
 
-        List<AdditionalLab> additionalLabsDto = mapper.convertValue(data, new TypeReference<List<AdditionalLab>>() {});
+        List<AdditionalLab> additionalLabsDto = mapper.convertValue(data, new TypeReference<List<AdditionalLab>>() {
+        });
         labs = additionalLabsDto;
 
         return getMaps(labs, header);
@@ -74,8 +76,8 @@ public class AdvancedGrouping {
     }
 
     private static List<Map<String, Object>> getCrossTabMaps(List<? extends LabBase> labs,
-                                                      Function<List<? extends LabBase>, Map<String, LabDetail>> buildLabDetailsMap,
-                                                      List<Header> header) {
+                                                             Function<List<? extends LabBase>, Map<String, LabDetail>> buildLabDetailsMap,
+                                                             List<Header> header) {
 
         labs.sort(Comparator
                 .comparing(LabBase::getSortOrder, Comparator.naturalOrder())
@@ -87,7 +89,8 @@ public class AdvancedGrouping {
                 .header(header)
                 .labDetails(new ArrayList<>(labDetailsMap.values()))
                 .build();
-        Map<String, Object> additionalLabsMap = mapper.convertValue(crossTable, new TypeReference<Map<String, Object>>() {});
+        Map<String, Object> additionalLabsMap = mapper.convertValue(crossTable, new TypeReference<Map<String, Object>>() {
+        });
 
         List<Map<String, Object>> returnList = new ArrayList<>();
         returnList.add(additionalLabsMap);

@@ -11,7 +11,9 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class Tester {
-    @JsonProperty("tester") private Double test;
-    @JsonProperty("testerList") private List<Double> testList;
+    @JsonProperty("tester")
+    private Double test;
+    @JsonProperty("testerList")
+    private List<Double> testList;
 
 }

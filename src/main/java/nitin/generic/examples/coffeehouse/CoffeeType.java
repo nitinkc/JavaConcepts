@@ -1,11 +1,8 @@
-
-
 package nitin.generic.examples.coffeehouse;
 
 import java.util.List;
 
 /**
- *
  * @author Juneau
  */
 public abstract class CoffeeType {
@@ -18,10 +15,10 @@ public abstract class CoffeeType {
     static final String MEDIUM = "MEDIUM";
     static final String GROUND = "GROUND";
     static final String WHOLE_BEAN = "WHOLE_BEAN";
-    
-    public Class<? extends CoffeeType> getType(){
+
+    public Class<? extends CoffeeType> getType() {
         return this.getClass();
-    };
-    
+    }
+
     public abstract List<String> getDescription();
 }

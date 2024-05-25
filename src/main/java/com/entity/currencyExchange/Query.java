@@ -8,9 +8,9 @@ import lombok.*;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "from",
-    "to",
-    "amount"
+        "from",
+        "to",
+        "amount"
 })
 @Getter
 @Setter

@@ -16,15 +16,15 @@ public class DataTransformationFunctions {
                 StringBuilder carOptionsBuilder = new StringBuilder();
                 StringBuilder specsBuilder = new StringBuilder();
 
-                for (int i = 0; i < vehicle.getCarOptions().size()-1; i++) {
+                for (int i = 0; i < vehicle.getCarOptions().size() - 1; i++) {
                     carOptionsBuilder.append(vehicle.getCarOptions().get(i)).append(";");
                 }
-                carOptionsBuilder.append(vehicle.getCarOptions().get(vehicle.getCarOptions().size()-1));//Off by one
+                carOptionsBuilder.append(vehicle.getCarOptions().get(vehicle.getCarOptions().size() - 1));//Off by one
 
-                for (int i = 0; i < vehicle.getSpecs().size()-1; i++) {
+                for (int i = 0; i < vehicle.getSpecs().size() - 1; i++) {
                     specsBuilder.append(vehicle.getSpecs().get(i)).append(";");
                 }
-                specsBuilder.append(vehicle.getSpecs().get(vehicle.getSpecs().size()-1));//Off by one
+                specsBuilder.append(vehicle.getSpecs().get(vehicle.getSpecs().size() - 1));//Off by one
 
                 return VehicleTransformed.builder()
                         .carOptions(carOptionsBuilder.toString())
@@ -52,11 +52,9 @@ public class DataTransformationFunctions {
 
                 //Transformed
                 covidIndiaTransformed.setDate(ZonedDateTime.parse(covidIndia.getDate()));
-                covidIndiaTransformed.setCityAndState(new StringBuilder()
-                        .append(covidIndia.getCity())
-                        .append(", ")
-                        .append(covidIndia.getProvince())
-                        .toString());
+                covidIndiaTransformed.setCityAndState(covidIndia.getCity() +
+                        ", " +
+                        covidIndia.getProvince());
 
                 //As it is
                 covidIndiaTransformed.setActive(covidIndia.getActive());

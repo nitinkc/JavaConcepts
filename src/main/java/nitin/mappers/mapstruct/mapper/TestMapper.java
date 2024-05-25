@@ -7,7 +7,7 @@ import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "default")
 public interface TestMapper {
-    @Mapping(target="test", source="tester.test", numberFormat = "₹#.00")
+    @Mapping(target = "test", source = "tester.test", numberFormat = "₹#.00")
     TesterDto testMapper(Tester tester);
 
 //    @Mapping(target = "test", source = "tester")

@@ -14,18 +14,18 @@ public class Example2 {
         // Calling the method with a lambda expression
         System.out.println(myApp.playBiFunction("Hello ", "World!", (a, b) -> a.concat(b)));
         // Reference to an instance method of an **arbitrary a5object** of a particular type
-        System.out.println(myApp.playBiFunction("Hello ","World!", String::concat));
+        System.out.println(myApp.playBiFunction("Hello ", "World!", String::concat));
         // Reference to an **instance method** of a particular a5object
-        System.out.println(myApp.playBiFunction("Hello ","World!", ((a,b) -> myApp.appendStrings(a,b))));
-        System.out.println(myApp.playBiFunction("Hello ","World!", myApp::appendStrings));
+        System.out.println(myApp.playBiFunction("Hello ", "World!", ((a, b) -> myApp.appendStrings(a, b))));
+        System.out.println(myApp.playBiFunction("Hello ", "World!", myApp::appendStrings));
 
         // Reference to a static method
         System.out.println(myApp.playBiFunction("Hello ", "World!", MethodReferences::staticAppendStrings));
 
         // Calling Static method From Math Library
-        System.out.println(myApp.playBiFunction(3.0,4.0, (x,y) -> Math.hypot(x,y)));
+        System.out.println(myApp.playBiFunction(3.0, 4.0, (x, y) -> Math.hypot(x, y)));
         // Reference to a static method
-        System.out.println(myApp.playBiFunction(3.0,4.0, Math::hypot));
+        System.out.println(myApp.playBiFunction(3.0, 4.0, Math::hypot));
 
         /************************************* ANOTHER EXAMPLE *****************************************************/
         List<EmployeeSimple> list = SampleData.getSimpleEmployees();

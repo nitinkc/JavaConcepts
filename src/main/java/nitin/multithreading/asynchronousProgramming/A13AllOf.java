@@ -21,20 +21,23 @@ public class A13AllOf {
         CompletableFuture<String> lastNameFuture = CompletableFuture
                 .supplyAsync(() -> dataFetchService.lastNameService(1000));
         CompletableFuture<String> exclaim = CompletableFuture.supplyAsync(() -> "!!");
-        stopTimer();resetTimer();
+        stopTimer();
+        resetTimer();
 
 
         startTimer();
         List<CompletableFuture<String>> completableFutures = List.of(helloFuture,
                 firstNameFuture, lastNameFuture, exclaim);
-        stopTimer();resetTimer();
+        stopTimer();
+        resetTimer();
 
 
         startTimer();
         CompletableFuture<Void> resultantCf = CompletableFuture
                 .allOf(completableFutures
                         .toArray(new CompletableFuture[completableFutures.size()]));
-        stopTimer();resetTimer();
+        stopTimer();
+        resetTimer();
 
 
         startTimer();
@@ -43,7 +46,8 @@ public class A13AllOf {
                         .stream()
                         .map(CompletableFuture::join)
                         .collect(Collectors.toList()));
-        stopTimer();resetTimer();
+        stopTimer();
+        resetTimer();
 
         try {
             startTimer();
@@ -51,7 +55,8 @@ public class A13AllOf {
             List<String> resultString = allFutureResults.get();//Actual Execution of all methods
             System.out.println("After Get");
 
-            stopTimer();resetTimer();
+            stopTimer();
+            resetTimer();
 
             System.out.println("Result - " + resultString);
         } catch (InterruptedException | ExecutionException e) {

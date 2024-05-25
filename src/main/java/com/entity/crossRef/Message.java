@@ -1,4 +1,3 @@
-
 package com.entity.crossRef;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -13,11 +12,11 @@ import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "facets",
-    "total-results",
-    "items",
-    "items-per-page",
-    "query"
+        "facets",
+        "total-results",
+        "items",
+        "items-per-page",
+        "query"
 })
 @AllArgsConstructor
 @NoArgsConstructor

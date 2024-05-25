@@ -28,12 +28,12 @@ public class MultiMapperRunner {
         CompletableFuture<List<Beer>> beers = CompletableFuture.supplyAsync(() -> InternetUtilities.getBeers(2));
         CompletableFuture<List<Vehicle>> vehicles = CompletableFuture.supplyAsync(() -> RestGETReadUtility.getRandomVehicles(2));
 
-        PersonDto personDto = mapper.personMapper(employee.join(),beers.join().get(0), vehicles.join().get(0));
+        PersonDto personDto = mapper.personMapper(employee.join(), beers.join().get(0), vehicles.join().get(0));
 
         System.out.println(om.writerWithDefaultPrettyPrinter().writeValueAsString(personDto));
     }
 
-    private static Employee getEmployee(URL resource, ObjectMapper om)  {
+    private static Employee getEmployee(URL resource, ObjectMapper om) {
         Employee employee = new Employee();
         try {
             employee = om.readValue(resource, Employee.class);
@@ -46,13 +46,13 @@ public class MultiMapperRunner {
     private static void checkIfNeeded(Employee employee) {
         //Removing the empty addresses
         employee.setAddresses(employee.getAddresses().stream()
-                        .filter(singleAddress -> (
-                                null != singleAddress.getAddressLine1() ||
+                .filter(singleAddress -> (
+                        null != singleAddress.getAddressLine1() ||
                                 null != singleAddress.getAddressLine2() ||
                                 null != singleAddress.getCity() ||
                                 null != singleAddress.getState() ||
                                 null != singleAddress.getZip()
-                        )).collect(Collectors.toList()));
+                )).collect(Collectors.toList()));
 
         //String jsonString = om.writerWithDefaultPrettyPrinter().writeValueAsString(employee);
         //System.out.println(jsonString);

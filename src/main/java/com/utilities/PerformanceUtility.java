@@ -6,20 +6,20 @@ public class PerformanceUtility {
 
     public static StopWatch stopWatch = new StopWatch();
 
-    public static void startTimer(){
+    public static void startTimer() {
         stopWatch.start();
     }
 
-    public static void stopTimer(){
+    public static void stopTimer() {
         stopWatch.stop();
-        System.out.println("Total Execution Time in milliseconds: " +stopWatch.getTime() + " ms");
+        System.out.println("Total Execution Time in milliseconds: " + stopWatch.getTime() + " ms");
     }
 
-    public static void resetTimer(){
+    public static void resetTimer() {
         stopWatch.reset();
     }
 
-    public static int noOfCores(){
+    public static int noOfCores() {
         return Runtime.getRuntime().availableProcessors();
     }
 }

@@ -17,7 +17,7 @@ public class A1WithJoin {
                     return dataFetchService.greetingsService(1000);
                 })
                 .thenApply(String::toUpperCase)
-                .thenAccept(greetings -> System.out.println("Message received from supply Async: "+greetings + ": " + Thread.currentThread()))
+                .thenAccept(greetings -> System.out.println("Message received from supply Async: " + greetings + ": " + Thread.currentThread()))
                 .join()//Blocks the main thread until the supplyAsync is done
         ;
 

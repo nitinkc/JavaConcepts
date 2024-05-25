@@ -42,7 +42,7 @@ public class Test {
 
         List<CareCategory> anemiaCareCategory = anemiaLabs.get(0).getCareCategory();//Add the empty labs in this
 
-        if(anemiaCareCategory.size() != ANEMIA_LABS.size()) {//8 Anemia labs hardcoded if all 8 are present, send as is, else fill with empty
+        if (anemiaCareCategory.size() != ANEMIA_LABS.size()) {//8 Anemia labs hardcoded if all 8 are present, send as is, else fill with empty
             for (CareCategory singleCareCategory : anemiaCareCategory) {
                 //Fill the Anemia Labs map to find the delta
                 anemiaLabsMap.put(singleCareCategory.getLabTestName(), Boolean.TRUE);
@@ -56,7 +56,7 @@ public class Test {
             Boolean isAnemic = entry.getValue();
             // Check if the value is false
             if (!isAnemic) {
-                CareCategory careCategoryDTO =  CareCategory.builder()
+                CareCategory careCategoryDTO = CareCategory.builder()
                         .labTestName(labTest)
                         .currentMonth(List.of())
                         .previousMonth(List.of())
@@ -82,7 +82,7 @@ public class Test {
         }
 
         try {
-            example = mapper.readValue(resource, Example.class );
+            example = mapper.readValue(resource, Example.class);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -26,7 +26,7 @@ public class ButtonFrame1 extends JFrameBase {
     }
 
     private class ColorChanger implements ActionListener {
-        private Color bgColor;
+        private final Color bgColor;
 
         public ColorChanger(Color bgColor) {
             this.bgColor = bgColor;

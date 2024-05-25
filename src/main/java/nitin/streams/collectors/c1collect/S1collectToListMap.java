@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
  */
 public class S1collectToListMap {
     public static void main(String[] args) {
-        List<String> list = List.of("Pawan","Chiranjeevi","RaviTeja","Venkatesh","Nagarjuna");
+        List<String> list = List.of("Pawan", "Chiranjeevi", "RaviTeja", "Venkatesh", "Nagarjuna");
         System.out.println(list);
 
         //Create a now list with actors having names longer than 9 characters

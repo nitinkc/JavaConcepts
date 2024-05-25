@@ -55,9 +55,7 @@ public class Driver {
             String[] interstates = temp[3].split(";");
             //Sort the interstates and then put into the Object
             Set<String> istates = new HashSet<String>();
-            for (String str : interstates) {
-                istates.add(str);
-            }
+            Collections.addAll(istates, interstates);
             tempData.setInterstates(istates);
 
             list.add(tempData);

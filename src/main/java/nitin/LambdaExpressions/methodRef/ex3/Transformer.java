@@ -10,9 +10,9 @@ public class Transformer {
         // EmployeeSimple -> Simpleemployee conversion
         SimpleEmployee simpleEmployee = SimpleEmployee.builder()
                 .name(emp.getName())
-                .jobLevel(Character.toString(emp.getLevel()) +SPACE+
-                        Integer.toString(emp.getExperience()) +SPACE+
-                        Integer.toString(emp.getAge()))
+                .jobLevel(emp.getLevel() + SPACE +
+                        emp.getExperience() + SPACE +
+                        emp.getAge())
                 .salary(Double.toString(emp.getSalary()))
                 .build();
         return simpleEmployee;

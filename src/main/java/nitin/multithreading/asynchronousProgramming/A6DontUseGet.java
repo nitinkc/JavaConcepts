@@ -5,7 +5,7 @@ import java.util.concurrent.CompletableFuture;
 import static com.utilities.MultiThreadUtility.delay;
 
 public class A6DontUseGet {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         CompletableFuture<Double> future = getData();
 
         System.out.println("Before running the pileline");
@@ -26,7 +26,7 @@ public class A6DontUseGet {
         System.out.println("Should run first if there is a delay from the Async task getData()");
     }
 
-    public static CompletableFuture<Double> getData(){
+    public static CompletableFuture<Double> getData() {
         return CompletableFuture.supplyAsync(() -> compute());
     }
 

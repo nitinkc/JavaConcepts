@@ -6,7 +6,7 @@ import java.util.Collections;
 public class ParentDtoSingletonList {
     public static void main(String[] args) {
         ParentDto parentDto = ParentDto.builder()
-                .integerList(Arrays.asList(3,1,8,6,9,7))
+                .integerList(Arrays.asList(3, 1, 8, 6, 9, 7))
                 .stringList(Arrays.asList("quit", "squid", "book", "bookkeeper", "keep", "steep"))
                 .build();
 

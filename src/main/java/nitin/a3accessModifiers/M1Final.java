@@ -12,14 +12,6 @@ public class M1Final {
         finalString = s;
     }
 
-    public void setM1Final(String s) {
-        finalString = s;
-    }
-
-    public String getM1Final() {
-        return finalString;
-    }
-
     public static void main(String[] args) {
 
         // If method is declared as final, then in Child Class, not allowed to over ride
@@ -33,6 +25,14 @@ public class M1Final {
         // CHANGING THE FINAL variable
         str.setM1Final("Modi");
         System.out.println("Final String is re-b_set to : " + str.getM1Final());
+    }
+
+    public String getM1Final() {
+        return finalString;
+    }
+
+    public void setM1Final(String s) {
+        finalString = s;
     }
 
 }

@@ -10,13 +10,13 @@ import java.util.stream.Stream;
 
 @FunctionalInterface
 public interface StreamProcessor {
-    void processStream(Stream<String> strings);
-
-    public static void processFile(String filename, StreamProcessor processor) {
+    static void processFile(String filename, StreamProcessor processor) {
         try (Stream<String> lines = Files.lines(Paths.get(filename))) {
             processor.processStream(lines);
         } catch (IOException ioe) {
             System.err.println("Error reading file: " + ioe);
         }
     }
+
+    void processStream(Stream<String> strings);
 }

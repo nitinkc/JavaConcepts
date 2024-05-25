@@ -8,10 +8,6 @@ public class Squirrel {
     private String species;
     private int weight;
 
-    public String getSpecies() {
-        return species;
-    }
-
     public Squirrel(String species, int weight) {
         this.species = species;
         this.weight = weight;
@@ -22,6 +18,10 @@ public class Squirrel {
             throw new IllegalArgumentException();
         else
             this.species = theSpecies;
+    }
+
+    public String getSpecies() {
+        return species;
     }
 
     public void setSpecies(String species) {

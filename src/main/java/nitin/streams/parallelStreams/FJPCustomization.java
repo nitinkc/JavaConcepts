@@ -17,7 +17,7 @@ public class FJPCustomization {
 
         Stream<Integer> integerParallelStream =
                 list.parallelStream()
-                        .filter(num -> num * 1 == num)
+                        .filter(num -> num == num)
                         .map(num -> incrementWith1SecDelay(num))
                 //.forEach(num -> {})
                 ;
@@ -27,7 +27,8 @@ public class FJPCustomization {
 
     private static void customizingForkJoinPool(Stream<Integer> integerStream) {
         ForkJoinPool forkJoinPool = new ForkJoinPool(100);//parallelism = 100
-        forkJoinPool.submit(() -> integerStream.forEach(e -> {}));//Running the reduction operation in another method withg another thread
+        forkJoinPool.submit(() -> integerStream.forEach(e -> {
+        }));//Running the reduction operation in another method withg another thread
 
         forkJoinPool.shutdown();
 
@@ -38,7 +39,7 @@ public class FJPCustomization {
         }
     }
 
-    private static int incrementWith1SecDelay(int number){
+    private static int incrementWith1SecDelay(int number) {
         MultiThreadUtility.logMessage(String.valueOf(number));
         MultiThreadUtility.delay(1000);
         return number + 1;

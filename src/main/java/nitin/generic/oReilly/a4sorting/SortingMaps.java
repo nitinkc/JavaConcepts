@@ -10,12 +10,12 @@ import static java.util.stream.Collectors.toMap;
 public class SortingMaps<K extends Comparable<? super K>, V extends Comparable<? super V>> {
     private Map<K, V> map = new HashMap<>();
 
-    public void setMap(Map<K, V> map) {
-        this.map = map;
-    }
-
     public Map<K, V> getMap() {
         return map;
+    }
+
+    public void setMap(Map<K, V> map) {
+        this.map = map;
     }
 
     public Map<K, V> getMapSortedByKey() {

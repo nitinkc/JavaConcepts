@@ -8,11 +8,10 @@ public class DateOfBirthFilter {
     public boolean equals(Object obj) {
         System.out.println("Invoked DateOfBirthFilter");
 
-        if (obj == null || !(obj instanceof Date)) {
+        if (obj == null || !(obj instanceof Date date)) {
             return false;
         }
         //date should be in the past
-        Date date = (Date) obj;
         return date.before(new Date());
     }
 }

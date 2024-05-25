@@ -17,17 +17,17 @@ public class ConvertGSTtoEST {
 
         //03/09/2024 23:00 EST
         System.out.println(getFormattedOutputDateTimeString
-                (startTime,inputDateTimePattern, outputDateTimeFormat, toTimeZone));
+                (startTime, inputDateTimePattern, outputDateTimeFormat, toTimeZone));
         //03/10/2024 03:00 EDT
         System.out.println(getFormattedOutputDateTimeString
-                (endTime, inputDateTimePattern, outputDateTimeFormat,toTimeZone ));
+                (endTime, inputDateTimePattern, outputDateTimeFormat, toTimeZone));
     }
 
     private static String getFormattedOutputDateTimeString(String dateTime, String inputDateTimePattern, String outputDateTimeFormat, String toTimeZone) {
         //For the INPUT STRING (from DB or other service)
         DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern(inputDateTimePattern)
                 .withZone(ZoneOffset.UTC);//redundant if the input date-time string already contains the offset information (+00)
-                    // useful when the String doesn't have Zone Id like mentioned "2024-03-10 07:00:00"  and is assumed to be from UTC
+        // useful when the String doesn't have Zone Id like mentioned "2024-03-10 07:00:00"  and is assumed to be from UTC
 
         //Output Formatter
         DateTimeFormatter outputFormatter = DateTimeFormatter.ofPattern(outputDateTimeFormat);

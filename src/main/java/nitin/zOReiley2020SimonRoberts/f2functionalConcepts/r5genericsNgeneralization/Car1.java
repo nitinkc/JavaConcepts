@@ -5,6 +5,12 @@ import java.util.Collections;
 import java.util.List;
 
 class Car1 {
+    /*********************************************************************************************************************
+     * *******************************************************************************************************************
+     * *******************************************************************************************************************
+     ********************************************************************************************************************/
+    // Expression Lambda
+    private static final Criteria<Car1> RED_CAR_CRITERION = c -> c.getColor().equals("Red");
     //Fields of Class Car
     private final int gasLevel;
     private final String color;
@@ -32,6 +38,22 @@ class Car1 {
 
         Car1 self = new Car1(gas, color, p, Arrays.asList("jack", "wrench", "spare wheel"));
         return self;
+    }
+
+    // return a lambda expression directly from a function call
+    public static Criteria<Car1> getFourPassengerCriterion() {
+        // Return type of the Lambda is carCriteria1
+        return car -> car.getPassengers().size() == 4;
+    }
+
+    public static Criteria<Car1> getRedCarCriterion() {
+        return RED_CAR_CRITERION; //This is Singleton design pattern.
+        //return new RedCarCriterion();
+    }
+
+    // Factory for creating GasLevelCarCriterion
+    public static Criteria<Car1> getGasLevelCarCriterion(int threshold) {
+        return new GasLevelCarCriterion(threshold);
     }
 
     public int getGasLevel() {
@@ -65,31 +87,8 @@ class Car1 {
                 + (trunkContents != null ? ", trunkContents=" + trunkContents : " no trunk") + '}';
     }
 
-    /*********************************************************************************************************************
-     * *******************************************************************************************************************
-     * *******************************************************************************************************************
-     ********************************************************************************************************************/
-    // Expression Lambda
-    private static final Criteria<Car1> RED_CAR_CRITERION = c -> c.getColor().equals("Red");
-
-    // return a lambda expression directly from a function call
-    public static Criteria<Car1> getFourPassengerCriterion() {
-        // Return type of the Lambda is carCriteria1
-        return car -> car.getPassengers().size() == 4;
-    }
-
-    public static Criteria<Car1> getRedCarCriterion() {
-        return RED_CAR_CRITERION; //This is Singleton design pattern.
-        //return new RedCarCriterion();
-    }
-
-    // Factory for creating GasLevelCarCriterion
-    public static Criteria<Car1> getGasLevelCarCriterion(int threshold) {
-        return new GasLevelCarCriterion(threshold);
-    }
-
     private static class GasLevelCarCriterion implements Criteria<Car1> {
-        private int threshold;
+        private final int threshold;
 
         public GasLevelCarCriterion(int threshold) {
             this.threshold = threshold;

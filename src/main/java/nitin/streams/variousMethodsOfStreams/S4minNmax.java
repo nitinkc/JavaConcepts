@@ -35,9 +35,9 @@ public class S4minNmax {
 
         System.out.println("MIN 3");
         Optional<String> min3 = stringList.stream().min((s1, s2) -> {
-            if(s1.length() > s2.length())
+            if (s1.length() > s2.length())
                 return 1;
-            else if(s1.length() < s2.length())
+            else if (s1.length() < s2.length())
                 return -1;
             else
                 return s2.compareTo(s1);
@@ -46,9 +46,9 @@ public class S4minNmax {
 
         System.out.println("Min 4");
         Optional<String> min4 = stringList.stream()
-                        .min(Comparator.comparing(String::length)//TODO : Learn to write in Lambda
-                                .thenComparing(Comparator.reverseOrder())
-                        );
+                .min(Comparator.comparing(String::length)//TODO : Learn to write in Lambda
+                        .thenComparing(Comparator.reverseOrder())
+                );
         min4.ifPresent(System.out::println);
 
     }

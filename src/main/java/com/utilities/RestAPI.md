@@ -1,6 +1,5 @@
 https://free-apis.github.io/#/browse
 
-
 COVID API : https://documenter.getpostman.com/view/10808728/SzS8rjbc
 
 ==============================================
@@ -21,7 +20,6 @@ https://openlibrary.org/api/books?bibkeys=ISBN:9780849375637&format=json
 
 3. Find - https://openlibrary.org/api/books?bibkeys=ISBN:9781108074568&format=json&jscmd=data
 
-
 ==============================================
 
 EXCHANGE - https://exchangerate.host/#/docs
@@ -30,7 +28,6 @@ https://api.exchangerate.host/2002-04-04?base=USD
 https://api.exchangerate.host/convert?from=USD&to=EUR
 
 https://api.exchangerate.host/symbols
-
 
 ==============================================
 https://sunrise-sunset.org/api

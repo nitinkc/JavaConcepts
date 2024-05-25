@@ -11,7 +11,7 @@ import java.util.Random;
  * servlets, JSP, and Java 7 and Java 8 programming</a>.
  */
 public class RandomUtils {
-    private static Random r = new Random();
+    private static final Random r = new Random();
 
     /**
      * Return a random int from 0 to range-1. So, randomInt(4)

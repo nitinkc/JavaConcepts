@@ -25,7 +25,7 @@ public class F1MappingNfiltering {
         List<Integer> list = getEvenNumberList();
 
         //Find frequency of all the numbers
-        Map<Integer,Long> map = list.stream()
+        Map<Integer, Long> map = list.stream()
                 //.collect(groupingBy(element -> element, counting()));// Function.identity() Equivalent to an i in a for loop
                 .collect(Collectors.groupingBy(Function.identity(), counting()));//collect takes a COLLECTOR as parameter. any method that returns a collector can be used
 
@@ -47,7 +47,7 @@ public class F1MappingNfiltering {
     }
 
     private static List<Integer> getEvenNumberList() {
-        List<Integer> list = List.of(1,2,1,3,3,4,5,6,7,8,6,5,4,3,2,1);
+        List<Integer> list = List.of(1, 2, 1, 3, 3, 4, 5, 6, 7, 8, 6, 5, 4, 3, 2, 1);
         List<Integer> evenNumberList = list.stream()
                 .collect(filtering(number -> number % 2 == 0, toList()));
         System.out.println(evenNumberList);//[2, 4, 6, 8, 6, 4, 2]

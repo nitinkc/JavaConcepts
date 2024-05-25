@@ -13,7 +13,7 @@ public class S12peek {
         List<Integer> intList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
 
         List<Integer> integerList = intList.stream()
-                .map(num -> num*num)
+                .map(num -> num * num)
                 .peek(x -> System.out.print(x + "\t"))
                 .limit(5)
                 .peek(x -> System.out.print(x + "\t"))

@@ -8,8 +8,6 @@ import lombok.Data;
 @Data
 public class TestBaseData {
 
-    @JsonProperty("categoryName")
-    private String careCategoryName;
     @JsonProperty("groupName")
     public String groupName;
     @JsonProperty("code")
@@ -20,5 +18,7 @@ public class TestBaseData {
     public String dateTime;
     @JsonProperty("value")
     public String value;
+    @JsonProperty("categoryName")
+    private String careCategoryName;
 
 }

@@ -20,13 +20,13 @@ public class A12Combine {
         return p * rad * rad;
     }
 
-    public static CompletableFuture<Double> getArea(Double radius){
+    public static CompletableFuture<Double> getArea(Double radius) {
         System.out.println("getting area");
         delay(1000);
-        return CompletableFuture.supplyAsync(() -> Math.PI*radius*radius);//Returning a random number Asyncronously
+        return CompletableFuture.supplyAsync(() -> Math.PI * radius * radius);//Returning a random number Asyncronously
     }
 
-    public static CompletableFuture<Double> getRadius(){
+    public static CompletableFuture<Double> getRadius() {
         System.out.println("getting RADIUS");
         delay(3000);
         return CompletableFuture.supplyAsync(() -> 2.0);//Returning a random number Asyncronously

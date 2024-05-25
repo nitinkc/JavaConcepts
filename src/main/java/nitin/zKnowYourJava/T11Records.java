@@ -7,7 +7,7 @@ public class T11Records {
     }
 }
 
-record Year(int year){
+record Year(int year) {
     //Avoid Canonical constructors as much as possible.
     // Use the compact constructor instead
     //Compact constructor is a filter or a pre-processor before the constructor is called.
@@ -15,10 +15,10 @@ record Year(int year){
     //code -->  Compact constructor --> constructor.
 
     Year {
-        if(year < 0){
+        if (year < 0) {
             throw new RuntimeException("Negative Year");
         }
-        if(year < 100){
+        if (year < 100) {
             //this.year = 2000 + year;
             year = 2000 + year;
         }

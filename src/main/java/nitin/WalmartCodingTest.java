@@ -59,7 +59,7 @@ public class WalmartCodingTest {
         String ret = "None";
 
         for (String word : words) {
-            boolean flag[] = new boolean[word.length()];//check syntax
+            boolean[] flag = new boolean[word.length()];//check syntax
             Map<Character, Integer> map = getCharacterIntegerMap(str);
             for (int i = 0; i < word.length(); i++) {
                 Character c = word.charAt(i);
@@ -79,7 +79,7 @@ public class WalmartCodingTest {
 
     private static boolean allTrue(boolean[] flag) {
         for (int i = 0; i < flag.length; i++) {
-            if(!flag[i])
+            if (!flag[i])
                 return false;
         }
         return true;
@@ -89,7 +89,7 @@ public class WalmartCodingTest {
         Map<Character, Integer> map = new HashMap<>();
         for (int i = 0; i < str.length(); i++) {
             Character key = str.charAt(i);//Check for Autoboxing
-            map.put(key, map.getOrDefault(key,0)+1);
+            map.put(key, map.getOrDefault(key, 0) + 1);
         }
         return map;
     }
