@@ -3,8 +3,7 @@
 **Learn how to read JavaDoc**
 
 ```java
-static <T,U extends Comparable<? super U>>
-Comparator<T> comparing(Function<? super T,? extends U> keyExtractor)
+static <T,U extends Comparable<? super U>> Comparator<T> comparing(Function<? super T,? extends U> keyExtractor)
 ```
 
 Accepts a function that extracts a Comparable sort key from a type T, and returns a Comparator<T>

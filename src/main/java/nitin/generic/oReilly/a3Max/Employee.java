@@ -1,5 +1,12 @@
 package nitin.generic.oReilly.a3Max;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.ToString;
+
+@Getter
+@AllArgsConstructor
+@ToString
 public class Employee {
 
     // Provide a default value for the orElse method
@@ -7,22 +14,4 @@ public class Employee {
 
     private final int id;
     private final String name;
-
-    public Employee(int id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public String toString() {
-        return "id = " + id + " name = " + name;
-    }
 }
