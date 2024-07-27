@@ -4,6 +4,7 @@ import com.utilities.MultiThreadUtility;
 
 public class V3ThreadsNewLight {
     public static void main(String[] args) throws InterruptedException {
+        //Static method initialization
         var t1 = Thread.startVirtualThread(() -> task1());
         var t2 = Thread.startVirtualThread(() -> task2());
 
