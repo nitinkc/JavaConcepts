@@ -1,5 +1,6 @@
 package nitin.calandarDateTime.java8Calandar;
 
+import com.utilities.ZonedDateTimeUtility.Result;
 import org.junit.jupiter.api.Test;
 
 import java.time.zone.ZoneRulesException;
@@ -15,7 +16,7 @@ public class GmtToEstFormattedConversionTest {
         String endDateTime = "2024-03-22 04:44:44+00";
         String timeZoneIso = "America/New_York";
 
-        GmtToEstFormattedConversion.Result result = GmtToEstFormattedConversion.run(startDateTime, endDateTime, timeZoneIso);
+        Result result = GmtToEstFormattedConversion.run(startDateTime, endDateTime, timeZoneIso);
 
         assertEquals("03/21/2024 23:04 EDT", result.startDate());
         assertEquals("03/22/2024 00:44 EDT", result.endDate());
@@ -27,7 +28,7 @@ public class GmtToEstFormattedConversionTest {
         String endDateTime = null;
         String timeZoneIso = "America/New_York";
 
-        GmtToEstFormattedConversion.Result result = GmtToEstFormattedConversion.run(startDateTime, endDateTime, timeZoneIso);
+        Result result = GmtToEstFormattedConversion.run(startDateTime, endDateTime, timeZoneIso);
 
         assertEquals("03/21/2024 23:04 EDT", result.startDate());
         assertEquals("", result.endDate());
@@ -39,7 +40,7 @@ public class GmtToEstFormattedConversionTest {
         String endDateTime = "2024-03-22 04:44:44+00";
         String timeZoneIso = "America/New_York";
 
-        GmtToEstFormattedConversion.Result result = GmtToEstFormattedConversion.run(startDateTime, endDateTime, timeZoneIso);
+        Result result = GmtToEstFormattedConversion.run(startDateTime, endDateTime, timeZoneIso);
 
         assertEquals("", result.startDate());
         assertEquals("03/22/2024 00:44 EDT", result.endDate());
@@ -51,7 +52,7 @@ public class GmtToEstFormattedConversionTest {
         String endDateTime = null;
         String timeZoneIso = "America/New_York";
 
-        GmtToEstFormattedConversion.Result result = GmtToEstFormattedConversion.run(startDateTime, endDateTime, timeZoneIso);
+        Result result = GmtToEstFormattedConversion.run(startDateTime, endDateTime, timeZoneIso);
 
         assertEquals("", result.startDate());
         assertEquals("", result.endDate());
@@ -63,7 +64,7 @@ public class GmtToEstFormattedConversionTest {
         String endDateTime = "2024-03-12 03:30:00+00";
         String timeZoneIso = "America/New_York";
 
-        GmtToEstFormattedConversion.Result result = GmtToEstFormattedConversion.run(startDateTime, endDateTime, timeZoneIso);
+        Result result = GmtToEstFormattedConversion.run(startDateTime, endDateTime, timeZoneIso);
 
         //Same Date
         //In the Eastern Time Zone (America/New_York), the daylight saving time (DST) transition happens on March 11, 2024.
@@ -96,7 +97,7 @@ public class GmtToEstFormattedConversionTest {
         String startDateTime1 = "2024-03-10 04:00:00+00"; // Start time in GMT
         String endDateTime1 = "2024-03-10 07:00:00+00";   // End time in GMT
         String timeZoneIso1 = "America/New_York";
-        GmtToEstFormattedConversion.Result result1 = GmtToEstFormattedConversion.run(startDateTime1, endDateTime1, timeZoneIso1);
+        Result result1 = GmtToEstFormattedConversion.run(startDateTime1, endDateTime1, timeZoneIso1);
         assertEquals("03/09/2024 23:00 EST", result1.startDate());
         assertEquals("03/10/2024 03:00 EDT", result1.endDate());
 
@@ -104,7 +105,7 @@ public class GmtToEstFormattedConversionTest {
         String startDateTime2 = "2024-03-10 06:59:00+00"; // Start time in GMT
         String endDateTime2 = "2024-03-10 07:00:00+00";   // End time in GMT
         String timeZoneIso2 = "America/New_York";
-        GmtToEstFormattedConversion.Result result2 = GmtToEstFormattedConversion.run(startDateTime2, endDateTime2, timeZoneIso2);
+        Result result2 = GmtToEstFormattedConversion.run(startDateTime2, endDateTime2, timeZoneIso2);
         assertEquals("01:59 EST", result2.startDate());
         assertEquals("03:00 EDT", result2.endDate());
     }

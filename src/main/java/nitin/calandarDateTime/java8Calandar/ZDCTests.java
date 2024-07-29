@@ -7,6 +7,8 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
+import static com.utilities.ZonedDateTimeUtility.zonedDateTimeStr;
+
 public class ZDCTests {
     public static void main(String[] args) {
 
@@ -30,8 +32,8 @@ public class ZDCTests {
 
         //ZoneOffset.SHORT_IDS.forEach((key, value) -> System.out.println(key + " : "+ value));
         System.out.println("============================================");
-        System.out.println(formatZonedDateTime(timeUTC));
-        System.out.println(formatZonedDateTime(null));
+        System.out.println(zonedDateTimeStr(timeUTC));
+        System.out.println(zonedDateTimeStr(null));
 
     }
 
@@ -42,14 +44,5 @@ public class ZDCTests {
                 .with(LocalTime.MAX)
                 .withZoneSameInstant(ZoneId.of(ZoneOffset.UTC.getId()))
                 .truncatedTo(ChronoUnit.MILLIS);
-    }
-
-    public static String formatZonedDateTime(ZonedDateTime zonedDateTime) {
-        String dateTimePattern = "yyyy-MM-dd'T'HH:mm:ssz";
-        String timestamp = null;
-        if (null != zonedDateTime) {
-            timestamp = zonedDateTime.format(DateTimeFormatter.ofPattern(dateTimePattern));
-        }
-        return timestamp;
     }
 }

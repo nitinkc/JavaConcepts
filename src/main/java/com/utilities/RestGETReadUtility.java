@@ -1,7 +1,6 @@
 package com.utilities;
 
 import com.entity.Card;
-import com.entity.CovidIndia;
 import com.entity.Vehicle;
 import com.entity.crossRef.CrossRef;
 import com.entity.currencyExchange.CurrencyExchange;
@@ -41,24 +40,6 @@ public class RestGETReadUtility {
             e.printStackTrace();
         }
         System.out.println(listCard.size());
-    }
-
-    public static List<CovidIndia> covidReader() {
-        ObjectMapper mapper = new ObjectMapper();
-        List<CovidIndia> covidIndiaList = null;
-
-        String url = "https://api.covid19api.com/total/country/india";
-        //Getting the response code
-        // int responsecode = getConnectionResponse(url);
-
-        try {
-            covidIndiaList = mapper.readValue(new URL(url), new TypeReference<List<CovidIndia>>() {
-            });
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return covidIndiaList;
-
     }
 
     public static List<Vehicle> getRandomVehicles(int size) {

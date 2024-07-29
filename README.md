@@ -10,6 +10,19 @@ Gradle upgrade branch
 
 find . -type f -name '*.java' | wc -l 795
 
+# New features
+tasks.withType(JavaCompile) {
+options.compilerArgs += [
+'--add-exports=java.base/jdk.internal.vm=ALL-UNNAMED',
+'--enable-preview'
+]
+}
+tasks.withType(JavaExec) {
+jvmArgs += [
+'--add-exports=java.base/jdk.internal.vm=ALL-UNNAMED',
+'--enable-preview'
+]
+}
 # Topics
 [src/main/java/nitin/flowControl/FlowControl.md](src/main/java/nitin/a4flowControl/FlowControl.md)
 
@@ -28,7 +41,5 @@ find . -type f -name '*.java' | wc -l 795
 [src/main/java/nitin/generic/oReilly/a4sorting/ReadMe.md](src/main/java/nitin/generic/oReilly/a4sorting/ReadMe.md)
 
 [src/main/java/nitin/generic/oReilly/a6erasure/ReadMe.md](src/main/java/nitin/generic/oReilly/a6erasure/ReadMe.md)
-
-[src/main/java/nitin/cloning/notes.md](src/main/java/nitin/cloning/notes.md)
 
 [src/main/java/nitin/exceptionHandling/commonExceptions/common-unchecked-exceptions.md](src/main/java/nitin/exceptionHandling/commonExceptions/common_unchecked_exceptions.md)

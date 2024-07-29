@@ -1,7 +1,7 @@
 package nitin.multithreading.completableFutureBasics;
 
-import nitin.multithreading.asynchronousProgramming.A12ThenCombine;
-import nitin.multithreading.asynchronousProgramming.completableFutureBasics.service.DataFetchService;
+import nitin.multithreading.bFuturesAndCompletableFutures.completableFutureBasics.A12ThenCombine;
+import nitin.multithreading.bFuturesAndCompletableFutures.completableFutureBasics.service.DataFetchService;
 import org.junit.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;

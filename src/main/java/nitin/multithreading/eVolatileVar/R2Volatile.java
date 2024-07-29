@@ -39,7 +39,6 @@ class VolatileTest implements Runnable {
                 //System.out.println(local + " local" + Thread.currentThread());
                 Thread.sleep(5);
             } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
 

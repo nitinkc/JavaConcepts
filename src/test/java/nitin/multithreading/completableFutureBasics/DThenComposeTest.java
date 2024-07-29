@@ -3,8 +3,8 @@ package nitin.multithreading.completableFutureBasics;
 
 import com.entity.dto.VehicleTransformed;
 import com.utilities.PerformanceUtility;
-import nitin.multithreading.asynchronousProgramming.A12ThenCompose;
-import nitin.multithreading.asynchronousProgramming.completableFutureBasics.service.DataFetchService;
+import nitin.multithreading.bFuturesAndCompletableFutures.completableFutureBasics.A12ThenCompose;
+import nitin.multithreading.bFuturesAndCompletableFutures.completableFutureBasics.service.DataFetchService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

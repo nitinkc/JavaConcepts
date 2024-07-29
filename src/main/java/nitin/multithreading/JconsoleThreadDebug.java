@@ -10,7 +10,6 @@ public class JconsoleThreadDebug {
         DebugClass d = new DebugClass();
         Thread t = new Thread(d);
         t.setName("TEST THREAD");
-
         t.start();
     }
 }
@@ -38,13 +37,11 @@ class DebugClass implements Runnable {
 
         //Sleep to see the results
         try {
-            Thread.sleep(10000);
+            Thread.sleep(10_000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
         System.out.println("Quitting the thread" + Thread.currentThread());
-
-
     }
 }

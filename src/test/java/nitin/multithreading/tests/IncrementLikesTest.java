@@ -1,5 +1,6 @@
 package nitin.multithreading.tests;
 
+import nitin.multithreading.shared.tests.IncrementLikes;
 import org.junit.Assert;
 import org.junit.Test;
 

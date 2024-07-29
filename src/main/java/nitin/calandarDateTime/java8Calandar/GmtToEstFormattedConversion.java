@@ -1,11 +1,16 @@
 package nitin.calandarDateTime.java8Calandar;
 
+import com.utilities.ZonedDateTimeUtility;
+
 import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.zone.ZoneRulesException;
 
+import static com.utilities.ZonedDateTimeUtility.getFormattedTimezoneString;
+import static com.utilities.ZonedDateTimeUtility.getZonedDateTime;
+import com.utilities.ZonedDateTimeUtility.Result;
 public class GmtToEstFormattedConversion {
     static String outputSameDateFormat = "HH:mm zzz";
     static String outputDiffDateFormat = "MM/dd/yyyy HH:mm zzz";
@@ -21,7 +26,7 @@ public class GmtToEstFormattedConversion {
         run(startDateTime, endDateTime, timeZoneIso);
     }
 
-    public static Result run(String startDateTime, String endDateTime, String timeZoneIso) {
+    public static ZonedDateTimeUtility.Result run(String startDateTime, String endDateTime, String timeZoneIso) {
         if (null == startDateTime) {
             startDateTime = "";
         }
@@ -36,7 +41,7 @@ public class GmtToEstFormattedConversion {
         }
 
         if (!startDateTime.isEmpty() && endDateTime.isEmpty()) {
-            result = new Result(getReturnDateTimeFormat(startDateTime, timeZoneIso, outputDiffDateFormat)
+            result = new ZonedDateTimeUtility.Result(getReturnDateTimeFormat(startDateTime, timeZoneIso, outputDiffDateFormat)
                     , endDateTime);
         }
 
@@ -54,43 +59,5 @@ public class GmtToEstFormattedConversion {
     private static String getReturnDateTimeFormat(String dateTime, String timeZoneIso, String dateformat) {
         //Outgoing DateTime format
         return getZonedDateTime(dateTime, timeZoneIso).format(DateTimeFormatter.ofPattern(dateformat));
-    }
-
-    private static ZonedDateTime getZonedDateTime(String startDateTime, String timeZoneIso) {
-        ZonedDateTime zonedDateTime = null;
-        try {
-            zonedDateTime = ZonedDateTime
-                    .parse(startDateTime,
-                            DateTimeFormatter.ofPattern(inputDateTimePattern)//Date Time format of incomming String
-                                    .withZone(ZoneOffset.UTC))
-                    .withZoneSameInstant(ZoneId.of(timeZoneIso));
-
-        } catch (ZoneRulesException e) {
-            System.out.println(e.getMessage());
-            throw new ZoneRulesException("Invalid Timezone :: " + timeZoneIso);
-        }
-        return zonedDateTime;
-    }
-
-    public static Result getFormattedTimezoneString(String startDateTime, String endDateTime, String timeZoneIso) {
-        ZonedDateTime zonedStartDateTime = getZonedDateTime(startDateTime, timeZoneIso);
-        ZonedDateTime zonedEndDateTime = getZonedDateTime(endDateTime, timeZoneIso);
-
-        String startDate;
-        String endDate;
-        //If there is a Difference is of One day, Show both date and Time
-        if (zonedEndDateTime.toLocalDate().minusDays(1L).isEqual(zonedStartDateTime.toLocalDate())) {
-            startDate = zonedStartDateTime.format(DateTimeFormatter.ofPattern(outputDiffDateFormat));
-            endDate = zonedEndDateTime.format(DateTimeFormatter.ofPattern(outputDiffDateFormat));
-        } else {//Else show just the time for the same dat scenario
-            startDate = zonedStartDateTime.format(DateTimeFormatter.ofPattern(outputSameDateFormat));
-            endDate = zonedEndDateTime.format(DateTimeFormatter.ofPattern(outputSameDateFormat));
-        }
-
-        Result result = new Result(startDate, endDate);
-        return result;
-    }
-
-    public record Result(String startDate, String endDate) {
     }
 }

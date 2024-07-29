@@ -3,6 +3,8 @@ package com.utilities;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import java.time.Duration;
+
 import static java.lang.Thread.sleep;
 
 public class MultiThreadUtility {
@@ -17,8 +19,16 @@ public class MultiThreadUtility {
         }
     }
 
+    public static void delaySeconds(long delayMilliSeconds) {
+        try {
+            Thread.sleep(Duration.ofSeconds(2));
+        } catch (Exception e) {
+            logger.info("Exception is :" + e.getMessage());
+        }
+    }
+
     public static void logShortMessage(String message) {
-        System.out.println(message + ": " + Thread.currentThread().getName());
+        System.out.printf("[%s] %s\n", Thread.currentThread().getName(), message);
     }
 
     public static void logMessage(String message) {
