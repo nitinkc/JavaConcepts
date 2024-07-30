@@ -2,14 +2,18 @@ package nitin.multithreading.bFuturesAndCompletableFutures.completableFutureBasi
 
 import com.entity.Vehicle;
 import com.entity.dto.VehicleTransformed;
+import com.github.javafaker.Faker;
 import com.utilities.RestGETReadUtility;
+
+import static com.utilities.PerformanceUtility.*;
+import static nitin.virtualThreads.v3structuredConcurrency.BlockingIOTasks.TaskResponse;
 
 import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
 
-import static com.utilities.MultiThreadUtility.delay;
-import static com.utilities.MultiThreadUtility.logMessage;
+import static com.utilities.MultiThreadUtility.*;
 
 public class DataFetchService {
 
@@ -48,5 +52,25 @@ public class DataFetchService {
             delay(1000);
             return ("Hello " + name);
         });
+    }
+
+    public TaskResponse microTask(String name, int secs, boolean isSuccess) {
+        logShortMessage("Begin microTask of " + secs + " seconds");
+
+        //Fail Fast
+        if (!isSuccess || secs > 7) {
+            throw new RuntimeException(STR."Task Failed : \{name} \{isSuccess} \{secs}");
+        }
+
+        long currentTime = System.currentTimeMillis();
+        try {
+            TimeUnit.SECONDS.sleep(secs);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+       long endTime =  System.currentTimeMillis();
+
+        logShortMessage("End microTask of " + secs + " seconds");
+        return new TaskResponse(name, String.valueOf(secs), endTime - currentTime);
     }
 }
