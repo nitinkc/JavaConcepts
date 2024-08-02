@@ -36,7 +36,7 @@ interface Sail {
  * Created by Nitin C on 2/27/2016.
  * 4 Rules of Default Methods
  * 1. methods are automatically inherited eg
- * 2. Override a default method, if it doesnt find int he child, it goes up the hierarchy top chjeck the method out
+ * 2. Override a default method, if it doesn't find in the child, it goes up the hierarchy top check the method out
  * 3. Methods in a class Hierarchy RULES!!
  * 4. if there is a collision in interface
  */

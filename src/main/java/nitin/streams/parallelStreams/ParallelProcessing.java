@@ -10,6 +10,7 @@ import static com.utilities.PerformanceUtility.*;
 public class ParallelProcessing {
     public static void main(String[] args) {
 
+
         List<String> wordList = InternetUtilities.bringWordListFromNet();
 
         System.out.println("********************************** Sequential **********************************");
