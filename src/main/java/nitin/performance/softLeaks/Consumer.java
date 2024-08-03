@@ -2,12 +2,11 @@ package nitin.performance.softLeaks;
 
 import java.util.Optional;
 
-public class ProcessCustomerTask implements Runnable {
+public class Consumer implements Runnable {
 
-	
 private CustomerManager cm;
 	
-	public ProcessCustomerTask(CustomerManager cm) {
+	public Consumer(CustomerManager cm) {
 		this.cm = cm;
 	}
 	

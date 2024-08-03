@@ -20,22 +20,19 @@ public class CustomerManager {
 			}
 			nextAvalailbleId++;
 		}
-
 	}
 
 	public Optional<Customer> getNextCustomer() {
-
-				if (lastProcessedId + 1 > nextAvalailbleId) {
-					lastProcessedId++;
-					return Optional.of(customers.get(lastProcessedId));
-				}
-				return Optional.empty();
-	}	
+		if (lastProcessedId + 1 > nextAvalailbleId) {
+			lastProcessedId++;
+			return Optional.of(customers.get(lastProcessedId));
+		}
+		return Optional.empty();
+	}
 
 	public void howManyCustomers() {
 		int size = 0;
 		size = customers.size();
 		System.out.println("" + new Date() + " Customers in queue : " + size + " of " + nextAvalailbleId);
 	}
-
 }
