@@ -2,11 +2,9 @@ package nitin.multithreading.bFuturesAndCompletableFutures.completableFutureBasi
 
 import com.entity.Vehicle;
 import com.entity.dto.VehicleTransformed;
-import com.github.javafaker.Faker;
 import com.utilities.RestGETReadUtility;
 
-import static com.utilities.PerformanceUtility.*;
-import static nitin.virtualThreads.v3structuredConcurrency.BlockingIOTasks.TaskResponse;
+import static nitin.multithreading.cVirtualThreads.v3structuredConcurrency.BlockingIOTasks.TaskResponse;
 
 import java.util.Comparator;
 import java.util.List;

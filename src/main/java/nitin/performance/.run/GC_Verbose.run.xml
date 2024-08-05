@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="GC_Verbose" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="nitin.performance.softLeaks.GC_Verbose" />
+    <module name="JavaConcepts.main" />
+    <option name="VM_PARAMETERS" value="-Xmx5m -verbose:gc" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="nitin.performance.softLeaks.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

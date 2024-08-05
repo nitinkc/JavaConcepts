@@ -2,7 +2,7 @@
   <configuration default="false" name="StringStats" type="Application" factoryName="Application" nameIsGenerated="true">
     <option name="MAIN_CLASS_NAME" value="nitin.performance.StringStats" />
     <module name="JavaConcepts.main" />
-    <option name="VM_PARAMETERS" value="-XX:+PrintStringTableStatistics -XX:StringTableSize=999999 -Xms1g -Xmx4g" />
+    <option name="VM_PARAMETERS" value="-XX:+PrintStringTableStatistics -XX:StringTableSize=120121 -Xms1g -Xmx4g" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="nitin.performance.*" />

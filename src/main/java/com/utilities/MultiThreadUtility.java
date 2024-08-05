@@ -19,7 +19,7 @@ public class MultiThreadUtility {
         }
     }
 
-    public static void delaySeconds(long delayMilliSeconds) {
+    public static void delaySeconds(long seconds) {
         try {
             Thread.sleep(Duration.ofSeconds(2));
         } catch (Exception e) {

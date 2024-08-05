@@ -5,7 +5,7 @@ import java.util.concurrent.Callable;
 /**
  * Created by nitin.chaurasia on 12/26/2016.
  */
-public class PrintJobCallable implements Callable {
+public class PrintJobCallable implements Callable<Object> {
     int num;
 
     PrintJobCallable(int num) {

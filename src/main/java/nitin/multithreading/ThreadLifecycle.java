@@ -1,8 +1,10 @@
 package nitin.multithreading;
 
+import nitin.multithreading.aBasics.aPlatformThreads.ThreadByRunnable;
+
 public class ThreadLifecycle {
     public static void main(String[] args) {
-        Thread thread = new Thread(new RunnableTask());
+        Thread thread = new Thread(new ThreadByRunnable());
         System.out.println("State: " + thread.getState()); // NEW
 
         thread.start();
@@ -19,18 +21,3 @@ public class ThreadLifecycle {
         System.out.println("State: " + thread.getState()); // TIMED_WAITING or TERMINATED, depending on timing
     }
 }
-
-class RunnableTask implements Runnable {
-    @Override
-    public void run() {
-        synchronized (this) {
-            try {
-                wait(50); // TIMED_WAITING
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-        //System.out.println("State: " + Thread.currentThread().getState()); // NEW
-    }
-}
-

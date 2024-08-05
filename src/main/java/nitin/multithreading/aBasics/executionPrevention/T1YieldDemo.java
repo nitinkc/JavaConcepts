@@ -2,7 +2,7 @@ package nitin.multithreading.aBasics.executionPrevention;
 
 // To call the ThreadByRunnable Class for reusing multiple times
 
-import nitin.multithreading.aBasics.ThreadByRunnable;
+import nitin.multithreading.aBasics.aPlatformThreads.ThreadByRunnable;
 
 /**
  * Created by Nitin Chaurasia on 12/2/15 at 11:25 PM.

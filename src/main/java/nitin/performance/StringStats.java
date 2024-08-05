@@ -5,7 +5,8 @@ import java.util.Date;
 import java.util.List;
 
 public class StringStats {
-    //Run with -XX:+PrintStringTableStatistics -XX:StringTableSize=999999 -Xms1g -Xmx4g
+    //Pick up a prime number for the string table size
+    //Run with -XX:+PrintStringTableStatistics -XX:StringTableSize=120121 -Xms1g -Xmx4g
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
         Date start = new Date();

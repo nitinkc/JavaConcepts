@@ -7,20 +7,21 @@ plugins {
 group = 'JavaConcepts'
 version = '1.0-SNAPSHOT'
 
-tasks.withType(JavaCompile) {
+tasks.withType(JavaCompile).configureEach {
     options.compilerArgs += [
             '--add-exports=java.base/jdk.internal.vm=ALL-UNNAMED',
             '--enable-preview'
     ]
 }
-tasks.withType(JavaExec) {
+tasks.withType(JavaExec).configureEach {
     jvmArgs += [
             '--add-exports=java.base/jdk.internal.vm=ALL-UNNAMED',
-            '--enable-preview'
-    ]
+            '--enable-preview']
+    logging.captureStandardOutput LogLevel.QUIET
+    logging.captureStandardError LogLevel.QUIET
 }
 
-tasks.withType(Test) {
+tasks.withType(Test).configureEach {
     jvmArgs += "--enable-preview"
 }
 
