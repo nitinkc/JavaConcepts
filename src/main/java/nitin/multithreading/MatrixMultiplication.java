@@ -136,7 +136,6 @@ public class MatrixMultiplication {
         }//End Loop for Row
     }//Fill Matrix Ends
 
-
     void collectResults() throws IOException {
         final String FILENAME = "nitin.txt";
         // Put MatA, MatB and MatC into a file to check if its returning the correct Result
@@ -176,6 +175,7 @@ public class MatrixMultiplication {
         output.flush();
         output.close();
     }
+
 }
 
 /* For multithreaded threaded multiplication, Rows from matrix A is to be multiplied with Columns

@@ -43,3 +43,15 @@ jvmArgs += [
 [src/main/java/nitin/generic/oReilly/a6erasure/ReadMe.md](src/main/java/nitin/generic/oReilly/a6erasure/ReadMe.md)
 
 [src/main/java/nitin/exceptionHandling/commonExceptions/common-unchecked-exceptions.md](src/main/java/nitin/exceptionHandling/commonExceptions/common_unchecked_exceptions.md)
+
+# Resources
+
+
+Java Application Performance Tuning and Memory Management - Matt Greencroft - Udemy
+
+Java 21 Virtual Threads, Multithreading, Structured Concurrency, Scoped Values, Continuations and use with Spring Boot - Viraj Shetty - Udemy
+
+Become an expert in Multithreading, Concurrency & Parallel programming in Java, with strong emphasis on high performance
+- Michael Pogrebinsky
+
+![https://www.youtube.com/watch?v=q2T9NlROLqw](https://www.youtube.com/watch?v=q2T9NlROLqw)
