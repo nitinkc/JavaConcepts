@@ -4,6 +4,7 @@ import lombok.NoArgsConstructor;
 import java.math.BigInteger;
 
 import static com.utilities.MultiThreadUtility.logMessage;
+import static com.utilities.MultiThreadUtility.logShortMessage;
 
 @NoArgsConstructor
 public class Factorial {
@@ -13,7 +14,7 @@ public class Factorial {
     }
 
     private BigInteger factorial(long n) {
-        logMessage("factorial running");
+        //logMessage("factorial running");
         BigInteger result = BigInteger.ONE;
 
         for (long i = n; i > 0; i--) {

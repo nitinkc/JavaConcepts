@@ -5,31 +5,37 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 
-import static com.utilities.MultiThreadUtility.logShortMessage;
 import static com.utilities.PerformanceUtility.startTimer;
 import static com.utilities.PerformanceUtility.stopTimer;
 
 public class ParallelFactorial {
     public static void main(String[] args) throws InterruptedException {
         List<Long> inputNumbers = List.of(100L, 3435L, 35435L, 2324L, 4656L, 23L, 5556L);
-
         Factorial factorial = new Factorial();
 
         System.out.println("SEQUENTIAL");
         sequential(inputNumbers, factorial);
 
         System.out.println("Parallel");
-        runParallelFactorial(inputNumbers, factorial);
+        runWithTraditionalFactorial(inputNumbers, factorial);
 
         System.out.println("SEQUENTIAL STREAMS");
-        seqWithStreams(inputNumbers, factorial);
+        sequentialWithStreams(inputNumbers, factorial);
 
         System.out.println("PARALLEL STREAMS");
         parallelStream(inputNumbers, factorial);
 
+        System.out.println("runParallelFactorialWithExecutor");
         runParallelFactorialWithExecutor(inputNumbers, factorial);
+
+        System.out.println("runParallelFactorialWithVirtualThreads ");
         runParallelFactorialWithVirtualThreads(inputNumbers, factorial);
 
+        System.out.println("runWithCompletableFuture");
+        runWithCompletableFuture(inputNumbers, factorial);
+
+        System.out.println("runWithCountDownLatch");
+        runWithCountDownLatch(inputNumbers, factorial);
     }
 
     private static void sequential(List<Long> inputNumbers, Factorial factorial) {
@@ -48,7 +54,7 @@ public class ParallelFactorial {
         stopTimer();
     }
 
-    private static void seqWithStreams(List<Long> inputNumbers, Factorial factorial) {
+    private static void sequentialWithStreams(List<Long> inputNumbers, Factorial factorial) {
         startTimer();
         List<BigInteger> list = inputNumbers.stream()
                 .map(factorial::compute)
@@ -56,7 +62,7 @@ public class ParallelFactorial {
         stopTimer();
     }
 
-    private static void runParallelFactorial(List<Long> inputNumbers, Factorial factorial) throws InterruptedException {
+    private static void runWithTraditionalFactorial(List<Long> inputNumbers, Factorial factorial) throws InterruptedException {
         List<Thread> threads = new ArrayList<>();
 
         for (long inputNumber : inputNumbers) {
@@ -80,22 +86,23 @@ public class ParallelFactorial {
     }
 
     private static void runParallelFactorialWithExecutor(List<Long> inputNumbers, Factorial factorial) {
-     /*   Pros:
+        /*   Pros:
         Provides better control over thread management.
         Automatically handles thread pooling and task scheduling.
-        Cons:
+            Cons:
         Requires managing the lifecycle of the ExecutorService.
         */
+        Callable<BigInteger> task = null;
+        List<Future<BigInteger>> futures;
         try (ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors())) {
-
-            List<Future<BigInteger>> futures = new ArrayList<>();
+            futures = new ArrayList<>();
             for (long inputNumber : inputNumbers) {
-                Callable<BigInteger> task = () -> factorial.compute(inputNumber);
-                futures.add(executor.submit(task));
+                futures.add(executor.submit(() -> factorial.compute(inputNumber)));
             }
 
-            startTimer();
+
             List<BigInteger> results = new ArrayList<>();
+            startTimer();
             for (Future<BigInteger> future : futures) {
                 try {
                     results.add(future.get());
@@ -111,21 +118,60 @@ public class ParallelFactorial {
 
     private static void runParallelFactorialWithVirtualThreads(List<Long> inputNumbers, Factorial factorial) throws InterruptedException {
         /*Pros:
-        More scalable and efficient for I/O-bound tasks.
-                Reduces the overhead of managing many threads.
+            More scalable and efficient for I/O-bound tasks.
+            Reduces the overhead of managing many threads.
         Cons:
-        Requires Java 21 or later.
-        Not suitable for CPU-bound tasks where traditional threads or parallel streams might be better.*/
+            Requires Java 21 or later.
+            Not suitable for CPU-bound tasks where traditional threads or parallel streams might be better.*/
 
-        ThreadFactory threadFactory = Thread.ofVirtual().name("myThread", 0).factory();
+        ThreadFactory threadFactory = Thread.ofVirtual().name("myThread : ", 0).factory();
 
+        List<Future<BigInteger>> submitted = new ArrayList<>();
         //try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
         try (ExecutorService srv = Executors.newThreadPerTaskExecutor(threadFactory)) {
-            startTimer();
             for (long inputNumber : inputNumbers) {
-                srv.submit(() -> factorial.compute(inputNumber));
+                submitted.add(srv.submit(() -> factorial.compute(inputNumber)));
             }
+
+            startTimer();
+            List<BigInteger> results = submitted.stream()
+                    .map(future -> {
+                        try {
+                            return future.get();
+                        } catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
+                    })
+                    .toList();
             stopTimer();
         }
+    }
+
+    private static void runWithCompletableFuture(List<Long> inputNumbers, Factorial factorial) {
+        startTimer();
+        List<CompletableFuture<BigInteger>> futures = inputNumbers.stream()
+                .map(inputNumber -> CompletableFuture.supplyAsync(() -> factorial.compute(inputNumber)))
+                .toList();
+
+        List<BigInteger> results = futures.stream()
+                .map(CompletableFuture::join)
+                .toList();
+        stopTimer();
+    }
+
+    private static void runWithCountDownLatch(List<Long> inputNumbers, Factorial factorial) throws InterruptedException {
+        CountDownLatch latch = new CountDownLatch(inputNumbers.size());
+        for (long inputNumber : inputNumbers) {
+            new Thread(() -> {
+                try {
+                    factorial.compute(inputNumber);
+                } finally {
+                    latch.countDown();
+                }
+            }).start();
+        }
+        startTimer();
+        latch.await();
+        stopTimer();
     }
 }
