@@ -2,13 +2,11 @@ package nitin.zKnowYourJava;
 
 import java.util.List;
 
-public class T6Streams2 {
+public class T6ParallelStreams {
     public static void main(String[] args) {
         //Which Thread will transform method run
         List.of(1, 2, 3)
                 .parallelStream()
-                //.stream()
-                //.parallel()
                 .map(number -> transform(number))
                 //.sequential()//The **last setting** overrides the entire pipeline.
                 .forEach(number -> print(number));

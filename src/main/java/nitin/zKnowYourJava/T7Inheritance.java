@@ -1,5 +1,7 @@
 package nitin.zKnowYourJava;
 
+import nitin.zKnowYourJava.T7.Derived;
+
 public class T7Inheritance {
     public static void main(String[] args) {
         try {
@@ -10,28 +12,3 @@ public class T7Inheritance {
     }
 }
 
-class Base {
-    public Base() {//Constructor
-        System.out.println("In base");
-        check();// The check of the Derived is called
-    }
-
-    public void check() {
-    }
-}
-
-class Derived extends Base {
-    private final String value;
-
-    public Derived(String value) {
-        System.out.println("In Derived");
-        this.value = value;
-    }
-
-    @Override
-    public void check() {
-        if (value.length() == 0) {
-            throw new RuntimeException("Null Value");
-        }
-    }
-}
