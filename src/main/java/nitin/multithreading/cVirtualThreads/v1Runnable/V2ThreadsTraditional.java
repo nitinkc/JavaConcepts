@@ -1,17 +1,16 @@
-package nitin.multithreading.cVirtualThreads.v1;
+package nitin.multithreading.cVirtualThreads.v1Runnable;
 
 import com.utilities.MultiThreadUtility;
 
-public class V3ThreadsNewLight {
-    public static void main(String[] args) throws InterruptedException {
-        //Static method initialization
-        var t1 = Thread.startVirtualThread(() -> task1());
-        var t2 = Thread.startVirtualThread(() -> task2());
+public class V2ThreadsTraditional {
+    public static void main(String[] args) {
+        Runnable task1 = () -> task1();
+        Thread thread1 = new Thread(task1);
 
-        //All Virtual Threads are always daemon threads,
-        // don’t forget to call join() if you want to wait on the main thread.
-        t1.join();
-        t2.join();
+        Thread thread2 = new Thread(() -> task2());
+
+        thread1.start();
+        thread2.start();
 
         System.out.println("Main thread " + Thread.currentThread());
     }
@@ -25,7 +24,7 @@ public class V3ThreadsNewLight {
 
     public static void task2() {
         System.out.println("entering task2 " + Thread.currentThread());
-        MultiThreadUtility.delay(5000);
+        MultiThreadUtility.delay(1000);
         System.out.println("exiting task2 " + Thread.currentThread());
     }
 }

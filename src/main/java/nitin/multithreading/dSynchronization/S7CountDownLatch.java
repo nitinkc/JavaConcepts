@@ -11,9 +11,7 @@ public class S7CountDownLatch {
     public static void main(String[] args) throws InterruptedException {
         final int THREADS = 50;
         CountDownLatch latch = new CountDownLatch(THREADS);
-
         Processor p = new Processor(latch);
-
         Thread[] t = new Thread[THREADS];
 
         for (int i = 0; i < THREADS; i++) {
@@ -23,11 +21,8 @@ public class S7CountDownLatch {
 
         //Wait for all the threads to finish
         System.out.println("Before Await...");
-
         latch.await();
-
         System.out.println("After Await");
-
         System.out.println(p.getClass());
     }
 }

@@ -5,19 +5,21 @@ import java.util.List;
 public class T6Streams2 {
     public static void main(String[] args) {
         //Which Thread will transform method run
-        List.of(1, 2, 3).stream()
-                .parallel()
+        List.of(1, 2, 3)
+                .parallelStream()
+                //.stream()
+                //.parallel()
                 .map(number -> transform(number))
-                //.sequential()
+                //.sequential()//The **last setting** overrides the entire pipeline.
                 .forEach(number -> print(number));
     }
 
     public static int transform(int number) {
-        System.out.println("Transform :: " + Thread.currentThread());
+        System.out.println("Transform() :: " + Thread.currentThread());
         return number * 2;
     }
 
     public static void print(int number) {
-        System.out.println("Print :: " + Thread.currentThread());
+        System.out.println("Print() :: " + Thread.currentThread());
     }
 }

@@ -1,4 +1,4 @@
-apiVersion: helm.fluxcd.io/v1
+apiVersion: helm.fluxcd.io/v1Runnable
 kind: HelmRelease
 metadata:
   name: orders-command-spanner

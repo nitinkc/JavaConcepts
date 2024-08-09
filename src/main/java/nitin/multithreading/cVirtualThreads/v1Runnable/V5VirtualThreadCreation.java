@@ -1,4 +1,4 @@
-package nitin.multithreading.cVirtualThreads.v1;
+package nitin.multithreading.cVirtualThreads.v1Runnable;
 
 import com.utilities.MultiThreadUtility;
 import nitin.multithreading.cVirtualThreads.Business;

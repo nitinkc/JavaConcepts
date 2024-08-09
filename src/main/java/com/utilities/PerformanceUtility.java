@@ -13,6 +13,7 @@ public class PerformanceUtility {
     public static void stopTimer() {
         stopWatch.stop();
         System.out.println("Total Execution Time in milliseconds: " + stopWatch.getTime() + " ms");
+        stopWatch.reset();
     }
 
     public static void resetTimer() {

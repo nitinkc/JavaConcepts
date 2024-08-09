@@ -32,7 +32,6 @@ public class S6ThreadPool {
         System.out.println("All tasks completed.");
         System.out.println();
     }
-
 }
 
 class Workers implements Runnable {

@@ -7,7 +7,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class T4forEach {
+public class T4SharedMutability {
     public static void main(String[] args) {
         String url = "https://www.mit.edu/~ecprice/wordlist.100000";
         List<String> words = getData(url);//Add more data
@@ -32,12 +32,11 @@ public class T4forEach {
     private static void sharedMutabilityParallelism(List<String> words) {
         System.out.println("======== sharedMutabilityParallelism ========");
         System.out.println("initial size = " + words.size());
-        List<String> result = new ArrayList<>();//Shared Mutability
+        List<String> result = new ArrayList<>();//Shared Mutable Variable
 
         words.parallelStream()//.stream
                 .map(String::toUpperCase)
-                .forEach(name -> result.add(name));//Mutation is OK and sharing is good.
-        //Shared Mutability is BAD
+                .forEach(name -> result.add(name));//Shared Mutability is BAD
 
         System.out.println("initial size = " + result.size());
     }

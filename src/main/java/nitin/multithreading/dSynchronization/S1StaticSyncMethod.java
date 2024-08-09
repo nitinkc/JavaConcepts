@@ -41,11 +41,11 @@ class Display1 {
     /**
      * The Static Sync method puts a class level lock.
      * When a thread executes a static Sync method then remaining threads are not allowed to
-     * execute ANY static Sync Methodof that class simultaneously.
+     * execute ANY static Sync Method of that class simultaneously.
      * <p>
      * BUT remaining threads can execute following methods
      * 1. normal static
-     * 2. nornal instance
+     * 2. normal instance
      * 3. synchronized instance
      */
 

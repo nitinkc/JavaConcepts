@@ -7,14 +7,13 @@ public class S10CriticalSectionProblem {
     public static void main(String[] args) {
         Account a = new Account();
 
-        // Same Object is beng used by two Threads
+        // Same Object is being used by two Threads
         Thread t1 = new Thread(a);
         Thread t2 = new Thread(a);
         t1.setName("T1");
         t2.setName("T2");
         t1.start();
         t2.start();
-
     }
 }
 

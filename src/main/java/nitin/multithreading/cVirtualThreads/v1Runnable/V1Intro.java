@@ -1,4 +1,4 @@
-package nitin.multithreading.cVirtualThreads.v1;
+package nitin.multithreading.cVirtualThreads.v1Runnable;
 
 import com.utilities.MultiThreadUtility;
 import nitin.multithreading.cVirtualThreads.Business;
@@ -34,7 +34,4 @@ public class V1Intro {
         // Overhead of context switching is needed.
         return Thread.startVirtualThread(Business::executeBusinessLogic);
     }
-
-
-
 }

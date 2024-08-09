@@ -1,41 +1,43 @@
 package nitin.multithreading.dSynchronization;
 
+import com.utilities.MultiThreadUtility;
+import com.utilities.RandomUtils;
+
+import javax.swing.plaf.multi.MultiTableHeaderUI;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 /**
  * Created by Nitin Chaurasia on 3/25/18 at 12:58 AM.
- * <p>
  * Demo that the value of a counter is not incremented properly
  */
 public class S0NonSyncProblems {
-    private static int counter = 0;
+    private static int counter = 0;//Shared Variable
+    static ArrayList<Integer> counterValues = new ArrayList<>();
 
-    public static void main(String[] args) {
-        ArrayList<Integer> counterValues = new ArrayList<>();
+    public static void main(String[] args) throws InterruptedException {
+        List<Thread> threads = new ArrayList<>();;
 
         for (int i = 0; i < 100; i++) {
-            process();
-            counterValues.add(counter);
+            Thread t1 = new Thread(S0NonSyncProblems::task);
+            t1.setName(STR."thread:\{i}");
+            threads.add(t1);
         }
 
-        System.out.println("Finished execution");
+        for(Thread thread : threads){
+            thread.start();
+        }
+
+        for(Thread thread : threads){
+            thread.join();
+        }
+        System.out.println("Finished execution : " + counterValues.size());
         System.out.println(counterValues);
     }
 
-    public static void process() {
-        counter = 0;
-        Thread t1 = new Thread(S0NonSyncProblems::task);
-        Thread t2 = new Thread(S0NonSyncProblems::task);
-
-        t1.start();
-        t2.start();
-    }
-
     private static void task() {
-        for (int i = 0; i < 10000; i++) {
-            ++counter;
-        }
+        MultiThreadUtility.delay(new Random().nextInt(1000));//Random delay
+        counterValues.add(++counter);
     }
 }
-
-
