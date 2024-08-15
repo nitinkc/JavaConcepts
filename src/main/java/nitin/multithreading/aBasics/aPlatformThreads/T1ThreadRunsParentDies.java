@@ -15,13 +15,13 @@ public class T1ThreadRunsParentDies {// by overriding run method
     public static void main(String[] args) throws InterruptedException {
         //Starting the Thread
         //By default, the platform threads are NON-DAEMON Threads, unless its explicitly marked daemon.
-        Thread thread = new Thread(T1ThreadRunsParentDies::task);
-        thread.setName("child");
+        Thread thread = new Thread(() -> task(), "child");
+        thread.setDaemon(false);//false, runs the child thread, even if the parent dies. if set true, the child dies as soon as parent dies
         thread.start();
 
-        //Deliberately putting and exception so that main stops
+        //Deliberately putting and exception so that mainThread stops
         int test = 10 / 0;
-        // Runtime Stack will be destroyed as there is no exception handling code
+        // Runtime Stack will be destroyed (for the main thread) as there is no exception handling code
 
         for (int i = 1; i <= MAX; i++) {
             System.out.println("Main Thread execution" + i);

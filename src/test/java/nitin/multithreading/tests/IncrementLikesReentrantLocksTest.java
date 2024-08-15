@@ -1,6 +1,6 @@
 package nitin.multithreading.tests;
 
-import nitin.multithreading.shared.tests.IncrementLikesReentrantLocks;
+import nitin.multithreading.raceCondition.shared.tests.IncrementLikesReentrantLocks;
 import org.junit.Assert;
 import org.junit.Test;
 

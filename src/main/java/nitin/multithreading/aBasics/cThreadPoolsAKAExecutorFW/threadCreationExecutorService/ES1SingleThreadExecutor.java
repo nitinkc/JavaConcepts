@@ -3,12 +3,14 @@ package nitin.multithreading.aBasics.cThreadPoolsAKAExecutorFW.threadCreationExe
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import static com.utilities.MultiThreadUtility.logShortMessage;
+
 /**
  * Created by Nitin C on 3/3/2016.
  * Concurrency API includes the Executors factory class that can
  * be used to create instances of the ExecutorServiceObject
  * <p>
- * Tasks are guaranteed to be executed int he order they are submitted for a single-threaded application
+ * Tasks are guaranteed to be executed in the order they are submitted for a single-threaded application
  */
 public class ES1SingleThreadExecutor {
     public static void main(String[] args) {
@@ -22,7 +24,7 @@ public class ES1SingleThreadExecutor {
             service.execute(() -> System.out.println("One little lambda function for the thread"));
             service.execute(() -> {
                 for (int i = 0; i < 10; i++) {
-                    System.out.println("Printing : " + i);
+                    logShortMessage("Printing : " + i);
                 }
             });
             System.out.println("END");
