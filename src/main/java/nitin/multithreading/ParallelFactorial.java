@@ -105,7 +105,7 @@ public class ParallelFactorial {
             startTimer();
             for (Future<BigInteger> future : futures) {
                 try {
-                    results.add(future.get());
+                    results.add(future.get());//Get is not preferred
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } catch (ExecutionException e) {

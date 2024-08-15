@@ -15,7 +15,7 @@ public class T3ThreadByRunnableFluent {
                 .daemon(true)
                 .start(r);
         
-        thread.join();
+        thread.join();//Forcing the main thread to stop for the child thread
 
         logShortMessage("Ending Main Thread ..");
     }

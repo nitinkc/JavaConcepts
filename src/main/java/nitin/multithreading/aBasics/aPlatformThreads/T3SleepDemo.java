@@ -16,7 +16,5 @@ public class T3SleepDemo {
         Thread.sleep(2000);
 
         System.out.println("Line 3");
-
-
     }
 }

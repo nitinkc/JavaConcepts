@@ -25,7 +25,7 @@ public class T6ThreadPriority {
         // Child has more Priority than Parent
         //t.setPriority(6);
 
-        t.setPriority(1);// ?? UNKNOWN BEHAVIOUR
+        t.setPriority(10);// ?? UNKNOWN BEHAVIOUR
         t.start();
 
         // Normal Main execution

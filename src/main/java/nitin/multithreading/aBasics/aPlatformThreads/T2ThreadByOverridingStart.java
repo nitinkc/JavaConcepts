@@ -9,6 +9,7 @@ public class T2ThreadByOverridingStart {
 
         // start is overridden thus it will execute like a normal method.
         t.start();
+        t.run();
     }
 }
 
