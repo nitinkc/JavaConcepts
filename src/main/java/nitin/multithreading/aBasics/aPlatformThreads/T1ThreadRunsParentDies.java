@@ -10,13 +10,13 @@ import com.utilities.MultiThreadUtility;
 public class T1ThreadRunsParentDies {// by overriding run method
     static final int MAX = 50;
 
-    //By default, the platform threadsa re NON-DAEMON Threads, unless its explicitly marked daemon.
-    // If any non daemon thread is running, the JVM will not shut it down even if the main thread has terminated.
+    //By default, the platform threads are NON-DAEMON Threads, unless its explicitly marked daemon.
+    // If any non-daemon thread is running, the JVM WILL NOW shut it down even if the main thread has terminated.
     public static void main(String[] args) throws InterruptedException {
         //Starting the Thread
         //By default, the platform threads are NON-DAEMON Threads, unless its explicitly marked daemon.
         Thread thread = new Thread(() -> task(), "child");
-        thread.setDaemon(false);//false, runs the child thread, even if the parent dies. if set true, the child dies as soon as parent dies
+        thread.setDaemon(true);//false=non-daemon, runs the child thread, even if the parent dies. if set true, the child dies as soon as parent dies
         thread.start();
 
         //Deliberately putting and exception so that mainThread stops
