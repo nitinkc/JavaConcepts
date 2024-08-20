@@ -1,8 +1,10 @@
 package nitin.multithreading.tests;
 
-import nitin.multithreading.raceCondition.shared.tests.IncrementLikesReentrantLocks;
+import nitin.multithreading.raceCondition.dSynchronization.tests.IncrementLikesReentrantLocks;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -19,24 +21,24 @@ public class IncrementLikesReentrantLocksTest {
         int count = 1000;
 
         IncrementLikesReentrantLocks il = new IncrementLikesReentrantLocks();
-        Set<BigDecimal> uniqueSequences = getLikes(count, il);
+        Set<Integer> uniqueSequences = getLikes(count, il);
         Assert.assertEquals(count, uniqueSequences.size());
     }
 
-    private Set<BigDecimal> getLikes(int count, IncrementLikesReentrantLocks il) throws InterruptedException, ExecutionException {
+    private Set<Integer> getLikes(int count, IncrementLikesReentrantLocks il) throws InterruptedException, ExecutionException {
         ExecutorService executor = Executors.newFixedThreadPool(10);
-        Set<BigDecimal> uniqueSequences = new LinkedHashSet<>();
-        List<Future<BigDecimal>> futures = new ArrayList<>();
+        Set<Integer> uniqueSequences = new LinkedHashSet<>();
+        List<Future<Integer>> futures = new ArrayList<>();
 
         for (int i = 0; i < count; i++) {
 
             System.out.println("Created Task: " + executor);
-            Future<BigDecimal> future = executor.submit(il::incrementLikeBigInt);
+            Future<Integer> future = executor.submit(il::incrementLikes);
             futures.add(future);
         }
 
-        for (Future<BigDecimal> future : futures) {
-            BigDecimal result = future.get();//Future returns the datatype of the method thats been multithreaded
+        for (Future<Integer> future : futures) {
+            Integer result = future.get();//Future returns the datatype of the method thats been multithreaded
             System.out.println("Result from Future " + result);
             uniqueSequences.add(result);
         }

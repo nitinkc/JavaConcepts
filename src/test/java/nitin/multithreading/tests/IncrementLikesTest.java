@@ -1,6 +1,6 @@
 package nitin.multithreading.tests;
 
-import nitin.multithreading.raceCondition.shared.tests.IncrementLikes;
+import nitin.multithreading.raceCondition.dSynchronization.tests.IncrementLikes;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -28,7 +28,7 @@ public class IncrementLikesTest {
 
         for (int i = 0; i < count; i++) {
             System.out.println("Created Task: " + executor);
-            futures.add(executor.submit(il::incrementLike));
+            futures.add(executor.submit(il::incrementLikes));
         }
 
         for (Future<Integer> future : futures) {

@@ -9,13 +9,13 @@ public class DataRaceRunner {
             }
         });
 
-        Thread thread2 = new Thread(() -> {
+        Thread checkerThread = new Thread(() -> {
             for (int i = 0; i < Integer.MAX_VALUE; i++) {
                 sharedClass.checkForDataRace();
             }
         });
 
         thread1.start();
-        thread2.start();
+        checkerThread.start();
     }
 }

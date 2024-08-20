@@ -1,4 +1,4 @@
-package nitin.multithreading.raceCondition.shared;
+package nitin.multithreading.raceCondition.dSynchronization;
 
 public class SharedCounter {
     private int counter = 0;

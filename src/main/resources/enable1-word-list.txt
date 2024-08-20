@@ -77208,7 +77208,7 @@ interschools
 intersect
 intersected
 intersecting
-intersection
+intersectionSync
 intersectional
 intersections
 intersects

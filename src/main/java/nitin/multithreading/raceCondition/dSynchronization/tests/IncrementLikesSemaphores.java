@@ -1,22 +1,21 @@
-package nitin.multithreading.raceCondition.shared.tests;
+package nitin.multithreading.raceCondition.dSynchronization.tests;
 
-import java.math.BigDecimal;
 import java.util.concurrent.Semaphore;
 
 public class IncrementLikesSemaphores extends IncrementLikes {
     private final Semaphore semaphore = new Semaphore(1);//1 thread means it behaves as mutex.
 
-    private final BigDecimal likeBigDecimal = super.getNextLikeCountBigDecimal();
+    private final Integer likeBigDecimal = super.getCurrentLikesCount();
 
     @Override
-    public BigDecimal incrementLikeBigInt() {
+    public Integer incrementLikes() {
         try {
             try {
                 semaphore.acquire();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            return super.incrementLikeBigInt();
+            return super.incrementLikes();
         } finally {
             semaphore.release();
         }

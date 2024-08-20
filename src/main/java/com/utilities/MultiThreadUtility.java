@@ -32,7 +32,7 @@ public class MultiThreadUtility {
     }
 
     public static void logMessage(String message) {
-        System.out.println(message + " : " + Thread.currentThread());
+        System.out.printf("%s %s\n", Thread.currentThread(), message );
     }
 
     public static void foreverThread() {

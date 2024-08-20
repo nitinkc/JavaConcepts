@@ -11,21 +11,17 @@ public class T1ThreadRunsParentDies {// by overriding run method
     static final int MAX = 50;
 
     //By default, the platform threads are NON-DAEMON Threads, unless its explicitly marked daemon.
-    // If any non-daemon thread is running, the JVM WILL NOW shut it down even if the main thread has terminated.
+    // If any non-daemon thread is running, the JVM WILL NOT shut it down even if the main thread has terminated.
     public static void main(String[] args) throws InterruptedException {
         //Starting the Thread
         //By default, the platform threads are NON-DAEMON Threads, unless its explicitly marked daemon.
         Thread thread = new Thread(() -> task(), "child");
-        thread.setDaemon(true);//false=non-daemon, runs the child thread, even if the parent dies. if set true, the child dies as soon as parent dies
+        thread.setDaemon(false);//false=non-daemon, runs the child thread, even if the parent dies. if set true, the child dies as soon as parent dies
         thread.start();
 
         //Deliberately putting and exception so that mainThread stops
         int test = 10 / 0;
         // Runtime Stack will be destroyed (for the main thread) as there is no exception handling code
-
-        for (int i = 1; i <= MAX; i++) {
-            System.out.println("Main Thread execution" + i);
-        }
 
         thread.join();
     }

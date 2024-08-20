@@ -78,8 +78,6 @@ dependencies {
     //Testing Framework
     testImplementation 'org.junit.jupiter:junit-jupiter-api:' + junitJupiterVersion
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:' + junitJupiterVersion
-    testImplementation Testing.junit4
-    testImplementation Testing.junit.jupiter
     testImplementation group: 'org.mockito', name: 'mockito-core', version: mockitoCoreVersion
     testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: mockitoCoreVersion
 }

@@ -1,4 +1,4 @@
-package nitin.multithreading.raceCondition.gLocks;
+package nitin.multithreading.raceCondition.bReentrantLocks;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

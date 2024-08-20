@@ -1,6 +1,12 @@
 package nitin.multithreading.raceCondition.dSynchronization;
 
+import com.utilities.MultiThreadUtility;
+
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+import static com.utilities.MultiThreadUtility.logMessage;
 
 /**
  * Created by Nitin Chaurasia on 12/5/15 at 10:39 PM.
@@ -8,42 +14,47 @@ import java.util.concurrent.CountDownLatch;
  * Demonstrating
  */
 public class S7CountDownLatch {
-    public static void main(String[] args) throws InterruptedException {
-        final int THREADS = 50;
-        CountDownLatch latch = new CountDownLatch(THREADS);
-        Processor p = new Processor(latch);
-        Thread[] t = new Thread[THREADS];
+    public static void main(String[] args) {
+        // Number of worker threads
+        int numberOfWorkers = 3;
 
-        for (int i = 0; i < THREADS; i++) {
-            t[i] = new Thread(p);
-            t[i].start();
+        // Create a CountDownLatch initialized with the number of worker threads
+        CountDownLatch latch = new CountDownLatch(numberOfWorkers);
+
+        // Create an ExecutorService with a fixed thread pool
+        try (ExecutorService executor = Executors.newFixedThreadPool(numberOfWorkers)) {
+            // Submit worker tasks to the executor
+            for (int i = 1; i <= numberOfWorkers; i++) {
+                final int workerId = i;
+                executor.submit(() -> task(workerId, latch));
+            }
+
+            // Main thread waits until all worker threads have finished
+            logMessage("Main thread is waiting for workers to finish.");
+            try {
+                latch.await();  // This will block until latch count reaches zero
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                System.out.println("Main thread was interrupted while waiting.");
+            }
+            logMessage("All workers have finished. Main thread resumes.");
+        } catch (Exception e) {
+            System.out.println("An error occurred while creating the ExecutorService: " + e.getMessage());
         }
-
-        //Wait for all the threads to finish
-        System.out.println("Before Await...");
-        latch.await();
-        System.out.println("After Await");
-        System.out.println(p.getClass());
-    }
-}
-
-class Processor implements Runnable {
-    private final CountDownLatch latch;
-
-    Processor(CountDownLatch latch) {
-        this.latch = latch;
     }
 
-
-    @Override
-    public void run() {
-        System.out.println("Started.");
+    private static void task(int workerId, CountDownLatch latch) {
         try {
-            Thread.sleep(200);
+            logMessage("Worker " + workerId + " is performing the task.");
+            // Simulate task duration
+            Thread.sleep((long) (Math.random() * 2000));
+            logMessage("Worker " + workerId + " has finished the task.");
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            Thread.currentThread().interrupt();
+            System.out.println("Worker " + workerId + " was interrupted.");
+        } finally {
+            // Decrement the count of the latch
+            latch.countDown();
         }
-        System.out.println(latch.getCount());
-        latch.countDown();
     }
 }

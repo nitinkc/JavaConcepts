@@ -1,4 +1,4 @@
-package nitin.multithreading.raceCondition.shared;
+package nitin.multithreading.raceCondition.dSynchronization;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;

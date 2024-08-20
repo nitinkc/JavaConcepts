@@ -1,7 +1,7 @@
-package nitin.multithreading.raceCondition.shared.runners;
+package nitin.multithreading.raceCondition.dSynchronization.runners;
 
-import nitin.multithreading.raceCondition.shared.IncrementTaskCountDownLatch;
-import nitin.multithreading.raceCondition.shared.SharedCounter;
+import nitin.multithreading.raceCondition.dSynchronization.IncrementTaskCountDownLatch;
+import nitin.multithreading.raceCondition.dSynchronization.SharedCounter;
 
 import java.util.concurrent.CountDownLatch;
 

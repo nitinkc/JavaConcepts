@@ -1,18 +1,17 @@
-package nitin.multithreading.raceCondition.shared.tests;
+package nitin.multithreading.raceCondition.dSynchronization.tests;
 
-import java.math.BigDecimal;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class IncrementLikesReentrantLocks extends IncrementLikes {
     private final ReentrantLock mutex = new ReentrantLock();
 
-    private final BigDecimal likeBigDecimal = super.getNextLikeCountBigDecimal();
+    private final Integer likeBigDecimal = super.getCurrentLikesCount();
 
     @Override
-    public BigDecimal incrementLikeBigInt() {
+    public Integer incrementLikes() {
         try {
             mutex.lock();
-            return super.incrementLikeBigInt();
+            return super.incrementLikes();
         } finally {
             mutex.unlock();
         }

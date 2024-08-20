@@ -28,11 +28,20 @@ public class   A1Intro {
     }
 
     private static void eg2() {
-        getData()
+        CompletableFuture<Void> thisNeverEnds = getData()
                 .thenAccept(data -> System.out.println(data))
                 .thenRun(() -> System.out.println("Can continue from this on..."))
                 .thenRun(() -> System.out.println("this never ends"))
                 .thenRun(() -> System.out.println("tap on, get data... get out..."));
+
+        try {
+            thisNeverEnds.get();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        } catch (ExecutionException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     private static void eg3() {
@@ -55,7 +64,7 @@ public class   A1Intro {
                 () -> {
                     System.out.println("Getting the data......");
                     MultiThreadUtility.delay(1000);//Try commenting and see how it's changing the thread
-                    return 22.7;
+                    return Double.valueOf(22/7);
                 });
     }
 }
