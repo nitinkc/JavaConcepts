@@ -17,7 +17,7 @@ public class VolatilePerformanceTest {
     // Test performance for volatile variable
     public void testVolatileReadWrite() {
         final int NUM_THREADS = 4;
-        final int NUM_ITERATIONS = 1000000;
+        final int NUM_ITERATIONS = 1_000_000;
 
         // Create and start threads for volatile variable test
         Thread[] threads = new Thread[NUM_THREADS];

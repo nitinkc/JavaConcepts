@@ -1,22 +1,18 @@
-package nitin.annotations;
+package nitin.annotations.run;
 
-import java.lang.annotation.Documented;
+import java.lang.annotation.*;
 
 /**
  * Created by nitin on Monday, March/30/2020 at 11:51 PM
  */
 @Documented
-public @interface ClassWriter {
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE)
+public @interface Documentation {
     String author() default "Nitin K C";
-
     String date();
-
     int currentRevision() default 1;
-
     String lastModified() default "N/A";
-
     String lastModifiedBy() default "N/A";
-
-    // Note use of array
-    String[] reviewers();
+    String[] reviewers();// Note use of array
 }
