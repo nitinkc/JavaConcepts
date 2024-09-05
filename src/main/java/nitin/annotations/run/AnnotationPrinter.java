@@ -2,12 +2,12 @@ package nitin.annotations.run;
 
 public class AnnotationPrinter {
     public static void main(String[] args) {
-        //Via reflection
+        //Via reflection, Class under test
         Class<?> clazz = DocumentationAnnotationTest.class;
 
         // Check if the class is annotated with @ClassWriter
         if (clazz.isAnnotationPresent(Documentation.class)) {
-            // Retrieve the @ClassWriter annotation
+            // Retrieve the annotation
             Documentation annotation = clazz.getAnnotation(Documentation.class);
 
             // Print the annotation values
