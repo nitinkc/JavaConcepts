@@ -3,20 +3,48 @@ package nitin.streams.collectors.c3groupby;
 import com.entity.EmployeeSimple;
 import com.entity.SampleData;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static java.util.function.Function.identity;
 import static java.util.stream.Collectors.*;
 
 public class C3GroupBy {
     public static void main(String[] args) {
+        List<Integer> list = Arrays.asList(1, 2, 1, 3, 3, 4, 5, 6, 7, 8, 6, 5, 4, 3, 2, 1);
+        Function<List<Integer>, List<Integer>> numbers = Function.identity(); //returns function that always returns its input argument
+        List<Integer> inputNumbers = numbers.apply(list);
+        System.out.println(inputNumbers);
+
+        groupStringsBySize();
+        findFrequency();
         empGroupByName();
         ageByName();
         countByName();//counting
         countIntByName();
+        groupByAge();
+    }
+
+    private static void groupStringsBySize() {
+        List<String> strings = Arrays.asList("apple", "banana", "cherry", "date");
+        // The Map will have the lengths as keys and lists of strings with those lengths as values
+        Map<Integer, List<String>> categorizedByLength = strings.stream()
+                //.collect(Collectors.groupingBy(str -> str.length(), Collectors.toList()));//Two-Argument groupingBy: Uses the classifier function and a specified downstream collector to determine how the grouped elements are collected.
+                .collect(Collectors.groupingBy(String::length));//Single-Argument groupingBy: Uses the classifier function and defaults to collecting elements into a List.
+        System.out.println(categorizedByLength);//{4=[date], 5=[apple], 6=[banana, cherry]}
+    }
+
+    private static void findFrequency() {
+        List<Integer> list = getEvenNumberList();
+
+        //Find frequency of all the numbers
+        Map<Integer, Long> map = list.stream()
+                //.collect(groupingBy(element -> element, counting()));// Function.identity() Equivalent to an i in a for loop
+                .collect(groupingBy(identity(), counting()));//collect takes a COLLECTOR as parameter(with single argument overloaded method). any method that returns a collector can be used
+
+        System.out.println(map);//{1=3, 2=2, 3=3, 4=2, 5=2, 6=2, 7=1, 8=1}
     }
 
     private static void empGroupByName() {
@@ -43,7 +71,6 @@ public class C3GroupBy {
         //Recursive Structure
         //Collector(Function, Collector(Function, Collector))
         System.out.println(byName);
-
         Map<String, Set<Integer>> byNameSet = employees.stream()
                 .filter(Objects::nonNull).filter(emp -> null != emp.getName()).filter(emp -> null != emp.getAge())
                 .collect(
@@ -76,5 +103,27 @@ public class C3GroupBy {
                 .collect(groupingBy(EmployeeSimple::getName, collectingAndThen(counting(), Long::intValue)));//Perform a transformation and then keep in the bucket
 
         System.out.println(byName);
+    }
+
+    private static List<Integer> getEvenNumberList() {
+        List<Integer> list = List.of(1, 2, 1, 3, 3, 4, 5, 6, 7, 8, 6, 5, 4, 3, 2, 1);
+        List<Integer> evenNumberList = list.stream()
+                .collect(filtering(number -> number % 2 == 0, toList()));
+        //System.out.println(evenNumberList);//[2, 4, 6, 8, 6, 4, 2]
+        return list;
+    }
+
+    private static void groupByAge() {
+        List<EmployeeSimple> empSimple = SampleData.getSimpleEmployees();
+
+        Predicate<EmployeeSimple> ageNotNull = emp -> null != emp.getAge();
+        Predicate<EmployeeSimple> salaryNotNull = emp -> null != emp.getSalary();
+
+        Map<Integer, Set<Integer>> expByAge = empSimple
+                .stream()
+                .filter(ageNotNull)
+                .filter(salaryNotNull)
+                .collect(groupingBy(EmployeeSimple::getAge, mapping(EmployeeSimple::getExperience, toSet())));
+        System.out.println("experience by age" + expByAge);
     }
 }
