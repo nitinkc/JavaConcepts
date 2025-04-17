@@ -19,11 +19,11 @@ public class C3GroupBy {
         System.out.println(inputNumbers);
 
         groupStringsBySize();
-        findFrequency();
-        empGroupByName();
+        findFrequencyOfRepeatedNumbers();
+        empGroupByName();//Group By Name
         ageByName();
-        countByName();//counting
-        countIntByName();
+        countByName();//Name and its count (frequency
+        countIntByName();//Name and its count (frequency)- collectingAndThen
         groupByAge();
     }
 
@@ -36,7 +36,7 @@ public class C3GroupBy {
         System.out.println(categorizedByLength);//{4=[date], 5=[apple], 6=[banana, cherry]}
     }
 
-    private static void findFrequency() {
+    private static void findFrequencyOfRepeatedNumbers() {
         List<Integer> list = getEvenNumberList();
 
         //Find frequency of all the numbers
@@ -70,7 +70,7 @@ public class C3GroupBy {
 
         //Recursive Structure
         //Collector(Function, Collector(Function, Collector))
-        System.out.println(byName);
+        System.out.println("Age By Name :: "+byName);
         Map<String, Set<Integer>> byNameSet = employees.stream()
                 .filter(Objects::nonNull).filter(emp -> null != emp.getName()).filter(emp -> null != emp.getAge())
                 .collect(
@@ -79,7 +79,7 @@ public class C3GroupBy {
 
         //Recursive Structure
         //Collector(Function, Collector(Function, Collector))
-        System.out.println(byNameSet);
+        System.out.println("Age By Name (Set):: " + byNameSet);
     }
 
     private static void countByName() {
@@ -89,7 +89,7 @@ public class C3GroupBy {
                 .filter(Objects::nonNull).filter(emp -> null != emp.getName()).filter(emp -> null != emp.getAge())
                 .collect(groupingBy(EmployeeSimple::getName, counting()));//Grouping By Overloaded -> Taking function as a parameter and another collector
 
-        System.out.println(byName);
+        System.out.println("Count By Name : "+byName);
     }
 
     private static void countIntByName() {
@@ -102,7 +102,7 @@ public class C3GroupBy {
                 //.collect(groupingBy(EmployeeSimple::getName, collectingAndThen(counting(), value -> value.intValue())));
                 .collect(groupingBy(EmployeeSimple::getName, collectingAndThen(counting(), Long::intValue)));//Perform a transformation and then keep in the bucket
 
-        System.out.println(byName);
+        System.out.println("Name and its count (frequency) : "+byName);
     }
 
     private static List<Integer> getEvenNumberList() {

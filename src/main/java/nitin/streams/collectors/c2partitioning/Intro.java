@@ -17,13 +17,13 @@ public class Intro {
     public static void main(String[] args) {
 
         List<Integer> list = Arrays.asList(1, 2, 1, 3, 3, 4, 5, 6, 7, 8, 6, 5, 4, 3, 2, 1);
+
+        //Splits in true list and false list. Keys = Boolean
         Map<Boolean, List<Integer>> collect = list.stream()
                 .collect(partitioningBy(number -> number % 2 == 0));
         System.out.println(collect);//{false=[1, 1, 3, 3, 5, 7, 5, 3, 1], true=[2, 4, 6, 8, 6, 4, 2]}
 
-
         List<EmployeeSimple> employees = SampleData.getSimpleEmployees();//Call from DB
-
         //Split the list into 2 sub list based on even and odd age
         splitEmpList(employees);
 

@@ -65,5 +65,4 @@ public class FrequencyCalc {
         }
         System.out.println(freqMap);
     }
-
 }
