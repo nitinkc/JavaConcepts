@@ -3,7 +3,6 @@ plugins {
     id 'maven-publish'
     id "org.sonarqube" version "4.4.1.3373" //For local testing
 }
-
 group = 'JavaConcepts'
 version = '1.0-SNAPSHOT'
 
@@ -80,6 +79,13 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:' + junitJupiterVersion
     testImplementation group: 'org.mockito', name: 'mockito-core', version: mockitoCoreVersion
     testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: mockitoCoreVersion
+
+    // https://mvnrepository.com/artifact/org.codehaus.mojo/jdepend-maven-plugin
+    implementation("org.codehaus.mojo:jdepend-maven-plugin:2.1")
+    // https://mvnrepository.com/artifact/com.tngtech.archunit/archunit-junit5-api
+    //testImplementation("com.tngtech.archunit:archunit-junit5-api:1.4.1")
+    // https://mvnrepository.com/artifact/com.tngtech.archunit/archunit
+    testImplementation("com.tngtech.archunit:archunit:1.4.1")
 }
 
 sonarqube {

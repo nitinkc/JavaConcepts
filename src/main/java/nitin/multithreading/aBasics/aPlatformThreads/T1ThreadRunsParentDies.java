@@ -31,7 +31,7 @@ public class T1ThreadRunsParentDies {// by overriding run method
 
         for (int i = 1; i <= MAX; i++) {
             MultiThreadUtility.delay(100);
-            System.out.println(STR."\{Thread.currentThread()} : Child Thread execution : \{i}");
+            System.out.println(Thread.currentThread() + " : Child Thread execution : " + i);
         }
     }
 }
