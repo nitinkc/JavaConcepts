@@ -6,11 +6,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.*;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-        "small",
-        "medium",
-        "large"
-})
+@JsonPropertyOrder({"small", "medium", "large"})
 @Getter
 @Setter
 @AllArgsConstructor
@@ -21,9 +17,10 @@ public class Cover {
 
     @JsonProperty("small")
     public String small;
+
     @JsonProperty("medium")
     public String medium;
+
     @JsonProperty("large")
     public String large;
-
 }

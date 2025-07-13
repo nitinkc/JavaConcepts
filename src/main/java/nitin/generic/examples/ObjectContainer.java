@@ -21,5 +21,4 @@ public class ObjectContainer {
     public void setObj(Object obj) {
         this.obj = obj;
     }
-
 }

@@ -5,15 +5,10 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.*;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-
-})
+@JsonPropertyOrder({})
 @Getter
 @Setter
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
-public class Formats {
-
-
-}
+public class Formats {}

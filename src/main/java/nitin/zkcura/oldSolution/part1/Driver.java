@@ -6,13 +6,11 @@ import java.util.*;
 
 /**
  * Created by Nitin Chaurasia on 11/9/15 at 3:43 PM as a part of the kCura interview process.
- * <p>
- * The data is present in a file the name of which is expected as a command line argument.
- * If the file name is not given, the program terminates giving an error
- * NOTE: The Data is assumed to be in a predefined format, thus the check for the
- * correctness and formatting of data is avoided here.
+ *
+ * <p>The data is present in a file the name of which is expected as a command line argument. If the
+ * file name is not given, the program terminates giving an error NOTE: The Data is assumed to be in
+ * a predefined format, thus the check for the correctness and formatting of data is avoided here.
  */
-
 
 /*
  * Main Class that runs the project
@@ -34,7 +32,7 @@ public class Driver {
         // fileName contains the name of the file containing initial Data.
         String fileName = args[0];
 
-        //Read the contents of the file and store locally
+        // Read the contents of the file and store locally
         File dataFile = new File(fileName);
         Scanner input = null;
         try {
@@ -48,24 +46,24 @@ public class Driver {
         List<Data> list = new ArrayList<Data>();
 
         /* Read from the File, assuming the file is properly sanitized
-           The contents are put in the form of objects of type Data into a
-           List.
-         */
+          The contents are put in the form of objects of type Data into a
+          List.
+        */
         while (input.hasNext()) {
-            //Split the tokens based on the delimiter "\"
+            // Split the tokens based on the delimiter "\"
             String[] temp = input.nextLine().split("\\|");
 
-            //Put the tokens into an Object of Data Class and continue making a List of Data Object
+            // Put the tokens into an Object of Data Class and continue making a List of Data Object
             Data tempData = new Data();
 
-            //Population in 100 thousands
+            // Population in 100 thousands
             tempData.setPopulation(Integer.parseInt(temp[0]));
             tempData.setCity(temp[1]);
             tempData.setState(temp[2]);
 
             // Make a list of Interstates and Sort them for the convinience.
             String[] interstates = temp[3].split(";");
-            //Sort the interstates and then put into the Object
+            // Sort the interstates and then put into the Object
             tempData.setInterstates(driver.sortInterstates(interstates));
 
             list.add(tempData);
@@ -94,16 +92,15 @@ public class Driver {
         }
     }
 
-
     /**
-     * Solving First Part of Option 1 in which data is written in a file named Cities_By_Population.txt
-     * In a specified format with a customized sorting order.
+     * Solving First Part of Option 1 in which data is written in a file named
+     * Cities_By_Population.txt In a specified format with a customized sorting order.
      */
     public void writeCitiesByPopulation(List<Data> list) {
 
         FileWriter fw = null;
         try {
-            //Overwrite in the File
+            // Overwrite in the File
             fw = new FileWriter(CITIES_FILE, false);
         } catch (IOException e) {
             e.printStackTrace();
@@ -119,7 +116,8 @@ public class Driver {
         int currentPopulation = -1;
         while (itr.hasNext()) {
             Data curr = itr.next();
-            // Grouping the cities with same population, if the population is same, all cities are clubbed
+            // Grouping the cities with same population, if the population is same, all cities are
+            // clubbed
             if (currentPopulation == curr.getPopulation()) {
                 printToFile.println(curr.aggragateCities());
             } else {
@@ -128,19 +126,19 @@ public class Driver {
             }
         }
 
-        printToFile.close();//Should have flushed also
+        printToFile.close(); // Should have flushed also
         System.out.println("Successfully saved data to file: " + CITIES_FILE);
     }
 
     /**
-     * Solving Second Part of Option 1 in which the count of Interstates is to be written in a
-     * file named Interstates_By_City.txt. The Interstates name will be in the Ascending order
+     * Solving Second Part of Option 1 in which the count of Interstates is to be written in a file
+     * named Interstates_By_City.txt. The Interstates name will be in the Ascending order
      */
     private void writeInterstatesByCity(List<Data> list) {
 
         FileWriter fw = null;
         try {
-            //Overwrite the File
+            // Overwrite the File
             fw = new FileWriter(INTERSTATES_FILE, false);
         } catch (IOException e) {
             e.printStackTrace();
@@ -150,7 +148,7 @@ public class Driver {
 
         Iterator<Data> itr = list.listIterator();
 
-        //Map to hold the names of the Interstates and its count
+        // Map to hold the names of the Interstates and its count
         Map<String, Integer> interstateCount = new TreeMap<String, Integer>();
 
         while (itr.hasNext()) {
@@ -159,12 +157,13 @@ public class Driver {
 
             for (int i = 0; i < temp.size(); i++) {
                 String currInterstateName = temp.get(i);
-                //If the Interstate is not there in the Hashmap
+                // If the Interstate is not there in the Hashmap
                 if (!interstateCount.containsKey(currInterstateName)) {
                     interstateCount.put(currInterstateName, 1);
                 } else {
-                    //Increment the count by one
-                    interstateCount.put(currInterstateName, interstateCount.get(currInterstateName) + 1);
+                    // Increment the count by one
+                    interstateCount.put(
+                            currInterstateName, interstateCount.get(currInterstateName) + 1);
                 }
             }
         }
@@ -174,9 +173,8 @@ public class Driver {
             AllInterstatesSorted.add(key);
         }
 
-        //Keep a sorted list of Interstates to get the matching values from the Map
+        // Keep a sorted list of Interstates to get the matching values from the Map
         Collections.sort(AllInterstatesSorted, new InterstateComparator());
-
 
         // Writing Interstates names and its count into the file
         for (int i = 0; i < AllInterstatesSorted.size(); i++) {
@@ -189,13 +187,11 @@ public class Driver {
         System.out.println("Successfully saved data to file: " + INTERSTATES_FILE);
     }
 
-    //Method to Sort the Interstates
+    // Method to Sort the Interstates
     private List<String> sortInterstates(String[] interstates) {
         List<String> temp = Arrays.asList(interstates);
         Collections.sort(temp, new InterstateComparator());
 
         return temp;
     }
-
 }
-

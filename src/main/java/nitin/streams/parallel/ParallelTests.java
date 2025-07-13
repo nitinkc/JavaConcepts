@@ -4,7 +4,7 @@ import nitin.streams.timing.Op;
 
 public class ParallelTests {
     public static void main(String[] args) {
-        //compareOutput();
+        // compareOutput();
         compareTiming();
     }
 

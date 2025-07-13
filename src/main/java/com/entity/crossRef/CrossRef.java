@@ -10,12 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-        "status",
-        "message-type",
-        "message-version",
-        "message"
-})
+@JsonPropertyOrder({"status", "message-type", "message-version", "message"})
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -25,11 +20,13 @@ public class CrossRef {
 
     @JsonProperty("status")
     public String status;
+
     @JsonProperty("message-type")
     public String messageType;
+
     @JsonProperty("message-version")
     public String messageVersion;
+
     @JsonProperty("message")
     public Message message;
-
 }

@@ -5,15 +5,14 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
-import lombok.*;
-import nitin.mappers.jackson.filter.DateOfBirthFilter;
-import nitin.mappers.jackson.filter.EmptyListFilter;
-import nitin.mappers.jackson.filter.PhoneFilter;
-
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import lombok.*;
+import nitin.mappers.jackson.filter.DateOfBirthFilter;
+import nitin.mappers.jackson.filter.EmptyListFilter;
+import nitin.mappers.jackson.filter.PhoneFilter;
 
 @NoArgsConstructor
 @Getter
@@ -40,6 +39,6 @@ public class Employee {
 
     @JsonProperty("addresses")
     @JsonInclude(value = JsonInclude.Include.CUSTOM, contentFilter = EmptyListFilter.class)
-    //@JsonInclude(JsonInclude.Include.NON_EMPTY)
+    // @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private List<Address> addresses;
 }

@@ -17,5 +17,4 @@ public class ReadLine {
         String sample = br.readLine();
         System.out.println(sample);
     }
-
 }

@@ -36,4 +36,3 @@ public class LinkedListExample {
         System.out.println("Final LinkedList: " + linkedList);
     }
 }
-

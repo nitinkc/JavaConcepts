@@ -1,10 +1,8 @@
 package nitin.multithreading.raceCondition.dSynchronization.tests;
 
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-
 import java.util.*;
 import java.util.concurrent.*;
+import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 public class Runner {
@@ -15,7 +13,8 @@ public class Runner {
         Set<Integer> uniqueSequences = getLikes(count, il);
     }
 
-    private static Set<Integer> getLikes(int count, IncrementLikes il) throws InterruptedException, ExecutionException {
+    private static Set<Integer> getLikes(int count, IncrementLikes il)
+            throws InterruptedException, ExecutionException {
         ExecutorService executor = Executors.newFixedThreadPool(10);
         Set<Integer> uniqueSequences = new LinkedHashSet<>();
         List<Future<Integer>> futures = new ArrayList<>();
@@ -26,7 +25,9 @@ public class Runner {
         }
 
         for (Future<Integer> future : futures) {
-            Integer result = future.resultNow();//Future returns the datatype of the method thats been multithreaded
+            Integer result =
+                    future.resultNow(); // Future returns the datatype of the method thats been
+            // multithreaded
             System.out.println("Result from Future " + result);
             uniqueSequences.add(result);
         }

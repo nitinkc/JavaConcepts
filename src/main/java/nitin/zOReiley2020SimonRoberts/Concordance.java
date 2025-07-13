@@ -13,8 +13,8 @@ import java.util.stream.Stream;
 public class Concordance {
 
     private static final Pattern WORD_BREAK = Pattern.compile("\\W+");
-    private static final Comparator<Map.Entry<String, Long>> valueOrder
-            = Map.Entry.comparingByValue();
+    private static final Comparator<Map.Entry<String, Long>> valueOrder =
+            Map.Entry.comparingByValue();
 
     public static Optional<Stream<String>> lines(Path p) {
         try {
@@ -25,14 +25,16 @@ public class Concordance {
     }
 
     public static void main(String[] args) throws IOException {
-        List<String> filenames = Arrays.asList("PrideAndPrejudice.txt", "Bad.txt", "Emma.txt", "SenseAndSensibility.txt");
+        List<String> filenames =
+                Arrays.asList(
+                        "PrideAndPrejudice.txt", "Bad.txt", "Emma.txt", "SenseAndSensibility.txt");
         filenames.stream()
                 .map(Paths::get)
-//        .flatMap(Files::lines)
-//        .map(Concordance::lines)
-//        .peek(s -> {if (!s.isPresent()) System.err.println("Bad file");})
-//        .filter(Optional::isPresent)
-//        .flatMap(Optional::get)
+                //        .flatMap(Files::lines)
+                //        .map(Concordance::lines)
+                //        .peek(s -> {if (!s.isPresent()) System.err.println("Bad file");})
+                //        .filter(Optional::isPresent)
+                //        .flatMap(Optional::get)
                 .map(Either.wrap(Files::lines))
                 .peek(e -> e.handle(System.err::println))
                 .filter(Either::succeeded)
@@ -41,11 +43,11 @@ public class Concordance {
                 .flatMap(WORD_BREAK::splitAsStream)
                 .filter(s -> s.length() > 0)
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
-                .entrySet().stream()
+                .entrySet()
+                .stream()
                 .sorted(valueOrder.reversed())
                 .limit(200)
                 .map(e -> String.format("%20s : %5d", e.getKey(), e.getValue()))
                 .forEach(System.out::println);
     }
 }
-

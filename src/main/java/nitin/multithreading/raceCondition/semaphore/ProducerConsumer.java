@@ -1,11 +1,11 @@
 package nitin.multithreading.raceCondition.semaphore;
 
+import static com.utilities.MultiThreadUtility.logShortMessage;
+
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.ReentrantLock;
-
-import static com.utilities.MultiThreadUtility.logShortMessage;
 
 public class ProducerConsumer {
     private static final int QUEUE_CAPACITY = 10;

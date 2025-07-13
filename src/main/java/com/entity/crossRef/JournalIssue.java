@@ -10,9 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-        "issue"
-})
+@JsonPropertyOrder({"issue"})
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -22,5 +20,4 @@ public class JournalIssue {
 
     @JsonProperty("issue")
     public String issue;
-
 }

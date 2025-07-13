@@ -15,7 +15,6 @@ public class MyATM {
         int temp = balance;
         lock.lock();
 
-
         lock.unlock();
         return temp;
     }
@@ -23,7 +22,6 @@ public class MyATM {
     public int deposit(int amount) {
         int temp = balance;
         lock.lock();
-
 
         lock.unlock();
         return temp;

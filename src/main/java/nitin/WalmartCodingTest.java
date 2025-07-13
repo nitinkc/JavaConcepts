@@ -39,7 +39,7 @@ import java.util.Map;
 
 public class WalmartCodingTest {
     public static void main(String[] argv) {
-        String[] words = new String[]{"cat", "baby", "dog", "bird", "car", "ax"};
+        String[] words = new String[] {"cat", "baby", "dog", "bird", "car", "ax"};
         String string1 = "tcabnihjs";
         String string2 = "tbcanihjs";
         String string3 = "baykkjl";
@@ -59,7 +59,7 @@ public class WalmartCodingTest {
         String ret = "None";
 
         for (String word : words) {
-            boolean[] flag = new boolean[word.length()];//check syntax
+            boolean[] flag = new boolean[word.length()]; // check syntax
             Map<Character, Integer> map = getCharacterIntegerMap(str);
             for (int i = 0; i < word.length(); i++) {
                 Character c = word.charAt(i);
@@ -70,7 +70,7 @@ public class WalmartCodingTest {
             }
 
             if (allTrue(flag)) {
-                //ret = word;
+                // ret = word;
                 return word;
             }
         }
@@ -79,8 +79,7 @@ public class WalmartCodingTest {
 
     private static boolean allTrue(boolean[] flag) {
         for (int i = 0; i < flag.length; i++) {
-            if (!flag[i])
-                return false;
+            if (!flag[i]) return false;
         }
         return true;
     }
@@ -88,7 +87,7 @@ public class WalmartCodingTest {
     private static Map<Character, Integer> getCharacterIntegerMap(String str) {
         Map<Character, Integer> map = new HashMap<>();
         for (int i = 0; i < str.length(); i++) {
-            Character key = str.charAt(i);//Check for Autoboxing
+            Character key = str.charAt(i); // Check for Autoboxing
             map.put(key, map.getOrDefault(key, 0) + 1);
         }
         return map;

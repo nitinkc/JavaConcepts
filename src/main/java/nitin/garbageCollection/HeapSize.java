@@ -1,8 +1,6 @@
 package nitin.garbageCollection;
 
-/**
- * Created by nitin on Thu, 3/9/17 at 9:26 PM.
- */
+/** Created by nitin on Thu, 3/9/17 at 9:26 PM. */
 public class HeapSize {
     public static void main(String[] args) {
         System.out.println("CurrentJVMHeapSize:" + Runtime.getRuntime().totalMemory());

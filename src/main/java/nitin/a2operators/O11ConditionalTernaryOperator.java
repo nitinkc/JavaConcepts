@@ -1,9 +1,6 @@
 package nitin.a2operators;
 
-/**
- * Created by Nitin Chaurasia on 12/28/16 at 11:18 PM.
- * Only Ternary Operator in Java
- */
+/** Created by Nitin Chaurasia on 12/28/16 at 11:18 PM. Only Ternary Operator in Java */
 public class O11ConditionalTernaryOperator {
     public static void main(String[] args) {
         int a = 10, b = 20;
@@ -20,7 +17,5 @@ public class O11ConditionalTernaryOperator {
         // Nesting of Conditional Operators
         x = (a > 50) ? 777 : ((b > 100) ? 888 : 999);
         System.out.println(x);
-
     }
-
 }

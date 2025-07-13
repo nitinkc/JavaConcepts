@@ -10,31 +10,34 @@ class Car1 {
      * *******************************************************************************************************************
      ********************************************************************************************************************/
 
+    // Using Anonymous Class
+    /*  private static final RedCarCriterion RED_CAR_CRITERION = new */
+    /*RedCarCriterion();
 
-    //Using Anonymous Class
-    /*  private static final RedCarCriterion RED_CAR_CRITERION = new *//*RedCarCriterion();
+    static class RedCarCriterion implements */
+    /*CarRunner1.CarCriteria1 {
+      @Override
+      public boolean test(Car1 car) {
+        return car.getColor().equals("Red");
+      }
+    }*/
 
-  static class RedCarCriterion implements *//*CarRunner1.CarCriteria1 {
-    @Override
-    public boolean test(Car1 car) {
-      return car.getColor().equals("Red");
-    }
-  }*/
+    private static final CarCriteria1 RED_CAR_CRITERION =
+            new CarCriteria1() {
+                @Override
+                public boolean test(Car1 car) {
+                    return car.getColor().equals("Red");
+                }
+            };
 
-
-    private static final CarCriteria1 RED_CAR_CRITERION = new CarCriteria1() {
-        @Override
-        public boolean test(Car1 car) {
-            return car.getColor().equals("Red");
-        }
-    };
-    //Fields of Class Car
+    // Fields of Class Car
     private final int gasLevel;
     private final String color;
     private final List<String> passengers;
     private final List<String> trunkContents;
 
-    // there is a functional programming style that we will be using which will lead us to using factory methods
+    // there is a functional programming style that we will be using which will lead us to using
+    // factory methods
     private Car1(int gasLevel, String color, List<String> passengers, List<String> trunkContents) {
         this.gasLevel = gasLevel;
         this.color = color;
@@ -42,7 +45,7 @@ class Car1 {
         this.trunkContents = trunkContents;
     }
 
-    //STATIC FACTORY
+    // STATIC FACTORY
     static Car1 withGasColorPassengers(int gas, String color, String... passengers) {
         List<String> p = Collections.unmodifiableList(Arrays.asList(passengers));
         Car1 self = new Car1(gas, color, p, null);
@@ -56,12 +59,13 @@ class Car1 {
         return self;
     }
 
-    //Factory method : Much better than the constructor approach
-    //Here getRedCarCriterion has a choice of implementing the new a5object or the single static a5object
-    //public static RedCarCriterion getRedCarCriterion(){
+    // Factory method : Much better than the constructor approach
+    // Here getRedCarCriterion has a choice of implementing the new a5object or the single static
+    // a5object
+    // public static RedCarCriterion getRedCarCriterion(){
     public static CarCriteria1 getRedCarCriterion() {
-        return RED_CAR_CRITERION; //This is Singleton design pattern.
-        //return new RedCarCriterion();
+        return RED_CAR_CRITERION; // This is Singleton design pattern.
+        // return new RedCarCriterion();
     }
 
     /*  Not Singleton as there is amn argument, threshold, that is unique to each a5object.*/
@@ -89,18 +93,26 @@ class Car1 {
         return trunkContents;
     }
 
-    //This could return null; DELIBERATELY WRITTEN FOR DEMO
+    // This could return null; DELIBERATELY WRITTEN FOR DEMO
     public List<String> getTrunkContentsOpt() {
         return (trunkContents);
     }
 
     @Override
     public String toString() {
-        return "Car{" + "gasLevel=" + gasLevel + ", color=" + color + ", passengers=" + passengers
-                + (trunkContents != null ? ", trunkContents=" + trunkContents : " no trunk") + '}';
+        return "Car{"
+                + "gasLevel="
+                + gasLevel
+                + ", color="
+                + color
+                + ", passengers="
+                + passengers
+                + (trunkContents != null ? ", trunkContents=" + trunkContents : " no trunk")
+                + '}';
     }
 
-    //Static inner class shares the same behaviour with all the instances. Static members vs instance members ->
+    // Static inner class shares the same behaviour with all the instances. Static members vs
+    // instance members ->
     // the criteria is shared wil all the objects
     private static class GasLevelCarCriterion implements CarCriteria1 {
         private final int threshold;

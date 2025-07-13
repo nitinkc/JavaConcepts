@@ -4,7 +4,7 @@ import java.util.concurrent.*;
 
 /*
  * This class has methods whichs submits tasks in multiple ways.
- * You can uncomment the method call in main and run to play with these. 
+ * You can uncomment the method call in main and run to play with these.
  */
 @SuppressWarnings("unused")
 public class FuturesPlay {
@@ -12,26 +12,28 @@ public class FuturesPlay {
     public static void main(String[] args) throws Exception {
 
         // Example of submitting a Runnable Task
-        // exampleSubmitRunnable(); 
-        
+        // exampleSubmitRunnable();
+
         // Example of submitting a Callable Task and getting TaskResult
         // exampleSubmitOneCallable();
-        
+
         // Example of submitting multiple Callable Tasks
         // exampleSubmitMultipleCallables();
-        
+
         // Example of submitting multiple Callable Tasks
         // using the ExecutorCompletionService
         exampleSubmitTasksUsingCompletionService();
-        
+
         // Example using FutureTask
         // exampleFutureTasks();
     }
 
     private static void exampleFutureTasks() {
 
-        OurFutureTask<TaskResult> task1 = new OurFutureTask<>(() -> FuturesPlay.doTask("task1", 1, true));
-        OurFutureTask<TaskResult> task2 = new OurFutureTask<>(() -> FuturesPlay.doTask("task2", 4, false));
+        OurFutureTask<TaskResult> task1 =
+                new OurFutureTask<>(() -> FuturesPlay.doTask("task1", 1, true));
+        OurFutureTask<TaskResult> task2 =
+                new OurFutureTask<>(() -> FuturesPlay.doTask("task2", 4, false));
 
         try (ExecutorService service = Executors.newCachedThreadPool()) {
 
@@ -51,50 +53,47 @@ public class FuturesPlay {
         System.out.println("Completed all");
     }
 
-
     // Becomes complex when dealing with chaining
     static void exampleSubmitTasksUsingCompletionService() {
 
-            try (ExecutorService service = Executors.newFixedThreadPool(3)) {
+        try (ExecutorService service = Executors.newFixedThreadPool(3)) {
 
-                ExecutorCompletionService<TaskResult> srv 
-                                        = new ExecutorCompletionService<>(service);
+            ExecutorCompletionService<TaskResult> srv = new ExecutorCompletionService<>(service);
 
-                Callable<TaskResult> callable1 = () -> FuturesPlay.doTask("task1", 2, false);
-                Callable<TaskResult> callable2 = () -> FuturesPlay.doTask("task2", 1, false);
+            Callable<TaskResult> callable1 = () -> FuturesPlay.doTask("task1", 2, false);
+            Callable<TaskResult> callable2 = () -> FuturesPlay.doTask("task2", 1, false);
 
-                Future<TaskResult> task1Future = srv.submit(callable1);
-                Future<TaskResult> task2Future = srv.submit(callable2);
+            Future<TaskResult> task1Future = srv.submit(callable1);
+            Future<TaskResult> task2Future = srv.submit(callable2);
 
-                try {
-                    for (int j = 0; j < 2; j++) {
+            try {
+                for (int j = 0; j < 2; j++) {
 
-                        Future<TaskResult> future = srv.take();
-                        if (future == task1Future) {
-                            // handle task1 future
-                            System.out.println(future.get());
-                        }
-                        else if (future == task2Future) {
-                            // handle task2 future
-                            System.out.println(future.get());
-                        }
+                    Future<TaskResult> future = srv.take();
+                    if (future == task1Future) {
+                        // handle task1 future
+                        System.out.println(future.get());
+                    } else if (future == task2Future) {
+                        // handle task2 future
+                        System.out.println(future.get());
                     }
                 }
-                catch (InterruptedException | ExecutionException e) {
-                    System.out.println(e);
-                }
-
+            } catch (InterruptedException | ExecutionException e) {
+                System.out.println(e);
+            }
         }
     }
-
 
     static void exampleSubmitMultipleCallables() {
 
         try (ExecutorService service = Executors.newFixedThreadPool(3)) {
 
-            Future<TaskResult> task1Future = service.submit(() -> FuturesPlay.doTask("task1", 3, false));
-            Future<TaskResult> task2Future = service.submit(() -> FuturesPlay.doTask("task2", 2, false));
-            Future<TaskResult> task3Future = service.submit(() -> FuturesPlay.doTask("task3", 1, false));
+            Future<TaskResult> task1Future =
+                    service.submit(() -> FuturesPlay.doTask("task1", 3, false));
+            Future<TaskResult> task2Future =
+                    service.submit(() -> FuturesPlay.doTask("task2", 2, false));
+            Future<TaskResult> task3Future =
+                    service.submit(() -> FuturesPlay.doTask("task3", 1, false));
 
             try {
 
@@ -114,17 +113,14 @@ public class FuturesPlay {
                 System.out.println(e);
             }
         }
-
     }
 
     static void exampleSubmitOneCallable() {
 
-        try (ExecutorService service
-                     = Executors.newFixedThreadPool(3)) {
+        try (ExecutorService service = Executors.newFixedThreadPool(3)) {
 
-            Future<TaskResult> future
-                = service.submit(
-                    () -> FuturesPlay.doTask("SimpleTask", 1, false));
+            Future<TaskResult> future =
+                    service.submit(() -> FuturesPlay.doTask("SimpleTask", 1, false));
 
             // supposed to do some other work
 
@@ -135,14 +131,12 @@ public class FuturesPlay {
                 System.out.println(e);
             }
         }
-
     }
 
-    static void exampleSubmitRunnable()
-                        throws ExecutionException, InterruptedException {
+    static void exampleSubmitRunnable() throws ExecutionException, InterruptedException {
 
         // Submit a Task
-        try(ExecutorService service = Executors.newSingleThreadExecutor()) {
+        try (ExecutorService service = Executors.newSingleThreadExecutor()) {
             Future<?> future = service.submit(FuturesPlay::doSimpleTask);
 
             // do other tasks here
@@ -157,8 +151,7 @@ public class FuturesPlay {
 
     public static void doSimpleTask() {
 
-        System.out.printf("%s : Starting Simple Task\n",
-                Thread.currentThread().getName());
+        System.out.printf("%s : Starting Simple Task\n", Thread.currentThread().getName());
         try {
 
             TimeUnit.SECONDS.sleep(5);
@@ -167,28 +160,24 @@ public class FuturesPlay {
             System.out.println("Task Interrupted");
         }
 
-        System.out.printf("%s : Ending Simple Task\n",
-                Thread.currentThread().getName());
+        System.out.printf("%s : Ending Simple Task\n", Thread.currentThread().getName());
     }
 
     public static TaskResult doTask(String name, int secs, boolean fail) {
 
-        System.out.printf("%s : Starting Task %s\n",
-                Thread.currentThread().getName(), name);
+        System.out.printf("%s : Starting Task %s\n", Thread.currentThread().getName(), name);
 
         try {
             TimeUnit.SECONDS.sleep(secs);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        
+
         if (fail) {
             throw new RuntimeException("Task Failed : " + name);
         }
 
-        System.out.printf("%s : Ending Task %s\n",
-                Thread.currentThread().getName(), name);
+        System.out.printf("%s : Ending Task %s\n", Thread.currentThread().getName(), name);
         return new TaskResult(name, secs);
     }
-
 }

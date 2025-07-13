@@ -1,14 +1,13 @@
 package nitin.a6oops.polymorphism;
 
 /**
- * Created by Nitin C on 3/5/2016.
- * Object Composition is a property of constructing a class using references to other classes in order to reuse
- * the functionality of other classes.
- * <p>
- * Object Composition is used to SIMULATE the polymorphic behaviour that cannot be achieved via single inheritance
+ * Created by Nitin C on 3/5/2016. Object Composition is a property of constructing a class using
+ * references to other classes in order to reuse the functionality of other classes.
+ *
+ * <p>Object Composition is used to SIMULATE the polymorphic behaviour that cannot be achieved via
+ * single inheritance
  */
-public class ObjectComposition {
-}
+public class ObjectComposition {}
 
 /* Composing a class Penguin that contains both of these objects and delegates its methods to them
  * One of the advantage of OC over Inheritance is greater code reuse. By using OC you gain access to other classes

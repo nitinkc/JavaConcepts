@@ -18,10 +18,7 @@ public class TimingTests {
         }
     }
 
-    /**
-     * Make an n-length array of random numbers.
-     */
-
+    /** Make an n-length array of random numbers. */
     public static double[] randomNums(int length) {
         double[] nums = new double[length];
         for (int i = 0; i < length; i++) {
@@ -37,9 +34,7 @@ public class TimingTests {
 
     public static void wasteTime(int repeats) {
         for (int i = 0; i < repeats; i++) {
-            double d = Math.sqrt(Math.random()) +
-                    Math.sin(Math.random()) +
-                    Math.exp(Math.random());
+            double d = Math.sqrt(Math.random()) + Math.sin(Math.random()) + Math.exp(Math.random());
             doSomethingWith(d);
         }
     }

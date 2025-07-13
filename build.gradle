@@ -2,7 +2,33 @@ plugins {
     id 'java'
     id 'maven-publish'
     id "org.sonarqube" version "4.4.1.3373" //For local testing
+    id("com.diffplug.spotless") version "7.1.0"
+
 }
+
+spotless {
+    format('misc') {
+        target '.gitattributes', '.gitignore'
+        trimTrailingWhitespace()
+        endWithNewline()
+        leadingSpacesToTabs()
+        leadingTabsToSpaces(4)
+    }
+
+    java {
+        googleJavaFormat('1.19.2').aosp()
+//        reflowLongStrings()
+//        formatJavadoc(false)
+        removeUnusedImports()
+    }
+
+    json {
+        target '**/*.json'
+        targetExclude '*/target/**'
+        simple()
+    }
+}
+
 group = 'JavaConcepts'
 version = '1.0-SNAPSHOT'
 

@@ -5,8 +5,8 @@ import java.util.Map;
 import java.util.function.BiConsumer;
 
 /**
- * Created by nitin on Monday, October/14/2019 at 1:10 AM
- * Linked HashMap keeps the order of insertion intact
+ * Created by nitin on Monday, October/14/2019 at 1:10 AM Linked HashMap keeps the order of
+ * insertion intact
  */
 public class LinkedHashMapExample {
 
@@ -17,25 +17,26 @@ public class LinkedHashMapExample {
     }
 
     // Relativity Assignment in Java8
-    //Return a string, ignoring the case of characters like t':5,'h':1,'e':3,' ':4
+    // Return a string, ignoring the case of characters like t':5,'h':1,'e':3,' ':4
     public static void demo(String str) {
-        //String.chars returns int streams
+        // String.chars returns int streams
 
         Map<Character, Integer> map = new LinkedHashMap<>();
-        //BiConsumer<String,Integer> b1 = map::put;
-        BiConsumer<Character, Integer> b2 = (k, v) -> {
-            //map.put(k, map.getOrDefault(k,1)  + 1);
-            if (map.containsKey(k)) {
-                map.put(k, map.get(k) + 1);
-            } else {
-                map.put(k, 1);
-            }
-        };
+        // BiConsumer<String,Integer> b1 = map::put;
+        BiConsumer<Character, Integer> b2 =
+                (k, v) -> {
+                    // map.put(k, map.getOrDefault(k,1)  + 1);
+                    if (map.containsKey(k)) {
+                        map.put(k, map.get(k) + 1);
+                    } else {
+                        map.put(k, 1);
+                    }
+                };
         str.chars()
                 .mapToObj(i -> (char) i)
-                //Ignoring the case
+                // Ignoring the case
                 .map(x -> Character.toLowerCase(x))
-                //Putting the character and its count into the map
+                // Putting the character and its count into the map
                 .forEach(x -> b2.accept(x, 0));
 
         String ret = "";
@@ -46,7 +47,7 @@ public class LinkedHashMapExample {
             ret = ret + "'" + c + "'" + ":" + i + ",";
         }
 
-        //Off by one Error : Removing the last Comma
+        // Off by one Error : Removing the last Comma
         System.out.println(ret.substring(0, ret.length() - 1));
     }
 }

@@ -4,7 +4,7 @@ import java.util.function.BiFunction;
 
 public class MethodReferences {
 
-    //Static method Demonstration to be called as MethodReferences::staticAppendStrings
+    // Static method Demonstration to be called as MethodReferences::staticAppendStrings
     public static String staticAppendStrings(String a, String b) {
         return a + b;
     }
@@ -13,7 +13,7 @@ public class MethodReferences {
         return biFunction.apply(a, b);
     }
 
-    //Instance method
+    // Instance method
     public void myMethod(int a, int b, Display display) {
         System.out.println("method reference in java 8 : ");
         display.displayResults(a, b);

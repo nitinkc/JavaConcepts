@@ -5,7 +5,6 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Data
-
 public class SecondPreviousMonth {
     public String result6190;
     public String outside6190;

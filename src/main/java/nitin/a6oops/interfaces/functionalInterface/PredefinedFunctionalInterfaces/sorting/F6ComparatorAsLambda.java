@@ -1,22 +1,21 @@
 package nitin.a6oops.interfaces.functionalInterface.PredefinedFunctionalInterfaces.sorting;
 
+import java.util.Comparator;
+import java.util.Set;
+import java.util.TreeSet;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
-import java.util.Comparator;
-import java.util.Set;
-import java.util.TreeSet;
-
 public class F6ComparatorAsLambda {
     public static void main(String[] args) {
 
-        Set<Student> students = new TreeSet<Student>(Comparator
-                .comparing(Student::getName)
-                .thenComparing(Student::getAge)
-                .thenComparing((Student s1) -> s1.getName().length())
-        );
+        Set<Student> students =
+                new TreeSet<Student>(
+                        Comparator.comparing(Student::getName)
+                                .thenComparing(Student::getAge)
+                                .thenComparing((Student s1) -> s1.getName().length()));
 
         addElements(students);
         students.forEach(System.out::println);

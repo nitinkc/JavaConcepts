@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by nitin on Thu, 12/29/16 at 3:04 AM.
- */
+/** Created by nitin on Thu, 12/29/16 at 3:04 AM. */
 public class S4StringBuffer {
     public static void main(String[] args) {
         // Declaring a Rectangular Matrix
@@ -18,7 +16,7 @@ public class S4StringBuffer {
         list.add(3, List.of(41));
         list.add(4, Arrays.asList(51, 52, 53));
 
-        //Printing the Matrix using FOR Loop
+        // Printing the Matrix using FOR Loop
         for (int i = 0; i < list.size(); i = i + 1) {
             for (int j = 0; j < list.get(i).size(); j = j + 1) {
                 System.out.print(list.get(i).get(j) + "\t");

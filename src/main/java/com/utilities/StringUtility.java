@@ -1,13 +1,9 @@
 package com.utilities;
 
+import java.util.Arrays;
 import lombok.NoArgsConstructor;
 
-import java.util.Arrays;
-
-/**
- * Created by nichaurasia on Saturday, April/25/2020 at 3:46 AM
- */
-
+/** Created by nichaurasia on Saturday, April/25/2020 at 3:46 AM */
 @NoArgsConstructor
 public class StringUtility {
     public static boolean isEmpty(String obj) {

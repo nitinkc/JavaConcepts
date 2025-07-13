@@ -2,8 +2,8 @@ package nitin.classLoadingJVM.javaMemoryModel;
 
 /**
  * Created by nitin.chaurasia on 2/16/2017.
- * <p>
- * In Java Pass by reference is not possible for Primitive Types
+ *
+ * <p>In Java Pass by reference is not possible for Primitive Types
  */
 public class PassingValues {
 

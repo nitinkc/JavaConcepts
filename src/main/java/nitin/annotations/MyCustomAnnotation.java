@@ -1,6 +1,5 @@
 package nitin.annotations;
 
-
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -10,6 +9,8 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 public @interface MyCustomAnnotation {
     String name();
+
     int value();
-    String[] tags() default {};  // Default empty array
+
+    String[] tags() default {}; // Default empty array
 }

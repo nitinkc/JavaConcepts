@@ -1,19 +1,16 @@
 package nitin.io.fileOperations.csvDataReadOperations.election;
 
-import nitin.io.fileOperations.csvDataReadOperations.election.election.ElectionEntity;
-import org.apache.commons.lang3.time.StopWatch;
-
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import nitin.io.fileOperations.csvDataReadOperations.election.election.ElectionEntity;
+import org.apache.commons.lang3.time.StopWatch;
 
 /**
- * @author Created by nichaurasia
- * Created on Wednesday, September/30/2020 at 5:41 PM
+ * @author Created by nichaurasia Created on Wednesday, September/30/2020 at 5:41 PM
  */
-
 public class ElectionService {
-    private final static Logger LOGGER = Logger.getLogger(ElectionService.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(ElectionService.class.getName());
 
     public static void main(String[] args) {
         List<ElectionEntity> list = ReadElectionCsv.getData();
@@ -24,7 +21,7 @@ public class ElectionService {
         stopwatch.start();
         System.out.println("***********************************************************");
         System.out.println("Votes Casted in Indore");
-        //votesInIndore(list);
+        // votesInIndore(list);
         LOGGER.log(Level.INFO, "Starting long calculations: " + stopwatch);
         LOGGER.log(Level.OFF, "Starting long calculations: " + stopwatch);
 
@@ -32,7 +29,6 @@ public class ElectionService {
         System.out.println("Total Votes received by AAP in MP");
         int countAAPinMP = countAAPinMP(list, "Madhya Pradesh", "Aam Aadmi Party");
         System.out.println(countAAPinMP);
-
 
         System.out.println("***********************************************************");
         System.out.println("Total Votes received by Modi");
@@ -42,8 +38,8 @@ public class ElectionService {
 
         System.out.println("***********************************************************");
         System.out.println("Total Votes by each party in MP");
-        //list.stream()
-        //.flatMap()
+        // list.stream()
+        // .flatMap()
     }
 
     private static Integer countAAPinMP(List<ElectionEntity> list, String state, String party) {

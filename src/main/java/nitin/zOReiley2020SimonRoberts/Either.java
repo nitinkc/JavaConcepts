@@ -7,8 +7,7 @@ public class Either<E> {
     private E value;
     private Throwable problem;
 
-    private Either() {
-    }
+    private Either() {}
 
     public static <E> Either<E> success(E v) {
         Either<E> self = new Either<>();

@@ -21,7 +21,6 @@ public class WildcardExample {
 
     public static void processList(List<? extends Number> list) {
         // Compiler error: Cannot add elements to a list with an extends wildcard
-        //list.add(new Integer(10)); // This line would cause a compile-time error
+        // list.add(new Integer(10)); // This line would cause a compile-time error
     }
 }
-

@@ -1,8 +1,6 @@
 package nitin.multithreading.aBasics.bThreadGroups;
 
-/**
- * Created by nitin.chaurasia on 12/25/2016.
- */
+/** Created by nitin.chaurasia on 12/25/2016. */
 public class bThreadGroupPriorities {
     public static void main(String[] args) {
         ThreadGroup group = new ThreadGroup("Nitin");
@@ -13,7 +11,7 @@ public class bThreadGroupPriorities {
         System.out.println("Default Priorities");
         System.out.println(t1.getPriority());
         System.out.println(t2.getPriority());
-        //Threads created after this will have priorities 3
+        // Threads created after this will have priorities 3
         group.setMaxPriority(3);
         Thread t3 = new Thread(group, "Third thread");
 
@@ -25,6 +23,5 @@ public class bThreadGroupPriorities {
 
         // prints info about thread grp to the console
         group.list();
-
     }
 }

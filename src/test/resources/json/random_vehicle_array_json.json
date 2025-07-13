@@ -1,161 +1,161 @@
 [
-  {
-    "id": 1881,
-    "uid": "49eb2aec-92ff-4aac-acae-c99b03fc2740",
-    "vin": "RNGN1JVX82ED73304",
-    "make_and_model": "Audi A7",
-    "color": "Blue",
-    "transmission": "Manual",
-    "drive_type": "4x2/2-wheel drive",
-    "fuel_type": "Compressed Natural Gas",
-    "car_type": "Wagon",
-    "car_options": [
-      "Moonroof/Sunroof",
-      "Rear Window Wiper",
-      "AM/FM Stereo",
-      "Moonroof/Sunroof",
-      "Keyless Entry"
-    ],
-    "specs": [
-      "Universal garage door opener",
-      "Battery saver",
-      "12V pwr outlet",
-      "Floor carpeting",
-      "Tire pressure monitoring display"
-    ],
-    "doors": 1,
-    "mileage": 18499,
-    "kilometrage": 37444,
-    "license_plate": "ETZ-4908"
-  },
-  {
-    "id": 8764,
-    "uid": "b3f2d364-b310-4e69-b1cb-233dab19e0d1",
-    "vin": "Y8EPHPMREBKS78282",
-    "make_and_model": "Ford Fiesta",
-    "color": "Grey",
-    "transmission": "Manual",
-    "drive_type": "4x4/4-wheel drive",
-    "fuel_type": "Gasoline Hybrid",
-    "car_type": "Regular Cab Pickup",
-    "car_options": [
-      "Alarm",
-      "Tinted Glass",
-      "Cruise Control",
-      "Cassette Player",
-      "Power Windows",
-      "Cassette Player"
-    ],
-    "specs": [
-      "Cargo area lamp",
-      "Highline door trim panel",
-      "Center console",
-      "Body color door handles",
-      "Rear body-color spoiler",
-      "Center console",
-      "Security alarm"
-    ],
-    "doors": 1,
-    "mileage": 25511,
-    "kilometrage": 81519,
-    "license_plate": "QGV-8818"
-  },
-  {
-    "id": 1542,
-    "uid": "9df611f6-60ef-4eaf-95a9-0253d287735e",
-    "vin": "PE7YPXAN27CM06466",
-    "make_and_model": "Honda CR-V",
-    "color": "Orange",
-    "transmission": "Automanual",
-    "drive_type": "4x2/2-wheel drive",
-    "fuel_type": "Compressed Natural Gas",
-    "car_type": "Crew Cab Pickup",
-    "car_options": [
-      "Moonroof/Sunroof",
-      "Rear Window Defroster",
-      "Rear Window Defroster",
-      "Premium Sound",
-      "Airbag: Side",
-      "Rear Window Wiper",
-      "A/C: Rear",
-      "Alloy Wheels",
-      "Premium Sound"
-    ],
-    "specs": [
-      "Tachometer",
-      "Deluxe insulation group",
-      "Vehicle dynamics integrated management (VDIM) system -inc: vehicle stability control (VSC), traction control (TRAC)",
-      "Electrochromic pwr folding heated mirrors w/memory -inc: puddle lamps, integrated turn signals, auto reverse tilt-down",
-      "Side-impact door beams"
-    ],
-    "doors": 1,
-    "mileage": 33946,
-    "kilometrage": 63756,
-    "license_plate": "RGC-7001"
-  },
-  {
-    "id": 2177,
-    "uid": "d02f7c5e-812d-4251-bd81-b01e6b8efa6d",
-    "vin": "PDL2JHLPMMDJ97457",
-    "make_and_model": "BMW M3",
-    "color": "Violet",
-    "transmission": "Manual",
-    "drive_type": "4x2/2-wheel drive",
-    "fuel_type": "Gasoline",
-    "car_type": "Crew Cab Pickup",
-    "car_options": [
-      "Power Locks",
-      "Fog Lights",
-      "Antilock Brakes",
-      "Integrated Phone",
-      "DVD System",
-      "Bucket Seats",
-      "Power Locks",
-      "MP3 (Multi Disc)"
-    ],
-    "specs": [
-      "Trim-panel-mounted storage net",
-      "Electronic throttle control system w/intelligence (ETCS-i)",
-      "Air conditioning w/in-cabin microfilter",
-      "Laminated side window glass",
-      "6.1L SRT V8 \"Hemi\" engine",
-      "Emergency interior trunk release",
-      "Pwr front windows w/(1) touch up/down feature"
-    ],
-    "doors": 1,
-    "mileage": 46691,
-    "kilometrage": 46274,
-    "license_plate": "LHF-3547"
-  },
-  {
-    "id": 8748,
-    "uid": "851921f5-6852-4123-a036-0ca18033fb63",
-    "vin": "FTNSKPKTK1WP52284",
-    "make_and_model": "Audi A4",
-    "color": "Red",
-    "transmission": "CVT",
-    "drive_type": "4x4/4-wheel drive",
-    "fuel_type": "Electric",
-    "car_type": "Wagon",
-    "car_options": [
-      "Power Locks",
-      "Airbag: Side",
-      "MP3 (Single Disc)",
-      "Airbag: Driver",
-      "Integrated Phone"
-    ],
-    "specs": [
-      "Quadra-Trac active on demand 4WD system",
-      "160-amp alternator",
-      "Rear bench seat -inc: (3) adjustable headrests",
-      "Compact spare tire",
-      "Steel side-door impact beams",
-      "Variable intermittent windshield wipers w/mist function",
-      "Body color sill extension"
-    ],
-    "doors": 1,
-    "mileage": 84771,
-    "kilometrage": 67072,
-    "license_plate": "TFX-1160"
-  }
+    {
+        "drive_type": "4x2/2-wheel drive",
+        "color": "Blue",
+        "car_options": [
+            "Moonroof/Sunroof",
+            "Rear Window Wiper",
+            "AM/FM Stereo",
+            "Moonroof/Sunroof",
+            "Keyless Entry"
+        ],
+        "make_and_model": "Audi A7",
+        "car_type": "Wagon",
+        "doors": 1,
+        "uid": "49eb2aec-92ff-4aac-acae-c99b03fc2740",
+        "specs": [
+            "Universal garage door opener",
+            "Battery saver",
+            "12V pwr outlet",
+            "Floor carpeting",
+            "Tire pressure monitoring display"
+        ],
+        "transmission": "Manual",
+        "license_plate": "ETZ-4908",
+        "kilometrage": 37444,
+        "vin": "RNGN1JVX82ED73304",
+        "id": 1881,
+        "fuel_type": "Compressed Natural Gas",
+        "mileage": 18499
+    },
+    {
+        "drive_type": "4x4/4-wheel drive",
+        "color": "Grey",
+        "car_options": [
+            "Alarm",
+            "Tinted Glass",
+            "Cruise Control",
+            "Cassette Player",
+            "Power Windows",
+            "Cassette Player"
+        ],
+        "make_and_model": "Ford Fiesta",
+        "car_type": "Regular Cab Pickup",
+        "doors": 1,
+        "uid": "b3f2d364-b310-4e69-b1cb-233dab19e0d1",
+        "specs": [
+            "Cargo area lamp",
+            "Highline door trim panel",
+            "Center console",
+            "Body color door handles",
+            "Rear body-color spoiler",
+            "Center console",
+            "Security alarm"
+        ],
+        "transmission": "Manual",
+        "license_plate": "QGV-8818",
+        "kilometrage": 81519,
+        "vin": "Y8EPHPMREBKS78282",
+        "id": 8764,
+        "fuel_type": "Gasoline Hybrid",
+        "mileage": 25511
+    },
+    {
+        "drive_type": "4x2/2-wheel drive",
+        "color": "Orange",
+        "car_options": [
+            "Moonroof/Sunroof",
+            "Rear Window Defroster",
+            "Rear Window Defroster",
+            "Premium Sound",
+            "Airbag: Side",
+            "Rear Window Wiper",
+            "A/C: Rear",
+            "Alloy Wheels",
+            "Premium Sound"
+        ],
+        "make_and_model": "Honda CR-V",
+        "car_type": "Crew Cab Pickup",
+        "doors": 1,
+        "uid": "9df611f6-60ef-4eaf-95a9-0253d287735e",
+        "specs": [
+            "Tachometer",
+            "Deluxe insulation group",
+            "Vehicle dynamics integrated management (VDIM) system -inc: vehicle stability control (VSC), traction control (TRAC)",
+            "Electrochromic pwr folding heated mirrors w/memory -inc: puddle lamps, integrated turn signals, auto reverse tilt-down",
+            "Side-impact door beams"
+        ],
+        "transmission": "Automanual",
+        "license_plate": "RGC-7001",
+        "kilometrage": 63756,
+        "vin": "PE7YPXAN27CM06466",
+        "id": 1542,
+        "fuel_type": "Compressed Natural Gas",
+        "mileage": 33946
+    },
+    {
+        "drive_type": "4x2/2-wheel drive",
+        "color": "Violet",
+        "car_options": [
+            "Power Locks",
+            "Fog Lights",
+            "Antilock Brakes",
+            "Integrated Phone",
+            "DVD System",
+            "Bucket Seats",
+            "Power Locks",
+            "MP3 (Multi Disc)"
+        ],
+        "make_and_model": "BMW M3",
+        "car_type": "Crew Cab Pickup",
+        "doors": 1,
+        "uid": "d02f7c5e-812d-4251-bd81-b01e6b8efa6d",
+        "specs": [
+            "Trim-panel-mounted storage net",
+            "Electronic throttle control system w/intelligence (ETCS-i)",
+            "Air conditioning w/in-cabin microfilter",
+            "Laminated side window glass",
+            "6.1L SRT V8 \"Hemi\" engine",
+            "Emergency interior trunk release",
+            "Pwr front windows w/(1) touch up/down feature"
+        ],
+        "transmission": "Manual",
+        "license_plate": "LHF-3547",
+        "kilometrage": 46274,
+        "vin": "PDL2JHLPMMDJ97457",
+        "id": 2177,
+        "fuel_type": "Gasoline",
+        "mileage": 46691
+    },
+    {
+        "drive_type": "4x4/4-wheel drive",
+        "color": "Red",
+        "car_options": [
+            "Power Locks",
+            "Airbag: Side",
+            "MP3 (Single Disc)",
+            "Airbag: Driver",
+            "Integrated Phone"
+        ],
+        "make_and_model": "Audi A4",
+        "car_type": "Wagon",
+        "doors": 1,
+        "uid": "851921f5-6852-4123-a036-0ca18033fb63",
+        "specs": [
+            "Quadra-Trac active on demand 4WD system",
+            "160-amp alternator",
+            "Rear bench seat -inc: (3) adjustable headrests",
+            "Compact spare tire",
+            "Steel side-door impact beams",
+            "Variable intermittent windshield wipers w/mist function",
+            "Body color sill extension"
+        ],
+        "transmission": "CVT",
+        "license_plate": "TFX-1160",
+        "kilometrage": 67072,
+        "vin": "FTNSKPKTK1WP52284",
+        "id": 8748,
+        "fuel_type": "Electric",
+        "mileage": 84771
+    }
 ]

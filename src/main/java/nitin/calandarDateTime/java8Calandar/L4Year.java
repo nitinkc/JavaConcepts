@@ -4,9 +4,7 @@ import java.time.Year;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by nitin on Saturday, April/25/2020 at 11:51 PM
- */
+/** Created by nitin on Saturday, April/25/2020 at 11:51 PM */
 public class L4Year {
     public static void main(String[] args) {
 

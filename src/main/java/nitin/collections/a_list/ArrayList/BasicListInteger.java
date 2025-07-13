@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/**
- * Created by synergisticit on 2/25/2016.
- */
+/** Created by synergisticit on 2/25/2016. */
 public class BasicListInteger {
     public static void main(String[] args) {
 
@@ -19,12 +17,12 @@ public class BasicListInteger {
         list.add(4);
         removeOddNumber(list);
 
-        //How to Iterate
+        // How to Iterate
         printList(list);
 
-        //NOTE: FOR EACH NOT APPLICABLE FOR ITERATOR
+        // NOTE: FOR EACH NOT APPLICABLE FOR ITERATOR
 
-        //printSet(b_set);
+        // printSet(b_set);
 
     }
 
@@ -39,19 +37,13 @@ public class BasicListInteger {
                 list.remove(curr);
             }
         }
-
     }
 
-    /**
-     * 3 main methods of iterator
-     * 1. hasNext()
-     * 2. next()
-     * 3. remove()
-     */
+    /** 3 main methods of iterator 1. hasNext() 2. next() 3. remove() */
     private static void printList(List<Integer> list) {
-        //Printing with Iterator
+        // Printing with Iterator
         Iterator itr = list.iterator();
-        //From this point on, DO NOT USE b_set.get or b_set.remove!!
+        // From this point on, DO NOT USE b_set.get or b_set.remove!!
         // USE ONLY ITERATOR
         while (itr.hasNext()) {
             System.out.print(itr.next() + " - ");

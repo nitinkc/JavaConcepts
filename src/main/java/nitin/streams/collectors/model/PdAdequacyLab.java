@@ -5,6 +5,4 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class PdAdequacyLab extends LabBase {
-
-}
+public class PdAdequacyLab extends LabBase {}

@@ -1,8 +1,6 @@
 package nitin.a5object;
 
-/**
- * Created by nitin.chaurasia on 3/3/2017.
- */
+/** Created by nitin.chaurasia on 3/3/2017. */
 public class O1UsingNew {
 
     public static void main(String[] args) {
@@ -26,6 +24,5 @@ class Employee {
     public void display() {
 
         System.out.println(id + " " + name);
-
     }
 }

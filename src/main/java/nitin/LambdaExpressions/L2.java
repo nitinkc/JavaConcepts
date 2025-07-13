@@ -16,7 +16,6 @@ interface Fly {
     default void land() {
         System.out.println("Fly::land");
     }
-
 }
 
 interface FastFly extends Fly {
@@ -33,12 +32,10 @@ interface Sail {
 }
 
 /**
- * Created by Nitin C on 2/27/2016.
- * 4 Rules of Default Methods
- * 1. methods are automatically inherited eg
- * 2. Override a default method, if it doesn't find in the child, it goes up the hierarchy top check the method out
- * 3. Methods in a class Hierarchy RULES!!
- * 4. if there is a collision in interface
+ * Created by Nitin C on 2/27/2016. 4 Rules of Default Methods 1. methods are automatically
+ * inherited eg 2. Override a default method, if it doesn't find in the child, it goes up the
+ * hierarchy top check the method out 3. Methods in a class Hierarchy RULES!! 4. if there is a
+ * collision in interface
  */
 // Till Java 7, only method signature
 // Now we can set to Default and implement
@@ -57,11 +54,11 @@ public class L2 {
 
     public void use() {
         SeaPlane seaPlane = new SeaPlane();
-        seaPlane.takeOff();//Calls from fast Fly, the nearest implementation
+        seaPlane.takeOff(); // Calls from fast Fly, the nearest implementation
         seaPlane.turn();
         seaPlane.cruise();
         // which land, vehicle land or Fly land
-        seaPlane.land();//if the method is in class hierarchy, thjat methid rules!!
+        seaPlane.land(); // if the method is in class hierarchy, thjat methid rules!!
     }
 }
 
@@ -72,13 +69,13 @@ class Vehicle {
     }
 }
 
-//default cruise method is available in both the interfaces
-//SeaPlane inherits unrelated defaults for cruise() from types Fly and Sail
+// default cruise method is available in both the interfaces
+// SeaPlane inherits unrelated defaults for cruise() from types Fly and Sail
 class SeaPlane extends Vehicle implements FastFly, Sail {
-    //To avoid the method HAVE TO OVER WRITE
+    // To avoid the method HAVE TO OVER WRITE
     public void cruise() {
         System.out.println("Seaplane::cruise");
-        FastFly.super.cruise();//super has to be used because interfaces can have static methoids
+        FastFly.super.cruise(); // super has to be used because interfaces can have static methoids
         // If you dont use super, it will thin u are calling static method. with super, its default
     }
 }

@@ -1,9 +1,8 @@
 package nitin.multithreading.raceCondition.dSynchronization.runners;
 
+import java.util.concurrent.CountDownLatch;
 import nitin.multithreading.raceCondition.dSynchronization.IncrementTaskCountDownLatch;
 import nitin.multithreading.raceCondition.dSynchronization.SharedCounter;
-
-import java.util.concurrent.CountDownLatch;
 
 public class CountdownLatchRunner {
     public static void main(String[] args) {
@@ -12,7 +11,10 @@ public class CountdownLatchRunner {
 
         // Create 1000 tasks to increment the counter
         for (int i = 0; i < 1000; i++) {
-            Thread t = new Thread(new IncrementTaskCountDownLatch(sharedCounter, latch), "Thread " + (i + 1));
+            Thread t =
+                    new Thread(
+                            new IncrementTaskCountDownLatch(sharedCounter, latch),
+                            "Thread " + (i + 1));
             t.start();
         }
 

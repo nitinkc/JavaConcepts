@@ -3,9 +3,7 @@ package nitin.calandarDateTime.old;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
-/**
- * Created by nichaurasia on Friday, March/27/2020 at 1:13 AM
- */
+/** Created by nichaurasia on Friday, March/27/2020 at 1:13 AM */
 
 /*
 G	Era designator	Text	AD
@@ -38,7 +36,6 @@ public class DateFormatting {
 
         formatter = new SimpleDateFormat("MMddyyyy_HHmm");
         System.out.println(formatter.format(System.currentTimeMillis()));
-
 
         formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.Z");
         System.out.println(formatter.format(System.currentTimeMillis()));

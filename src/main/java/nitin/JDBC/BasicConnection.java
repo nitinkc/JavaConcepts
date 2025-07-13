@@ -2,17 +2,16 @@ package nitin.JDBC;
 
 import java.sql.*;
 
-/**
- * Created by Nitin C on 3/4/2016.
- */
+/** Created by Nitin C on 3/4/2016. */
 public class BasicConnection {
     public static void main(String[] args) throws SQLException {
 
-        //final String DB_URL = "//localhost:3306/test";
-        //To avoid java.sql.SQLException: The server timezone value 'UTC' is unrecognized
-        //?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+        // final String DB_URL = "//localhost:3306/test";
+        // To avoid java.sql.SQLException: The server timezone value 'UTC' is unrecognized
+        // ?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
         // SET GLOBAL time_zone = '+3:00';
-        final String DB_URL = "//localhost:3306/HabitTracking?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+        final String DB_URL =
+                "//localhost:3306/HabitTracking?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
         final String USER = "root";
         final String PASSWORD = "root";
 
@@ -30,15 +29,15 @@ public class BasicConnection {
 
         // 3. Create Query
         PreparedStatement ps = conn.prepareStatement(QUERY);
-        //ps.setString(1,"id");
+        // ps.setString(1,"id");
 
         // 4. Execute statement
         ResultSet rs = ps.executeQuery();
 
-        //Traverse through the Cursor
-        //if (rs.next()){ //To Print just one row
+        // Traverse through the Cursor
+        // if (rs.next()){ //To Print just one row
         while (rs.next()) {
-            //Traverse through the iterator.
+            // Traverse through the iterator.
             int e_id = rs.getInt(1);
             String e_name = rs.getString(2);
 

@@ -24,6 +24,5 @@ public class MultiGenericContainerExample {
         // as the secondPosition will result in a compiler error
         // mondayWeather.setSecondPosition(80.0);
 
-
     }
 }

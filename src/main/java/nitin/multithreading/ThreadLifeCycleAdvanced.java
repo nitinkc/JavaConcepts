@@ -37,7 +37,10 @@ public class ThreadLifeCycleAdvanced {
                 if (i % 2 == 0) {
                     log(Thread.currentThread().getName() + " - Yielding");
                     Thread.yield();
-                    log(Thread.currentThread().getName() + " - After yield, state: " + Thread.currentThread().getState());
+                    log(
+                            Thread.currentThread().getName()
+                                    + " - After yield, state: "
+                                    + Thread.currentThread().getState());
                 }
             }
         }

@@ -2,9 +2,7 @@ package nitin.io;
 
 import java.io.*;
 
-/**
- * Created by nitin on 1/2/16.
- */
+/** Created by nitin on 1/2/16. */
 public class F3BufferedReaderWriter {
     public static void main(String[] args) throws IOException {
 
@@ -20,7 +18,6 @@ public class F3BufferedReaderWriter {
         bw.write("Nitin");
         bw.newLine();
         bw.flush();
-
 
         // Reading the File
         FileReader fr = new FileReader(f);

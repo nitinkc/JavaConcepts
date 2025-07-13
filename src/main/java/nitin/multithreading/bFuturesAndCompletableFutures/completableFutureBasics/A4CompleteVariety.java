@@ -1,12 +1,11 @@
 package nitin.multithreading.bFuturesAndCompletableFutures.completableFutureBasics;
 
-import com.utilities.InternetUtilities;
+import static com.utilities.MultiThreadUtility.delay;
 
+import com.utilities.InternetUtilities;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
-
-import static com.utilities.MultiThreadUtility.delay;
 
 public class A4CompleteVariety {
     public static void main(String[] args) {
@@ -24,17 +23,18 @@ public class A4CompleteVariety {
         System.out.println("Pipeline is built");
 
         // Manually complete the future with the value 42
-        completableFuture.complete(3);//Pipeline doesnot run until the complete is supplied a value.
+        completableFuture.complete(
+                3); // Pipeline doesnot run until the complete is supplied a value.
     }
 
     private static void intro1() {
         CompletableFuture<Integer> future = new CompletableFuture<>();
-        future
-                .thenApply(data -> 2 / data * 2)
-                .exceptionally(throwable -> {
-                    System.out.println(throwable.getMessage());
-                    return 9;
-                })
+        future.thenApply(data -> 2 / data * 2)
+                .exceptionally(
+                        throwable -> {
+                            System.out.println(throwable.getMessage());
+                            return 9;
+                        })
                 .thenApply(data -> data + 1)
                 .thenAccept(data -> System.out.println("Result from Future " + data))
                 .thenRun(() -> System.out.println("Process Completed!!"));
@@ -42,26 +42,28 @@ public class A4CompleteVariety {
         System.out.println("Pipeline is built....");
 
         delay(4000);
-        future.complete(0);//Evaluates lazily. The pipeline executes from this point on
+        future.complete(0); // Evaluates lazily. The pipeline executes from this point on
     }
 
     private static void intro2() {
         CompletableFuture<List<String>> future = new CompletableFuture<>();
 
-        future
-                .thenApply(data -> data.stream().limit(10).collect(Collectors.toList()))
-                .thenApply(data -> {
-                    return data.stream()
-                            .map(word -> getTransformedString(word))
-                            .collect(Collectors.toList());
-
-                })
+        future.thenApply(data -> data.stream().limit(10).collect(Collectors.toList()))
+                .thenApply(
+                        data -> {
+                            return data.stream()
+                                    .map(word -> getTransformedString(word))
+                                    .collect(Collectors.toList());
+                        })
                 .thenAccept(data -> data.forEach(str -> System.out.println("Word is :: " + str)));
 
         System.out.println("Pipeline is built....");
 
         delay(3000);
-        future.complete(InternetUtilities.bringWordListFromNet());//Evaluates lazily. The pipeline executes from this point on
+        future.complete(
+                InternetUtilities
+                        .bringWordListFromNet()); // Evaluates lazily. The pipeline executes from
+        // this point on
 
         System.out.println("Post Future");
     }

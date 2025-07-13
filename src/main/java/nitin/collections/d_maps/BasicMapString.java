@@ -5,9 +5,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 
-/**
- * Created by synergisticit on 2/25/2016.
- */
+/** Created by synergisticit on 2/25/2016. */
 public class BasicMapString {
     public static void main(String[] args) {
 
@@ -24,14 +22,14 @@ public class BasicMapString {
         map.put(5, "Abc");
         map.put(6, "sangrampisal");
 
-        //printMapUsingSet(map);
+        // printMapUsingSet(map);
         System.out.print("Longest Key is-----");
         System.out.print(findLongString(map));
     }
 
     private static String findLongString(Map<Integer, String> map) {
 
-        //KeySet is a method in map which RETURNS A SET OF KEYS
+        // KeySet is a method in map which RETURNS A SET OF KEYS
         Set<Integer> key = map.keySet();
 
         Iterator itr = key.iterator();
@@ -51,15 +49,13 @@ public class BasicMapString {
 
     /**
      * Map is not a part of Collection thus Iterator is not available
-     * <p>
-     * There are two ways to iterate a map
-     * 1. Using Set (for loop)
-     * 2. Using EntrySet (for each)
+     *
+     * <p>There are two ways to iterate a map 1. Using Set (for loop) 2. Using EntrySet (for each)
      *
      * @param map
      */
     private static void printMapUsingSet(Map<Integer, String> map) {
-        //KeySet is a method in map which RETURNS A SET OF KEYS
+        // KeySet is a method in map which RETURNS A SET OF KEYS
         Set<Integer> key = map.keySet();
 
         Iterator itr = key.iterator();

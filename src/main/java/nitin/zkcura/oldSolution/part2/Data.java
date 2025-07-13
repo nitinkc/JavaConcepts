@@ -2,9 +2,7 @@ package nitin.zkcura.oldSolution.part2;
 
 import java.util.Set;
 
-/**
- * Created by Nitin Chaurasia on 11/9/15 at 11:06 PM.
- */
+/** Created by Nitin Chaurasia on 11/9/15 at 11:06 PM. */
 public class Data {
 
     private int population;
@@ -12,7 +10,8 @@ public class Data {
     // City class contains city name and its corresponding state
     private City city;
 
-    // Interstates are already sorted during the time of reading from the file using InterStateComparator order
+    // Interstates are already sorted during the time of reading from the file using
+    // InterStateComparator order
     // (increasing order sort of alphanumeric key).
     private Set<String> interstates;
 
@@ -33,7 +32,7 @@ public class Data {
         this.city = city;
     }
 
-    //CHANGE : Putting interstates in a Set
+    // CHANGE : Putting interstates in a Set
     public Set<String> getInterstates() {
         return interstates;
     }
@@ -47,8 +46,15 @@ public class Data {
      * */
     public String toString() {
         String value = "";
-        value = value + population + "\n\n" + city.toString() + "\n" + "Interstates: " +
-                interstatesToString(getInterstates()) + "\n";
+        value =
+                value
+                        + population
+                        + "\n\n"
+                        + city.toString()
+                        + "\n"
+                        + "Interstates: "
+                        + interstatesToString(getInterstates())
+                        + "\n";
         return value;
     }
 
@@ -56,8 +62,7 @@ public class Data {
      * */
     public String aggragateCities() {
         String value = "";
-        value = city.toString() + "\n" + "Interstates: " +
-                interstatesToString(interstates) + "\n";
+        value = city.toString() + "\n" + "Interstates: " + interstatesToString(interstates) + "\n";
         return value;
     }
 
@@ -70,7 +75,6 @@ public class Data {
         }
         return result;
     }
-
 
     @Override
     public boolean equals(Object obj) {
@@ -88,6 +92,4 @@ public class Data {
     public int hashCode() {
         return (city.getCityname() + city.getState()).hashCode();
     }
-
-
 }

@@ -1,8 +1,6 @@
 package nitin.a5object;
 
-/**
- * Created by nitin.chaurasia on 3/3/2017.
- */
+/** Created by nitin.chaurasia on 3/3/2017. */
 public class O3UsingClass4Name {
     public static void main(String[] args) {
 
@@ -15,7 +13,6 @@ public class O3UsingClass4Name {
         } catch (Exception e) {
 
             e.printStackTrace();
-
         }
     }
 }

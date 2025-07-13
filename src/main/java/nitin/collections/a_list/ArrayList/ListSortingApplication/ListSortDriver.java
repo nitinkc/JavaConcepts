@@ -1,15 +1,12 @@
 package nitin.collections.a_list.ArrayList.ListSortingApplication;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
-/**
- * Created by synergisticit on 2/26/2016.
- */
+/** Created by synergisticit on 2/26/2016. */
 public class ListSortDriver {
     public static void main(String[] args) {
         Student s1 = new Student(4, "ducy", "Taylor", "Jenkov Taylor");
@@ -32,7 +29,6 @@ public class ListSortDriver {
         System.out.println("List after Sorting");
         for (Student s : students) {
             System.out.println(s);
-
         }
     }
 }

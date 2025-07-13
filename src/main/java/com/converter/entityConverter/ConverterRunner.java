@@ -10,6 +10,5 @@ public class ConverterRunner {
         SpannerEntity spannerEntity = entityConverter.convert(db2Entity);
 
         System.out.println(spannerEntity);
-
     }
 }

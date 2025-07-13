@@ -7,21 +7,39 @@ import java.util.stream.Stream;
 public class B3LowerBounds {
 
     public static void main(String[] args) {
-        List<String> strings = Stream.of("a", "few", "strings")
-                .collect(Collectors.toList());
+        List<String> strings = Stream.of("a", "few", "strings").collect(Collectors.toList());
 
-        strings.forEach((String s) -> System.out.printf("%s in all caps is %s%n", s, s.toUpperCase()));
+        strings.forEach(
+                (String s) -> System.out.printf("%s in all caps is %s%n", s, s.toUpperCase()));
         System.out.println("****************************");
         strings.forEach((Object o) -> System.out.printf("%s has hashCode %d%n", o, o.hashCode()));
         System.out.println("****************************");
 
         // Stream<T> peek(Consumer<? super T> action);
         // Using Methods of Integer and Above
-        List<Integer> integers = Stream.of(3, 1, 4, 1, 5, 998)
-                .peek(i -> System.out.println(i + " as a binary string is " + Integer.toBinaryString(i)))
-                .peek((Number n) -> System.out.println("The double value of " + n + " is " + n.doubleValue()))
-                .peek((Object o) -> System.out.println("The default hashcode of " + o + " is " + o.hashCode()))
-                .collect(Collectors.toList());
+        List<Integer> integers =
+                Stream.of(3, 1, 4, 1, 5, 998)
+                        .peek(
+                                i ->
+                                        System.out.println(
+                                                i
+                                                        + " as a binary string is "
+                                                        + Integer.toBinaryString(i)))
+                        .peek(
+                                (Number n) ->
+                                        System.out.println(
+                                                "The double value of "
+                                                        + n
+                                                        + " is "
+                                                        + n.doubleValue()))
+                        .peek(
+                                (Object o) ->
+                                        System.out.println(
+                                                "The default hashcode of "
+                                                        + o
+                                                        + " is "
+                                                        + o.hashCode()))
+                        .collect(Collectors.toList());
         System.out.println("****************************");
         System.out.println(integers);
 

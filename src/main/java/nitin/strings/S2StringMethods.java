@@ -1,13 +1,11 @@
 package nitin.strings;
 
-/**
- * Created by nitin on Thu, 12/29/16 at 2:49 AM.
- */
+/** Created by nitin on Thu, 12/29/16 at 2:49 AM. */
 public class S2StringMethods {
     public static void main(String[] args) {
         String x = "Malgudi Days by R.K Narayan Features malgudi";
 
-        System.out.println(x.length());// length method
+        System.out.println(x.length()); // length method
         System.out.println(x.charAt(9));
 
         // Index Of
@@ -18,18 +16,17 @@ public class S2StringMethods {
 
         // Sub string
 
-        //toLowerCase() , toUpperCase()
+        // toLowerCase() , toUpperCase()
 
         // equals() , equalsIgnoreCase()
 
         // startesWith, endsWith
 
-        //contains
+        // contains
 
-        //replace
+        // replace
 
         // trim
-
 
     }
 }

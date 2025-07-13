@@ -16,7 +16,8 @@ public class StringBuilderPerformance {
             }
             sb.append(i).append(",");
             stopWatch.stop();
-            System.out.println("Total Execution Time in milliseconds: " + stopWatch.getTime() + " ms");
+            System.out.println(
+                    "Total Execution Time in milliseconds: " + stopWatch.getTime() + " ms");
             sb.setLength(0);
         }
     }

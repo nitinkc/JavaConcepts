@@ -2,12 +2,9 @@ package nitin.io.fileIO.fileIOEx2;
 
 import java.util.stream.Stream;
 
-/**
- * Some Stream-based static methods for finding words in files.
- */
+/** Some Stream-based static methods for finding words in files. */
 public class WordUtils {
-    private WordUtils() {
-    } // Uninstantiatable class
+    private WordUtils() {} // Uninstantiatable class
 
     public static void print10LetterWord(Stream<String> words) {
         String result =
@@ -24,9 +21,7 @@ public class WordUtils {
     public static void printNLetterWord(Stream<String> words, int wordLength) {
         String errorMessage = String.format("No %s-letter word found", wordLength);
         String result =
-                words.filter(word -> word.length() == wordLength)
-                        .findFirst()
-                        .orElse(errorMessage);
+                words.filter(word -> word.length() == wordLength).findFirst().orElse(errorMessage);
         System.out.printf("First %s-letter word is '%s'.%n", wordLength, result);
     }
 
@@ -35,9 +30,7 @@ public class WordUtils {
     }
 
     public static String nLetterWord(Stream<String> words, int wordLength) {
-        return (words.filter(word -> word.length() == wordLength)
-                .findFirst()
-                .orElse(null));
+        return (words.filter(word -> word.length() == wordLength).findFirst().orElse(null));
     }
 
     public static String nLetterWord(String filename, int wordLength) {
@@ -45,11 +38,11 @@ public class WordUtils {
     }
 
     public static long numWordsContaining(Stream<String> words, String subString) {
-        return (words.filter(word -> word.contains(subString))
-                .count());
+        return (words.filter(word -> word.contains(subString)).count());
     }
 
     public static long numWordsContaining(String filename, String subString) {
-        return (StreamAnalyzer.analyzeFile(filename, lines -> numWordsContaining(lines, subString)));
+        return (StreamAnalyzer.analyzeFile(
+                filename, lines -> numWordsContaining(lines, subString)));
     }
 }

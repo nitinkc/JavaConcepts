@@ -11,7 +11,7 @@ public class DateOfBirthFilter {
         if (obj == null || !(obj instanceof Date date)) {
             return false;
         }
-        //date should be in the past
+        // date should be in the past
         return date.before(new Date());
     }
 }

@@ -5,16 +5,16 @@ import java.util.function.Predicate;
 
 public class Car {
 
-    private static final Predicate<Car> RED_CAR_CRITERION
-            = c -> c.color.equals("Red");
+    private static final Predicate<Car> RED_CAR_CRITERION = c -> c.color.equals("Red");
     private static final Comparator<Car> fuelComparator = (o1, o2) -> o1.gasLevel - o2.gasLevel;
-    //Fields of Class Car
+    // Fields of Class Car
     private final int gasLevel;
     private final String color;
     private final List<String> passengers;
     private final List<String> trunkContents;
 
-    // there is a functional programming style that we will be using which will lead us to using factory methods
+    // there is a functional programming style that we will be using which will lead us to using
+    // factory methods
     private Car(int gasLevel, String color, List<String> passengers, List<String> trunkContents) {
         this.gasLevel = gasLevel;
         this.color = color;
@@ -22,20 +22,24 @@ public class Car {
         this.trunkContents = trunkContents;
     }
 
-    //STATIC FACTORY
+    // STATIC FACTORY
     // using a named static factory for this, able to convey the meaning of the arguments.
-    //It's interesting to note that with the release of Java 8, virtually all of the new APIs made exclusive use of static
+    // It's interesting to note that with the release of Java 8, virtually all of the new APIs made
+    // exclusive use of static
     // factories instead of having public constructors, with the exception of Exceptions.
     public static Car withGasColorPassengers(int gas, String color, String... passengers) {
 
-        // And one of the things that functional programming likes to do is to use immutable data whenever possible.
-        //t's generally considered to be preferable to create a new version of something rather than to change an existing something
+        // And one of the things that functional programming likes to do is to use immutable data
+        // whenever possible.
+        // t's generally considered to be preferable to create a new version of something rather
+        // than to change an existing something
         List<String> p = Collections.unmodifiableList(Arrays.asList(passengers));
         Car self = new Car(gas, color, p, null);
         return self;
     }
 
-    //Notice the list of arguments. This would not have been possible with public constructors as this would not
+    // Notice the list of arguments. This would not have been possible with public constructors as
+    // this would not
     // have been a valid overload
     public static Car withGasColorPassengersAndTrunk(int gas, String color, String... passengers) {
         List<String> p = Collections.unmodifiableList(Arrays.asList(passengers));
@@ -91,7 +95,14 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" + "gasLevel=" + gasLevel + ", color=" + color + ", passengers=" + passengers
-                + (trunkContents != null ? ", trunkContents=" + trunkContents : " no trunk") + '}';
+        return "Car{"
+                + "gasLevel="
+                + gasLevel
+                + ", color="
+                + color
+                + ", passengers="
+                + passengers
+                + (trunkContents != null ? ", trunkContents=" + trunkContents : " no trunk")
+                + '}';
     }
 }

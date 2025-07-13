@@ -18,8 +18,6 @@ public class ProcessColors {
 
     @SafeVarargs
     public final Color applyFilters(Function<Color, Color>... filters) {
-        return Arrays.stream(filters)
-                .reduce(Function.identity(), Function::andThen)
-                .apply(color);
+        return Arrays.stream(filters).reduce(Function.identity(), Function::andThen).apply(color);
     }
 }

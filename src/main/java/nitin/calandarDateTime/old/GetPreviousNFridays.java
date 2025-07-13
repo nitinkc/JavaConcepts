@@ -1,15 +1,12 @@
 package nitin.calandarDateTime.old;
 
 import com.utilities.OldDateUtilities;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by nitin on Monday, April/27/2020 at 2:45 PM
- */
+/** Created by nitin on Monday, April/27/2020 at 2:45 PM */
 public class GetPreviousNFridays {
     public static void main(String[] args) throws ParseException {
         List<Date> list = OldDateUtilities.getLastNFridays(3);
@@ -17,7 +14,7 @@ public class GetPreviousNFridays {
         SimpleDateFormat sdf = new SimpleDateFormat(datePattern);
         Date tempDate = null;
         for (Date date : list) {
-            //tempDate = sdf.format(date);
+            // tempDate = sdf.format(date);
             System.out.println(sdf.format(date));
         }
     }

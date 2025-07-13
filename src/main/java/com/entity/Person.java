@@ -1,14 +1,11 @@
 package com.entity;
 
+import java.util.Date;
 import lombok.*;
 
-import java.util.Date;
-
 /**
- * @author Created by nichaurasia
- * Created on Tuesday, September/29/2020 at 2:58 AM
+ * @author Created by nichaurasia Created on Tuesday, September/29/2020 at 2:58 AM
  */
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -21,5 +18,4 @@ public class Person {
     private Date dob;
     private Ethnicity ethnicity;
     private Address address;
-
 }

@@ -23,22 +23,23 @@ public class ObjectExample {
         List objectList = new ArrayList();
         objectList.add(myObj);
         // We have to cast...and we must be sure to cast the correct type!
-        // String myStr = (String) ((ObjectContainer)objectList.get(0)).getObj(); // ClassCastException
+        // String myStr = (String) ((ObjectContainer)objectList.get(0)).getObj(); //
+        // ClassCastException
     }
 
     /**
-     * Utilizing a container that uses generics allows us to store any type
-     * of data within the a5object in a type-safe manner
+     * Utilizing a container that uses generics allows us to store any type of data within the
+     * a5object in a type-safe manner
      */
     public static void testGenerics() {
         GenericContainer<String> stringContainer = new GenericContainer<String>();
         stringContainer.setObj("Test");
-        //stringContainer.setObj(3); // will not compile...type error
+        // stringContainer.setObj(3); // will not compile...type error
         System.out.println("Value of stringContainer :" + stringContainer.getObj());
         GenericContainer<Integer> intContainer = new GenericContainer<Integer>();
         intContainer.setObj(3);
         intContainer.setObj(5);
-        //intContainer.setObj("Int");  // will not compile
+        // intContainer.setObj("Int");  // will not compile
         System.out.println("Value of intContainer: " + intContainer.getObj());
     }
 

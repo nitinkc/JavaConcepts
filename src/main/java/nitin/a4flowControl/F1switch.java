@@ -3,11 +3,9 @@ package nitin.a4flowControl;
 import java.util.Scanner;
 
 /**
- * Created by Nitin Chaurasia on 12/27/16 at 1:13 AM.
- * Allowed Dataypes
- * Until Java 1.4 : byte, short, int, char
- * From Java 1.5 : Corresponding Wrapper Classes &amp; Enum are also allowed
- * From Java 1.7 : String is also allowed
+ * Created by Nitin Chaurasia on 12/27/16 at 1:13 AM. Allowed Dataypes Until Java 1.4 : byte, short,
+ * int, char From Java 1.5 : Corresponding Wrapper Classes &amp; Enum are also allowed From Java 1.7
+ * : String is also allowed
  */
 public class F1switch {
     public static void main(String[] args) {
@@ -41,6 +39,6 @@ public class F1switch {
                     System.out.println("Invalid choice = " + choice);
             }
         }
-        //System.out.println("Out of loop");
+        // System.out.println("Out of loop");
     }
 }

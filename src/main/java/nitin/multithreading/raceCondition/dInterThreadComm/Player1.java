@@ -16,7 +16,6 @@ public class Player1 extends Thread {
 
         try {
             synchronized (notifyAllExample) {
-
                 for (int i = 0; i < 100; i++) {
 
                     while (notifyAllExample.status != 1) {

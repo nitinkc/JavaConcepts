@@ -1,87 +1,87 @@
 [
-  {
-    "name": "John Doe",
-    "dateOfBirth": 1676878272857,
-    "datelocaltzdt": "2023-08-04T12:15:00",
-    "phones": {
-      "Work": "(123) 456 7890",
-      "Cell": "987-654-3210",
-      "Home": "963-852-7410"
+    {
+        "datelocaltzdt": "2023-08-04T12:15:00",
+        "addresses": [
+            {
+                "zip": null,
+                "city": null,
+                "addressLine1": null,
+                "addressLine2": null,
+                "state": null
+            },
+            {
+                "zip": null,
+                "city": null,
+                "addressLine1": null,
+                "addressLine2": null,
+                "state": null
+            },
+            {
+                "zip": "37027",
+                "city": "Brentwood",
+                "addressLine1": "134 Plum Nelly Circle",
+                "addressLine2": null,
+                "state": "TN"
+            }
+        ],
+        "name": "John Doe",
+        "phones": {
+            "Work": "(123) 456 7890",
+            "Cell": "987-654-3210",
+            "Home": "963-852-7410"
+        },
+        "dateOfBirth": 1676878272857
     },
-    "addresses": [
-      {
-        "addressLine1": null,
-        "addressLine2": null,
-        "city": null,
-        "state": null,
-        "zip": null
-      },
-      {
-        "addressLine1": null,
-        "addressLine2": null,
-        "city": null,
-        "state": null,
-        "zip": null
-      },
-      {
-        "addressLine1": "134 Plum Nelly Circle",
-        "addressLine2": null,
-        "city": "Brentwood",
-        "state": "TN",
-        "zip": "37027"
-      }
-    ]
-  },
-  {
-    "name": "Alice Smith",
-    "dateOfBirth": 1648262272857,
-    "datelocaltzdt": "2023-09-12T08:30:00",
-    "phones": {
-      "Work": "(111) 222 3333",
-      "Cell": "444-555-6666",
-      "Home": "777-888-9999"
+    {
+        "datelocaltzdt": "2023-09-12T08:30:00",
+        "addresses": [
+            {
+                "zip": null,
+                "city": null,
+                "addressLine1": null,
+                "addressLine2": null,
+                "state": null
+            },
+            {
+                "zip": "62701",
+                "city": "Springfield",
+                "addressLine1": "456 Elm Street",
+                "addressLine2": null,
+                "state": "IL"
+            }
+        ],
+        "name": "Alice Smith",
+        "phones": {
+            "Work": "(111) 222 3333",
+            "Cell": "444-555-6666",
+            "Home": "777-888-9999"
+        },
+        "dateOfBirth": 1648262272857
     },
-    "addresses": [
-      {
-        "addressLine1": null,
-        "addressLine2": null,
-        "city": null,
-        "state": null,
-        "zip": null
-      },
-      {
-        "addressLine1": "456 Elm Street",
-        "addressLine2": null,
-        "city": "Springfield",
-        "state": "IL",
-        "zip": "62701"
-      }
-    ]
-  },
-  {
-    "name": "Bob Johnson",
-    "dateOfBirth": 1625182272857,
-    "datelocaltzdt": "2023-07-18T16:45:00",
-    "phones": {
-      "Work": "(999) 888 7777",
-      "Cell": "666-555-4444",
-      "Home": "333-222-1111"
-    },
-    "addresses": [
-      {
-        "addressLine1": null,
-        "addressLine2": null,
-        "city": null,
-        "state": null,
-        "zip": null
-      },
-      {
-        "addressLine1": "789 Oak Avenue",
-        "addressLine2": null,
-        "city": "Oakland",
-        "state": "CA",
-        "zip": "94601"
-      }
-    ]
-  }
+    {
+        "datelocaltzdt": "2023-07-18T16:45:00",
+        "addresses": [
+            {
+                "zip": null,
+                "city": null,
+                "addressLine1": null,
+                "addressLine2": null,
+                "state": null
+            },
+            {
+                "zip": "94601",
+                "city": "Oakland",
+                "addressLine1": "789 Oak Avenue",
+                "addressLine2": null,
+                "state": "CA"
+            }
+        ],
+        "name": "Bob Johnson",
+        "phones": {
+            "Work": "(999) 888 7777",
+            "Cell": "666-555-4444",
+            "Home": "333-222-1111"
+        },
+        "dateOfBirth": 1625182272857
+    }
 ]

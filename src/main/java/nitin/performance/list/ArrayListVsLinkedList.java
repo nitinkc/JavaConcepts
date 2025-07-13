@@ -1,18 +1,18 @@
 package nitin.performance.list;
 
+import static com.utilities.PerformanceUtility.*;
+
 import com.github.javafaker.Book;
 import com.github.javafaker.Faker;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import static com.utilities.PerformanceUtility.*;
-
 public class ArrayListVsLinkedList {
     public static void main(String[] args) {
         final int SIZE = 1_000_000;
-        Book bookName = Faker.instance().book();;
+        Book bookName = Faker.instance().book();
+        ;
         List<String> list = new ArrayList<>(SIZE);
         List<String> linkedList = new LinkedList<>();
 
@@ -33,6 +33,5 @@ public class ArrayListVsLinkedList {
         System.out.println(book2);
         stopTimer();
         resetTimer();
-
     }
 }

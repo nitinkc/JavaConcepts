@@ -1,7 +1,6 @@
 package nitin.calandarDateTime.old;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-
 import java.sql.Timestamp;
 
 public class DateFormattingNew {

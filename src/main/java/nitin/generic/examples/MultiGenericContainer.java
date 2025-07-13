@@ -29,5 +29,4 @@ public class MultiGenericContainer<T, S> {
     public void setSecondPosition(S secondPosition) {
         this.secondPosition = secondPosition;
     }
-
 }

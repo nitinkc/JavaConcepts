@@ -5,7 +5,7 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-//@NoArgsConstructor(access = AccessLevel.PUBLIC)
+// @NoArgsConstructor(access = AccessLevel.PUBLIC)
 public class UuidUtils {
 
     public static String getUuidId(String id) {
@@ -14,13 +14,10 @@ public class UuidUtils {
     }
 
     public static Map<String, String> getIdToIdMap(List<String> idList) {
-        return idList.stream()
-                .collect(Collectors.toMap(Function.identity(), UuidUtils::getUuidId));
+        return idList.stream().collect(Collectors.toMap(Function.identity(), UuidUtils::getUuidId));
     }
 
     public static List<String> getPatientIds(Collection<String> idList) {
-        return idList.stream()
-                .map(UuidUtils::getUuidId)
-                .collect(Collectors.toList());
+        return idList.stream().map(UuidUtils::getUuidId).collect(Collectors.toList());
     }
 }

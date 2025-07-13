@@ -1,6 +1,5 @@
 package nitin.streams.timing;
 
-
 @FunctionalInterface
 public interface Op {
     static void timeOp(Op operation) {

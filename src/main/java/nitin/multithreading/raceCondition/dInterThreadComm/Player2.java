@@ -16,11 +16,10 @@ public class Player2 extends Thread {
 
         try {
             synchronized (notifyAllExample) {
-
                 for (int i = 0; i < 100; i++) {
 
                     while (notifyAllExample.status != 2) {
-                        notifyAllExample.wait();  // wait and notify method are from object class
+                        notifyAllExample.wait(); // wait and notify method are from object class
                         // sleep method is from thread class
                         // sleep method never releases the lock
                     }
@@ -40,5 +39,4 @@ public class Player2 extends Thread {
         }
         System.out.println("total score by b : " + totalscore);
     }
-
 }

@@ -14,10 +14,9 @@ public class TimeTest {
         map.put("END_DATE", "2019-11-21");
         Timestamp endDate;
 
-//        Optional.ofNullable((String) map.get(("END_DATE")))
-//                .map(obj -> String.valueOf(obj))
-//                .ifPresent(obj -> System.out.println(Timestamp.valueOf(obj)));
-
+        //        Optional.ofNullable((String) map.get(("END_DATE")))
+        //                .map(obj -> String.valueOf(obj))
+        //                .ifPresent(obj -> System.out.println(Timestamp.valueOf(obj)));
 
         DateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
         // you can change format of date

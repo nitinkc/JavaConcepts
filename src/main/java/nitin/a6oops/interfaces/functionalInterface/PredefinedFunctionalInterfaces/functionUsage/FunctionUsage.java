@@ -1,20 +1,19 @@
 package nitin.a6oops.interfaces.functionalInterface.PredefinedFunctionalInterfaces.functionUsage;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.apache.commons.lang3.math.NumberUtils;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
-
 /**
- * Created by nitin on Tuesday, October/08/2019 at 9:01 PM
- * Converting the Strings into integers using a function
+ * Created by nitin on Tuesday, October/08/2019 at 9:01 PM Converting the Strings into integers
+ * using a function
  */
 public class FunctionUsage {
     public static final int DEFAULT_VALUE = Integer.MAX_VALUE;
@@ -25,17 +24,17 @@ public class FunctionUsage {
         Function<String, Integer> function = x -> NumberUtils.toInt(x, DEFAULT_VALUE);
         Predicate<Integer> predicate = (Integer x) -> (x == DEFAULT_VALUE);
 
-        //MAP is used to apply a function
-        List<Integer> intList = lists.stream()
-                .map(list -> function.apply(list))
-                .collect(Collectors.toList());
+        // MAP is used to apply a function
+        List<Integer> intList =
+                lists.stream().map(list -> function.apply(list)).collect(Collectors.toList());
         intList.forEach(System.out::println);
 
-        //all the numbers except for the default replacement number
-        List<Integer> intList2 = lists.stream()
-                .map(function)
-                .filter(predicate.negate())
-                .collect(Collectors.toList());
+        // all the numbers except for the default replacement number
+        List<Integer> intList2 =
+                lists.stream()
+                        .map(function)
+                        .filter(predicate.negate())
+                        .collect(Collectors.toList());
         intList2.forEach(System.out::println);
 
         System.out.println("#######################################################");
@@ -46,22 +45,22 @@ public class FunctionUsage {
         Student student5 = new Student("Justin", 24);
         Student student6 = new Student("James", 25);
 
-        List<Student> students = Arrays.asList(student1, student2, student3, student4, student5, student6);
+        List<Student> students =
+                Arrays.asList(student1, student2, student3, student4, student5, student6);
         // TransformExecutor<Student,String> transformExecutor2 = new TransformExecutor();
 
-        Function<Student, String> transformer = (stud) -> {
-            String sb = stud.getName() +
-                    " is of age " +
-                    stud.getAge();
+        Function<Student, String> transformer =
+                (stud) -> {
+                    String sb = stud.getName() + " is of age " + stud.getAge();
 
-            return sb;
-        };
+                    return sb;
+                };
 
-        List<String> finalList = students.stream()
-                .map(stud -> transformer.apply(stud))
-                //.map(transformer)
-                .collect(Collectors.toList());
-
+        List<String> finalList =
+                students.stream()
+                        .map(stud -> transformer.apply(stud))
+                        // .map(transformer)
+                        .collect(Collectors.toList());
 
         finalList.forEach(System.out::println);
     }

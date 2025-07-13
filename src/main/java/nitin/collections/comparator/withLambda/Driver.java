@@ -4,9 +4,7 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
-/**
- * Created by Nitin C on 3/3/2016.
- */
+/** Created by Nitin C on 3/3/2016. */
 public class Driver {
     public static void main(String[] args) {
         Set<Squirrel> s = new TreeSet<>(new SquirrelComparator());
@@ -14,7 +12,7 @@ public class Driver {
         s.add(new Squirrel("Angie", 20));
         s.add(new Squirrel("Angie", 23));
         s.add(new Squirrel("Cngie", 28));
-        s.add(new Squirrel("Angie", 20));//NOT ADDED
+        s.add(new Squirrel("Angie", 20)); // NOT ADDED
         s.add(new Squirrel("Engie", 22));
         s.add(new Squirrel("Fngie", 20));
         s.add(new Squirrel("Gngie", 14));

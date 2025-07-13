@@ -6,8 +6,8 @@ import java.util.Map;
 
 /**
  * Created by synergisticit on 2/25/2016.
- * <p>
- * 4 ways of iterating the Map
+ *
+ * <p>4 ways of iterating the Map
  */
 public class I2MapIterators {
     public static void main(String[] args) {
@@ -18,25 +18,22 @@ public class I2MapIterators {
         map.put("am", 4);
         map.put("ngram", 5);
 
-        //printUsingKeySet(map);
-        //printUsingEntrySet(map);
-        //printUsingKeySetForEach(map);
+        // printUsingKeySet(map);
+        // printUsingEntrySet(map);
+        // printUsingKeySetForEach(map);
         printUsingEntrySetForEach(map);
-
     }
 
     private static void printUsingEntrySetForEach(Map<String, Integer> map) {
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
             System.out.println("Key is= " + entry.getKey() + " value= " + entry.getValue());
         }
-
     }
 
     private static void printUsingKeySetForEach(Map<String, Integer> map) {
         for (String key : map.keySet()) {
             System.out.println("Key is= " + key + " value= " + map.get(key));
         }
-
     }
 
     private static void printUsingEntrySet(Map<String, Integer> map) {
@@ -49,7 +46,6 @@ public class I2MapIterators {
             System.out.println("key is : " + key + " - Value is:" + value);
         }
     }
-
 
     private static void printUsingKeySet(Map<String, Integer> map) {
         Iterator<String> itr = map.keySet().iterator();

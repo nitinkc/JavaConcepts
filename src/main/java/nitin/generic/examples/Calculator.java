@@ -1,6 +1,5 @@
 package nitin.generic.examples;
 
-
 public class Calculator {
     public static Integer addInteger(Integer a, Integer b) {
         return a + b;

@@ -1,9 +1,6 @@
 package nitin.a3accessModifiers.staticTest;
 
-/**
- * Created by Nitin C on 11/25/2015.
- */
-
+/** Created by Nitin C on 11/25/2015. */
 class Car1 {
 
     static int numberofobjects;
@@ -33,11 +30,10 @@ class Car1 {
 
         numberofobjects++;
         System.out.println("this is from default constructor of class car");
-
     }
 
     public void x() {
-//	System.out.println(numberofobjects);
+        //	System.out.println(numberofobjects);
     }
 }
 
@@ -47,19 +43,17 @@ public class StaticInitializationBlocks {
     public static void main(String[] args) {
         Car1 c1 = new Car1();
         Car1 c2 = new Car1();
-        //System.out.println(c1.numberofobjects);
+        // System.out.println(c1.numberofobjects);
         Car1 c3 = new Car1();
-        System.out.println("************************************ PROGRAM STARTS HERE *******************************************");
+        System.out.println(
+                "************************************ PROGRAM STARTS HERE *******************************************");
         Car1.numberofwheels = 4;
-        c1.enginecapacity = 1500;//non static var, related to each a5object
+        c1.enginecapacity = 1500; // non static var, related to each a5object
         System.out.println(Car1.numberofwheels);
         System.out.println(Car1.numberofwheels);
 
         System.out.println(c2.enginecapacity);
         System.out.println(c3.enginecapacity);
         System.out.println(c1.enginecapacity);
-
-
     }
-
 }

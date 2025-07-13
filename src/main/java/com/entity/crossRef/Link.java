@@ -9,12 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-        "URL",
-        "content-type",
-        "content-version",
-        "intended-application"
-})
+@JsonPropertyOrder({"URL", "content-type", "content-version", "intended-application"})
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -23,11 +18,13 @@ public class Link {
 
     @JsonProperty("URL")
     public String url;
+
     @JsonProperty("content-type")
     public String contentType;
+
     @JsonProperty("content-version")
     public String contentVersion;
+
     @JsonProperty("intended-application")
     public String intendedApplication;
-
 }

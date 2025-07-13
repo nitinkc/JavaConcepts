@@ -7,8 +7,7 @@ public class CoffeeCup implements Cup {
     private double cupSize;
     private CoffeeType type;
 
-    public CoffeeCup(CoffeeType type,
-                     double cupSize) {
+    public CoffeeCup(CoffeeType type, double cupSize) {
         this.type = type;
         this.cupSize = cupSize;
     }
@@ -40,6 +39,4 @@ public class CoffeeCup implements Cup {
     public void setType(CoffeeType type) {
         this.type = type;
     }
-
-
 }

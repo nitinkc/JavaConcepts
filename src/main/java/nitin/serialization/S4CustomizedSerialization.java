@@ -3,21 +3,28 @@ package nitin.serialization;
 import java.io.*;
 
 /**
- * Created by nitin on 1/2/16.
- * Transient Keyword leads to the Loss of Information,
- * This can be controlled by Customized Serialization
+ * Created by nitin on 1/2/16. Transient Keyword leads to the Loss of Information, This can be
+ * controlled by Customized Serialization
  */
 public class S4CustomizedSerialization {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        //Serializing Object
-        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File("src/com/nitin/a21serialization/serialObjectCoustomized.txt")));
+        // Serializing Object
+        ObjectOutputStream oos =
+                new ObjectOutputStream(
+                        new FileOutputStream(
+                                new File(
+                                        "src/com/nitin/a21serialization/serialObjectCoustomized.txt")));
         Login l = new Login();
         // Call the overridden writeObject from the class Login
         oos.writeObject(l);
         oos.close();
 
-        //Deserialization
-        ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File("src/com/nitin/a21serialization/serialObjectCoustomized.txt")));
+        // Deserialization
+        ObjectInputStream ois =
+                new ObjectInputStream(
+                        new FileInputStream(
+                                new File(
+                                        "src/com/nitin/a21serialization/serialObjectCoustomized.txt")));
 
         // Call the overridden readObject from the class Login
         Login c = (Login) ois.readObject();
@@ -30,22 +37,23 @@ public class S4CustomizedSerialization {
 
 class Login implements Serializable {
     String uname = "Nitin";
-    transient String pwd = "123@abc##";//Passwords are transient because do not sent over inter net as a string
+    transient String pwd =
+            "123@abc##"; // Passwords are transient because do not sent over inter net as a string
 
-    //Automatically executed at the time of Serialization. PRIVATE METHOD, NOT PUBLIC
+    // Automatically executed at the time of Serialization. PRIVATE METHOD, NOT PUBLIC
     private void writeObject(ObjectOutputStream os) throws Exception {
-        //perform default a21serialization (Nitin...null) 
+        // perform default a21serialization (Nitin...null)
         os.defaultWriteObject();
 
-        //Encrypting the password (!@#@$123@abc##) 
+        // Encrypting the password (!@#@$123@abc##)
         String epwd = "!@#@$" + pwd;
-        os.writeObject(epwd);// write it as a separate a5object 
+        os.writeObject(epwd); // write it as a separate a5object 
     }
 
     // Automatically executed at the time of De-Serialization
     private void readObject(ObjectInputStream is) throws Exception {
         is.defaultReadObject();
         String epwd = (String) is.readObject();
-        pwd = epwd.substring(5);//Decripting the password 
+        pwd = epwd.substring(5); // Decripting the password 
     }
 }

@@ -19,5 +19,4 @@ public class MethodOverloading {
         obj.music();
         obj.music(2);
     }
-
 }

@@ -1,16 +1,13 @@
 package nitin.strings.stringMethods;
 
 /**
- * @author Created by nichaurasia
- * Created on Sunday, December/20/2020 at 5:52 PM
+ * @author Created by nichaurasia Created on Sunday, December/20/2020 at 5:52 PM
  */
-
 public class IsBlank {
     public static void main(String[] args) {
 
-        System.out.println(" ".isBlank()); //true
-        System.out.println("".isBlank()); //true
-        System.out.println("Test".isBlank()); //false
-
+        System.out.println(" ".isBlank()); // true
+        System.out.println("".isBlank()); // true
+        System.out.println("Test".isBlank()); // false
     }
 }

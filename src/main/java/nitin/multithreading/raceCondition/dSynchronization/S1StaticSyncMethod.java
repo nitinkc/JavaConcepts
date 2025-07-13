@@ -1,8 +1,6 @@
 package nitin.multithreading.raceCondition.dSynchronization;
 
-/**
- * Created by Nitin Chaurasia on 12/6/15 at 7:03 PM.
- */
+/** Created by Nitin Chaurasia on 12/6/15 at 7:03 PM. */
 public class S1StaticSyncMethod {
     public static void main(String[] args) {
         Display d1 = new Display();
@@ -11,16 +9,16 @@ public class S1StaticSyncMethod {
         Thread t1 = new MyThread(d1, "Thread1");
         Thread t2 = new MyThread(d1, "Thread2");
 
-//        t1.start();
-//        t2.start();
+        //        t1.start();
+        //        t2.start();
 
         caseStudy1();
     }
 
     /**
-     * WHENEVER MULTIPLE THREADS ARE OPERATING ON SAME OBJECT, THEN ONLY SYNCHRONIZATION
-     * PLAYS A ROLE. IF THERE ARE TWO DIFFERENT OBJECTS ACCESSED MY TWO DIFFERENT THREADS
-     * THSRE IS NO ROLE OF SYNCHRONIZATION.
+     * WHENEVER MULTIPLE THREADS ARE OPERATING ON SAME OBJECT, THEN ONLY SYNCHRONIZATION PLAYS A
+     * ROLE. IF THERE ARE TWO DIFFERENT OBJECTS ACCESSED MY TWO DIFFERENT THREADS THSRE IS NO ROLE
+     * OF SYNCHRONIZATION.
      */
     private static void caseStudy1() {
         Display1 d1 = new Display1();
@@ -39,16 +37,13 @@ public class S1StaticSyncMethod {
 class Display1 {
 
     /**
-     * The Static Sync method puts a class level lock.
-     * When a thread executes a static Sync method then remaining threads are not allowed to
-     * execute ANY static Sync Method of that class simultaneously.
-     * <p>
-     * BUT remaining threads can execute following methods
-     * 1. normal static
-     * 2. normal instance
-     * 3. synchronized instance
+     * The Static Sync method puts a class level lock. When a thread executes a static Sync method
+     * then remaining threads are not allowed to execute ANY static Sync Method of that class
+     * simultaneously.
+     *
+     * <p>BUT remaining threads can execute following methods 1. normal static 2. normal instance 3.
+     * synchronized instance
      */
-
     public static synchronized void wish(String name) throws InterruptedException {
         for (int i = 0; i < 10; i++) {
             System.out.print("Hello - " + i);

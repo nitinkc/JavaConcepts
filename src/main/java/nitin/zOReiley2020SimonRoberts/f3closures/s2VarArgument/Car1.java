@@ -3,14 +3,15 @@ package nitin.zOReiley2020SimonRoberts.f3closures.s2VarArgument;
 import java.util.*;
 
 class Car1 {
-    //Fields of Class Car
+    // Fields of Class Car
     private final int gasLevel;
     private final String color;
     private final List<String> passengers;
     private final List<String> trunkContents;
     public String getColor;
 
-    // there is a functional programming style that we will be using which will lead us to using factory methods
+    // there is a functional programming style that we will be using which will lead us to using
+    // factory methods
     private Car1(int gasLevel, String color, List<String> passengers, List<String> trunkContents) {
         this.gasLevel = gasLevel;
         this.color = color;
@@ -18,7 +19,7 @@ class Car1 {
         this.trunkContents = trunkContents;
     }
 
-    //STATIC FACTORY
+    // STATIC FACTORY
     static Car1 withGasColorPassengers(int gas, String color, String... passengers) {
         List<String> p = Collections.unmodifiableList(Arrays.asList(passengers));
         Car1 self = new Car1(gas, color, p, null);
@@ -37,11 +38,13 @@ class Car1 {
      * *******************************************************************************************************************
      ********************************************************************************************************************/
 
-    // Factory for creating GasLevelCarCriterion using anonymous inner class. Variable is shared between lambda.
+    // Factory for creating GasLevelCarCriterion using anonymous inner class. Variable is shared
+    // between lambda.
     // Its effectively final. Can be used, but cannot be modified
     public static Criteria<Car1> getGasLevelCarCriterion(int threshold) {
 
-        //threshold = threshold + 1;//Variable 'threshold' is accessed from within inner class, needs to be final or effectively final
+        // threshold = threshold + 1;//Variable 'threshold' is accessed from within inner class,
+        // needs to be final or effectively final
         return new Criteria<Car1>() {
             @Override
             public boolean test(Car1 car1) {
@@ -81,14 +84,21 @@ class Car1 {
         return trunkContents;
     }
 
-    //This could return null; DELIBERATELY WRITTEN FOR DEMO
+    // This could return null; DELIBERATELY WRITTEN FOR DEMO
     public List<String> getTrunkContentsOpt() {
         return (trunkContents);
     }
 
     @Override
     public String toString() {
-        return "Car{" + "gasLevel=" + gasLevel + ", color=" + color + ", passengers=" + passengers
-                + (trunkContents != null ? ", trunkContents=" + trunkContents : " no trunk") + '}';
+        return "Car{"
+                + "gasLevel="
+                + gasLevel
+                + ", color="
+                + color
+                + ", passengers="
+                + passengers
+                + (trunkContents != null ? ", trunkContents=" + trunkContents : " no trunk")
+                + '}';
     }
 }

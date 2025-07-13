@@ -2,10 +2,10 @@ package nitin.multithreading.aBasics.executionPrevention;
 
 /**
  * Created by Nitin Chaurasia on 12/3/15 at 12:03 AM.
- * <p>
- * Wait until the Completion of some other Thread
- * <p>
- * Throws interruptedException (handle else compile error)
+ *
+ * <p>Wait until the Completion of some other Thread
+ *
+ * <p>Throws interruptedException (handle else compile error)
  */
 public class T2JoinDemo {
     public static void main(String[] args) {
@@ -35,11 +35,11 @@ class ThreadJoin implements Runnable {
     public void run() {
         for (int i = 0; i < 1000; i++) {
             System.out.println("Child : " + i);
-//            try {
-//                /Thread.sleep(200);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
+            //            try {
+            //                /Thread.sleep(200);
+            //            } catch (InterruptedException e) {
+            //                e.printStackTrace();
+            //            }
         }
     }
 }

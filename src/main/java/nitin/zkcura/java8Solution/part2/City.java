@@ -1,14 +1,12 @@
 package nitin.zkcura.java8Solution.part2;
 
-/**
- * Created by Nitin Chaurasia on 11/10/15 at 11:20 PM.
- */
+/** Created by Nitin Chaurasia on 11/10/15 at 11:20 PM. */
 public class City {
 
     private String cityname;
     private String state;
 
-    //Constructor
+    // Constructor
     public City(String city, String state) {
         this.cityname = city;
         this.state = state;
@@ -45,6 +43,7 @@ public class City {
             // Checking the city names under all the conditions, cities can be in lower case.
             // If both city name and state name are equal return true
         } else
-            return ((City) obj).getCityname().equalsIgnoreCase(cityname) && ((City) obj).getState().equalsIgnoreCase(state);
+            return ((City) obj).getCityname().equalsIgnoreCase(cityname)
+                    && ((City) obj).getState().equalsIgnoreCase(state);
     }
 }

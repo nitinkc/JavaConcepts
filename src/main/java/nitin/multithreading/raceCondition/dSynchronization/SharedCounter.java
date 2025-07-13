@@ -5,7 +5,8 @@ public class SharedCounter {
 
     public void increment() {
         counter++;
-        System.out.println(Thread.currentThread().getName() + " incremented counter to: " + counter);
+        System.out.println(
+                Thread.currentThread().getName() + " incremented counter to: " + counter);
     }
 
     public int getCounter() {

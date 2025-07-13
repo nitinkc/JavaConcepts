@@ -1,7 +1,5 @@
 package nitin.io.fileOperations.csvDataReadOperations.corona;
 
-import org.apache.commons.lang3.math.NumberUtils;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -10,15 +8,15 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.stream.Collectors;
+import org.apache.commons.lang3.math.NumberUtils;
 
 /**
- * @author Created by nichaurasia
- * Created on Tuesday, September/29/2020 at 11:23 PM
+ * @author Created by nichaurasia Created on Tuesday, September/29/2020 at 11:23 PM
  */
-
 public class ReadCsv {
     public static List<Entity> getData() {
-        String file = "JavaLatest/src/main/java/com/fileOperations/csvDataReadOperations/corona/us_simplified.csv";
+        String file =
+                "JavaLatest/src/main/java/com/fileOperations/csvDataReadOperations/corona/us_simplified.csv";
 
         return readFileNreturnList(file);
     }
@@ -31,11 +29,13 @@ public class ReadCsv {
             e.printStackTrace();
         }
 
-        List<Entity> entityList = reader.lines().skip(1)
-                //.limit(200)
-                .map(line -> line.split(","))
-                .map(ReadCsv::makeObjects)
-                .collect(Collectors.toList());
+        List<Entity> entityList =
+                reader.lines()
+                        .skip(1)
+                        // .limit(200)
+                        .map(line -> line.split(","))
+                        .map(ReadCsv::makeObjects)
+                        .collect(Collectors.toList());
 
         try {
             reader.close();
@@ -45,23 +45,24 @@ public class ReadCsv {
         return entityList;
     }
 
-
     private static Entity makeObjects(String[] line) {
         Entity e = null;
         try {
-            e = new Entity(new SimpleDateFormat("yyyy-MM-dd").parse(line[0]),
-                    NumberUtils.toInt(line[1], 0),
-                    line[2],
-                    line[3],
-                    Integer.parseInt(line[4]),
-                    Integer.parseInt(line[5]),
-                    Integer.parseInt(line[6]),
-                    line[7]);
+            e =
+                    new Entity(
+                            new SimpleDateFormat("yyyy-MM-dd").parse(line[0]),
+                            NumberUtils.toInt(line[1], 0),
+                            line[2],
+                            line[3],
+                            Integer.parseInt(line[4]),
+                            Integer.parseInt(line[5]),
+                            Integer.parseInt(line[6]),
+                            line[7]);
         } catch (ParseException parseException) {
             parseException.printStackTrace();
         }
 
-        //System.out.println(e);
+        // System.out.println(e);
         return e;
     }
 }

@@ -1,8 +1,6 @@
 package nitin.multithreading.aBasics.cThreadPoolsAKAExecutorFW;
 
-/**
- * Created by nitin.chaurasia on 12/26/2016.
- */
+/** Created by nitin.chaurasia on 12/26/2016. */
 public class PrintJobRunnable implements Runnable {
 
     String name;
@@ -13,7 +11,8 @@ public class PrintJobRunnable implements Runnable {
 
     @Override
     public void run() {
-        System.out.println(name + " ... Job Started By Thread : " + Thread.currentThread().getName());
+        System.out.println(
+                name + " ... Job Started By Thread : " + Thread.currentThread().getName());
 
         try {
             Thread.sleep(2000);
@@ -21,6 +20,7 @@ public class PrintJobRunnable implements Runnable {
             e.printStackTrace();
         }
 
-        System.out.println(name + " ... Jon Completed by Thread : " + Thread.currentThread().getName());
+        System.out.println(
+                name + " ... Jon Completed by Thread : " + Thread.currentThread().getName());
     }
 }

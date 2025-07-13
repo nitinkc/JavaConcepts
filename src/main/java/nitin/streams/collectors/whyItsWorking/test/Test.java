@@ -1,11 +1,6 @@
 package nitin.streams.collectors.whyItsWorking.test;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import nitin.streams.collectors.whyItsWorking.example.CareCategory;
-import nitin.streams.collectors.whyItsWorking.example.Example;
-import nitin.streams.collectors.whyItsWorking.example.Labs;
-import org.apache.commons.io.FileUtils;
-
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -14,16 +9,22 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import nitin.streams.collectors.whyItsWorking.example.CareCategory;
+import nitin.streams.collectors.whyItsWorking.example.Example;
+import nitin.streams.collectors.whyItsWorking.example.Labs;
+import org.apache.commons.io.FileUtils;
 
 public class Test {
-    static final List<String> ANEMIA_LABS = Arrays.asList("HEMOGLOBIN (g/dL)",
-            "IRON SATURATION (%)",
-            "FERRITIN (ng/mL)",
-            "IRON (ug/dL)",
-            "MCV (fL)",
-            "RETIC COUNT (%)",
-            "ABSOLUTE RETIC COUNT (x 10'6 cells/uL)",
-            "WBC (x 10'3 cells/uL)");
+    static final List<String> ANEMIA_LABS =
+            Arrays.asList(
+                    "HEMOGLOBIN (g/dL)",
+                    "IRON SATURATION (%)",
+                    "FERRITIN (ng/mL)",
+                    "IRON (ug/dL)",
+                    "MCV (fL)",
+                    "RETIC COUNT (%)",
+                    "ABSOLUTE RETIC COUNT (x 10'6 cells/uL)",
+                    "WBC (x 10'3 cells/uL)");
 
     public static void main(String[] args) {
         Example example = getData();
@@ -33,35 +34,39 @@ public class Test {
             anemiaLabsMap.put(lab, false);
         }
 
-
         List<Labs> labsAnemiaAndOther = example.getReport().getLabs();
-        List<Labs> anemiaLabs = labsAnemiaAndOther
-                .stream()
-                .filter(allLabs -> allLabs.getCareCategoryName().equalsIgnoreCase("Anemia"))
-                .toList();
+        List<Labs> anemiaLabs =
+                labsAnemiaAndOther.stream()
+                        .filter(allLabs -> allLabs.getCareCategoryName().equalsIgnoreCase("Anemia"))
+                        .toList();
 
-        List<CareCategory> anemiaCareCategory = anemiaLabs.get(0).getCareCategory();//Add the empty labs in this
+        List<CareCategory> anemiaCareCategory =
+                anemiaLabs.get(0).getCareCategory(); // Add the empty labs in this
 
-        if (anemiaCareCategory.size() != ANEMIA_LABS.size()) {//8 Anemia labs hardcoded if all 8 are present, send as is, else fill with empty
+        if (anemiaCareCategory.size()
+                != ANEMIA_LABS
+                        .size()) { // 8 Anemia labs hardcoded if all 8 are present, send as is, else
+            // fill with empty
             for (CareCategory singleCareCategory : anemiaCareCategory) {
-                //Fill the Anemia Labs map to find the delta
+                // Fill the Anemia Labs map to find the delta
                 anemiaLabsMap.put(singleCareCategory.getLabTestName(), Boolean.TRUE);
             }
         }
 
-        //Put care category for false value of key labs
+        // Put care category for false value of key labs
         // Iterate through the map entries
         for (Map.Entry<String, Boolean> entry : anemiaLabsMap.entrySet()) {
             String labTest = entry.getKey();
             Boolean isAnemic = entry.getValue();
             // Check if the value is false
             if (!isAnemic) {
-                CareCategory careCategoryDTO = CareCategory.builder()
-                        .labTestName(labTest)
-                        .currentMonth(List.of())
-                        .previousMonth(List.of())
-                        .secondPreviousMonth(List.of())
-                        .build();
+                CareCategory careCategoryDTO =
+                        CareCategory.builder()
+                                .labTestName(labTest)
+                                .currentMonth(List.of())
+                                .previousMonth(List.of())
+                                .secondPreviousMonth(List.of())
+                                .build();
                 anemiaCareCategory.add(careCategoryDTO);
             }
         }

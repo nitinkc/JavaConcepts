@@ -18,7 +18,8 @@ public class BakedCollection {
         submap.put("f", "fish"); // #4 add to copy, baked collection
 
         map.put("r", "raccoon"); // #5 add to original - out of range
-        submap.put("p", "pig"); // #6 add to copy - out of range exception will be thrown, IllegalArgumentException: key out of range
+        submap.put("p", "pig"); // #6 add to copy - out of range exception will be thrown,
+        // IllegalArgumentException: key out of range
         System.out.println(map + " " + submap); // #7 show final contents
     }
 }

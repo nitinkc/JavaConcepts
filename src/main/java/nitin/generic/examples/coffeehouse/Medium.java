@@ -9,6 +9,4 @@ package nitin.generic.examples.coffeehouse;
 /**
  * @author Juneau
  */
-public interface Medium {
-
-}
+public interface Medium {}

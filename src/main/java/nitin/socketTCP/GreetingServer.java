@@ -1,6 +1,6 @@
 package nitin.socketTCP;
 
-//File Name GreetingServer.java
+// File Name GreetingServer.java
 
 import java.io.BufferedInputStream;
 import java.io.DataInputStream;
@@ -19,7 +19,7 @@ public class GreetingServer extends Thread {
     }
 
     public static void main(String[] args) {
-        //int port = Integer.parseInt(args[0]);
+        // int port = Integer.parseInt(args[0]);
         int port = 1234;
         try {
             Thread t = new GreetingServer(port);
@@ -45,7 +45,7 @@ public class GreetingServer extends Thread {
 
         } catch (SocketTimeoutException s) {
             System.out.println("Socket timed out!");
-            //break;
+            // break;
         } catch (IOException e) {
             e.printStackTrace();
             // break;
@@ -63,7 +63,8 @@ public class GreetingServer extends Thread {
         System.out.println("Closing connection");
 
         try {
-            //out.writeUTF("Thank you for connecting to " + server.getLocalSocketAddress() + "\nGoodbye!");
+            // out.writeUTF("Thank you for connecting to " + server.getLocalSocketAddress() +
+            // "\nGoodbye!");
             server.close();
             in.close();
             out.close();

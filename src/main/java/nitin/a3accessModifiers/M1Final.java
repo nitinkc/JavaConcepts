@@ -1,8 +1,8 @@
 package nitin.a3accessModifiers;
 
 /**
- * Created by Nitin Chaurasia on 12/29/16 at 12:51 AM.
- * Final is applicable for classes, methods and variables
+ * Created by Nitin Chaurasia on 12/29/16 at 12:51 AM. Final is applicable for classes, methods and
+ * variables
  */
 public class M1Final {
 
@@ -34,5 +34,4 @@ public class M1Final {
     public void setM1Final(String s) {
         finalString = s;
     }
-
 }

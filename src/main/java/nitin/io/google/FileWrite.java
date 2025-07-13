@@ -13,8 +13,9 @@ public class FileWrite {
         Charset characterSet = Charset.defaultCharset();
         Path path = Paths.get("src/main/resources/output.txt");
         try {
-            //System.out.println("Writing into file the word :: " + singleString);
-            //Files.write(path, Collections.singleton(singleString), characterSet, StandardOpenOption.APPEND);
+            // System.out.println("Writing into file the word :: " + singleString);
+            // Files.write(path, Collections.singleton(singleString), characterSet,
+            // StandardOpenOption.APPEND);
             Files.write(path, Collections.singleton(singleString), characterSet);
 
         } catch (IOException e) {

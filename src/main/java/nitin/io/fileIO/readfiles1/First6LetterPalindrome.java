@@ -1,11 +1,9 @@
 package nitin.io.fileIO.readfiles1;
 
-
 import com.config.Configs;
-import nitin.io.fileIO.strings.StringUtils;
-
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import nitin.io.fileIO.strings.StringUtils;
 
 public class First6LetterPalindrome {
     public static void main(String[] args) throws Exception {

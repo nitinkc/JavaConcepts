@@ -1,10 +1,8 @@
 package nitin.multithreading.raceCondition.dInterThreadComm;
 
-/**
- * Created by Nitin Chaurasia on 12/4/15 at 1:32 AM.
- */
+/** Created by Nitin Chaurasia on 12/4/15 at 1:32 AM. */
 public class I3NotifyAll {
-    //To control the Flow. Just by using Join it did not work
+    // To control the Flow. Just by using Join it did not work
     int status = 1;
 
     public static void main(String[] args) throws InterruptedException {
@@ -24,4 +22,3 @@ public class I3NotifyAll {
         c.join();
     }
 }
-

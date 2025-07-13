@@ -1,8 +1,6 @@
 package nitin.a6oops.abstraction;
 
-/**
- * Created by nitin on Sat, 1/14/17 at 9:10 PM.
- */
+/** Created by nitin on Sat, 1/14/17 at 9:10 PM. */
 public class Runner {
     public static void main(String[] args) {
         Car p1 = new Swift();

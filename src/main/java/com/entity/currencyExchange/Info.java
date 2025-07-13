@@ -7,9 +7,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.*;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-        "rate"
-})
+@JsonPropertyOrder({"rate"})
 @Getter
 @Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -21,5 +19,4 @@ public class Info {
 
     @JsonProperty("rate")
     public Float rate;
-
 }

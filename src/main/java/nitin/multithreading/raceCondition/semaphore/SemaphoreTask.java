@@ -1,8 +1,8 @@
 package nitin.multithreading.raceCondition.semaphore;
 
-import java.util.concurrent.Semaphore;
-
 import static com.utilities.MultiThreadUtility.logShortMessage;
+
+import java.util.concurrent.Semaphore;
 
 public class SemaphoreTask {
     private String name;

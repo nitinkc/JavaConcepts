@@ -1,17 +1,15 @@
 package nitin.multithreading.bFuturesAndCompletableFutures.completableFutureBasics.service;
 
+import static com.utilities.MultiThreadUtility.*;
+import static nitin.multithreading.cVirtualThreads.v3structuredConcurrency.BlockingIOTasks.TaskResponse;
+
 import com.entity.Vehicle;
 import com.entity.dto.VehicleTransformed;
 import com.utilities.RestGETReadUtility;
-
-import static nitin.multithreading.cVirtualThreads.v3structuredConcurrency.BlockingIOTasks.TaskResponse;
-
 import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
-
-import static com.utilities.MultiThreadUtility.*;
 
 public class DataFetchService {
 
@@ -20,7 +18,7 @@ public class DataFetchService {
     }
 
     public String firstNameService(int delayInMillisec) {
-        delay(delayInMillisec);//simulating task completion latency
+        delay(delayInMillisec); // simulating task completion latency
         logMessage("From firstNameService");
         return "john";
     }
@@ -37,25 +35,32 @@ public class DataFetchService {
         return "Hello!";
     }
 
-    public CompletableFuture<VehicleTransformed> findVehicleWithGreatMileage(List<VehicleTransformed> vehicleList) {
+    public CompletableFuture<VehicleTransformed> findVehicleWithGreatMileage(
+            List<VehicleTransformed> vehicleList) {
         logMessage("From composeVehicleData");
-        //Returning the vehicle with maximum mileage
-        return CompletableFuture.supplyAsync(() -> vehicleList.stream()
-                .sorted(Comparator.comparing(VehicleTransformed::getMileage).reversed())
-                .findFirst().get());
+        // Returning the vehicle with maximum mileage
+        return CompletableFuture.supplyAsync(
+                () ->
+                        vehicleList.stream()
+                                .sorted(
+                                        Comparator.comparing(VehicleTransformed::getMileage)
+                                                .reversed())
+                                .findFirst()
+                                .get());
     }
 
     public CompletableFuture<String> futureName(String name) {
-        return CompletableFuture.supplyAsync(() -> {
-            delay(1000);
-            return ("Hello " + name);
-        });
+        return CompletableFuture.supplyAsync(
+                () -> {
+                    delay(1000);
+                    return ("Hello " + name);
+                });
     }
 
     public TaskResponse microTask(String name, int secs, boolean isSuccess) {
         logShortMessage("Begin microTask of " + secs + " seconds");
 
-        //Fail Fast
+        // Fail Fast
         if (!isSuccess || secs > 7) {
             throw new RuntimeException(STR."Task Failed : \{name} \{isSuccess} \{secs}");
         }
@@ -66,7 +71,7 @@ public class DataFetchService {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-       long endTime =  System.currentTimeMillis();
+        long endTime = System.currentTimeMillis();
 
         logShortMessage("End microTask of " + secs + " seconds");
         return new TaskResponse(name, String.valueOf(secs), endTime - currentTime);

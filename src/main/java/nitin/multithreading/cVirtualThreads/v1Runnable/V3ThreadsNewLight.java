@@ -4,11 +4,11 @@ import com.utilities.MultiThreadUtility;
 
 public class V3ThreadsNewLight {
     public static void main(String[] args) throws InterruptedException {
-        //Static method initialization
+        // Static method initialization
         var t1 = Thread.startVirtualThread(() -> task1());
         var t2 = Thread.startVirtualThread(() -> task2());
 
-        //All Virtual Threads are always daemon threads,
+        // All Virtual Threads are always daemon threads,
         // don’t forget to call join() if you want to wait on the main thread.
         t1.join();
         t2.join();

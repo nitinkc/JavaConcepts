@@ -1,8 +1,6 @@
 package nitin.collections.comparator.withLambda;
 
-/**
- * Created by Nitin C on 3/3/2016.
- */
+/** Created by Nitin C on 3/3/2016. */
 public class Squirrel {
 
     private String species;
@@ -14,10 +12,8 @@ public class Squirrel {
     }
 
     public Squirrel(String theSpecies) {
-        if (theSpecies == null)
-            throw new IllegalArgumentException();
-        else
-            this.species = theSpecies;
+        if (theSpecies == null) throw new IllegalArgumentException();
+        else this.species = theSpecies;
     }
 
     public String getSpecies() {
@@ -38,9 +34,6 @@ public class Squirrel {
 
     @Override
     public String toString() {
-        return "Squirrel{" +
-                "species='" + species + '\'' +
-                ", weight=" + weight +
-                '}';
+        return "Squirrel{" + "species='" + species + '\'' + ", weight=" + weight + '}';
     }
 }

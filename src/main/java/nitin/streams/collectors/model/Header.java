@@ -18,5 +18,4 @@ public class Header {
 
     @JsonProperty("value")
     private String value;
-
 }

@@ -1,11 +1,10 @@
 package com.utilities;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import static java.lang.Thread.sleep;
 
 import java.time.Duration;
-
-import static java.lang.Thread.sleep;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 public class MultiThreadUtility {
 
@@ -32,7 +31,7 @@ public class MultiThreadUtility {
     }
 
     public static void logMessage(String message) {
-        System.out.printf("%s %s\n", Thread.currentThread(), message );
+        System.out.printf("%s %s\n", Thread.currentThread(), message);
     }
 
     public static void foreverThread() {

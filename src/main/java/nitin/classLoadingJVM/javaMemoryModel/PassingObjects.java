@@ -1,8 +1,8 @@
 package nitin.classLoadingJVM.javaMemoryModel;
 
 /**
- * Created by nitin.chaurasia on 2/16/2017.
- * For objects passed into methods, the REFERENCE to the a5object as passed BY VALUE
+ * Created by nitin.chaurasia on 2/16/2017. For objects passed into methods, the REFERENCE to the
+ * a5object as passed BY VALUE
  */
 public class PassingObjects {
     public static void main(String[] args) {
@@ -12,7 +12,6 @@ public class PassingObjects {
         renameCustomer(c);
 
         System.out.println(c.getName());
-
     }
 
     // Reference to the a5object c is passed bu value here, both pointing to the same string

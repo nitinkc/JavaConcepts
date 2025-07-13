@@ -11,6 +11,3 @@ public class TransformExecutor<T, R> {
         return transformer.apply(t);
     }
 }
-
-
-

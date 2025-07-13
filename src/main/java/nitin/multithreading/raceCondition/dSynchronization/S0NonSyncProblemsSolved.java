@@ -3,26 +3,24 @@ package nitin.multithreading.raceCondition.dSynchronization;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Nitin Chaurasia on 3/25/18 at 1:07 AM.
- */
+/** Created by Nitin Chaurasia on 3/25/18 at 1:07 AM. */
 public class S0NonSyncProblemsSolved {
-    private static int counter = 0;//Common Resource
+    private static int counter = 0; // Common Resource
     static ArrayList<Integer> counterValues = new ArrayList<>();
     static final Object lock = new Object();
 
     public static void main(String[] args) throws InterruptedException {
-        List<Thread> processThreads = createThreads(100);//100 threads
+        List<Thread> processThreads = createThreads(100); // 100 threads
 
-        //Start all threads
-        for(Thread thread : processThreads)
-            thread.start();
+        // Start all threads
+        for (Thread thread : processThreads) thread.start();
 
-        //Wait for all the threads to be over
-        for(Thread thread : processThreads)
-            thread.join();
+        // Wait for all the threads to be over
+        for (Thread thread : processThreads) thread.join();
 
-        System.out.println("Finished execution : " + counterValues.size());//Does not guarantee correct result each time
+        System.out.println(
+                "Finished execution : "
+                        + counterValues.size()); // Does not guarantee correct result each time
         System.out.println(counterValues);
     }
 
@@ -35,12 +33,12 @@ public class S0NonSyncProblemsSolved {
         return threads;
     }
 
-    //Forcing only one thread at a time. Expensive operation
+    // Forcing only one thread at a time. Expensive operation
     public static void counter() {
-        synchronized (lock){
+        synchronized (lock) {
             ++counter;
             counterValues.add(counter);
         }
-        //counterValues.add(counter);////Does not guarantee correct result each time
+        // counterValues.add(counter);////Does not guarantee correct result each time
     }
 }

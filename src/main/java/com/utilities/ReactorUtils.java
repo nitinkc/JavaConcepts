@@ -1,7 +1,6 @@
 package com.utilities;
 
 import com.github.javafaker.Faker;
-
 import java.util.function.Consumer;
 
 public class ReactorUtils {

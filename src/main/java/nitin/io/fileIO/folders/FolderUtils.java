@@ -9,13 +9,9 @@ import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
-/**
- * Some Stream-based static methods for using with folders and paths.
- */
-
+/** Some Stream-based static methods for using with folders and paths. */
 public class FolderUtils {
-    private FolderUtils() {
-    } // Uninstantiatable class
+    private FolderUtils() {} // Uninstantiatable class
 
     public static void printAllPaths(Stream<Path> paths) {
         paths.forEach(System.out::println);
@@ -30,8 +26,7 @@ public class FolderUtils {
     }
 
     public static void printPaths(Stream<Path> paths, Predicate<Path> test) {
-        paths.filter(test)
-                .forEach(System.out::println);
+        paths.filter(test).forEach(System.out::println);
     }
 
     public static void printPathsInFolder(String folder, Predicate<Path> test) {
@@ -58,7 +53,8 @@ public class FolderUtils {
         }
     }
 
-    public static void findPathsInTree(String rootFolder, BiPredicate<Path, BasicFileAttributes> test) {
+    public static void findPathsInTree(
+            String rootFolder, BiPredicate<Path, BasicFileAttributes> test) {
         try (Stream<Path> paths = Files.find(Paths.get(rootFolder), 10, test)) {
             printAllPaths(paths);
         } catch (IOException ioe) {

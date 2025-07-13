@@ -1,6 +1,9 @@
 package nitin.zKnowYourJava;
 
-enum When {DAY, NIGHT}//, DAWN}
+enum When {
+    DAY,
+    NIGHT
+} // , DAWN}
 
 public class T10DefaultInSwitch {
     public static void main(String[] args) {

@@ -1,8 +1,6 @@
 package nitin.a2operators;
 
-/**
- * Created by Nitin Chaurasia on 12/27/16 at 1:01 AM.
- */
+/** Created by Nitin Chaurasia on 12/27/16 at 1:01 AM. */
 public class O2ArithmaticOperators {
     public static void main(String[] args) {
         System.out.println(9 / 3); // Outputs 3

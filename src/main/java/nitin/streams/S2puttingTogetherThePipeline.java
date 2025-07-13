@@ -6,9 +6,7 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
-/**
- * Created by Nitin C on 3/3/2016.
- */
+/** Created by Nitin C on 3/3/2016. */
 public class S2puttingTogetherThePipeline {
     public static void main(String[] args) {
         m1();
@@ -23,7 +21,7 @@ public class S2puttingTogetherThePipeline {
         Predicate<Integer> gtThan = (n -> n > 30);
         Predicate<Integer> ltThan = (n -> n < 500);
 
-        //Predicate if number is even and greater than 30 and less than 500
+        // Predicate if number is even and greater than 30 and less than 500
         Predicate<Integer> doublePredicate = even.and(gtThan).and(ltThan);
 
         // The same functionality as below declarative can be implemented as imparative
@@ -31,7 +29,7 @@ public class S2puttingTogetherThePipeline {
         list.stream()
                 .filter(doublePredicate)
                 .sorted()
-                //.limit(2)
+                // .limit(2)
                 .forEach(System.out::println);
     }
 

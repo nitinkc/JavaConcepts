@@ -16,12 +16,9 @@ public class Pair<F, S> {
         return new Pair<>(second, first);
     }
 
-    public <R, U> Pair<R, U> transform(
-            Function<F, R> xfirst,
-            Function<S, U> xsecond) {
+    public <R, U> Pair<R, U> transform(Function<F, R> xfirst, Function<S, U> xsecond) {
         return new Pair<R, U>(xfirst.apply(first), xsecond.apply(second));
     }
-
 
     public F getFirst() {
         return first;
@@ -57,9 +54,6 @@ public class Pair<F, S> {
 
     @Override
     public String toString() {
-        return "Pair{" +
-                "first=" + first +
-                ", second=" + second +
-                '}';
+        return "Pair{" + "first=" + first + ", second=" + second + '}';
     }
 }

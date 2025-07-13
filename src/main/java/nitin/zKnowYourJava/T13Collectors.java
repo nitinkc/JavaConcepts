@@ -14,24 +14,28 @@ public class T13Collectors {
 
         System.out.println(min + " " + max);
 
-        var result = numbers.stream().collect(Collectors.teeing(
-                Collectors.maxBy(Comparator.comparing(num -> num)),
-                Collectors.minBy(Comparator.comparing(num -> num)),
-                List::of)
-        );
+        var result =
+                numbers.stream()
+                        .collect(
+                                Collectors.teeing(
+                                        Collectors.maxBy(Comparator.comparing(num -> num)),
+                                        Collectors.minBy(Comparator.comparing(num -> num)),
+                                        List::of));
 
         System.out.println(result);
 
-        //Get into a record
-        var result2 = numbers.stream().collect(Collectors.teeing(
-                Collectors.maxBy(Comparator.comparing(num -> num)),
-                Collectors.minBy(Comparator.comparing(num -> num)),
-                (val1, val2) -> new MinMax(val1.orElse(0), val2.orElse(0)))
-        );
+        // Get into a record
+        var result2 =
+                numbers.stream()
+                        .collect(
+                                Collectors.teeing(
+                                        Collectors.maxBy(Comparator.comparing(num -> num)),
+                                        Collectors.minBy(Comparator.comparing(num -> num)),
+                                        (val1, val2) ->
+                                                new MinMax(val1.orElse(0), val2.orElse(0))));
 
         System.out.println(result2);
     }
 }
 
-record MinMax(int min, int max) {
-}
+record MinMax(int min, int max) {}

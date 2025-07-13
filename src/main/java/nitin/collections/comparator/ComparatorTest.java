@@ -4,9 +4,7 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
-/**
- * Created by synergisticit on 2/26/2016.
- */
+/** Created by synergisticit on 2/26/2016. */
 public class ComparatorTest {
     public static void main(String[] args) {
         Student s1 = new Student(4, "Lucy", "Taylor", "Jenkov Taylor");
@@ -14,7 +12,7 @@ public class ComparatorTest {
         Student s3 = new Student(1, "Joe", "Kresman", "Andrew Taylor");
         Student s4 = new Student(4, "Lucy", "Green", "Taylor Zimmarman");
 
-        //HashSet does not need COMPARATOR, but TREESET DOES
+        // HashSet does not need COMPARATOR, but TREESET DOES
         Set<Student> studentSet = new TreeSet<Student>(new StudentComparator());
 
         studentSet.add(s1);
@@ -27,6 +25,5 @@ public class ComparatorTest {
         while (itr.hasNext()) {
             System.out.println(itr.next());
         }
-
     }
 }

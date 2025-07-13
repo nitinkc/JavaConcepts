@@ -1,16 +1,14 @@
 package nitin.io.fileOperations.csvDataReadOperations.bills.runner;
 
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 import nitin.io.fileOperations.csvDataReadOperations.bills.ReadTransactionsCsv;
 import nitin.io.fileOperations.csvDataReadOperations.bills.entity.Transaction;
 import nitin.io.fileOperations.csvDataReadOperations.bills.entity.Transactions;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.stream.Collectors;
-
 /**
- * @author Created by nichaurasia
- * Created on Wednesday, September/30/2020 at 7:43 PM
+ * @author Created by nichaurasia Created on Wednesday, September/30/2020 at 7:43 PM
  */
 
 // https://www.oracle.com/technical-resources/articles/java/architect-streams-pt2.html
@@ -21,27 +19,22 @@ public class TransactionService {
 
         System.out.println("**************************************************************");
         System.out.println("Get id's all Groceries types");
-        List<Integer> transactionsIds =
-                getTransIdGroceries(transactions);
+        List<Integer> transactionsIds = getTransIdGroceries(transactions);
 
         System.out.println(transactionsIds);
 
         System.out.println("**************************************************************");
         System.out.println("Get id's all Groceries types");
-        boolean expensive =
-                transactions.stream()
-                        .allMatch(t -> t.getValue() > 100);
+        boolean expensive = transactions.stream().allMatch(t -> t.getValue() > 100);
 
         System.out.println("**************************************************************");
         System.out.println("Get sum of all the Tx's in Delhi using maptoDouble");
-        Double statementSum =
-                getSumCity(transactions);
+        Double statementSum = getSumCity(transactions);
         System.out.println(statementSum);
 
         System.out.println("**************************************************************");
         System.out.println("Get sum of all the Tx's in Delhi using maptoDouble");
-        Double statementSumReduce =
-                getSumCityReduce(transactions);
+        Double statementSumReduce = getSumCityReduce(transactions);
         System.out.println(statementSumReduce);
     }
 

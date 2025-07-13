@@ -1,8 +1,6 @@
 package nitin.a6oops.interfaces.functionalInterface.methodNconstructorReference;
 
-/**
- * Created by Nitin Chaurasia on 1/30/18 at 10:43 PM.
- */
+/** Created by Nitin Chaurasia on 1/30/18 at 10:43 PM. */
 public class DCO2MethodReferenceRunnable {
     public static void main(String[] args) {
 
@@ -26,7 +24,7 @@ public class DCO2MethodReferenceRunnable {
     }
 }
 
-//method m1 is like run method of Runnable class, in terms of arguments and return types
+// method m1 is like run method of Runnable class, in terms of arguments and return types
 // This is non static method or instance Method
 class RunTest {
     public void m1() {

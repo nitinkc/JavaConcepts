@@ -7,13 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-
-})
+@JsonPropertyOrder({})
 @NoArgsConstructor
 @Getter
 @Setter
-public class Facets {
-
-
-}
+public class Facets {}

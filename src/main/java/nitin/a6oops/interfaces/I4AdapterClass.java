@@ -12,9 +12,7 @@ interface X {
     void m5();
 }
 
-/**
- * Created by nitin on 12/29/16.
- */
+/** Created by nitin on 12/29/16. */
 public class I4AdapterClass extends AdapterX {
 
     public static void main(String[] args) {
@@ -25,9 +23,9 @@ public class I4AdapterClass extends AdapterX {
 
     @Override
     public void m3() {
-        System.out.println("Providing Implementation of only M3, even though we have access to all the methods, " +
-                "we can choose to implement what we like in Adapter pattern");
-
+        System.out.println(
+                "Providing Implementation of only M3, even though we have access to all the methods, "
+                        + "we can choose to implement what we like in Adapter pattern");
     }
 
     @Override
@@ -40,27 +38,17 @@ public class I4AdapterClass extends AdapterX {
 abstract class AdapterX implements X {
 
     @Override
-    public void m1() {
-
-    }
+    public void m1() {}
 
     @Override
-    public void m2() {
-
-    }
+    public void m2() {}
 
     @Override
-    public void m3() {
-
-    }
+    public void m3() {}
 
     @Override
-    public void m4() {
-
-    }
+    public void m4() {}
 
     @Override
-    public void m5() {
-
-    }
+    public void m5() {}
 }

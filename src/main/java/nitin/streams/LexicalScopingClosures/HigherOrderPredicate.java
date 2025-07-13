@@ -7,7 +7,8 @@ import java.util.function.Predicate;
 
 public class HigherOrderPredicate {
 
-    public static final List<String> namesList = Arrays.asList("Adrian", "Briana", "Chetan", "Neil", "Nitin", "Mukesh");
+    public static final List<String> namesList =
+            Arrays.asList("Adrian", "Briana", "Chetan", "Neil", "Nitin", "Mukesh");
 
     // Method returning a function. Filter accepts a Predicate & this method is
     // made to return a predicate, to be used within filter
@@ -18,7 +19,7 @@ public class HigherOrderPredicate {
 
     public static void main(final String[] args) {
 
-        //Simple Predicates
+        // Simple Predicates
         final Predicate<String> startsWithN = name -> name.startsWith("N");
         final Predicate<String> startsWithB = name -> name.startsWith("B");
 
@@ -29,7 +30,6 @@ public class HigherOrderPredicate {
         System.out.println("Block 2");
         System.out.println(namesList.stream().filter(checkIfStartsWith("A")).count());
         System.out.println(namesList.stream().filter(checkIfStartsWith("B")).count());
-
 
         // Function, taking in a String and returning a Predicate, as expected by a filter
         final Function<String, Predicate<String>> startsWithLetterFunction =
@@ -42,7 +42,6 @@ public class HigherOrderPredicate {
         System.out.println(namesList.stream().filter(startsWithLetterFunction.apply("N")).count());
         System.out.println(namesList.stream().filter(startsWithLetterFunction.apply("B")).count());
 
-
         // Higher Order function :: Function returning a function. Same as block 3 function
         final Function<String, Predicate<String>> startsWithLetter =
                 (String letter) -> (String name) -> name.startsWith(letter);
@@ -52,7 +51,7 @@ public class HigherOrderPredicate {
         System.out.println(namesList.stream().filter(startsWithLetter.apply("B")).count());
 
         // Higher Order function :: Function returning a function, with concise code
-        //Same as block 3 and 4 Functions
+        // Same as block 3 and 4 Functions
         final Function<String, Predicate<String>> startsWithLetterConcise =
                 letter -> name -> name.startsWith(letter);
 

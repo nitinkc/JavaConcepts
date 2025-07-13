@@ -2,9 +2,7 @@ package nitin.collections.b_set;
 
 import java.util.*;
 
-/**
- * Created by synergisticit on 2/25/2016.
- */
+/** Created by synergisticit on 2/25/2016. */
 public class S3BasicSetString {
     public static void main(String[] args) {
 
@@ -15,46 +13,39 @@ public class S3BasicSetString {
         Set<String> set = new TreeSet<String>();
 
         // Ordering not guarenteed in HashSet
-        //Set<Integer> b_set = new TreeSet<Integer>();
+        // Set<Integer> b_set = new TreeSet<Integer>();
 
         // How to Add
         addSet(set);
 
-        //How to Iterate
+        // How to Iterate
         printSet(set);
 
-        //How to find
+        // How to find
         System.out.println(findLongString(set));
-
     }
 
     /**
-     * 1. Demonstrating adding USING A COLLECTION
-     * 2. and adding individual elements
+     * 1. Demonstrating adding USING A COLLECTION 2. and adding individual elements
      *
      * @param set
      */
     private static void addSet(Set<String> set) {
-        String[] arr = new String[]{"Lucia", "Brendan", "Sophia", "Sara"};
+        String[] arr = new String[] {"Lucia", "Brendan", "Sophia", "Sara"};
         List arr1 = new ArrayList<Integer>();
-        //Adding some other collection into the b_set
+        // Adding some other collection into the b_set
         arr1 = Arrays.asList(arr);
         set.addAll(arr1);
 
-        //Adding an individual element
+        // Adding an individual element
         set.add("1234");
     }
 
-    /**
-     * 3 main methids of iterator
-     * 1. hasNext()
-     * 2. next()
-     * 3. remove()
-     */
+    /** 3 main methids of iterator 1. hasNext() 2. next() 3. remove() */
     private static void printSet(Set<String> set) {
-        //Printing with Iterator
+        // Printing with Iterator
         Iterator itr = set.iterator();
-        //From this point on, DO NOT USE b_set.get or b_set.remove!!
+        // From this point on, DO NOT USE b_set.get or b_set.remove!!
         // USE ONLY ITERATOR
         while (itr.hasNext()) {
 
@@ -75,7 +66,7 @@ public class S3BasicSetString {
         String ret = null;
 
         while (itr.hasNext()) {
-            //Save the current value to avoid two itr.next
+            // Save the current value to avoid two itr.next
             String current = itr.next();
 
             if (current.length() > strLen) {

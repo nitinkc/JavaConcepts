@@ -7,10 +7,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.*;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-        "msg",
-        "url"
-})
+@JsonPropertyOrder({"msg", "url"})
 @Getter
 @Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -22,7 +19,7 @@ public class Motd {
 
     @JsonProperty("msg")
     public String msg;
+
     @JsonProperty("url")
     public String url;
-
 }

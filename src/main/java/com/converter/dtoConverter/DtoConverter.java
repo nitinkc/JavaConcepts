@@ -1,8 +1,8 @@
 package com.converter.dtoConverter;
 
-import java.util.function.BiConsumer;
-
 import static java.util.Objects.isNull;
+
+import java.util.function.BiConsumer;
 
 public abstract class DtoConverter<O> {
 

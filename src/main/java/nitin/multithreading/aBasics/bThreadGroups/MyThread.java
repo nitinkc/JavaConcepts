@@ -1,8 +1,6 @@
 package nitin.multithreading.aBasics.bThreadGroups;
 
-/**
- * Created by nitin.chaurasia on 12/25/2016.
- */
+/** Created by nitin.chaurasia on 12/25/2016. */
 public class MyThread extends Thread {
     MyThread(ThreadGroup g, String name) {
         super(g, name);
@@ -13,7 +11,7 @@ public class MyThread extends Thread {
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
-            //Swallowing the Exception
+            // Swallowing the Exception
         }
     }
 }

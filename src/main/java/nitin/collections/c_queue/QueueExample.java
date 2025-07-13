@@ -5,10 +5,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Created by nitin.chaurasia on 2/11/2017.
- * peek() Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty.
- * poll() Retrieves and removes the head of this queue, or returns null if this queue is empty.
- * remove() Removes a single instance of the specified element from this queue, if it is present.
+ * Created by nitin.chaurasia on 2/11/2017. peek() Retrieves, but does not remove, the head of this
+ * queue, or returns null if this queue is empty. poll() Retrieves and removes the head of this
+ * queue, or returns null if this queue is empty. remove() Removes a single instance of the
+ * specified element from this queue, if it is present.
  */
 public class QueueExample {
     public static void main(String[] args) {
@@ -18,7 +18,8 @@ public class QueueExample {
             q.add(i);
         }
 
-        System.out.println("Peek at the element at the head without taking the element out of the queue with element method");
+        System.out.println(
+                "Peek at the element at the head without taking the element out of the queue with element method");
         // peek at the element at the head without taking the element out of the queue
         // element() method
         System.out.println(q.element());

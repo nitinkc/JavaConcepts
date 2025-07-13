@@ -1,9 +1,9 @@
 package nitin.multithreading.cVirtualThreads;
 
-import com.utilities.MultiThreadUtility;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import static com.utilities.PerformanceUtility.startTimer;
+import static com.utilities.PerformanceUtility.stopTimer;
 
+import com.utilities.MultiThreadUtility;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
@@ -15,16 +15,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Stream;
-
-import static com.utilities.PerformanceUtility.startTimer;
-import static com.utilities.PerformanceUtility.stopTimer;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class Business {
     private static final String FILE_PATH = "src/main/resources/twitter-words.txt";
 
     public static void executeBusinessLogic() {
         MultiThreadUtility.logMessage("Start::executeBusinessLogic");
-        MultiThreadUtility.delay(1_000);//Simulating an IO blocking call
+        MultiThreadUtility.delay(1_000); // Simulating an IO blocking call
         MultiThreadUtility.logMessage("END::executeBusinessLogic");
     }
 
@@ -37,10 +36,10 @@ public class Business {
             list = lines.toList();
         } catch (IOException e) {
             System.out.println(e);
-        }finally {
+        } finally {
             MultiThreadUtility.logMessage("End fetchFile()");
         }
-        //Returning a random string
+        // Returning a random string
         String str = list.get(new Random().nextInt(list.size()));
         stopTimer();
         return str;
@@ -86,7 +85,7 @@ public class Business {
 
         try (InputStream stream = uri.toURL().openStream()) {
             String response = new String(stream.readAllBytes(), StandardCharsets.UTF_8);
-            JSONObject jsonObject = new JSONObject(response);// Parse the JSON response
+            JSONObject jsonObject = new JSONObject(response); // Parse the JSON response
             return jsonObject.getString("url");
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -100,7 +99,7 @@ public class Business {
 
         URI uri = null;
         try {
-            MultiThreadUtility.delay(1_000);//One request per second is allowed
+            MultiThreadUtility.delay(1_000); // One request per second is allowed
             uri = new URI("https://api.openbrewerydb.org/v1/breweries/random");
         } catch (URISyntaxException e) {
             throw new IllegalArgumentException("Invalid URI: " + e.getMessage(), e);
@@ -120,7 +119,7 @@ public class Business {
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }finally {
+        } finally {
             MultiThreadUtility.logMessage("End getBrewer()");
         }
     }
@@ -147,7 +146,7 @@ public class Business {
             apiResponse = STR."\{name} \{style} ";
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }finally {
+        } finally {
             MultiThreadUtility.logMessage("End getBeer()");
         }
         return apiResponse;

@@ -1,12 +1,10 @@
 package nitin.arrays;
 
 /**
- * Created by nitin.chaurasia on 12/27/2016.
- * Array Type              |                    Allowed elements
- * 1. Primitive Type Arrays         |      Any type which can be implicitly promoted to declared type
- * 2. Object Type Arrays            |      Either declared type objects or its child class objects
- * 3. Abstract Class Type           |      Child class objects are allowed
- * 4. Interface Type Arrays         |      Implementation class objects are allowed
+ * Created by nitin.chaurasia on 12/27/2016. Array Type | Allowed elements 1. Primitive Type Arrays
+ * | Any type which can be implicitly promoted to declared type 2. Object Type Arrays | Either
+ * declared type objects or its child class objects 3. Abstract Class Type | Child class objects are
+ * allowed 4. Interface Type Arrays | Implementation class objects are allowed
  */
 public class L5ArrayElementAssignment {
     public static void main(String[] args) {
@@ -25,7 +23,7 @@ public class L5ArrayElementAssignment {
 
         // Case 3 : Abstract Class Type Arrays. Elements can be of Child objects
         Number[] d = new Number[2];
-        //d[0] = new Number();// abstract cannot be instantiated
+        // d[0] = new Number();// abstract cannot be instantiated
         d[0] = Integer.valueOf(10);
         d[1] = Double.valueOf(6.32);
 

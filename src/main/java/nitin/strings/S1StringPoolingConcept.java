@@ -1,8 +1,6 @@
 package nitin.strings;
 
-/**
- * Created by Nitin C on 11/26/2015.
- */
+/** Created by Nitin C on 11/26/2015. */
 public class S1StringPoolingConcept {
     public static void main(String[] args) {
         // Two ways of Creating a String (new and "~~~")
@@ -13,7 +11,7 @@ public class S1StringPoolingConcept {
         String s1 = "";
         String s2 = "";
         String s3 = "";
-         /*
+        /*
         When we use double quotes to create a string, it first looks
         for the string with the same value in the String Pool. If found it
         just returns the reference
@@ -32,8 +30,6 @@ public class S1StringPoolingConcept {
         if (x == y) {
             System.out.println("x and y are referring to a same String");
         }
-        /** In Sting .equals() method checks for string equality
-         * = compared the references
-         */
+        /** In Sting .equals() method checks for string equality = compared the references */
     }
 }

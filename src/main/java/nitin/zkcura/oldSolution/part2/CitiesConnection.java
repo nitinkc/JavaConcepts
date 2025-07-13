@@ -5,9 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * Created by Nitin Chaurasia on 11/10/15 at 9:53 PM.
- */
+/** Created by Nitin Chaurasia on 11/10/15 at 9:53 PM. */
 public class CitiesConnection {
 
     private final Map<Data, Set<Data>> adjList = new HashMap<Data, Set<Data>>();
@@ -41,12 +39,14 @@ public class CitiesConnection {
         return false;
     }
 
-    //Utility function
+    // Utility function
     public void printAdjList() {
         for (Map.Entry<Data, Set<Data>> entry : adjList.entrySet()) {
-            //System.out.println("Key: " + entry.getKey().getCity().getCityname() + ", " + entry.getKey().getCity().getState());
+            // System.out.println("Key: " + entry.getKey().getCity().getCityname() + ", " +
+            // entry.getKey().getCity().getState());
             for (Data connection : entry.getValue()) {
-                //System.out.println("\tValue: " + connection.getCity().getCityname() + ", " + connection.getCity().getState());
+                // System.out.println("\tValue: " + connection.getCity().getCityname() + ", " +
+                // connection.getCity().getState());
             }
             System.out.println("\n");
         }

@@ -1,11 +1,10 @@
 package nitin.multithreading.raceCondition.dSynchronization.runners;
 
-import nitin.multithreading.raceCondition.dSynchronization.IncrementTaskSemaphore;
-import nitin.multithreading.raceCondition.dSynchronization.SharedCounter;
-
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
+import nitin.multithreading.raceCondition.dSynchronization.IncrementTaskSemaphore;
+import nitin.multithreading.raceCondition.dSynchronization.SharedCounter;
 
 public class SemaphoreRunner {
     public static void main(String[] args) {

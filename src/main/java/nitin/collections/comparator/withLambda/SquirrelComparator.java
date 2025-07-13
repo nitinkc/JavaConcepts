@@ -2,9 +2,7 @@ package nitin.collections.comparator.withLambda;
 
 import java.util.Comparator;
 
-/**
- * Created by Nitin C on 3/3/2016.
- */
+/** Created by Nitin C on 3/3/2016. */
 public class SquirrelComparator implements Comparator<Squirrel> {
     @Override
     public int compare(Squirrel s1, Squirrel s2) {

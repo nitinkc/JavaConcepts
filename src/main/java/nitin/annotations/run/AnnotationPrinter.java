@@ -2,7 +2,7 @@ package nitin.annotations.run;
 
 public class AnnotationPrinter {
     public static void main(String[] args) {
-        //Via reflection, Class under test
+        // Via reflection, Class under test
         Class<?> clazz = DocumentationAnnotationTest.class;
 
         // Check if the class is annotated with @ClassWriter

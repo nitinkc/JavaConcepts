@@ -9,7 +9,7 @@ public class ReadFileFromURL {
         Scanner s = null;
         List<String> list = new ArrayList<>();
         try {
-            //The Project Gutenberg EBook of Pride and Prejudice, by Jane Austen
+            // The Project Gutenberg EBook of Pride and Prejudice, by Jane Austen
             URL url = new URL("https://www.gutenberg.org/files/1342/1342-0.txt");
             s = new Scanner(url.openStream());
         } catch (IOException ex) {
@@ -23,7 +23,7 @@ public class ReadFileFromURL {
         }
 
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            //System.out.println("Key = " + entry.getKey() + " Value = "  + entry.getValue());
+            // System.out.println("Key = " + entry.getKey() + " Value = "  + entry.getValue());
             if (entry.getValue() > 4) {
                 list.add(entry.getKey());
             }

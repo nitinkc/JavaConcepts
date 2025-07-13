@@ -2,7 +2,6 @@ package nitin.io.google;
 
 import com.config.Configs;
 import com.google.common.collect.Lists;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,7 +16,7 @@ public class PartitionWriteCsv {
     public static void main(String[] args) {
         final int BATCH_SIZE = 1000;
 
-        //Read from a CSV file and Write into another
+        // Read from a CSV file and Write into another
         String inputFile = Configs.ENABLE1_WORD_LIST_PATH;
         List<String> stringList = new ArrayList<>();
         try {
@@ -29,10 +28,11 @@ public class PartitionWriteCsv {
         List<List<String>> partition = Lists.partition(stringList, BATCH_SIZE);
 
         long startP = System.currentTimeMillis();
-        partition.forEach(singleStringList -> {
-            singleStringList.parallelStream()
-                    .forEach(singleString -> FileWrite.doSomethingParallely(singleString));
-        });
+        partition.forEach(
+                singleStringList -> {
+                    singleStringList.parallelStream()
+                            .forEach(singleString -> FileWrite.doSomethingParallely(singleString));
+                });
         long endP = System.currentTimeMillis();
 
         long startS = System.currentTimeMillis();
@@ -43,7 +43,8 @@ public class PartitionWriteCsv {
         System.out.println("Processing Ended");
     }
 
-    private static void results(int size, int partitionSize, int BATCH_SIZE, long parallelTime, long sequentialTime) {
+    private static void results(
+            int size, int partitionSize, int BATCH_SIZE, long parallelTime, long sequentialTime) {
         final String FILENAME = "src/main/resources/nitin.txt";
         PrintWriter output = null;
         // Erasing files if already exist
@@ -53,9 +54,11 @@ public class PartitionWriteCsv {
             e.printStackTrace();
         }
 
-        output.println("###########################################################################");
+        output.println(
+                "###########################################################################");
         output.println(LocalDateTime.now());
-        output.println("Total # of Strings " + size + " with total # Partition is " + partitionSize);
+        output.println(
+                "Total # of Strings " + size + " with total # Partition is " + partitionSize);
         output.println("Batch Size : " + BATCH_SIZE);
         output.println("Total Time Taken in parallel : " + parallelTime);
         output.println("Total Time Taken in sequential : " + sequentialTime);

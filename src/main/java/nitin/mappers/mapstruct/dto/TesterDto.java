@@ -1,8 +1,7 @@
 package nitin.mappers.mapstruct.dto;
 
-import lombok.*;
-
 import java.util.List;
+import lombok.*;
 
 @NoArgsConstructor
 @Getter

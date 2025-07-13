@@ -8,6 +8,6 @@ import lombok.Data;
 public class Entity {
     private String idEntity;
     private String someString;
-    private String ssn;//PII: Can't be send via Dto
-    private Integer age;//PII: Can't be send via Dto
+    private String ssn; // PII: Can't be send via Dto
+    private Integer age; // PII: Can't be send via Dto
 }

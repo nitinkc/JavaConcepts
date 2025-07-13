@@ -1,7 +1,6 @@
 package nitin.streams.parallelStreams;
 
 import com.utilities.MultiThreadUtility;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ForkJoinPool;
@@ -19,16 +18,19 @@ public class FJPCustomization {
                 list.parallelStream()
                         .filter(num -> num == num)
                         .map(num -> incrementWith1SecDelay(num))
-                //.forEach(num -> {})
+                // .forEach(num -> {})
                 ;
 
-        customizingForkJoinPool(integerParallelStream);//Sending the stream
+        customizingForkJoinPool(integerParallelStream); // Sending the stream
     }
 
     private static void customizingForkJoinPool(Stream<Integer> integerStream) {
-        ForkJoinPool forkJoinPool = new ForkJoinPool(100);//parallelism = 100
-        forkJoinPool.submit(() -> integerStream.forEach(e -> {
-        }));//Running the reduction operation in another method withg another thread
+        ForkJoinPool forkJoinPool = new ForkJoinPool(100); // parallelism = 100
+        forkJoinPool.submit(
+                () ->
+                        integerStream.forEach(
+                                e -> {})); // Running the reduction operation in another method
+        // withg another thread
 
         forkJoinPool.shutdown();
 

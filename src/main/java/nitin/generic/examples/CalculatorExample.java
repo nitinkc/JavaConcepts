@@ -17,6 +17,6 @@ public class CalculatorExample {
 
         // Causes a ClassCastException because String is not a subtype of java.lang.Number
         // double genericValue3 = Calculator.add("Not valid", 3f);
-        //System.out.println("The invalid result: " + genericValue3);
+        // System.out.println("The invalid result: " + genericValue3);
     }
 }

@@ -2,15 +2,14 @@ package nitin.zkcura.oldSolution.part1;
 
 import java.util.List;
 
-/**
- * Created by Nitin Chaurasia on 11/9/15 at 11:06 PM.
- */
+/** Created by Nitin Chaurasia on 11/9/15 at 11:06 PM. */
 public class Data {
 
     private int population;
     private String city;
     private String state;
-    // Interstates are already sorted during the time of reading from the file using Default Sorting order.
+    // Interstates are already sorted during the time of reading from the file using Default Sorting
+    // order.
     private List<String> interstates;
 
     // Accessors and Mutators for the private data members
@@ -53,8 +52,17 @@ public class Data {
      * */
     public String toString() {
         String value = "";
-        value = value + population + "\n\n" + city + ", " + state + "\n" + "Interstates: " +
-                interstatesToString(getInterstates()) + "\n";
+        value =
+                value
+                        + population
+                        + "\n\n"
+                        + city
+                        + ", "
+                        + state
+                        + "\n"
+                        + "Interstates: "
+                        + interstatesToString(getInterstates())
+                        + "\n";
         return value;
     }
 
@@ -63,11 +71,16 @@ public class Data {
      * */
     public String aggragateCities() {
         String value = "";
-        value = city + ", " + state + "\n" + "Interstates: " +
-                interstatesToString(interstates) + "\n";
+        value =
+                city
+                        + ", "
+                        + state
+                        + "\n"
+                        + "Interstates: "
+                        + interstatesToString(interstates)
+                        + "\n";
         return value;
     }
-
 
     /* Method to Print List of Interstates in the required format
      */
@@ -82,5 +95,4 @@ public class Data {
 
         return result;
     }
-
 }

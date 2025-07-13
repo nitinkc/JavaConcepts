@@ -9,9 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-        "URL"
-})
+@JsonPropertyOrder({"URL"})
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -20,5 +18,4 @@ public class Primary {
 
     @JsonProperty("URL")
     public String url;
-
 }

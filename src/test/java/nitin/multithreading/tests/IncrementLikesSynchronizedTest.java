@@ -1,15 +1,14 @@
 package nitin.multithreading.tests;
 
-import nitin.multithreading.raceCondition.dSynchronization.tests.IncrementLikes;
-import nitin.multithreading.raceCondition.dSynchronization.tests.IncrementLikesSynchronized;
-import org.junit.Assert;
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.*;
+import nitin.multithreading.raceCondition.dSynchronization.tests.IncrementLikes;
+import nitin.multithreading.raceCondition.dSynchronization.tests.IncrementLikesSynchronized;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class IncrementLikesSynchronizedTest {
 
@@ -31,7 +30,8 @@ public class IncrementLikesSynchronizedTest {
         Assert.assertEquals(count.intValue(), uniqueSequences.size());
     }
 
-    private Set<Integer> getLikes2(Integer count, IncrementLikes il) throws InterruptedException, ExecutionException {
+    private Set<Integer> getLikes2(Integer count, IncrementLikes il)
+            throws InterruptedException, ExecutionException {
         ExecutorService executor = Executors.newFixedThreadPool(10);
         Set<Integer> uniqueSequences = new LinkedHashSet<>();
         List<Future<Integer>> futures = new ArrayList<>();
@@ -41,7 +41,8 @@ public class IncrementLikesSynchronizedTest {
         }
 
         for (Future<Integer> future : futures) {
-            Integer result = future.get();//Future returns the datatype of the method thats been multithreaded
+            Integer result = future.get(); // Future returns the datatype of the method thats been
+            // multithreaded
             System.out.println("Result from Future " + result);
             uniqueSequences.add(result);
         }
@@ -51,7 +52,8 @@ public class IncrementLikesSynchronizedTest {
         return uniqueSequences;
     }
 
-    private Set<Integer> getLikes(int count, IncrementLikes il) throws ExecutionException, InterruptedException {
+    private Set<Integer> getLikes(int count, IncrementLikes il)
+            throws ExecutionException, InterruptedException {
         ExecutorService executor = Executors.newFixedThreadPool(10);
         Set<Integer> uniqueSequences = new LinkedHashSet<>();
         List<Future<Integer>> futures = new ArrayList<>();
@@ -61,7 +63,8 @@ public class IncrementLikesSynchronizedTest {
         }
 
         for (Future<Integer> future : futures) {
-            Integer result = future.get();//Future returns the datatype of the method thats been multithreaded
+            Integer result = future.get(); // Future returns the datatype of the method thats been
+            // multithreaded
             System.out.println("Result from Future " + result);
             uniqueSequences.add(result);
         }

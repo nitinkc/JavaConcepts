@@ -3,20 +3,16 @@ package nitin.a1languageFundamentals;
 class LeftHandDrive {
     public static void m1() {
         System.out.println(" this is from static method of left hand drive class");
-
     }
 
-    public void horn() {
-    }
+    public void horn() {}
 
-    public void run() {
-    }
+    public void run() {}
 
     public void drivingMode() {
 
         System.out.println(" this left hand drive");
     }
-
 }
 
 class RightHandDrive extends LeftHandDrive {
@@ -25,10 +21,10 @@ class RightHandDrive extends LeftHandDrive {
         System.out.println(" this is from static method of right hand drive class");
     }
 
-//	public  int drivingMode() {
-//		System.out.println(" this is right hand drive");
-//		return 1;
-//	}
+    //	public  int drivingMode() {
+    //		System.out.println(" this is right hand drive");
+    //		return 1;
+    //	}
 
 }
 
@@ -42,6 +38,5 @@ public class Car {
         ld1.drivingMode();
         LeftHandDrive.m1();
         LeftHandDrive.m1();
-
     }
 }

@@ -1,10 +1,9 @@
 package nitin.multithreading.raceCondition.dSynchronization.runners;
 
-import nitin.multithreading.raceCondition.dSynchronization.IncrementTaskMutex;
-import nitin.multithreading.raceCondition.dSynchronization.SharedCounter;
-
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+import nitin.multithreading.raceCondition.dSynchronization.IncrementTaskMutex;
+import nitin.multithreading.raceCondition.dSynchronization.SharedCounter;
 
 public class MutExRunner {
     public static void main(String[] args) {

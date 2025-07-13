@@ -1,7 +1,6 @@
 package sandbox;
 
 import com.utilities.UuidUtils;
-
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
@@ -35,13 +34,10 @@ public class UUIDIssue {
     private static void getUuidFromList() {
         List<String> idList = Arrays.asList("00693", "12345", "11016", null, "00693");
 
-        //Removing duplicates as Map cannot have 2 identical keys
-        idList = idList
-                .stream()
-                .distinct()
-                .collect(Collectors.toList());
+        // Removing duplicates as Map cannot have 2 identical keys
+        idList = idList.stream().distinct().collect(Collectors.toList());
 
-        //Removing nulls
+        // Removing nulls
         idList.removeIf(element -> element == null);
 
         Map<String, String> idToIdMap = UuidUtils.getIdToIdMap(idList);

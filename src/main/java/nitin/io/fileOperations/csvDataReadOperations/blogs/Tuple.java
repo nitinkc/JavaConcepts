@@ -5,10 +5,8 @@ import lombok.Getter;
 import lombok.ToString;
 
 /**
- * @author Created by nichaurasia
- * Created on Thursday, October/01/2020 at 1:22 AM
+ * @author Created by nichaurasia Created on Thursday, October/01/2020 at 1:22 AM
  */
-
 @Getter
 @ToString
 @EqualsAndHashCode

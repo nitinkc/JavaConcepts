@@ -1,15 +1,14 @@
 package nitin.multithreading.raceCondition.dSynchronization;
 
-import lombok.NoArgsConstructor;
-
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
+import lombok.NoArgsConstructor;
 
-//Run all the database operation in parallel
+// Run all the database operation in parallel
 @NoArgsConstructor
 public class DatabaseOperations {
     public void performTask(CyclicBarrier c1, CyclicBarrier c2) {
-        try {//to be used for cyclic barrier
+        try { // to be used for cyclic barrier
             getDriver();
             establishConnection();
             c1.await();
@@ -21,7 +20,6 @@ public class DatabaseOperations {
         } catch (InterruptedException | BrokenBarrierException e) {
             e.printStackTrace();
         }
-
     }
 
     private void getDriver() {
@@ -29,11 +27,14 @@ public class DatabaseOperations {
     }
 
     private void establishConnection() {
-        System.out.println("Establish Connection using Connection Class by : " + Thread.currentThread());
+        System.out.println(
+                "Establish Connection using Connection Class by : " + Thread.currentThread());
     }
 
     private void prepareStatement() {
-        System.out.println("Prepare an SQL Statement to be executed on the DB Server by : " + Thread.currentThread());
+        System.out.println(
+                "Prepare an SQL Statement to be executed on the DB Server by : "
+                        + Thread.currentThread());
     }
 
     private void obtainResultSet() {
@@ -41,15 +42,18 @@ public class DatabaseOperations {
     }
 
     private void closeConnection() {
-        System.out.println("After obtaining the result, Close the connection by : " + Thread.currentThread());
+        System.out.println(
+                "After obtaining the result, Close the connection by : " + Thread.currentThread());
     }
 
     private void summary() {
-        System.out.println("By : " + Thread.currentThread() +
-                "\n1. Obtain DRIVER \n" +
-                "2. Estb. CONNECTION \n" +
-                "3. Write SQL STATEMENT \n" +
-                "4. Obtain result in RESULTSET \n" +
-                "5. Close the connection");
+        System.out.println(
+                "By : "
+                        + Thread.currentThread()
+                        + "\n1. Obtain DRIVER \n"
+                        + "2. Estb. CONNECTION \n"
+                        + "3. Write SQL STATEMENT \n"
+                        + "4. Obtain result in RESULTSET \n"
+                        + "5. Close the connection");
     }
 }

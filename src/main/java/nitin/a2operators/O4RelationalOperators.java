@@ -1,8 +1,6 @@
 package nitin.a2operators;
 
-/**
- * Created by Nitin Chaurasia on 12/28/16 at 9:50 PM.
- */
+/** Created by Nitin Chaurasia on 12/28/16 at 9:50 PM. */
 public class O4RelationalOperators {
     public static void main(String[] args) {
         System.out.println(10 > 20);
