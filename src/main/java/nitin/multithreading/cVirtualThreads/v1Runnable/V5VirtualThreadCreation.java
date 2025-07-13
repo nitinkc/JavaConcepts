@@ -1,47 +1,47 @@
 package nitin.multithreading.cVirtualThreads.v1Runnable;
 
-import com.utilities.MultiThreadUtility;
-import nitin.multithreading.cVirtualThreads.Business;
+import static nitin.multithreading.cVirtualThreads.Business.executeBusinessLogic;
 
+import com.utilities.MultiThreadUtility;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
-
-import static nitin.multithreading.cVirtualThreads.Business.executeBusinessLogic;
+import nitin.multithreading.cVirtualThreads.Business;
 
 public class V5VirtualThreadCreation {
     public static void main(String[] args) throws Exception {
         MultiThreadUtility.logMessage("Main starts");
-        //createWithStaticMethod();
-        //createWithVirtualBuilder();
-        //createWithFactory();
-        //createWithVirtualExecutorService();
+        // createWithStaticMethod();
+        // createWithVirtualBuilder();
+        // createWithFactory();
+        // createWithVirtualExecutorService();
         createWithThreadPerTaskExecutorService();
         MultiThreadUtility.logMessage("Main ends successfully");
     }
 
     /* Creates Virtual Threads using Static method Thread.ofVirtual() */
     private static void createWithStaticMethod() throws Exception {
-        Thread t1 = Thread.ofVirtual().start(Business::executeBusinessLogic);//Can't be named
+        Thread t1 = Thread.ofVirtual().start(Business::executeBusinessLogic); // Can't be named
         Thread t2 = Thread.ofVirtual().start(Business::executeBusinessLogic);
 
-        //Make sure that the thread terminates before moving on
+        // Make sure that the thread terminates before moving on
         t1.join();
         t2.join();
     }
 
     /*  Creates Virtual Threads using a Virtual Builder.
      *  Builder is not Thread Safe
-    */
+     */
     private static void createWithVirtualBuilder() throws Exception {
-        Thread.Builder.OfVirtual ofVirtualBuilder = Thread.ofVirtual().name("my_virtual_thread",0);
+        Thread.Builder.OfVirtual ofVirtualBuilder = Thread.ofVirtual().name("my_virtual_thread", 0);
 
-        //Start the threads
+        // Start the threads
         Thread t1 = ofVirtualBuilder.start(() -> executeBusinessLogic());
         Thread t2 = ofVirtualBuilder.start(() -> executeBusinessLogic());
 
         // Make sure the threads terminate
-        t1.join(); t2.join();
+        t1.join();
+        t2.join();
     }
 
     /* Creates Virtual Threads using a Thread Factory. Thread Safe */
@@ -74,7 +74,6 @@ public class V5VirtualThreadCreation {
             srv.submit(() -> executeBusinessLogic());
         }
     }
-
 
     /* Thread Per Task Executor Service */
     private static void createWithThreadPerTaskExecutorService() {

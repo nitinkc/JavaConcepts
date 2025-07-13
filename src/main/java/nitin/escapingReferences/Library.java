@@ -25,4 +25,3 @@ public class Library {
 
     // Additional methods to manipulate books in the library...
 }
-

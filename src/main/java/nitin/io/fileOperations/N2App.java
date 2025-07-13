@@ -29,17 +29,18 @@ public class N2App {
         }
     }
 
-    private static List<String> compareAndPrepareWriteLines(List<String> configFileStr, List<String> inputStr) {
+    private static List<String> compareAndPrepareWriteLines(
+            List<String> configFileStr, List<String> inputStr) {
         List<String> writeLine = new ArrayList<>();
         for (String str : inputStr) {
             StringBuilder sb = new StringBuilder();
             sb.append(str);
             if (configFileStr.contains(str)) {
                 sb.append(" ").append("Verified");
-                writeLine.add(sb.toString());//.replaceAll("\\s", ""));
+                writeLine.add(sb.toString()); // .replaceAll("\\s", ""));
             } else {
                 sb.append(" ").append("NotVerified");
-                writeLine.add(sb.toString());//.replaceAll("\\s", ""));
+                writeLine.add(sb.toString()); // .replaceAll("\\s", ""));
             }
         }
         return writeLine;
@@ -72,10 +73,7 @@ public class N2App {
     private static List<String> getInputStrings(Path input) {
         List<String> inputStr = new ArrayList<>();
         try {
-            inputStr = Files
-                    .readAllLines(input)
-                    .stream()
-                    .collect(Collectors.toList());
+            inputStr = Files.readAllLines(input).stream().collect(Collectors.toList());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -85,39 +83,46 @@ public class N2App {
     private static List<File> getAllFilesFromFolder(Path path) {
         List<File> filesInFolder = new ArrayList<>();
         try {
-            filesInFolder = Files.walk(path)
-                    .filter(Files::isRegularFile)
-                    .map(Path::toFile)
-                    .filter(filename -> filename.getName().endsWith("yaml"))
-                    //.peek(file -> System.out.println(file))
-                    .collect(Collectors.toList());
+            filesInFolder =
+                    Files.walk(path)
+                            .filter(Files::isRegularFile)
+                            .map(Path::toFile)
+                            .filter(filename -> filename.getName().endsWith("yaml"))
+                            // .peek(file -> System.out.println(file))
+                            .collect(Collectors.toList());
         } catch (IOException e) {
             e.printStackTrace();
         }
         return filesInFolder;
     }
 
-    private static void extracted(List<File> filesInFolder, List<String> inputStr, List<String> writeLine) {
+    private static void extracted(
+            List<File> filesInFolder, List<String> inputStr, List<String> writeLine) {
         for (File f : filesInFolder) {
             StringBuilder sb = new StringBuilder();
             sb.append(f.getName(), 0, f.getName().length() - 5).append(" ");
             try {
                 Files.lines(f.toPath())
-                        .filter(line -> line.contains("tag")) // this line filters any line out which does not meet the condition
-                        .forEach(line -> {
-                            //System.out.println(line);
-                            sb.append(line.substring(11));
-                        });//print each line
+                        .filter(
+                                line ->
+                                        line.contains(
+                                                "tag")) // this line filters any line out which does
+                        // not meet the condition
+                        .forEach(
+                                line -> {
+                                    // System.out.println(line);
+                                    sb.append(line.substring(11));
+                                }); // print each line
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
             if (inputStr.contains(sb.toString())) {
                 sb.append(" ").append("Verified");
-                writeLine.add(sb.toString());//.replaceAll("\\s", ""));
+                writeLine.add(sb.toString()); // .replaceAll("\\s", ""));
             } else {
                 sb.append(" ").append("NotVerified");
-                writeLine.add(sb.toString());//.replaceAll("\\s", ""));
+                writeLine.add(sb.toString()); // .replaceAll("\\s", ""));
             }
         }
     }

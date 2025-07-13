@@ -3,7 +3,7 @@ package nitin.multithreading.raceCondition.eVolatileVar;
 import static com.utilities.MultiThreadUtility.logShortMessage;
 
 public class DataRace {
-    //Data race can avoided by declaring the variables volatile
+    // Data race can avoided by declaring the variables volatile
     private volatile int x = 0;
     private volatile int y = 0;
 

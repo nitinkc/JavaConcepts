@@ -1,8 +1,6 @@
 package nitin.multithreading.raceCondition.dSynchronization;
 
-/**
- * Created by Nitin Chaurasia on 12/3/15 at 10:29 PM.
- */
+/** Created by Nitin Chaurasia on 12/3/15 at 10:29 PM. */
 public class S3SynchronizedMethodDemo {
     public static void main(String[] args) {
         Display d1 = new Display();
@@ -11,16 +9,16 @@ public class S3SynchronizedMethodDemo {
         Thread t1 = new MyThread(d1, "Thread1");
         Thread t2 = new MyThread(d1, "Thread2");
 
-//        t1.start();
-//        t2.start();
+        //        t1.start();
+        //        t2.start();
 
         caseStudy1();
     }
 
     /**
-     * WHENEVER MULTIPLE THREADS ARE OPERATING ON SAME OBJECT, THEN ONLY SYNCHRONIZATION
-     * PLAYS A ROLE. IF THERE ARE TWO DIFFERENT OBJECTS ACCESSED bY TWO DIFFERENT THREADS
-     * THSRE IS NO ROLE OF SYNCHRONIZATION.
+     * WHENEVER MULTIPLE THREADS ARE OPERATING ON SAME OBJECT, THEN ONLY SYNCHRONIZATION PLAYS A
+     * ROLE. IF THERE ARE TWO DIFFERENT OBJECTS ACCESSED bY TWO DIFFERENT THREADS THSRE IS NO ROLE
+     * OF SYNCHRONIZATION.
      */
     private static void caseStudy1() {
         Display d1 = new Display();
@@ -37,7 +35,7 @@ public class S3SynchronizedMethodDemo {
 
 class Display {
 
-    //If the synchronized method does not allow two simultaneous threads to execute
+    // If the synchronized method does not allow two simultaneous threads to execute
     // TRY: remove the synchronized keyword and see the effects;
     public synchronized void wish(String name) throws InterruptedException {
         for (int i = 0; i < 10; i++) {

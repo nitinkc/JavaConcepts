@@ -10,25 +10,28 @@ class Car1 {
      * *******************************************************************************************************************
      ********************************************************************************************************************/
 
-    //Anonymous Inner Class
-  /*private static final CarRunner1.CarCriteria1 RED_CAR_CRITERION = new CarRunner1.CarCriteria1() {
-  @Override
-  public boolean test(Car1 car) {
-    return car.getColor().equals("Red");
-  }
-};*/
-
-    //Replacing anony. class with Lambda
-    private static final CarCriteria1 RED_CAR_CRITERION = (Car1 car) -> {
+    // Anonymous Inner Class
+    /*private static final CarRunner1.CarCriteria1 RED_CAR_CRITERION = new CarRunner1.CarCriteria1() {
+      @Override
+      public boolean test(Car1 car) {
         return car.getColor().equals("Red");
-    };// This colon is marking the end of the assignment of the LHS
-    //Fields of Class Car
+      }
+    };*/
+
+    // Replacing anony. class with Lambda
+    private static final CarCriteria1 RED_CAR_CRITERION =
+            (Car1 car) -> {
+                return car.getColor().equals("Red");
+            }; // This colon is marking the end of the assignment of the LHS
+
+    // Fields of Class Car
     private final int gasLevel;
     private final String color;
     private final List<String> passengers;
     private final List<String> trunkContents;
 
-    // there is a functional programming style that we will be using which will lead us to using factory methods
+    // there is a functional programming style that we will be using which will lead us to using
+    // factory methods
     private Car1(int gasLevel, String color, List<String> passengers, List<String> trunkContents) {
         this.gasLevel = gasLevel;
         this.color = color;
@@ -36,7 +39,7 @@ class Car1 {
         this.trunkContents = trunkContents;
     }
 
-    //STATIC FACTORY
+    // STATIC FACTORY
     static Car1 withGasColorPassengers(int gas, String color, String... passengers) {
         List<String> p = Collections.unmodifiableList(Arrays.asList(passengers));
         Car1 self = new Car1(gas, color, p, null);
@@ -51,8 +54,8 @@ class Car1 {
     }
 
     public static CarCriteria1 getRedCarCriterion() {
-        return RED_CAR_CRITERION; //This is Singleton design pattern.
-        //return new RedCarCriterion();
+        return RED_CAR_CRITERION; // This is Singleton design pattern.
+        // return new RedCarCriterion();
     }
 
     public static CarCriteria1 getGasLevelCarCriterion(int threshold) {
@@ -79,18 +82,26 @@ class Car1 {
         return trunkContents;
     }
 
-    //Simplified
-    //private static final CarRunner1.CarCriteria1 RED_CAR_CRITERION =  c ->  c.getColor().equals("Red");
+    // Simplified
+    // private static final CarRunner1.CarCriteria1 RED_CAR_CRITERION =  c ->
+    // c.getColor().equals("Red");
 
-    //This could return null; DELIBERATELY WRITTEN FOR DEMO
+    // This could return null; DELIBERATELY WRITTEN FOR DEMO
     public List<String> getTrunkContentsOpt() {
         return (trunkContents);
     }
 
     @Override
     public String toString() {
-        return "Car{" + "gasLevel=" + gasLevel + ", color=" + color + ", passengers=" + passengers
-                + (trunkContents != null ? ", trunkContents=" + trunkContents : " no trunk") + '}';
+        return "Car{"
+                + "gasLevel="
+                + gasLevel
+                + ", color="
+                + color
+                + ", passengers="
+                + passengers
+                + (trunkContents != null ? ", trunkContents=" + trunkContents : " no trunk")
+                + '}';
     }
 
     private static class GasLevelCarCriterion implements CarCriteria1 {

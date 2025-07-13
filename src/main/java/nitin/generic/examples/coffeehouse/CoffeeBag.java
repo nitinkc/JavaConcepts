@@ -1,6 +1,5 @@
 package nitin.generic.examples.coffeehouse;
 
-
 public class CoffeeBag implements Bag {
 
     private double ounces;
@@ -33,5 +32,4 @@ public class CoffeeBag implements Bag {
     public void setType(CoffeeType type) {
         this.type = type;
     }
-
 }

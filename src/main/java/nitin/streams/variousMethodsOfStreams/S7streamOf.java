@@ -7,8 +7,8 @@ import java.util.stream.Stream;
 
 /**
  * Created by Nitin Chaurasia on 1/31/18 at 11:48 AM.
- * <p>
- * Applying Stream for group of values &amp; for arrays
+ *
+ * <p>Applying Stream for group of values &amp; for arrays
  */
 public class S7streamOf {
     public static void main(String[] args) {

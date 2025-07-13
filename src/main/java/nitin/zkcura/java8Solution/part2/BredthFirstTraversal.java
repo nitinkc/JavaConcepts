@@ -1,18 +1,19 @@
 package nitin.zkcura.java8Solution.part2;
 
+import java.util.*;
 import nitin.zkcura.oldSolution.part1.Data;
 
-import java.util.*;
-
-/**
- * Created by Nitin Chaurasia on 11/10/15 at 10:05 PM.
- */
+/** Created by Nitin Chaurasia on 11/10/15 at 10:05 PM. */
 public class BredthFirstTraversal {
-    private final Set<nitin.zkcura.oldSolution.part1.Data> visited = new HashSet<nitin.zkcura.oldSolution.part1.Data>();
+    private final Set<nitin.zkcura.oldSolution.part1.Data> visited =
+            new HashSet<nitin.zkcura.oldSolution.part1.Data>();
     private final Queue<CityDistance> inline = new LinkedList<CityDistance>();
     private final List<CityDistance> allCitiesWithDistance = new ArrayList<CityDistance>();
 
-    public void traverseGraph(Map<nitin.zkcura.oldSolution.part1.Data, Set<nitin.zkcura.oldSolution.part1.Data>> citiesAdjList, nitin.zkcura.oldSolution.part1.Data root) {
+    public void traverseGraph(
+            Map<nitin.zkcura.oldSolution.part1.Data, Set<nitin.zkcura.oldSolution.part1.Data>>
+                    citiesAdjList,
+            nitin.zkcura.oldSolution.part1.Data root) {
         int currDistance = 0;
         inline.add(new CityDistance(currDistance, root));
         visited.add(root);
@@ -26,7 +27,8 @@ public class BredthFirstTraversal {
             } else if (currentCityDistance.data == null) {
                 System.out.println("CURR DISTANCE DATA IS NULL");
             }
-            for (nitin.zkcura.oldSolution.part1.Data connections : citiesAdjList.get(currentCityDistance.data)) {
+            for (nitin.zkcura.oldSolution.part1.Data connections :
+                    citiesAdjList.get(currentCityDistance.data)) {
                 if (!visited.contains(connections)) {
                     currDistance = currentCityDistance.distance + 1;
                     visited.add(connections);
@@ -41,7 +43,7 @@ public class BredthFirstTraversal {
         String value = "";
         for (CityDistance cityDistance : allCitiesWithDistance) {
             value = value + cityDistance.data + " " + cityDistance.distance + "\n";
-            //System.out.println("Distance:" + value);
+            // System.out.println("Distance:" + value);
         }
         return value;
     }

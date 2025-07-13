@@ -1,7 +1,5 @@
 package nitin.calandarDateTime.java8Calandar;
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -10,6 +8,7 @@ import java.time.ZonedDateTime;
 import java.util.Date;
 import java.util.Optional;
 import java.util.TimeZone;
+import org.apache.commons.lang3.StringUtils;
 
 public class StringToTimeStamp {
     public static void main(String[] args) {
@@ -35,8 +34,7 @@ public class StringToTimeStamp {
 
     private static Timestamp extractDateOld(String date) {
         final String dateFormat = "dd-MM-yyyy";
-        if (StringUtils.isBlank(date))
-            return null;
+        if (StringUtils.isBlank(date)) return null;
         try {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat(dateFormat);
             simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));

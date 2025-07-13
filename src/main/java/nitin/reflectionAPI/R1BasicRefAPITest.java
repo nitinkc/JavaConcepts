@@ -1,4 +1,5 @@
 package nitin.reflectionAPI;
+
 /*
 Package Name has to be deleted because the Class.forName method is not recognizing the Class
 From Default package it is recognizing.
@@ -7,28 +8,23 @@ From Default package it is recognizing.
 
  */
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Created by com.nitin.a23reflectionAPI.Nitin Chaurasia on 12/3/15 at 11:54 PM.
- * <p>
- * There are 3 ways to get the instance of Class class. They are as follows:
- * forName() method of Class class
- * getClass() method of Object class
- * the .class syntax
+ *
+ * <p>There are 3 ways to get the instance of Class class. They are as follows: forName() method of
+ * Class class getClass() method of Object class the .class syntax
  */
 public class R1BasicRefAPITest {
-    public static void main(String[] args) throws
-            IllegalAccessException,
-            InstantiationException,
-            ClassNotFoundException {
+    public static void main(String[] args)
+            throws IllegalAccessException, InstantiationException, ClassNotFoundException {
 
-        //Instance to access non-static methods
+        // Instance to access non-static methods
         R1BasicRefAPITest t = new R1BasicRefAPITest();
 
         /*
@@ -43,19 +39,19 @@ public class R1BasicRefAPITest {
         System.out.println(c.getClass());
         t.printMetadata(c);
 
-        //Type 2: Creating the Instance when the Class name and a5object name both are known!!
+        // Type 2: Creating the Instance when the Class name and a5object name both are known!!
         Nitin n = (Nitin) c.newInstance();
         // Can use n just like an created with new keyword
 
         // Type 3: When only the Object Name is known.
         Nitin nObj = new Nitin();
         /*
-         It should be used if you know the type.
-         Moreover, .getClass can be used with primitives.
-         */
+        It should be used if you know the type.
+        Moreover, .getClass can be used with primitives.
+        */
         Class c1 = nObj.getClass();
 
-        //Case Study for the equality of the Objects
+        // Case Study for the equality of the Objects
         t.caseStudy();
     }
 
@@ -66,7 +62,7 @@ public class R1BasicRefAPITest {
         Class c2 = Class.forName("nitin.reflectionAPI.Nitin");
         Class c3 = n.getClass();
 
-        //All the three references points to the same a5object.
+        // All the three references points to the same a5object.
         if (c1 == c2) {
             System.out.println(" equal");
         }
@@ -74,13 +70,12 @@ public class R1BasicRefAPITest {
         System.out.println("c1" + "  " + c1);
         System.out.println("c2" + " " + c2);
         System.out.println("c3" + " " + c3);
-
     }
 
-    //When Class name is Known, Class.forName() method is preferred
+    // When Class name is Known, Class.forName() method is preferred
     private void printMetadata(Class c) {
 
-        //Discovering the methods of a class:
+        // Discovering the methods of a class:
         Method[] m = c.getDeclaredMethods();
         System.out.println("METHODS IN CLASS ARE :- ");
         for (Method method : m) {
@@ -88,7 +83,7 @@ public class R1BasicRefAPITest {
         }
         System.out.println("---------------------------");
 
-        //Discovering the fields of a class:
+        // Discovering the fields of a class:
         Field[] f = c.getDeclaredFields();
         System.out.println("FIELDS IN CLASS ARE :- ");
         for (Field field : f) {
@@ -96,7 +91,7 @@ public class R1BasicRefAPITest {
         }
         System.out.println("---------------------------");
 
-        //Constructor in the Class are
+        // Constructor in the Class are
         Constructor[] cons = c.getDeclaredConstructors();
         System.out.println("CONSTRUCTORS IN THE CLASS ARE :- ");
         for (Constructor constructor : cons) {
@@ -105,13 +100,12 @@ public class R1BasicRefAPITest {
         System.out.println("---------------------------");
 
         Field[] fields = c.getFields();
-        //Methods for super class as well
+        // Methods for super class as well
         System.out.println("Fields IN THE CLASS ARE (getFields method):- ");
         for (Field fld : fields) {
             System.out.println(fld);
         }
         System.out.println("---------------------------");
-
 
         Method[] methods = c.getMethods();
         System.out.println("methods IN THE CLASS ARE :- ");
@@ -120,7 +114,7 @@ public class R1BasicRefAPITest {
         }
         System.out.println("---------------------------");
 
-        //Discovering the interfaces implemented by a class:
+        // Discovering the interfaces implemented by a class:
         Class[] interfaces = c.getInterfaces();
         System.out.println("INTERFACES IN THE CLASS ARE :- ");
         for (Class i : interfaces) {
@@ -128,12 +122,11 @@ public class R1BasicRefAPITest {
         }
         System.out.println("---------------------------");
 
-
-        //Getting the superclass :
+        // Getting the superclass :
         Class s = c.getSuperclass();
         System.out.println(s);
 
-        //Getting the class name:
+        // Getting the class name:
         String str = c.getName();
         System.out.println(str);
         System.out.println("---------------------------");
@@ -141,39 +134,32 @@ public class R1BasicRefAPITest {
         System.out.println(c.getClassLoader());
         System.out.println(c.getFields().toString());
         System.out.println("---------------------------");
-
     }
 }
 
-/**
- * Class Written for the Reflection API Testing
- */
-
+/** Class Written for the Reflection API Testing */
 class Nitin {
     int x;
     Child s;
 
-    Nitin() {
-    }
+    Nitin() {}
 
     Nitin(int a, String b, boolean c) {
-        //A Constructor
+        // A Constructor
     }
 
     public void m1() {
-        //Any method
+        // Any method
     }
 
     public int m2() {
-        //Any other method
+        // Any other method
 
         return 0;
     }
 }
 
-/**
- * Data Class Containing only data.
- */
+/** Data Class Containing only data. */
 @Getter
 @Setter
 class Child {

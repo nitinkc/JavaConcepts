@@ -2,9 +2,7 @@ package nitin.multithreading;
 
 import java.io.IOException;
 
-/**
- * Created by Nitin Chaurasia on 12/5/15 at 6:06 PM.
- */
+/** Created by Nitin Chaurasia on 12/5/15 at 6:06 PM. */
 public class JconsoleThreadDebug {
     public static void main(String[] args) {
         DebugClass d = new DebugClass();
@@ -14,7 +12,6 @@ public class JconsoleThreadDebug {
     }
 }
 
-
 class DebugClass implements Runnable {
     @Override
     public void run() {
@@ -22,7 +19,7 @@ class DebugClass implements Runnable {
         //
         // Get Process Id
 
-        //Turning on jconsole
+        // Turning on jconsole
         String command = "jconsole";
         Process p;
 
@@ -35,7 +32,7 @@ class DebugClass implements Runnable {
             e.printStackTrace();
         }
 
-        //Sleep to see the results
+        // Sleep to see the results
         try {
             Thread.sleep(10_000);
         } catch (InterruptedException e) {

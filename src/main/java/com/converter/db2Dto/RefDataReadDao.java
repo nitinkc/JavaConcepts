@@ -8,5 +8,6 @@ public interface RefDataReadDao {
 
     <K extends ReferenceDataAuditFields> K findById(Class<K> theClass, String id);
 
-    <K extends ReferenceDataAuditFields> List<K> findByIds(Class<K> theClass, Collection<String> ids);
+    <K extends ReferenceDataAuditFields> List<K> findByIds(
+            Class<K> theClass, Collection<String> ids);
 }

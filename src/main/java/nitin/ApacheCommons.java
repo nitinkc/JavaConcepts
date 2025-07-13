@@ -10,14 +10,14 @@ public class ApacheCommons {
     }
 
     private static void compareString() {
-        //No exception handling required
+        // No exception handling required
         System.out.println(StringUtils.equalsIgnoreCase("Nitin", null));
 
-        //If above Apache commons is not used
+        // If above Apache commons is not used
         System.out.println("Nitin".equalsIgnoreCase("null"));
 
-        //Null needs be handled
-        //System.out.println(null.equalsIgnoreCase("Nitin"));
+        // Null needs be handled
+        // System.out.println(null.equalsIgnoreCase("Nitin"));
     }
 
     private static void stringToCurrency() {
@@ -30,9 +30,10 @@ public class ApacheCommons {
             }
 
             if (str != null) {
-                //Number format exception on str="NK"
-                //str = "$" + new java.text.DecimalFormat("##0.00").format(Double.parseDouble(str));
-                //System.out.println(str);
+                // Number format exception on str="NK"
+                // str = "$" + new
+                // java.text.DecimalFormat("##0.00").format(Double.parseDouble(str));
+                // System.out.println(str);
             }
         }
     }

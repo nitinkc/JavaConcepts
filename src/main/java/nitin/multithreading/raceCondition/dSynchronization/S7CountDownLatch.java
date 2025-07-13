@@ -1,17 +1,15 @@
 package nitin.multithreading.raceCondition.dSynchronization;
 
-import com.utilities.MultiThreadUtility;
+import static com.utilities.MultiThreadUtility.logMessage;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import static com.utilities.MultiThreadUtility.logMessage;
-
 /**
  * Created by Nitin Chaurasia on 12/5/15 at 10:39 PM.
- * <p>
- * Demonstrating
+ *
+ * <p>Demonstrating
  */
 public class S7CountDownLatch {
     public static void main(String[] args) {
@@ -32,14 +30,15 @@ public class S7CountDownLatch {
             // Main thread waits until all worker threads have finished
             logMessage("Main thread is waiting for workers to finish.");
             try {
-                latch.await();  // This will block until latch count reaches zero
+                latch.await(); // This will block until latch count reaches zero
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 System.out.println("Main thread was interrupted while waiting.");
             }
             logMessage("All workers have finished. Main thread resumes.");
         } catch (Exception e) {
-            System.out.println("An error occurred while creating the ExecutorService: " + e.getMessage());
+            System.out.println(
+                    "An error occurred while creating the ExecutorService: " + e.getMessage());
         }
     }
 

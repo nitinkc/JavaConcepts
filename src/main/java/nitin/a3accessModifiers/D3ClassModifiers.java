@@ -7,7 +7,7 @@ package nitin.a3accessModifiers;
  * Applicable modifier for Inner class
  *      public ,"<default>", final, abstract, strictfp, private, protected, static
  */
-//private class D3ClassModifiers { //Error: modifier private not allowed here
+// private class D3ClassModifiers { //Error: modifier private not allowed here
 public class D3ClassModifiers {
     public static void main(String[] args) {
 

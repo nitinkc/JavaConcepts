@@ -1,11 +1,8 @@
 package nitin.zkcura.oldSolution.part2;
 
-
 import java.util.*;
 
-/**
- * Created by Nitin Chaurasia on 11/10/15 at 10:05 PM.
- */
+/** Created by Nitin Chaurasia on 11/10/15 at 10:05 PM. */
 public class BredthFirstTraversal {
     private final Set<Data> visited = new HashSet<Data>();
     private final Queue<CityDistance> inline = new LinkedList<CityDistance>();

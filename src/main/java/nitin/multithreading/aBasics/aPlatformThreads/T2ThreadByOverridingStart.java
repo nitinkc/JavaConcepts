@@ -1,8 +1,6 @@
 package nitin.multithreading.aBasics.aPlatformThreads;
 
-/**
- * Created by Nitin Chaurasia on 12/2/15 at 10:08 PM.
- */
+/** Created by Nitin Chaurasia on 12/2/15 at 10:08 PM. */
 public class T2ThreadByOverridingStart {
     public static void main(String[] args) {
         MyThread t = new MyThread();

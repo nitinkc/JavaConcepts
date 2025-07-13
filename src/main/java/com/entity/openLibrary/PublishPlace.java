@@ -6,9 +6,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.*;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-        "name"
-})
+@JsonPropertyOrder({"name"})
 @Getter
 @Setter
 @AllArgsConstructor
@@ -19,5 +17,4 @@ public class PublishPlace {
 
     @JsonProperty("name")
     public String name;
-
 }

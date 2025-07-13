@@ -2,18 +2,24 @@ package nitin.multithreading.raceCondition.dSynchronization;
 
 public class SharedResources {
     public static void main(String[] args) throws InterruptedException {
-        InventoryCounter inventoryCounter = new InventoryCounter();//Shared resource
+        InventoryCounter inventoryCounter = new InventoryCounter(); // Shared resource
 
-        Thread incrementingThread = new Thread(() -> {
-            for (int i = 0; i < 10000; i++) {
-                inventoryCounter.incrementSynchronized();//inventoryCounter.increment();
-            }
-        });
-        Thread decrementingThread = new Thread(() -> {
-            for (int i = 0; i < 10000; i++) {
-                inventoryCounter.decrementSynchronized();//inventoryCounter.decrement();
-            }
-        });
+        Thread incrementingThread =
+                new Thread(
+                        () -> {
+                            for (int i = 0; i < 10000; i++) {
+                                inventoryCounter
+                                        .incrementSynchronized(); // inventoryCounter.increment();
+                            }
+                        });
+        Thread decrementingThread =
+                new Thread(
+                        () -> {
+                            for (int i = 0; i < 10000; i++) {
+                                inventoryCounter
+                                        .decrementSynchronized(); // inventoryCounter.decrement();
+                            }
+                        });
 
         incrementingThread.start();
         decrementingThread.start();
@@ -48,16 +54,15 @@ public class SharedResources {
         }
 
         public void increment() {
-                items++;
+            items++;
         }
 
         public void decrement() {
-                items--;
+            items--;
         }
 
         public int getItems() {
             return items;
         }
     }
-
 }

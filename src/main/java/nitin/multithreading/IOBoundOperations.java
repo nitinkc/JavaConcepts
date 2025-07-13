@@ -1,6 +1,5 @@
 package nitin.multithreading;
 
-import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -26,13 +25,19 @@ public class IOBoundOperations {
     // Simulates a long blocking IO
     private static void blockingIoOperation() {
         String unit = "MB";
-        long bytesInMb =  (1024*1024);
+        long bytesInMb = (1024 * 1024);
         Runtime runtime = Runtime.getRuntime();
 
-        //int sleepTime = 10 + new Random().nextInt(991); // 10 to 1000 ms
+        // int sleepTime = 10 + new Random().nextInt(991); // 10 to 1000 ms
         int sleepTime = 1000;
-        System.out.println("Executing a blocking task from thread: " + Thread.currentThread() + " sleeping : " + sleepTime + "ms");
-        System.out.println("Available memory when task created: " + runtime.freeMemory()/bytesInMb + unit);
+        System.out.println(
+                "Executing a blocking task from thread: "
+                        + Thread.currentThread()
+                        + " sleeping : "
+                        + sleepTime
+                        + "ms");
+        System.out.println(
+                "Available memory when task created: " + runtime.freeMemory() / bytesInMb + unit);
 
         try {
             Thread.sleep(sleepTime);

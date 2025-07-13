@@ -17,7 +17,5 @@ class OurFutureTask<V> extends FutureTask<V> {
         } catch (InterruptedException | ExecutionException e) {
             System.out.println("Exception Task1..." + exceptionNow());
         }
-   }
-
+    }
 }
-

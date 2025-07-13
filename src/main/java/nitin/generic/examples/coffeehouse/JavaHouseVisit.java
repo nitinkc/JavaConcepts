@@ -14,7 +14,7 @@ public class JavaHouseVisit {
         javaHouse.addCup(new FrenchRoast(), 16);
         javaHouse.addBag(new ItalianRoast(), 12);
         javaHouse.addBag(new DoughnutRoast(), 6);
-        //javaHouse.addCup(Integer.valueOf(3), 3);  Not a CoffeeType, so does not compile
+        // javaHouse.addCup(Integer.valueOf(3), 3);  Not a CoffeeType, so does not compile
         javaHouse.checkout();
 
         // Retrieve the current purchase list
@@ -23,14 +23,17 @@ public class JavaHouseVisit {
 
         // Print some further details on the purchased types to learn what our
         // customer enjoys
-        purchaseList.stream().forEach((coffeeSale) -> {
-            System.out.println(coffeeSale.getType().getType() + " Description - " +
-                    coffeeSale.getType().getDescription());
-        });
+        purchaseList.stream()
+                .forEach(
+                        (coffeeSale) -> {
+                            System.out.println(
+                                    coffeeSale.getType().getType()
+                                            + " Description - "
+                                            + coffeeSale.getType().getDescription());
+                        });
 
         // How many of the ItalianRoast are contained in this purchase
-        System.out.println("Number of Italian Roasts: " +
-                javaHouse.countTypes(ItalianRoast.class));
+        System.out.println("Number of Italian Roasts: " + javaHouse.countTypes(ItalianRoast.class));
 
         List<CoffeeType> coffeeList = new ArrayList();
         coffeeList.add(new DoughnutRoast());
@@ -45,7 +48,6 @@ public class JavaHouseVisit {
         compareCoffee(coffeeList, (n) -> n.getDescription().contains(CoffeeType.AROMATIC));
         System.out.println("Ground");
         compareCoffee(coffeeList, (n) -> n.getDescription().contains(CoffeeType.GROUND));
-
     }
 
     /**
@@ -55,9 +57,11 @@ public class JavaHouseVisit {
      * @param predicate
      */
     public static void compareCoffee(List<CoffeeType> list, Predicate<CoffeeType> predicate) {
-        list.stream().filter((n) -> (predicate.test(n))).forEach((n) -> {
-            System.out.println(n + " ");
-        });
+        list.stream()
+                .filter((n) -> (predicate.test(n)))
+                .forEach(
+                        (n) -> {
+                            System.out.println(n + " ");
+                        });
     }
 }
-

@@ -1,6 +1,5 @@
 package nitin.classLoadingJVM;
 
-
 class Car {
     static Integer numberofwheels = 4;
 
@@ -10,7 +9,7 @@ class Car {
     static { // Static block 1
         System.out.println("********** Static Block 1 **********************");
         System.out.println(numberofwheels++);
-        //enginecapacity++;//Not Accessible here
+        // enginecapacity++;//Not Accessible here
     }
 
     static { // Static Block 2
@@ -18,7 +17,7 @@ class Car {
         System.out.println(numberofwheels++);
     }
 
-    private Integer enginecapacity = 0;//If not initiazlized, then constructor gived NPE
+    private Integer enginecapacity = 0; // If not initiazlized, then constructor gived NPE
 
     public Car() {
         System.out.println("********** Default Constructor of class **********************");

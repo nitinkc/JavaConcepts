@@ -1,8 +1,6 @@
 package nitin.exceptionHandling;
 
-/**
- * Created by nitin on Wednesday, September/25/2019 at 8:06 PM
- */
+/** Created by nitin on Wednesday, September/25/2019 at 8:06 PM */
 public class NestedException {
     public static void main(String[] args) {
         String s1 = "Nitin";

@@ -11,7 +11,7 @@ public interface EmployeeMapper {
     @Mapping(target = "dateOfBirth", source = "entity.dob")
     @Mapping(target = "phones", source = "entity.phones")
     @Mapping(target = "addresses", source = "entity.addresses")
-    EmployeeDto employeeToEmployeeDto(Employee entity);//This will be implemented by MapStruct
+    EmployeeDto employeeToEmployeeDto(Employee entity); // This will be implemented by MapStruct
 
     /*
     Employee employeeDTOtoEmployee(EmployeeDto dto);

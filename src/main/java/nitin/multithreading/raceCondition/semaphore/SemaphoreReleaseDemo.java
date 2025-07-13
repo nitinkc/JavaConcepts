@@ -2,7 +2,8 @@ package nitin.multithreading.raceCondition.semaphore;
 
 public class SemaphoreReleaseDemo {
     public static void main(String[] args) {
-        SemaphoreTask task1 = new SemaphoreTask("Thread 1", true);//Ensuring only this thread acquired permit
+        SemaphoreTask task1 =
+                new SemaphoreTask("Thread 1", true); // Ensuring only this thread acquired permit
         // Create threads that will execute the tasks
         Thread thread1 = new Thread(() -> task1.runTask());
         thread1.start();

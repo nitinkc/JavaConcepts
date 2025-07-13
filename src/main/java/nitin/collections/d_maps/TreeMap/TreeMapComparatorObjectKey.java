@@ -1,13 +1,12 @@
 package nitin.collections.d_maps.TreeMap;
 
+import java.util.Comparator;
+import java.util.Set;
+import java.util.TreeSet;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-
-import java.util.Comparator;
-import java.util.Set;
-import java.util.TreeSet;
 
 public class TreeMapComparatorObjectKey {
     public static void main(String[] args) {
@@ -21,7 +20,6 @@ public class TreeMapComparatorObjectKey {
         set.add(new City("Sanford", "FL", 32771));
         set.add(new City("Sanford", "FL", 32772));
         set.add(new City("Sanford", "FL", 32773));
-
 
         for (City city : set) {
             System.out.println(city);
@@ -37,7 +35,7 @@ public class TreeMapComparatorObjectKey {
 @ToString
 class City {
 
-    //Integer is used so that City.getZip1.compareTo(City.getZip2) be used
+    // Integer is used so that City.getZip1.compareTo(City.getZip2) be used
     String name;
     String state;
     Integer zip;
@@ -48,19 +46,16 @@ class CityComparator implements Comparator<City> {
 
     @Override
     public int compare(City c1, City c2) {
-        //Level 1 Comparison : City Name (Reverse Sorted)
+        // Level 1 Comparison : City Name (Reverse Sorted)
         int cityCompare = c2.getName().compareTo(c1.getName());
-        //Level 2 Comparison : State
+        // Level 2 Comparison : State
         int stateCompare = c1.getState().compareTo(c2.getState());
-        //Level 3 Comparison : Zip
+        // Level 3 Comparison : Zip
         int zipCompare = c2.getZip().compareTo(c1.getZip());
 
-        if (cityCompare != 0)
-            return cityCompare;
-        if (cityCompare == 0 && stateCompare != 0)
-            return stateCompare;
-        //if ( cityCompare == 0 && stateCompare == 0 && zipCompare != 0)
+        if (cityCompare != 0) return cityCompare;
+        if (cityCompare == 0 && stateCompare != 0) return stateCompare;
+        // if ( cityCompare == 0 && stateCompare == 0 && zipCompare != 0)
         return zipCompare;
-
     }
 }

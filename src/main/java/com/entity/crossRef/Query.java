@@ -9,10 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-        "start-index",
-        "search-terms"
-})
+@JsonPropertyOrder({"start-index", "search-terms"})
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -21,7 +18,7 @@ public class Query {
 
     @JsonProperty("start-index")
     public Integer startIndex;
+
     @JsonProperty("search-terms")
     public Object searchTerms;
-
 }

@@ -4,9 +4,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-/**
- * Created by synergisticit on 2/25/2016.
- */
+/** Created by synergisticit on 2/25/2016. */
 public class addSameKeyMap {
     public static void main(String[] args) {
         Map<Integer, String> map = new HashMap<Integer, String>();

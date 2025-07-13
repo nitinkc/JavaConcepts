@@ -11,18 +11,39 @@ public class EmptyListFilter {
         if (obj == null || !(obj instanceof List)) {
             return false;
         }
-        Optional<Object> result = ((List) obj).stream().filter(
-                eachObj -> Arrays.asList(eachObj.getClass().getDeclaredFields()).stream().filter(eachField -> {
-                    try {
-                        eachField.setAccessible(true);
-                        if (eachField.get(eachObj) != null && !eachField.get(eachObj).toString().isEmpty()) {
-                            return true;
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                    return false;
-                }).count() > 0).findAny();
+        Optional<Object> result =
+                ((List) obj)
+                        .stream()
+                                .filter(
+                                        eachObj ->
+                                                Arrays.asList(
+                                                                        eachObj.getClass()
+                                                                                .getDeclaredFields())
+                                                                .stream()
+                                                                .filter(
+                                                                        eachField -> {
+                                                                            try {
+                                                                                eachField
+                                                                                        .setAccessible(
+                                                                                                true);
+                                                                                if (eachField.get(
+                                                                                                        eachObj)
+                                                                                                != null
+                                                                                        && !eachField
+                                                                                                .get(
+                                                                                                        eachObj)
+                                                                                                .toString()
+                                                                                                .isEmpty()) {
+                                                                                    return true;
+                                                                                }
+                                                                            } catch (Exception e) {
+                                                                                e.printStackTrace();
+                                                                            }
+                                                                            return false;
+                                                                        })
+                                                                .count()
+                                                        > 0)
+                                .findAny();
         return !result.isPresent();
     }
 }

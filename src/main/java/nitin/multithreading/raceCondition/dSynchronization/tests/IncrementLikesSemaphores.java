@@ -3,7 +3,7 @@ package nitin.multithreading.raceCondition.dSynchronization.tests;
 import java.util.concurrent.Semaphore;
 
 public class IncrementLikesSemaphores extends IncrementLikes {
-    private final Semaphore semaphore = new Semaphore(1);//1 thread means it behaves as mutex.
+    private final Semaphore semaphore = new Semaphore(1); // 1 thread means it behaves as mutex.
 
     private final Integer likeBigDecimal = super.getCurrentLikesCount();
 

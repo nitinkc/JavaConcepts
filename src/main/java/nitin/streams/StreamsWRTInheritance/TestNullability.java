@@ -1,8 +1,6 @@
 package nitin.streams.StreamsWRTInheritance;
 
-
 import com.entity.Student;
-
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
@@ -18,27 +16,43 @@ public class TestNullability {
 
         ZonedDateTime timeInNashville = ZonedDateTime.now(zone);
 
-        String zonedDateTime = Optional.ofNullable(timeInNashville)
-                .map(time -> {
-                    String sb = "Time in " + zone + " : " +
-                            time.format(DateTimeFormatter.ofPattern(myDateTimePattern)) +
-                            "\n" +
-                            "Time in " + india + " : " +
-                            ZonedDateTime.now(india).format(DateTimeFormatter.ofPattern(myDateTimePattern));
-                    return sb;
-                })
-                .orElse("");
+        String zonedDateTime =
+                Optional.ofNullable(timeInNashville)
+                        .map(
+                                time -> {
+                                    String sb =
+                                            "Time in "
+                                                    + zone
+                                                    + " : "
+                                                    + time.format(
+                                                            DateTimeFormatter.ofPattern(
+                                                                    myDateTimePattern))
+                                                    + "\n"
+                                                    + "Time in "
+                                                    + india
+                                                    + " : "
+                                                    + ZonedDateTime.now(india)
+                                                            .format(
+                                                                    DateTimeFormatter.ofPattern(
+                                                                            myDateTimePattern));
+                                    return sb;
+                                })
+                        .orElse("");
 
         System.out.println(zonedDateTime);
     }
 
     public static void logStudent(Student student) {
 
-        String sb = "Result is " +
-                Optional.of(student.getFirstName()).orElse("") + "," +
-                (null != student.getLastName() ? student.getLastName() : "") + "," +
-                (null != student.getAddress() ? student.getAddress() : "") + "," +
-                (null != student.getDob() ? student.getDob() : "");
+        String sb =
+                "Result is "
+                        + Optional.of(student.getFirstName()).orElse("")
+                        + ","
+                        + (null != student.getLastName() ? student.getLastName() : "")
+                        + ","
+                        + (null != student.getAddress() ? student.getAddress() : "")
+                        + ","
+                        + (null != student.getDob() ? student.getDob() : "");
 
         System.out.println(sb);
     }

@@ -4,10 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @author Created by nichaurasia
- * Created on Tuesday, September/29/2020 at 2:28 AM
+ * @author Created by nichaurasia Created on Tuesday, September/29/2020 at 2:28 AM
  */
-
 @Getter
 @Setter
 public class Box<T> {

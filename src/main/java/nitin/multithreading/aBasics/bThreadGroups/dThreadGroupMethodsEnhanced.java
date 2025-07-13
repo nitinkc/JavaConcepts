@@ -2,8 +2,8 @@ package nitin.multithreading.aBasics.bThreadGroups;
 
 /**
  * Created by nitin.chaurasia on 12/25/2016.
- * <p>
- * Displaying the System Thread groups MetaData
+ *
+ * <p>Displaying the System Thread groups MetaData
  */
 public class dThreadGroupMethodsEnhanced {
     public static void main(String[] args) {

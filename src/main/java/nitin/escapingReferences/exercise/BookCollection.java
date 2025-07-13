@@ -35,6 +35,4 @@ public class BookCollection {
             System.out.println(book.getTitle() + ": " + book.getPrice());
         }
     }
-
 }
-	

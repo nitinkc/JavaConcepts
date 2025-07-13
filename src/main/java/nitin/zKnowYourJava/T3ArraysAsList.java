@@ -5,16 +5,15 @@ import java.util.List;
 
 public class T3ArraysAsList {
     public static void main(String[] args) {
-        //arraysAsList();
-        List<Integer> numbers = List.of(1, 2, 3,null);//Immutable, add(), set() unsupported
-        System.out.println(numbers.getClass());//class java.util.ImmutableCollections$ListN
-
+        // arraysAsList();
+        List<Integer> numbers = List.of(1, 2, 3, null); // Immutable, add(), set() unsupported
+        System.out.println(numbers.getClass()); // class java.util.ImmutableCollections$ListN
     }
 
     private static void arraysAsList() {
         List<Integer> numbers = Arrays.asList(1, 2, 3);
-        System.out.println(numbers.getClass());//class java.util.Arrays$ArrayList
-        //it is far from immutable. does not support add method
+        System.out.println(numbers.getClass()); // class java.util.Arrays$ArrayList
+        // it is far from immutable. does not support add method
 
         try {
             numbers.add(4);

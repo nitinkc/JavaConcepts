@@ -5,7 +5,6 @@ public class ProducerConsumerRunner {
     private static final int NUM_PRODUCERS = 3;
     private static final int NUM_CONSUMERS = 2;
 
-
     public static void main(String[] args) {
 
         // Start producer threads

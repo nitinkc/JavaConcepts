@@ -38,7 +38,7 @@ public class WildcardExample {
 
         checkNumber(intList, 3);
         // The following will not work since strList is not a List of Number types
-        //checkNumber(strList, "three");
+        // checkNumber(strList, "three");
     }
 
     /**

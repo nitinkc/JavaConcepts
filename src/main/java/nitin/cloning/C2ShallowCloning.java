@@ -2,19 +2,18 @@ package nitin.cloning;
 
 /**
  * Created by Nitin Chaurasia on 12/4/15 at 9:16 PM.
- * <p>
- * Shallow copy is a bit-wise copy of an a5object.
- * A new a5object is created that has an exact copy of the values in the original a5object.
- * If any of the fields of the a5object are references to other objects,
- * just the reference addresses are copied i.e., only the memory address is copied.
- * <p>
- * FOR MUTABLE OBJECTS
- * any changes made to a5object in main will reflect in clone.
- * <p>
- * FOR IMMUTABLE OBJECTS like String Integer
- * Since the state cannot be changed, it doesnt need be deeply cloned
- * <p>
- * Sharing the reference
+ *
+ * <p>Shallow copy is a bit-wise copy of an a5object. A new a5object is created that has an exact
+ * copy of the values in the original a5object. If any of the fields of the a5object are references
+ * to other objects, just the reference addresses are copied i.e., only the memory address is
+ * copied.
+ *
+ * <p>FOR MUTABLE OBJECTS any changes made to a5object in main will reflect in clone.
+ *
+ * <p>FOR IMMUTABLE OBJECTS like String Integer Since the state cannot be changed, it doesnt need be
+ * deeply cloned
+ *
+ * <p>Sharing the reference
  */
 public class C2ShallowCloning {
     public static void main(String[] args) throws CloneNotSupportedException {
@@ -46,10 +45,10 @@ public class C2ShallowCloning {
 class X implements Cloneable {
     private int a;
     private String b;
-    //For Shallow Cloning
+    // For Shallow Cloning
     private Y y;
 
-    //Constructor
+    // Constructor
     X(int a, String b) {
         this.a = a;
         this.b = b;
@@ -90,7 +89,7 @@ class X implements Cloneable {
     protected Object clone() throws CloneNotSupportedException {
         X x = (X) super.clone();
         x.setY(new Y(16));
-        //return super.clone();
+        // return super.clone();
         return x;
     }
 }

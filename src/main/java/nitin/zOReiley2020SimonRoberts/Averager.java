@@ -25,11 +25,13 @@ class Average {
 public class Averager {
     public static void main(String[] args) {
         long start = System.nanoTime();
-        Average av = DoubleStream.generate(() -> ThreadLocalRandom.current().nextDouble(-Math.PI, Math.PI))
-                .parallel()
-                .limit(200_000_000)
-                .map(Math::sin)
-                .collect(Average::new, Average::include, Average::merge);
+        Average av =
+                DoubleStream.generate(
+                                () -> ThreadLocalRandom.current().nextDouble(-Math.PI, Math.PI))
+                        .parallel()
+                        .limit(200_000_000)
+                        .map(Math::sin)
+                        .collect(Average::new, Average::include, Average::merge);
         long end = System.nanoTime();
 
         double mean = av.get();

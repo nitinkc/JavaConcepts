@@ -9,11 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-        "value",
-        "type"
-})
-
+@JsonPropertyOrder({"value", "type"})
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -22,7 +18,7 @@ public class IsbnType {
 
     @JsonProperty("value")
     public String value;
+
     @JsonProperty("type")
     public String type;
-
 }

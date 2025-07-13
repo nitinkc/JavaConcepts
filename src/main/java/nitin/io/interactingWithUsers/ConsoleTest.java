@@ -7,17 +7,13 @@ import java.util.Arrays;
 
 /**
  * Created by Nitin Chaurasia on 3/6/16 at 2:10 AM.
- * <p>
- * Using Console to read input(usable only outside IDE)
- * System.console() returns null in an IDE
- * reader() and writer()
- * format() and printf()
- * flush() : forced any buffered output to be written immediately
- * readLine() :
- * readPassword() : like readLine BUT echoing is disabled. RETURNS a char ARRAY!!
- * Reading password : String values are kept in shared memory pool for performance reasons in java.
- * If the memory in application is ever dumped to the disk, the password could be recovered. Thus keep the
- * password in the char[] using the readPassword().
+ *
+ * <p>Using Console to read input(usable only outside IDE) System.console() returns null in an IDE
+ * reader() and writer() format() and printf() flush() : forced any buffered output to be written
+ * immediately readLine() : readPassword() : like readLine BUT echoing is disabled. RETURNS a char
+ * ARRAY!! Reading password : String values are kept in shared memory pool for performance reasons
+ * in java. If the memory in application is ever dumped to the disk, the password could be
+ * recovered. Thus keep the password in the char[] using the readPassword().
  */
 public class ConsoleTest {
     public static void main(String[] args) {
@@ -76,8 +72,8 @@ public class ConsoleTest {
             console.printf("Your password level is: " + password);
 
             String userInput = console.readLine();
-            console.writer().println("You have entered from ..I did it so am recommending: " + userInput);
+            console.writer()
+                    .println("You have entered from ..I did it so am recommending: " + userInput);
         }
-
     }
 }

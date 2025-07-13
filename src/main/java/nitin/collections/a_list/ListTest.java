@@ -25,7 +25,7 @@ public class ListTest {
         myFamily.add(new Family("nishu"));
         myFamily.add(new Family("varun"));
 
-        //make an iterator to traverse through the a_list
+        // make an iterator to traverse through the a_list
 
         Iterator<Family> i = myFamily.iterator();
         while (i.hasNext()) {
@@ -35,17 +35,17 @@ public class ListTest {
         System.out.println("\nIndex of Amma is = " + myFamily.indexOf(amma));
         System.out.println("Number of members = " + myFamily.size());
         System.out.println("Member at index 5 HashCode = " + myFamily.get(5));
-        System.out.println("Member at index 5 = " + myFamily.get(5).name);//SEE THE DIFFERENCE IN THE TWO LINES
+        System.out.println(
+                "Member at index 5 = "
+                        + myFamily.get(5).name); // SEE THE DIFFERENCE IN THE TWO LINES
 
         myFamily.remove(2);
 
-        Object[] fmly = myFamily.toArray(); //created an Object of type Family
+        Object[] fmly = myFamily.toArray(); // created an Object of type Family
         System.out.print("Members from fmly Array\n");
         for (Object o : fmly) {
-            Family f = (Family) o; //but has to cast to compare
+            Family f = (Family) o; // but has to cast to compare
             System.out.print(f.name + " ");
         }
-
     }
-
 }

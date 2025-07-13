@@ -1,7 +1,6 @@
 package nitin.io.fileIO.readfiles1;
 
 import com.config.Configs;
-
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -14,7 +13,6 @@ public class XsAndYs {
                         .filter(word -> word.contains("y"))
                         .mapToInt(String::length)
                         .sum();
-        System.out.printf("%,d total letters in words with " +
-                "both x and y.%n", letterCount);
+        System.out.printf("%,d total letters in words with " + "both x and y.%n", letterCount);
     }
 }

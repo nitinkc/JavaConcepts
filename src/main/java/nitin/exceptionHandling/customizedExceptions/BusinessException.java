@@ -1,6 +1,5 @@
 package nitin.exceptionHandling.customizedExceptions;
 
-
 public class BusinessException extends Exception {
     public BusinessException() {
         super();

@@ -3,14 +3,15 @@ package nitin.zOReiley2020SimonRoberts.f3closures.s3combiningBehaviours;
 import java.util.*;
 
 class Car {
-    //Fields of Class Car
+    // Fields of Class Car
     private final int gasLevel;
     private final String color;
     private final List<String> passengers;
     private final List<String> trunkContents;
     public String getColor;
 
-    // there is a functional programming style that we will be using which will lead us to using factory methods
+    // there is a functional programming style that we will be using which will lead us to using
+    // factory methods
     private Car(int gasLevel, String color, List<String> passengers, List<String> trunkContents) {
         this.gasLevel = gasLevel;
         this.color = color;
@@ -18,7 +19,7 @@ class Car {
         this.trunkContents = trunkContents;
     }
 
-    //STATIC FACTORY
+    // STATIC FACTORY
     static Car withGasColorPassengers(int gas, String color, String... passengers) {
         List<String> p = Collections.unmodifiableList(Arrays.asList(passengers));
         Car self = new Car(gas, color, p, null);
@@ -84,14 +85,21 @@ class Car {
         return trunkContents;
     }
 
-    //This could return null; DELIBERATELY WRITTEN FOR DEMO
+    // This could return null; DELIBERATELY WRITTEN FOR DEMO
     public List<String> getTrunkContentsOpt() {
         return (trunkContents);
     }
 
     @Override
     public String toString() {
-        return "Car{" + "gasLevel=" + gasLevel + ", color=" + color + ", passengers=" + passengers
-                + (trunkContents != null ? ", trunkContents=" + trunkContents : " no trunk") + '}';
+        return "Car{"
+                + "gasLevel="
+                + gasLevel
+                + ", color="
+                + color
+                + ", passengers="
+                + passengers
+                + (trunkContents != null ? ", trunkContents=" + trunkContents : " no trunk")
+                + '}';
     }
 }

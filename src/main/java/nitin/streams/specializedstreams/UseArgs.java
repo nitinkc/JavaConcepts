@@ -1,8 +1,7 @@
 package nitin.streams.specializedstreams;
 
 public class UseArgs {
-    private UseArgs() {
-    }
+    private UseArgs() {}
 
     public static int firstNumber(int... nums) {
         return (nums[0]);

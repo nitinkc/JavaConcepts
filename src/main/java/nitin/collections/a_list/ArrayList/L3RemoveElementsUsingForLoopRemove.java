@@ -4,13 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by nitin on 1/13/16.
- * ArrayList arrayList=new ArrayList(11);
- * ArrayList Initial Size 10; Later incremented by 3/2 + 1
- * Vector Initial Size 16; Incremented by 2X
- * <p>
- * list.remove() --> ConcurrentModificationException
- * itr.remove() --> correct way to remove
+ * Created by nitin on 1/13/16. ArrayList arrayList=new ArrayList(11); ArrayList Initial Size 10;
+ * Later incremented by 3/2 + 1 Vector Initial Size 16; Incremented by 2X
+ *
+ * <p>list.remove() --> ConcurrentModificationException itr.remove() --> correct way to remove
  */
 public class L3RemoveElementsUsingForLoopRemove {
     public static void main(String[] args) {
@@ -25,16 +22,18 @@ public class L3RemoveElementsUsingForLoopRemove {
         list.add("H");
         list.add("I");
         list.add("J");
-        //list.remove(2);// Removing the element, from anywhere
+        // list.remove(2);// Removing the element, from anywhere
 
-        System.out.println("******************* LIST BEFORE REMOVAL ***************************** ");
+        System.out.println(
+                "******************* LIST BEFORE REMOVAL ***************************** ");
         System.out.println(list);
 
-        System.out.println("******************* LIST DURING REMOVAL ***************************** ");
+        System.out.println(
+                "******************* LIST DURING REMOVAL ***************************** ");
         // Removing the elements from the a_list
 
         // Removal Like this has a bug!!
-        //The List reshuffles after each Removal
+        // The List reshuffles after each Removal
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
             list.remove(i);

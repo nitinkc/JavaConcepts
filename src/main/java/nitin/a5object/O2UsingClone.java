@@ -1,8 +1,6 @@
 package nitin.a5object;
 
-/**
- * Created by nitin.chaurasia on 3/3/2017.
- */
+/** Created by nitin.chaurasia on 3/3/2017. */
 public class O2UsingClone {
     public static void main(String[] args) {
 
@@ -23,7 +21,6 @@ public class O2UsingClone {
 class Empcloneable implements Cloneable {
     int a;
     String name;
-
 
     Empcloneable(int a, String name) {
         this.a = a;

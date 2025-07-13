@@ -1,7 +1,7 @@
 package nitin.enumConcept;
 
 public enum EnumDemo {
-    SUNDAY(1),  //calls constructor with value =1
+    SUNDAY(1), // calls constructor with value =1
     MONDAY(2),
     TUESDAY(3),
     WEDNESDAY(4),

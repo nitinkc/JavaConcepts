@@ -19,9 +19,11 @@ public class LambdaExample {
     }
 
     public static void compareStrings(List<String> list, Predicate<String> predicate) {
-        list.stream().filter((n) -> (predicate.test(n))).forEach((n) -> {
-            System.out.println(n + " ");
-        });
+        list.stream()
+                .filter((n) -> (predicate.test(n)))
+                .forEach(
+                        (n) -> {
+                            System.out.println(n + " ");
+                        });
     }
-
 }

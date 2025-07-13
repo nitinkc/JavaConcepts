@@ -17,10 +17,9 @@ public class Player3 extends Thread {
 
         try {
             synchronized (notifyAllExample) {
-
                 for (int i = 0; i < 100; i++) {
 
-                    while (notifyAllExample.status != 3) {//Runs only when status is 1 or 2
+                    while (notifyAllExample.status != 3) { // Runs only when status is 1 or 2
                         notifyAllExample.wait();
                     }
 
@@ -31,7 +30,6 @@ public class Player3 extends Thread {
                     notifyAllExample.status = 1;
                     notifyAllExample.notifyAll();
                 }
-
             }
         } catch (Exception e) {
             System.out.println("Exception 3 :" + e.getMessage());

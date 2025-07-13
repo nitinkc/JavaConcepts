@@ -36,13 +36,14 @@ public class CarScratch {
     }
 
     public static void main(String[] args) {
-        List<Car> cars = Arrays.asList(
-                Car.withGasColorPassengers(6, "Red", "Fred", "Jim", "Sheila"),
-                Car.withGasColorPassengers(3, "Octarine", "Rincewind", "Ridcully"),
-                Car.withGasColorPassengers(9, "Black", "Weatherwax", "Magrat"),
-                Car.withGasColorPassengers(7, "Green", "Valentine", "Gillian", "Anne", "Dr. Mahmoud"),
-                Car.withGasColorPassengers(6, "Red", "Ender", "Hyrum", "Locke", "Bonzo")
-        );
+        List<Car> cars =
+                Arrays.asList(
+                        Car.withGasColorPassengers(6, "Red", "Fred", "Jim", "Sheila"),
+                        Car.withGasColorPassengers(3, "Octarine", "Rincewind", "Ridcully"),
+                        Car.withGasColorPassengers(9, "Black", "Weatherwax", "Magrat"),
+                        Car.withGasColorPassengers(
+                                7, "Green", "Valentine", "Gillian", "Anne", "Dr. Mahmoud"),
+                        Car.withGasColorPassengers(6, "Red", "Ender", "Hyrum", "Locke", "Bonzo"));
         showAll(cars);
 
         showAll(filter(cars, Car.getRedCarCriterion()));
@@ -56,14 +57,16 @@ public class CarScratch {
 
         showAll(filter(cars, c -> c.getPassengers().size() < 3));
 
-        List<String> words = Arrays.asList("LightCoral", "pink", "Orange", "Gold", "plum", "Blue", "limegreen");
+        List<String> words =
+                Arrays.asList("LightCoral", "pink", "Orange", "Gold", "plum", "Blue", "limegreen");
         System.out.println("Long color names:");
         showAll(filter(words, w -> w.length() > 4));
         System.out.println("Capitalized color names:");
         showAll(filter(words, w -> Character.isUpperCase(w.charAt(0))));
 
         LocalDate today = LocalDate.now();
-        List<LocalDate> appointments = Arrays.asList(today, today.plusDays(2), today.minusDays(4), today.plusMonths(1));
+        List<LocalDate> appointments =
+                Arrays.asList(today, today.plusDays(2), today.minusDays(4), today.plusMonths(1));
         System.out.println("All appointments");
         showAll(appointments);
         System.out.println("Future appointments after: " + today);

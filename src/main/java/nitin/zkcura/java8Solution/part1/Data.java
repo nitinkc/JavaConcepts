@@ -2,9 +2,7 @@ package nitin.zkcura.java8Solution.part1;
 
 import java.util.List;
 
-/**
- * Created by nitin on Sunday, October/06/2019 at 10:51 PM
- */
+/** Created by nitin on Sunday, October/06/2019 at 10:51 PM */
 public class Data {
 
     private int population;
@@ -51,8 +49,17 @@ public class Data {
      * */
     public String toString() {
         String value = "";
-        value = value + population + "\n" + city + ", " + state + "\n" + "Interstates: " +
-                interstatesToString(getInterstates()) + "\n";
+        value =
+                value
+                        + population
+                        + "\n"
+                        + city
+                        + ", "
+                        + state
+                        + "\n"
+                        + "Interstates: "
+                        + interstatesToString(getInterstates())
+                        + "\n";
         return value;
     }
 
@@ -61,11 +68,16 @@ public class Data {
      * */
     public String aggragateCities() {
         String value = "";
-        value = city + ", " + state + "\n" + "Interstates: " +
-                interstatesToString(interstates) + "\n";
+        value =
+                city
+                        + ", "
+                        + state
+                        + "\n"
+                        + "Interstates: "
+                        + interstatesToString(interstates)
+                        + "\n";
         return value;
     }
-
 
     /* Method to Print List of Interstates in the required format
      */

@@ -7,9 +7,9 @@ import java.util.Set;
 
 /**
  * Created by synergisticit on 2/25/2016.
- * <p>
- * HashMAp and HashSet doest guarantee the order of retrieval
- * TreeSet and TreeMap guarantees order (for map, the order is DNSO of keys)
+ *
+ * <p>HashMAp and HashSet doest guarantee the order of retrieval TreeSet and TreeMap guarantees
+ * order (for map, the order is DNSO of keys)
  */
 public class BasicMapInteger {
     public static void main(String[] args) {
@@ -24,71 +24,66 @@ public class BasicMapInteger {
         map.put(1006, 11);
         map.put(1007, 12);
 
+        // printMapUsingSet(map);
 
-        //printMapUsingSet(map);
-
-        //printMapUsingEntrySet(map);
+        // printMapUsingEntrySet(map);
         removeOddNumber(map);
 
         printMapUsingEntrySetForEach(map);
-
-
     }
 
     private static void removeOddNumber(Map<Integer, Integer> map) {
-        //KeySet is a method in Map which RETURNS SET OF KEYS
+        // KeySet is a method in Map which RETURNS SET OF KEYS
 
         Iterator<Integer> itr = map.keySet().iterator();
         while (itr.hasNext()) {
             int tempKey = itr.next();
             if (map.get(tempKey) % 2 == 0) {
                 // Concurrent Modification Exception
-                //map.remove(tempKey);
+                // map.remove(tempKey);
 
-                //ALWAYS REMOVE USING ITERATOR
+                // ALWAYS REMOVE USING ITERATOR
                 itr.remove();
             }
         }
     }
 
     private static void printMapUsingEntrySetForEach(Map<Integer, Integer> map) {
-        //loop a Map
+        // loop a Map
         for (Map.Entry<Integer, Integer> itr : map.entrySet()) {
             System.out.println("Key : " + itr.getKey() + " Value : " + itr.getValue());
         }
     }
 
     /**
-     * Iterating through a Map using Entry Set.
-     * NOTE: ENTRY SET RETURNS A SET OF ENTRY WHICH KEY ADN VALUE
+     * Iterating through a Map using Entry Set. NOTE: ENTRY SET RETURNS A SET OF ENTRY WHICH KEY ADN
+     * VALUE
      *
      * @param map
      */
     private static void printMapUsingEntrySet(Map<Integer, Integer> map) {
-        //Extracting the entry set and iterating over it
+        // Extracting the entry set and iterating over it
         Set myMap = map.entrySet();
         Iterator<Map.Entry<Integer, Integer>> itr = myMap.iterator();
 
         while (itr.hasNext()) {
             Map.Entry curr = itr.next();
-            //Return the toString representation of Map.Entry
+            // Return the toString representation of Map.Entry
             System.out.println(curr);
-            //Extracting the key and value out of Entry
+            // Extracting the key and value out of Entry
             System.out.println("Key is : " + curr.getKey() + " Value is " + curr.getValue());
         }
     }
 
     /**
      * Map is not a part of Collection thus Iterator is not available
-     * <p>
-     * There are two ways to iterate a map
-     * 1. Using Set (for loop)
-     * 2. Using EntrySet (for each)
+     *
+     * <p>There are two ways to iterate a map 1. Using Set (for loop) 2. Using EntrySet (for each)
      *
      * @param map
      */
     private static void printMapUsingSet(Map<Integer, Integer> map) {
-        //KeySet is a method in map which RETURNS A SET OF KEYS
+        // KeySet is a method in map which RETURNS A SET OF KEYS
         Set<Integer> key = map.keySet();
 
         Iterator itr = key.iterator();

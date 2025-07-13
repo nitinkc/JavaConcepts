@@ -1,16 +1,14 @@
 package nitin.io.fileIO.strings;
 
-import org.junit.Test;
-
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
+import org.junit.Test;
+
 /**
- * Some unit tests using the newer assertThat style.
- * See StringUtilsTester for a variation that uses the
- * more traditional assertEquals, assertTrue, and
- * assertFalse methods.
+ * Some unit tests using the newer assertThat style. See StringUtilsTester for a variation that uses
+ * the more traditional assertEquals, assertTrue, and assertFalse methods.
  */
 
 // Note that under some Eclipse settings, Eclipse will make
@@ -28,10 +26,10 @@ public class StringUtilsTester {
 
     @Test
     public void testPalindromes() {
-        String[] matches =
-                {"a", "aba", "Aba", "abba", "AbBa", "abcdeffedcba", "abcdEffedcba"};
-        String[] misMatches =
-                {"ax", "axba", "Axba", "abbax", "xAbBa", "abcdeffedcdax", "axbcdEffedcda"};
+        String[] matches = {"a", "aba", "Aba", "abba", "AbBa", "abcdeffedcba", "abcdEffedcba"};
+        String[] misMatches = {
+            "ax", "axba", "Axba", "abbax", "xAbBa", "abcdeffedcdax", "axbcdEffedcda"
+        };
         for (String s : matches) {
             assertThat(StringUtils.isPalindrome(s), is(true));
         }

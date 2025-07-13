@@ -1,8 +1,8 @@
 package nitin.multithreading.raceCondition.dSynchronization;
 
-import java.util.concurrent.CountDownLatch;
-
 import static com.utilities.MultiThreadUtility.logMessage;
+
+import java.util.concurrent.CountDownLatch;
 
 public class Processor implements Runnable {
     private final CountDownLatch latch;
@@ -10,7 +10,6 @@ public class Processor implements Runnable {
     Processor(CountDownLatch latch) {
         this.latch = latch;
     }
-
 
     @Override
     public void run() {

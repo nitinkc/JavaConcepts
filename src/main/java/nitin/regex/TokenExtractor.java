@@ -8,18 +8,18 @@ import java.util.regex.Pattern;
 public class TokenExtractor {
     public static void main(String[] args) {
         String[] inputStrings = {
-                "Non-Reactive",
-                "Reactive",
-                "0.8",
-                "0.8 Reactive",
-                "<=0.8",
-                ">0.8",
-                "<0.8",
-                ">=0.8",
-                "<=0.8 Reactive",
-                ">0.8 Reactive",
-                "<0.8 Reactive",
-                ">=0.8 Reactive"
+            "Non-Reactive",
+            "Reactive",
+            "0.8",
+            "0.8 Reactive",
+            "<=0.8",
+            ">0.8",
+            "<0.8",
+            ">=0.8",
+            "<=0.8 Reactive",
+            ">0.8 Reactive",
+            "<0.8 Reactive",
+            ">=0.8 Reactive"
         };
 
         for (String input : inputStrings) {
@@ -41,7 +41,8 @@ public class TokenExtractor {
         // Extract tokens from the input string and store in a list
         List<String> tokens = new ArrayList<>();
         while (matcher.find()) {
-            String relationalOperator = matcher.group(1); // Extract the first capturing group ([<>]=?|=)
+            String relationalOperator =
+                    matcher.group(1); // Extract the first capturing group ([<>]=?|=)
             if (relationalOperator != null && !relationalOperator.isEmpty()) {
                 tokens.add(relationalOperator);
             }
@@ -67,7 +68,8 @@ public class TokenExtractor {
         // Extract tokens from the input string and store in a list
         List<String> tokens = new ArrayList<>();
         while (matcher.find()) {
-            String relationalOperator = matcher.group(1); // Extract the first capturing group ([<>]=?|=)
+            String relationalOperator =
+                    matcher.group(1); // Extract the first capturing group ([<>]=?|=)
             if (relationalOperator != null && !relationalOperator.isEmpty()) {
                 tokens.add(relationalOperator);
             }
@@ -97,11 +99,13 @@ public class TokenExtractor {
         // Extract tokens from the input string and store in a list
         List<String> tokens = new ArrayList<>();
         while (matcher.find()) {
-            String reactiveStatus = matcher.group(1); // Extract the first capturing group (Reactive|Non-Reactive)
+            String reactiveStatus =
+                    matcher.group(1); // Extract the first capturing group (Reactive|Non-Reactive)
             if (reactiveStatus != null && !reactiveStatus.isEmpty()) {
                 tokens.add(reactiveStatus);
             }
-            String relationalOperator = matcher.group(2); // Extract the second capturing group ([<>]=?|=)
+            String relationalOperator =
+                    matcher.group(2); // Extract the second capturing group ([<>]=?|=)
             if (relationalOperator != null && !relationalOperator.isEmpty()) {
                 tokens.add(relationalOperator);
             }

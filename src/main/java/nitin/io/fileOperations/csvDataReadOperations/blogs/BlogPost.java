@@ -5,10 +5,8 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * @author Created by nichaurasia
- * Created on Thursday, October/01/2020 at 1:20 AM
+ * @author Created by nichaurasia Created on Thursday, October/01/2020 at 1:20 AM
  */
-
 @Getter
 @Setter
 @ToString

@@ -10,10 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-        "key",
-        "unstructured"
-})
+@JsonPropertyOrder({"key", "unstructured"})
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -23,7 +20,7 @@ public class Reference {
 
     @JsonProperty("key")
     public String key;
+
     @JsonProperty("unstructured")
     public String unstructured;
-
 }

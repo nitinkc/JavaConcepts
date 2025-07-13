@@ -6,10 +6,8 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * @author Created by nichaurasia
- * Created on Tuesday, September/29/2020 at 3:09 AM
+ * @author Created by nichaurasia Created on Tuesday, September/29/2020 at 3:09 AM
  */
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -23,5 +21,4 @@ public class Address {
     public String State;
     public String Country;
     public int zip;
-
 }

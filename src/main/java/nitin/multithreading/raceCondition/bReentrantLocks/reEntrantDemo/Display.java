@@ -2,9 +2,7 @@ package nitin.multithreading.raceCondition.bReentrantLocks.reEntrantDemo;
 
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
- * Created by nitin.chaurasia on 12/26/2016.
- */
+/** Created by nitin.chaurasia on 12/26/2016. */
 public class Display {
 
     ReentrantLock l = new ReentrantLock();
@@ -15,7 +13,7 @@ public class Display {
         for (int i = 0; i < 10; i++) {
             System.out.print("Good Morning : ");
             try {
-                Thread.sleep(500);//wait for two secs
+                Thread.sleep(500); // wait for two secs
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -24,12 +22,12 @@ public class Display {
         l.unlock();
     }
 
-    //With the use of synchronized, we are forcing the other thread to wait
+    // With the use of synchronized, we are forcing the other thread to wait
     public synchronized void wishSynchronized(String name) {
         for (int i = 0; i < 10; i++) {
             System.out.print("Good Morning : ");
             try {
-                Thread.sleep(500);//wait for two secs
+                Thread.sleep(500); // wait for two secs
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

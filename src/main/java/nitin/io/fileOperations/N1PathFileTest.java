@@ -3,9 +3,7 @@ package nitin.io.fileOperations;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-/**
- * Created by Nitin C on 3/4/2016.
- */
+/** Created by Nitin C on 3/4/2016. */
 public class N1PathFileTest {
     public static void main(String[] args) {
         printPathInformation(Paths.get("/src/nitin.txt"));

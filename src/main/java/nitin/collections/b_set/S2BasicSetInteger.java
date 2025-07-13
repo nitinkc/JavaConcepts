@@ -6,8 +6,8 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * Created by synergisticit on 2/25/2016.
- * while adding into a set, a test of equality happens, to determine if the a5object being pushed already exist
+ * Created by synergisticit on 2/25/2016. while adding into a set, a test of equality happens, to
+ * determine if the a5object being pushed already exist
  */
 public class S2BasicSetInteger {
     public static void main(String[] args) {
@@ -19,20 +19,18 @@ public class S2BasicSetInteger {
         Set<Integer> set = new TreeSet<Integer>();
 
         // Ordering NOT guarenteed in HashSet
-        //Set<Integer> b_set = new HashSet<Integer>();
+        // Set<Integer> b_set = new HashSet<Integer>();
 
         // How to Add
         addSet(set);
 
-        //How to Iterate
+        // How to Iterate
         printSet(set);
 
-        //How to Remove
+        // How to Remove
         removeOddNumber(set);
 
         printSet(set);
-
-
     }
 
     private static void removeOddNumber(Set<Integer> set) {
@@ -43,22 +41,16 @@ public class S2BasicSetInteger {
             if (curr % 2 != 0) {
                 itr.remove();
                 // ConcurrentModificationException
-                //b_set.remove(curr);
+                // b_set.remove(curr);
             }
         }
-
     }
 
-    /**
-     * 3 main methods of iterator
-     * 1. hasNext()
-     * 2. next()
-     * 3. remove()
-     */
+    /** 3 main methods of iterator 1. hasNext() 2. next() 3. remove() */
     private static void printSet(Set<Integer> set) {
-        //Printing with Iterator
+        // Printing with Iterator
         Iterator<Integer> itr = set.iterator();
-        //From this point on, DO NOT USE set.get or set.remove!!
+        // From this point on, DO NOT USE set.get or set.remove!!
         // USE ONLY ITERATOR
         while (itr.hasNext()) {
             System.out.print(itr.next() + " - ");
@@ -72,12 +64,10 @@ public class S2BasicSetInteger {
         }
 
         System.out.println();
-
     }
 
     /**
-     * 1. Demonstrating adding USING A COLLECTION
-     * 2. and adding individual elements
+     * 1. Demonstrating adding USING A COLLECTION 2. and adding individual elements
      *
      * @param set
      */

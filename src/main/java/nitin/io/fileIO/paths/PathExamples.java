@@ -1,14 +1,10 @@
 package nitin.io.fileIO.paths;
 
 import com.config.Configs;
-
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-/**
- * Some examples of simple Path methods
- */
-
+/** Some examples of simple Path methods */
 public class PathExamples {
     public static void main(String[] args) {
 

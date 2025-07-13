@@ -1,12 +1,12 @@
 package nitin.multithreading;
 
+import static com.utilities.PerformanceUtility.startTimer;
+import static com.utilities.PerformanceUtility.stopTimer;
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
-
-import static com.utilities.PerformanceUtility.startTimer;
-import static com.utilities.PerformanceUtility.stopTimer;
 
 public class ParallelFactorial {
     public static void main(String[] args) throws InterruptedException {
@@ -48,28 +48,28 @@ public class ParallelFactorial {
 
     private static void parallelStream(List<Long> inputNumbers, Factorial factorial) {
         startTimer();
-        List<BigInteger> list2 = inputNumbers.parallelStream()
-                .map(factorial::compute)
-                .toList();
+        List<BigInteger> list2 = inputNumbers.parallelStream().map(factorial::compute).toList();
         stopTimer();
     }
 
     private static void sequentialWithStreams(List<Long> inputNumbers, Factorial factorial) {
         startTimer();
-        List<BigInteger> list = inputNumbers.stream()
-                .map(factorial::compute)
-                .toList();
+        List<BigInteger> list = inputNumbers.stream().map(factorial::compute).toList();
         stopTimer();
     }
 
-    private static void runWithTraditionalFactorial(List<Long> inputNumbers, Factorial factorial) throws InterruptedException {
+    private static void runWithTraditionalFactorial(List<Long> inputNumbers, Factorial factorial)
+            throws InterruptedException {
         List<Thread> threads = new ArrayList<>();
 
         for (long inputNumber : inputNumbers) {
-            threads.add(new Thread(() -> {
-                BigInteger computedFactorial = factorial.compute(inputNumber);
-                //logShortMessage(STR."Factorial of \{inputNumber} is \{computedFactorial}");
-            }));
+            threads.add(
+                    new Thread(
+                            () -> {
+                                BigInteger computedFactorial = factorial.compute(inputNumber);
+                                // logShortMessage(STR."Factorial of \{inputNumber} is
+                                // \{computedFactorial}");
+                            }));
         }
 
         startTimer();
@@ -79,13 +79,14 @@ public class ParallelFactorial {
         }
 
         for (Thread thread : threads) {
-           // thread.join(2000);//Wait for NOT MORE THAN 2 seconds
+            // thread.join(2000);//Wait for NOT MORE THAN 2 seconds
             thread.join();
         }
         stopTimer();
     }
 
-    private static void runParallelFactorialWithExecutor(List<Long> inputNumbers, Factorial factorial) {
+    private static void runParallelFactorialWithExecutor(
+            List<Long> inputNumbers, Factorial factorial) {
         /*   Pros:
         Provides better control over thread management.
         Automatically handles thread pooling and task scheduling.
@@ -94,18 +95,18 @@ public class ParallelFactorial {
         */
         Callable<BigInteger> task = null;
         List<Future<BigInteger>> futures;
-        try (ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors())) {
+        try (ExecutorService executor =
+                Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors())) {
             futures = new ArrayList<>();
             for (long inputNumber : inputNumbers) {
                 futures.add(executor.submit(() -> factorial.compute(inputNumber)));
             }
 
-
             List<BigInteger> results = new ArrayList<>();
             startTimer();
             for (Future<BigInteger> future : futures) {
                 try {
-                    results.add(future.get());//Get is not preferred
+                    results.add(future.get()); // Get is not preferred
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } catch (ExecutionException e) {
@@ -116,7 +117,8 @@ public class ParallelFactorial {
         }
     }
 
-    private static void runParallelFactorialWithVirtualThreads(List<Long> inputNumbers, Factorial factorial) throws InterruptedException {
+    private static void runParallelFactorialWithVirtualThreads(
+            List<Long> inputNumbers, Factorial factorial) throws InterruptedException {
         /*Pros:
             More scalable and efficient for I/O-bound tasks.
             Reduces the overhead of managing many threads.
@@ -127,48 +129,55 @@ public class ParallelFactorial {
         ThreadFactory threadFactory = Thread.ofVirtual().name("myThread : ", 0).factory();
 
         List<Future<BigInteger>> submitted = new ArrayList<>();
-        //try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
+        // try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
         try (ExecutorService srv = Executors.newThreadPerTaskExecutor(threadFactory)) {
             for (long inputNumber : inputNumbers) {
                 submitted.add(srv.submit(() -> factorial.compute(inputNumber)));
             }
 
             startTimer();
-            List<BigInteger> results = submitted.stream()
-                    .map(future -> {
-                        try {
-                            return future.get();
-                        } catch (Exception e) {
-                            throw new RuntimeException(e);
-                        }
-                    })
-                    .toList();
+            List<BigInteger> results =
+                    submitted.stream()
+                            .map(
+                                    future -> {
+                                        try {
+                                            return future.get();
+                                        } catch (Exception e) {
+                                            throw new RuntimeException(e);
+                                        }
+                                    })
+                            .toList();
             stopTimer();
         }
     }
 
     private static void runWithCompletableFuture(List<Long> inputNumbers, Factorial factorial) {
         startTimer();
-        List<CompletableFuture<BigInteger>> futures = inputNumbers.stream()
-                .map(inputNumber -> CompletableFuture.supplyAsync(() -> factorial.compute(inputNumber)))
-                .toList();
+        List<CompletableFuture<BigInteger>> futures =
+                inputNumbers.stream()
+                        .map(
+                                inputNumber ->
+                                        CompletableFuture.supplyAsync(
+                                                () -> factorial.compute(inputNumber)))
+                        .toList();
 
-        List<BigInteger> results = futures.stream()
-                .map(CompletableFuture::join)
-                .toList();
+        List<BigInteger> results = futures.stream().map(CompletableFuture::join).toList();
         stopTimer();
     }
 
-    private static void runWithCountDownLatch(List<Long> inputNumbers, Factorial factorial) throws InterruptedException {
+    private static void runWithCountDownLatch(List<Long> inputNumbers, Factorial factorial)
+            throws InterruptedException {
         CountDownLatch latch = new CountDownLatch(inputNumbers.size());
         for (long inputNumber : inputNumbers) {
-            new Thread(() -> {
-                try {
-                    factorial.compute(inputNumber);
-                } finally {
-                    latch.countDown();
-                }
-            }).start();
+            new Thread(
+                            () -> {
+                                try {
+                                    factorial.compute(inputNumber);
+                                } finally {
+                                    latch.countDown();
+                                }
+                            })
+                    .start();
         }
         startTimer();
         latch.await();

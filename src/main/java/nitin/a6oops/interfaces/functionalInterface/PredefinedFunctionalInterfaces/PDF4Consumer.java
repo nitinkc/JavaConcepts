@@ -6,15 +6,11 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 /**
- * Created by Nitin Chaurasia on 1/30/18 at 10:09 PM.
- * Created by Nitin C on 3/3/2016.
- * Consumer and BiConsumer (Bi means 2 variables)
- * HAs a method accept
- * Use Consumer when you want to do something with the parameter
- * Ex: we use Consumer with forEach
- * a_list.forEach(System.out :: print);
- * OR
- */ /*Consumer<String> c1 = System.out::println;
+ * Created by Nitin Chaurasia on 1/30/18 at 10:09 PM. Created by Nitin C on 3/3/2016. Consumer and
+ * BiConsumer (Bi means 2 variables) HAs a method accept Use Consumer when you want to do something
+ * with the parameter Ex: we use Consumer with forEach a_list.forEach(System.out :: print); OR
+ */
+/*Consumer<String> c1 = System.out::println;
  * a_list.forEach(c1);
  * Consumer<String> c2 = x -> System.out.println(x);
  */

@@ -1,11 +1,9 @@
 package nitin.a3accessModifiers;
 
 /**
- * Created by Nitin C on 11/25/2015.
- * If there is no public class, then we can use any name as Java Source file name.
- * Recommended is one class Filename per file
+ * Created by Nitin C on 11/25/2015. If there is no public class, then we can use any name as Java
+ * Source file name. Recommended is one class Filename per file
  */
-
 abstract class X {
     public abstract void check();
 }
@@ -13,9 +11,7 @@ abstract class X {
 class Y extends X {
 
     @Override
-    public void check() {
-
-    }
+    public void check() {}
 }
 
 class MultipleClassInaFile {

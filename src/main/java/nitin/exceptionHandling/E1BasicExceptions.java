@@ -20,7 +20,7 @@ public class E1BasicExceptions {
         } catch (ArithmeticException ae) {
             System.out.println("Divisor cant be zero, thus returning null");
             System.out.println("Exception Thrown message is : " + ae.getMessage());
-            //throw new RuntimeException(ae);
+            // throw new RuntimeException(ae);
         } finally {
             System.out.println("This will always run");
         }

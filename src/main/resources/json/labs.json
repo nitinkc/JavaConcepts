@@ -1,42 +1,30 @@
-{
-  "report": {
-    "labsData": true,
-    "labs": [
-      {
-        "careCategoryName": "ANEMIA",
-        "currentMonthName": "NOV 2023",
-        "previousMonthName": "OCT 2023",
+{"report": {
+    "labs": [{
         "secondPreviousMonthName": "SEP 2023",
-        "careCategory": [
-          {
+        "careCategory": [{
             "labTestName": "HEMOGLOBIN (g/dL)",
-            "currentMonth": [
-              {
-                "result0130": "343",
-                "outside0130": "Y",
-                "date0130": "(11/09)",
-                "outOfRangeInd0130": "1"
-              }
-            ],
-            "previousMonth": [
-              {
-                "result3160": "",
-                "outside3160": "",
-                "date3160": "",
-                "outOfRangeInd3160": "0"
-              }
-            ],
-            "secondPreviousMonth": [
-              {
+            "secondPreviousMonth": [{
                 "result6190": "",
                 "outside6190": "",
                 "date6190": "",
                 "outOfRangeInd6190": "0"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-}
+            }],
+            "previousMonth": [{
+                "outside3160": "",
+                "outOfRangeInd3160": "0",
+                "date3160": "",
+                "result3160": ""
+            }],
+            "currentMonth": [{
+                "outOfRangeInd0130": "1",
+                "result0130": "343",
+                "date0130": "(11/09)",
+                "outside0130": "Y"
+            }]
+        }],
+        "currentMonthName": "NOV 2023",
+        "careCategoryName": "ANEMIA",
+        "previousMonthName": "OCT 2023"
+    }],
+    "labsData": true
+}}

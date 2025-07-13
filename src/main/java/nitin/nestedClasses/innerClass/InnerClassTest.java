@@ -7,9 +7,7 @@ public class InnerClassTest {
         MyOuter mo = new MyOuter();
         MyOuter.MyInner inner = mo.new MyInner();
         inner.seeOuter();
-
     }
-
 }
 
 class MyOuter {
@@ -21,5 +19,3 @@ class MyOuter {
         }
     }
 }
-
-

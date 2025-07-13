@@ -5,10 +5,8 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * @author Created by nichaurasia
- * Created on Wednesday, September/30/2020 at 9:38 AM
+ * @author Created by nichaurasia Created on Wednesday, September/30/2020 at 9:38 AM
  */
-
 @Getter
 @Setter
 @ToString
@@ -19,12 +17,12 @@ public class ElectionEntity {
     private String party;
     private int votes;
 
-    public ElectionEntity(String state, String assembly, String candidate, String party, int votes) {
+    public ElectionEntity(
+            String state, String assembly, String candidate, String party, int votes) {
         this.state = state;
         this.assembly = assembly;
         this.candidate = candidate;
         this.party = party;
         this.votes = votes;
     }
-
 }

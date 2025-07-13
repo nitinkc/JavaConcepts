@@ -1,11 +1,10 @@
 package nitin.mappers.mapstruct.dto;
 
-import lombok.*;
-import nitin.mappers.mapstruct.model.Address;
-
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import lombok.*;
+import nitin.mappers.mapstruct.model.Address;
 
 @NoArgsConstructor
 @Getter

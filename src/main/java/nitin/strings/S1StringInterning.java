@@ -1,9 +1,6 @@
 package nitin.strings;
 
-
-/**
- * Created by nitin.chaurasia on 2/16/2017.
- */
+/** Created by nitin.chaurasia on 2/16/2017. */
 public class S1StringInterning {
     public static void main(String[] args) {
 
@@ -14,11 +11,11 @@ public class S1StringInterning {
         testIntern(one, two);
 
         String test1 = "Nitin";
-        String test2 = "Nitin";//// Forcing to create a new String
+        String test2 = "Nitin"; // // Forcing to create a new String
         testIntern(test1, test2);
 
-        String three = "Nitin";// Forcing to create a new String
-        //String three = "Nitin".intern();//intern used
+        String three = "Nitin"; // Forcing to create a new String
+        // String three = "Nitin".intern();//intern used
         String four = "Nitin";
         testIntern(three, four);
     }

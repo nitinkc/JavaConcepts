@@ -1,13 +1,11 @@
 package nitin.multithreading.aBasics.aPlatformThreads;
 
-import nitin.exceptionHandling.customizedExceptions.BusinessException;
+import static com.utilities.MultiThreadUtility.logShortMessage;
 
 import java.util.concurrent.TimeUnit;
 
-import static com.utilities.MultiThreadUtility.logShortMessage;
-
 public class T5CreateByMethodReference {
-    
+
     public static void main(String[] args) {
 
         logShortMessage("Starting Main Thread ..");
@@ -15,7 +13,7 @@ public class T5CreateByMethodReference {
         thr.start();
         logShortMessage("Ending Main Thread ..");
     }
-    
+
     public static void doSomething() {
 
         logShortMessage("Starting Simple Thread");

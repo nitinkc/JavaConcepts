@@ -5,10 +5,8 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * @author Created by nichaurasia
- * Created on Wednesday, September/30/2020 at 6:46 PM
+ * @author Created by nichaurasia Created on Wednesday, September/30/2020 at 6:46 PM
  */
-
 @Getter
 @Setter
 @ToString
@@ -27,4 +25,3 @@ public class Transaction {
         this.city = city;
     }
 }
-

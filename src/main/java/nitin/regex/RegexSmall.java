@@ -11,7 +11,5 @@ public class RegexSmall {
         while (m.find()) {
             System.out.print(m.start() + " ");
         }
-
     }
-
 }

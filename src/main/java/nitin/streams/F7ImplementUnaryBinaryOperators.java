@@ -4,9 +4,8 @@ import java.util.function.BinaryOperator;
 import java.util.function.UnaryOperator;
 
 /**
- * Created by Nitin C on 3/3/2016.
- * Unary and Binary are the special case of a Function where all input parameter
- * and return value are all of Same type
+ * Created by Nitin C on 3/3/2016. Unary and Binary are the special case of a Function where all
+ * input parameter and return value are all of Same type
  */
 public class F7ImplementUnaryBinaryOperators {
     public static void main(String[] args) {

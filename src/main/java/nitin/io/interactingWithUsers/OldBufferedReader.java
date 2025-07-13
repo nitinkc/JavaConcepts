@@ -4,9 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/**
- * Created by Nitin C on 3/6/2016.
- */
+/** Created by Nitin C on 3/6/2016. */
 public class OldBufferedReader {
     public static void main(String[] args) {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
@@ -20,6 +18,5 @@ public class OldBufferedReader {
         }
 
         System.out.println("You Entered " + input);
-
     }
 }

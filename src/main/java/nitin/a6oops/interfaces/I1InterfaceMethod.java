@@ -2,8 +2,8 @@ package nitin.a6oops.interfaces;
 
 /**
  * Created by nitin on 12/29/16.
- * <p>
- * BasicConnection Class can extend only one class but can implement multiple interfaces
+ *
+ * <p>BasicConnection Class can extend only one class but can implement multiple interfaces
  */
 interface Interface {
     void m1();
@@ -34,8 +34,8 @@ class AnotherServiceProvider extends ServiceProvider implements Interface, Anoth
     public static void main(String[] args) {
         AnotherServiceProvider a = new AnotherServiceProvider();
         a.m1();
-
     }
+
     // m1 exists in both interfaces. Naming conflict
     // Error: reference to m1() is ambiguous
 
@@ -45,12 +45,8 @@ class AnotherServiceProvider extends ServiceProvider implements Interface, Anoth
     }
 
     @Override
-    public void m3() {
-
-    }
+    public void m3() {}
 
     @Override
-    public void m4() {
-
-    }
+    public void m4() {}
 }

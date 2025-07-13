@@ -1,8 +1,8 @@
 package com.converter.entityConverter;
 
-import java.util.function.BiConsumer;
-
 import static java.util.Objects.isNull;
+
+import java.util.function.BiConsumer;
 
 public interface EntityConverter<I, O> {
     O convert(I input);

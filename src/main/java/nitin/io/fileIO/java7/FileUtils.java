@@ -8,8 +8,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class FileUtils {
-    private FileUtils() {
-    } // Uninstantiatable class
+    private FileUtils() {} // Uninstantiatable class
 
     public static List<String> getLines(String file) throws IOException {
         Path path = Paths.get(file);

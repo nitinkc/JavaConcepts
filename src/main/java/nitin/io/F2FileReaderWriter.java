@@ -5,9 +5,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-/**
- * Created by nitin on 1/2/16.
- */
+/** Created by nitin on 1/2/16. */
 public class F2FileReaderWriter {
     public static void main(String[] args) throws IOException {
         File f = new File("nitin.txt");
@@ -17,7 +15,7 @@ public class F2FileReaderWriter {
 
         // Reading character by character
         // We have the Unicode value of the Character
-        while (i != -1) { //unicode of null is -1
+        while (i != -1) { // unicode of null is -1
             System.out.println((char) i);
             i = fr.read();
         }
@@ -26,11 +24,9 @@ public class F2FileReaderWriter {
         FileWriter fw = new FileWriter(f, true);
         fw.write("  Nitin\n");
 
-        //Good practise to use flush
+        // Good practise to use flush
         fw.flush();
         fr.close();
         fw.close();
-
-
     }
 }

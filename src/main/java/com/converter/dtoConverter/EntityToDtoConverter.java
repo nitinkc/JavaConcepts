@@ -4,11 +4,11 @@ import java.util.function.BiConsumer;
 
 public class EntityToDtoConverter extends DtoConverter<Dto> {
 
-    static final BiConsumer<Entity, Dto> ENTITY_TO_DTO = (entity, dto) -> {
-
-        dto.setIdDto(entity.getIdEntity());
-        dto.setDoseQtyDto(entity.getSomeString());
-    };
+    static final BiConsumer<Entity, Dto> ENTITY_TO_DTO =
+            (entity, dto) -> {
+                dto.setIdDto(entity.getIdEntity());
+                dto.setDoseQtyDto(entity.getSomeString());
+            };
 
     @Override
     protected Dto instantiateDto() {
@@ -19,4 +19,3 @@ public class EntityToDtoConverter extends DtoConverter<Dto> {
         return convert(entity, null, ENTITY_TO_DTO);
     }
 }
-

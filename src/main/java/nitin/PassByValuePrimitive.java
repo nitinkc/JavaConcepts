@@ -6,7 +6,7 @@ import lombok.Data;
 
 public class PassByValuePrimitive {
     public static void main(String[] args) {
-        int a = 10;//All nums are primitive
+        int a = 10; // All nums are primitive
         modifyPrimitive(a);
         System.out.println(a);
 
@@ -19,10 +19,13 @@ public class PassByValuePrimitive {
         modifyObject(b);
         System.out.println(b);
 
-        final Customer c = new Customer("John");//Final variable's reference can't be changed, the values inside the object can change
-        System.out.println(c);//Customer(name=John)
+        final Customer c =
+                new Customer(
+                        "John"); // Final variable's reference can't be changed, the values inside
+        // the object can change
+        System.out.println(c); // Customer(name=John)
         modifyObject2(c);
-        System.out.println(c);//Customer(name=Jane)
+        System.out.println(c); // Customer(name=Jane)
 
         Faker.instance().name().fullName();
     }
@@ -33,7 +36,7 @@ public class PassByValuePrimitive {
 
     private static void modifyObject(Integer data) {
         Integer temp = data + 2;
-        data = temp * 2;// Creating a new Integer object and assigning it to data
+        data = temp * 2; // Creating a new Integer object and assigning it to data
     }
 
     private static void modifyPrimitive(int data) {

@@ -20,6 +20,4 @@ public class DoughnutRoast extends CoffeeType implements Medium {
     public List<String> getDescription() {
         return description;
     }
-
-
 }

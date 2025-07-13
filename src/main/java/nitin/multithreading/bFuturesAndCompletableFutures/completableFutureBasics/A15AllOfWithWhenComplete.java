@@ -1,10 +1,7 @@
 package nitin.multithreading.bFuturesAndCompletableFutures.completableFutureBasics;
 
-import nitin.multithreading.bFuturesAndCompletableFutures.completableFutureBasics.service.DataFetchService;
-
-import java.util.List;
 import java.util.concurrent.CompletableFuture;
-import java.util.function.Supplier;
+import nitin.multithreading.bFuturesAndCompletableFutures.completableFutureBasics.service.DataFetchService;
 
 public class A15AllOfWithWhenComplete {
     static DataFetchService dataFetchService = new DataFetchService();
@@ -21,21 +18,30 @@ public class A15AllOfWithWhenComplete {
         // Returns a CompletableFuture which completes when all 4 futures are completed
         // Use whenComplete to handle completion
         CompletableFuture.allOf(future1, future2, future3, future4)
-                .whenComplete((Void, throwable) -> {
-                    if (throwable == null) {
-                        try {
-                        // Retrieve results from all future
-                        // Combine results
-                        String combinedResult = STR."\{future1.get()} \{future2.get()} \{future3.get()} \{future4.get()}";
-                        System.out.println("Combined result: " + combinedResult);
-                } catch (Exception e) {
-                    // Handle exceptions from get() calls
-                    System.err.println("An error occurred while retrieving results: " + e.getMessage());
-                }
-            } else {
-                // Handle exception from the CompletableFuture
-                System.err.println("An error occurred: " + throwable.getMessage());
-            }
-        }).join();
+                .whenComplete(
+                        (Void, throwable) -> {
+                            if (throwable == null) {
+                                try {
+                                    // Retrieve results from all future
+                                    // Combine results
+                                    String combinedResult =
+                                            STR."\{
+                                                    future1.get()} \{
+                                                    future2.get()} \{
+                                                    future3.get()} \{
+                                                    future4.get()}";
+                                    System.out.println("Combined result: " + combinedResult);
+                                } catch (Exception e) {
+                                    // Handle exceptions from get() calls
+                                    System.err.println(
+                                            "An error occurred while retrieving results: "
+                                                    + e.getMessage());
+                                }
+                            } else {
+                                // Handle exception from the CompletableFuture
+                                System.err.println("An error occurred: " + throwable.getMessage());
+                            }
+                        })
+                .join();
     }
 }

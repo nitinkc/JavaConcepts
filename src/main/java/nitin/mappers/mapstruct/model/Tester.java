@@ -1,9 +1,8 @@
 package nitin.mappers.mapstruct.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
-
 import java.util.List;
+import lombok.*;
 
 @NoArgsConstructor
 @Getter
@@ -13,7 +12,7 @@ import java.util.List;
 public class Tester {
     @JsonProperty("tester")
     private Double test;
+
     @JsonProperty("testerList")
     private List<Double> testList;
-
 }

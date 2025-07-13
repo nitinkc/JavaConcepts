@@ -17,11 +17,10 @@ public class ListRemovalUsingForLoop {
 
         for (int i = 0; i < list.size(); i++) {
             if (i == 2) {
-                //System.out.println(list.get(i));
+                // System.out.println(list.get(i));
                 list.remove(i);
             }
             System.out.println(list.get(i));
-
         }
     }
 }

@@ -1,13 +1,11 @@
 package nitin.streams.collectors.whyItsWorking.example;
 
+import java.util.List;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
-import java.util.List;
-
 @RequiredArgsConstructor
 @Data
-
 public class Labs {
     public String careCategoryName;
     public String currentMonthName;

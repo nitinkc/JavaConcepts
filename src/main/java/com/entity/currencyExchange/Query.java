@@ -7,11 +7,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.*;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-        "from",
-        "to",
-        "amount"
-})
+@JsonPropertyOrder({"from", "to", "amount"})
 @Getter
 @Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -23,9 +19,10 @@ public class Query {
 
     @JsonProperty("from")
     public String from;
+
     @JsonProperty("to")
     public String to;
+
     @JsonProperty("amount")
     public Integer amount;
-
 }

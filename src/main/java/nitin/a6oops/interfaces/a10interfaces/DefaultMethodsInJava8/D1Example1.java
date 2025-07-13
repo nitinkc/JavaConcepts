@@ -2,7 +2,7 @@ package nitin.a6oops.interfaces.a10interfaces.DefaultMethodsInJava8;
 
 interface DefaultMethodInInterface {
 
-    //Default method with implementation, in an Interface
+    // Default method with implementation, in an Interface
     default void m1() {
         System.out.println("From Default method");
     }
@@ -11,8 +11,8 @@ interface DefaultMethodInInterface {
 }
 
 /**
- * Created by Nitin Chaurasia on 1/30/18 at 5:20 PM.
- * Since Java 8 onwards, Interface can have concrete implementation in Default method
+ * Created by Nitin Chaurasia on 1/30/18 at 5:20 PM. Since Java 8 onwards, Interface can have
+ * concrete implementation in Default method
  */
 public class D1Example1 implements DefaultMethodInInterface {
     public static void main(String[] args) {

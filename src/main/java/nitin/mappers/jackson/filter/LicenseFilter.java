@@ -12,7 +12,7 @@ public class LicenseFilter {
         if (obj == null || !(obj instanceof String)) {
             return false;
         }
-        //phone must match the regex pattern
+        // phone must match the regex pattern
         return !licensePattern.matcher(obj.toString()).matches();
     }
 }

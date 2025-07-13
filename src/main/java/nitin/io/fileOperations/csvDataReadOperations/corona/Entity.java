@@ -1,16 +1,13 @@
 package nitin.io.fileOperations.csvDataReadOperations.corona;
 
+import java.util.Date;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.util.Date;
-
 /**
- * @author Created by nichaurasia
- * Created on Wednesday, September/30/2020 at 9:38 AM
+ * @author Created by nichaurasia Created on Wednesday, September/30/2020 at 9:38 AM
  */
-
 @Getter
 @Setter
 @ToString
@@ -24,7 +21,15 @@ public class Entity {
     private int population;
     private String country;
 
-    public Entity(Date date, Integer FIPS, String county, String state, Integer confirmed, Integer deaths, Integer population, String country) {
+    public Entity(
+            Date date,
+            Integer FIPS,
+            String county,
+            String state,
+            Integer confirmed,
+            Integer deaths,
+            Integer population,
+            String country) {
         this.date = date;
         this.FIPS = FIPS;
         this.county = county;

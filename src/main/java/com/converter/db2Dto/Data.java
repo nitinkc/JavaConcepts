@@ -11,5 +11,5 @@ public class Data {
     private String refDataId;
     private String releaseNumber;
 
-    //Other Data Fields
+    // Other Data Fields
 }

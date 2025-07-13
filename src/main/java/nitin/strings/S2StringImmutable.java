@@ -1,8 +1,6 @@
 package nitin.strings;
 
-/**
- * Created by Nitin C on 11/26/2015.
- */
+/** Created by Nitin C on 11/26/2015. */
 public class S2StringImmutable {
     /*
     String are made to be immutable as a consequence from Memory Pool concept.

@@ -1,12 +1,9 @@
 package nitin.optionals;
 
-import lombok.*;
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
+import lombok.*;
 
 public class OptionalOrElse {
     public static void main(String[] args) {
@@ -17,28 +14,28 @@ public class OptionalOrElse {
         /**
          * Potential Side Effects:
          *
-         * If patient is accessed or modified from different parts of your program concurrently,
-         * changes made to it in one place can affect its state in another place.
-         * This can lead to inconsistencies or unexpected behaviors.
+         * <p>If patient is accessed or modified from different parts of your program concurrently,
+         * changes made to it in one place can affect its state in another place. This can lead to
+         * inconsistencies or unexpected behaviors.
          */
 
         // Process labTests to get a single valid result or an empty list
         labList.parallelStream()
                 .filter(data -> null != data)
                 .findFirst()
-                .ifPresentOrElse(//Shared Mutability
+                .ifPresentOrElse( // Shared Mutability
                         value -> patient.setLabTests(Collections.singletonList(value)),
-                        () -> patient.setLabTests(Collections.emptyList())
-                );
+                        () -> patient.setLabTests(Collections.emptyList()));
 
         // Process medTests to get a single valid result or an empty list
-        List<String> singleMed = medList.stream()
-                .filter(data -> data != null)
-                .findFirst()
-                .map(Collections::singletonList)
-                .orElse(Collections.emptyList());
+        List<String> singleMed =
+                medList.stream()
+                        .filter(data -> data != null)
+                        .findFirst()
+                        .map(Collections::singletonList)
+                        .orElse(Collections.emptyList());
 
-        patient.setMedTests(singleMed);//Avoiding Shared Mutability
+        patient.setMedTests(singleMed); // Avoiding Shared Mutability
 
         System.out.println(patient);
     }

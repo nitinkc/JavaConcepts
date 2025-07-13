@@ -26,4 +26,3 @@ public class ZPatternExampleDito {
         DitoDocumentBuilder.buildDocument(documentNode, new FileOutputStream("z_pattern_output.pdf"));
     }
 }*/
-

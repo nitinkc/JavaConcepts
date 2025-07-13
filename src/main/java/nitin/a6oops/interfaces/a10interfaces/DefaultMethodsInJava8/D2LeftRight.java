@@ -13,19 +13,17 @@ interface Right {
     }
 }
 
-/**
- * Created by Nitin Chaurasia on 1/31/18 at 5:50 PM.
- */
+/** Created by Nitin Chaurasia on 1/31/18 at 5:50 PM. */
 
-//CE : inherits unrelated defaults for m1() from types Left and DefaultMethodsInJava8.Right
-public class D2LeftRight implements Left, Right {//Compulsory give implementation
+// CE : inherits unrelated defaults for m1() from types Left and DefaultMethodsInJava8.Right
+public class D2LeftRight implements Left, Right { // Compulsory give implementation
 
     public static void main(String[] args) {
         D2LeftRight d = new D2LeftRight();
         d.m1();
     }
 
-    //Without this method override, CE will be there.
+    // Without this method override, CE will be there.
     @Override
     public void m1() {
         Left.super.m1();

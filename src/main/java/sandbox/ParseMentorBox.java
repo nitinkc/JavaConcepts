@@ -5,19 +5,18 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-/**
- * Created by Nitin Chaurasia on 2/15/18 at 8:47 PM.
- */
+/** Created by Nitin Chaurasia on 2/15/18 at 8:47 PM. */
 public class ParseMentorBox {
     public static void main(String[] args) {
         System.out.println("Hello");
 
-        final String O_FILENAME = "/Users/nitin/OneDrive/Programming/Java/IntelliJ/output_mentorBox.txt";
+        final String O_FILENAME =
+                "/Users/nitin/OneDrive/Programming/Java/IntelliJ/output_mentorBox.txt";
         final String IN_FILENAME = "/Users/nitin/OneDrive/Programming/Java/IntelliJ/mentorBox.html";
         final String searchTitle = "          <div class='course-listing-title'>";
         final String searchSubTitle = "          <div class='course-listing-subtitle'>";
 
-        //Open the File
+        // Open the File
         File myFile = new File(IN_FILENAME);
         Scanner in = null;
         try {
@@ -25,10 +24,10 @@ public class ParseMentorBox {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        //Instead of System.in, take the file to read
+        // Instead of System.in, take the file to read
 
         // Output File
-        //Surrounding with try catch!!
+        // Surrounding with try catch!!
         PrintWriter output = null;
         try {
             output = new PrintWriter(O_FILENAME);
@@ -57,7 +56,7 @@ public class ParseMentorBox {
         System.out.println("Total Titles found : " + titleCount);
         System.out.println("Total Subtitles found : " + subTitleCount);
 
-        //Close the File
+        // Close the File
         in.close();
         output.close();
     }

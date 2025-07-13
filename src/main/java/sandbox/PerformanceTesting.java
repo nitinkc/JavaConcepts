@@ -30,7 +30,8 @@ public class PerformanceTesting {
 
             // Perform a garbage collection to get more accurate memory usage
             System.gc();
-            long memoryUsed = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+            long memoryUsed =
+                    Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
             totalSumMemoryUsed += memoryUsed;
         }
 
@@ -45,7 +46,8 @@ public class PerformanceTesting {
 
             // Perform a garbage collection to get more accurate memory usage
             System.gc();
-            long memoryUsed = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+            long memoryUsed =
+                    Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
             totalConcatenationMemoryUsed += memoryUsed;
         }
 
@@ -60,25 +62,42 @@ public class PerformanceTesting {
 
             // Perform a garbage collection to get more accurate memory usage
             System.gc();
-            long memoryUsed = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+            long memoryUsed =
+                    Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
             totalFloatOperationsMemoryUsed += memoryUsed;
         }
 
-        double averageSumExecutionTimeInSeconds = totalSumExecutionTime / (iterations * 1_000_000_000.0);
-        double averageConcatenationExecutionTimeInSeconds = totalConcatenationExecutionTime / (iterations * 1_000_000_000.0);
-        double averageFloatOperationsExecutionTimeInSeconds = totalFloatOperationsExecutionTime / (iterations * 1_000_000_000.0);
+        double averageSumExecutionTimeInSeconds =
+                totalSumExecutionTime / (iterations * 1_000_000_000.0);
+        double averageConcatenationExecutionTimeInSeconds =
+                totalConcatenationExecutionTime / (iterations * 1_000_000_000.0);
+        double averageFloatOperationsExecutionTimeInSeconds =
+                totalFloatOperationsExecutionTime / (iterations * 1_000_000_000.0);
 
         double averageSumMemoryUsedInMB = totalSumMemoryUsed / (iterations * (1024.0 * 1024.0));
-        double averageConcatenationMemoryUsedInMB = totalConcatenationMemoryUsed / (iterations * (1024.0 * 1024.0));
-        double averageFloatOperationsMemoryUsedInMB = totalFloatOperationsMemoryUsed / (iterations * (1024.0 * 1024.0));
+        double averageConcatenationMemoryUsedInMB =
+                totalConcatenationMemoryUsed / (iterations * (1024.0 * 1024.0));
+        double averageFloatOperationsMemoryUsedInMB =
+                totalFloatOperationsMemoryUsed / (iterations * (1024.0 * 1024.0));
 
-        System.out.println("Average Sum Execution Time: " + averageSumExecutionTimeInSeconds + " seconds");
-        System.out.println("Average Concatenation Execution Time: " + averageConcatenationExecutionTimeInSeconds + " seconds");
-        System.out.println("Average Float Operations Execution Time: " + averageFloatOperationsExecutionTimeInSeconds + " seconds");
+        System.out.println(
+                "Average Sum Execution Time: " + averageSumExecutionTimeInSeconds + " seconds");
+        System.out.println(
+                "Average Concatenation Execution Time: "
+                        + averageConcatenationExecutionTimeInSeconds
+                        + " seconds");
+        System.out.println(
+                "Average Float Operations Execution Time: "
+                        + averageFloatOperationsExecutionTimeInSeconds
+                        + " seconds");
 
         System.out.println("Average Sum Memory Used: " + averageSumMemoryUsedInMB + " MB");
-        System.out.println("Average Concatenation Memory Used: " + averageConcatenationMemoryUsedInMB + " MB");
-        System.out.println("Average Float Operations Memory Used: " + averageFloatOperationsMemoryUsedInMB + " MB");
+        System.out.println(
+                "Average Concatenation Memory Used: " + averageConcatenationMemoryUsedInMB + " MB");
+        System.out.println(
+                "Average Float Operations Memory Used: "
+                        + averageFloatOperationsMemoryUsedInMB
+                        + " MB");
 
         // System.out.println("Result of string concatenation: " + result);
         System.out.println("Result of floating-point arithmetic: " + total);

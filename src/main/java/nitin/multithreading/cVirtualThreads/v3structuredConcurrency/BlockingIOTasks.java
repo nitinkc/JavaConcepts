@@ -1,11 +1,9 @@
 package nitin.multithreading.cVirtualThreads.v3structuredConcurrency;
 
 import com.github.javafaker.Faker;
-import lombok.AllArgsConstructor;
-
 import java.time.Duration;
 import java.util.concurrent.Callable;
-
+import lombok.AllArgsConstructor;
 import nitin.exceptionHandling.customizedExceptions.BusinessException;
 import nitin.multithreading.cVirtualThreads.v3structuredConcurrency.BlockingIOTasks.TaskResponse;
 
@@ -14,9 +12,9 @@ public class BlockingIOTasks implements Callable<TaskResponse> {
     private final String jobName;
     private final int time;
     private final boolean isSuccessful;
-    
+
     // Represents successful response of the Task
-    public record TaskResponse(String name, String response, long timeTaken) { }
+    public record TaskResponse(String name, String response, long timeTaken) {}
 
     // Executes when the executorService.submit(task) is run;
     @Override
@@ -24,19 +22,19 @@ public class BlockingIOTasks implements Callable<TaskResponse> {
         return getTaskResponse();
     }
 
-    //Body of the task which will be run on a separate Thread (mostly  Virtual Thread)
+    // Body of the task which will be run on a separate Thread (mostly  Virtual Thread)
     // It responds to interrupts and cleanly terminates on interruption or failure.
     private TaskResponse getTaskResponse() throws InterruptedException, BusinessException {
         logMessage("Start");
         long start = System.currentTimeMillis();
 
-        //Simulating long running task.
+        // Simulating long running task.
         for (int i = 1; i <= time; i++) {
-            if (Thread.interrupted()) {//Checking the interrupt
+            if (Thread.interrupted()) { // Checking the interrupt
                 throwInterruptedException();
             }
             logMessage("Working since.." + i + " seconds");
-            Thread.sleep(Duration.ofSeconds(1));//Time taken for some blocking io operation
+            Thread.sleep(Duration.ofSeconds(1)); // Time taken for some blocking io operation
         }
 
         /* simulate failure of task */
@@ -47,7 +45,7 @@ public class BlockingIOTasks implements Callable<TaskResponse> {
         logMessage("Complete");
         long end = System.currentTimeMillis();
 
-        //Simulating CPU intensive operation
+        // Simulating CPU intensive operation
         String fakeResponse = Faker.instance().harryPotter().character();
         return new TaskResponse(this.jobName, fakeResponse, end - start);
     }

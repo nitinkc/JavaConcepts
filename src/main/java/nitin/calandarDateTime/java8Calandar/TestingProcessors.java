@@ -13,25 +13,26 @@ public class TestingProcessors {
         ZonedDateTime time = ZonedDateTime.now();
         System.out.println(getTimesBasedOnCity(time, time.getOffset().getId()));
 
-
         String standardTimeFormat = "2024-03-10T04:00:00+00";
         ZonedDateTime zonedDateTime = ZonedDateTime.parse(standardTimeFormat);
         System.out.println(getTimesBasedOnCity(zonedDateTime, zonedDateTime.getOffset().getId()));
 
-        //If time is in any other format
+        // If time is in any other format
         String inputDateTimePattern = "yyyy-MM-dd HH:mm:ssZ";
         String timeInUserDefinedFormat = "2024-03-10 04:00:00+0530";
-        ZonedDateTime zonedDateTimeUserFormatted = ZonedDateTime
-                .parse(timeInUserDefinedFormat, DateTimeFormatter.ofPattern(inputDateTimePattern));
+        ZonedDateTime zonedDateTimeUserFormatted =
+                ZonedDateTime.parse(
+                        timeInUserDefinedFormat, DateTimeFormatter.ofPattern(inputDateTimePattern));
 
-        System.out.println(getTimesBasedOnCity(zonedDateTimeUserFormatted,
-                zonedDateTimeUserFormatted.getOffset().getId()));
+        System.out.println(
+                getTimesBasedOnCity(
+                        zonedDateTimeUserFormatted,
+                        zonedDateTimeUserFormatted.getOffset().getId()));
     }
 
     public static ZonedDateTime getTimesBasedOnCity(ZonedDateTime dateTime, String cityTimeZone) {
 
-        return dateTime
-                .with(LocalTime.MAX)
+        return dateTime.with(LocalTime.MAX)
                 .withZoneSameInstant(ZoneId.of(cityTimeZone))
                 .truncatedTo(ChronoUnit.MILLIS);
     }

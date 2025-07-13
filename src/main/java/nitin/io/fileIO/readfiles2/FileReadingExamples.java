@@ -1,7 +1,6 @@
 package nitin.io.fileIO.readfiles2;
 
 import com.config.Configs;
-
 import java.util.Arrays;
 import java.util.List;
 

@@ -4,7 +4,7 @@ public class PrintDigitChar {
     public static void main(String[] args) {
         int n = 532164327;
         System.out.println(n);
-        //printDigitCharZeroBase(5321);
+        // printDigitCharZeroBase(5321);
         printDigitChar(n);
     }
 

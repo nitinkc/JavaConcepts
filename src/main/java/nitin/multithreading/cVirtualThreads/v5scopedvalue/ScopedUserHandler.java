@@ -1,9 +1,8 @@
 package nitin.multithreading.cVirtualThreads.v5scopedvalue;
 
+import static com.utilities.MultiThreadUtility.logShortMessage;
 
 import nitin.multithreading.cVirtualThreads.Student;
-
-import static com.utilities.MultiThreadUtility.logShortMessage;
 
 public class ScopedUserHandler {
 
@@ -15,7 +14,7 @@ public class ScopedUserHandler {
             Student requestStudent = S1ScopedValue.studentScopedValue.get();
             logShortMessage("handle - User: " + requestStudent);
         }
-        
+
         return bound;
     }
 }

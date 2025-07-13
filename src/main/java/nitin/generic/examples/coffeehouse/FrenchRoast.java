@@ -20,6 +20,4 @@ public class FrenchRoast extends CoffeeType implements Dark {
     public List<String> getDescription() {
         return description;
     }
-
-
 }

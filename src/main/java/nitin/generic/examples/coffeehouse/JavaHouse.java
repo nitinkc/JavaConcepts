@@ -17,9 +17,7 @@ public class JavaHouse {
     List<CoffeeType> mediumTypes = new ArrayList<>();
     List<Light> lightTypes = new ArrayList<>();
 
-    public JavaHouse() {
-
-    }
+    public JavaHouse() {}
 
     /**
      * Return the total purchase list
@@ -75,8 +73,8 @@ public class JavaHouse {
     }
 
     /**
-     * Add a list of CoffeeSaleType objects to the purchase This List can
-     * consist of either bags or cups
+     * Add a list of CoffeeSaleType objects to the purchase This List can consist of either bags or
+     * cups
      *
      * @param <T>
      * @param saleList
@@ -88,8 +86,8 @@ public class JavaHouse {
     }
 
     /**
-     * A utility function to add all cups and bags purchased to the purchase
-     * list, and print out some useful labels.
+     * A utility function to add all cups and bags purchased to the purchase list, and print out
+     * some useful labels.
      */
     public void checkout() {
         System.out.println("Cups Purchased");
@@ -103,8 +101,7 @@ public class JavaHouse {
     }
 
     /**
-     * Prints the purchase out. Accepts Lists of CoffeeSaleType objects (bags or
-     * cups).
+     * Prints the purchase out. Accepts Lists of CoffeeSaleType objects (bags or cups).
      *
      * @param input
      */
@@ -115,26 +112,25 @@ public class JavaHouse {
     }
 
     /**
-     * Returns the number of purchase of type T. This method uses a stream on
-     * the purchase list, then filters upon the specified CoffeeType, and finally
-     * returns a count
+     * Returns the number of purchase of type T. This method uses a stream on the purchase list,
+     * then filters upon the specified CoffeeType, and finally returns a count
      *
      * @param <T>
      * @param coffeeType
      * @return
      */
     public <T> long countTypes(T coffeeType) {
-        long count = purchase.stream().filter(
-                        (sale) -> (sale.getType().getType().equals(coffeeType)))
-                .count();
+        long count =
+                purchase.stream()
+                        .filter((sale) -> (sale.getType().getType().equals(coffeeType)))
+                        .count();
         return count;
     }
 
     /**
-     * This method accepts a purchase list (List of CoffeeSaleTypes), and extracts
-     * the individual CoffeeType from each element within the purchase list.  It
-     * then determines if the CoffeeType is an instance of Dark, Medium, or Light,
-     * and places it into the appropriate container.
+     * This method accepts a purchase list (List of CoffeeSaleTypes), and extracts the individual
+     * CoffeeType from each element within the purchase list. It then determines if the CoffeeType
+     * is an instance of Dark, Medium, or Light, and places it into the appropriate container.
      *
      * @param coffeeSale
      */
@@ -157,6 +153,5 @@ public class JavaHouse {
         System.out.println("Number of Dark Types: " + darkTypes.size());
         System.out.println("Number of Medium Types: " + mediumTypes.size());
         System.out.println("Number of Light Types: " + lightTypes.size());
-
     }
 }

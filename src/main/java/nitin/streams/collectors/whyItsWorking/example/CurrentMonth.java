@@ -5,7 +5,6 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Data
-
 public class CurrentMonth {
     public String result0130;
     public String outside0130;

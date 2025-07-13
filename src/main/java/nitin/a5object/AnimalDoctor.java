@@ -39,5 +39,4 @@ public class AnimalDoctor {
             a.checkup();
         }
     }
-
 }

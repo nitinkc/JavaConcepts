@@ -3,7 +3,6 @@ package nitin.generic.examples.coffeehouse;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  * @author Juneau
  */
@@ -20,7 +19,4 @@ public class HouseBlend extends CoffeeType implements Light {
     public List<String> getDescription() {
         return description;
     }
-
-
 }
-

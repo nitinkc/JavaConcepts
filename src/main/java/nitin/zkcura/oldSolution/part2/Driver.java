@@ -10,7 +10,8 @@ public class Driver {
     public static final String CITIES_FILE = "Cities_By_Population.txt";
     public static final String INTERSTATES_FILE = "Interstates_By_City.txt";
     public static final String CITIES_FILE_REVERSED = "Cities_By_Population.txt";
-    //public static final String FILE_PATH = "src\\main\\java\\com\\nitin\\zkcura\\java8Solution\\";
+    // public static final String FILE_PATH =
+    // "src\\main\\java\\com\\nitin\\zkcura\\java8Solution\\";
     public static final String FILE_PATH = "src/main/java/com/nitin/zkcura/oldSolution/part2/";
 
     public static void main(String[] args) {
@@ -23,10 +24,10 @@ public class Driver {
         // fileName contains the name of the file containing initial Data.
         String fileName = args[0];
 
-        //Read the contents of the file and store locally
+        // Read the contents of the file and store locally
         File dataFile = new File(FILE_PATH + fileName);
 
-        //Read the File
+        // Read the File
         Scanner input = null;
         try {
             input = new Scanner(dataFile);
@@ -38,22 +39,22 @@ public class Driver {
         // To keep the data of the File into list of Objects
         List<Data> list = new ArrayList<Data>();
 
-        //Read from the File, assuming the file is properly sanitized
+        // Read from the File, assuming the file is properly sanitized
         while (input.hasNext()) {
-            //Split the tokens based on the delimiter "\"
+            // Split the tokens based on the delimiter "\"
             String[] temp = input.nextLine().split("\\|");
 
-            //Put the tokens into an Object of Data Class and continue making a List of Data Object
+            // Put the tokens into an Object of Data Class and continue making a List of Data Object
             Data tempData = new Data();
 
-            //Population in 100 thousands
+            // Population in 100 thousands
             tempData.setPopulation(Integer.parseInt(temp[0]));
 
             tempData.setCity(new City(temp[1], temp[2]));
 
             // Make a list of Interstates and Sort them for the convinience.
             String[] interstates = temp[3].split(";");
-            //Sort the interstates and then put into the Object
+            // Sort the interstates and then put into the Object
             Set<String> istates = new HashSet<String>();
             Collections.addAll(istates, interstates);
             tempData.setInterstates(istates);
@@ -61,7 +62,7 @@ public class Driver {
             list.add(tempData);
         }
 
-        //Option2
+        // Option2
         driver.printCitiesWithDistanceFromChicago(list);
 
         System.out.println("Program Terminates Successfully");
@@ -76,7 +77,7 @@ public class Driver {
                 chicagoData = data;
             }
         }
-        //citiesConnection.printAdjList();
+        // citiesConnection.printAdjList();
         BredthFirstTraversal traversal = new BredthFirstTraversal();
         traversal.traverseGraph(citiesConnection.getAdjList(), chicagoData);
         traversal.printList();
@@ -97,7 +98,7 @@ public class Driver {
         }
     }
 
-    //Method to Sort the Interstates
+    // Method to Sort the Interstates
     private List<String> sortInterstates(String[] interstates) {
         List<String> temp = Arrays.asList(interstates);
         Collections.sort(temp, new InterstateComparator());
@@ -105,4 +106,3 @@ public class Driver {
         return temp;
     }
 }
-

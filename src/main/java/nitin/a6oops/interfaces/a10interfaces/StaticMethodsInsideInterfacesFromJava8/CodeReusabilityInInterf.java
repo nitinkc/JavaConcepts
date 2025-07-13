@@ -11,7 +11,7 @@ interface Interf1 {
         // m3();
     }
 
-    //private methods
+    // private methods
     // java: private interface methods are not supported in -source 8
     /*private static void m3(){
         System.out.println("m3 for code reusability");
@@ -20,12 +20,9 @@ interface Interf1 {
     default void m4() {
         System.out.println("m4 Default method");
     }
-
 }
 
-/**
- * Created by Nitin Chaurasia on 1/31/18 at 9:24 PM.
- */
+/** Created by Nitin Chaurasia on 1/31/18 at 9:24 PM. */
 public class CodeReusabilityInInterf implements Interf1 {
     public static void main(String[] args) {
 

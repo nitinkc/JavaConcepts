@@ -12,15 +12,11 @@ public class MethodRefTypes {
 
         List<String> list = Arrays.asList(str2.split(","));
 
-        List<String> updatedList = list
-                .stream()
-                .map(String::toUpperCase)
-                .collect(Collectors.toList());
+        List<String> updatedList =
+                list.stream().map(String::toUpperCase).collect(Collectors.toList());
 
         System.out.println(updatedList);
 
         System.out.println(str1.concat(str2));
-
-
     }
 }

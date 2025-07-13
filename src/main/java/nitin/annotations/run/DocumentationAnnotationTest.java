@@ -6,8 +6,7 @@ import lombok.ToString;
         date = "Jan 02 2022",
         lastModified = "2024-08-22",
         lastModifiedBy = "John Doe",
-        reviewers = {"Alice", "Bob"}
-)
+        reviewers = {"Alice", "Bob"})
 @ToString
 public class DocumentationAnnotationTest {
 

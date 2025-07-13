@@ -11,13 +11,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class SimpleEmployee {
     private String name;
-    private String jobLevel;//level + exp + age
+    private String jobLevel; // level + exp + age
     private String salary;
 
     public void printMe() {
-        String sb = this.getName() + " " +
-                this.getJobLevel() + " " +
-                this.getSalary() + " ";
+        String sb = this.getName() + " " + this.getJobLevel() + " " + this.getSalary() + " ";
 
         System.out.println(sb);
     }

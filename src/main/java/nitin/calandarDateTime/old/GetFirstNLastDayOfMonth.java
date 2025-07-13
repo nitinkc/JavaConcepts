@@ -18,10 +18,10 @@ public class GetFirstNLastDayOfMonth {
         Calendar calendar = Calendar.getInstance();
         Date date = calendar.getTime();
 
-        //Find out the First day of the begin month
+        // Find out the First day of the begin month
         calendar.set(Calendar.YEAR, beginMonth - 1, 1);
 
-        //calendar.setTime(date);
+        // calendar.setTime(date);
         int day = calendar.getActualMinimum(Calendar.DAY_OF_MONTH);
         calendar.set(Calendar.DAY_OF_MONTH, day);
         return calendar.getTime();
@@ -34,12 +34,12 @@ public class GetFirstNLastDayOfMonth {
 
         calendar.set(Calendar.YEAR, endMonth - 1, 1);
 
-        //calendar.setTime(date);
+        // calendar.setTime(date);
         int day = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
         calendar.set(Calendar.DAY_OF_MONTH, day);
-        //calendar.set(Calendar.YEAR, year);
+        // calendar.set(Calendar.YEAR, year);
 
-        //return SimpleDateFormat("MM/dd/yyyy").format(calendar.getTime());
+        // return SimpleDateFormat("MM/dd/yyyy").format(calendar.getTime());
         return calendar.getTime();
     }
 }

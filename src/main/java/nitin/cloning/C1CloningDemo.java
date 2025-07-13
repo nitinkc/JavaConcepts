@@ -1,8 +1,6 @@
 package nitin.cloning;
 
-/**
- * Created by Nitin Chaurasia on 12/4/15 at 1:49 AM.
- */
+/** Created by Nitin Chaurasia on 12/4/15 at 1:49 AM. */
 public class C1CloningDemo {
 
     public static void main(String[] args) throws CloneNotSupportedException {
@@ -13,19 +11,15 @@ public class C1CloningDemo {
         Stock s = (Stock) obj.clone();
         System.out.println(obj.name + "   " + obj.price);
         System.out.println(s.name + "  " + s.price);
-
     }
 }
 
-/**
- * If the Cloneable Interface is not implemented it throws CloneNotSupportedException
- */
-
+/** If the Cloneable Interface is not implemented it throws CloneNotSupportedException */
 class Stock implements Cloneable {
     int price;
     String name;
 
-    //Constructor
+    // Constructor
     public Stock(int price, String name) {
         super();
         this.price = price;
@@ -51,7 +45,5 @@ class Stock implements Cloneable {
     // Compulsory Implemrntation
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
-
     }
-
 }

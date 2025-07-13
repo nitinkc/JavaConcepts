@@ -1,8 +1,6 @@
 package nitin.multithreading.raceCondition.bReentrantLocks;
 
-/**
- * Created by nitin.chaurasia on 12/26/2016.
- */
+/** Created by nitin.chaurasia on 12/26/2016. */
 public class cTryLockDemo {
     public static void main(String[] args) {
         /*
@@ -13,5 +11,4 @@ public class cTryLockDemo {
         t1.start(); t2.start();
          */
     }
-
 }

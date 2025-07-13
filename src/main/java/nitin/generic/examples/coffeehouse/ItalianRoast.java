@@ -27,5 +27,4 @@ public class ItalianRoast extends CoffeeType implements Dark {
     public List<String> getDescription() {
         return description;
     }
-
 }

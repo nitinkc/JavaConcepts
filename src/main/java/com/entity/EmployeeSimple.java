@@ -2,10 +2,7 @@ package com.entity;
 
 import lombok.*;
 
-/**
- * Created by nichaurasia on Thursday, February/13/2020 at 11:50 AM
- */
-
+/** Created by nichaurasia on Thursday, February/13/2020 at 11:50 AM */
 @Getter
 @Setter
 @AllArgsConstructor

@@ -5,9 +5,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * Created by nitin on 1/13/16.
- */
+/** Created by nitin on 1/13/16. */
 public class H1HashMapIterationDemo {
     public static void main(String[] args) {
         Map<Integer, String> map = new HashMap<Integer, String>();
@@ -26,12 +24,12 @@ public class H1HashMapIterationDemo {
         Iterator itr = keySet.iterator();
 
         // ***************** COMBINING ABOVE TWO*********************8
-        //Iterator itr = map.keySet().iterator();
+        // Iterator itr = map.keySet().iterator();
 
         while (itr.hasNext()) {
-            //Key is from the Set
+            // Key is from the Set
             int key = (int) itr.next();
-            //Value is from the Map
+            // Value is from the Map
             String value = map.get(key);
             System.out.print("Key = " + key);
             System.out.println("  Value = " + value);
@@ -43,7 +41,7 @@ public class H1HashMapIterationDemo {
         Set entry = map.entrySet();
         Iterator itr2 = entry.iterator();
         // Can be written as
-        //Iterator itr3 = (Iterator) map.entrySet();
+        // Iterator itr3 = (Iterator) map.entrySet();
 
         while (itr2.hasNext()) {
             Map.Entry me = (Map.Entry) itr2.next();

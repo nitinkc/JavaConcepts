@@ -12,7 +12,7 @@ public class PhoneFilter {
         if (obj == null || !(obj instanceof String)) {
             return false;
         }
-        //phone must match the regex pattern
+        // phone must match the regex pattern
         return !phonePattern.matcher(obj.toString()).matches();
     }
 }

@@ -1,14 +1,13 @@
 package com.utilities;
 
-import org.joda.time.DateTime;
-import org.joda.time.DateTimeConstants;
-
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeConstants;
 
 public class OldDateUtilities implements Serializable {
     private static final long serialVersionUID = -1L;
@@ -26,11 +25,13 @@ public class OldDateUtilities implements Serializable {
                 earlier.setTime(nullifyTime(d2));
                 later.setTime(nullifyTime(d1));
             }
-            diffrence = (later.get(Calendar.YEAR) - earlier.get(Calendar.YEAR))
-                    * 12
-                    + (later.get(Calendar.MONTH) - earlier.get(Calendar.MONTH))
-                    + (later.get(Calendar.DAY_OF_MONTH) >= earlier
-                    .get(Calendar.DAY_OF_MONTH) ? 0 : -1);
+            diffrence =
+                    (later.get(Calendar.YEAR) - earlier.get(Calendar.YEAR)) * 12
+                            + (later.get(Calendar.MONTH) - earlier.get(Calendar.MONTH))
+                            + (later.get(Calendar.DAY_OF_MONTH)
+                                            >= earlier.get(Calendar.DAY_OF_MONTH)
+                                    ? 0
+                                    : -1);
         }
         return diffrence;
     }
@@ -106,8 +107,9 @@ public class OldDateUtilities implements Serializable {
         } else {
             GregorianCalendar cal = new GregorianCalendar();
             cal.setTime(inDate);
-            cal.set(GregorianCalendar.DAY_OF_MONTH, cal
-                    .getActualMaximum(GregorianCalendar.DAY_OF_MONTH));
+            cal.set(
+                    GregorianCalendar.DAY_OF_MONTH,
+                    cal.getActualMaximum(GregorianCalendar.DAY_OF_MONTH));
             return nullifyTime(cal.getTime());
         }
     }
@@ -118,8 +120,9 @@ public class OldDateUtilities implements Serializable {
         } else {
             GregorianCalendar cal = new GregorianCalendar();
             cal.setTime(inDate);
-            cal.set(GregorianCalendar.DAY_OF_MONTH, cal
-                    .getActualMinimum(GregorianCalendar.DAY_OF_MONTH));
+            cal.set(
+                    GregorianCalendar.DAY_OF_MONTH,
+                    cal.getActualMinimum(GregorianCalendar.DAY_OF_MONTH));
             return nullifyTime(cal.getTime());
         }
     }
@@ -227,9 +230,7 @@ public class OldDateUtilities implements Serializable {
         return (new Timestamp(calendar.getTimeInMillis()));
     }
 
-    public static Timestamp addMonths(
-            Timestamp tsTimestamp1,
-            int iNoOfMonths) {
+    public static Timestamp addMonths(Timestamp tsTimestamp1, int iNoOfMonths) {
         Calendar calendar = new GregorianCalendar();
         calendar.setTime(tsTimestamp1);
         calendar.add(Calendar.MONTH, iNoOfMonths);
@@ -398,8 +399,7 @@ public class OldDateUtilities implements Serializable {
     public static Timestamp getLocalesDate() {
         Locale lCurrentLocale = new Locale("en", "US");
         String dateOut = null;
-        DateFormat dateFormatter =
-                DateFormat.getDateInstance(DateFormat.DEFAULT, lCurrentLocale);
+        DateFormat dateFormatter = DateFormat.getDateInstance(DateFormat.DEFAULT, lCurrentLocale);
         dateOut = dateFormatter.format(Calendar.getInstance().getTime());
         Timestamp tsLocalesDate = null;
         try {
@@ -414,7 +414,8 @@ public class OldDateUtilities implements Serializable {
         Locale lCurrentLocale = new Locale("en", "US");
         String dateOut = null;
         DateFormat dateFormatter =
-                DateFormat.getDateTimeInstance(DateFormat.DEFAULT, DateFormat.DEFAULT, lCurrentLocale);
+                DateFormat.getDateTimeInstance(
+                        DateFormat.DEFAULT, DateFormat.DEFAULT, lCurrentLocale);
         dateOut = dateFormatter.format(Calendar.getInstance().getTime());
         Timestamp tsLocalesDate = null;
         try {
@@ -426,18 +427,14 @@ public class OldDateUtilities implements Serializable {
     }
 
     public static java.math.BigDecimal getAgeInYearsNMonths(
-            Timestamp tsTimestamp1,
-            Timestamp tsTimestamp2) {
+            Timestamp tsTimestamp1, Timestamp tsTimestamp2) {
         int iAge = getMonthsBetween(tsTimestamp1, tsTimestamp2);
         Integer IAge = Integer.valueOf(iAge);
-        java.math.BigDecimal bdYear =
-                java.math.BigDecimal.valueOf(IAge.doubleValue() / 12.0);
+        java.math.BigDecimal bdYear = java.math.BigDecimal.valueOf(IAge.doubleValue() / 12.0);
         return bdYear;
     }
 
-    public static int getMonthsBetween(
-            Timestamp tsTimestamp1,
-            Timestamp tsTimestamp2) {
+    public static int getMonthsBetween(Timestamp tsTimestamp1, Timestamp tsTimestamp2) {
         Calendar calendarInstance1 = Calendar.getInstance();
         Calendar calendarInstance2 = Calendar.getInstance();
 
@@ -447,11 +444,8 @@ public class OldDateUtilities implements Serializable {
         Timestamp tsLateDate = (Timestamp) hmSetDates.get("dLateDate");
         calendarInstance1.setTime(tsEarlyDate);
         calendarInstance2.setTime(tsLateDate);
-        return (
-                (calendarInstance2.get(Calendar.YEAR) - calendarInstance1.get(Calendar.YEAR))
-                        * 12
-                        + (calendarInstance2.get(Calendar.MONTH)
-                        - calendarInstance1.get(Calendar.MONTH)));
+        return ((calendarInstance2.get(Calendar.YEAR) - calendarInstance1.get(Calendar.YEAR)) * 12
+                + (calendarInstance2.get(Calendar.MONTH) - calendarInstance1.get(Calendar.MONTH)));
     }
 
     public static Timestamp getTimeStampFromString(String YYYYMMDD) {
@@ -468,9 +462,7 @@ public class OldDateUtilities implements Serializable {
         return tsDate;
     }
 
-    public static long getDaysBetween(
-            Timestamp tsTimestamp1,
-            Timestamp tsTimestamp2) {
+    public static long getDaysBetween(Timestamp tsTimestamp1, Timestamp tsTimestamp2) {
         Calendar calendarInstance1 = Calendar.getInstance();
         Calendar calendarInstance2 = Calendar.getInstance();
 
@@ -553,11 +545,10 @@ public class OldDateUtilities implements Serializable {
             strDay = 29;
         } else if (nMonthIndex == 1) {
             strDay = 28;
-        } else if (
-                (nMonthIndex == 3)
-                        || (nMonthIndex == 5)
-                        || (nMonthIndex == 8)
-                        || (nMonthIndex == 10)) {
+        } else if ((nMonthIndex == 3)
+                || (nMonthIndex == 5)
+                || (nMonthIndex == 8)
+                || (nMonthIndex == 10)) {
             strDay = 30;
         } else {
             strDay = 31;
@@ -566,8 +557,7 @@ public class OldDateUtilities implements Serializable {
         return (new Timestamp(gregorianCalendar.getTimeInMillis()));
     }
 
-    public static Timestamp getLastDayOfPreviousMonth(
-            Timestamp tsTimestamp1) {
+    public static Timestamp getLastDayOfPreviousMonth(Timestamp tsTimestamp1) {
         GregorianCalendar gregorianCalendar = new GregorianCalendar();
 
         gregorianCalendar.setTime(tsTimestamp1);
@@ -585,11 +575,10 @@ public class OldDateUtilities implements Serializable {
             iLastDay = 29;
         } else if (iMonthIndex == 1) {
             iLastDay = 28;
-        } else if (
-                (iMonthIndex == 3)
-                        || (iMonthIndex == 5)
-                        || (iMonthIndex == 8)
-                        || (iMonthIndex == 10)) {
+        } else if ((iMonthIndex == 3)
+                || (iMonthIndex == 5)
+                || (iMonthIndex == 8)
+                || (iMonthIndex == 10)) {
             iLastDay = 30;
         } else {
             iLastDay = 31;
@@ -601,8 +590,7 @@ public class OldDateUtilities implements Serializable {
         return new Timestamp(gregorianCalendar.getTimeInMillis());
     }
 
-    public static Timestamp getLastDayOfCurrentMonth(
-            Timestamp tsTimestamp1) {
+    public static Timestamp getLastDayOfCurrentMonth(Timestamp tsTimestamp1) {
         GregorianCalendar gregorianCalendar = new GregorianCalendar();
 
         gregorianCalendar.setTime(tsTimestamp1);
@@ -620,11 +608,10 @@ public class OldDateUtilities implements Serializable {
             iLastDay = 29;
         } else if (iMonthIndex == 1) {
             iLastDay = 28;
-        } else if (
-                (iMonthIndex == 3)
-                        || (iMonthIndex == 5)
-                        || (iMonthIndex == 8)
-                        || (iMonthIndex == 10)) {
+        } else if ((iMonthIndex == 3)
+                || (iMonthIndex == 5)
+                || (iMonthIndex == 8)
+                || (iMonthIndex == 10)) {
             iLastDay = 30;
         } else {
             iLastDay = 31;
@@ -636,9 +623,7 @@ public class OldDateUtilities implements Serializable {
         return new Timestamp(gregorianCalendar.getTimeInMillis());
     }
 
-    public static ArrayList getMonthsArrayBetween(
-            Timestamp tsTimestamp1,
-            Timestamp tsTimestamp2) {
+    public static ArrayList getMonthsArrayBetween(Timestamp tsTimestamp1, Timestamp tsTimestamp2) {
         Calendar calendarInstance1 = Calendar.getInstance();
         Calendar calendarInstance2 = Calendar.getInstance();
 
@@ -701,9 +686,7 @@ public class OldDateUtilities implements Serializable {
         return arrayList1;
     }
 
-    public static int getMonthsIncludedBetween(
-            Timestamp tsTimestamp1,
-            Timestamp tsTimestamp2) {
+    public static int getMonthsIncludedBetween(Timestamp tsTimestamp1, Timestamp tsTimestamp2) {
         Calendar calendarInstance1 = Calendar.getInstance();
         Calendar calendarInstance2 = Calendar.getInstance();
 
@@ -712,11 +695,8 @@ public class OldDateUtilities implements Serializable {
         Timestamp tsLateDate = (Timestamp) hmSetDates.get("dLateDate");
         calendarInstance1.setTime(tsEarlyDate);
         calendarInstance2.setTime(tsLateDate);
-        return (
-                (calendarInstance2.get(Calendar.YEAR) - calendarInstance1.get(Calendar.YEAR))
-                        * 12
-                        + ((calendarInstance2.get(Calendar.MONTH)
-                        - calendarInstance1.get(Calendar.MONTH))
+        return ((calendarInstance2.get(Calendar.YEAR) - calendarInstance1.get(Calendar.YEAR)) * 12
+                + ((calendarInstance2.get(Calendar.MONTH) - calendarInstance1.get(Calendar.MONTH))
                         + 1));
     }
 
@@ -735,11 +715,12 @@ public class OldDateUtilities implements Serializable {
         gregorianCalendar.setTime(tsFromThisDate);
         int iDay = gregorianCalendar.get(Calendar.DATE);
         gregorianCalendar.set((Calendar.DATE), iDay - 1);
-        String sbPreviousDate = (gregorianCalendar.get(Calendar.MONTH) + 1) +
-                "-" +
-                gregorianCalendar.get(Calendar.DATE) +
-                "-" +
-                gregorianCalendar.get(Calendar.YEAR);
+        String sbPreviousDate =
+                (gregorianCalendar.get(Calendar.MONTH) + 1)
+                        + "-"
+                        + gregorianCalendar.get(Calendar.DATE)
+                        + "-"
+                        + gregorianCalendar.get(Calendar.YEAR);
         return sbPreviousDate;
     }
 
@@ -749,11 +730,12 @@ public class OldDateUtilities implements Serializable {
         gregorianCalendar.setTime(tsFromThisDate);
         int iDay = gregorianCalendar.get(Calendar.DATE);
         gregorianCalendar.set((Calendar.DATE), iDay - 1);
-        String sbPreviousDate = (gregorianCalendar.get(Calendar.MONTH) + 1) +
-                "/" +
-                gregorianCalendar.get(Calendar.DATE) +
-                "/" +
-                gregorianCalendar.get(Calendar.YEAR);
+        String sbPreviousDate =
+                (gregorianCalendar.get(Calendar.MONTH) + 1)
+                        + "/"
+                        + gregorianCalendar.get(Calendar.DATE)
+                        + "/"
+                        + gregorianCalendar.get(Calendar.YEAR);
         return sbPreviousDate;
     }
 
@@ -763,11 +745,12 @@ public class OldDateUtilities implements Serializable {
         gregorianCalendar.setTime(tsGivenTimestamp);
         int iMonth = gregorianCalendar.get(Calendar.MONTH);
         gregorianCalendar.set((Calendar.MONTH), iMonth - 1);
-        String sbPreviousMonth = (gregorianCalendar.get(Calendar.MONTH) + 1) +
-                "/" +
-                gregorianCalendar.get(Calendar.DATE) +
-                "/" +
-                gregorianCalendar.get(Calendar.YEAR);
+        String sbPreviousMonth =
+                (gregorianCalendar.get(Calendar.MONTH) + 1)
+                        + "/"
+                        + gregorianCalendar.get(Calendar.DATE)
+                        + "/"
+                        + gregorianCalendar.get(Calendar.YEAR);
         return sbPreviousMonth;
     }
 
@@ -780,8 +763,7 @@ public class OldDateUtilities implements Serializable {
     }
 
     public static int getYearsBetween(
-            java.sql.Timestamp tsYearsBetween1,
-            java.sql.Timestamp tsYearsBetween2) {
+            java.sql.Timestamp tsYearsBetween1, java.sql.Timestamp tsYearsBetween2) {
         Calendar calendarInstance1 = Calendar.getInstance();
         Calendar calendarInstance2 = Calendar.getInstance();
 
@@ -795,8 +777,7 @@ public class OldDateUtilities implements Serializable {
         iYearsBetweenDates =
                 calendarInstance2.get(Calendar.YEAR) - calendarInstance1.get(Calendar.YEAR);
         calendarInstance1.add(Calendar.YEAR, iYearsBetweenDates);
-        if ((calendarInstance1.getTime()).getTime()
-                > (calendarInstance2.getTime()).getTime()) {
+        if ((calendarInstance1.getTime()).getTime() > (calendarInstance2.getTime()).getTime()) {
             return (iYearsBetweenDates - 1);
         } else {
             return (iYearsBetweenDates);
@@ -830,9 +811,7 @@ public class OldDateUtilities implements Serializable {
         return (new Timestamp(calendar.getTimeInMillis()));
     }
 
-    public static Timestamp subMonths(
-            Timestamp tsTimestamp1,
-            int iNoOfMonths) {
+    public static Timestamp subMonths(Timestamp tsTimestamp1, int iNoOfMonths) {
 
         Calendar calendar = new GregorianCalendar();
 
@@ -878,11 +857,7 @@ public class OldDateUtilities implements Serializable {
         } else if (sMonth.equals("December")) {
             imonth = 12;
         }
-        String sbDate = imonth +
-                "/" +
-                iday +
-                "/" +
-                sYear;
+        String sbDate = imonth + "/" + iday + "/" + sYear;
         return getTimestamp(sbDate);
     }
 
@@ -933,8 +908,7 @@ public class OldDateUtilities implements Serializable {
     }
 
     private static HashMap setConvertedDates(
-            java.sql.Timestamp tsTimestamp1,
-            java.sql.Timestamp tsTimestamp2) {
+            java.sql.Timestamp tsTimestamp1, java.sql.Timestamp tsTimestamp2) {
 
         Timestamp dConvertedDate1 = null;
         Timestamp dConvertedDate2 = null;
@@ -1121,7 +1095,8 @@ public class OldDateUtilities implements Serializable {
         return sYYYYMM;
     }
 
-    public static boolean isRangeOverlapping(Timestamp[] datesToCompare, ArrayList<Timestamp[]> rangeDates) {
+    public static boolean isRangeOverlapping(
+            Timestamp[] datesToCompare, ArrayList<Timestamp[]> rangeDates) {
         Timestamp begDate = datesToCompare[0];
         Timestamp endDate = datesToCompare[1];
         if (endDate == null) {
@@ -1140,8 +1115,10 @@ public class OldDateUtilities implements Serializable {
             if (rangeEndDate == null) {
                 rangeEndDate = getDate("12312999");
             }
-            if ((dateGTEQDateInTimestamp(begDate, rangeBegDate) && dateLTEQDateInTimestamp(begDate, rangeEndDate))
-                    || (dateGTEQDateInTimestamp(endDate, rangeBegDate) && dateLTEQDateInTimestamp(endDate, rangeEndDate))) {
+            if ((dateGTEQDateInTimestamp(begDate, rangeBegDate)
+                            && dateLTEQDateInTimestamp(begDate, rangeEndDate))
+                    || (dateGTEQDateInTimestamp(endDate, rangeBegDate)
+                            && dateLTEQDateInTimestamp(endDate, rangeEndDate))) {
                 return true;
             }
         }
@@ -1210,32 +1187,31 @@ public class OldDateUtilities implements Serializable {
     public static List<Date> getLastNFridays(int n) throws ParseException {
         // create a Calendar for the 1st of the required month
         List<Date> lastNFridayDates = new ArrayList<>();
-        //Calendar cal = new GregorianCalendar(year, month, 1);
+        // Calendar cal = new GregorianCalendar(year, month, 1);
         Calendar calendar = Calendar.getInstance();
         int daysBackToFriday = 0;
-        //System.out.println(authTimestamp);
+        // System.out.println(authTimestamp);
         for (int i = 0; i < n; i++) {
             daysBackToFriday = calendar.get(Calendar.DAY_OF_WEEK) + 1;
             calendar.add(Calendar.DATE, daysBackToFriday * -1);
-            //System.out.println(sdf.format(calendar.getTime()));
+            // System.out.println(sdf.format(calendar.getTime()));
             lastNFridayDates.add(OldDateUtilities.nullifyTime(calendar.getTime()));
         }
         return lastNFridayDates;
     }
 
     public static List<DateTime> findLastNFridaysJodaTime(int N) {
-        if (N < 1)
-            return null;
+        if (N < 1) return null;
 
         List<DateTime> ret = new ArrayList<DateTime>();
         DateTime today = DateTime.now();
         DateTime sameDayLastWeek = today.minusWeeks(1);
 
-        //Friday of last week
+        // Friday of last week
         DateTime fridayOfWeek = sameDayLastWeek.withDayOfWeek(DateTimeConstants.FRIDAY);
-        //DateTime saturdayOfLastWeek = fridayOfWeek.plusDays(1);
+        // DateTime saturdayOfLastWeek = fridayOfWeek.plusDays(1);
         ret.add(fridayOfWeek);
-        //ret.add(saturdayOfLastWeek);
+        // ret.add(saturdayOfLastWeek);
         for (int i = 0; i < N - 1; i++) {
             fridayOfWeek = fridayOfWeek.minusWeeks(1);
             ret.add(fridayOfWeek);

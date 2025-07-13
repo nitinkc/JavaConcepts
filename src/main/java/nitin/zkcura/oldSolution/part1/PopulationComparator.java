@@ -4,11 +4,10 @@ import java.util.Comparator;
 
 /**
  * Created by Nitin Chaurasia on 11/10/15
- * <p>
- * Sort the List of Objects based on the Population
- * If there is a tie in the Population, Sorting is performed
- * first by the alphabetical order of the States and
- * the by the alphabetical order of the Cities
+ *
+ * <p>Sort the List of Objects based on the Population If there is a tie in the Population, Sorting
+ * is performed first by the alphabetical order of the States and the by the alphabetical order of
+ * the Cities
  */
 public class PopulationComparator implements Comparator<Data> {
 
@@ -21,7 +20,7 @@ public class PopulationComparator implements Comparator<Data> {
         if (obj1 == obj2) {
             return EQUAL;
         } else if (obj1.getPopulation() < obj2.getPopulation()) {
-            //Reverse Sorting as per the requirement
+            // Reverse Sorting as per the requirement
             return BIGGER;
         } else if (obj1.getPopulation() == obj2.getPopulation()) {
             return compareStates(obj1, obj2);
@@ -29,7 +28,6 @@ public class PopulationComparator implements Comparator<Data> {
             return SMALLER;
         }
     }
-
 
     // Sorting based on alphabetical order of States (iff population is Same)
     private int compareStates(Data obj1, Data obj2) {
@@ -49,8 +47,10 @@ public class PopulationComparator implements Comparator<Data> {
         } else if (obj1.getCity().compareTo(obj2.getCity()) < 0) {
             return SMALLER;
         } else {
-            // We will never meet this condition since as per assumptions, the input file will not contain same cities
-            throw new IllegalArgumentException("Both Cities are same: " + obj1.getCity() + ", " + obj2.getCity());
+            // We will never meet this condition since as per assumptions, the input file will not
+            // contain same cities
+            throw new IllegalArgumentException(
+                    "Both Cities are same: " + obj1.getCity() + ", " + obj2.getCity());
         }
     }
 }

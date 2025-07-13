@@ -1,4 +1,3 @@
 package nitin.multithreading.tests;
 
-public class Test {
-}
+public class Test {}

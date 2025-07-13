@@ -1,20 +1,17 @@
 package nitin.multithreading.raceCondition.bReentrantLocks;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
-import java.util.concurrent.locks.ReadWriteLock;
 
 import static com.utilities.MultiThreadUtility.logShortMessage;
 
-/**
- * Created by Nitin C on 12/5/2015.
- * Modified on Aug 11 2024
- */
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
+/** Created by Nitin C on 12/5/2015. Modified on Aug 11 2024 */
 public class C2ReadWriteLock {
     private final ReadWriteLock lock = new ReentrantReadWriteLock();
     Lock readLock = lock.readLock();
     Lock writeLock = lock.writeLock();
-    private int value = 0;//Shared Resource
+    private int value = 0; // Shared Resource
 
     public static void main(String[] args) {
         C2ReadWriteLock example = new C2ReadWriteLock();

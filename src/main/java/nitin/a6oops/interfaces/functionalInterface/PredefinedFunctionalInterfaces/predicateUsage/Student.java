@@ -2,9 +2,7 @@ package nitin.a6oops.interfaces.functionalInterface.PredefinedFunctionalInterfac
 
 import java.util.List;
 
-/**
- * Created by synergisticit on 2/25/2016.
- */
+/** Created by synergisticit on 2/25/2016. */
 public class Student {
     int id;
     String fName;
@@ -14,7 +12,14 @@ public class Student {
     short sem;
     List<String> subjects;
 
-    public Student(int id, String fName, String lName, String fathersFullName, String deptCode, short sem, List<String> subjects) {
+    public Student(
+            int id,
+            String fName,
+            String lName,
+            String fathersFullName,
+            String deptCode,
+            short sem,
+            List<String> subjects) {
         this.id = id;
         this.fName = fName;
         this.lName = lName;
@@ -26,15 +31,26 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", fName='" + fName + '\'' +
-                ", lName='" + lName + '\'' +
-                ", fathersFullName='" + fathersFullName + '\'' +
-                ", deptCode='" + deptCode + '\'' +
-                ", sem=" + sem +
-                ", subjects=" + subjects +
-                '}';
+        return "Student{"
+                + "id="
+                + id
+                + ", fName='"
+                + fName
+                + '\''
+                + ", lName='"
+                + lName
+                + '\''
+                + ", fathersFullName='"
+                + fathersFullName
+                + '\''
+                + ", deptCode='"
+                + deptCode
+                + '\''
+                + ", sem="
+                + sem
+                + ", subjects="
+                + subjects
+                + '}';
     }
 
     public int getId() {

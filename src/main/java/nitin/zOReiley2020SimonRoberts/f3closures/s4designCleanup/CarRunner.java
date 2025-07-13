@@ -7,18 +7,19 @@ import java.util.List;
 class CarRunner {
 
     public static void main(String[] args) {
-        List<Car> cars = Arrays.asList(
-                //Calling static Factories
-                Car.withGasColorPassengers(6, "Red", "Fred", "Jim", "Sheila"),
-                Car.withGasColorPassengers(3, "Octarine", "Rincewind", "Ridcully"),
-                Car.withGasColorPassengers(9, "Black", "Weatherwax", "Magrat"),
-                Car.withGasColorPassengers(7, "Green", "Valentine", "Gillian", "Anne", "Dr. Mahmoud"),
-                Car.withGasColorPassengers(6, "Red", "Ender", "Hyrum", "Locke", "Bonzo")
-        );
+        List<Car> cars =
+                Arrays.asList(
+                        // Calling static Factories
+                        Car.withGasColorPassengers(6, "Red", "Fred", "Jim", "Sheila"),
+                        Car.withGasColorPassengers(3, "Octarine", "Rincewind", "Ridcully"),
+                        Car.withGasColorPassengers(9, "Black", "Weatherwax", "Magrat"),
+                        Car.withGasColorPassengers(
+                                7, "Green", "Valentine", "Gillian", "Anne", "Dr. Mahmoud"),
+                        Car.withGasColorPassengers(6, "Red", "Ender", "Hyrum", "Locke", "Bonzo"));
 
-        //Calling Utility Method
+        // Calling Utility Method
         System.out.println("************ ALL CARS ************");
-        //showAll(cars);
+        // showAll(cars);
 
         System.out.println("************ getColorCriteria with varArg ************");
         showAll(getByCriteria(cars, Car.getColorCriteria("Red", "Green")));
@@ -37,14 +38,13 @@ class CarRunner {
         System.out.println("************ red Or Level 7 ************");
         Criteria<Car> redORlevel7 = isRed.or(level7);
         showAll(getByCriteria(cars, redORlevel7));
-
     }
 
-    //The Type declaration of the Generic Variable is placed immediately before the Return Type
+    // The Type declaration of the Generic Variable is placed immediately before the Return Type
     private static <E> List<E> getByCriteria(Iterable<E> iter, Criteria<E> criteria) {
         List<E> returnCars = new ArrayList<>();
         for (E c : iter) {
-            //Passing the criteria based on the users input
+            // Passing the criteria based on the users input
             if (criteria.test(c)) {
                 returnCars.add(c);
             }

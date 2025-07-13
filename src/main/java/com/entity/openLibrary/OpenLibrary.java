@@ -6,9 +6,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.*;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-        "ISBN"
-})
+@JsonPropertyOrder({"ISBN"})
 @Getter
 @Setter
 @AllArgsConstructor
@@ -19,5 +17,4 @@ public class OpenLibrary {
 
     @JsonProperty("ISBN")
     public Isbn isbn;
-
 }

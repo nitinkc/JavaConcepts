@@ -1,8 +1,8 @@
 package nitin.multithreading.bFuturesAndCompletableFutures.completableFutureBasics;
 
-import java.util.concurrent.CompletableFuture;
-
 import static com.utilities.MultiThreadUtility.delay;
+
+import java.util.concurrent.CompletableFuture;
 
 public class A4CompleteExceptionally {
     public static void main(String[] args) {
@@ -16,8 +16,11 @@ public class A4CompleteExceptionally {
         System.out.println("Pipeline is built....");
 
         delay(1000);
-        future.completeExceptionally(new RuntimeException("don't write such code"));//Evaluates lazily. The pipeline executes from this point on
-        //future.complete(2);
+        future.completeExceptionally(
+                new RuntimeException(
+                        "don't write such code")); // Evaluates lazily. The pipeline executes from
+        // this point on
+        // future.complete(2);
         delay(1000);
     }
 

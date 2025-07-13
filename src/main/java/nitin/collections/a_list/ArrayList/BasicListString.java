@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/**
- * Created by synergisticit on 2/25/2016.
- */
+/** Created by synergisticit on 2/25/2016. */
 public class BasicListString {
     public static void main(String[] args) {
 
@@ -24,18 +22,18 @@ public class BasicListString {
         list.add("luluo");
 
         // Ordering not guarenteed in HashSet
-        //Set<Integer> b_set = new TreeSet<Integer>();
+        // Set<Integer> b_set = new TreeSet<Integer>();
 
         // How to Add
-        //addSet(b_set);
+        // addSet(b_set);
         System.out.println("Longest string is=" + findlongestString(list));
 
-        //How to Iterate
+        // How to Iterate
         printSet(list);
 
-        //How to Remove
+        // How to Remove
 
-        //printSet(b_set);
+        // printSet(b_set);
 
     }
 
@@ -48,31 +46,21 @@ public class BasicListString {
             if (curr.length() >= temp) {
                 temp = curr.length();
                 ret = curr;
-
             }
         }
         return ret;
-
     }
 
-    /**
-     * 3 main methids of iterator
-     * 1. hasNext()
-     * 2. next()
-     * 3. remove()
-     */
+    /** 3 main methids of iterator 1. hasNext() 2. next() 3. remove() */
     private static void printSet(List<String> list) {
-        //Printing with Iterator
+        // Printing with Iterator
         Iterator itr = list.iterator();
-        //From this point on, DO NOT USE b_set.get or b_set.remove!!
+        // From this point on, DO NOT USE b_set.get or b_set.remove!!
         // USE ONLY ITERATOR
         while (itr.hasNext()) {
 
             System.out.print(itr.next() + " ");
         }
         System.out.println();
-
     }
-
-
 }

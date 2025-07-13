@@ -4,13 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by nitin on 1/13/16.
- * ArrayList arrayList=new ArrayList(11);
- * ArrayList Initial Size 10; Later incremented by 3/2 + 1
- * Vector Initial Size 16; Incremented by 2X
- * <p>
- * list.remove() --> ConcurrentModificationException id used with Iterator
- * itr.remove() --> correct way to remove
+ * Created by nitin on 1/13/16. ArrayList arrayList=new ArrayList(11); ArrayList Initial Size 10;
+ * Later incremented by 3/2 + 1 Vector Initial Size 16; Incremented by 2X
+ *
+ * <p>list.remove() --> ConcurrentModificationException id used with Iterator itr.remove() -->
+ * correct way to remove
  */
 public class L3RemoveElementsUsingForEachRemove {
     public static void main(String[] args) {
@@ -21,18 +19,20 @@ public class L3RemoveElementsUsingForEachRemove {
         list.add("D");
         list.add("E");
 
-        list.remove(2);// Removing the element, from anywhere
+        list.remove(2); // Removing the element, from anywhere
 
-        System.out.println("******************* LIST BEFORE REMOVAL ***************************** ");
+        System.out.println(
+                "******************* LIST BEFORE REMOVAL ***************************** ");
         System.out.println(list);
 
-        System.out.println("******************* LIST DURING REMOVAL ***************************** ");
+        System.out.println(
+                "******************* LIST DURING REMOVAL ***************************** ");
         // Removing the elements from the a_list
 
-        //FOR EACH is a Read Only Loop, so it will end in ConCurrent modification exception
+        // FOR EACH is a Read Only Loop, so it will end in ConCurrent modification exception
         for (String str : list) {
             System.out.println(str);
-            list.remove(str);//ConcurrentModificationException
+            list.remove(str); // ConcurrentModificationException
         }
 
         System.out.println("******************* LIST AFTER REMOVAL ***************************** ");
