@@ -16,6 +16,6 @@ import lombok.Setter;
 @Setter
 public class Resource {
 
-    @JsonProperty("primary")
-    public Primary primary;
+  @JsonProperty("primary")
+  public Primary primary;
 }

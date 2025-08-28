@@ -12,8 +12,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SomeStats {
-    private String eventid;
-    private String eventType;
-    private String timeDtDisplay;
-    private String eventsComments;
+  private String eventid;
+  private String eventType;
+  private String timeDtDisplay;
+  private String eventsComments;
 }

@@ -18,15 +18,15 @@ import lombok.Setter;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CrossRef {
 
-    @JsonProperty("status")
-    public String status;
+  @JsonProperty("status")
+  public String status;
 
-    @JsonProperty("message-type")
-    public String messageType;
+  @JsonProperty("message-type")
+  public String messageType;
 
-    @JsonProperty("message-version")
-    public String messageVersion;
+  @JsonProperty("message-version")
+  public String messageVersion;
 
-    @JsonProperty("message")
-    public Message message;
+  @JsonProperty("message")
+  public Message message;
 }

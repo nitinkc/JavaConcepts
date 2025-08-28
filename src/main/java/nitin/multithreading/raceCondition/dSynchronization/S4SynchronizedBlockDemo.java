@@ -7,5 +7,6 @@ package nitin.multithreading.raceCondition.dSynchronization;
  * Synchronized(classname.class) - To get a class level Lock
  */
 public class S4SynchronizedBlockDemo {
-    public static void main(String[] args) {}
+  public static void main(String[] args) {
+  }
 }

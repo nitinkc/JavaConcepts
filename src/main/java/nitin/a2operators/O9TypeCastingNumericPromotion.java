@@ -9,31 +9,31 @@ package nitin.a2operators;
  * precision/info.
  */
 public class O9TypeCastingNumericPromotion {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        /***** Implicit Type Casting *****/
-        // byte(1B) -> short(2B) -> int(4B) -> long(4B) -> float(4B) -> double(8B)
-        double d = 10;
-        System.out.println(d); // compiler converts int 10, to double automatically
+    /***** Implicit Type Casting *****/
+    // byte(1B) -> short(2B) -> int(4B) -> long(4B) -> float(4B) -> double(8B)
+    double d = 10;
+    System.out.println(d); // compiler converts int 10, to double automatically
 
-        // char(2B) -> int(4B) -> long(4B) -> float(4B) -> double(8B)
-        int i = 'a';
-        System.out.println(i); // compiler converts char to int automatically
+    // char(2B) -> int(4B) -> long(4B) -> float(4B) -> double(8B)
+    int i = 'a';
+    System.out.println(i); // compiler converts char to int automatically
 
-        /***** explicit Type Casting *****/
-        // byte(1B) <- short(2B) <- int(4B) <- long(4B) <- float(4B) <- double(8B)
-        byte b = (byte) 130; // Most Significant bit is lost
-        System.out.println(b); // See notes for the detailed explanation
+    /***** explicit Type Casting *****/
+    // byte(1B) <- short(2B) <- int(4B) <- long(4B) <- float(4B) <- double(8B)
+    byte b = (byte) 130; // Most Significant bit is lost
+    System.out.println(b); // See notes for the detailed explanation
 
-        int j = 150;
-        short s = (short) j;
-        System.out.println(s); // 150
+    int j = 150;
+    short s = (short) j;
+    System.out.println(s); // 150
 
-        // Double : digits after the decimal points are lost
-        double x = 130.456;
-        int y = (int) x;
-        byte z = (byte) x;
-        System.out.println(y); // 130
-        System.out.println(z); // -126
-    }
+    // Double : digits after the decimal points are lost
+    double x = 130.456;
+    int y = (int) x;
+    byte z = (byte) x;
+    System.out.println(y); // 130
+    System.out.println(z); // -126
+  }
 }

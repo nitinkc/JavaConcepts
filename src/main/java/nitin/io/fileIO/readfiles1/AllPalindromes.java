@@ -11,15 +11,15 @@ import nitin.io.fileIO.strings.StringUtils;
  * where code is placed directly in "main".
  */
 public class AllPalindromes {
-    public static void main(String[] args) {
-        String inputFile = Configs.ENABLE1_WORD_LIST_PATH;
+  public static void main(String[] args) {
+    String inputFile = Configs.ENABLE1_WORD_LIST_PATH;
 
-        try {
-            Files.lines(Paths.get(inputFile))
-                    .filter(StringUtils::isPalindrome)
-                    .forEach(System.out::println);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    try {
+      Files.lines(Paths.get(inputFile))
+        .filter(StringUtils::isPalindrome)
+        .forEach(System.out::println);
+    } catch (IOException e) {
+      e.printStackTrace();
     }
+  }
 }

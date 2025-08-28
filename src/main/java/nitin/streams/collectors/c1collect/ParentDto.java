@@ -12,6 +12,6 @@ import lombok.ToString;
 @ToString
 public class ParentDto {
 
-    private List<String> stringList;
-    private List<Integer> integerList;
+  private List<String> stringList;
+  private List<Integer> integerList;
 }

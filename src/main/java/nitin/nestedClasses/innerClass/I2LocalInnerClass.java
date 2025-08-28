@@ -9,26 +9,26 @@ package nitin.nestedClasses.innerClass;
  * effectively final
  */
 public class I2LocalInnerClass {
-    int length = 5;
+  int length = 5;
 
-    public static void main(String[] args) {
-        I2LocalInnerClass outer = new I2LocalInnerClass();
-        outer.calculate();
+  public static void main(String[] args) {
+    I2LocalInnerClass outer = new I2LocalInnerClass();
+    outer.calculate();
+  }
+
+  public void calculate() {
+
+    int width = 20; // Effectively final local variable, as it is not reassigned
+    // width = 30; error as effectively final or only final variables are allowed inside inner
+    // class
+    length = 6; // Re assignment of instance variable
+
+    class Inner {
+      public void area() {
+        System.out.println(length * width);
+      }
     }
-
-    public void calculate() {
-
-        int width = 20; // Effectively final local variable, as it is not reassigned
-        // width = 30; error as effectively final or only final variables are allowed inside inner
-        // class
-        length = 6; // Re assignment of instance variable
-
-        class Inner {
-            public void area() {
-                System.out.println(length * width);
-            }
-        }
-        Inner inner = new Inner();
-        inner.area(); // Calling the area() of the inner with the method of the
-    }
+    Inner inner = new Inner();
+    inner.area(); // Calling the area() of the inner with the method of the
+  }
 }

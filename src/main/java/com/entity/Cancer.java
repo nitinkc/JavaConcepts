@@ -1,8 +1,15 @@
 package com.entity;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
-/** Created by nichaurasia on Wednesday, January/29/2020 at 6:24 PM */
+/**
+ * Created by nichaurasia on Wednesday, January/29/2020 at 6:24 PM
+ */
 @Getter
 @Setter
 @AllArgsConstructor
@@ -10,12 +17,12 @@ import lombok.*;
 @ToString
 @EqualsAndHashCode
 public class Cancer {
-    private String state; // 0
-    private String cancer_sites;
-    private int Year; // 2
-    private String sex;
-    private String race; // 2
-    private float count; // 5
-    private int population;
-    private float age_adj_Rate;
+  private String state; // 0
+  private String cancer_sites;
+  private int Year; // 2
+  private String sex;
+  private String race; // 2
+  private float count; // 5
+  private int population;
+  private float age_adj_Rate;
 }

@@ -5,32 +5,32 @@ package nitin.nestedClasses.innerClass;
  * name Inner Class can only be accessed only through live instance of outer class
  */
 interface Demo {
-    void show();
+  void show();
 }
 
 public class I3AnonymousClassDemo {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Demo demo = new Demo() { // Anonymous Class
-                    public void show() {
-                        System.out.println("Show from Anonymous class...");
-                    }
-                };
+    Demo demo = new Demo() { // Anonymous Class
+      public void show() {
+        System.out.println("Show from Anonymous class...");
+      }
+    };
 
-        I3AnonymousClassDemo ref = new I3AnonymousClassDemo() { // Anonymous inner Class
-                    public void data() {
-                        System.out.println("Anonymous Inner Class...");
-                    }
+    I3AnonymousClassDemo ref = new I3AnonymousClassDemo() { // Anonymous inner Class
+      public void data() {
+        System.out.println("Anonymous Inner Class...");
+      }
 
-                    public void display() {
-                        System.out.println("Display of Outer...");
-                    }
-                };
-        ref.data();
-        demo.show();
-    }
+      public void display() {
+        System.out.println("Display of Outer...");
+      }
+    };
+    ref.data();
+    demo.show();
+  }
 
-    public void data() {
-        System.out.println("Outer Class");
-    }
+  public void data() {
+    System.out.println("Outer Class");
+  }
 }

@@ -10,13 +10,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SimpleEmployee {
-    private String name;
-    private String jobLevel; // level + exp + age
-    private String salary;
+  private String name;
+  private String jobLevel; // level + exp + age
+  private String salary;
 
-    public void printMe() {
-        String sb = this.getName() + " " + this.getJobLevel() + " " + this.getSalary() + " ";
+  public void printMe() {
+    String sb = this.getName() + " " + this.getJobLevel() + " " + this.getSalary() + " ";
 
-        System.out.println(sb);
-    }
+    System.out.println(sb);
+  }
 }

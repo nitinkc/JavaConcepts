@@ -11,4 +11,5 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Facets {}
+public class Facets {
+}

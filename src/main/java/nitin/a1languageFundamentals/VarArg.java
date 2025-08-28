@@ -7,28 +7,28 @@ package nitin.a1languageFundamentals;
  * implemented by 1D Array var-arg will get least priority. similar to default in Switch
  */
 public class VarArg {
-    public static void main(String[] args) {
-        varArgMethod(10); // non var agr gets priority
-        varArgMethod(10, 20);
-        varArgMethod(10, 20, 30);
-        varArgMultiple("Nitin", 10, 20);
-    }
+  public static void main(String[] args) {
+    varArgMethod(10); // non var agr gets priority
+    varArgMethod(10, 20);
+    varArgMethod(10, 20, 30);
+    varArgMultiple("Nitin", 10, 20);
+  }
 
-    // non var arg method
-    static void varArgMethod(int x) {
-        System.out.println(x);
-    }
+  // non var arg method
+  static void varArgMethod(int x) {
+    System.out.println(x);
+  }
 
-    // Variable number of arguments including zero
-    static void varArgMethod(int... x) {
-        System.out.println("From Var Arg. Stores the argument in an array");
-        System.out.println(x.length);
-    }
+  // Variable number of arguments including zero
+  static void varArgMethod(int... x) {
+    System.out.println("From Var Arg. Stores the argument in an array");
+    System.out.println(x.length);
+  }
 
-    static void varArgMultiple(String name, float... y) {
-        System.out.println(name);
-        for (float i : y) {
-            System.out.println(i);
-        }
+  static void varArgMultiple(String name, float... y) {
+    System.out.println(name);
+    for (float i : y) {
+      System.out.println(i);
     }
+  }
 }

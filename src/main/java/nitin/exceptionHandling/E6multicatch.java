@@ -17,35 +17,35 @@ import java.time.LocalDate;
  * <p>Multi-catch is effectively final
  */
 public class E6multicatch {
-    public static void main(String[] args) {
-        String filePath = "src/main/resources/test.txt";
-        String writeMe = "Testing";
-        readFile(filePath, writeMe);
-        // ---------------
-        Path path = Paths.get("text.txt");
-        String text = null;
-        try {
-            text = new String(Files.readAllBytes(path));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        LocalDate date = LocalDate.parse(text);
-        System.out.println(date);
+  public static void main(String[] args) {
+    String filePath = "src/main/resources/test.txt";
+    String writeMe = "Testing";
+    readFile(filePath, writeMe);
+    // ---------------
+    Path path = Paths.get("text.txt");
+    String text = null;
+    try {
+      text = new String(Files.readAllBytes(path));
+    } catch (IOException e) {
+      e.printStackTrace();
     }
+    LocalDate date = LocalDate.parse(text);
+    System.out.println(date);
+  }
 
-    public static Integer readFile(String path, String writeMe) {
+  public static Integer readFile(String path, String writeMe) {
 
-        // Try with Resource
-        try (ObjectOutputStream oos =
-                new ObjectOutputStream(new FileOutputStream(new File(path)))) {
-            writeMe = writeMe + " :: " + 1;
-            oos.writeObject(writeMe);
+    // Try with Resource
+    try (ObjectOutputStream oos =
+           new ObjectOutputStream(new FileOutputStream(new File(path)))) {
+      writeMe = writeMe + " :: " + 1;
+      oos.writeObject(writeMe);
 
-        } catch (IOException | ArithmeticException e) {
-            e.printStackTrace();
-        } finally {
-            System.out.println("Always Run this as well");
-        }
-        return null;
+    } catch (IOException | ArithmeticException e) {
+      e.printStackTrace();
+    } finally {
+      System.out.println("Always Run this as well");
     }
+    return null;
+  }
 }

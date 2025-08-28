@@ -15,13 +15,14 @@ import lombok.NoArgsConstructor;
 @Table(name = RefTable.NAME)
 public class RefTable extends ReferenceDataAuditFields {
 
-    public static final String NAME = "REF_TABLE";
-    @Serial private static final long serialVersionUID = -6116147807948969283L;
+  public static final String NAME = "REF_TABLE";
+  @Serial
+  private static final long serialVersionUID = -6116147807948969283L;
 
-    // @PrimaryKey
-    @Column(name = "CODE_ID", nullable = false)
-    private String codeId;
+  // @PrimaryKey
+  @Column(name = "CODE_ID", nullable = false)
+  private String codeId;
 
-    @Column(name = "DISPLAY_NAME", nullable = false)
-    private String displayName;
+  @Column(name = "DISPLAY_NAME", nullable = false)
+  private String displayName;
 }

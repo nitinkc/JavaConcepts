@@ -13,12 +13,12 @@ import java.util.List;
  * reading examples that used Files.lines, which work only in Java 8.
  */
 public class WriteFile1 {
-    public static void main(String[] args) throws IOException {
-        Charset characterSet = Charset.defaultCharset();
-        Path path =
-                Paths.get(
-                        "src/main/java/nitin/zCoreServletsTraining/t4FileIO/fileIO/file-write-test.txt");
-        List<String> lines = Arrays.asList("Line One", "Line Two", "Final Line");
-        Files.write(path, lines, characterSet);
-    }
+  public static void main(String[] args) throws IOException {
+    Charset characterSet = Charset.defaultCharset();
+    Path path =
+      Paths.get(
+        "src/main/java/nitin/zCoreServletsTraining/t4FileIO/fileIO/file-write-test.txt");
+    List<String> lines = Arrays.asList("Line One", "Line Two", "Final Line");
+    Files.write(path, lines, characterSet);
+  }
 }

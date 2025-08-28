@@ -11,39 +11,39 @@ import java.util.Queue;
  * specified element from this queue, if it is present.
  */
 public class QueueExample {
-    public static void main(String[] args) {
-        Queue<Integer> q = new LinkedList<>();
+  public static void main(String[] args) {
+    Queue<Integer> q = new LinkedList<>();
 
-        for (int i = 0; i < 10; i++) {
-            q.add(i);
-        }
-
-        System.out.println(
-                "Peek at the element at the head without taking the element out of the queue with element method");
-        // peek at the element at the head without taking the element out of the queue
-        // element() method
-        System.out.println(q.element());
-
-        System.out.println("After Polling");
-        for (int i : q) {
-            System.out.print(i + "\t");
-        }
-
-        q.remove();
-        q.poll();
-
-        // To remove element, u
-        System.out.println();
-        Iterator<Integer> itr = q.iterator();
-        while (itr.hasNext()) {
-            int element = itr.next();
-            {
-                if (element == 6) {
-                    itr.remove();
-                    continue;
-                }
-                System.out.print(element + "\t");
-            }
-        }
+    for (int i = 0; i < 10; i++) {
+      q.add(i);
     }
+
+    System.out.println(
+      "Peek at the element at the head without taking the element out of the queue with element method");
+    // peek at the element at the head without taking the element out of the queue
+    // element() method
+    System.out.println(q.element());
+
+    System.out.println("After Polling");
+    for (int i : q) {
+      System.out.print(i + "\t");
+    }
+
+    q.remove();
+    q.poll();
+
+    // To remove element, u
+    System.out.println();
+    Iterator<Integer> itr = q.iterator();
+    while (itr.hasNext()) {
+      int element = itr.next();
+      {
+        if (element == 6) {
+          itr.remove();
+          continue;
+        }
+        System.out.print(element + "\t");
+      }
+    }
+  }
 }

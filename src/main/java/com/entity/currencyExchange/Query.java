@@ -4,7 +4,12 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({"from", "to", "amount"})
@@ -17,12 +22,12 @@ import lombok.*;
 @EqualsAndHashCode
 public class Query {
 
-    @JsonProperty("from")
-    public String from;
+  @JsonProperty("from")
+  public String from;
 
-    @JsonProperty("to")
-    public String to;
+  @JsonProperty("to")
+  public String to;
 
-    @JsonProperty("amount")
-    public Integer amount;
+  @JsonProperty("amount")
+  public Integer amount;
 }

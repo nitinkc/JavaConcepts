@@ -21,15 +21,15 @@ import lombok.Setter;
 @Setter
 public class Author {
 
-    @JsonProperty("given")
-    public String given;
+  @JsonProperty("given")
+  public String given;
 
-    @JsonProperty("family")
-    public String family;
+  @JsonProperty("family")
+  public String family;
 
-    @JsonProperty("sequence")
-    public String sequence;
+  @JsonProperty("sequence")
+  public String sequence;
 
-    @JsonProperty("affiliation")
-    public List<Object> affiliation = null;
+  @JsonProperty("affiliation")
+  public List<Object> affiliation = null;
 }

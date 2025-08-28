@@ -14,9 +14,9 @@ import lombok.NoArgsConstructor;
 @Builder
 public class EventComments implements Payloadable {
 
-    private String facilityId;
-    private String orderId;
-    private List<SomeStats> someStats;
-    private String sectionName;
-    private SomeClass someClass;
+  private String facilityId;
+  private String orderId;
+  private List<SomeStats> someStats;
+  private String sectionName;
+  private SomeClass someClass;
 }

@@ -1,7 +1,7 @@
 package nitin.LambdaExpressions;
 
 interface Gorilla {
-    String move();
+  String move();
 }
 
 /**
@@ -9,24 +9,24 @@ interface Gorilla {
  * variables, effectively final variables and effectively Final local variables
  */
 public class zVariablesInLambdas {
-    String walk = "walk"; // Instance Variable
+  String walk = "walk"; // Instance Variable
 
-    public static void main(String[] args) {
-        zVariablesInLambdas f = new zVariablesInLambdas();
-        f.everyonePlay(true);
-    }
+  public static void main(String[] args) {
+    zVariablesInLambdas f = new zVariablesInLambdas();
+    f.everyonePlay(true);
+  }
 
-    void everyonePlay(boolean baby) {
-        String approach = "abmle";
-        // if reassigned : Error: local variables referenced from a lambda expression must
-        // be final or effectively final approach = "run";
+  void everyonePlay(boolean baby) {
+    String approach = "abmle";
+    // if reassigned : Error: local variables referenced from a lambda expression must
+    // be final or effectively final approach = "run";
 
-        play(() -> walk); // uses instance variable in Lambda
-        play(() -> baby ? "hitch a ride" : "run"); // using the method parameter
-        play(() -> approach); // Effectively Final Local Variable as approach is not re-assigned
-    }
+    play(() -> walk); // uses instance variable in Lambda
+    play(() -> baby ? "hitch a ride" : "run"); // using the method parameter
+    play(() -> approach); // Effectively Final Local Variable as approach is not re-assigned
+  }
 
-    void play(Gorilla g) {
-        System.out.println(g.move());
-    }
+  void play(Gorilla g) {
+    System.out.println(g.move());
+  }
 }

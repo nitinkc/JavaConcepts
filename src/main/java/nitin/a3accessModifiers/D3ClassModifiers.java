@@ -9,10 +9,10 @@ package nitin.a3accessModifiers;
  */
 // private class D3ClassModifiers { //Error: modifier private not allowed here
 public class D3ClassModifiers {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        // Default Class: Can only be accessed within current package
-        // public : can be accessed anywhere
+    // Default Class: Can only be accessed within current package
+    // public : can be accessed anywhere
 
-    }
+  }
 }

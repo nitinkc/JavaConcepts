@@ -17,12 +17,12 @@ import lombok.Setter;
 @Setter
 public class Deposited {
 
-    @JsonProperty("date-parts")
-    public List<List<Integer>> dateParts = null;
+  @JsonProperty("date-parts")
+  public List<List<Integer>> dateParts = null;
 
-    @JsonProperty("date-time")
-    public String dateTime;
+  @JsonProperty("date-time")
+  public String dateTime;
 
-    @JsonProperty("timestamp")
-    public Long timestamp;
+  @JsonProperty("timestamp")
+  public Long timestamp;
 }

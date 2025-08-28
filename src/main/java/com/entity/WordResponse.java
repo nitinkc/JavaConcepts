@@ -1,8 +1,14 @@
 package com.entity;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
-/** Created by nitin on Saturday, February/15/2020 at 10:17 PM */
+/**
+ * Created by nitin on Saturday, February/15/2020 at 10:17 PM
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -10,7 +16,7 @@ import lombok.*;
 @AllArgsConstructor
 public class WordResponse {
 
-    private String word;
-    private int score;
-    private String[] tags;
+  private String word;
+  private int score;
+  private String[] tags;
 }

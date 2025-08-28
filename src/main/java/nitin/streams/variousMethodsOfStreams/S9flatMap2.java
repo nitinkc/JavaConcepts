@@ -12,21 +12,21 @@ import java.util.stream.Stream;
  * flatMap operation produces an arbitrary number (zero or more) values for each input value.
  */
 public class S9flatMap2 {
-    public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            list.add(i);
-        }
-
-        // for each even value, do nothing, for odd, take random as well and square
-        List<Integer> l =
-                list.stream()
-                        .flatMap(
-                                x -> {
-                                    if (x % 2 == 0) return Stream.of(x * x * x);
-                                    else return Stream.of(x, x * x);
-                                })
-                        .collect(Collectors.toList());
-        System.out.println(l);
+  public static void main(String[] args) {
+    List<Integer> list = new ArrayList<>();
+    for (int i = 0; i < 10; i++) {
+      list.add(i);
     }
+
+    // for each even value, do nothing, for odd, take random as well and square
+    List<Integer> l =
+      list.stream()
+        .flatMap(
+          x -> {
+            if (x % 2 == 0) return Stream.of(x * x * x);
+            else return Stream.of(x, x * x);
+          })
+        .collect(Collectors.toList());
+    System.out.println(l);
+  }
 }

@@ -7,6 +7,6 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Data
 public class Report {
-    public Boolean labsData;
-    public List<Labs> labs;
+  public Boolean labsData;
+  public List<Labs> labs;
 }

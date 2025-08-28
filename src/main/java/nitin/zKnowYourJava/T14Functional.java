@@ -1,3 +1,4 @@
 package nitin.zKnowYourJava;
 
-public class T14Functional {}
+public class T14Functional {
+}

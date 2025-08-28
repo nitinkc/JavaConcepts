@@ -4,14 +4,14 @@ import nitin.multithreading.cVirtualThreads.Student;
 
 public class UserHandler {
 
-    public void handle() {
-        Student requestStudent = T0ThreadLocal.studentThreadLocal.get();
-        print("handle - User => " + requestStudent);
+  public static void print(String m) {
+    T0ThreadLocal.print(m);
+  }
 
-        // handle user 'requestUser'
-    }
+  public void handle() {
+    Student requestStudent = T0ThreadLocal.studentThreadLocal.get();
+    print("handle - User => " + requestStudent);
 
-    public static void print(String m) {
-        T0ThreadLocal.print(m);
-    }
+    // handle user 'requestUser'
+  }
 }

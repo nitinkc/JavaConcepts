@@ -19,25 +19,25 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class LabBase {
 
-    @JsonProperty("categoryName")
-    public String categoryName;
+  @JsonProperty("categoryName")
+  public String categoryName;
 
-    @JsonProperty("testCodeId")
-    public String testCodeId;
+  @JsonProperty("testCodeId")
+  public String testCodeId;
 
-    @JsonProperty("name")
-    public String name;
+  @JsonProperty("name")
+  public String name;
 
-    @JsonProperty("uom")
-    public String uom;
+  @JsonProperty("uom")
+  public String uom;
 
-    @JsonProperty("dateTime")
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    public LocalDateTime dateTime;
+  @JsonProperty("dateTime")
+  @JsonDeserialize(using = LocalDateTimeDeserializer.class)
+  public LocalDateTime dateTime;
 
-    @JsonProperty("value")
-    public String value;
+  @JsonProperty("value")
+  public String value;
 
-    @JsonProperty("sortOrder")
-    public int sortOrder;
+  @JsonProperty("sortOrder")
+  public int sortOrder;
 }

@@ -23,21 +23,22 @@ import org.mockito.junit.jupiter.MockitoExtension;
 @ExtendWith(MockitoExtension.class)
 public class JacksonMapperTypesTest {
 
-    @Mock private ObjectMapper objectMapper;
+  @Mock
+  private ObjectMapper objectMapper;
 
-    private static RandomVehicle getSingleJsonFromFile() throws IOException {
-        URL resource = new URL("file:src/test/resources/json/single_random_vehicle.json");
-        ObjectMapper mapper = new ObjectMapper();
+  private static RandomVehicle getSingleJsonFromFile() throws IOException {
+    URL resource = new URL("file:src/test/resources/json/single_random_vehicle.json");
+    ObjectMapper mapper = new ObjectMapper();
 
-        RandomVehicle vehicle = mapper.readValue(resource, RandomVehicle.class);
-        String convertedJson = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(vehicle);
+    RandomVehicle vehicle = mapper.readValue(resource, RandomVehicle.class);
+    String convertedJson = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(vehicle);
 
-        System.out.println(convertedJson);
-        return vehicle;
-    }
+    System.out.println(convertedJson);
+    return vehicle;
+  }
 
-    @Tag("slow")
-    @Test
+  @Tag("slow")
+  @Test
     /*
         void getFewRandomVehicles() throws JsonProcessingException {
             RandomVehicle randomVehicle = RandomVehicle.builder()
@@ -79,75 +80,76 @@ public class JacksonMapperTypesTest {
     */
 
     // @Test
-    void test_single_json_object() throws MalformedURLException, JsonProcessingException {
-        String JSON_OBJECT =
-                "{\n"
-                        + "\"id\": 6534,\n"
-                        + "\"uid\": \"742b4374-032e-49bb-9b5b-92ffb457d313\",\n"
-                        + "\"vin\": \"NPWPCPYJP9H242398\",\n"
-                        + "\"make_and_model\": \"Chevy Silverado\",\n"
-                        + "\"color\": \"Yellow\",\n"
-                        + "\"transmission\": \"CVT\",\n"
-                        + "\"drive_type\": \"AWD\",\n"
-                        + "\"fuel_type\": \"Gasoline Hybrid\",\n"
-                        + "\"car_type\": \"Wagon\",\n"
-                        + "\"car_options\": [\n"
-                        + "\"AM/FM Stereo\",\n"
-                        + "\"Airbag: Side\",\n"
-                        + "\"Airbag: Driver\",\n"
-                        + "\"CD (Multi Disc)\",\n"
-                        + "\"Cassette Player\",\n"
-                        + "\"Alloy Wheels\"\n"
-                        + "],\n"
-                        + "\"specs\": [\n"
-                        + "\"Traveler/mini trip computer\",\n"
-                        + "\"Rear door child safety locks\",\n"
-                        + "\"20\\\" x 9.0\\\" front & 20\\\" x 10.0\\\" rear aluminum wheels\",\n"
-                        + "\"Electronic brakeforce distribution (EBD) w/brake assist (BA) -inc: Smart stop technology\",\n"
-                        + "\"Eco drive indicator\",\n"
-                        + "\"Leather-wrapped shift knob\",\n"
-                        + "\"Foldable front door storage pockets\",\n"
-                        + "\"Foldable front door storage pockets\",\n"
-                        + "\"Anti-lock brake system (ABS) -inc: electronic brake force distribution (EBD), brake assist\"\n"
-                        + "],\n"
-                        + "\"doors\": 2,\n"
-                        + "\"mileage\": 82508,\n"
-                        + "\"kilometrage\": 45776,\n"
-                        + "\"license_plate\": \"SQT-5871\"\n"
-                        + "}";
-        ObjectMapper mapper = new ObjectMapper();
-        RandomVehicle vehicle = mapper.readValue(JSON_OBJECT, RandomVehicle.class);
-        assertNotNull(vehicle);
-        assertThat(vehicle.getColor(), containsString("Yellow"));
+  void test_single_json_object() throws MalformedURLException, JsonProcessingException {
+    String JSON_OBJECT =
+      "{\n"
+        + "\"id\": 6534,\n"
+        + "\"uid\": \"742b4374-032e-49bb-9b5b-92ffb457d313\",\n"
+        + "\"vin\": \"NPWPCPYJP9H242398\",\n"
+        + "\"make_and_model\": \"Chevy Silverado\",\n"
+        + "\"color\": \"Yellow\",\n"
+        + "\"transmission\": \"CVT\",\n"
+        + "\"drive_type\": \"AWD\",\n"
+        + "\"fuel_type\": \"Gasoline Hybrid\",\n"
+        + "\"car_type\": \"Wagon\",\n"
+        + "\"car_options\": [\n"
+        + "\"AM/FM Stereo\",\n"
+        + "\"Airbag: Side\",\n"
+        + "\"Airbag: Driver\",\n"
+        + "\"CD (Multi Disc)\",\n"
+        + "\"Cassette Player\",\n"
+        + "\"Alloy Wheels\"\n"
+        + "],\n"
+        + "\"specs\": [\n"
+        + "\"Traveler/mini trip computer\",\n"
+        + "\"Rear door child safety locks\",\n"
+        + "\"20\\\" x 9.0\\\" front & 20\\\" x 10.0\\\" rear aluminum wheels\",\n"
+        + "\"Electronic brakeforce distribution (EBD) w/brake assist (BA) -inc: Smart stop technology\",\n"
+        + "\"Eco drive indicator\",\n"
+        + "\"Leather-wrapped shift knob\",\n"
+        + "\"Foldable front door storage pockets\",\n"
+        + "\"Foldable front door storage pockets\",\n"
+        + "\"Anti-lock brake system (ABS) -inc: electronic brake force distribution (EBD), brake assist\"\n"
+        + "],\n"
+        + "\"doors\": 2,\n"
+        + "\"mileage\": 82508,\n"
+        + "\"kilometrage\": 45776,\n"
+        + "\"license_plate\": \"SQT-5871\"\n"
+        + "}";
+    ObjectMapper mapper = new ObjectMapper();
+    RandomVehicle vehicle = mapper.readValue(JSON_OBJECT, RandomVehicle.class);
+    assertNotNull(vehicle);
+    assertThat(vehicle.getColor(), containsString("Yellow"));
+  }
+
+  @Test
+  void test_json_array() throws IOException {
+    URL resource = new URL("file:src/test/resources/json/random_vehicle_array_json.json");
+
+    ObjectMapper objectMapper = new ObjectMapper();
+    List<RandomVehicle> randomVehicles =
+      objectMapper.readValue(resource, new TypeReference<List<RandomVehicle>>() {
+      });
+
+    for (final RandomVehicle car : randomVehicles) {
+      assertNotNull(car);
+      if (car.getVin().equals("PDL2JHLPMMDJ97457"))
+        assertThat(car.getMakeAndModel(), equalTo("BMW M3"));
     }
+  }
 
-    @Test
-    void test_json_array() throws IOException {
-        URL resource = new URL("file:src/test/resources/json/random_vehicle_array_json.json");
+  @Test
+  void test_json_single_file() throws IOException {
+    RandomVehicle vehicle = getSingleJsonFromFile();
+    assertNotNull(vehicle);
+    // assertThat(vehicle.getColor(), null);//containsString("Red"));
+    assertEquals(vehicle.getCarOptions().size(), 11);
+    // assertNull(vehicle.getColor());
+  }
 
-        ObjectMapper objectMapper = new ObjectMapper();
-        List<RandomVehicle> randomVehicles =
-                objectMapper.readValue(resource, new TypeReference<List<RandomVehicle>>() {});
-
-        for (final RandomVehicle car : randomVehicles) {
-            assertNotNull(car);
-            if (car.getVin().equals("PDL2JHLPMMDJ97457"))
-                assertThat(car.getMakeAndModel(), equalTo("BMW M3"));
-        }
-    }
-
-    @Test
-    void test_json_single_file() throws IOException {
-        RandomVehicle vehicle = getSingleJsonFromFile();
-        assertNotNull(vehicle);
-        // assertThat(vehicle.getColor(), null);//containsString("Red"));
-        assertEquals(vehicle.getCarOptions().size(), 11);
-        // assertNull(vehicle.getColor());
-    }
-
-    @Test
-    void test_json_single_file_nulls() throws IOException {
-        RandomVehicle vehicle = getSingleJsonFromFile();
-        assertNotNull(vehicle);
-    }
+  @Test
+  void test_json_single_file_nulls() throws IOException {
+    RandomVehicle vehicle = getSingleJsonFromFile();
+    assertNotNull(vehicle);
+  }
 }

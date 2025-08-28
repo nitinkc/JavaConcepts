@@ -11,17 +11,17 @@ import lombok.ToString;
 @Setter
 @ToString
 public class Transaction {
-    private int id;
-    private double value;
-    private Currency currency;
-    private Transactions type;
-    private String city;
+  private int id;
+  private double value;
+  private Currency currency;
+  private Transactions type;
+  private String city;
 
-    public Transaction(int id, double value, Currency currency, Transactions type, String city) {
-        this.id = id;
-        this.value = value;
-        this.currency = currency;
-        this.type = type;
-        this.city = city;
-    }
+  public Transaction(int id, double value, Currency currency, Transactions type, String city) {
+    this.id = id;
+    this.value = value;
+    this.currency = currency;
+    this.type = type;
+    this.city = city;
+  }
 }

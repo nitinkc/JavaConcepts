@@ -16,31 +16,31 @@ package nitin.a1languageFundamentals.variables;
  * Only applicable modifier is FINAL. private, public, protected, static Not allowed
  */
 public class PurposeNPositionOfDeclaration {
-    /* Static Variables */
-    static int s1 = 10;
-    static int s2;
-    /* Instance Variables */
-    String s;
-    int x;
-    boolean bool;
+  /* Static Variables */
+  static int s1 = 10;
+  static int s2;
+  /* Instance Variables */
+  String s;
+  int x;
+  boolean bool;
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        PurposeNPositionOfDeclaration obj = new PurposeNPositionOfDeclaration();
-        // since created at the time of loading, can access from both instance & static areas
-        // directly
-        System.out.println(s1);
+    PurposeNPositionOfDeclaration obj = new PurposeNPositionOfDeclaration();
+    // since created at the time of loading, can access from both instance & static areas
+    // directly
+    System.out.println(s1);
 
-        // Local Variable
-        int local = 0;
-        final double PI = 3.14;
-        System.out.println(local);
-        System.out.println(PI);
-    }
+    // Local Variable
+    int local = 0;
+    final double PI = 3.14;
+    System.out.println(local);
+    System.out.println(PI);
+  }
 
-    public void m() {
-        // since created at the time of loading, can access from both instance & static areas
-        // directly
-        System.out.println(s2);
-    }
+  public void m() {
+    // since created at the time of loading, can access from both instance & static areas
+    // directly
+    System.out.println(s2);
+  }
 }

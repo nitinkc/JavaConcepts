@@ -3,35 +3,37 @@ package nitin.LambdaExpressions;
 import com.entity.SampleData;
 import java.util.List;
 
-/** Created by Nitin C on 3/5/2016. */
+/**
+ * Created by Nitin C on 3/5/2016.
+ */
 public class L0SpottingInvalidLambdas {
-    public static void main(String[] args) {
-        TestInterfaceReturnMethod y; // Functional Interface
+  public static void main(String[] args) {
+    TestInterfaceReturnMethod y; // Functional Interface
 
-        // Defining Lambda
-        y = (arg1, arg2) -> arg1 + arg2; // Providing implementation to the abstract method
+    // Defining Lambda
+    y = (arg1, arg2) -> arg1 + arg2; // Providing implementation to the abstract method
 
-        int resultForStoringY = y.methodWtih2Args(1, 2);
-        System.out.println(resultForStoringY);
+    int resultForStoringY = y.methodWtih2Args(1, 2);
+    System.out.println(resultForStoringY);
 
-        y = (n, m) -> n * m; // redefining implementation
-        System.out.println(y.methodWtih2Args(2, 3));
+    y = (n, m) -> n * m; // redefining implementation
+    System.out.println(y.methodWtih2Args(2, 3));
 
-        /* Without Curly braces we can't use return keyword */
-        y =
-                (n, m) -> { // if using curly braces, have to use return statement
-                    return n * m;
-                };
-        /* RETURN Always need curly braces and ends with a colon */
+    /* Without Curly braces we can't use return keyword */
+    y =
+      (n, m) -> { // if using curly braces, have to use return statement
+        return n * m;
+      };
+    /* RETURN Always need curly braces and ends with a colon */
 
-        /********************* INVALID LAMBDAS ********************/
+    /********************* INVALID LAMBDAS ********************/
         /*
         y = (n,m) -> return n*m; //INVALID, curly braces missing
         n->{return n*n};//INVALID, semi colon missing
         n->{n*n;};//INVALID, no return statement.
         */
 
-        // () can be omitted only if there is EXACTLY ONE Parameter and NO DATA TYPE
+    // () can be omitted only if there is EXACTLY ONE Parameter and NO DATA TYPE
 
         /*
                 String a = "Nitin";
@@ -65,29 +67,29 @@ public class L0SpottingInvalidLambdas {
                 (a,b) -> { int c = 9; return a+b }// CORRECT AS C is an independent local variable
         */
 
-        int a = 10, b = 20;
-        List<Integer> list = SampleData.intCargoSequence(5, 10);
+    int a = 10, b = 20;
+    List<Integer> list = SampleData.intCargoSequence(5, 10);
 
-        TestInterfaceVoidMethod x = () -> System.out.println("Test");
-        x = System.out::println;
-        x.voidMethod();
+    TestInterfaceVoidMethod x = () -> System.out.println("Test");
+    x = System.out::println;
+    x.voidMethod();
 
-        x = () -> System.out.print(resultForStoringY);
-        x.voidMethod();
+    x = () -> System.out.print(resultForStoringY);
+    x.voidMethod();
 
-        // for each expects a Consumer
-        // list.forEach((element) -> System.out.println(element));
-        // for void or one parameter, the same can be written as
-        // list.forEach(System.out :: println);
-    }
+    // for each expects a Consumer
+    // list.forEach((element) -> System.out.println(element));
+    // for void or one parameter, the same can be written as
+    // list.forEach(System.out :: println);
+  }
 
-    @FunctionalInterface
-    interface TestInterfaceVoidMethod {
-        void voidMethod();
-    }
+  @FunctionalInterface
+  interface TestInterfaceVoidMethod {
+    void voidMethod();
+  }
 
-    @FunctionalInterface
-    interface TestInterfaceReturnMethod {
-        int methodWtih2Args(int a, int b);
-    }
+  @FunctionalInterface
+  interface TestInterfaceReturnMethod {
+    int methodWtih2Args(int a, int b);
+  }
 }

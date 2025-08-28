@@ -11,40 +11,40 @@ import java.util.TimeZone;
 import org.apache.commons.lang3.StringUtils;
 
 public class StringToTimeStamp {
-    public static void main(String[] args) {
-        System.out.println(extractDate("01-01-2007"));
-        System.out.println(extractDateOld("01-01-2007").toString());
+  public static void main(String[] args) {
+    System.out.println(extractDate("01-01-2007"));
+    System.out.println(extractDateOld("01-01-2007").toString());
+  }
+
+  private static Timestamp extractDate(String date) {
+    final String dateFormat = "dd-MM-yyyy";
+    if (StringUtils.isBlank(date)) {
+      return null;
     }
-
-    private static Timestamp extractDate(String date) {
-        final String dateFormat = "dd-MM-yyyy";
-        if (StringUtils.isBlank(date)) {
-            return null;
-        }
-        Date parseDate = null;
-        try {
-            parseDate = new SimpleDateFormat(dateFormat).parse(date);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        ZonedDateTime zonedDateTime = parseDate.toInstant().atZone(ZoneOffset.UTC);
-
-        return Optional.of(Timestamp.valueOf(zonedDateTime.toLocalDateTime())).orElse(null);
+    Date parseDate = null;
+    try {
+      parseDate = new SimpleDateFormat(dateFormat).parse(date);
+    } catch (ParseException e) {
+      e.printStackTrace();
     }
+    ZonedDateTime zonedDateTime = parseDate.toInstant().atZone(ZoneOffset.UTC);
 
-    private static Timestamp extractDateOld(String date) {
-        final String dateFormat = "dd-MM-yyyy";
-        if (StringUtils.isBlank(date)) return null;
-        try {
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat(dateFormat);
-            simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-            Date parseDate = simpleDateFormat.parse(date);
-            Timestamp tp = new Timestamp(parseDate.getTime());
-            return tp;
+    return Optional.of(Timestamp.valueOf(zonedDateTime.toLocalDateTime())).orElse(null);
+  }
 
-        } catch (ParseException e) {
-            System.out.println("Exception parsing date : " + date);
-        }
-        return null;
+  private static Timestamp extractDateOld(String date) {
+    final String dateFormat = "dd-MM-yyyy";
+    if (StringUtils.isBlank(date)) return null;
+    try {
+      SimpleDateFormat simpleDateFormat = new SimpleDateFormat(dateFormat);
+      simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+      Date parseDate = simpleDateFormat.parse(date);
+      Timestamp tp = new Timestamp(parseDate.getTime());
+      return tp;
+
+    } catch (ParseException e) {
+      System.out.println("Exception parsing date : " + date);
     }
+    return null;
+  }
 }

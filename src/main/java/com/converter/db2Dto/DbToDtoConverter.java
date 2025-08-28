@@ -6,9 +6,9 @@ import java.util.stream.Collectors;
 
 public interface DbToDtoConverter<T, R> {
 
-    T convert(R from);
+  T convert(R from);
 
-    default List<T> convert(Collection<? extends R> fromCollection) {
-        return fromCollection.stream().map(this::convert).collect(Collectors.toList());
-    }
+  default List<T> convert(Collection<? extends R> fromCollection) {
+    return fromCollection.stream().map(this::convert).collect(Collectors.toList());
+  }
 }

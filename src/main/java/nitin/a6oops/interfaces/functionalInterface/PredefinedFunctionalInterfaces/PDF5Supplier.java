@@ -10,33 +10,33 @@ import java.util.function.Supplier;
  */
 public class PDF5Supplier {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Supplier<String> s =
-                () -> {
-                    String[] str = {"Nitin", "Kirti", "Chaurasia", "Love"};
-                    int x = (int) (Math.random() * 3 + 1);
-                    return str[x];
-                };
+    Supplier<String> s =
+      () -> {
+        String[] str = {"Nitin", "Kirti", "Chaurasia", "Love"};
+        int x = (int) (Math.random() * 3 + 1);
+        return str[ x ];
+      };
 
-        System.out.println(s.get());
+    System.out.println(s.get());
 
-        /* Creating date using factory */
+    /* Creating date using factory */
 
-        // Static method Reference
-        Supplier<LocalDate> s1 = LocalDate::now;
-        // Lambda Expression
-        Supplier<LocalDate> s2 = () -> LocalDate.now();
+    // Static method Reference
+    Supplier<LocalDate> s1 = LocalDate::now;
+    // Lambda Expression
+    Supplier<LocalDate> s2 = () -> LocalDate.now();
 
-        LocalDate d1 = s1.get();
-        LocalDate d2 = s1.get();
+    LocalDate d1 = s1.get();
+    LocalDate d2 = s1.get();
 
-        System.out.println(d1 + " --- " + d2);
+    System.out.println(d1 + " --- " + d2);
 
-        /* A supplier is often used when constructing new a5object */
+    /* A supplier is often used when constructing new a5object */
 
-        // Constructor Reference
-        Supplier<StringBuilder> myString = StringBuilder::new;
-        Supplier<StringBuilder> myNewString = () -> new StringBuilder();
-    }
+    // Constructor Reference
+    Supplier<StringBuilder> myString = StringBuilder::new;
+    Supplier<StringBuilder> myNewString = () -> new StringBuilder();
+  }
 }

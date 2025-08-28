@@ -7,9 +7,9 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Data
 public class Labs {
-    public String careCategoryName;
-    public String currentMonthName;
-    public String previousMonthName;
-    public String secondPreviousMonthName;
-    public List<CareCategory> careCategory;
+  public String careCategoryName;
+  public String currentMonthName;
+  public String previousMonthName;
+  public String secondPreviousMonthName;
+  public List<CareCategory> careCategory;
 }

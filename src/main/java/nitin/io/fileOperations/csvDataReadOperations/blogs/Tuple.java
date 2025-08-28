@@ -11,11 +11,11 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode
 public class Tuple {
-    private final BlogPostType type;
-    private final String author;
+  private final BlogPostType type;
+  private final String author;
 
-    public Tuple(BlogPostType type, String author) {
-        this.type = type;
-        this.author = author;
-    }
+  public Tuple(BlogPostType type, String author) {
+    this.type = type;
+    this.author = author;
+  }
 }

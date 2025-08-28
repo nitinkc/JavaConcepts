@@ -17,24 +17,24 @@ import org.junit.Test;
 // should NOT be static.
 
 public class StringUtilsTester {
-    @Test
-    public void testReverse() {
-        assertThat("oof", is(equalTo(StringUtils.reverseString("foo"))));
-        assertThat("rab", is(equalTo(StringUtils.reverseString("bar"))));
-        assertThat("!zaB", is(equalTo(StringUtils.reverseString("Baz!"))));
-    }
+  @Test
+  public void testReverse() {
+    assertThat("oof", is(equalTo(StringUtils.reverseString("foo"))));
+    assertThat("rab", is(equalTo(StringUtils.reverseString("bar"))));
+    assertThat("!zaB", is(equalTo(StringUtils.reverseString("Baz!"))));
+  }
 
-    @Test
-    public void testPalindromes() {
-        String[] matches = {"a", "aba", "Aba", "abba", "AbBa", "abcdeffedcba", "abcdEffedcba"};
-        String[] misMatches = {
-            "ax", "axba", "Axba", "abbax", "xAbBa", "abcdeffedcdax", "axbcdEffedcda"
-        };
-        for (String s : matches) {
-            assertThat(StringUtils.isPalindrome(s), is(true));
-        }
-        for (String s : misMatches) {
-            assertThat(StringUtils.isPalindrome(s), is(false));
-        }
+  @Test
+  public void testPalindromes() {
+    String[] matches = {"a", "aba", "Aba", "abba", "AbBa", "abcdeffedcba", "abcdEffedcba"};
+    String[] misMatches = {
+      "ax", "axba", "Axba", "abbax", "xAbBa", "abcdeffedcdax", "axbcdEffedcda"
+    };
+    for (String s : matches) {
+      assertThat(StringUtils.isPalindrome(s), is(true));
     }
+    for (String s : misMatches) {
+      assertThat(StringUtils.isPalindrome(s), is(false));
+    }
+  }
 }

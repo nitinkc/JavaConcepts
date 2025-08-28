@@ -10,9 +10,9 @@ import javax.annotation.processing.Generated;
 @Generated("jsonschema2pojo")
 public class Credentials {
 
-    @JsonProperty("token")
-    public String token;
+  @JsonProperty("token")
+  public String token;
 
-    @JsonProperty("expires")
-    public Boolean expires;
+  @JsonProperty("expires")
+  public Boolean expires;
 }

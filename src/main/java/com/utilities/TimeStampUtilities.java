@@ -11,85 +11,85 @@ import java.util.GregorianCalendar;
 
 public class TimeStampUtilities {
 
-    public static Timestamp convertStringToTimeStampWithFormat(String time, String format) {
+  public static Timestamp convertStringToTimeStampWithFormat(String time, String format) {
 
-        Timestamp aTimestamp = null;
+    Timestamp aTimestamp = null;
 
-        if ((time != null) && (format != null)) {
-            SimpleDateFormat formatter = new SimpleDateFormat(format);
-            try {
-                Date aDate = (Date) formatter.parse(time);
+    if ((time != null) && (format != null)) {
+      SimpleDateFormat formatter = new SimpleDateFormat(format);
+      try {
+        Date aDate = (Date) formatter.parse(time);
 
-                aTimestamp = new Timestamp(aDate.getTime());
-            } catch (ParseException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-        }
-        return aTimestamp;
+        aTimestamp = new Timestamp(aDate.getTime());
+      } catch (ParseException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+      }
+    }
+    return aTimestamp;
+  }
+
+  public static int getAgeFromBrithDate(String aBirthDate) {
+    int age = 0;
+    try {
+      DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+      Calendar calendar = Calendar.getInstance();
+      java.util.Date date = calendar.getTime();
+
+      String currentDate = dateFormat.format(date);
+
+      Calendar cal1 = new GregorianCalendar();
+      Calendar cal2 = new GregorianCalendar();
+
+      int factor = 0;
+      java.util.Date date1 = new SimpleDateFormat("yyyy-MM-dd").parse(aBirthDate);
+      java.util.Date date2 = new SimpleDateFormat("yyyy-MM-dd").parse(currentDate);
+      cal1.setTime(date1);
+      cal2.setTime(date2);
+      if (cal2.get(Calendar.DAY_OF_YEAR) < cal1.get(Calendar.DAY_OF_YEAR)) {
+        factor = -1;
+      }
+      age = cal2.get(Calendar.YEAR) - cal1.get(Calendar.YEAR) + factor;
+
+    } catch (ParseException e) {
+      e.printStackTrace();
     }
 
-    public static int getAgeFromBrithDate(String aBirthDate) {
-        int age = 0;
-        try {
-            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-            Calendar calendar = Calendar.getInstance();
-            java.util.Date date = calendar.getTime();
+    return age;
+  }
 
-            String currentDate = dateFormat.format(date);
+  public static Timestamp convertDateToTimestamp(Date aDate) {
+    Timestamp timestamp = new Timestamp(aDate.getTime());
 
-            Calendar cal1 = new GregorianCalendar();
-            Calendar cal2 = new GregorianCalendar();
+    return timestamp;
+  }
 
-            int factor = 0;
-            java.util.Date date1 = new SimpleDateFormat("yyyy-MM-dd").parse(aBirthDate);
-            java.util.Date date2 = new SimpleDateFormat("yyyy-MM-dd").parse(currentDate);
-            cal1.setTime(date1);
-            cal2.setTime(date2);
-            if (cal2.get(Calendar.DAY_OF_YEAR) < cal1.get(Calendar.DAY_OF_YEAR)) {
-                factor = -1;
-            }
-            age = cal2.get(Calendar.YEAR) - cal1.get(Calendar.YEAR) + factor;
+  public static Timestamp addingMonthToTimestamp(Timestamp aDate) {
+    Calendar calendar = Calendar.getInstance();
+    calendar.setTimeInMillis(aDate.getTime());
+    calendar.add(Calendar.MONTH, 11);
+    return new Timestamp(calendar.getTimeInMillis());
+  }
 
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+  public String convertDateToString(Date aDate, String pattern) {
 
-        return age;
+    String aDateStr = null;
+
+    if ((aDate != null)) {
+      Format formatter = new SimpleDateFormat(pattern);
+      aDateStr = formatter.format(aDate);
     }
+    return aDateStr;
+  }
 
-    public static Timestamp convertDateToTimestamp(Date aDate) {
-        Timestamp timestamp = new Timestamp(aDate.getTime());
+  public String convertTimestampToString(Timestamp aTimestamp, String pattern) {
 
-        return timestamp;
+    String aDateStr = null;
+
+    if ((aTimestamp != null)) {
+      Format formatter = new SimpleDateFormat(pattern);
+      aDateStr = formatter.format(aTimestamp);
     }
-
-    public static Timestamp addingMonthToTimestamp(Timestamp aDate) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTimeInMillis(aDate.getTime());
-        calendar.add(Calendar.MONTH, 11);
-        return new Timestamp(calendar.getTimeInMillis());
-    }
-
-    public String convertDateToString(Date aDate, String pattern) {
-
-        String aDateStr = null;
-
-        if ((aDate != null)) {
-            Format formatter = new SimpleDateFormat(pattern);
-            aDateStr = formatter.format(aDate);
-        }
-        return aDateStr;
-    }
-
-    public String convertTimestampToString(Timestamp aTimestamp, String pattern) {
-
-        String aDateStr = null;
-
-        if ((aTimestamp != null)) {
-            Format formatter = new SimpleDateFormat(pattern);
-            aDateStr = formatter.format(aTimestamp);
-        }
-        return aDateStr;
-    }
+    return aDateStr;
+  }
 }

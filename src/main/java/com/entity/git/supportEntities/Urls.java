@@ -10,6 +10,6 @@ import javax.annotation.processing.Generated;
 @Generated("jsonschema2pojo")
 public class Urls {
 
-    @JsonProperty("GitHub")
-    public String gitHub;
+  @JsonProperty("GitHub")
+  public String gitHub;
 }

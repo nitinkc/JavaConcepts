@@ -16,6 +16,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class CrossTable {
 
-    private List<Header> header;
-    private List<LabDetail> labDetails;
+  private List<Header> header;
+  private List<LabDetail> labDetails;
 }

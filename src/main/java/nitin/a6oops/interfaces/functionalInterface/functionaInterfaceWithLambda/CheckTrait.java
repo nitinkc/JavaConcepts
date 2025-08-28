@@ -12,5 +12,5 @@ package nitin.a6oops.interfaces.functionalInterface.functionaInterfaceWithLambda
  */
 @FunctionalInterface
 public interface CheckTrait {
-    boolean test(Animal a);
+  boolean test(Animal a);
 }

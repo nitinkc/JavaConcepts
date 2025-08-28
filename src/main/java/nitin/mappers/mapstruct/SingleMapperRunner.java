@@ -10,34 +10,34 @@ import nitin.mappers.mapstruct.model.Employee;
 import org.mapstruct.factory.Mappers;
 
 public class SingleMapperRunner {
-    public static void main(String[] args) throws IOException {
-        final EmployeeMapper mapper = Mappers.getMapper(EmployeeMapper.class);
+  public static void main(String[] args) throws IOException {
+    final EmployeeMapper mapper = Mappers.getMapper(EmployeeMapper.class);
 
-        URL resource = new URL("file:src/main/resources/json/single-a5object-mapper.json");
-        ObjectMapper om = new ObjectMapper();
+    URL resource = new URL("file:src/main/resources/json/single-a5object-mapper.json");
+    ObjectMapper om = new ObjectMapper();
 
-        // Convert this to CompletableFuturesSingleMapperRunner
-        Employee employee = om.readValue(resource, Employee.class);
-        checkIfNeeded(employee);
+    // Convert this to CompletableFuturesSingleMapperRunner
+    Employee employee = om.readValue(resource, Employee.class);
+    checkIfNeeded(employee);
 
-        EmployeeDto employeeDto = mapper.employeeToEmployeeDto(employee);
-        System.out.println(employeeDto.toString());
-    }
+    EmployeeDto employeeDto = mapper.employeeToEmployeeDto(employee);
+    System.out.println(employeeDto.toString());
+  }
 
-    private static void checkIfNeeded(Employee employee) {
-        // Removing the empty addresses
-        employee.setAddresses(
-                employee.getAddresses().stream()
-                        .filter(
-                                singleAddress ->
-                                        (null != singleAddress.getAddressLine1()
-                                                || null != singleAddress.getAddressLine2()
-                                                || null != singleAddress.getCity()
-                                                || null != singleAddress.getState()
-                                                || null != singleAddress.getZip()))
-                        .collect(Collectors.toList()));
+  private static void checkIfNeeded(Employee employee) {
+    // Removing the empty addresses
+    employee.setAddresses(
+      employee.getAddresses().stream()
+        .filter(
+          singleAddress ->
+            (null != singleAddress.getAddressLine1()
+              || null != singleAddress.getAddressLine2()
+              || null != singleAddress.getCity()
+              || null != singleAddress.getState()
+              || null != singleAddress.getZip()))
+        .collect(Collectors.toList()));
 
-        // String jsonString = om.writerWithDefaultPrettyPrinter().writeValueAsString(employee);
-        // System.out.println(jsonString);
-    }
+    // String jsonString = om.writerWithDefaultPrettyPrinter().writeValueAsString(employee);
+    // System.out.println(jsonString);
+  }
 }

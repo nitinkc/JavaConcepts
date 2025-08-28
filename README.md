@@ -11,6 +11,7 @@ Gradle upgrade branch
 find . -type f -name '*.java' | wc -l 795
 
 # New features
+
 tasks.withType(JavaCompile) {
 options.compilerArgs += [
 '--add-exports=java.base/jdk.internal.vm=ALL-UNNAMED',
@@ -23,7 +24,9 @@ jvmArgs += [
 '--enable-preview'
 ]
 }
+
 # Topics
+
 [src/main/java/nitin/flowControl/FlowControl.md](src/main/java/nitin/a4flowControl/FlowControl.md)
 
 [src/main/java/nitin/a2operators/operators.md](src/main/java/nitin/a2operators/operators.md)
@@ -46,14 +49,18 @@ jvmArgs += [
 
 # Resources
 
-
 Java Application Performance Tuning and Memory Management
+
 - Matt Greencroft - Udemy
 
-Java 21 Virtual Threads, Multithreading, Structured Concurrency, Scoped Values, Continuations and use with Spring Boot 
+Java 21 Virtual Threads, Multithreading, Structured Concurrency, Scoped Values, Continuations and
+use with Spring Boot
+
 - Viraj Shetty - Udemy
 
-Become an expert in Multithreading, Concurrency & Parallel programming in Java, with strong emphasis on high performance
+Become an expert in Multithreading, Concurrency & Parallel programming in Java, with strong emphasis
+on high performance
+
 - Michael Pogrebinsky
 
 ![https://www.youtube.com/watch?v=q2T9NlROLqw](https://www.youtube.com/watch?v=q2T9NlROLqw)

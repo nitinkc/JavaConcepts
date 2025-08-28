@@ -3,7 +3,9 @@ package nitin.calandarDateTime.old;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
-/** Created by nichaurasia on Friday, March/27/2020 at 1:13 AM */
+/**
+ * Created by nichaurasia on Friday, March/27/2020 at 1:13 AM
+ */
 
 /*
 G	Era designator	Text	AD
@@ -30,14 +32,14 @@ Z	Time zone	RFC 822 time zone	-0800
 X	Time zone	ISO 8601 time zone	-08; -0800; -08:00
 * */
 public class DateFormatting {
-    public static void main(String[] args) {
-        DateFormat formatter = new SimpleDateFormat("EEE, MMM-dd-yyyy_HH:mm:ss z Z");
-        System.out.println(formatter.format(System.currentTimeMillis()));
+  public static void main(String[] args) {
+    DateFormat formatter = new SimpleDateFormat("EEE, MMM-dd-yyyy_HH:mm:ss z Z");
+    System.out.println(formatter.format(System.currentTimeMillis()));
 
-        formatter = new SimpleDateFormat("MMddyyyy_HHmm");
-        System.out.println(formatter.format(System.currentTimeMillis()));
+    formatter = new SimpleDateFormat("MMddyyyy_HHmm");
+    System.out.println(formatter.format(System.currentTimeMillis()));
 
-        formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.Z");
-        System.out.println(formatter.format(System.currentTimeMillis()));
-    }
+    formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.Z");
+    System.out.println(formatter.format(System.currentTimeMillis()));
+  }
 }

@@ -24,18 +24,18 @@ import java.util.stream.Collectors;
  * <p>
  */
 public class FourLetterWords {
-    public static void main(String[] args) throws Exception {
-        String inputFile = Configs.ENABLE1_WORD_LIST_PATH;
-        String outputFile = Configs.FOUR_LETTER_WORDS;
-        int length = 4;
-        List<String> words =
-                Files.lines(Paths.get(inputFile))
-                        .filter(word -> word.length() == length)
-                        .map(String::toUpperCase)
-                        .distinct()
-                        .sorted()
-                        .collect(Collectors.toList());
-        Files.write(Paths.get(outputFile), words, Charset.defaultCharset());
-        System.out.printf("Wrote %s words to %s.%n", words.size(), outputFile);
-    }
+  public static void main(String[] args) throws Exception {
+    String inputFile = Configs.ENABLE1_WORD_LIST_PATH;
+    String outputFile = Configs.FOUR_LETTER_WORDS;
+    int length = 4;
+    List<String> words =
+      Files.lines(Paths.get(inputFile))
+        .filter(word -> word.length() == length)
+        .map(String::toUpperCase)
+        .distinct()
+        .sorted()
+        .collect(Collectors.toList());
+    Files.write(Paths.get(outputFile), words, Charset.defaultCharset());
+    System.out.printf("Wrote %s words to %s.%n", words.size(), outputFile);
+  }
 }

@@ -5,8 +5,8 @@ package nitin.a5object.toString;
  * Class
  */
 public class ToString {
-    public static void main(String[] args) {
-        Hippo hippo = new Hippo("Danger hippo", 400.23);
-        System.out.println(hippo);
-    }
+  public static void main(String[] args) {
+    Hippo hippo = new Hippo("Danger hippo", 400.23);
+    System.out.println(hippo);
+  }
 }

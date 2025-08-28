@@ -16,6 +16,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AdditionalLabsDto {
-    @JsonProperty("additionalLabs")
-    private List<AdditionalLab> additionalLabs;
+  @JsonProperty("additionalLabs")
+  private List<AdditionalLab> additionalLabs;
 }

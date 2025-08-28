@@ -7,16 +7,16 @@ package nitin.exceptionHandling.customizedExceptions;
  * Exception for custom checked exception 2. RuntimeException for unchecked
  */
 public class CannotSwimException extends Exception {
-    public CannotSwimException() {
-        super();
-        System.err.print("Testing... Exception");
-    }
+  public CannotSwimException() {
+    super();
+    System.err.print("Testing... Exception");
+  }
 
-    public CannotSwimException(String message) {
-        super(message);
-    }
+  public CannotSwimException(String message) {
+    super(message);
+  }
 
-    public CannotSwimException(Exception e) {
-        super(e);
-    }
+  public CannotSwimException(Exception e) {
+    super(e);
+  }
 }

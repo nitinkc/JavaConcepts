@@ -5,5 +5,5 @@ package nitin.zOReiley2020SimonRoberts.f2functionalConcepts.r6generalizationDemo
  */
 @FunctionalInterface
 public interface Criteria<E> {
-    boolean test(E e);
+  boolean test(E e);
 }

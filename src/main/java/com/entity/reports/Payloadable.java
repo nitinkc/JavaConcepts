@@ -1,3 +1,4 @@
 package com.entity.reports;
 
-public interface Payloadable {}
+public interface Payloadable {
+}

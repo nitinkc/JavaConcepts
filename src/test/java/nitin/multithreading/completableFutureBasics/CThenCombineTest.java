@@ -1,6 +1,8 @@
 package nitin.multithreading.completableFutureBasics;
 
-import static com.utilities.PerformanceUtility.*;
+import static com.utilities.PerformanceUtility.resetTimer;
+import static com.utilities.PerformanceUtility.startTimer;
+import static com.utilities.PerformanceUtility.stopTimer;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.concurrent.CompletableFuture;
@@ -13,68 +15,68 @@ import org.mockito.junit.jupiter.MockitoExtension;
 @ExtendWith(MockitoExtension.class)
 public class CThenCombineTest {
 
-    DataFetchService dfs = new DataFetchService();
-    A12ThenCombine cf = new A12ThenCombine();
+  DataFetchService dfs = new DataFetchService();
+  A12ThenCombine cf = new A12ThenCombine();
 
-    @Test
-    public void thenCombineCF() {
-        // Sequential Time : Should take over 2000 milli seconds adn there has been artificial delay
-        // introduced
-        startTimer();
-        System.out.println(
-                (dfs.firstNameService(3) + " " + dfs.lastNameService(1000)).toUpperCase());
-        stopTimer();
+  @Test
+  public void thenCombineCF() {
+    // Sequential Time : Should take over 2000 milli seconds adn there has been artificial delay
+    // introduced
+    startTimer();
+    System.out.println(
+      (dfs.firstNameService(3) + " " + dfs.lastNameService(1000)).toUpperCase());
+    stopTimer();
 
-        resetTimer();
+    resetTimer();
 
-        // when
-        startTimer();
-        // Async Task: Should take Max(task1, Task2), close to a little over 1000 milli seconds
-        CompletableFuture<String> completableFuture = A12ThenCombine.fullNameService();
-        stopTimer(); // results are not returned yet
+    // when
+    startTimer();
+    // Async Task: Should take Max(task1, Task2), close to a little over 1000 milli seconds
+    CompletableFuture<String> completableFuture = A12ThenCombine.fullNameService();
+    stopTimer(); // results are not returned yet
 
-        // then
-        resetTimer();
-        startTimer();
-        completableFuture
-                .thenAccept(
-                        fullName -> {
-                            assertEquals(fullName, "JOHN DOE");
-                        })
-                .join(); // so that results can be collected
-        stopTimer();
-    }
+    // then
+    resetTimer();
+    startTimer();
+    completableFuture
+      .thenAccept(
+        fullName -> {
+          assertEquals(fullName, "JOHN DOE");
+        })
+      .join(); // so that results can be collected
+    stopTimer();
+  }
 
-    @Test
-    public void fullNameWithGreetingServiceTest() {
-        startTimer();
-        // when
-        CompletableFuture<String> completableFuture = A12ThenCombine.fullNameWithGreetingService();
+  @Test
+  public void fullNameWithGreetingServiceTest() {
+    startTimer();
+    // when
+    CompletableFuture<String> completableFuture = A12ThenCombine.fullNameWithGreetingService();
 
-        // then
-        completableFuture
-                .thenAccept(
-                        fullNameWithGreetings -> {
-                            assertEquals(fullNameWithGreetings, "HELLO!! JOHN DOE");
-                        })
-                .join(); // so that results can be collected
-        stopTimer();
-    }
+    // then
+    completableFuture
+      .thenAccept(
+        fullNameWithGreetings -> {
+          assertEquals(fullNameWithGreetings, "HELLO!! JOHN DOE");
+        })
+      .join(); // so that results can be collected
+    stopTimer();
+  }
 
-    @Test
-    public void fullNameWithGreetingAndGoodByesServiceTest() {
-        startTimer();
-        // when
-        CompletableFuture<String> completableFuture =
-                A12ThenCombine.fullNameWithGreetingAndGoodByesService();
+  @Test
+  public void fullNameWithGreetingAndGoodByesServiceTest() {
+    startTimer();
+    // when
+    CompletableFuture<String> completableFuture =
+      A12ThenCombine.fullNameWithGreetingAndGoodByesService();
 
-        // then
-        completableFuture
-                .thenAccept(
-                        fullNameWithGreetings -> {
-                            assertEquals(fullNameWithGreetings, "Hello!! john doe, Thank You!!");
-                        })
-                .join(); // so that results can be collected
-        stopTimer();
-    }
+    // then
+    completableFuture
+      .thenAccept(
+        fullNameWithGreetings -> {
+          assertEquals(fullNameWithGreetings, "Hello!! john doe, Thank You!!");
+        })
+      .join(); // so that results can be collected
+    stopTimer();
+  }
 }

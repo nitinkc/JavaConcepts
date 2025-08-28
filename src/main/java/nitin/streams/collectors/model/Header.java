@@ -16,6 +16,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Header {
 
-    @JsonProperty("value")
-    private String value;
+  @JsonProperty("value")
+  private String value;
 }

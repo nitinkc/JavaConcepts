@@ -11,18 +11,18 @@ package nitin.exceptionHandling;
  * <p>Checked Exception thus have to give a catch block
  */
 public class E8AutoCloseable {
-    public static void main(String[] args) {
-        try (StuckInACage test = new StuckInACage()) { // Throws checked exceptions
-            System.out.println("Fear Holds you its prisoner!!");
-        } catch (Exception e) { // Swollowing the Exception
+  public static void main(String[] args) {
+    try (StuckInACage test = new StuckInACage()) { // Throws checked exceptions
+      System.out.println("Fear Holds you its prisoner!!");
+    } catch (Exception e) { // Swollowing the Exception
 
-        }
     }
+  }
 }
 
 class StuckInACage implements AutoCloseable {
-    @Override
-    public void close() throws Exception {
-        throw new Exception("Cage door does not close");
-    }
+  @Override
+  public void close() throws Exception {
+    throw new Exception("Cage door does not close");
+  }
 }

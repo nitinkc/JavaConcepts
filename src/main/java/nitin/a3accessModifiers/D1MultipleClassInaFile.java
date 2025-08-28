@@ -5,21 +5,22 @@ package nitin.a3accessModifiers;
  * Source file name. Recommended is one class Filename per file
  */
 abstract class X {
-    public abstract void check();
+  public abstract void check();
 }
 
 class Y extends X {
 
-    @Override
-    public void check() {}
+  @Override
+  public void check() {
+  }
 }
 
 class MultipleClassInaFile {
-    public static void main(String[] args) {
-        X obj1 = new Y();
-        Y obj2 = new Y();
+  public static void main(String[] args) {
+    X obj1 = new Y();
+    Y obj2 = new Y();
 
-        obj1.check();
-        obj2.check();
-    }
+    obj1.check();
+    obj2.check();
+  }
 }

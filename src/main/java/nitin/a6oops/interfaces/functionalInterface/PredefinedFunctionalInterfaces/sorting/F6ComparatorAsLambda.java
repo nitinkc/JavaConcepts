@@ -9,31 +9,31 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 public class F6ComparatorAsLambda {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Set<Student> students =
-                new TreeSet<Student>(
-                        Comparator.comparing(Student::getName)
-                                .thenComparing(Student::getAge)
-                                .thenComparing((Student s1) -> s1.getName().length()));
+    Set<Student> students =
+      new TreeSet<Student>(
+        Comparator.comparing(Student::getName)
+          .thenComparing(Student::getAge)
+          .thenComparing((Student s1) -> s1.getName().length()));
 
-        addElements(students);
-        students.forEach(System.out::println);
-    }
+    addElements(students);
+    students.forEach(System.out::println);
+  }
 
-    private static void addElements(Set<Student> students) {
-        Student s1 = new Student("name1", 23);
-        Student s2 = new Student("name2", 24);
-        Student s3 = new Student("yname3", 25);
-        Student s4 = new Student("zname4", 24);
-        Student s5 = new Student("zname4", 24);
+  private static void addElements(Set<Student> students) {
+    Student s1 = new Student("name1", 23);
+    Student s2 = new Student("name2", 24);
+    Student s3 = new Student("yname3", 25);
+    Student s4 = new Student("zname4", 24);
+    Student s5 = new Student("zname4", 24);
 
-        students.add(s1);
-        students.add(s2);
-        students.add(s3);
-        students.add(s4);
-        students.add(s5);
-    }
+    students.add(s1);
+    students.add(s2);
+    students.add(s3);
+    students.add(s4);
+    students.add(s5);
+  }
 }
 
 @Getter
@@ -41,6 +41,6 @@ public class F6ComparatorAsLambda {
 @RequiredArgsConstructor
 @AllArgsConstructor
 class Student {
-    String name;
-    int age;
+  String name;
+  int age;
 }

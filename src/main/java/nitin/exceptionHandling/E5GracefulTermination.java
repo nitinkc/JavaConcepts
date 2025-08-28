@@ -5,6 +5,8 @@ package nitin.exceptionHandling;
  *
  * <p>User is taken to a LOGICAL Conclusion so that he is given some information
  */
-class Y {}
+class Y {
+}
 
-public class E5GracefulTermination {}
+public class E5GracefulTermination {
+}

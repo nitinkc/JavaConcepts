@@ -1,19 +1,20 @@
 package nitin.generic.examples;
 
 public class GenericNumberContainer<T extends Number> {
-    private T obj;
+  private T obj;
 
-    public GenericNumberContainer() {}
+  public GenericNumberContainer() {
+  }
 
-    public GenericNumberContainer(T t) {
-        obj = t;
-    }
+  public GenericNumberContainer(T t) {
+    obj = t;
+  }
 
-    public T getObj() {
-        return obj;
-    }
+  public T getObj() {
+    return obj;
+  }
 
-    public void setObj(T t) {
-        obj = t;
-    }
+  public void setObj(T t) {
+    obj = t;
+  }
 }

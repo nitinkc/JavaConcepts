@@ -16,64 +16,64 @@ import java.util.Arrays;
  * recovered. Thus keep the password in the char[] using the readPassword().
  */
 public class ConsoleTest {
-    public static void main(String[] args) {
-        Console console = System.console();
+  public static void main(String[] args) {
+    Console console = System.console();
 
-        if (console == null) {
-            // Not available in IDE's
-            throw new RuntimeException("Console not available");
-        } else {
+    if (console == null) {
+      // Not available in IDE's
+      throw new RuntimeException("Console not available");
+    } else {
 
-            console.writer().print("Welcome to the Login System");
-            console.flush();
+      console.writer().print("Welcome to the Login System");
+      console.flush();
 
-            /**************** Reading a String name ***********************/
-            String name = console.readLine("Please enter your name : ");
+      /**************** Reading a String name ***********************/
+      String name = console.readLine("Please enter your name : ");
 
-            /************** Reading an integer age ************************/
-            Integer age = null;
-            console.writer().print("What is your age? ");
-            console.flush();
+      /************** Reading an integer age ************************/
+      Integer age = null;
+      console.writer().print("What is your age? ");
+      console.flush();
 
-            BufferedReader reader = new BufferedReader(console.reader());
-            String value = null;
-            try {
-                value = reader.readLine();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            age = Integer.valueOf(value);
-            console.writer().println();
+      BufferedReader reader = new BufferedReader(console.reader());
+      String value = null;
+      try {
+        value = reader.readLine();
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+      age = Integer.valueOf(value);
+      console.writer().println();
 
-            /*************Reading a password ************************/
+      /*************Reading a password ************************/
 
-            char[] password = console.readPassword("Enter your password ");
+      char[] password = console.readPassword("Enter your password ");
 
-            console.format("Enter your password again: ");
-            console.flush();
-            char[] verify = console.readPassword();
+      console.format("Enter your password again: ");
+      console.flush();
+      char[] verify = console.readPassword();
 
-            // Password Verification
-            boolean match = Arrays.equals(password, verify);
+      // Password Verification
+      boolean match = Arrays.equals(password, verify);
 
-            // Immediately clear password from memory
-            for (int i = 0; i < password.length; i++) {
-                password[i] = 'x';
-                verify[i] = 'x';
-            }
+      // Immediately clear password from memory
+      for (int i = 0; i < password.length; i++) {
+        password[ i ] = 'x';
+        verify[ i ] = 'x';
+      }
 
-            console.format("Your Password was " + (match ? "Correct" : "Incorrect"));
+      console.format("Your Password was " + (match ? "Correct" : "Incorrect"));
 
-            // Printing out the read data
-            console.format("Your name is " + name);
-            console.writer().println();
-            console.format("Your age is " + age);
+      // Printing out the read data
+      console.format("Your name is " + name);
+      console.writer().println();
+      console.format("Your age is " + age);
 
-            console.printf("Your password level is: " + password);
+      console.printf("Your password level is: " + password);
 
-            String userInput = console.readLine();
-            console.writer()
-                    .println("You have entered from ..I did it so am recommending: " + userInput);
-        }
+      String userInput = console.readLine();
+      console.writer()
+        .println("You have entered from ..I did it so am recommending: " + userInput);
     }
+  }
 }

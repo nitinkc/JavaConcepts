@@ -16,6 +16,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PdAdequacyLabsDto {
-    @JsonProperty("pdAdequecyLabs")
-    private List<PdAdequacyLab> pdAdequacyLabsData;
+  @JsonProperty("pdAdequecyLabs")
+  private List<PdAdequacyLab> pdAdequacyLabsData;
 }

@@ -6,19 +6,19 @@ package nitin.generic.examples;
  * @author Juneau
  */
 public class ObjectContainer {
-    private Object obj;
+  private Object obj;
 
-    /**
-     * @return the obj
-     */
-    public Object getObj() {
-        return obj;
-    }
+  /**
+   * @return the obj
+   */
+  public Object getObj() {
+    return obj;
+  }
 
-    /**
-     * @param obj the obj to set
-     */
-    public void setObj(Object obj) {
-        this.obj = obj;
-    }
+  /**
+   * @param obj the obj to set
+   */
+  public void setObj(Object obj) {
+    this.obj = obj;
+  }
 }

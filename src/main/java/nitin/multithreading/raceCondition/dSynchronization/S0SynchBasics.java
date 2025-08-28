@@ -14,31 +14,31 @@ package nitin.multithreading.raceCondition.dSynchronization;
  * concurrently with synchronized methods or by other threads.\
  */
 public class S0SynchBasics {
-    public static void main(String[] args) throws InterruptedException {
-        Basics basics = new Basics();
+  public static void main(String[] args) throws InterruptedException {
+    Basics basics = new Basics();
 
-        Thread t1 =
-                new Thread(
-                        () -> {
-                            System.out.println("Thread 1 started.");
-                            basics.m1();
-                            basics.m3();
-                            System.out.println("Thread 1 finished.");
-                        });
+    Thread t1 =
+      new Thread(
+        () -> {
+          System.out.println("Thread 1 started.");
+          basics.m1();
+          basics.m3();
+          System.out.println("Thread 1 finished.");
+        });
 
-        Thread t2 =
-                new Thread(
-                        () -> {
-                            System.out.println("Thread 2 started.");
-                            basics.m2();
-                            basics.m3();
-                            System.out.println("Thread 2 finished.");
-                        });
+    Thread t2 =
+      new Thread(
+        () -> {
+          System.out.println("Thread 2 started.");
+          basics.m2();
+          basics.m3();
+          System.out.println("Thread 2 finished.");
+        });
 
-        t1.start();
-        t2.start();
+    t1.start();
+    t2.start();
 
-        t1.join();
-        t2.join();
-    }
+    t1.join();
+    t2.join();
+  }
 }

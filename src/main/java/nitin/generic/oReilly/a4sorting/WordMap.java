@@ -13,32 +13,32 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class WordMap {
-    private final Path resourceDir = Paths.get("src/main/resources");
-    private String fileName = "simple_file.txt";
+  private final Path resourceDir = Paths.get("src/main/resources");
+  private String fileName = "simple_file.txt";
 
-    public Map<String, Long> createWordMap() {
-        Map<String, Long> map = new HashMap<>();
-        try {
-            String text =
-                    new String(
-                            Files.readAllBytes(resourceDir.resolve(fileName)),
-                            StandardCharsets.UTF_8);
-            String[] words = text.split("\\W+");
-            map =
-                    Arrays.stream(words)
-                            .map(String::toLowerCase)
-                            .collect(groupingBy(w -> w, counting()));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return map;
+  public Map<String, Long> createWordMap() {
+    Map<String, Long> map = new HashMap<>();
+    try {
+      String text =
+        new String(
+          Files.readAllBytes(resourceDir.resolve(fileName)),
+          StandardCharsets.UTF_8);
+      String[] words = text.split("\\W+");
+      map =
+        Arrays.stream(words)
+          .map(String::toLowerCase)
+          .collect(groupingBy(w -> w, counting()));
+    } catch (IOException e) {
+      e.printStackTrace();
     }
+    return map;
+  }
 
-    public String getFileName() {
-        return fileName;
-    }
+  public String getFileName() {
+    return fileName;
+  }
 
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
-    }
+  public void setFileName(String fileName) {
+    this.fileName = fileName;
+  }
 }

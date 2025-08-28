@@ -7,16 +7,16 @@ import java.util.List;
  * @author Juneau
  */
 public class HouseBlend extends CoffeeType implements Light {
-    List<String> description;
+  List<String> description;
 
-    public HouseBlend() {
-        description = new ArrayList();
-        description.add(TOASTY);
-        description.add(GROUND);
-    }
+  public HouseBlend() {
+    description = new ArrayList();
+    description.add(TOASTY);
+    description.add(GROUND);
+  }
 
-    @Override
-    public List<String> getDescription() {
-        return description;
-    }
+  @Override
+  public List<String> getDescription() {
+    return description;
+  }
 }

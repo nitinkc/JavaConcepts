@@ -1,46 +1,54 @@
 package nitin.serialization;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
-/** Created by nitin on 1/2/16. */
+/**
+ * Created by nitin on 1/2/16.
+ */
 public class S3ObjectGraphSerialization {
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
-        // Serializing Object
-        ObjectOutputStream oos =
-                new ObjectOutputStream(
-                        new FileOutputStream(
-                                new File("src/com/nitin/a21serialization/serialObjectGraph.txt")));
-        oos.writeObject(new Animal());
-        oos.close();
+  public static void main(String[] args) throws IOException, ClassNotFoundException {
+    // Serializing Object
+    ObjectOutputStream oos =
+      new ObjectOutputStream(
+        new FileOutputStream(
+          new File("src/com/nitin/a21serialization/serialObjectGraph.txt")));
+    oos.writeObject(new Animal());
+    oos.close();
 
-        // Deserialization
-        ObjectInputStream ois =
-                new ObjectInputStream(
-                        new FileInputStream(
-                                new File("src/com/nitin/a21serialization/serialObjectGraph.txt")));
-        Animal c = (Animal) ois.readObject();
-        ois.close();
+    // Deserialization
+    ObjectInputStream ois =
+      new ObjectInputStream(
+        new FileInputStream(
+          new File("src/com/nitin/a21serialization/serialObjectGraph.txt")));
+    Animal c = (Animal) ois.readObject();
+    ois.close();
 
-        System.out.println(c.fla.h.toString());
-    }
+    System.out.println(c.fla.h.toString());
+  }
 }
 
 class Animal implements Serializable {
-    FourLeggedAnimal fla = new FourLeggedAnimal();
+  FourLeggedAnimal fla = new FourLeggedAnimal();
 }
 
 class FourLeggedAnimal implements Serializable { // if implements serializable is not used :
-    // java.io.NotSerializableException:
-    // com.nitin.a21serialization.FourLeggedAnimal
+  // java.io.NotSerializableException:
+  // com.nitin.a21serialization.FourLeggedAnimal
 
-    Horse h = new Horse();
+  Horse h = new Horse();
 }
 
 class Horse implements Serializable {
-    String name = "Chetak";
+  String name = "Chetak";
 
-    @Override
-    public String toString() {
-        return "Horse{" + "name='" + name + '\'' + '}';
-    }
+  @Override
+  public String toString() {
+    return "Horse{" + "name='" + name + '\'' + '}';
+  }
 }

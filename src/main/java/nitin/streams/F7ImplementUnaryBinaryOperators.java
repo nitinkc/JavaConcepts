@@ -8,14 +8,14 @@ import java.util.function.UnaryOperator;
  * input parameter and return value are all of Same type
  */
 public class F7ImplementUnaryBinaryOperators {
-    public static void main(String[] args) {
-        UnaryOperator<String> u1 = String::toLowerCase;
-        System.out.println(u1.apply("NITIN"));
+  public static void main(String[] args) {
+    UnaryOperator<String> u1 = String::toLowerCase;
+    System.out.println(u1.apply("NITIN"));
 
-        BinaryOperator<String> binaryOperator1 = String::concat;
-        BinaryOperator<String> binaryOperator2 = (string, toAdd) -> string.concat(toAdd);
+    BinaryOperator<String> binaryOperator1 = String::concat;
+    BinaryOperator<String> binaryOperator2 = (string, toAdd) -> string.concat(toAdd);
 
-        System.out.println(binaryOperator1.apply("Nitin", " Chaurasia"));
-        System.out.println(binaryOperator2.apply("Kirti", " Chaurasia"));
-    }
+    System.out.println(binaryOperator1.apply("Nitin", " Chaurasia"));
+    System.out.println(binaryOperator2.apply("Kirti", " Chaurasia"));
+  }
 }

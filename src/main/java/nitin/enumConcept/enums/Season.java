@@ -6,8 +6,8 @@ package nitin.enumConcept.enums;
  * <p>Enum is like a b_set of constants, thus use the uppercase letter convention
  */
 public enum Season {
-    WINTER,
-    SPRING,
-    SUMMER,
-    FALL
+  WINTER,
+  SPRING,
+  SUMMER,
+  FALL
 }

@@ -1,30 +1,42 @@
-{"report": {
-    "labs": [{
+{
+  "report": {
+    "labs": [
+      {
         "secondPreviousMonthName": "SEP 2023",
-        "careCategory": [{
+        "careCategory": [
+          {
             "labTestName": "HEMOGLOBIN (g/dL)",
-            "secondPreviousMonth": [{
+            "secondPreviousMonth": [
+              {
                 "result6190": "",
                 "outside6190": "",
                 "date6190": "",
                 "outOfRangeInd6190": "0"
-            }],
-            "previousMonth": [{
+              }
+            ],
+            "previousMonth": [
+              {
                 "outside3160": "",
                 "outOfRangeInd3160": "0",
                 "date3160": "",
                 "result3160": ""
-            }],
-            "currentMonth": [{
+              }
+            ],
+            "currentMonth": [
+              {
                 "outOfRangeInd0130": "1",
                 "result0130": "343",
                 "date0130": "(11/09)",
                 "outside0130": "Y"
-            }]
-        }],
+              }
+            ]
+          }
+        ],
         "currentMonthName": "NOV 2023",
         "careCategoryName": "ANEMIA",
         "previousMonthName": "OCT 2023"
-    }],
+      }
+    ],
     "labsData": true
-}}
+  }
+}

@@ -8,9 +8,9 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
 public @interface MyCustomAnnotation {
-    String name();
+  String name();
 
-    int value();
+  int value();
 
-    String[] tags() default {}; // Default empty array
+  String[] tags() default {}; // Default empty array
 }

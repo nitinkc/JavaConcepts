@@ -10,5 +10,5 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class GenericContainer<T> {
-    private T obj;
+  private T obj;
 }

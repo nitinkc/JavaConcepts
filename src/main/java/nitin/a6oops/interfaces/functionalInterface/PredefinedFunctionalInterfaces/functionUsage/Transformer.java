@@ -2,5 +2,5 @@ package nitin.a6oops.interfaces.functionalInterface.PredefinedFunctionalInterfac
 
 @FunctionalInterface
 public interface Transformer<T, R> {
-    T applyFunction(R r);
+  T applyFunction(R r);
 }

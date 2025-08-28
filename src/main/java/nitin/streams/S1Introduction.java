@@ -15,20 +15,20 @@ import java.util.stream.Stream;
  * after terminal operation
  */
 public class S1Introduction {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Stream<String> empty = Stream.empty();
-        System.out.println(empty);
+    Stream<String> empty = Stream.empty();
+    System.out.println(empty);
 
-        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
-        // Creating a Stream from a list
-        Stream<Integer> fromList = list.stream();
-        // Creating a parallel Stream
-        Stream<Integer> fromListParallel = list.parallelStream();
+    List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
+    // Creating a Stream from a list
+    Stream<Integer> fromList = list.stream();
+    // Creating a parallel Stream
+    Stream<Integer> fromListParallel = list.parallelStream();
 
-        Stream<Double> randoms = Stream.generate(() -> Math.random());
+    Stream<Double> randoms = Stream.generate(() -> Math.random());
 
-        randoms.forEach(System.out::println); // Infinite Stream of Random numbers
-        // randoms.forEach((element) -> System.out.println(element));
-    }
+    randoms.forEach(System.out::println); // Infinite Stream of Random numbers
+    // randoms.forEach((element) -> System.out.println(element));
+  }
 }

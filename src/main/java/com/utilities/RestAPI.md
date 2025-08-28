@@ -13,9 +13,11 @@ https://api.crossref.org/works?query.author=richard+feynman
 OPEN LIBRARY : https://openlibrary.org/dev/docs/api/books
 https://openlibrary.org/api/books?bibkeys=ISBN:9780849375637&format=json
 
-1. Gutendex search (Search the Author from book name) - https://gutendex.com/books/?search=Pride+and+Prejudice
+1. Gutendex search (Search the Author from book
+   name) - https://gutendex.com/books/?search=Pride+and+Prejudice
 
-2. Find a Book (take ISBN) from an author - https://api.crossref.org/works?query.author=Robert+Stevenson+Louis
+2. Find a Book (take ISBN) from an
+   author - https://api.crossref.org/works?query.author=Robert+Stevenson+Louis
    Book: Treasure Island
 
 3. Find - https://openlibrary.org/api/books?bibkeys=ISBN:9781108074568&format=json&jscmd=data

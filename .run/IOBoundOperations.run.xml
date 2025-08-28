@@ -1,16 +1,18 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="IOBoundOperations" type="Application" factoryName="Application" nameIsGenerated="true">
-    <option name="MAIN_CLASS_NAME" value="nitin.multithreading.IOBoundOperations" />
-    <module name="JavaConcepts.main" />
-    <option name="VM_PARAMETERS" value="-XX:+HeapDumpOnOutOfMemoryError -Xmx7M -XX:HeapDumpPath=heapdump/" />
+  <configuration default="false" factoryName="Application" name="IOBoundOperations"
+    nameIsGenerated="true" type="Application">
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="nitin.multithreading.*" />
-        <option name="ENABLED" value="true" />
+        <option name="PATTERN" value="nitin.multithreading.*"/>
+        <option name="ENABLED" value="true"/>
       </pattern>
     </extension>
     <method v="2">
-      <option name="Make" enabled="true" />
+      <option enabled="true" name="Make"/>
     </method>
+    <module name="JavaConcepts.main"/>
+    <option name="MAIN_CLASS_NAME" value="nitin.multithreading.IOBoundOperations"/>
+    <option name="VM_PARAMETERS"
+      value="-XX:+HeapDumpOnOutOfMemoryError -Xmx7M -XX:HeapDumpPath=heapdump/"/>
   </configuration>
 </component>

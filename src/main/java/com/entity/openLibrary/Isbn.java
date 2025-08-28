@@ -3,7 +3,12 @@ package com.entity.openLibrary;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
@@ -14,60 +19,60 @@ import lombok.*;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Isbn {
 
-    @JsonProperty("url")
-    public String url;
+  @JsonProperty("url")
+  public String url;
 
-    @JsonProperty("key")
-    public String key;
+  @JsonProperty("key")
+  public String key;
 
-    @JsonProperty("title")
-    public String title;
+  @JsonProperty("title")
+  public String title;
 
-    @JsonProperty("authors")
-    public List<Author> authors = null;
+  @JsonProperty("authors")
+  public List<Author> authors = null;
 
-    @JsonProperty("number_of_pages")
-    public Integer numberOfPages;
+  @JsonProperty("number_of_pages")
+  public Integer numberOfPages;
 
-    @JsonProperty("pagination")
-    public String pagination;
+  @JsonProperty("pagination")
+  public String pagination;
 
-    @JsonProperty("weight")
-    public String weight;
+  @JsonProperty("weight")
+  public String weight;
 
-    @JsonProperty("by_statement")
-    public String byStatement;
+  @JsonProperty("by_statement")
+  public String byStatement;
 
-    @JsonProperty("identifiers")
-    public Identifiers identifiers;
+  @JsonProperty("identifiers")
+  public Identifiers identifiers;
 
-    @JsonProperty("classifications")
-    public Classifications classifications;
+  @JsonProperty("classifications")
+  public Classifications classifications;
 
-    @JsonProperty("publishers")
-    public List<Publisher> publishers = null;
+  @JsonProperty("publishers")
+  public List<Publisher> publishers = null;
 
-    @JsonProperty("publish_places")
-    public List<PublishPlace> publishPlaces = null;
+  @JsonProperty("publish_places")
+  public List<PublishPlace> publishPlaces = null;
 
-    @JsonProperty("publish_date")
-    public String publishDate;
+  @JsonProperty("publish_date")
+  public String publishDate;
 
-    @JsonProperty("subjects")
-    public List<Subject> subjects = null;
+  @JsonProperty("subjects")
+  public List<Subject> subjects = null;
 
-    @JsonProperty("notes")
-    public String notes;
+  @JsonProperty("notes")
+  public String notes;
 
-    @JsonProperty("table_of_contents")
-    public List<TableOfContent> tableOfContents = null;
+  @JsonProperty("table_of_contents")
+  public List<TableOfContent> tableOfContents = null;
 
-    @JsonProperty("links")
-    public List<Link> links = null;
+  @JsonProperty("links")
+  public List<Link> links = null;
 
-    @JsonProperty("ebooks")
-    public List<Ebook> ebooks = null;
+  @JsonProperty("ebooks")
+  public List<Ebook> ebooks = null;
 
-    @JsonProperty("cover")
-    public Cover cover;
+  @JsonProperty("cover")
+  public Cover cover;
 }

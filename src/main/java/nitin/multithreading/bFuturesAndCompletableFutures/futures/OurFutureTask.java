@@ -6,16 +6,16 @@ import java.util.concurrent.FutureTask;
 
 class OurFutureTask<V> extends FutureTask<V> {
 
-    public OurFutureTask(Callable<V> callable) {
-        super(callable);
-    }
+  public OurFutureTask(Callable<V> callable) {
+    super(callable);
+  }
 
-    @Override
-    protected void done() {
-        try {
-            System.out.println("Done Task1..." + get());
-        } catch (InterruptedException | ExecutionException e) {
-            System.out.println("Exception Task1..." + exceptionNow());
-        }
+  @Override
+  protected void done() {
+    try {
+      System.out.println("Done Task1..." + get());
+    } catch (InterruptedException | ExecutionException e) {
+      System.out.println("Exception Task1..." + exceptionNow());
     }
+  }
 }

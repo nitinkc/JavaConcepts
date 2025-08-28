@@ -1,16 +1,18 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="StringStats" type="Application" factoryName="Application" nameIsGenerated="true">
-    <option name="MAIN_CLASS_NAME" value="nitin.performance.StringStats" />
-    <module name="JavaConcepts.main" />
-    <option name="VM_PARAMETERS" value="-XX:+PrintStringTableStatistics -XX:StringTableSize=120121 -Xms1g -Xmx4g" />
+  <configuration default="false" factoryName="Application" name="StringStats" nameIsGenerated="true"
+    type="Application">
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="nitin.performance.*" />
-        <option name="ENABLED" value="true" />
+        <option name="PATTERN" value="nitin.performance.*"/>
+        <option name="ENABLED" value="true"/>
       </pattern>
     </extension>
     <method v="2">
-      <option name="Make" enabled="true" />
+      <option enabled="true" name="Make"/>
     </method>
+    <module name="JavaConcepts.main"/>
+    <option name="MAIN_CLASS_NAME" value="nitin.performance.StringStats"/>
+    <option name="VM_PARAMETERS"
+      value="-XX:+PrintStringTableStatistics -XX:StringTableSize=120121 -Xms1g -Xmx4g"/>
   </configuration>
 </component>

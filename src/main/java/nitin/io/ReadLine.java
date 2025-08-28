@@ -6,15 +6,15 @@ import java.io.InputStreamReader;
 
 public class ReadLine {
 
-    /**
-     * @param args
-     * @throws IOException
-     */
-    public static void main(String[] args) throws IOException {
+  /**
+   * @param args
+   * @throws IOException
+   */
+  public static void main(String[] args) throws IOException {
 
-        System.out.println("Enter something");
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String sample = br.readLine();
-        System.out.println(sample);
-    }
+    System.out.println("Enter something");
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    String sample = br.readLine();
+    System.out.println(sample);
+  }
 }

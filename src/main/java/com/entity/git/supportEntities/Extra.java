@@ -10,6 +10,6 @@ import javax.annotation.processing.Generated;
 @Generated("jsonschema2pojo")
 public class Extra {
 
-    @JsonProperty("raw_info")
-    public RawInfo rawInfo;
+  @JsonProperty("raw_info")
+  public RawInfo rawInfo;
 }

@@ -10,37 +10,37 @@ import java.util.List;
  * <p>list.remove() --> ConcurrentModificationException itr.remove() --> correct way to remove
  */
 public class L3RemoveElementsUsingForLoopRemove {
-    public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
-        list.add("A");
-        list.add("B");
-        list.add("C");
-        list.add("D");
-        list.add("E");
-        list.add("F");
-        list.add("G");
-        list.add("H");
-        list.add("I");
-        list.add("J");
-        // list.remove(2);// Removing the element, from anywhere
+  public static void main(String[] args) {
+    List<String> list = new ArrayList<>();
+    list.add("A");
+    list.add("B");
+    list.add("C");
+    list.add("D");
+    list.add("E");
+    list.add("F");
+    list.add("G");
+    list.add("H");
+    list.add("I");
+    list.add("J");
+    // list.remove(2);// Removing the element, from anywhere
 
-        System.out.println(
-                "******************* LIST BEFORE REMOVAL ***************************** ");
-        System.out.println(list);
+    System.out.println(
+      "******************* LIST BEFORE REMOVAL ***************************** ");
+    System.out.println(list);
 
-        System.out.println(
-                "******************* LIST DURING REMOVAL ***************************** ");
-        // Removing the elements from the a_list
+    System.out.println(
+      "******************* LIST DURING REMOVAL ***************************** ");
+    // Removing the elements from the a_list
 
-        // Removal Like this has a bug!!
-        // The List reshuffles after each Removal
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
-            list.remove(i);
-            i--;
-        }
-
-        System.out.println("******************* LIST AFTER REMOVAL ***************************** ");
-        System.out.println(list);
+    // Removal Like this has a bug!!
+    // The List reshuffles after each Removal
+    for (int i = 0; i < list.size(); i++) {
+      System.out.println(list.get(i));
+      list.remove(i);
+      i--;
     }
+
+    System.out.println("******************* LIST AFTER REMOVAL ***************************** ");
+    System.out.println(list);
+  }
 }

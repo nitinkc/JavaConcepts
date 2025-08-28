@@ -5,41 +5,43 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/** Created by Nitin Chaurasia on 1/31/18 at 12:40 AM. */
+/**
+ * Created by Nitin Chaurasia on 1/31/18 at 12:40 AM.
+ */
 public class S3sorted {
-    public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
-        list.add("Pawan");
-        list.add("Chiranjeevi");
-        list.add("RaviTeja");
-        list.add("Venkatesh");
-        list.add("Nagarjuna");
-        System.out.println(list);
+  public static void main(String[] args) {
+    List<String> list = new ArrayList<>();
+    list.add("Pawan");
+    list.add("Chiranjeevi");
+    list.add("RaviTeja");
+    list.add("Venkatesh");
+    list.add("Nagarjuna");
+    System.out.println(list);
 
-        System.out.println("SORTED LIST");
-        // Sort elements of the Stream, using DNSO
-        List<String> l = list.stream().sorted().collect(Collectors.toList());
-        System.out.println(l);
+    System.out.println("SORTED LIST");
+    // Sort elements of the Stream, using DNSO
+    List<String> l = list.stream().sorted().collect(Collectors.toList());
+    System.out.println(l);
 
-        // Reverse Sorted, customised sorted order
-        List<String> l2 =
-                list.stream()
-                        .sorted((str1, str2) -> str2.compareTo(str1))
-                        .collect(Collectors.toList());
-        //        List<String> l3 = list.stream().sorted(new Comparator<String>() {
-        //            @Override
-        //            public int compare(String o1, String o2) {
-        //                o2.compareTo(o1);
-        //            }
-        //        }).collect(Collectors.toList());
-        System.out.println(l2);
+    // Reverse Sorted, customised sorted order
+    List<String> l2 =
+      list.stream()
+        .sorted((str1, str2) -> str2.compareTo(str1))
+        .collect(Collectors.toList());
+    //        List<String> l3 = list.stream().sorted(new Comparator<String>() {
+    //            @Override
+    //            public int compare(String o1, String o2) {
+    //                o2.compareTo(o1);
+    //            }
+    //        }).collect(Collectors.toList());
+    System.out.println(l2);
 
-        System.out.println("COMPARATOR USE CASE");
-        list.stream()
-                .sorted(
-                        Comparator.comparing(String::length)
-                                // .thenComparing((str1, str2) -> str2.compareTo(str1))
-                                .thenComparing(Comparator.reverseOrder()))
-                .forEach(System.out::print);
-    }
+    System.out.println("COMPARATOR USE CASE");
+    list.stream()
+      .sorted(
+        Comparator.comparing(String::length)
+          // .thenComparing((str1, str2) -> str2.compareTo(str1))
+          .thenComparing(Comparator.reverseOrder()))
+      .forEach(System.out::print);
+  }
 }

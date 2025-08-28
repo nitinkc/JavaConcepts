@@ -12,20 +12,20 @@ import lombok.ToString;
 @Getter
 @ToString
 public class Student extends Person {
-    public Long enrollmentNumber;
-    public StudentOf studentOf;
+  public Long enrollmentNumber;
+  public StudentOf studentOf;
 
-    public Student(
-            String firstName,
-            String lastName,
-            Date dob,
-            Ethnicity ethnicity,
-            Address address,
-            Long enrollmentNumber,
-            StudentOf studentOf) {
+  public Student(
+    String firstName,
+    String lastName,
+    Date dob,
+    Ethnicity ethnicity,
+    Address address,
+    Long enrollmentNumber,
+    StudentOf studentOf) {
 
-        super(firstName, lastName, dob, ethnicity, address);
-        this.enrollmentNumber = enrollmentNumber;
-        this.studentOf = studentOf;
-    }
+    super(firstName, lastName, dob, ethnicity, address);
+    this.enrollmentNumber = enrollmentNumber;
+    this.studentOf = studentOf;
+  }
 }

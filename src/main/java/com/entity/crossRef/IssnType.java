@@ -16,9 +16,9 @@ import lombok.Setter;
 @Setter
 public class IssnType {
 
-    @JsonProperty("value")
-    public String value;
+  @JsonProperty("value")
+  public String value;
 
-    @JsonProperty("type")
-    public String type;
+  @JsonProperty("type")
+  public String type;
 }

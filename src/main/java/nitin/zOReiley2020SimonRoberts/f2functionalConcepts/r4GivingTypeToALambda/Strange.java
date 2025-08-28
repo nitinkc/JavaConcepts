@@ -6,7 +6,7 @@ package nitin.zOReiley2020SimonRoberts.f2functionalConcepts.r4GivingTypeToALambd
 @FunctionalInterface
 public interface Strange {
 
-    // Just takes a car1 as an argument. This is the only similarity with the Car1 Interface, along
-    // with the return type
-    boolean anotherTestStuff(Car1 car);
+  // Just takes a car1 as an argument. This is the only similarity with the Car1 Interface, along
+  // with the return type
+  boolean anotherTestStuff(Car1 car);
 }

@@ -6,13 +6,13 @@ import org.junit.jupiter.api.BeforeEach;
 
 public class DistanceFromMainSequenceFitnessFunction {
 
-    private JDepend jdepend = new JDepend();
+  private JDepend jdepend = new JDepend();
 
-    @BeforeEach
-    void init() throws IOException {
-        jdepend = new JDepend();
-        jdepend.addDirectory("build/classes/java/main");
-    }
+  @BeforeEach
+  void init() throws IOException {
+    jdepend = new JDepend();
+    jdepend.addDirectory("build/classes/java/main");
+  }
     /*@Test
     @Ignore
     void testAllPackages() {

@@ -5,11 +5,11 @@ package nitin.a2operators;
  * class.interface
  */
 public class O6instanceof {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Short s = 15;
+    Short s = 15;
 
-        System.out.println(s instanceof Short); // true
-        System.out.println(s instanceof Number); // true
-    }
+    System.out.println(s instanceof Short); // true
+    System.out.println(s instanceof Number); // true
+  }
 }

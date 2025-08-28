@@ -10,6 +10,6 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class Incrementer {
-    int counter;
-    String timeOfIncrement;
+  int counter;
+  String timeOfIncrement;
 }

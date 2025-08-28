@@ -4,26 +4,26 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class MyATM {
-    private final Lock lock;
-    private final int balance = 1000;
+  private final Lock lock;
+  private final int balance = 1000;
 
-    public MyATM() {
-        lock = new ReentrantLock();
-    }
+  public MyATM() {
+    lock = new ReentrantLock();
+  }
 
-    public int withdraw(int amount) {
-        int temp = balance;
-        lock.lock();
+  public int withdraw(int amount) {
+    int temp = balance;
+    lock.lock();
 
-        lock.unlock();
-        return temp;
-    }
+    lock.unlock();
+    return temp;
+  }
 
-    public int deposit(int amount) {
-        int temp = balance;
-        lock.lock();
+  public int deposit(int amount) {
+    int temp = balance;
+    lock.lock();
 
-        lock.unlock();
-        return temp;
-    }
+    lock.unlock();
+    return temp;
+  }
 }

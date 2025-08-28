@@ -13,18 +13,18 @@ import java.util.List;
  * @author Juneau
  */
 public class ItalianRoast extends CoffeeType implements Dark {
-    List<String> description;
+  List<String> description;
 
-    public ItalianRoast() {
-        description = new ArrayList();
-        description.add(BOLD);
-        description.add(ROBUST);
-        description.add(WINEY_UNDERTONES);
-        description.add(WHOLE_BEAN);
-    }
+  public ItalianRoast() {
+    description = new ArrayList();
+    description.add(BOLD);
+    description.add(ROBUST);
+    description.add(WINEY_UNDERTONES);
+    description.add(WHOLE_BEAN);
+  }
 
-    @Override
-    public List<String> getDescription() {
-        return description;
-    }
+  @Override
+  public List<String> getDescription() {
+    return description;
+  }
 }

@@ -18,6 +18,6 @@ import lombok.Setter;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class JournalIssue {
 
-    @JsonProperty("issue")
-    public String issue;
+  @JsonProperty("issue")
+  public String issue;
 }

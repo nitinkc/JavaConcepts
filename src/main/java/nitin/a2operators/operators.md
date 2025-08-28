@@ -45,10 +45,12 @@
     - Assigns a value to a variable.
 
 10. **Conditional Operator (ternary)**
-    - `? :` (conditional): Evaluates a boolean expression and returns one of two values based on the result.
+    - `? :` (conditional): Evaluates a boolean expression and returns one of two values based on the
+      result.
 
 11. **Null Operator**
-    - `??` (nullish coalescing): Returns the right-hand operand when the left-hand operand is `null`.
+    - `??` (nullish coalescing): Returns the right-hand operand when the left-hand operand
+      is `null`.
 
 12. **Array Access Operator (`[]`):**
     - Used to access elements of an array.
@@ -59,5 +61,6 @@
 14. **Evaluation Order of Java Operands**
     - Specifies the order in which operands are evaluated in an expression.
 
-Note: Operator precedence and operand evaluation order are crucial for understanding how expressions are processed in
+Note: Operator precedence and operand evaluation order are crucial for understanding how expressions
+are processed in
 Java. Always use parentheses to clarify and control the order of evaluation when needed.

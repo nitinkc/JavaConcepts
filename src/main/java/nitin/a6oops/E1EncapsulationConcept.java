@@ -1,8 +1,10 @@
 package nitin.a6oops;
 
-/** Created by Nitin C on 11/26/2015. */
+/**
+ * Created by Nitin C on 11/26/2015.
+ */
 public class E1EncapsulationConcept {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
         /*
         Gathering all operations on the objects State at one Place
 
@@ -12,5 +14,5 @@ public class E1EncapsulationConcept {
         Partial Encapsulation : By declaring public or protected
 
          */
-    }
+  }
 }

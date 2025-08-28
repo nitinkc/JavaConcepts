@@ -17,6 +17,6 @@ import lombok.Setter;
 @Setter
 public class Issued {
 
-    @JsonProperty("date-parts")
-    public List<List<Integer>> dateParts = null;
+  @JsonProperty("date-parts")
+  public List<List<Integer>> dateParts = null;
 }

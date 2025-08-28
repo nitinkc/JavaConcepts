@@ -17,18 +17,18 @@ import lombok.Setter;
 @Setter
 public class Message {
 
-    @JsonProperty("facets")
-    public Facets facets;
+  @JsonProperty("facets")
+  public Facets facets;
 
-    @JsonProperty("total-results")
-    public Integer totalResults;
+  @JsonProperty("total-results")
+  public Integer totalResults;
 
-    @JsonProperty("items")
-    public List<Item> items = null;
+  @JsonProperty("items")
+  public List<Item> items = null;
 
-    @JsonProperty("items-per-page")
-    public Integer itemsPerPage;
+  @JsonProperty("items-per-page")
+  public Integer itemsPerPage;
 
-    @JsonProperty("query")
-    public Query query;
+  @JsonProperty("query")
+  public Query query;
 }

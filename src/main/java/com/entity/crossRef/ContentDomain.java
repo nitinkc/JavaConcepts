@@ -19,9 +19,9 @@ import lombok.Setter;
 @Setter
 public class ContentDomain {
 
-    @JsonProperty("domain")
-    public List<Object> domain = null;
+  @JsonProperty("domain")
+  public List<Object> domain = null;
 
-    @JsonProperty("crossmark-restriction")
-    public Boolean crossmarkRestriction;
+  @JsonProperty("crossmark-restriction")
+  public Boolean crossmarkRestriction;
 }

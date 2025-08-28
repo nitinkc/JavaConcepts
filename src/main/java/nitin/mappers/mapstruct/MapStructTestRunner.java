@@ -9,17 +9,17 @@ import nitin.mappers.mapstruct.model.Tester;
 import org.mapstruct.factory.Mappers;
 
 public class MapStructTestRunner {
-    public static void main(String[] args) throws IOException {
-        final TestMapper mapper = Mappers.getMapper(TestMapper.class);
+  public static void main(String[] args) throws IOException {
+    final TestMapper mapper = Mappers.getMapper(TestMapper.class);
 
-        URL resource = new URL("file:src/main/resources/json/a5object-mapper-tester.json");
-        ObjectMapper om = new ObjectMapper();
+    URL resource = new URL("file:src/main/resources/json/a5object-mapper-tester.json");
+    ObjectMapper om = new ObjectMapper();
 
-        Tester tester = getTestData(resource, om);
-        System.out.println(om.writerWithDefaultPrettyPrinter().writeValueAsString(tester));
+    Tester tester = getTestData(resource, om);
+    System.out.println(om.writerWithDefaultPrettyPrinter().writeValueAsString(tester));
 
-        TesterDto testerDto = mapper.testMapper(tester);
-        System.out.println(om.writerWithDefaultPrettyPrinter().writeValueAsString(testerDto));
+    TesterDto testerDto = mapper.testMapper(tester);
+    System.out.println(om.writerWithDefaultPrettyPrinter().writeValueAsString(testerDto));
         /*
                Map<String, String> map = om.readValue(resource, new TypeReference<Map<String, String>>() {});
                TesterDto testerDto2 = mapper.testMapperFromMap(map);
@@ -27,15 +27,15 @@ public class MapStructTestRunner {
 
         */
 
-    }
+  }
 
-    private static Tester getTestData(URL resource, ObjectMapper om) {
-        Tester tester = new Tester();
-        try {
-            tester = om.readValue(resource, Tester.class);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return tester;
+  private static Tester getTestData(URL resource, ObjectMapper om) {
+    Tester tester = new Tester();
+    try {
+      tester = om.readValue(resource, Tester.class);
+    } catch (IOException e) {
+      e.printStackTrace();
     }
+    return tester;
+  }
 }

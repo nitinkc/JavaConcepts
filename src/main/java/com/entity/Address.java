@@ -14,11 +14,11 @@ import lombok.ToString;
 @ToString
 public class Address {
 
-    public String addressLine1;
-    public String addressLine2;
+  public String addressLine1;
+  public String addressLine2;
 
-    public String City;
-    public String State;
-    public String Country;
-    public int zip;
+  public String City;
+  public String State;
+  public String Country;
+  public int zip;
 }

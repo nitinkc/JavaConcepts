@@ -16,6 +16,6 @@ import lombok.Setter;
 @Setter
 public class Primary {
 
-    @JsonProperty("URL")
-    public String url;
+  @JsonProperty("URL")
+  public String url;
 }

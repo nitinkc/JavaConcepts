@@ -11,15 +11,15 @@ import lombok.ToString;
 @Setter
 @ToString
 public class BlogPost {
-    private String title;
-    private String author;
-    private BlogPostType type;
-    private int likes;
+  private String title;
+  private String author;
+  private BlogPostType type;
+  private int likes;
 
-    public BlogPost(String title, String author, BlogPostType type, int likes) {
-        this.title = title;
-        this.author = author;
-        this.type = type;
-        this.likes = likes;
-    }
+  public BlogPost(String title, String author, BlogPostType type, int likes) {
+    this.title = title;
+    this.author = author;
+    this.type = type;
+    this.likes = likes;
+  }
 }

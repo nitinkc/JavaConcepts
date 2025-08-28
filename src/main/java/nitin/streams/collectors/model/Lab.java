@@ -17,9 +17,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Lab {
 
-    @JsonProperty("month")
-    private String month;
+  @JsonProperty("month")
+  private String month;
 
-    @JsonProperty("labsData") // Can have maximum of 3 labs each column
-    private List<LabsDatum> labsData; // Can have maximum of 3 labs each column
+  @JsonProperty("labsData") // Can have maximum of 3 labs each column
+  private List<LabsDatum> labsData; // Can have maximum of 3 labs each column
 }

@@ -8,8 +8,8 @@ import lombok.Setter;
 @Setter
 public class Data {
 
-    private String refDataId;
-    private String releaseNumber;
+  private String refDataId;
+  private String releaseNumber;
 
-    // Other Data Fields
+  // Other Data Fields
 }

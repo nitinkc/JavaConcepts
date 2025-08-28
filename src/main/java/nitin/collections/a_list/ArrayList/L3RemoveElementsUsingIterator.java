@@ -11,33 +11,33 @@ import java.util.List;
  * <p>list.remove() --> ConcurrentModificationException itr.remove() --> correct way to remove
  */
 public class L3RemoveElementsUsingIterator {
-    public static void main(String[] args) {
-        List list = new ArrayList();
-        list.add("A");
-        list.add("B");
-        list.add("C");
-        list.add("D");
-        list.add("E");
+  public static void main(String[] args) {
+    List list = new ArrayList();
+    list.add("A");
+    list.add("B");
+    list.add("C");
+    list.add("D");
+    list.add("E");
 
-        list.remove(2); // Removing the element, from anywhere
+    list.remove(2); // Removing the element, from anywhere
 
-        System.out.println(
-                "******************* LIST BEFORE REMOVAL ***************************** ");
-        System.out.println(list);
+    System.out.println(
+      "******************* LIST BEFORE REMOVAL ***************************** ");
+    System.out.println(list);
 
-        Iterator itr = list.iterator();
+    Iterator itr = list.iterator();
 
-        // Removing the elements from the a_list
-        System.out.println(
-                "******************* LIST DURING REMOVAL ***************************** ");
-        while (itr.hasNext()) {
-            // itr.remove();// Wrong Place as the itr is accessed in SOP
-            // list.remove(1);//ConcurrentModificationException
-            System.out.println(itr.next());
-            itr.remove();
-        } // The a_list will be empty after this
+    // Removing the elements from the a_list
+    System.out.println(
+      "******************* LIST DURING REMOVAL ***************************** ");
+    while (itr.hasNext()) {
+      // itr.remove();// Wrong Place as the itr is accessed in SOP
+      // list.remove(1);//ConcurrentModificationException
+      System.out.println(itr.next());
+      itr.remove();
+    } // The a_list will be empty after this
 
-        System.out.println("******************* LIST AFTER REMOVAL ***************************** ");
-        System.out.println(list);
-    }
+    System.out.println("******************* LIST AFTER REMOVAL ***************************** ");
+    System.out.println(list);
+  }
 }

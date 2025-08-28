@@ -1,32 +1,34 @@
 package nitin.strings;
 
-/** Created by nitin on Thu, 12/29/16 at 2:49 AM. */
+/**
+ * Created by nitin on Thu, 12/29/16 at 2:49 AM.
+ */
 public class S2StringMethods {
-    public static void main(String[] args) {
-        String x = "Malgudi Days by R.K Narayan Features malgudi";
+  public static void main(String[] args) {
+    String x = "Malgudi Days by R.K Narayan Features malgudi";
 
-        System.out.println(x.length()); // length method
-        System.out.println(x.charAt(9));
+    System.out.println(x.length()); // length method
+    System.out.println(x.charAt(9));
 
-        // Index Of
-        System.out.println(x.indexOf('M'));
-        System.out.println(x.indexOf('a', 3));
-        System.out.println(x.indexOf("Days"));
-        System.out.println(x.indexOf("gudi", 4));
+    // Index Of
+    System.out.println(x.indexOf('M'));
+    System.out.println(x.indexOf('a', 3));
+    System.out.println(x.indexOf("Days"));
+    System.out.println(x.indexOf("gudi", 4));
 
-        // Sub string
+    // Sub string
 
-        // toLowerCase() , toUpperCase()
+    // toLowerCase() , toUpperCase()
 
-        // equals() , equalsIgnoreCase()
+    // equals() , equalsIgnoreCase()
 
-        // startesWith, endsWith
+    // startesWith, endsWith
 
-        // contains
+    // contains
 
-        // replace
+    // replace
 
-        // trim
+    // trim
 
-    }
+  }
 }

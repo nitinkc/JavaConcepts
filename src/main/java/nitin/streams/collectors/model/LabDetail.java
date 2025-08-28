@@ -17,14 +17,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class LabDetail {
 
-    @JsonProperty("name")
-    private String name;
+  @JsonProperty("name")
+  private String name;
 
-    @JsonProperty("uom")
-    private String uom;
+  @JsonProperty("uom")
+  private String uom;
 
-    private int sortOrder;
+  private int sortOrder;
 
-    @JsonProperty("labs")
-    private List<Lab> labs; // Keeps 13 months of similar labs
+  @JsonProperty("labs")
+  private List<Lab> labs; // Keeps 13 months of similar labs
 }

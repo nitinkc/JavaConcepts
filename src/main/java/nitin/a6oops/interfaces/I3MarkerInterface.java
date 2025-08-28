@@ -7,4 +7,5 @@ package nitin.a6oops.interfaces;
  * responsible for providing required ability in marker interfaces we can create our own marker
  * interface, but customization of JVM is required.
  */
-public class I3MarkerInterface {}
+public class I3MarkerInterface {
+}

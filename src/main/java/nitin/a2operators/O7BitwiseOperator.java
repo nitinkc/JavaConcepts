@@ -8,18 +8,18 @@ package nitin.a2operators;
  */
 public class O7BitwiseOperator {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        System.out.println(true);
-        System.out.println(true);
-        System.out.println(false);
-        // System.out.println(~true);// cant be applied
-        System.out.println(false); // False
+    System.out.println(true);
+    System.out.println(true);
+    System.out.println(false);
+    // System.out.println(~true);// cant be applied
+    System.out.println(false); // False
 
-        // Mathematical manipulations
-        System.out.println(4 & 5); // 100 & 101 = 100
-        System.out.println(4 | 5); // 100 | 101 = 101
-        System.out.println(4 ^ 5); // 100 ^ 101 = 001
-        System.out.println(~4); // minus 4
-    }
+    // Mathematical manipulations
+    System.out.println(4 & 5); // 100 & 101 = 100
+    System.out.println(4 | 5); // 100 | 101 = 101
+    System.out.println(4 ^ 5); // 100 ^ 101 = 001
+    System.out.println(~4); // minus 4
+  }
 }

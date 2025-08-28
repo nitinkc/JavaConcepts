@@ -7,17 +7,17 @@ import java.util.List;
  * @author Juneau
  */
 public class DoughnutRoast extends CoffeeType implements Medium {
-    List<String> description;
+  List<String> description;
 
-    public DoughnutRoast() {
-        description = new ArrayList();
-        description.add(AROMATIC);
-        description.add(SWEET);
-        description.add(GROUND);
-    }
+  public DoughnutRoast() {
+    description = new ArrayList();
+    description.add(AROMATIC);
+    description.add(SWEET);
+    description.add(GROUND);
+  }
 
-    @Override
-    public List<String> getDescription() {
-        return description;
-    }
+  @Override
+  public List<String> getDescription() {
+    return description;
+  }
 }

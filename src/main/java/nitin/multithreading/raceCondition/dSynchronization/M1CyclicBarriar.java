@@ -20,21 +20,21 @@ import java.util.concurrent.Executors;
  * activated a total of 3 times
  */
 public class M1CyclicBarriar {
-    // Executing the database operation by 5 threads
-    public static void main(String[] args) {
-        DatabaseOperations databaseOperations = new DatabaseOperations();
+  // Executing the database operation by 5 threads
+  public static void main(String[] args) {
+    DatabaseOperations databaseOperations = new DatabaseOperations();
 
-        try (ExecutorService executorService = Executors.newFixedThreadPool(5)) {
+    try (ExecutorService executorService = Executors.newFixedThreadPool(5)) {
 
-            // Creating the barrier for more number of threads (eg 10 in this case) HALTS THE
-            // PROGRAM. DEADLOCK SITUATION
-            CyclicBarrier c1 = new CyclicBarrier(5);
-            CyclicBarrier c2 =
-                    new CyclicBarrier(4, () -> System.out.println("**** CONNECTION ESTBD ****"));
+      // Creating the barrier for more number of threads (eg 10 in this case) HALTS THE
+      // PROGRAM. DEADLOCK SITUATION
+      CyclicBarrier c1 = new CyclicBarrier(5);
+      CyclicBarrier c2 =
+        new CyclicBarrier(4, () -> System.out.println("**** CONNECTION ESTBD ****"));
 
-            for (int i = 0; i < 1; i++) {
-                executorService.submit(() -> databaseOperations.performTask(c1, c2));
-            }
-        }
+      for (int i = 0; i < 1; i++) {
+        executorService.submit(() -> databaseOperations.performTask(c1, c2));
+      }
     }
+  }
 }

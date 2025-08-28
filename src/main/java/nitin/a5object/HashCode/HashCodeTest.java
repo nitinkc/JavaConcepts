@@ -15,5 +15,6 @@ package nitin.a5object.HashCode;
  * unique when called on unequal objects
  */
 public class HashCodeTest {
-    public static void main(String[] args) {}
+  public static void main(String[] args) {
+  }
 }

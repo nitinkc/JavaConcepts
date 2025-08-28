@@ -11,4 +11,5 @@ package nitin.multithreading.aBasics.executionPrevention;
  * while wait() is an instance specific method and only got wake up if some other thread calls
  * notify method on same a5object.
  */
-public class T4SleepNWait {}
+public class T4SleepNWait {
+}

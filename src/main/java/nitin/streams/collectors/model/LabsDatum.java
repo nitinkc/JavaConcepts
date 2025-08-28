@@ -12,6 +12,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class LabsDatum {
-    private String value;
-    private String drawDate;
+  private String value;
+  private String drawDate;
 }

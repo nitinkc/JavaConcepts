@@ -1,6 +1,14 @@
 package nitin.io.streams.BufferedIOStreams;
 
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 /**
  * Created by Nitin C on 3/6/2016. instead of writing one byte at a time, read(byte[]) return number
@@ -17,34 +25,34 @@ import java.io.*;
  * <p>Buffer size tuning :
  */
 public class CopyClassUsingBuffIO {
-    public static void main(String[] args) {
-        // Binary File (Serialized file) to read binary data
-        // File source = new File("s.out");
-        File source = new File("src/main/resources/s.out");
-        File destination = new File("src/main/resources/s_copy.out"); // Override mode
+  public static void main(String[] args) {
+    // Binary File (Serialized file) to read binary data
+    // File source = new File("s.out");
+    File source = new File("src/main/resources/s.out");
+    File destination = new File("src/main/resources/s_copy.out"); // Override mode
 
-        try {
-            copy(source, destination);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    try {
+      copy(source, destination);
+    } catch (FileNotFoundException e) {
+      e.printStackTrace();
+    } catch (IOException e) {
+      e.printStackTrace();
     }
+  }
 
-    private static void copy(File source, File destination) throws IOException {
-        try ( // try-with-resource keep the resources within ()
-        InputStream in = new BufferedInputStream(new FileInputStream(source));
-                OutputStream out =
-                        new BufferedOutputStream(
-                                new FileOutputStream(destination))) // try keeping the resources
-        {
-            byte[] buffer = new byte[1024]; // 1 Kb Buffer
-            int lenghtRead;
-            while ((lenghtRead = in.read(buffer)) > 0) {
-                out.write(buffer, 0, lenghtRead);
-                out.flush();
-            }
-        } // try with resource ends here
-    }
+  private static void copy(File source, File destination) throws IOException {
+    try ( // try-with-resource keep the resources within ()
+          InputStream in = new BufferedInputStream(new FileInputStream(source));
+          OutputStream out =
+            new BufferedOutputStream(
+              new FileOutputStream(destination))) // try keeping the resources
+    {
+      byte[] buffer = new byte[ 1024 ]; // 1 Kb Buffer
+      int lenghtRead;
+      while ((lenghtRead = in.read(buffer)) > 0) {
+        out.write(buffer, 0, lenghtRead);
+        out.flush();
+      }
+    } // try with resource ends here
+  }
 }

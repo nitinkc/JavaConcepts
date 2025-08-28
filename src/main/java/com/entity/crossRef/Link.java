@@ -16,15 +16,15 @@ import lombok.Setter;
 @Setter
 public class Link {
 
-    @JsonProperty("URL")
-    public String url;
+  @JsonProperty("URL")
+  public String url;
 
-    @JsonProperty("content-type")
-    public String contentType;
+  @JsonProperty("content-type")
+  public String contentType;
 
-    @JsonProperty("content-version")
-    public String contentVersion;
+  @JsonProperty("content-version")
+  public String contentVersion;
 
-    @JsonProperty("intended-application")
-    public String intendedApplication;
+  @JsonProperty("intended-application")
+  public String intendedApplication;
 }

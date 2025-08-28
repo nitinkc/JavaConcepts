@@ -38,58 +38,58 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class WalmartCodingTest {
-    public static void main(String[] argv) {
-        String[] words = new String[] {"cat", "baby", "dog", "bird", "car", "ax"};
-        String string1 = "tcabnihjs";
-        String string2 = "tbcanihjs";
-        String string3 = "baykkjl";
-        String string4 = "bbabylkkj";
-        String string5 = "ccc";
-        String string6 = "breadmaking";
+  public static void main(String[] argv) {
+    String[] words = new String[]{"cat", "baby", "dog", "bird", "car", "ax"};
+    String string1 = "tcabnihjs";
+    String string2 = "tbcanihjs";
+    String string3 = "baykkjl";
+    String string4 = "bbabylkkj";
+    String string5 = "ccc";
+    String string6 = "breadmaking";
 
-        System.out.println(find_embedded_word(words, string1));
-        System.out.println(find_embedded_word(words, string2));
-        System.out.println(find_embedded_word(words, string3));
-        System.out.println(find_embedded_word(words, string4));
-        System.out.println(find_embedded_word(words, string5));
-        System.out.println(find_embedded_word(words, string6));
-    }
+    System.out.println(find_embedded_word(words, string1));
+    System.out.println(find_embedded_word(words, string2));
+    System.out.println(find_embedded_word(words, string3));
+    System.out.println(find_embedded_word(words, string4));
+    System.out.println(find_embedded_word(words, string5));
+    System.out.println(find_embedded_word(words, string6));
+  }
 
-    public static String find_embedded_word(String[] words, String str) {
-        String ret = "None";
+  public static String find_embedded_word(String[] words, String str) {
+    String ret = "None";
 
-        for (String word : words) {
-            boolean[] flag = new boolean[word.length()]; // check syntax
-            Map<Character, Integer> map = getCharacterIntegerMap(str);
-            for (int i = 0; i < word.length(); i++) {
-                Character c = word.charAt(i);
-                if (map.containsKey(c) && map.get(c) > 0) {
-                    map.put(c, map.get(c) - 1);
-                    flag[i] = true;
-                }
-            }
-
-            if (allTrue(flag)) {
-                // ret = word;
-                return word;
-            }
+    for (String word : words) {
+      boolean[] flag = new boolean[ word.length() ]; // check syntax
+      Map<Character, Integer> map = getCharacterIntegerMap(str);
+      for (int i = 0; i < word.length(); i++) {
+        Character c = word.charAt(i);
+        if (map.containsKey(c) && map.get(c) > 0) {
+          map.put(c, map.get(c) - 1);
+          flag[ i ] = true;
         }
-        return ret;
-    }
+      }
 
-    private static boolean allTrue(boolean[] flag) {
-        for (int i = 0; i < flag.length; i++) {
-            if (!flag[i]) return false;
-        }
-        return true;
+      if (allTrue(flag)) {
+        // ret = word;
+        return word;
+      }
     }
+    return ret;
+  }
 
-    private static Map<Character, Integer> getCharacterIntegerMap(String str) {
-        Map<Character, Integer> map = new HashMap<>();
-        for (int i = 0; i < str.length(); i++) {
-            Character key = str.charAt(i); // Check for Autoboxing
-            map.put(key, map.getOrDefault(key, 0) + 1);
-        }
-        return map;
+  private static boolean allTrue(boolean[] flag) {
+    for (int i = 0; i < flag.length; i++) {
+      if (!flag[ i ]) return false;
     }
+    return true;
+  }
+
+  private static Map<Character, Integer> getCharacterIntegerMap(String str) {
+    Map<Character, Integer> map = new HashMap<>();
+    for (int i = 0; i < str.length(); i++) {
+      Character key = str.charAt(i); // Check for Autoboxing
+      map.put(key, map.getOrDefault(key, 0) + 1);
+    }
+    return map;
+  }
 }

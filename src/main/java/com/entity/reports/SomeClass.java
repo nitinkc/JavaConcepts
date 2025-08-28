@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SomeClass {
-    Integer index;
-    Integer noOfYears;
-    String someStr;
+  Integer index;
+  Integer noOfYears;
+  String someStr;
 }

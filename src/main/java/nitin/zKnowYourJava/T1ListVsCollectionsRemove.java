@@ -5,22 +5,22 @@ import java.util.Collection;
 import java.util.List;
 
 public class T1ListVsCollectionsRemove {
-    public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>(getIntegers()); // Polymnorphism
-        list.remove(1);
-        System.out.println(list);
+  public static void main(String[] args) {
+    List<Integer> list = new ArrayList<>(getIntegers()); // Polymnorphism
+    list.remove(1);
+    System.out.println(list);
 
-        Collection<Integer> list2 = new ArrayList<>(getIntegers()); // Polymnorphism
-        list2.remove(1); // Remove the element/object
-        System.out.println(list2);
+    Collection<Integer> list2 = new ArrayList<>(getIntegers()); // Polymnorphism
+    list2.remove(1); // Remove the element/object
+    System.out.println(list2);
 
-        var list3 = new ArrayList<>(getIntegers()); // Polymnorphism
-        //Method name should be removeAtIndex(int Index)
-        list3.remove(1);//Removes the Index,
-        System.out.println(list3);
-    }
+    var list3 = new ArrayList<>(getIntegers()); // Polymnorphism
+    //Method name should be removeAtIndex(int Index)
+    list3.remove(1);//Removes the Index,
+    System.out.println(list3);
+  }
 
-    private static List<Integer> getIntegers() {
-        return List.of(1, 2, 3);
-    }
+  private static List<Integer> getIntegers() {
+    return List.of(1, 2, 3);
+  }
 }

@@ -5,5 +5,5 @@ package nitin.zOReiley2020SimonRoberts.f3closures.s1SingleArgument;
  */
 @FunctionalInterface
 public interface Criteria<E> {
-    boolean test(E e);
+  boolean test(E e);
 }

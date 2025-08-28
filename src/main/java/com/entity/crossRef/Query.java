@@ -16,9 +16,9 @@ import lombok.Setter;
 @Setter
 public class Query {
 
-    @JsonProperty("start-index")
-    public Integer startIndex;
+  @JsonProperty("start-index")
+  public Integer startIndex;
 
-    @JsonProperty("search-terms")
-    public Object searchTerms;
+  @JsonProperty("search-terms")
+  public Object searchTerms;
 }

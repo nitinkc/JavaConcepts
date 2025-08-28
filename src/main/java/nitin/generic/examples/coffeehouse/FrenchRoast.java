@@ -7,17 +7,17 @@ import java.util.List;
  * @author Juneau
  */
 public class FrenchRoast extends CoffeeType implements Dark {
-    List<String> description;
+  List<String> description;
 
-    public FrenchRoast() {
-        description = new ArrayList();
-        description.add(AROMATIC);
-        description.add(BOLD);
-        description.add(WHOLE_BEAN);
-    }
+  public FrenchRoast() {
+    description = new ArrayList();
+    description.add(AROMATIC);
+    description.add(BOLD);
+    description.add(WHOLE_BEAN);
+  }
 
-    @Override
-    public List<String> getDescription() {
-        return description;
-    }
+  @Override
+  public List<String> getDescription() {
+    return description;
+  }
 }

@@ -2,12 +2,12 @@ package nitin.a6oops.interfaces.a10interfaces.DefaultMethodsInJava8;
 
 interface DefaultMethodInInterface {
 
-    // Default method with implementation, in an Interface
-    default void m1() {
-        System.out.println("From Default method");
-    }
+  // Default method with implementation, in an Interface
+  default void m1() {
+    System.out.println("From Default method");
+  }
 
-    void m2();
+  void m2();
 }
 
 /**
@@ -15,15 +15,15 @@ interface DefaultMethodInInterface {
  * concrete implementation in Default method
  */
 public class D1Example1 implements DefaultMethodInInterface {
-    public static void main(String[] args) {
-        D1Example1 d = new D1Example1();
-        // The method can be over ridden as well in the implementation class
-        d.m1();
-        d.m2();
-    }
+  public static void main(String[] args) {
+    D1Example1 d = new D1Example1();
+    // The method can be over ridden as well in the implementation class
+    d.m1();
+    d.m2();
+  }
 
-    @Override
-    public void m2() {
-        System.out.println("My own implementation in the Implemented class");
-    }
+  @Override
+  public void m2() {
+    System.out.println("My own implementation in the Implemented class");
+  }
 }

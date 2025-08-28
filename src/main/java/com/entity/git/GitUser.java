@@ -13,18 +13,18 @@ import javax.annotation.processing.Generated;
 @Generated("jsonschema2pojo")
 public class GitUser {
 
-    @JsonProperty("provider")
-    public String provider;
+  @JsonProperty("provider")
+  public String provider;
 
-    @JsonProperty("uid")
-    public String uid;
+  @JsonProperty("uid")
+  public String uid;
 
-    @JsonProperty("info")
-    public Info info;
+  @JsonProperty("info")
+  public Info info;
 
-    @JsonProperty("credentials")
-    public Credentials credentials;
+  @JsonProperty("credentials")
+  public Credentials credentials;
 
-    @JsonProperty("extra")
-    public Extra extra;
+  @JsonProperty("extra")
+  public Extra extra;
 }

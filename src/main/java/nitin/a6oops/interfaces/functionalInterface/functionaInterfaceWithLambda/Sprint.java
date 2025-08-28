@@ -8,5 +8,5 @@ package nitin.a6oops.interfaces.functionalInterface.functionaInterfaceWithLambda
  */
 @FunctionalInterface
 public interface Sprint {
-    void sprint(Animal animal);
+  void sprint(Animal animal);
 }

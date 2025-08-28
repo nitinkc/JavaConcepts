@@ -7,24 +7,24 @@ package nitin.classLoadingJVM.javaMemoryModel;
  */
 public class PassingValues {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        int localValue = 5;
-        String localString = "Nitin";
+    int localValue = 5;
+    String localString = "Nitin";
 
-        // Pass by VALUE
-        calculatePrimitive(localValue);
-        calculateObject(localString);
+    // Pass by VALUE
+    calculatePrimitive(localValue);
+    calculateObject(localString);
 
-        System.out.println(localValue);
-        System.out.println(localString);
-    }
+    System.out.println(localValue);
+    System.out.println(localString);
+  }
 
-    private static void calculateObject(String localString) {
-        localString = "Chaurasia";
-    }
+  private static void calculateObject(String localString) {
+    localString = "Chaurasia";
+  }
 
-    private static void calculatePrimitive(int localValue) {
-        localValue *= 100;
-    }
+  private static void calculatePrimitive(int localValue) {
+    localValue *= 100;
+  }
 }

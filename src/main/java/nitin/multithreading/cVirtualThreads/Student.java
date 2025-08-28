@@ -9,5 +9,5 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class Student {
-    private String name;
+  private String name;
 }

@@ -3,17 +3,17 @@ package nitin.multithreading.raceCondition.dSynchronization;
 import java.util.concurrent.CountDownLatch;
 
 public class IncrementTaskCountDownLatch implements Runnable {
-    private final SharedCounter sharedCounter;
-    private final CountDownLatch latch;
+  private final SharedCounter sharedCounter;
+  private final CountDownLatch latch;
 
-    public IncrementTaskCountDownLatch(SharedCounter sharedCounter, CountDownLatch latch) {
-        this.sharedCounter = sharedCounter;
-        this.latch = latch;
-    }
+  public IncrementTaskCountDownLatch(SharedCounter sharedCounter, CountDownLatch latch) {
+    this.sharedCounter = sharedCounter;
+    this.latch = latch;
+  }
 
-    @Override
-    public void run() {
-        sharedCounter.increment();
-        latch.countDown();
-    }
+  @Override
+  public void run() {
+    sharedCounter.increment();
+    latch.countDown();
+  }
 }

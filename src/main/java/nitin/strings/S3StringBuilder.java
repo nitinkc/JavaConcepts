@@ -8,18 +8,18 @@ package nitin.strings;
  * less efficient
  */
 public class S3StringBuilder {
-    public static void main(String[] args) {
-        String c = "test3";
+  public static void main(String[] args) {
+    String c = "test3";
 
-        String a = "test1" + " next1";
-        String b = "test2" + " next2";
-        c = c.concat(" next3"); // Not working
+    String a = "test1" + " next1";
+    String b = "test2" + " next2";
+    c = c.concat(" next3"); // Not working
 
-        String s = "Nitin" + " Kumar" + " Chaurasia";
+    String s = "Nitin" + " Kumar" + " Chaurasia";
 
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
-        System.out.println(s);
-    }
+    System.out.println(a);
+    System.out.println(b);
+    System.out.println(c);
+    System.out.println(s);
+  }
 }

@@ -9,29 +9,29 @@ import nitin.multithreading.bFuturesAndCompletableFutures.completableFutureBasic
 import nitin.multithreading.bFuturesAndCompletableFutures.completableFutureBasics.service.DataFetchService;
 
 public class A4ThenApply {
-    static DataFetchService dataFetchService;
+  static DataFetchService dataFetchService;
 
-    /**
-     * ### thenApply() Completion Stage method used for applying transformations, takes a Function
-     * thenApply deals with **Function that returns** a value returns CompletableFuture of Type T
-     */
-    public static void main(String[] args) {
-        dataFetchService = new DataFetchService();
-        CompletableFuture<List<VehicleTransformed>> completableFuture =
-                CompletableFuture.supplyAsync(() -> dataFetchService.fetchVehicles(2))
-                        .thenApply(
-                                vehicles ->
-                                        getTransformedList(
-                                                vehicles)); // returns the completable future of
-        // type entity
+  /**
+   * ### thenApply() Completion Stage method used for applying transformations, takes a Function
+   * thenApply deals with **Function that returns** a value returns CompletableFuture of Type T
+   */
+  public static void main(String[] args) {
+    dataFetchService = new DataFetchService();
+    CompletableFuture<List<VehicleTransformed>> completableFuture =
+      CompletableFuture.supplyAsync(() -> dataFetchService.fetchVehicles(2))
+        .thenApply(
+          vehicles ->
+            getTransformedList(
+              vehicles)); // returns the completable future of
+    // type entity
 
-        List<VehicleTransformed> join = completableFuture.join();
-        System.out.println(join.size());
-    }
+    List<VehicleTransformed> join = completableFuture.join();
+    System.out.println(join.size());
+  }
 
-    private static List<VehicleTransformed> getTransformedList(List<Vehicle> vehicles) {
-        return vehicles.stream()
-                .map(DataTransformationFunctions.vehicleFunction)
-                .collect(Collectors.toList());
-    }
+  private static List<VehicleTransformed> getTransformedList(List<Vehicle> vehicles) {
+    return vehicles.stream()
+      .map(DataTransformationFunctions.vehicleFunction)
+      .collect(Collectors.toList());
+  }
 }

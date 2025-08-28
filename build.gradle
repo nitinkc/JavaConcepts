@@ -136,7 +136,7 @@ sonarqube {
 //        property "sonar.password", ""
 //        property "sonar.projectKey", "project:service:_"
 //        property 'sonar.projectName', 'NameOf Service'
-        property 'sonar.gradle.skipCompile','true'
+        property 'sonar.gradle.skipCompile', 'true'
         property 'sonar.java.source', 21
         property 'sonar.junit.reportPaths', 'build/results'
         property 'encoding', 'UTF-8'

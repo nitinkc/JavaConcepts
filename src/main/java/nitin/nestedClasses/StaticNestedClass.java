@@ -6,12 +6,12 @@ package nitin.nestedClasses;
  * <p>Static class defined at the member level
  */
 public class StaticNestedClass {
-    public static void main(String[] args) {
-        Nested nested = new Nested();
-        System.out.println(nested.price);
-    }
+  public static void main(String[] args) {
+    Nested nested = new Nested();
+    System.out.println(nested.price);
+  }
 
-    static class Nested {
-        private final int price = 6;
-    }
+  static class Nested {
+    private final int price = 6;
+  }
 }

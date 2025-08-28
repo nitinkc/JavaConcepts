@@ -13,24 +13,24 @@ import nitin.multithreading.aBasics.aPlatformThreads.ThreadByRunnable;
  * execution.
  */
 public class T1YieldDemo {
-    public static void main(String[] args) {
-        ThreadByRunnable tr = new ThreadByRunnable();
-        Thread t = new Thread(tr);
+  public static void main(String[] args) {
+    ThreadByRunnable tr = new ThreadByRunnable();
+    Thread t = new Thread(tr);
 
-        t.start();
+    t.start();
 
-        for (int i = 0; i < 100; i++) {
-            System.out.println("From Main: " + i);
-        }
+    for (int i = 0; i < 100; i++) {
+      System.out.println("From Main: " + i);
     }
+  }
 }
 
 class ThreadYield implements Runnable {
-    @Override
-    public void run() {
-        for (int i = 0; i < 1000; i++) {
-            Thread.yield();
-            System.out.println("Child Thread: " + i);
-        }
+  @Override
+  public void run() {
+    for (int i = 0; i < 1000; i++) {
+      Thread.yield();
+      System.out.println("Child Thread: " + i);
     }
+  }
 }

@@ -18,9 +18,9 @@ import lombok.Setter;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Reference {
 
-    @JsonProperty("key")
-    public String key;
+  @JsonProperty("key")
+  public String key;
 
-    @JsonProperty("unstructured")
-    public String unstructured;
+  @JsonProperty("unstructured")
+  public String unstructured;
 }

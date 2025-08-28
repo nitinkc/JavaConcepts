@@ -10,18 +10,18 @@ import javax.annotation.processing.Generated;
 @Generated("jsonschema2pojo")
 public class Info {
 
-    @JsonProperty("nickname")
-    public String nickname;
+  @JsonProperty("nickname")
+  public String nickname;
 
-    @JsonProperty("email")
-    public String email;
+  @JsonProperty("email")
+  public String email;
 
-    @JsonProperty("name")
-    public String name;
+  @JsonProperty("name")
+  public String name;
 
-    @JsonProperty("image")
-    public String image;
+  @JsonProperty("image")
+  public String image;
 
-    @JsonProperty("urls")
-    public Urls urls;
+  @JsonProperty("urls")
+  public Urls urls;
 }

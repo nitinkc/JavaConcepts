@@ -2,164 +2,169 @@ package nitin.streams.collectors;
 
 import com.entity.EmployeeSimple;
 import com.entity.SampleData;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class C1Introduction {
 
-    public static void main(String[] args) {
-        sharedMutabilityWrapper(); // DO NOT DO THIS
-        sharedMutabilityClass(); // Do not Do
-        sharedMutabilityReduce(); // Thread safe with reduce
-        usingCollector(); // Thread safe with collectors
-        creatingMap(); // using key mapper adn value mapper FUNCTION
-        unmodifiableList();
-        commaSeparatedList();
+  public static void main(String[] args) {
+    sharedMutabilityWrapper(); // DO NOT DO THIS
+    sharedMutabilityClass(); // Do not Do
+    sharedMutabilityReduce(); // Thread safe with reduce
+    usingCollector(); // Thread safe with collectors
+    creatingMap(); // using key mapper adn value mapper FUNCTION
+    unmodifiableList();
+    commaSeparatedList();
+  }
+
+  private static void commaSeparatedList() {
+    List<EmployeeSimple> employees = SampleData.getSimpleEmployees();
+
+    // Off-by-one error
+    String commaSeparatedNamesWithExtra = "";
+    for (EmployeeSimple employeeSimple : employees) {
+      commaSeparatedNamesWithExtra =
+        commaSeparatedNamesWithExtra + employeeSimple.getName() + " ,";
     }
 
-    private static void commaSeparatedList() {
-        List<EmployeeSimple> employees = SampleData.getSimpleEmployees();
+    System.out.println(commaSeparatedNamesWithExtra);
+    // Remove the last comma -> unnecessary smell in the code
+    // Write logic to remove
 
-        // Off-by-one error
-        String commaSeparatedNamesWithExtra = "";
-        for (EmployeeSimple employeeSimple : employees) {
-            commaSeparatedNamesWithExtra =
-                    commaSeparatedNamesWithExtra + employeeSimple.getName() + " ,";
-        }
+    // Avoid off-by-one error,mm using joining
+    String commaSeparatedNames = "";
+    commaSeparatedNames =
+      employees.stream()
+        .map(employeeSimple -> employeeSimple.getName())
+        .filter(Objects::nonNull)
+        // .map(String::toUpperCase)
+        .collect(Collectors.joining(", "));
 
-        System.out.println(commaSeparatedNamesWithExtra);
-        // Remove the last comma -> unnecessary smell in the code
-        // Write logic to remove
+    System.out.println(commaSeparatedNames);
+  }
 
-        // Avoid off-by-one error,mm using joining
-        String commaSeparatedNames = "";
-        commaSeparatedNames =
-                employees.stream()
-                        .map(employeeSimple -> employeeSimple.getName())
-                        .filter(Objects::nonNull)
-                        // .map(String::toUpperCase)
-                        .collect(Collectors.joining(", "));
+  private static void unmodifiableList() {
+    List<EmployeeSimple> employees = SampleData.getSimpleEmployees();
 
-        System.out.println(commaSeparatedNames);
-    }
+    // Return a map with name as key and age as value
+    List<Integer> ages = new ArrayList<>();
+    ages = Collections.unmodifiableList(ages);
 
-    private static void unmodifiableList() {
-        List<EmployeeSimple> employees = SampleData.getSimpleEmployees();
+    ages =
+      employees.stream()
+        .filter(Objects::nonNull)
+        .filter(employee -> null != employee.getAge())
+        .map(employeeSimple -> employeeSimple.getAge())
+        // .collect(Collectors.toList());
+        .collect(Collectors.toUnmodifiableList());
 
-        // Return a map with name as key and age as value
-        List<Integer> ages = new ArrayList<>();
-        ages = Collections.unmodifiableList(ages);
+    // Boom
+    ages.add(999); // mutability with regular collection, can be avoided by using unmodifiable
+    // list
 
-        ages =
-                employees.stream()
-                        .filter(Objects::nonNull)
-                        .filter(employee -> null != employee.getAge())
-                        .map(employeeSimple -> employeeSimple.getAge())
-                        // .collect(Collectors.toList());
-                        .collect(Collectors.toUnmodifiableList());
+    System.out.println(ages);
+  }
 
-        // Boom
-        ages.add(999); // mutability with regular collection, can be avoided by using unmodifiable
-        // list
+  private static void creatingMap() {
+    List<EmployeeSimple> employees = SampleData.getSimpleEmployees();
 
-        System.out.println(ages);
-    }
+    // Return a map with name as key and age as value
+    Map<String, Integer> nameAgeMap = new HashMap<>();
 
-    private static void creatingMap() {
-        List<EmployeeSimple> employees = SampleData.getSimpleEmployees();
+    nameAgeMap =
+      employees.stream()
+        .parallel()
+        .filter(employee -> null != employee.getAge())
+        // .collect(Collectors.toMap(keyFunction, valueFunction));
+        // .collect(Collectors.toMap(employee -> employee.getName(),employee ->
+        // employee.getAge()))
+        .collect(Collectors.toMap(EmployeeSimple::getName, EmployeeSimple::getAge));
 
-        // Return a map with name as key and age as value
-        Map<String, Integer> nameAgeMap = new HashMap<>();
+    System.out.println(nameAgeMap);
+  }
 
-        nameAgeMap =
-                employees.stream()
-                        .parallel()
-                        .filter(employee -> null != employee.getAge())
-                        // .collect(Collectors.toMap(keyFunction, valueFunction));
-                        // .collect(Collectors.toMap(employee -> employee.getName(),employee ->
-                        // employee.getAge()))
-                        .collect(Collectors.toMap(EmployeeSimple::getName, EmployeeSimple::getAge));
+  private static void usingCollector() {
+    List<EmployeeSimple> employees = SampleData.getSimpleEmployees();
 
-        System.out.println(nameAgeMap);
-    }
+    // Return the list of names of employees, in upper case, younger than 25
+    List<String> youngEmployees = new ArrayList<>();
 
-    private static void usingCollector() {
-        List<EmployeeSimple> employees = SampleData.getSimpleEmployees();
+    youngEmployees =
+      employees.stream()
+        .filter(Objects::nonNull)
+        .filter(employee -> null != employee.getAge())
+        .filter(employee -> employee.getAge() < 25)
+        .map(EmployeeSimple::getName) // get the name
+        // .map(str -> str.toUpperCase())
+        .map(String::toUpperCase) // convert to upper case
+        .collect(
+          Collectors
+            .toList()); // ThreadSafe and can handle concurrency easily
+    // toSet can also be done with just one change
+  }
 
-        // Return the list of names of employees, in upper case, younger than 25
-        List<String> youngEmployees = new ArrayList<>();
+  private static void sharedMutabilityReduce() {
+    List<EmployeeSimple> employees = SampleData.getSimpleEmployees();
 
-        youngEmployees =
-                employees.stream()
-                        .filter(Objects::nonNull)
-                        .filter(employee -> null != employee.getAge())
-                        .filter(employee -> employee.getAge() < 25)
-                        .map(EmployeeSimple::getName) // get the name
-                        // .map(str -> str.toUpperCase())
-                        .map(String::toUpperCase) // convert to upper case
-                        .collect(
-                                Collectors
-                                        .toList()); // ThreadSafe and can handle concurrency easily
-        // toSet can also be done with just one change
-    }
+    // Return the list of names of employees, in upper case, younger than 25
+    List<String> youngEmployees = new ArrayList<>();
 
-    private static void sharedMutabilityReduce() {
-        List<EmployeeSimple> employees = SampleData.getSimpleEmployees();
+    youngEmployees =
+      employees.stream()
+        .parallel()
+        .filter(Objects::isNull)
+        .filter(employee -> employee.getAge() < 25)
+        .map(EmployeeSimple::getName) // get the name
+        .map(String::toUpperCase) // convert to upper case
+        .reduce( // Can work with parallel streams
+          new ArrayList<
+            String>(), // Local mutability, internal mutability, no
+          // outside arrayList is used
+          (names, name) -> { // there is no side effect
+            names.add(name);
+            return names;
+          },
+          (names1, names2) -> { // Add all the mini lists into a bigger list
+            names1.addAll(names2);
+            return names1;
+          });
+  }
 
-        // Return the list of names of employees, in upper case, younger than 25
-        List<String> youngEmployees = new ArrayList<>();
+  private static void sharedMutabilityWrapper() {
+    List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-        youngEmployees =
-                employees.stream()
-                        .parallel()
-                        .filter(Objects::isNull)
-                        .filter(employee -> employee.getAge() < 25)
-                        .map(EmployeeSimple::getName) // get the name
-                        .map(String::toUpperCase) // convert to upper case
-                        .reduce( // Can work with parallel streams
-                                new ArrayList<
-                                        String>(), // Local mutability, internal mutability, no
-                                // outside arrayList is used
-                                (names, name) -> { // there is no side effect
-                                    names.add(name);
-                                    return names;
-                                },
-                                (names1, names2) -> { // Add all the mini lists into a bigger list
-                                    names1.addAll(names2);
-                                    return names1;
-                                });
-    }
+    // Create a list of double of even numbers
+    List<Integer> doubleOfEven = new ArrayList<>();
 
-    private static void sharedMutabilityWrapper() {
-        List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    numbers.stream()
+      .filter(e -> e % 2 == 0)
+      .map(e -> e * 2)
+      .forEach(e -> doubleOfEven.add(e)); // Shared mutability.
 
-        // Create a list of double of even numbers
-        List<Integer> doubleOfEven = new ArrayList<>();
+    System.out.println(doubleOfEven);
+  }
 
-        numbers.stream()
-                .filter(e -> e % 2 == 0)
-                .map(e -> e * 2)
-                .forEach(e -> doubleOfEven.add(e)); // Shared mutability.
+  private static void sharedMutabilityClass() {
+    List<EmployeeSimple> employees = SampleData.getSimpleEmployees();
 
-        System.out.println(doubleOfEven);
-    }
+    // Return the list of names of employees, in upper case, younger than 25
+    List<String> youngEmployees = new ArrayList<>();
 
-    private static void sharedMutabilityClass() {
-        List<EmployeeSimple> employees = SampleData.getSimpleEmployees();
-
-        // Return the list of names of employees, in upper case, younger than 25
-        List<String> youngEmployees = new ArrayList<>();
-
-        employees.stream()
-                .parallel()
-                .filter(Objects::isNull)
-                .filter(employee -> employee.getAge() < 25)
-                .map(EmployeeSimple::getName) // get the name
-                .map(String::toUpperCase) // convert to upper case
-                .forEach(
-                        upprCaseEmp ->
-                                youngEmployees.add(
-                                        upprCaseEmp)); // Don't do this. Shared mutabilty is evil.
-        // This code can't ever be parallelized and it will misbehave.
-    }
+    employees.stream()
+      .parallel()
+      .filter(Objects::isNull)
+      .filter(employee -> employee.getAge() < 25)
+      .map(EmployeeSimple::getName) // get the name
+      .map(String::toUpperCase) // convert to upper case
+      .forEach(
+        upprCaseEmp ->
+          youngEmployees.add(
+            upprCaseEmp)); // Don't do this. Shared mutabilty is evil.
+    // This code can't ever be parallelized and it will misbehave.
+  }
 }

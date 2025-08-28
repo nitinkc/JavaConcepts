@@ -15,18 +15,18 @@ import java.util.function.Consumer;
  * Consumer<String> c2 = x -> System.out.println(x);
  */
 public class PDF4Consumer {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Consumer<String> c = s -> System.out.println(s);
-        c.accept("Nitin");
-        c.accept("Kirti");
+    Consumer<String> c = s -> System.out.println(s);
+    c.accept("Nitin");
+    c.accept("Kirti");
 
-        Map<String, Integer> map = new HashMap<>();
-        BiConsumer<String, Integer> b1 = map::put;
-        BiConsumer<String, Integer> b2 = (k, v) -> map.put(k, v);
+    Map<String, Integer> map = new HashMap<>();
+    BiConsumer<String, Integer> b1 = map::put;
+    BiConsumer<String, Integer> b2 = (k, v) -> map.put(k, v);
 
-        b1.accept("Chicken", 1);
-        b2.accept("Mutton", 2);
-        System.out.println(map);
-    }
+    b1.accept("Chicken", 1);
+    b2.accept("Mutton", 2);
+    System.out.println(map);
+  }
 }

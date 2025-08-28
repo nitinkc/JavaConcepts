@@ -1,7 +1,12 @@
 package nitin.mappers.mapstruct.dto;
 
 import java.util.List;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @NoArgsConstructor
 @Getter
@@ -10,22 +15,22 @@ import lombok.*;
 @Builder
 @ToString
 public class PersonDto {
-    private String employeeFirstName;
-    private String employeeLastName;
-    private String birthDate;
-    private List<String> phones; // From Map to List
-    // Beer
-    private String beerBrand;
-    private String beerName;
-    private String alcohol;
-    // Vehicle
-    private String carMakeAndModel;
-    private String carColor;
-    private String driveType;
-    private String fuelType;
-    private List<String> specs;
-    private Integer doors;
-    private String licensePlate;
-    // Testing Null Field
-    private String extraField;
+  private String employeeFirstName;
+  private String employeeLastName;
+  private String birthDate;
+  private List<String> phones; // From Map to List
+  // Beer
+  private String beerBrand;
+  private String beerName;
+  private String alcohol;
+  // Vehicle
+  private String carMakeAndModel;
+  private String carColor;
+  private String driveType;
+  private String fuelType;
+  private List<String> specs;
+  private Integer doors;
+  private String licensePlate;
+  // Testing Null Field
+  private String extraField;
 }

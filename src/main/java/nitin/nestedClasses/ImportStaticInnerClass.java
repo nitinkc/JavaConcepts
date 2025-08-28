@@ -5,7 +5,9 @@ package nitin.nestedClasses;
 // Using Static import. SAME AS ABOVE
 // import static com.nitin.a5advancedClassDesign.nestedClasses.StaticNestedClass.Nested;
 
-/** Created by Nitin C on 3/5/2016. */
+/**
+ * Created by Nitin C on 3/5/2016.
+ */
 public class ImportStaticInnerClass {
-    StaticNestedClass.Nested nested;
+  StaticNestedClass.Nested nested;
 }

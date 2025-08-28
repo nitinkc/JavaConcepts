@@ -1,9 +1,11 @@
 package nitin.strings;
 
-/** Created by Nitin C on 11/26/2015. */
+/**
+ * Created by Nitin C on 11/26/2015.
+ */
 public class S4StringBufferVsStringBuilder {
-    public static void main(String[] args) {
-        StringBuilder sbuild = new StringBuilder(); // Empty String with initial capacity 16
+  public static void main(String[] args) {
+    StringBuilder sbuild = new StringBuilder(); // Empty String with initial capacity 16
 
         /*
         StringBuilder is NON-SYNCHRONIZED thus more efficient
@@ -12,5 +14,5 @@ public class S4StringBufferVsStringBuilder {
         less efficient
          */
 
-    }
+  }
 }

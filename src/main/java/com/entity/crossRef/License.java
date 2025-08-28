@@ -16,15 +16,15 @@ import lombok.Setter;
 @Setter
 public class License {
 
-    @JsonProperty("start")
-    public Start start;
+  @JsonProperty("start")
+  public Start start;
 
-    @JsonProperty("content-version")
-    public String contentVersion;
+  @JsonProperty("content-version")
+  public String contentVersion;
 
-    @JsonProperty("delay-in-days")
-    public Integer delayInDays;
+  @JsonProperty("delay-in-days")
+  public Integer delayInDays;
 
-    @JsonProperty("URL")
-    public String url;
+  @JsonProperty("URL")
+  public String url;
 }

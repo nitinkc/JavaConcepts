@@ -5,9 +5,9 @@ package nitin.a1languageFundamentals.variables;
  * primitive variables Reference Variables : used to refer Object
  */
 public class ValRepresented {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        int a = 10; // Primitive type
-        Object obj = new Object(); // Reference Type
-    }
+    int a = 10; // Primitive type
+    Object obj = new Object(); // Reference Type
+  }
 }

@@ -9,17 +9,17 @@ import java.util.Collections;
 
 public class FileWrite {
 
-    public static void doSomethingParallely(String singleString) {
-        Charset characterSet = Charset.defaultCharset();
-        Path path = Paths.get("src/main/resources/output.txt");
-        try {
-            // System.out.println("Writing into file the word :: " + singleString);
-            // Files.write(path, Collections.singleton(singleString), characterSet,
-            // StandardOpenOption.APPEND);
-            Files.write(path, Collections.singleton(singleString), characterSet);
+  public static void doSomethingParallely(String singleString) {
+    Charset characterSet = Charset.defaultCharset();
+    Path path = Paths.get("src/main/resources/output.txt");
+    try {
+      // System.out.println("Writing into file the word :: " + singleString);
+      // Files.write(path, Collections.singleton(singleString), characterSet,
+      // StandardOpenOption.APPEND);
+      Files.write(path, Collections.singleton(singleString), characterSet);
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    } catch (IOException e) {
+      e.printStackTrace();
     }
+  }
 }

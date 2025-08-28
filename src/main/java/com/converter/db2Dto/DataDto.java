@@ -6,6 +6,6 @@ import lombok.Data;
 @Builder
 @Data
 public class DataDto {
-    private String createReleaseNumber;
-    private RefTable refData;
+  private String createReleaseNumber;
+  private RefTable refData;
 }

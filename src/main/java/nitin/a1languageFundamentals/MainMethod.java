@@ -9,7 +9,7 @@ package nitin.a1languageFundamentals;
  * <p>Can be declared with final, synchronized and strictfp Inheritance Concept is applicable
  */
 public class MainMethod {
-    /*final*/
+  /*final*/
 
     /*static synchronized strictfp public void main(String[] args) {
         System.out.println("Parent Testing");

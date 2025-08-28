@@ -14,103 +14,105 @@ import org.mockito.junit.jupiter.MockitoExtension;
 @ExtendWith(MockitoExtension.class)
 public class CompletableFutureExceptionHandlingTest {
 
-    @Mock DataFetchService dataFetchService = new DataFetchService();
+  @Mock
+  DataFetchService dataFetchService = new DataFetchService();
 
-    @InjectMocks A5CompletableFutureExceptionHandling completableFutureExceptionHandling;
+  @InjectMocks
+  A5CompletableFutureExceptionHandling completableFutureExceptionHandling;
 
-    @Test
-    public void async_call_exception_handle_test_1exception() {
+  @Test
+  public void async_call_exception_handle_test_1exception() {
 
-        // Given
-        when(dataFetchService.greetingsService(1000))
-                .thenThrow(new NullPointerException("Exception")); // One Exception
-        when((dataFetchService.firstNameService(1000))).thenCallRealMethod();
-        when((dataFetchService.lastNameService(1000))).thenCallRealMethod();
+    // Given
+    when(dataFetchService.greetingsService(1000))
+      .thenThrow(new NullPointerException("Exception")); // One Exception
+    when((dataFetchService.firstNameService(1000))).thenCallRealMethod();
+    when((dataFetchService.lastNameService(1000))).thenCallRealMethod();
 
-        // When
-        String result = completableFutureExceptionHandling.async_call_exception_handle();
+    // When
+    String result = completableFutureExceptionHandling.async_call_exception_handle();
 
-        // then
-        assertEquals(result, "ERROR HI!! JOHN DOE");
-    }
+    // then
+    assertEquals(result, "ERROR HI!! JOHN DOE");
+  }
 
-    @Test
-    public void async_call_exception_handle_test_2Exception() {
+  @Test
+  public void async_call_exception_handle_test_2Exception() {
 
-        // Given
-        when(dataFetchService.greetingsService(1000))
-                .thenThrow(new NullPointerException("Exception"));
-        when((dataFetchService.firstNameService(1000)))
-                .thenThrow(new NullPointerException("Exception"));
-        when((dataFetchService.lastNameService(1000))).thenCallRealMethod();
+    // Given
+    when(dataFetchService.greetingsService(1000))
+      .thenThrow(new NullPointerException("Exception"));
+    when((dataFetchService.firstNameService(1000)))
+      .thenThrow(new NullPointerException("Exception"));
+    when((dataFetchService.lastNameService(1000))).thenCallRealMethod();
 
-        // When
-        String result = completableFutureExceptionHandling.async_call_exception_handle();
+    // When
+    String result = completableFutureExceptionHandling.async_call_exception_handle();
 
-        // then
-        assertEquals(result, "ERROR FN!! DOE");
-    }
+    // then
+    assertEquals(result, "ERROR FN!! DOE");
+  }
 
-    @Test
-    public void async_call_exception_handle_test_no_exception() {
+  @Test
+  public void async_call_exception_handle_test_no_exception() {
 
-        // Given
-        when(dataFetchService.greetingsService(1000)).thenCallRealMethod();
-        when((dataFetchService.firstNameService(1000))).thenCallRealMethod();
-        when((dataFetchService.lastNameService(1000))).thenCallRealMethod();
+    // Given
+    when(dataFetchService.greetingsService(1000)).thenCallRealMethod();
+    when((dataFetchService.firstNameService(1000))).thenCallRealMethod();
+    when((dataFetchService.lastNameService(1000))).thenCallRealMethod();
 
-        // When
-        String result = completableFutureExceptionHandling.async_call_exception_handle();
+    // When
+    String result = completableFutureExceptionHandling.async_call_exception_handle();
 
-        // then
-        assertEquals(result, "HELLO! JOHN DOE");
-    }
+    // then
+    assertEquals(result, "HELLO! JOHN DOE");
+  }
 
-    @Test
-    public void async_call_exception_exceptionally_test_no_exception() {
+  @Test
+  public void async_call_exception_exceptionally_test_no_exception() {
 
-        // Given
-        when(dataFetchService.greetingsService(1000)).thenCallRealMethod();
-        when((dataFetchService.firstNameService(1000))).thenCallRealMethod();
-        when((dataFetchService.lastNameService(1000))).thenCallRealMethod();
+    // Given
+    when(dataFetchService.greetingsService(1000)).thenCallRealMethod();
+    when((dataFetchService.firstNameService(1000))).thenCallRealMethod();
+    when((dataFetchService.lastNameService(1000))).thenCallRealMethod();
 
-        // When
-        String result = completableFutureExceptionHandling.async_call_exception_exceptionally();
+    // When
+    String result = completableFutureExceptionHandling.async_call_exception_exceptionally();
 
-        // then
-        assertEquals(result, "HELLO! JOHN DOE");
-    }
+    // then
+    assertEquals(result, "HELLO! JOHN DOE");
+  }
 
-    @Test
-    public void async_call_exception_exceptionally_test_1_exception() {
+  @Test
+  public void async_call_exception_exceptionally_test_1_exception() {
 
-        // Given
-        when(dataFetchService.greetingsService(1000))
-                .thenThrow(new NullPointerException("Exception"));
-        when((dataFetchService.firstNameService(1000))).thenCallRealMethod();
-        when((dataFetchService.lastNameService(1000))).thenCallRealMethod();
+    // Given
+    when(dataFetchService.greetingsService(1000))
+      .thenThrow(new NullPointerException("Exception"));
+    when((dataFetchService.firstNameService(1000))).thenCallRealMethod();
+    when((dataFetchService.lastNameService(1000))).thenCallRealMethod();
 
-        // When
-        String result = completableFutureExceptionHandling.async_call_exception_handle();
+    // When
+    String result = completableFutureExceptionHandling.async_call_exception_handle();
 
-        // then
-        assertEquals(result, "ERROR HI!! JOHN DOE");
-    }
+    // then
+    assertEquals(result, "ERROR HI!! JOHN DOE");
+  }
 
-    @Test
-    public void async_call_exception_exceptionally_test_2_exception() {
+  @Test
+  public void async_call_exception_exceptionally_test_2_exception() {
 
-        // Given
-        when(dataFetchService.greetingsService(1000))
-                .thenThrow(new NullPointerException("Exception"));
-        when((dataFetchService.firstNameService(1000)))
-                .thenThrow(new NullPointerException("Exception"));
-        when((dataFetchService.lastNameService(1000))).thenCallRealMethod();
+    // Given
+    when(dataFetchService.greetingsService(1000))
+      .thenThrow(new NullPointerException("Exception"));
+    when((dataFetchService.firstNameService(1000)))
+      .thenThrow(new NullPointerException("Exception"));
+    when((dataFetchService.lastNameService(1000))).thenCallRealMethod();
 
-        // When
-        String result = completableFutureExceptionHandling.async_call_exception_exceptionally();
+    // When
+    String result = completableFutureExceptionHandling.async_call_exception_exceptionally();
 
-        // then
-        assertEquals(result, "ERROR FN!! DOE");
-    }
+    // then
+    assertEquals(result, "ERROR FN!! DOE");
+  }
 }

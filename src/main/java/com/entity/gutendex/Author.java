@@ -18,12 +18,12 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Author {
 
-    @JsonProperty("name")
-    public String name;
+  @JsonProperty("name")
+  public String name;
 
-    @JsonProperty("birth_year")
-    public Integer birthYear;
+  @JsonProperty("birth_year")
+  public Integer birthYear;
 
-    @JsonProperty("death_year")
-    public Object deathYear;
+  @JsonProperty("death_year")
+  public Object deathYear;
 }

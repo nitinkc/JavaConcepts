@@ -19,15 +19,15 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Gutendex {
 
-    @JsonProperty("count")
-    public Integer count;
+  @JsonProperty("count")
+  public Integer count;
 
-    @JsonProperty("next")
-    public String next;
+  @JsonProperty("next")
+  public String next;
 
-    @JsonProperty("previous")
-    public Object previous;
+  @JsonProperty("previous")
+  public Object previous;
 
-    @JsonProperty("results")
-    public List<Result> results = null;
+  @JsonProperty("results")
+  public List<Result> results = null;
 }
