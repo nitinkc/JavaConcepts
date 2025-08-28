@@ -15,7 +15,8 @@ public class T1ListVsCollectionsRemove {
         System.out.println(list2);
 
         var list3 = new ArrayList<>(getIntegers()); // Polymnorphism
-        list3.remove(1);
+        //Method name should be removeAtIndex(int Index)
+        list3.remove(1);//Removes the Index,
         System.out.println(list3);
     }
 

@@ -3,8 +3,23 @@ plugins {
     id 'maven-publish'
     id "org.sonarqube" version "4.4.1.3373" //For local testing
     id("com.diffplug.spotless") version "7.1.0"
-
+    id 'checkstyle'
 }
+
+
+checkstyle {
+    toolVersion = '3.6.0' // Use a recent version
+    configFile = file('src/main/resources/checkstyle.xml')
+    configProperties = [
+            'checkstyle.suppressions.file': 'src/main/resources/suppressions.xml'
+    ]
+    ignoreFailures = false
+}
+
+tasks.named('checkstyleMain') {
+    dependsOn 'classes'
+}
+
 
 spotless {
     format('misc') {
