@@ -14,7 +14,7 @@ public class S2ScopedValueRebind {
                         + studentScopedValue
                                 .isBound()); // False - outside the dynamic scope of the method
         Student hp = new Student("Harry Potter");
-        ScopedValue.runWhere(studentScopedValue, hp, S2ScopedValueRebind::runnableVoidMethod);
+        ScopedValue.where(studentScopedValue, hp).run(S2ScopedValueRebind::runnableVoidMethod);
 
         logShortMessage(
                 "isBound? "
@@ -25,10 +25,8 @@ public class S2ScopedValueRebind {
     private static void runnableVoidMethod() {
         logShortMessage("handleUser - isBound? " + studentScopedValue.isBound());
         logShortMessage("handleUser - " + studentScopedValue.get());
-        ScopedValue.runWhere(
-                studentScopedValue,
-                new Student("Default Student"), // Rebinding
-                S2ScopedValueRebind::anonylousCall);
+        ScopedValue.where(studentScopedValue, new Student("Default Student"))
+                .run(S2ScopedValueRebind::anonylousCall); // Rebinding
         logShortMessage("handleUser - " + studentScopedValue.get());
     }
 

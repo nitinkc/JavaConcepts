@@ -11,7 +11,7 @@ public class CompletionServiceRunner {
     public static void main(String[] args) throws Exception {
         // Handle parallel tasks using CompletionService.
         List<BlockingIOTasks.TaskResponse> result = doParallelWork();
-        System.out.println(STR."Parallel Work output = \{result}");
+        System.out.println("Parallel Work output = " + result);
     }
 
     private static List<BlockingIOTasks.TaskResponse> doParallelWork() throws Exception {

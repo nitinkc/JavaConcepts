@@ -20,7 +20,7 @@ public class S0NonSyncProblems {
         for (int i = 0; i < 100; i++) {
             // 100 threads trying to fill values in the array
             Thread t1 = new Thread(S0NonSyncProblems::task);
-            t1.setName(STR."thread:\{i}");
+            t1.setName("thread:" + i);
             threads.add(t1);
         }
 

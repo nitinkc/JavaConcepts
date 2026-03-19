@@ -27,9 +27,7 @@ public class R1BasicRefAPITest {
         // Instance to access non-static methods
         R1BasicRefAPITest t = new R1BasicRefAPITest();
 
-        /*
-        For every loaded class, the JVM maintains an associated Class a5object
-         */
+        // For every loaded class, the JVM maintains an associated Class object
         Class c = null;
 
         // Type 1: Class.forName() mathod
@@ -39,7 +37,7 @@ public class R1BasicRefAPITest {
         System.out.println(c.getClass());
         t.printMetadata(c);
 
-        // Type 2: Creating the Instance when the Class name and a5object name both are known!!
+        // Type 2: Creating the Instance when the Class name and object name both are known!!
         Nitin n = (Nitin) c.newInstance();
         // Can use n just like an created with new keyword
 
@@ -135,34 +133,4 @@ public class R1BasicRefAPITest {
         System.out.println(c.getFields().toString());
         System.out.println("---------------------------");
     }
-}
-
-/** Class Written for the Reflection API Testing */
-class Nitin {
-    int x;
-    Child s;
-
-    Nitin() {}
-
-    Nitin(int a, String b, boolean c) {
-        // A Constructor
-    }
-
-    public void m1() {
-        // Any method
-    }
-
-    public int m2() {
-        // Any other method
-
-        return 0;
-    }
-}
-
-/** Data Class Containing only data. */
-@Getter
-@Setter
-class Child {
-    private int kid;
-    private String name;
 }

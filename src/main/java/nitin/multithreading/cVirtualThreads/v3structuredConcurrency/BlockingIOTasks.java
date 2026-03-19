@@ -52,12 +52,12 @@ public class BlockingIOTasks implements Callable<TaskResponse> {
 
     private void throwExceptionOnFailure() throws BusinessException {
         logMessage("Failed");
-        throw new BusinessException(STR."\{jobName} : Failed");
+        throw new BusinessException(jobName + " : Failed");
     }
 
     private void throwInterruptedException() throws InterruptedException {
         logMessage("Interrupted");
-        throw new InterruptedException(STR."\{jobName} : Interrupted");
+        throw new InterruptedException(jobName + " : Interrupted");
     }
 
     private void logMessage(String message) {

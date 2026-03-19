@@ -42,9 +42,9 @@ public class T3InheritableThreadLocal {
 
         thread.join();
         logShortMessage(
-                STR."Finally => \{
-                        studentInheritableThreadLocal
-                                .get()}"); // Since child thread set a new name, parent should
+                "Finally => "
+                        + studentInheritableThreadLocal
+                                .get()); // Since child thread set a new name, parent should
         // reflect the same
     }
 }

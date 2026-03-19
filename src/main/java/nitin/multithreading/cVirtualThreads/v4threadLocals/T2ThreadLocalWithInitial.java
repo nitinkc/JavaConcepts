@@ -34,8 +34,8 @@ public class T2ThreadLocalWithInitial {
                                 });
 
         thread.join();
-        logShortMessage(STR."Finally => \{studentThreadLocal.get()}");
+        logShortMessage("Finally => " + studentThreadLocal.get());
         studentThreadLocal.remove();
-        logShortMessage(STR."After Removal => \{studentThreadLocal.get()}");
+        logShortMessage("After Removal => " + studentThreadLocal.get());
     }
 }

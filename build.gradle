@@ -114,6 +114,12 @@ dependencies {
     testImplementation("com.tngtech.archunit:archunit:1.4.1")
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(26)
+    }
+}
+
 sonarqube {
     properties {
 //        property 'sonar.host.url', 'https://sonarqube.host.com'
@@ -122,7 +128,7 @@ sonarqube {
 //        property "sonar.projectKey", "project:service:_"
 //        property 'sonar.projectName', 'NameOf Service'
         property 'sonar.gradle.skipCompile','true'
-        property 'sonar.java.source', 21
+        property 'sonar.java.source', 26
         property 'sonar.junit.reportPaths', 'build/results'
         property 'encoding', 'UTF-8'
         property 'charSet', 'UTF-8'

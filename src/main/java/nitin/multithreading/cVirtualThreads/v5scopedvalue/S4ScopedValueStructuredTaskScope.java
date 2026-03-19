@@ -17,7 +17,10 @@ public class S4ScopedValueStructuredTaskScope {
     private static String invokeTaskScope() throws InterruptedException {
 
         ThreadFactory factory = Thread.ofVirtual().name("child-", 0).factory();
-        try (var scope = new StructuredTaskScope<String>("child-scope", factory)) { //
+        try (var scope =
+                StructuredTaskScope.open(
+                        StructuredTaskScope.Joiner.awaitAll(),
+                        config -> config.withName("child-scope").withThreadFactory(factory))) {
 
             scope.fork(
                     () -> {

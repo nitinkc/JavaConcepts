@@ -26,6 +26,6 @@ public class SemaphoreRunner {
             }
         }
 
-        System.out.println(STR."Final Counter: \{sharedCounter.getCounter()}");
+        System.out.println("Final Counter: " + sharedCounter.getCounter());
     }
 }

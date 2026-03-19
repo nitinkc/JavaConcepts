@@ -2,8 +2,8 @@ package nitin.multithreading.cVirtualThreads.v3structuredConcurrency;
 
 import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.StructuredTaskScope;
+import java.util.concurrent.StructuredTaskScope.Joiner;
 import java.util.concurrent.StructuredTaskScope.Subtask;
 import java.util.concurrent.StructuredTaskScope.Subtask.State;
 
@@ -27,7 +27,8 @@ public class StructuredTaskScopeRunner {
                         new BlockingIOTasks("task1", 3, false),
                         new BlockingIOTasks("task2", 5, false));
 
-        try (var scope = new StructuredTaskScope<BlockingIOTasks.TaskResponse>()) {
+        try (StructuredTaskScope<BlockingIOTasks.TaskResponse, Void> scope =
+                StructuredTaskScope.open(Joiner.awaitAll())) {
 
             // Start running the tasks in parallel
             List<Subtask<BlockingIOTasks.TaskResponse>> subtasks =
@@ -55,7 +56,7 @@ public class StructuredTaskScopeRunner {
         }
     }
 
-    private static void shutdownOnFailure() throws InterruptedException, ExecutionException {
+    private static void shutdownOnFailure() throws InterruptedException {
 
         var tasks =
                 List.of(
@@ -63,40 +64,35 @@ public class StructuredTaskScopeRunner {
                         new BlockingIOTasks("Task#2", 5, true),
                         new BlockingIOTasks("Task#3", 7, true));
 
-        try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
+        try (StructuredTaskScope<BlockingIOTasks.TaskResponse, List<BlockingIOTasks.TaskResponse>>
+                scope = StructuredTaskScope.open(Joiner.allSuccessfulOrThrow())) {
 
             // Start running the tasks in parallel
             List<Subtask<BlockingIOTasks.TaskResponse>> subtasks =
                     tasks.stream().map(task -> scope.fork(task)).toList();
 
             // Wait for all tasks to complete (success or not)
-            scope.join();
-            scope.throwIfFailed(); // Wait till first Child Task fails. Send cancellation to all
-            // other Child Tasks
-
+            List<BlockingIOTasks.TaskResponse> results = scope.join();
             // Handle Success Child Task Results
-            subtasks.forEach(System.out::println);
+            results.forEach(System.out::println);
         }
     }
 
-    private static void shutdownOnSuccess() throws InterruptedException, ExecutionException {
+    private static void shutdownOnSuccess() throws InterruptedException {
         var tasks =
                 List.of(
                         new BlockingIOTasks("Price-1", 3, true),
                         new BlockingIOTasks("Price-2", 10, true));
 
-        try (var scope =
-                new StructuredTaskScope.ShutdownOnSuccess<BlockingIOTasks.TaskResponse>()) {
+        try (StructuredTaskScope<BlockingIOTasks.TaskResponse, BlockingIOTasks.TaskResponse> scope =
+                StructuredTaskScope.open(Joiner.anySuccessfulOrThrow())) {
             // Start running the tasks in parallel
             List<Subtask<BlockingIOTasks.TaskResponse>> list =
                     tasks.stream().map(task -> scope.fork(task)).toList();
 
             // Wait till first Child Task Succeeds. Send Cancellation
             // to all other Child Tasks
-            scope.join();
-
-            // Handle Successful Child Task
-            BlockingIOTasks.TaskResponse result = scope.result();
+            BlockingIOTasks.TaskResponse result = scope.join();
             System.out.println(result);
         }
     }

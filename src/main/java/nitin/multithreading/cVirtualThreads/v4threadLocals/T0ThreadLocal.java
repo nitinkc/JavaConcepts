@@ -13,8 +13,7 @@ public class T0ThreadLocal {
     public static void main(String[] args) {
         mainThread();
         handleUser();
-        System.out.println(
-                STR."\{studentThreadLocal.get()}Nitin\{studentThreadLocal.get().getName()}");
+        System.out.println(studentThreadLocal.get() + "Nitin" + studentThreadLocal.get().getName());
     }
 
     private static void mainThread() {

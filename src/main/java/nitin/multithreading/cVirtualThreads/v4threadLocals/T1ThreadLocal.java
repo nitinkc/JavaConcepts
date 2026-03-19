@@ -31,6 +31,6 @@ public class T1ThreadLocal {
                                 });
 
         thread.join();
-        logShortMessage(STR."Finally => \{studentThreadLocal.get()}");
+        logShortMessage("Finally => " + studentThreadLocal.get());
     }
 }

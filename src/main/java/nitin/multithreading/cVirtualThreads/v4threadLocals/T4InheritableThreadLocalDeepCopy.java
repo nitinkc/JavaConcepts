@@ -44,6 +44,6 @@ public class T4InheritableThreadLocalDeepCopy {
                                 });
 
         thread.join();
-        logShortMessage(STR."Finally => \{studentDeepCopy.get()}");
+        logShortMessage("Finally => " + studentDeepCopy.get());
     }
 }

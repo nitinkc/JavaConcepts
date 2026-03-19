@@ -12,11 +12,10 @@ public class S1ScopedValue {
         logShortMessage("isBound? " + studentScopedValue.isBound());
 
         Student hp = new Student("Harry Potter");
-        boolean result // bind a key (studentScopedValue) to a value (hp) with an operation op
-                // (handleUser())
-                =
-                ScopedValue.callWhere(
-                        studentScopedValue, hp, S1ScopedValue::handleUser); // using a callable
+        boolean result =
+                // bind a key (studentScopedValue) to a value (hp) with an operation op
+                // (handleUser()) using a callable
+                ScopedValue.where(studentScopedValue, hp).call(S1ScopedValue::handleUser);
 
         // boolean result = handleUser();
         logShortMessage("Result: " + result);

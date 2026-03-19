@@ -63,7 +63,7 @@ public class RequestHandler implements Callable<String> {
                                         String result1 = dbCallFuture.join();
                                         String result2 = getBrewerFuture.join();
                                         String result3 = getBeerFuture.join();
-                                        return STR."[\{result1},\{result2},\{result3}]";
+                                        return "[" + result1 + "," + result2 + "," + result3 + "]";
                                     },
                                     service)
                             .join();

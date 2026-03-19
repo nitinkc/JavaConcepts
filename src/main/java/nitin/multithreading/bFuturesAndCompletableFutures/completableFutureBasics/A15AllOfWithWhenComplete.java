@@ -25,11 +25,13 @@ public class A15AllOfWithWhenComplete {
                                     // Retrieve results from all future
                                     // Combine results
                                     String combinedResult =
-                                            STR."\{
-                                                    future1.get()} \{
-                                                    future2.get()} \{
-                                                    future3.get()} \{
-                                                    future4.get()}";
+                                            future1.get()
+                                                    + " "
+                                                    + future2.get()
+                                                    + " "
+                                                    + future3.get()
+                                                    + " "
+                                                    + future4.get();
                                     System.out.println("Combined result: " + combinedResult);
                                 } catch (Exception e) {
                                     // Handle exceptions from get() calls

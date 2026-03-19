@@ -17,7 +17,7 @@ public class ArrayListVsLinkedList {
         List<String> linkedList = new LinkedList<>();
 
         for (int i = 0; i < SIZE; i++) {
-            String s = STR."bookName\{i}";
+            String s = "bookName" + i;
             list.add(s);
             linkedList.add(s);
         }

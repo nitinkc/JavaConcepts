@@ -143,7 +143,7 @@ public class Business {
             String name = jsonObject.getString("name");
             String style = jsonObject.getString("style");
 
-            apiResponse = STR."\{name} \{style} ";
+            apiResponse = name + " " + style + " ";
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {

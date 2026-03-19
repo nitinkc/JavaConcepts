@@ -62,7 +62,7 @@ public class DataFetchService {
 
         // Fail Fast
         if (!isSuccess || secs > 7) {
-            throw new RuntimeException(STR."Task Failed : \{name} \{isSuccess} \{secs}");
+            throw new RuntimeException("Task Failed : " + name + " " + isSuccess + " " + secs);
         }
 
         long currentTime = System.currentTimeMillis();
