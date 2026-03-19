@@ -11,8 +11,6 @@ From Default package it is recognizing.
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import lombok.Getter;
-import lombok.Setter;
 
 /**
  * Created by com.nitin.a23reflectionAPI.Nitin Chaurasia on 12/3/15 at 11:54 PM.

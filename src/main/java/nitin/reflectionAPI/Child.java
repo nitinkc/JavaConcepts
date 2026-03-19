@@ -7,6 +7,6 @@ import lombok.Setter;
 @Getter
 @Setter
 class Child {
-  private int kid;
-  private String name;
+    private int kid;
+    private String name;
 }
