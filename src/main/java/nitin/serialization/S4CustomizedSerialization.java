@@ -47,13 +47,13 @@ class Login implements Serializable {
 
         // Encrypting the password (!@#@$123@abc##)
         String epwd = "!@#@$" + pwd;
-        os.writeObject(epwd); // write it as a separate a5object 
+        os.writeObject(epwd); // write it as a separate object
     }
 
     // Automatically executed at the time of De-Serialization
     private void readObject(ObjectInputStream is) throws Exception {
         is.defaultReadObject();
         String epwd = (String) is.readObject();
-        pwd = epwd.substring(5); // Decripting the password 
+        pwd = epwd.substring(5); // Decrypting the password
     }
 }
