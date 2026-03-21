@@ -3,7 +3,6 @@ package nitin.a1languageFundamentals;
 import java.io.*;
 
 public class IntelliJShortcuts {
-
     private static final String FILE = "src/main/resources/nitin.txt";
 
     public static void main(String[] args) throws IOException {

@@ -9,11 +9,11 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 class Stock implements Cloneable {
-  int price;
-  String name;
+    int price;
+    String name;
 
-  // Compulsory Implementation
-  protected Object clone() throws CloneNotSupportedException {
-    return super.clone();
-  }
+    // Compulsory Implementation
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 }

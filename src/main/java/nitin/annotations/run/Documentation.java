@@ -6,23 +6,21 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/**
- * Created by nitin on Monday, March/30/2020 at 11:51 PM
- */
+/** Created by nitin on Monday, March/30/2020 at 11:51 PM */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 public @interface Documentation {
 
-  String author() default "Nitin K C";
+    String author() default "Nitin K C";
 
-  String date();
+    String date();
 
-  int currentRevision() default 1;
+    int currentRevision() default 1;
 
-  String lastModified() default "N/A";
+    String lastModified() default "N/A";
 
-  String lastModifiedBy() default "N/A";
+    String lastModifiedBy() default "N/A";
 
-  String[] reviewers(); // Note use of array
+    String[] reviewers(); // Note use of array
 }

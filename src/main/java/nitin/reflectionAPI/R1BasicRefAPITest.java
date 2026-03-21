@@ -19,9 +19,11 @@ public class R1BasicRefAPITest {
         System.out.println(reflectionTestClass.getClass());
 
         // Type 2: Creating the Instance when the Class name and object name both are known!!
-        ReflectionTestClass reflectionTestClassObject = (ReflectionTestClass) reflectionTestClass.newInstance();
+        ReflectionTestClass reflectionTestClassObject =
+                (ReflectionTestClass) reflectionTestClass.newInstance();
         // Can use parentObject just like when its created with "new" keyword
-        System.out.println("Type 2 obj.newInstance() :: " + reflectionTestClassObject.getClass().getName());
+        System.out.println(
+                "Type 2 obj.newInstance() :: " + reflectionTestClassObject.getClass().getName());
 
         // Type 3: When only the Object Name is known.
         // It should be used if you know the type. Moreover, .getClass can be used with primitives.

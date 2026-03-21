@@ -10,7 +10,7 @@ public class S6ParentNotSerChildSer {
                 new ObjectOutputStream(
                         new FileOutputStream(
                                 new File(
-                                        "src/com/nitin/a21serialization/serialObjectInherited.txt")));
+                                        "src/main/java/nitin/serialization/serialObjectInherited.txt")));
         FourVehicle dp = new FourVehicle();
         // This will be serialized
         dp.b = 244224;
@@ -24,7 +24,7 @@ public class S6ParentNotSerChildSer {
                 new ObjectInputStream(
                         new FileInputStream(
                                 new File(
-                                        "src/com/nitin/a21serialization/serialObjectInherited.txt")));
+                                        "src/main/java/nitin/serialization/serialObjectInherited.txt")));
         FourVehicle c = (FourVehicle) ois.readObject();
         System.out.println(c);
         ois.close();

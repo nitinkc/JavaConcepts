@@ -6,16 +6,16 @@ import java.io.*;
 public class S7SUIDConcepts {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
-        File f = new File("src/com/nitin/a21serialization/suidTest.out");
+        File f = new File("src/main/java/nitin/serialization/suidTest.out");
         Serialtest st1 = new Serialtest(1000);
         Serialtest st2 = new Serialtest(1000);
 
         // serialize
-        //        FileOutputStream fos = new FileOutputStream(f);
-        //		ObjectOutputStream oos = new ObjectOutputStream(fos);
-        //        System.out.println("Serialization done.");
-        //        oos.writeObject(st1);
-        //        oos.close();
+        FileOutputStream fos = new FileOutputStream(f);
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+        System.out.println("Serialization done.");
+        oos.writeObject(st1);
+        oos.close();
 
         // helpful in deep a22cloning
         // deserialize

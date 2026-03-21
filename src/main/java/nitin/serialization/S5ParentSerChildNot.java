@@ -4,49 +4,46 @@ import java.io.*;
 
 /** Created by nitin on 1/2/16. */
 public class S5ParentSerChildNot {
+    private static final String FILE_NAME =
+            "src/main/java/nitin/serialization/serialObjectInherited.txt";
+
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        ObjectOutputStream oos =
-                new ObjectOutputStream(
-                        new FileOutputStream(
-                                new File(
-                                        "src/com/nitin/a21serialization/serialObjectInherited.txt")));
-        DecidiousPlants dp = new DecidiousPlants();
-        ConiferousPlants cp = new ConiferousPlants();
+        DeciduousPlants deciduousPlants = new DeciduousPlants();
+        ConiferousPlants coniferousPlants = new ConiferousPlants();
 
-        // Call the overridden writeObject from the class Login
-        oos.writeObject(dp);
-        oos.writeObject(cp);
-        oos.close();
+        try (ObjectOutputStream oos =
+                new ObjectOutputStream(new FileOutputStream(new File(FILE_NAME)))) {
+            // Parent is Serializable, so the child is Serializable by inheritance.
+            oos.writeObject(deciduousPlants);
 
-        // Deserialization
-        ObjectInputStream ois =
-                new ObjectInputStream(
-                        new FileInputStream(
-                                new File(
-                                        "src/com/nitin/a21serialization/serialObjectInherited.txt")));
+            // This child deliberately blocks serialization in writeObject.
+            oos.writeObject(coniferousPlants);
+        }
 
-        /* Since we know the ORDER of insertion in Serialization, no exception else ClassCastException */
-        DecidiousPlants decidiousPlants = (DecidiousPlants) ois.readObject();
-        ConiferousPlants coniferousPlants = (ConiferousPlants) ois.readObject();
+        try (ObjectInputStream ois =
+                new ObjectInputStream(new FileInputStream(new File(FILE_NAME)))) {
+            // Read back in the same order they were written.
+            DeciduousPlants restoredDeciduous = (DeciduousPlants) ois.readObject();
+            ConiferousPlants restoredConiferous = (ConiferousPlants) ois.readObject();
 
-        ois.close();
-
-        System.out.println(decidiousPlants);
-        System.out.println(coniferousPlants);
+            System.out.println(restoredDeciduous);
+            System.out.println(restoredConiferous);
+        }
     }
 }
 
 class Plants implements Serializable {
+    private static final long serialVersionUID = 1L;
     int a = 90;
 }
 
-// Since Parent has Serializable implemeted, Chine need not be so
-class DecidiousPlants extends Plants {
+// Since parent has Serializable, the child is also Serializable.
+class DeciduousPlants extends Plants {
     int b = 45;
 
     @Override
     public String toString() {
-        return "DecidiousPlants{" + "b=" + b + '}';
+        return "DeciduousPlants{" + "b=" + b + '}';
     }
 }
 
@@ -56,7 +53,8 @@ class ConiferousPlants extends Plants {
     int c = 40;
 
     private void writeObject(ObjectOutputStream os) throws NotSerializableException {
-        throw new NotSerializableException("You are trying to flattern the wrong guy nigga...");
+        throw new NotSerializableException(
+                "ConiferousPlants intentionally blocks Java serialization.");
     }
 
     @Override

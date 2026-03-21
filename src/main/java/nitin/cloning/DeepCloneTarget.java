@@ -18,4 +18,3 @@ class DeepCloneTarget implements Cloneable {
         return copy;
     }
 }
-

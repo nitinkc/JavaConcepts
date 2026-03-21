@@ -10,4 +10,3 @@ import lombok.Setter;
 class MutableState {
     private int mutableVar;
 }
-

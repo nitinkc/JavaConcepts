@@ -14,7 +14,7 @@ import lombok.ToString;
 @JsonIgnoreProperties
 public class TestSerial implements Serializable {
     // Testing for the Static variable. Static variables are NOT The part of Object,
-    // The are the part of Class
+    // These are the part of Class
     private static int staticInt = 342324;
     // Similarly there is no effect of static transient
     private static String staticTransientString = "Static Transient String showing";

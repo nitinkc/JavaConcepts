@@ -3,9 +3,9 @@ package nitin.cloning;
 /**
  * Created by Nitin Chaurasia on 12/4/15 at 9:16 PM.
  *
- * <p>Shallow copy is a bit-wise copy of an object. A new object is created that has an exact
- * copy of the values in the original object. If any of the fields are referenced to other
- * objects, only the reference addresses are copied.
+ * <p>Shallow copy is a bit-wise copy of an object. A new object is created that has an exact copy
+ * of the values in the original object. If any of the fields are referenced to other objects, only
+ * the reference addresses are copied.
  *
  * <p>FOR MUTABLE OBJECTS any changes made to a mutable field in main will reflect in the clone.
  *

@@ -18,4 +18,3 @@ class ShallowCloneTarget implements Cloneable {
         return (ShallowCloneTarget) super.clone();
     }
 }
-

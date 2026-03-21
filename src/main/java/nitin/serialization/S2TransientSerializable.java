@@ -8,28 +8,24 @@ import java.io.*;
  * <p>Transient does not work when Static or Final is used
  */
 public class S2TransientSerializable {
+    private static final String FILE_NAME =
+            "src/main/java/nitin/serialization/serialObjectTransient.txt";
+
     public static void main(String[] args) {
 
         // Serializing Object
         TestSerial testSerial =
                 TestSerial.builder()
-                        .name("Katie") // The transient variable does not participate in the
-                        // serialization process. It takes defalut values
-                        .age(5)
+                        .name("Katie")
+                        .age(5) // transient fields are skipped
                         .password("TESTING")
                         .someChar('%')
-                        .finalTransientString(
-                                "Final Transient String showing") // Testing final transient. Final
-                        // overpowers and thus there is no
-                        // effect of transient
+                        .finalTransientString("Final + transient still skips serialization")
                         .build();
 
         // Testing for the Final
         try (ObjectOutputStream oos =
-                new ObjectOutputStream(
-                        new FileOutputStream(
-                                new File(
-                                        "src/main/java/nitin/serialization/serialObjectTransient.txt")))) {
+                new ObjectOutputStream(new FileOutputStream(new File(FILE_NAME)))) {
             oos.writeObject(testSerial);
             System.out.println(testSerial);
         } catch (FileNotFoundException e) {
@@ -40,12 +36,8 @@ public class S2TransientSerializable {
 
         // Deserialization
         try (ObjectInputStream ois =
-                new ObjectInputStream(
-                        new FileInputStream(
-                                new File(
-                                        "src/main/java/nitin/serialization/serialObjectTransient.txt")))) {
+                new ObjectInputStream(new FileInputStream(new File(FILE_NAME)))) {
             TestSerial c = (TestSerial) ois.readObject();
-            ois.close();
             System.out.println(
                     "*********************** After Deserialization ****************************");
             System.out.println(c);
