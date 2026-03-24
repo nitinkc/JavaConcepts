@@ -11,6 +11,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 class ReflectionTestClass {
-    int x;
-    Child s;
+    int primitiveInt;
+    Child child;
 }
