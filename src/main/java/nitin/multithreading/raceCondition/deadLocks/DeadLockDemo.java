@@ -5,7 +5,7 @@ public class DeadLockDemo {
            =
            =
            =
-    =======X======
+    =======X=======
            =
            =
            =

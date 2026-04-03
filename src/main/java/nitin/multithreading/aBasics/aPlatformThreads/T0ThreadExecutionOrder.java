@@ -3,7 +3,7 @@ package nitin.multithreading.aBasics.aPlatformThreads;
 import static com.utilities.MultiThreadUtility.logMessage;
 
 public class T0ThreadExecutionOrder {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         // By default, the platform threads are NON-DAEMON Threads, unless it's explicitly marked
         // daemon.
         Thread thread1 = new Thread(() -> logMessage("1: I'm going for a walk"));

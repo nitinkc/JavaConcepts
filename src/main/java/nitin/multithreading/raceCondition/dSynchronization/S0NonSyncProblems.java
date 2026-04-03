@@ -15,7 +15,6 @@ public class S0NonSyncProblems {
 
     public static void main(String[] args) throws InterruptedException {
         List<Thread> threads = new ArrayList<>();
-        ;
 
         for (int i = 0; i < 100; i++) {
             // 100 threads trying to fill values in the array
@@ -33,7 +32,7 @@ public class S0NonSyncProblems {
         }
 
         System.out.println("Finished execution : " + counterValues.size());
-        // System.out.println(counterValues);
+        System.out.println(counterValues);
     }
 
     private static void task() {

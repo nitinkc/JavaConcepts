@@ -9,37 +9,25 @@ package nitin.multithreading.aBasics.executionPrevention;
  */
 public class T2JoinDemo {
     public static void main(String[] args) {
-        Thread t1 = new Thread(new ThreadJoin());
-        Thread t2 = new Thread(new ThreadJoin());
+        Runnable runnable = () -> {
+            for (int i = 0; i < 100; i++) {
+                System.out.println("Child: " + i + "\t Thread: " + Thread.currentThread().getName());
+            }
+        };
+        Thread t1 = new Thread(runnable);
+        Thread t2 = new Thread(runnable);
 
         t1.start();
+        t2.start();
 
         // Main Thread (Calling Thread) Will wait until t1 Finishes
         // Output is deterministic
-        try {
-            t1.join();
-        } catch (InterruptedException e) {
-            System.out.println(e.fillInStackTrace());
-        }
+        //t1.join();
 
         // If there is no join, BOTH Thread will be contending for CPU thus without
         // join() output is undeterministic
-        for (int i = 0; i < 100; i++) {
-            System.out.println("Main: " + i);
-        }
-    }
-}
-
-class ThreadJoin implements Runnable {
-    @Override
-    public void run() {
-        for (int i = 0; i < 1000; i++) {
-            System.out.println("Child : " + i);
-            //            try {
-            //                /Thread.sleep(200);
-            //            } catch (InterruptedException e) {
-            //                e.printStackTrace();
-            //            }
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Main: " + i + "\t");
         }
     }
 }

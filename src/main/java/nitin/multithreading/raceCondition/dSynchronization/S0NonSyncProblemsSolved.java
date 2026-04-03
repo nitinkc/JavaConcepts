@@ -39,6 +39,6 @@ public class S0NonSyncProblemsSolved {
             ++counter;
             counterValues.add(counter);
         }
-        // counterValues.add(counter);////Does not guarantee correct result each time
+        // counterValues.add(counter);//Does not guarantee correct result each time
     }
 }

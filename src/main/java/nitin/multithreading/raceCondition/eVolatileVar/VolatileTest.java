@@ -2,7 +2,7 @@ package nitin.multithreading.raceCondition.eVolatileVar;
 
 public class VolatileTest {
 
-    /* volatile variable will be read from the computer's main memory,  and not from the CPU cache.
+    /* volatile variable will be read from the computer's main memory/RAM,  and not from the CPU cache.
     Every write to a volatile variable will be written to main memory, and not just to the CPU cache.
     * */
     public volatile int counter = 0;

@@ -27,7 +27,7 @@ public class S1StaticSyncMethod {
         MyThread1 t1 = new MyThread1(d1, "CS1");
         MyThread1 t2 = new MyThread1(d2, "CS2");
 
-        // Evwn though the threads are operating on two different objects,
+        // Even though the threads are operating on two different objects,
         // Regular outputs because the threads are calling static sync
         t1.start();
         t2.start();
@@ -41,8 +41,10 @@ class Display1 {
      * then remaining threads are not allowed to execute ANY static Sync Method of that class
      * simultaneously.
      *
-     * <p>BUT remaining threads can execute following methods 1. normal static 2. normal instance 3.
-     * synchronized instance
+     * <p>BUT remaining threads can execute following methods
+     * 1. normal static
+     * 2. normal instance
+     * 3. synchronized instance
      */
     public static synchronized void wish(String name) throws InterruptedException {
         for (int i = 0; i < 10; i++) {
