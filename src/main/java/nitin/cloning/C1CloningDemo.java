@@ -7,10 +7,10 @@ public class C1CloningDemo {
         Stock obj = new Stock(560, " google");
         // Clone returns Object Type
         Stock cloned = (Stock) obj.clone();
-        System.out.println("Object :: " + obj.name + "   " + obj.price);
-        System.out.println("Cloned Object :: " + cloned.name + "  " + cloned.price);
+        System.out.println("Original Object :: " + obj);
+        System.out.println("Cloned Object :: " + cloned);
 
-        System.out.println(obj);
-        System.out.println(cloned);
+        System.out.println(obj.hashCode());
+        System.out.println(cloned.hashCode());
     }
 }

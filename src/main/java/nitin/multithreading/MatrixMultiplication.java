@@ -10,10 +10,10 @@ public class MatrixMultiplication {
     /*GLOBAL VARIABLE DECLARATION */
 
     // Dimensions of the Matrices to be multiplied
-    public static final int ROW_A = 3;
-    public static final int COL_A = 3;
-    public static final int ROW_B = 3;
-    public static final int COL_B = 3;
+    public static final int ROW_A = 3000;
+    public static final int COL_A = 3000;
+    public static final int ROW_B = 3000;
+    public static final int COL_B = 3000;
     /* Declare number of Threads for Execution (Min 1 thread)*/
     static int numThreads = 1;
     /* Pointer for the three Matrix*/

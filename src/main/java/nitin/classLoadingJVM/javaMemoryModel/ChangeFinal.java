@@ -16,25 +16,4 @@ public class ChangeFinal {
         c.setName("Modi");
         System.out.println("Final String is reset to : " + c);
     }
-
-    static class Customer {
-        private String name;
-
-        public Customer(String name) {
-            this.name = name;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        @Override
-        public String toString() {
-            return this.getName();
-        }
-    }
 }
