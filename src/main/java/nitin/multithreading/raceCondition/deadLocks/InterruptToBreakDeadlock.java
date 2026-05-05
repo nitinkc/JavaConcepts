@@ -1,6 +1,5 @@
 package nitin.multithreading.raceCondition.deadLocks;
 
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -8,19 +7,22 @@ import java.util.concurrent.locks.ReentrantLock;
  * Demonstrates how Thread.interrupt() can be used to break out of a deadlock situation.
  *
  * <h2>The Problem:</h2>
- * With synchronized blocks or Lock.lock(), once a thread is blocked waiting for a lock,
- * it CANNOT be interrupted - it will wait forever (deadlock is permanent).
+ *
+ * With synchronized blocks or Lock.lock(), once a thread is blocked waiting for a lock, it CANNOT
+ * be interrupted - it will wait forever (deadlock is permanent).
  *
  * <h2>The Solution:</h2>
- * Use Lock.lockInterruptibly() which allows a blocked thread to respond to interrupts,
- * enabling deadlock recovery.
+ *
+ * Use Lock.lockInterruptibly() which allows a blocked thread to respond to interrupts, enabling
+ * deadlock recovery.
  *
  * <h2>Key Concepts:</h2>
+ *
  * <ul>
- *   <li>synchronized - CANNOT be interrupted while waiting for lock</li>
- *   <li>Lock.lock() - CANNOT be interrupted while waiting for lock</li>
- *   <li>Lock.lockInterruptibly() - CAN be interrupted while waiting for lock</li>
- *   <li>Lock.tryLock(timeout) - Returns after timeout if lock not acquired</li>
+ *   <li>synchronized - CANNOT be interrupted while waiting for lock
+ *   <li>Lock.lock() - CANNOT be interrupted while waiting for lock
+ *   <li>Lock.lockInterruptibly() - CAN be interrupted while waiting for lock
+ *   <li>Lock.tryLock(timeout) - Returns after timeout if lock not acquired
  * </ul>
  *
  * <pre>
@@ -76,26 +78,38 @@ public class InterruptToBreakDeadlock {
         TransferService service = new TransferService();
 
         // Thread 1: Transfer from Alice to Bob
-        Thread t1 = new Thread(() -> {
-            try {
-                service.transferWithInterruptibleLock(account1, account2, 100);
-            } catch (InterruptedException e) {
-                System.out.println("⚠️  " + Thread.currentThread().getName()
-                        + " was INTERRUPTED while waiting for lock!");
-                System.out.println("   → Releasing all held locks and backing off...");
-            }
-        }, "Transfer-AliceToBob");
+        Thread t1 =
+                new Thread(
+                        () -> {
+                            try {
+                                service.transferWithInterruptibleLock(account1, account2, 100);
+                            } catch (InterruptedException e) {
+                                System.out.println(
+                                        "⚠️  "
+                                                + Thread.currentThread().getName()
+                                                + " was INTERRUPTED while waiting for lock!");
+                                System.out.println(
+                                        "   → Releasing all held locks and backing off...");
+                            }
+                        },
+                        "Transfer-AliceToBob");
 
         // Thread 2: Transfer from Bob to Alice (opposite direction = potential deadlock!)
-        Thread t2 = new Thread(() -> {
-            try {
-                service.transferWithInterruptibleLock(account2, account1, 200);
-            } catch (InterruptedException e) {
-                System.out.println("⚠️  " + Thread.currentThread().getName()
-                        + " was INTERRUPTED while waiting for lock!");
-                System.out.println("   → Releasing all held locks and backing off...");
-            }
-        }, "Transfer-BobToAlice");
+        Thread t2 =
+                new Thread(
+                        () -> {
+                            try {
+                                service.transferWithInterruptibleLock(account2, account1, 200);
+                            } catch (InterruptedException e) {
+                                System.out.println(
+                                        "⚠️  "
+                                                + Thread.currentThread().getName()
+                                                + " was INTERRUPTED while waiting for lock!");
+                                System.out.println(
+                                        "   → Releasing all held locks and backing off...");
+                            }
+                        },
+                        "Transfer-BobToAlice");
 
         System.out.println("\n📍 Starting both transfer threads (deadlock likely)...\n");
         t1.start();
@@ -138,9 +152,7 @@ public class InterruptToBreakDeadlock {
         demonstrateLockVsLockInterruptibly();
     }
 
-    /**
-     * Shows the key difference between lock() and lockInterruptibly()
-     */
+    /** Shows the key difference between lock() and lockInterruptibly() */
     private static void demonstrateLockVsLockInterruptibly() throws InterruptedException {
         System.out.println("=".repeat(70));
         System.out.println("COMPARISON: lock() vs lockInterruptibly()");
@@ -156,15 +168,18 @@ public class InterruptToBreakDeadlock {
         System.out.println("TEST 1: Using lock() - Thread CANNOT be interrupted while waiting");
         System.out.println("-".repeat(50));
 
-        Thread t1 = new Thread(() -> {
-            System.out.println("  [T1] Trying to acquire lock with lock()...");
-            lock.lock(); // Will block and IGNORE interrupts
-            try {
-                System.out.println("  [T1] Got the lock!");
-            } finally {
-                lock.unlock();
-            }
-        }, "Thread-lock()");
+        Thread t1 =
+                new Thread(
+                        () -> {
+                            System.out.println("  [T1] Trying to acquire lock with lock()...");
+                            lock.lock(); // Will block and IGNORE interrupts
+                            try {
+                                System.out.println("  [T1] Got the lock!");
+                            } finally {
+                                lock.unlock();
+                            }
+                        },
+                        "Thread-lock()");
 
         t1.start();
         Thread.sleep(500);
@@ -178,7 +193,8 @@ public class InterruptToBreakDeadlock {
         System.out.println("  [Main] Releasing lock...");
         lock.unlock();
         t1.join();
-        System.out.println("  [T1] Finally completed (interrupt flag was set but ignored during lock())");
+        System.out.println(
+                "  [T1] Finally completed (interrupt flag was set but ignored during lock())");
 
         // Reacquire for next test
         lock.lock();
@@ -187,19 +203,24 @@ public class InterruptToBreakDeadlock {
         System.out.println("\n\nTEST 2: Using lockInterruptibly() - Thread CAN be interrupted");
         System.out.println("-".repeat(50));
 
-        Thread t2 = new Thread(() -> {
-            System.out.println("  [T2] Trying to acquire lock with lockInterruptibly()...");
-            try {
-                lock.lockInterruptibly(); // Will block BUT can be interrupted!
-                try {
-                    System.out.println("  [T2] Got the lock!");
-                } finally {
-                    lock.unlock();
-                }
-            } catch (InterruptedException e) {
-                System.out.println("  [T2] ⚡ Caught InterruptedException! Exiting gracefully.");
-            }
-        }, "Thread-lockInterruptibly()");
+        Thread t2 =
+                new Thread(
+                        () -> {
+                            System.out.println(
+                                    "  [T2] Trying to acquire lock with lockInterruptibly()...");
+                            try {
+                                lock.lockInterruptibly(); // Will block BUT can be interrupted!
+                                try {
+                                    System.out.println("  [T2] Got the lock!");
+                                } finally {
+                                    lock.unlock();
+                                }
+                            } catch (InterruptedException e) {
+                                System.out.println(
+                                        "  [T2] ⚡ Caught InterruptedException! Exiting gracefully.");
+                            }
+                        },
+                        "Thread-lockInterruptibly()");
 
         t2.start();
         Thread.sleep(500);
@@ -219,9 +240,7 @@ public class InterruptToBreakDeadlock {
     }
 }
 
-/**
- * Simple bank account with a ReentrantLock for thread-safe operations.
- */
+/** Simple bank account with a ReentrantLock for thread-safe operations. */
 class BankAccount {
     private final String owner;
     private int balance;
@@ -254,38 +273,47 @@ class BankAccount {
     }
 }
 
-/**
- * Transfer service that demonstrates deadlock and how to break it with interrupt().
- */
+/** Transfer service that demonstrates deadlock and how to break it with interrupt(). */
 class TransferService {
 
     /**
      * Transfer money using lockInterruptibly() - CAN be interrupted to break deadlock.
      *
-     * <p>This method intentionally acquires locks in the order they're passed (from → to),
-     * which can cause deadlock if two threads transfer in opposite directions.
+     * <p>This method intentionally acquires locks in the order they're passed (from → to), which
+     * can cause deadlock if two threads transfer in opposite directions.
      */
     public void transferWithInterruptibleLock(BankAccount from, BankAccount to, int amount)
             throws InterruptedException {
 
         String threadName = Thread.currentThread().getName();
 
-        System.out.println("🔄 " + threadName + ": Starting transfer $" + amount
-                + " from " + from.getOwner() + " to " + to.getOwner());
+        System.out.println(
+                "🔄 "
+                        + threadName
+                        + ": Starting transfer $"
+                        + amount
+                        + " from "
+                        + from.getOwner()
+                        + " to "
+                        + to.getOwner());
 
         // Acquire first lock
-        System.out.println("   " + threadName + ": Acquiring lock on " + from.getOwner() + "'s account...");
+        System.out.println(
+                "   " + threadName + ": Acquiring lock on " + from.getOwner() + "'s account...");
         from.getLock().lockInterruptibly();
-        System.out.println("   " + threadName + ": ✓ Got lock on " + from.getOwner() + "'s account");
+        System.out.println(
+                "   " + threadName + ": ✓ Got lock on " + from.getOwner() + "'s account");
 
         try {
             // Simulate some processing time (increases chance of deadlock)
             Thread.sleep(100);
 
             // Try to acquire second lock (THIS IS WHERE DEADLOCK OCCURS!)
-            System.out.println("   " + threadName + ": Acquiring lock on " + to.getOwner() + "'s account...");
+            System.out.println(
+                    "   " + threadName + ": Acquiring lock on " + to.getOwner() + "'s account...");
             to.getLock().lockInterruptibly(); // <-- Can be interrupted here!
-            System.out.println("   " + threadName + ": ✓ Got lock on " + to.getOwner() + "'s account");
+            System.out.println(
+                    "   " + threadName + ": ✓ Got lock on " + to.getOwner() + "'s account");
 
             try {
                 // Perform the transfer
@@ -297,7 +325,8 @@ class TransferService {
             }
         } finally {
             from.getLock().unlock();
-            System.out.println("   " + threadName + ": Released lock on " + from.getOwner() + "'s account");
+            System.out.println(
+                    "   " + threadName + ": Released lock on " + from.getOwner() + "'s account");
         }
     }
 
@@ -318,7 +347,8 @@ class TransferService {
                         try {
                             from.withdraw(amount);
                             to.deposit(amount);
-                            System.out.println("✅ " + threadName + ": Transfer complete with tryLock!");
+                            System.out.println(
+                                    "✅ " + threadName + ": Transfer complete with tryLock!");
                             return true;
                         } finally {
                             to.getLock().unlock();
@@ -340,4 +370,3 @@ class TransferService {
         }
     }
 }
-

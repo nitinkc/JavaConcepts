@@ -19,4 +19,3 @@ public class PassingObjects {
         c.setName("Chaurasia");
     }
 }
-

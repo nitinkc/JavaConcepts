@@ -41,10 +41,8 @@ class Display1 {
      * then remaining threads are not allowed to execute ANY static Sync Method of that class
      * simultaneously.
      *
-     * <p>BUT remaining threads can execute following methods
-     * 1. normal static
-     * 2. normal instance
-     * 3. synchronized instance
+     * <p>BUT remaining threads can execute following methods 1. normal static 2. normal instance 3.
+     * synchronized instance
      */
     public static synchronized void wish(String name) throws InterruptedException {
         for (int i = 0; i < 10; i++) {
