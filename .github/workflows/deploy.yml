@@ -1,4 +1,4 @@
-name: Deploy Angular and MkDocs to Pages
+name: Deploy React and MkDocs to Pages
 
 on:
   push:
@@ -19,32 +19,41 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: basics-components/package-lock.json
+          cache-dependency-path: interview-labs/package-lock.json
 
       - name: Install application dependencies
-        working-directory: basics-components
+        working-directory: interview-labs
         run: npm ci
 
+      - name: Typecheck application
+        working-directory: interview-labs
+        run: npm run typecheck
+
       - name: Test application
-        working-directory: basics-components
+        working-directory: interview-labs
         run: npm test
 
+      - name: Lint application
+        working-directory: interview-labs
+        run: npm run lint
+
       - name: Build application
-        working-directory: basics-components
-        run: npm run build -- --base-href /AngularUI-concepts/
+        working-directory: interview-labs
+        run: npm run build
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.13"
           cache: pip
+          cache-dependency-path: requirements-docs.txt
 
       - name: Install documentation dependencies
         run: python -m pip install -r requirements-docs.txt
@@ -54,8 +63,8 @@ jobs:
 
       - name: Add documentation to application artifact
         run: |
-          mkdir -p basics-components/dist/interview-labs/browser/docs
-          cp -R site/. basics-components/dist/interview-labs/browser/docs/
+          mkdir -p interview-labs/dist/docs
+          cp -R site/. interview-labs/dist/docs/
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -63,7 +72,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: basics-components/dist/interview-labs/browser
+          path: interview-labs/dist
 
   deploy:
     environment:
