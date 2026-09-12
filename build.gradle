@@ -16,7 +16,7 @@ spotless {
     }
 
     java {
-        googleJavaFormat('1.19.2').aosp()
+        googleJavaFormat('1.36.1').aosp()
 //        reflowLongStrings()
 //        formatJavadoc(false)
         removeUnusedImports()
@@ -103,6 +103,7 @@ dependencies {
     //Testing Framework
     testImplementation 'org.junit.jupiter:junit-jupiter-api:' + junitJupiterVersion
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:' + junitJupiterVersion
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.8.2'
     testImplementation group: 'org.mockito', name: 'mockito-core', version: mockitoCoreVersion
     testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: mockitoCoreVersion
     implementation("org.codehaus.mojo:jdepend-maven-plugin:2.1")

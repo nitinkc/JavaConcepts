@@ -19,9 +19,13 @@ public class WriteFile2 {
     public static void main(String[] args) {
         Charset characterSet = Charset.defaultCharset();
         int numLines = 10;
-        Path path =
-                Paths.get(
-                        "src/main/java/nitin/zCoreServletsTraining/t4FileIO/fileIO/output-file-2.txt");
+        Path path = Paths.get("build/example-output/io/output-file-2.txt");
+        try {
+            Files.createDirectories(path.getParent());
+        } catch (IOException ioe) {
+            System.err.printf("IOException: %s%n", ioe);
+            return;
+        }
         try (BufferedWriter writer = Files.newBufferedWriter(path, characterSet)) {
             for (int i = 0; i < numLines; i++) {
                 writer.write("Number is " + 100 * Math.random());

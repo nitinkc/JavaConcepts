@@ -1,0 +1,1 @@
+From Abstract Class, Not all Methods has to be implemented

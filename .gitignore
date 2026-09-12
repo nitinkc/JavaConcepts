@@ -20,6 +20,7 @@ target/
 # Grade Related
 build/
 .gradle/
+.venv/
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar

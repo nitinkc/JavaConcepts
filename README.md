@@ -1,59 +1,58 @@
 # Java Concepts
 
-Gradle based project
+A Gradle-based collection of Java learning examples accumulated across multiple Java releases. The repository contains 936 main-source files, 11 test files, and 549 directly runnable `main` methods.
 
-## Number of files while reorganization
+## Documentation
 
-find . -type f -name '*.java' | wc -l 798
+The searchable syntax and concepts reference lives under `docs/` and is configured by `mkdocs.yml`.
 
-Gradle upgrade branch
+```shell
+python3 -m venv .venv
+.venv/bin/pip install -r requirements-docs.txt
+.venv/bin/mkdocs serve
+```
 
-find . -type f -name '*.java' | wc -l 795
+Build the documentation with strict link and navigation validation:
 
-# New features
-tasks.withType(JavaCompile) {
-options.compilerArgs += [
-'--add-exports=java.base/jdk.internal.vm=ALL-UNNAMED',
-'--enable-preview'
-]
-}
-tasks.withType(JavaExec) {
-jvmArgs += [
-'--add-exports=java.base/jdk.internal.vm=ALL-UNNAMED',
-'--enable-preview'
-]
-}
-# Topics
-[src/main/java/nitin/flowControl/FlowControl.md](src/main/java/nitin/a4flowControl/FlowControl.md)
+```shell
+.venv/bin/mkdocs build --strict
+```
 
-[src/main/java/nitin/a2operators/operators.md](src/main/java/nitin/a2operators/operators.md)
+The generated site is written to `build/mkdocs`.
 
-[src/main/java/nitin/accessModifiers/final/notes.md](src/main/java/nitin/a3accessModifiers/final/notes.md)
+## Build
 
-[src/main/java/nitin/object/notes.md](src/main/java/nitin/a5object/notes.md)
+The project uses Java 26 preview features and the included Gradle wrapper.
 
-[src/main/java/nitin/a1languageFundamentals/Notes.md](src/main/java/nitin/a1languageFundamentals/Notes.md)
+```shell
+./gradlew classes
+./gradlew test
+./gradlew spotlessCheck
+scripts/verify-doc-examples.sh
+```
 
-[src/main/java/nitin/generic/examples/readMe.md](src/main/java/nitin/generic/examples/readMe.md)
+Run an individual example after compiling:
 
-[src/main/java/nitin/generic/oReilly/a3Max/readMe.md](src/main/java/nitin/generic/oReilly/a3Max/readMe.md)
+```shell
+java --enable-preview \
+  --add-exports=java.base/jdk.internal.vm=ALL-UNNAMED \
+  -cp build/classes/java/main:build/resources/main \
+  nitin.LambdaExpressions.L1BasicWithListIteration
+```
 
-[src/main/java/nitin/generic/oReilly/a4sorting/ReadMe.md](src/main/java/nitin/generic/oReilly/a4sorting/ReadMe.md)
+## Reference sections
 
-[src/main/java/nitin/generic/oReilly/a6erasure/ReadMe.md](src/main/java/nitin/generic/oReilly/a6erasure/ReadMe.md)
+- [Documentation home](docs/index.md)
+- [Syntax reference](docs/syntax/index.md)
+- [Repository inventory](docs/audit/repository-inventory.md)
+- [Retention report](docs/audit/retention-report.md)
+- [Reorganization plan](docs/audit/reorganization-plan.md)
+- [Current source map](docs/appendix/source-map.md)
 
-[src/main/java/nitin/exceptionHandling/commonExceptions/common-unchecked-exceptions.md](src/main/java/nitin/exceptionHandling/commonExceptions/common_unchecked_exceptions.md)
+## Important repository characteristics
 
-# Resources
-
-
-Java Application Performance Tuning and Memory Management
-- Matt Greencroft - Udemy
-
-Java 21 Virtual Threads, Multithreading, Structured Concurrency, Scoped Values, Continuations and use with Spring Boot 
-- Viraj Shetty - Udemy
-
-Become an expert in Multithreading, Concurrency & Parallel programming in Java, with strong emphasis on high performance
-- Michael Pogrebinsky
-
-![https://www.youtube.com/watch?v=q2T9NlROLqw](https://www.youtube.com/watch?v=q2T9NlROLqw)
+- This is a learning and recipe collection, not a single application.
+- Most examples are independent classes with their own entry points.
+- Existing comments and progressive examples are preserved as educational material.
+- Legacy APIs remain where they provide useful comparison with modern Java.
+- Preview and internal-JDK examples require the flags configured in `build.gradle`.
