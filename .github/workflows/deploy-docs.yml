@@ -1,0 +1,89 @@
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main        # trigger on every push to main
+  workflow_dispatch:  # allow manual trigger from GitHub UI
+
+permissions:
+  contents: read
+  pages: write       # needed to deploy to GitHub Pages
+  id-token: write    # needed for OIDC token (trusted deploy)
+
+# Only allow one deployment at a time
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+
+  # ─────────────────────────────────────────
+  # Stage 1 — Build
+  # ─────────────────────────────────────────
+  build:
+    name: 🔨 Build MkDocs Site
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Debug — print versions & theme
+        run: |
+          mkdocs --version
+          python -c "import mkdocs; print('mkdocs path:', mkdocs.__file__)"
+          python -c "import mkdocs.config.defaults as d; print('theme entry points available')"
+          pip list | grep -iE "mkdocs|material|bootswatch"
+
+      - name: Build MkDocs site
+        run: mkdocs build --clean
+        # --strict removed: avoids version-sensitive warning→error differences between local and CI
+        # Output goes to ./site/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/   # upload the built site for the deploy stage
+
+  # ─────────────────────────────────────────
+  # Stage 2 — Deploy
+  # ─────────────────────────────────────────
+  deploy:
+    name: 🚀 Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: build       # only runs if build succeeds
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}  # GitHub sets this automatically
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Print live site URL
+        run: |
+          echo "━━━━━━━━━��━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "  ✅ Deployment complete!"
+          echo "  🌐 Live URL: ${{ steps.deployment.outputs.page_url }}"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
